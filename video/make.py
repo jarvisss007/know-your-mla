@@ -33,6 +33,7 @@ if _name:
     _spec = importlib.util.spec_from_file_location('scenes', os.path.join(HERE, _name))
     _m = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(_m)
     SCENES, OUT = _m.SCENES, _m.OUT
+    FPS = getattr(_m, 'FPS', FPS)
 else:
     SRC_PAY = 'Source: Karnataka Legislative Assembly proceedings, 21 March 2025'
     # (seconds, html body, source line)
