@@ -24,6 +24,9 @@ eps = {
      "195 Lokayukta cases (Sept 2022-Feb 2026), 0 verdicts. The old ACB: 19 convictions from 2,000+ cases. Janardhan Reddy (BJP) convicted May 2025 after about 15 years, conviction suspended in 5 weeks; Satish Sail (Congress) sentenced Oct 2024, suspended within 3 weeks; both still MLAs, appeals pending. But exposure works: in 2011 a sitting CM resigned days after the Lokayukta report (B.S. Yediyurappa, later acquitted or cases quashed). 30% of MLAs skipped the annual asset statement (Nov 2025); the only penalty is publication of names. What you can do: RTI (Rs 10), a Lokayukta complaint (anyone), read your MLA's affidavit (free).",
      'Sources: Assembly records; CBI court and Telangana High Court; Karnataka High Court; Lokayukta; Karnataka Lokayukta Act 1984; Karnataka RTI Rules.'),
 }
+eps[9] = ('ಮಲ್ಲಣ್ಣ ಕೇಳ್ತಾನೆ #9: ಉತ್ತರ ಮತ್ತು ದಕ್ಷಿಣ', 'Mallanna Asks #9: North and South',
+     "Namma Metro Phase 2: approved at Rs 26,405 crore in 2014 (due 2020), revised to Rs 40,425 crore in May 2025, last section now due 2027; top fare Rs 60 to Rs 90 (Feb 2025). Kalyana Karnataka board, 7 districts, 2013-14 to 2024-25: Rs 19,778 crore allocated, Rs 13,229 crore released, Rs 11,174 crore spent (state figures). CAG: Rs 387.52 crore of assistance lost because funds went unused (the government disputes this), 3,731 works worth Rs 738.65 crore cancelled. Income per person grew 47.96% in Kalaburagi vs 74.84% statewide (2013-14 to 2019-20). Yadgir has the highest child anaemia in the state (76%). To be fair: Article 371J (2013) gave the region reserved jobs, seats and its own board. Metro costs are shared by the Centre, the state and loans.",
+     'Sources: Union Cabinet, Jan 2014; Karnataka cabinet, 22 May 2025 (The Week/PTI); BMRCL fare revision (The Week); The Week, 19 Sep 2024 (KKRDB state figures); CAG Report No. 10 of 2022.')
 TAGS = '#MallannaAsks #Karnataka #KnowYourMLA #ಕನ್ನಡ'
 
 def item(e, L, date, time):
@@ -40,6 +43,7 @@ batch1 = [item(2, 'kn', '16 Nov 2026', '06:30'), item(2, 'en', '16 Nov 2026', '0
           item(3, 'en', '17 Nov 2026', '07:30'), item(4, 'kn', '18 Nov 2026', '06:30'), item(5, 'kn', '19 Nov 2026', '06:30')]
 batch2 = [item(6, 'kn', '20 Nov 2026', '06:30'), item(6, 'en', '20 Nov 2026', '07:30'), item(7, 'kn', '21 Nov 2026', '06:30'),
           item(7, 'en', '21 Nov 2026', '07:30'), item(8, 'kn', '22 Nov 2026', '06:30'), item(8, 'en', '22 Nov 2026', '07:30')]
-json.dump({'batch1': batch1, 'batch2': batch2}, io.open('upload_manifest.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-for b in batch1 + batch2:
+batch3 = [item(9, 'kn', '23 Nov 2026', '06:30'), item(9, 'en', '23 Nov 2026', '07:30')]
+json.dump({'batch1': batch1, 'batch2': batch2, 'batch3': batch3}, io.open('upload_manifest.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+for b in batch1 + batch2 + batch3:
     print(len(b['title']), len(b['description']), b['file'], b['date'], b['time'])
