@@ -105,3 +105,52 @@ STYLE = '''<style>
 .fact span{display:block;font:600 40px/1.3 "Nirmala UI","Segoe UI",sans-serif;color:#eceef2;margin-top:6px}
 .fact i{display:block;font:400 32px/1.35 "Segoe UI",sans-serif;color:#9aa3b2;font-style:normal;margin-top:6px}
 </style>'''
+
+SKIN_K, SKIN_A = '#b37a52', '#a06a45'
+
+def kaveri(expr='ask'):
+    """Mallanna's daughter, 12, government-school uniform. Drawn in a 320x420 box. expr: ask|sad|smile"""
+    mouth = {'ask': '<ellipse cx="160" cy="196" rx="12" ry="14" fill="#5b1f16"/>',
+             'sad': '<path d="M140 204 q20 -14 40 0" stroke="#5b1f16" stroke-width="6" fill="none" stroke-linecap="round"/>',
+             'smile': '<path d="M138 192 q22 18 44 0" stroke="#5b1f16" stroke-width="6" fill="none" stroke-linecap="round"/>'}[expr]
+    brows = ('<path d="M118 128 q14 -10 28 -2 M174 126 q14 -8 28 2" stroke="#1b1b1b" stroke-width="5" fill="none" stroke-linecap="round"/>' if expr != 'sad'
+             else '<path d="M118 124 q14 8 28 6 M174 130 q14 2 28 -6" stroke="#1b1b1b" stroke-width="5" fill="none" stroke-linecap="round"/>')
+    return ('<g>'
+            '<path d="M70 300 q90 -40 180 0 l20 120 h-220z" fill="#2c5aa0"/>'                    # pinafore
+            '<path d="M110 262 h100 l10 60 h-120z" fill="#f4f1ea"/>'                               # shirt collar
+            '<path d="M150 262 l10 26 l10 -26" fill="#c21f30"/>'                                  # tie
+            '<rect x="140" y="230" width="40" height="40" fill="%s"/>' % SKIN_K +
+            '<ellipse cx="160" cy="160" rx="72" ry="82" fill="%s"/>' % SKIN_K +
+            '<path d="M88 150 q-2 -84 72 -86 q74 2 72 86 q-16 -44 -72 -48 q-56 4 -72 48z" fill="#1a1512"/>'
+            '<path d="M92 160 q-30 60 -14 130" stroke="#1a1512" stroke-width="22" fill="none" stroke-linecap="round"/>'   # braids
+            '<path d="M228 160 q30 60 14 130" stroke="#1a1512" stroke-width="22" fill="none" stroke-linecap="round"/>'
+            '<circle cx="78" cy="292" r="14" fill="#c21f30"/><circle cx="242" cy="292" r="14" fill="#c21f30"/>'
+            + brows +
+            '<ellipse cx="134" cy="152" rx="9" ry="11" fill="#1b1b1b"/><ellipse cx="186" cy="152" rx="9" ry="11" fill="#1b1b1b"/>'
+            + mouth +
+            '<rect x="230" y="330" width="70" height="86" rx="6" fill="#f2b705"/><path d="M244 352 h42 M244 372 h42 M244 392 h30" stroke="#11141a" stroke-width="5"/>'  # notebook
+            '</g>')
+
+def amma():
+    """Mallanna's mother, 70. Drawn in a 360x460 box."""
+    return ('<g>'
+            '<path d="M60 300 q120 -50 240 0 l20 160 h-280z" fill="#2f7d4f"/>'                     # sari
+            '<path d="M70 300 q80 -20 120 40 l-30 120 h-90z" fill="#c9a227"/>'                      # pallu
+            '<rect x="158" y="236" width="44" height="46" fill="%s"/>' % SKIN_A +
+            '<ellipse cx="180" cy="160" rx="80" ry="88" fill="%s"/>' % SKIN_A +
+            '<path d="M100 150 q2 -86 80 -88 q78 2 80 88 q-24 -50 -80 -52 q-56 2 -80 52z" fill="#bfbfbf"/>'
+            '<circle cx="180" cy="66" r="26" fill="#bfbfbf"/>'                                      # bun
+            '<circle cx="150" cy="158" r="22" fill="none" stroke="#333" stroke-width="5"/><circle cx="210" cy="158" r="22" fill="none" stroke="#333" stroke-width="5"/><path d="M172 158 h16" stroke="#333" stroke-width="5"/>'
+            '<circle cx="150" cy="160" r="6" fill="#1b1b1b"/><circle cx="210" cy="160" r="6" fill="#1b1b1b"/>'
+            '<path d="M158 214 q22 -10 44 0" stroke="#5b1f16" stroke-width="6" fill="none" stroke-linecap="round"/>'
+            '<circle cx="180" cy="122" r="6" fill="#c21f30"/>'                                      # bindi
+            '<path d="M290 300 l30 160" stroke="#6b4a2b" stroke-width="12" stroke-linecap="round"/>'  # walking stick
+            '</g>')
+
+def stage2(parts, label=True):
+    """parts: list of (svg_group, x, y, scale). 900x500 viewBox."""
+    g = ''.join('<g transform="translate(%d %d) scale(%s)">%s</g>' % (x, y, s, svg) for svg, x, y, s in parts)
+    return ('<svg viewBox="0 0 900 500" width="850" height="470" style="display:block;margin:10px 0 0">'
+            '<rect x="0" y="470" width="900" height="30" rx="8" fill="#232935"/>' + g +
+            ('<text x="890" y="26" text-anchor="end" font-family="Segoe UI" font-size="22" fill="#6f7888">Fictional characters · ಕಾಲ್ಪನಿಕ ಪಾತ್ರಗಳು</text>' if label else '') +
+            '</svg>')
