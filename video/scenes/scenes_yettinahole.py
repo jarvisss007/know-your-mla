@@ -1,6 +1,8 @@
+SRC2 = 'Sources: CAG audit of the Yettinahole project; Chief Minister statement setting an end-2027 target for Kolar and Chikkaballapura, 2026'
 CAG = 'Source: CAG performance audit of the Yettinahole project (cost to January 2023, spending to March 2024)'
 SCENES = [
- (4.5, '<div class="k">ಎತ್ತಿನಹೊಳೆ ಕುಡಿಯುವ ನೀರಿನ ಯೋಜನೆ</div><h1>₹15,297 ಕೋಟಿ ಖರ್ಚು.<br>ಒಂದು ಹನಿ ನೀರು ಬಂದಿಲ್ಲ.</h1><div class="en">Yettinahole drinking water project: Rs 15,297 crore spent, and not a drop delivered by March 2024.</div>', CAG),
+ (4.5, '<div class="k">ಎತ್ತಿನಹೊಳೆ ಕುಡಿಯುವ ನೀರಿನ ಯೋಜನೆ</div><h1>₹15,297 ಕೋಟಿ ಖರ್ಚು.<br>ಕೋಲಾರಕ್ಕೆ ಇನ್ನೂ ನೀರಿಲ್ಲ.</h1><div class="en">Yettinahole drinking water project: Rs 15,297 crore spent by March 2024. Its water has still not reached Kolar and Chikkaballapura.</div>', SRC2),
+ (4.5, '<div class="k">ರಾಷ್ಟ್ರೀಯ ಲೆಕ್ಕಪರಿಶೋಧಕರ ವರದಿ</div><h1>12 ವರ್ಷವಾದರೂ ಯೋಜನೆ ಕಾರ್ಯಾರಂಭ ಮಾಡಿಲ್ಲ.</h1><div class="en">The national auditor found the project could not be made operational even after 12 years.</div>', CAG),
  (5.5, '<div class="k">ವೆಚ್ಚ ಎಷ್ಟು ಏರಿತು</div><div class="row"><small>2012 · ಅನುಮೋದಿತ ವೆಚ್ಚ</small>₹8,324 ಕೋಟಿ</div><div class="row"><small>2023 · ಪರಿಷ್ಕೃತ ವೆಚ್ಚ</small><b style="color:#ef5261">₹23,252 ಕೋಟಿ</b></div><div class="en">Approved at Rs 8,324 crore in 2012. Revised to Rs 23,252 crore in 2023: almost three times.</div>', CAG),
  (4.0, '<div class="k">ಮುಗಿಯುವುದು ಯಾವಾಗ?</div><h1>ಗಡುವೇ ಇರಲಿಲ್ಲ.</h1><div class="en">The deadline? There never was one. No project report ever fixed a completion date.</div>', CAG),
  (6.0, '<div class="k">ಕಾಮಗಾರಿ ಯಾರಿಗೆ ಹೋಯಿತು</div><div class="big r">80%</div><div class="mid">ಸಾಮರ್ಥ್ಯ ಪರಿಶೀಲಿಸದೆ ನೀಡಿದ ಕಾಮಗಾರಿಗಳು</div><div class="big">67%</div><div class="mid">ಮೌಲ್ಯದ ಕೆಲಸ ಕೇವಲ 7 ಗುತ್ತಿಗೆದಾರರಿಗೆ</div><div class="en">80% of works were awarded without checking whether bidders could do the job. 67% of the work by value went to just seven contractors.</div>', CAG),

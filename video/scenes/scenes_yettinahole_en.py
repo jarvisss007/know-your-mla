@@ -1,6 +1,8 @@
+SRC2 = 'Sources: CAG audit of the Yettinahole project; Chief Minister statement setting an end-2027 target for Kolar and Chikkaballapura, 2026'
 CAG = 'Source: CAG performance audit of the Yettinahole project (cost to January 2023, spending to March 2024)'
 SCENES = [
- (4.5, '<div class="k">Yettinahole drinking water project · Karnataka</div><h1>Rs 15,297 crore spent.<br>Not one drop of water.</h1><div class="en">Water delivered by March 2024: none.</div>', CAG),
+ (4.5, '<div class="k">Yettinahole drinking water project · Karnataka</div><h1>Rs 15,297 crore spent.<br>Kolar is still waiting for the water.</h1><div class="en">Spent by March 2024. The water has still not reached Kolar and Chikkaballapura.</div>', SRC2),
+ (4.5, '<div class="k">What the national auditor found</div><h1>12 years on, still not operational.</h1><div class="en">"Could not be made operational even after 12 years." CAG, 2026</div>', CAG),
  (5.5, '<div class="k">How the bill grew</div><div class="row"><small>2012 · approved cost</small>Rs 8,324 cr</div><div class="row"><small>2023 · revised cost</small><b style="color:#ef5261">Rs 23,252 cr</b></div><div class="en">Almost three times the original price.</div>', CAG),
  (4.0, '<div class="k">When will it finish?</div><h1>There was never a deadline.</h1><div class="en">No project report ever fixed a completion date.</div>', CAG),
  (6.0, '<div class="k">Who got the work</div><div class="big r">80%</div><div class="mid">of works awarded without checking if bidders could do the job</div><div class="big">67%</div><div class="mid">of the work by value went to just 7 contractors</div>', CAG),
