@@ -1,0 +1,434 @@
+{
+  "batch": "kalyana",
+  "notes": [
+    "CAG Report on Performance Audit of Functioning of Kalyana Karnataka Region Development Board, Govt of Karnataka (Report No. 10 of 2022, tabled 23 Feb 2023) is cited chapter by chapter. Its PDFs on cag.gov.in redirect to a cag CloudFront mirror; text was extracted locally from those PDFs. Rupee symbols were lost in extraction, so quotes are given as the words appear.",
+    "In this CAG report, district rows for 'Ballari' (NFHS-4 2015-16 and NFHS-5 2019-20, PCI to 2019-20) are for the undivided district, before Vijayanagara was carved out on 17 Nov 2021.",
+    "CAG Table 2.10 (women 15-19) and Table 2.11 (women 15-49) carry identical figures. That looks like a CAG duplication error, so women's anaemia from this report was NOT used. Child anaemia (Table 2.12) was used instead.",
+    "Karnataka governments over the period: Congress (2013-May 2018); JD(S)-Congress coalition (May 2018-Jul 2019); BJP (Jul 2019-May 2023); Congress (May 2023-). ThePrint (25 Jun 2026) refers to 'CM D K Shivakumar', so the Congress leadership changed by mid-2026."
+  ],
+  "districts": [
+    {
+      "district": "Kalyana Karnataka region",
+      "items": [
+        {
+          "type": "unspent",
+          "title": "KKRDB: CAG finds 74% of released money spent, 70% physical progress (5 years to 2020-21)",
+          "facts": {"sanctioned_year": 2013, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "CAG performance audit tabled 23 Feb 2023", "as_of": "five years to 2020-21 (audit replies July 2022)"},
+          "governments": "Board set up 2013 under the Congress govt as HKRDB; renamed KKRDB in Sep 2019. The audit period spans Congress, JD(S)-Congress and BJP governments.",
+          "summary": "The CAG found the Board spent 74% of the money released to it over five years, with physical progress of 70%, and that it never did its core job of measuring the region's backlogs.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Executive-summary-063f74dd849f3e5.57928385.pdf",
+          "quote": "During last five years, the Board has spent 74 per cent of the released amount with physical progress achieved up to 70 per cent.",
+          "confidence": "high"
+        },
+        {
+          "type": "unspent",
+          "title": "KKRDB: Rs 387.52 crore of allocated money never released (2016-17 to 2020-21)",
+          "facts": {"sanctioned_year": null, "original_cost_cr": 5631.86, "revised_cost_cr": null, "spent_cr": 5302.28, "original_deadline": null, "status": "Allocation Rs 5,631.86 cr; released Rs 5,244.34 cr; loss of assistance Rs 387.52 cr. The fourth-quarter instalment was withheld in 2017-18 and 2019-20 because the Board had not used 75% of available funds.", "as_of": "2016-17 to 2020-21 (CAG Table 5.1; spent_cr is the 2016-17 to 2020-21 expenditure total)"},
+          "governments": "Congress (2016-18), JD(S)-Congress (2018-19), BJP (2019-21)",
+          "summary": "Against Rs 5,631.86 crore allocated over five years, the state released only Rs 5,244.34 crore. CAG calls the Rs 387.52 crore gap a loss of assistance, because the Board was too slow to spend what it already had.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-5-Financial-Management-063f74dd8781799.85859702.pdf",
+          "quote": "the actual release to the Board by the Government was only 5,244.34 crore, thus, resulting in loss of assistance of 387.52 crore.",
+          "confidence": "high"
+        },
+        {
+          "type": "unspent",
+          "title": "KKRDB: idle balances above the 20% carry-forward limit in 4 of 5 years",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": 925.81, "original_deadline": null, "status": "2020-21: funds available Rs 1,396.39 cr, spent Rs 925.81 cr, closing balance Rs 470.57 cr against a 20% limit of Rs 279.28 cr", "as_of": "31 Mar 2021"},
+          "governments": "BJP govt in 2020-21; the pattern ran from 2017-18 onward under Congress, the coalition and BJP",
+          "summary": "The Board's unspent closing balance went over the 20% limit in its own Board Order every year from 2017-18 to 2020-21. In 2020-21 it held Rs 470.57 crore unspent, against a limit of Rs 279.28 crore.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-5-Financial-Management-063f74dd8781799.85859702.pdf",
+          "quote": "the Board retained more funds every year except 2016-17 as against the permissible limit of 20 per cent.",
+          "confidence": "high"
+        },
+        {
+          "type": "unspent",
+          "title": "KKRDB: 3,731 approved works worth Rs 738.65 crore cancelled; 2,352 never started (2013-21)",
+          "facts": {"sanctioned_year": null, "original_cost_cr": 738.65, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Of 28,038 works: 3,731 (13%) cancelled; 2,352 (8%) not commenced 1-3 years after approval", "as_of": "2013-14 to 2021-22 (Hykasoft data)"},
+          "governments": "Congress (2013-18), JD(S)-Congress (2018-19), BJP (2019-22)",
+          "summary": "Of 28,038 works the Board approved, 3,731 works costing Rs 738.65 crore were later cancelled and 2,352 had not started one to three years after approval. CAG blamed this on poor planning.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-4-Implementation-of-Development-Works-063f74dd86b7db0.23340439.pdf",
+          "quote": "3,731 works (thirteen per cent) with an estimated cost of 738.65 crore approved in the AAPs were cancelled during the period 2013-21.",
+          "confidence": "high"
+        },
+        {
+          "type": "unspent",
+          "title": "KKRDB 2013-14 to 2024-25: Rs 19,778 cr allocated, Rs 13,229 cr released, Rs 11,174 cr spent",
+          "facts": {"sanctioned_year": 2013, "original_cost_cr": 19778, "revised_cost_cr": null, "spent_cr": 11174, "original_deadline": null, "status": "Released Rs 13,229 cr. Of 35,885 projects, 27,264 completed and 8,621 in progress.", "as_of": "Sep 2024 (state government figures for the Kalaburagi cabinet meeting, reported 19 Sep 2024)"},
+          "governments": "All governments from 2013 to 2024: Congress, JD(S)-Congress, BJP, Congress",
+          "summary": "Over 12 years the state allocated Rs 19,778 crore to the Board but released only Rs 13,229 crore, and Rs 11,174 crore was spent. That is about 56% of the money promised.",
+          "source_url": "https://www.theweek.in/news/india/2024/09/19/siddaramaiah-demands-matching-grant-from-centre-to-develop-kalyana-karnataka.amp.html",
+          "quote": "allocated Rs 19,778 crores to the Kalyana Karnataka Regional Development Board (KKRDB), of which Rs 13,229 crore has been released and Rs 11,174 crore spent",
+          "confidence": "medium"
+        },
+        {
+          "type": "unspent",
+          "title": "KKRDB 2023-24: Rs 2,009.53 cr spent of Rs 3,000 cr released",
+          "facts": {"sanctioned_year": null, "original_cost_cr": 3000, "revised_cost_cr": null, "spent_cr": 2009.53, "original_deadline": null, "status": "Figure given by KKRDB chairman Ajay Singh", "as_of": "15 Jun 2024"},
+          "governments": "Congress (2023-)",
+          "summary": "In 2023-24 the government released Rs 3,000 crore to the Board, of which Rs 2,009.53 crore was spent, according to the Board's chairman.",
+          "source_url": "https://www.deccanchronicle.com/southern-states/karnataka/cm-siddaramaiah-wants-action-plan-to-spend-rs-5000-cr-for-kalyana-karnataka-development-899081",
+          "quote": "with Rs 2009.53 crore already spent, marking the highest expenditure since the board's inception",
+          "confidence": "medium"
+        },
+        {
+          "type": "unspent",
+          "title": "CM's own figure: Rs 5,300 crore spent of Rs 13,000 crore released in three years",
+          "facts": {"sanctioned_year": null, "original_cost_cr": 13000, "revised_cost_cr": null, "spent_cr": 5300, "original_deadline": null, "status": "Statement by CM Siddaramaiah at Yadgir; 2025-26 allocation Rs 5,000 cr", "as_of": "13-14 Jun 2025"},
+          "governments": "Congress (2023-)",
+          "summary": "The Chief Minister said Rs 13,000 crore had been released to the region over three years and Rs 5,300 crore of it spent, which leaves about 59% unspent by his own account.",
+          "source_url": "https://www.deccanchronicle.com/amp/southern-states/karnataka/siddaramaiah-reaffirms-commitment-to-kalyana-karnataka-1885252",
+          "quote": "Out of the Rs 13,000 crore released, Rs 5,300 crore has already been spent on developmental works",
+          "confidence": "medium"
+        },
+        {
+          "type": "project",
+          "title": "Upper Krishna Project Stage III: cost Rs 51,148 cr to Rs 87,818 cr",
+          "facts": {"sanctioned_year": 2019, "original_cost_cr": 51148.94, "revised_cost_cr": 87818, "spent_cr": null, "original_deadline": null, "status": "Land: 29,566 acres acquired, 59,354 acres pending (Sep 2025), of about 1.33 lakh acres needed. Land cost alone Rs 40,557 cr. Overrun Rs 36,669 cr.", "as_of": "17 Sep 2025"},
+          "governments": "Cabinet approval of Rs 51,148.94 cr reported 13 Jul 2019, in the last days of the JD(S)-Congress coalition. The revised figure was reported under the Congress govt (2025). BJP governments ran it from 2019-23.",
+          "summary": "The state Cabinet approved Rs 51,148.94 crore for UKP Stage III in 2019. By September 2025 the cost had reached Rs 87,818 crore, and only 29,566 acres of about 1.33 lakh acres had been acquired.",
+          "source_url": "https://assets.thehansindia.com/karnataka/cabinet-approves-enhanced-compensation-of-rs-40-lakh-per-acre-1007165",
+          "quote": "Originally estimated at ₹51,148 crore, the project cost has now ballooned to ₹87,818 crore",
+          "confidence": "medium",
+          "secondary_source_url": "https://krishijagran.com/news/fund-for-third-phase-of-the-krishna-upper-project-gets-approval/?amp=1",
+          "secondary_quote": "The Karnataka state Cabinet has approved an expenditure of Rs 51,148.94 crore for the third phase",
+          "caveat": "Almatti and the Stage III works lie mostly in Vijayapura and Bagalkot, outside this batch. Check which Kalyana Karnataka districts are in the command area before attributing this to any one district. Estimates also differ by source (a 2021 figure of Rs 65,000 cr; some reports say Rs 1 lakh cr)."
+        },
+        {
+          "type": "unspent",
+          "title": "KMERC mining-zone fund: Rs 24,996 cr earmarked; work orders for 47 projects (Jun 2024)",
+          "facts": {"sanctioned_year": null, "original_cost_cr": 24996.3, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "CEPMIZ approved 358 projects worth Rs 7,928.78 cr; govt sanctioned Rs 3,468.41 cr for 182; tenders for 135; work orders for 47", "as_of": "27 Jun 2024 (CM review meeting)"},
+          "governments": "Fund built from Supreme Court-ordered levies after the 2011 mining ban. Review held under the Congress govt (2024).",
+          "summary": "Of Rs 24,996.3 crore earmarked for mining-hit Ballari, Vijayanagara, Chitradurga and Tumakuru, projects worth Rs 7,928.78 crore had been approved, but work orders had been issued for only 47 projects.",
+          "source_url": "https://hospet.online/cm-displeased-with-delayed-projects-in-mining-hit-districts-despite-large-budget-demands-dprs-within-a-week",
+          "quote": "Tenders have been initiated for 135 projects, and work orders have been issued for 47.",
+          "confidence": "medium",
+          "caveat": "Local news outlet reporting the CM's review meeting. Primary KMERC or Supreme Court filings were not opened."
+        },
+        {
+          "type": "outcome",
+          "title": "Per-capita income gap with the state widened, 2013-14 to 2019-20",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "State PCI grew 74.84%; the six KK districts grew 47.96% (Kalaburagi) to 63.64% (Yadgir)", "as_of": "2019-20 (Economic Survey data in CAG report)"},
+          "governments": "Congress, JD(S)-Congress, BJP",
+          "summary": "Six years after Article 371J, every Kalyana Karnataka district's per-capita income grew more slowly than the state's 74.84%, so the gap widened.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-2-Status-of-the-Region-063f74dd85655a8.95243966.pdf",
+          "quote": "The growth in PCI of the six Districts of KK Region during this period was significantly lower than the State wide growth.",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "29 of the state's 75 lowest-scoring taluks are in Kalyana Karnataka",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "State average 44.85 on the NITI aspirational index framework; all taluks in Kalaburagi and Yadgir and 7 of 8 in Bidar were below it", "as_of": "CAG report, 2022 (Avalokana data)"},
+          "governments": "n/a",
+          "summary": "Of the 75 Karnataka taluks scoring below the state average on NITI Aayog's indicators, 29 (38.67%) are in this region, including every taluk in Kalaburagi and Yadgir.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-2-Status-of-the-Region-063f74dd85655a8.95243966.pdf",
+          "quote": "all the taluks in Kalaburagi and Yadagiri and seven out of eight taluks in Bidar district were performing below State average.",
+          "confidence": "high"
+        },
+        {
+          "type": "unspent",
+          "title": "District Mineral Fund statewide: Rs 4,003.51 cr collected, Rs 1,826.46 cr spent",
+          "facts": {"sanctioned_year": 2015, "original_cost_cr": 4003.51, "revised_cost_cr": null, "spent_cr": 1826.46, "original_deadline": null, "status": "45.6% spent. Of 10,865 projects sanctioned: 5,004 completed, 2,190 not started, 1,077 scrapped.", "as_of": "31 Mar 2023"},
+          "governments": "DMF levy from 2015-16; spans Congress, JD(S)-Congress and BJP governments",
+          "summary": "Karnataka collected Rs 4,003.51 crore in District Mineral Fund levies by March 2023 but spent only Rs 1,826.46 crore, and that spending includes Rs 204.72 crore used for Covid-19.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter---III-Collection-of-DMFT-Funds-06943928230ce21.71895304.pdf",
+          "quote": "Of the 31 districts, 83 per cent of funds were collected in four districts viz., Ballari, Vijayanagara, Kalaburagi and Chitradurga.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "district": "Kalaburagi",
+      "items": [
+        {
+          "type": "project",
+          "title": "Kalaburagi airport: PPP contract terminated, state finished it at Rs 181 cr (excluding land)",
+          "facts": {"sanctioned_year": 2008, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": 181, "original_deadline": null, "status": "Developer spent Rs 25 cr, then the contract was terminated; the state completed the airport for Rs 181 cr excluding 724 acres of land; operations began Nov 2019", "as_of": "16 Sep 2019"},
+          "governments": "Planned as a PPP around 2008 (BJP govt); stalled through the Congress years; completed and opened under the BJP govt (2019)",
+          "summary": "The Kalaburagi airport stalled under a private developer, which had spent Rs 25 crore. The state took it over and finished it at Rs 181 crore, not counting 724 acres of land, more than a decade after it was planned.",
+          "source_url": "https://indianinfrastructure.com/2019/09/16/ksiidc-signs-mou-with-aai-for-kalaburagi-airport/",
+          "quote": "completed the airport at a cost of Rs 1.81 billion, excluding the cost of acquiring 724 acres of land.",
+          "confidence": "medium",
+          "caveat": "Other outlets give Rs 175, 176 and 230 cr. The original sanctioned cost and deadline (reportedly May 2012) were not confirmed from a page I opened."
+        },
+        {
+          "type": "unspent",
+          "title": "CAG: Rs 5.60 cr wasted on abandoned theme-park buildings in Kalaburagi",
+          "facts": {"sanctioned_year": 2014, "original_cost_cr": 9.52, "revised_cost_cr": null, "spent_cr": 5.6, "original_deadline": null, "status": "7D theatre, kids house, insectarium and aquarium abandoned since 2017 (Nirmithi Kendra)", "as_of": "April 2022"},
+          "governments": "Approved in the KKRDB 2014-15 action plan (Congress govt); abandoned from 2017; still abandoned under the BJP govt (2022)",
+          "summary": "Five works at Rajiv Gandhi Theme Park and Kotnoor D Park, estimated at Rs 9.52 crore, were abandoned after Rs 5.60 crore was spent. CAG called the expenditure wasteful.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-4-Implementation-of-Development-Works-063f74dd86b7db0.23340439.pdf",
+          "quote": "all these works were remained abandoned (April 2022) after incurring a total expenditure of 5.60 crore.",
+          "confidence": "high"
+        },
+        {
+          "type": "unspent",
+          "title": "CAG: Rs 1.97 cr Chincholi shopping complex unused, work stopped for five years",
+          "facts": {"sanctioned_year": 2015, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": 1.97, "original_deadline": null, "status": "About 80% complete; electrical and other work pending; unused", "as_of": "2022 (CAG report)"},
+          "governments": "KKRDB 2015-16 action plan (Congress govt); idle through the coalition and BJP governments",
+          "summary": "The Board spent Rs 1.97 crore on a shopping complex in Chincholi town, which stood unused because the electrical and other work was never finished.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-4-Implementation-of-Development-Works-063f74dd86b7db0.23340439.pdf",
+          "quote": "An expenditure of 1.97 crore was incurred on the shopping complex. The complex remained unutilized as the electrical and other works remained incomplete.",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Child anaemia rose to 75.1% (NFHS-4 72.4%), second-worst in the state",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Children 6-59 months anaemic: 72.4% (2015-16) to 75.1% (2019-20)", "as_of": "NFHS-5 2019-20, as tabulated by CAG"},
+          "governments": "n/a",
+          "summary": "Three in four young children in Kalaburagi are anaemic (75.1%, up from 72.4%), among the top three districts in Karnataka.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-2-Status-of-the-Region-063f74dd85655a8.95243966.pdf",
+          "quote": "Yadagiri, Kalaburagi, and Raichur are in top three position of high anaemia in the State with Koppal and Bidar occupying fifth and eighth place",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Per-capita income grew 47.96% vs state 74.84% (2013-14 to 2019-20)",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "PCI Rs 67,886 to Rs 1,00,446; state Rs 1,26,976 to Rs 2,22,002", "as_of": "2019-20"},
+          "governments": "n/a",
+          "summary": "Kalaburagi had the slowest income growth in the region. Per-capita income rose only from Rs 67,886 to Rs 1,00,446, while the state average went from Rs 1,26,976 to Rs 2,22,002.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-2-Status-of-the-Region-063f74dd85655a8.95243966.pdf",
+          "quote": "Kalaburagi 67,886 71,085 65,493 83,619 92,098 99,322 1,00,446 47.96 (Table 2.2 row)",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "district": "Bidar",
+      "items": [
+        {
+          "type": "project",
+          "title": "Karanja irrigation project: Rs 635+ crore spent, short of water for its 29,722 ha target",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": 635, "original_deadline": null, "status": "Civil works complete, but low yield in the catchment; lift schemes proposed to make it work", "as_of": "17 Jan 2017"},
+          "governments": "Decades-old project spanning many governments; the 2017 report is from the Congress govt",
+          "summary": "The state had spent over Rs 635 crore on the Karanja project, meant to irrigate 29,722 hectares in Bidar, but low inflows left it short of water.",
+          "source_url": "https://daijiworld.com/news/newsDisplay?newsID=433018",
+          "quote": "The State Government had spent over Rs 635 crore to the Karanja project",
+          "confidence": "medium"
+        },
+        {
+          "type": "project",
+          "title": "Bidar airport: UDAN flights stopped 26 Dec 2023 when the subsidy ended",
+          "facts": {"sanctioned_year": 2020, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Flights began 7 Feb 2020; viability-gap funding ended Dec 2023; airport non-operational about seven months later", "as_of": "17 Jul 2024"},
+          "governments": "Started under the BJP govt and the Union UDAN scheme (2020); suspended under the Congress govt (2023-24)",
+          "summary": "Bidar's civil enclave opened to UDAN flights in February 2020, but airlines stopped flying on 26 December 2023 when the subsidy ended, leaving it idle.",
+          "source_url": "https://thesouthfirst.com/karnataka/air-connectivity-in-karnataka-reality-check-of-airports-in-tier-2-and-3-cities/",
+          "quote": "airline operators stopped operations from 26 December, 2023",
+          "confidence": "medium",
+          "caveat": "Later reports say flights resumed in 2025 with KKRDB support; not verified from an opened page."
+        },
+        {
+          "type": "outcome",
+          "title": "7 of 8 Bidar taluks below the state average on NITI indicators",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Below average: Humnabad, Bhalki, Aurad, Hulasur, Chitgoppa, Kamalanagar, Basavakalyan", "as_of": "CAG 2022"},
+          "governments": "n/a",
+          "summary": "Seven of Bidar's eight taluks score below Karnataka's average on NITI Aayog's aspirational-district indicators.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-2-Status-of-the-Region-063f74dd85655a8.95243966.pdf",
+          "quote": "seven out of eight taluks in Bidar district were performing below State average.",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Child anaemia 69.3% (NFHS-4 69.1%), eighth-highest in the state; PCI growth 58.41% vs state 74.84%",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Anaemia 69.1% to 69.3%; PCI Rs 70,543 (2013-14) to Rs 1,11,750 (2019-20)", "as_of": "NFHS-5 2019-20; PCI 2019-20"},
+          "governments": "n/a",
+          "summary": "Child anaemia in Bidar barely moved (69.1% to 69.3%), and per-capita income grew 58% against the state's 75%.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-2-Status-of-the-Region-063f74dd85655a8.95243966.pdf",
+          "quote": "Yadagiri, Kalaburagi, and Raichur are in top three position of high anaemia in the State with Koppal and Bidar occupying fifth and eighth place",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "district": "Yadgir",
+      "items": [
+        {
+          "type": "unspent",
+          "title": "CAG: Rs 5.02 cr hi-tech textile training centre idle since completion (2018-19)",
+          "facts": {"sanctioned_year": 2015, "original_cost_cr": 5.02, "revised_cost_cr": null, "spent_cr": 5.02, "original_deadline": null, "status": "Building completed 2018-19, training never started; the linked Kadechur textile park (Rs 10 cr KKRDB road grant) still awaited investors", "as_of": "2022 (CAG; Govt reply July 2022)"},
+          "governments": "KKRDB 2015-16 action plan (Congress govt); idle under the coalition and BJP governments",
+          "summary": "The Board spent Rs 5.02 crore on a textile training centre at Bandalli, Yadgir taluk, which was finished in 2018-19 but never started training anyone.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-4-Implementation-of-Development-Works-063f74dd86b7db0.23340439.pdf",
+          "quote": "The training center was yet to be commenced, leading to idling of the constructed building. Thus, 5.02 crore invested by the Board",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Child anaemia 76% (NFHS-4 74%), highest in Karnataka",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Children 6-59 months anaemic: 74% to 76%", "as_of": "NFHS-5 2019-20, as tabulated by CAG"},
+          "governments": "n/a",
+          "summary": "Yadgir has Karnataka's highest child anaemia: 76% of children aged 6-59 months, up from 74%.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-2-Status-of-the-Region-063f74dd85655a8.95243966.pdf",
+          "quote": "Yadagiri, Kalaburagi, and Raichur are in top three position of high anaemia in the State",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Every Yadgir taluk below the state average; PCI Rs 69,014 to Rs 1,12,937",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "PCI growth 63.64% vs state 74.84% (2013-14 to 2019-20); NITI Aayog aspirational district", "as_of": "2019-20 / CAG 2022"},
+          "governments": "n/a",
+          "summary": "All of Yadgir's taluks score below the state average on NITI Aayog indicators. Its per-capita income of Rs 1,12,937 (2019-20) is about half the state's Rs 2,22,002.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-2-Status-of-the-Region-063f74dd85655a8.95243966.pdf",
+          "quote": "all the taluks in Kalaburagi and Yadagiri and seven out of eight taluks in Bidar district were performing below State average.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "district": "Raichur",
+      "items": [
+        {
+          "type": "project",
+          "title": "Raichur greenfield airport (Rs 185.57 cr) still awaiting site clearance",
+          "facts": {"sanctioned_year": 2021, "original_cost_cr": 185.57, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "KSIIDC developing it on about 400 acres; RITES DPR done; awaiting Civil Aviation Ministry steering-committee site clearance; no flights", "as_of": "17 Jul 2024"},
+          "governments": "DPR approved under the BJP govt (reported Apr 2021 / Mar 2022); still pending under the Congress govt (2024)",
+          "summary": "Raichur's Rs 185.57 crore airport, approved under the previous government, was still waiting for central site clearance in July 2024, with no flights.",
+          "source_url": "https://thesouthfirst.com/karnataka/air-connectivity-in-karnataka-reality-check-of-airports-in-tier-2-and-3-cities/",
+          "quote": "The KSIIDC is developing the airport in around 400 acres of land at an estimated cost of ₹185.57 crore.",
+          "confidence": "medium",
+          "caveat": "The sanctioned year (2021 cabinet DPR approval) comes from search snippets, not an opened page. Some later reports give Rs 219 cr."
+        },
+        {
+          "type": "unspent",
+          "title": "CAG: Manvi road abandoned at murrum stage after Rs 1.29 cr",
+          "facts": {"sanctioned_year": 2017, "original_cost_cr": 1.75, "revised_cost_cr": null, "spent_cr": 1.29, "original_deadline": null, "status": "Work stopped June 2019; started before land was acquired", "as_of": "2022 (CAG)"},
+          "governments": "Entrusted Feb 2017 (Congress govt); stopped June 2019 (coalition govt)",
+          "summary": "A 5-km Ballatagi-Hirebidadini road in Manvi taluk, allotted Rs 1.75 crore, stopped at the murrum stage after Rs 1.29 crore was spent, because the land had not been acquired.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-4-Implementation-of-Development-Works-063f74dd86b7db0.23340439.pdf",
+          "quote": "The work was stopped (June 2019) after incurring an expenditure of 1.29 crore.",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Child anaemia 73.6% (NFHS-4 70.6%), third-worst in the state",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "70.6% to 73.6%; PCI Rs 73,851 to Rs 1,16,389 (57.60% growth vs state 74.84%)", "as_of": "NFHS-5 2019-20; PCI 2019-20"},
+          "governments": "n/a",
+          "summary": "Child anaemia in Raichur rose from 70.6% to 73.6%, the third-highest in Karnataka.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-2-Status-of-the-Region-063f74dd85655a8.95243966.pdf",
+          "quote": "Yadagiri, Kalaburagi, and Raichur are in top three position of high anaemia in the State",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Raichur ranked first of 115 aspirational districts in a NITI delta ranking (June survey, reported Aug 2023)",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Delta ranking measures month-on-month improvement, not absolute level", "as_of": "11 Aug 2023"},
+          "governments": "n/a",
+          "summary": "Raichur, one of Karnataka's two NITI Aayog aspirational districts, topped a delta ranking of 115 districts for improvement. That ranks progress, not the district's overall level.",
+          "source_url": "https://english.publictv.in/?p=441946",
+          "quote": "Raichur has been ranked first among the total of 115 aspirational districts in the country.",
+          "confidence": "medium",
+          "caveat": "Not confirmed on niti.gov.in (403); the month and year of the ranking are inferred from the article date."
+        }
+      ]
+    },
+    {
+      "district": "Koppal",
+      "items": [
+        {
+          "type": "project",
+          "title": "Navali balancing reservoir on the Tungabhadra: Rs 14.30 cr for a DPR in 2020, still not built",
+          "facts": {"sanctioned_year": 2020, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Promised in 2017 after silt cut Tungabhadra dam storage by about 31 TMC. DPR approved May 2020 with Rs 14.30 cr for preparation. Needs Andhra Pradesh and Telangana consent. Reported as mentioned again in the 2026 budget without progress (not verified).", "as_of": "18 May 2020 (DPR); status as reported 2026"},
+          "governments": "Promised 2017 (Congress govt); DPR approved 2020 (BJP govt); repeated in budgets under the Congress govt",
+          "summary": "First promised in 2017 to make up storage lost to silt at the Tungabhadra dam, the Navali reservoir got Rs 14.30 crore for a project report in 2020 and has not been built.",
+          "source_url": "https://www.thenewsminute.com/article/after-10-yr-delay-karnataka-govt-begin-constructing-tungabhadra-balancing-dam-124788",
+          "quote": "Directions have been issued to release Rs 14.30 crore towards preparation of the DPR.",
+          "confidence": "medium",
+          "caveat": "Cost estimates (Rs 5,600 cr earlier; Rs 13,040 cr DPR estimate per Deccan Herald) could not be opened (DH blocks fetching)."
+        },
+        {
+          "type": "project",
+          "title": "Tungabhadra dam: gate 19 washed away Aug 2024; all 33 crest gates replaced for about Rs 51 cr (June 2026)",
+          "facts": {"sanctioned_year": 2024, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": 51, "original_deadline": null, "status": "All 33 gates replaced; inaugurated 25 Jun 2026", "as_of": "25 Jun 2026"},
+          "governments": "Congress govt (2024-26). The dam is run by the inter-state Tungabhadra Board.",
+          "summary": "After a crest gate washed away in August 2024, all 33 Tungabhadra dam gates were replaced at about Rs 51 crore and inaugurated in June 2026.",
+          "source_url": "https://theprint.in/india/cm-shivakumar-inaugurates-33-spillway-gates-of-tungabhadra-dam/2969415/",
+          "quote": "has been completed very successfully at a cost of approximately Rs 51 crore.",
+          "confidence": "medium",
+          "caveat": "The dam is at Hosapete (Vijayanagara) and Munirabad (Koppal); ThePrint places it in Koppal district."
+        },
+        {
+          "type": "outcome",
+          "title": "Child anaemia 70.7% (NFHS-4 68.1%); PCI growth 50.02% vs state 74.84%",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Anaemia 68.1% to 70.7% (fifth-highest in the state); PCI Rs 73,916 to Rs 1,10,886", "as_of": "NFHS-5 2019-20; PCI 2019-20"},
+          "governments": "n/a",
+          "summary": "Child anaemia in Koppal rose from 68.1% to 70.7%, the fifth-highest in Karnataka, and per-capita income grew only 50% against the state's 75%.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-2-Status-of-the-Region-063f74dd85655a8.95243966.pdf",
+          "quote": "Yadagiri, Kalaburagi, and Raichur are in top three position of high anaemia in the State with Koppal and Bidar occupying fifth and eighth place",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "district": "Ballari",
+      "items": [
+        {
+          "type": "unspent",
+          "title": "Ballari District Mineral Fund: Rs 1,912.55 cr collected, only Rs 629.62 cr used (39.51%)",
+          "facts": {"sanctioned_year": 2015, "original_cost_cr": 1912.55, "revised_cost_cr": null, "spent_cr": 629.62, "original_deadline": null, "status": "1,764 projects sanctioned at Rs 1,593.68 cr. Lowest utilisation among the districts CAG tested.", "as_of": "2015-16 to 2022-23 (31 Mar 2023)"},
+          "governments": "Congress, JD(S)-Congress and BJP governments (2015-23)",
+          "summary": "Ballari collected Rs 1,912.55 crore from miners for mining-affected people by March 2023 but used only Rs 629.62 crore (39.51%), the lowest rate CAG found.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter---III-Collection-of-DMFT-Funds-06943928230ce21.71895304.pdf",
+          "quote": "The percentage of utilisation ranged between 39.51 per cent in Ballari to 79.69 per cent in Chitradurga during 2015-16 to 2022-23.",
+          "confidence": "high"
+        },
+        {
+          "type": "unspent",
+          "title": "CAG: Rs 0.99 cr Ballari road dug up by another government agency soon after completion",
+          "facts": {"sanctioned_year": 2019, "original_cost_cr": 1.01, "revised_cost_cr": null, "spent_cr": 0.99, "original_deadline": null, "status": "Completed May 2021; dug up by KUWS&DB for drainage pipes without PWD permission (seen Jan 2022)", "as_of": "Jan 2022"},
+          "governments": "KKRDB 2019-20 action plan (BJP govt)",
+          "summary": "A Rs 0.99 crore concrete road built with Board funds in Ballari was dug up by the water-supply board soon after completion. CAG called the spending wasteful.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-4-Implementation-of-Development-Works-063f74dd86b7db0.23340439.pdf",
+          "quote": "lack of synchronisation/convergence among the authorities in executing works in the region rendered the expenditure of 0.99 crore wasteful.",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Child anaemia fell 72.3% to 67.5%, the only KK district to improve; PCI Rs 1,08,454 to Rs 1,73,529",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Undivided Ballari (including present Vijayanagara)", "as_of": "NFHS-5 2019-20; PCI 2019-20"},
+          "governments": "n/a",
+          "summary": "Undivided Ballari was the only district in the region where child anaemia fell (72.3% to 67.5%), and it has the region's highest per-capita income, though still below the state's.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-2-Status-of-the-Region-063f74dd85655a8.95243966.pdf",
+          "quote": "Ballari 72.3 67.5 -4.8 (Table 2.12 row: anaemia in children 6-59 months, NFHS-4 vs NFHS-5)",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "district": "Vijayanagara",
+      "items": [
+        {
+          "type": "unspent",
+          "title": "Vijayanagara District Mineral Fund: Rs 463.21 cr collected, Rs 333.79 cr used (44.49%)",
+          "facts": {"sanctioned_year": 2021, "original_cost_cr": 463.21, "revised_cost_cr": null, "spent_cr": 333.79, "original_deadline": null, "status": "1,420 projects sanctioned at Rs 750.25 cr", "as_of": "31 Mar 2023"},
+          "governments": "District created 17 Nov 2021 (BJP govt)",
+          "summary": "Vijayanagara's mineral fund collected Rs 463.21 crore by March 2023 and used Rs 333.79 crore (44.49%), while it had sanctioned projects worth Rs 750.25 crore.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter---III-Collection-of-DMFT-Funds-06943928230ce21.71895304.pdf",
+          "quote": "Vijayanagara 463.21 1,420 750.25 333.79 44.49 (Table 3.2 row)",
+          "confidence": "high"
+        },
+        {
+          "type": "unspent",
+          "title": "CAG: Rs 137.50 cr penalties imposed for illegal mineral transport, but DMF share not demanded",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Royalty not collected Rs 5.93 cr; DMF not collected Rs 1.04 cr (Ballari: Rs 1.18 cr)", "as_of": "2018-19 to 2021-22 DCB reports"},
+          "governments": "Coalition and BJP governments (2018-22); Govt reply Aug 2024 (Congress)",
+          "summary": "In Vijayanagara the mines department imposed Rs 137.50 crore in penalties for transporting minerals without permits, but never demanded the royalty or the Rs 1.04 crore due to the mineral fund.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter---III-Collection-of-DMFT-Funds-06943928230ce21.71895304.pdf",
+          "quote": "the Department did not demand/collect Royalty and consequent DMF thereon, while imposing penalty for illegal mining and transportation of minerals.",
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    "NFHS-4 vs NFHS-5 district factsheets on rchiips.org failed with a certificate error, so stunting and women's anaemia per district come only via CAG. CAG's women's-anaemia tables are duplicated (likely an error) and were not used. Stunting by district: not obtained.",
+    "Karnataka HDR 2022 district HDI values: the OpenCity dataset and Deccan Herald returned 403. Reports say Yadgir, Kalaburagi and Raichur are the bottom three, but no opened page gave the numbers.",
+    "Deccan Herald blocks all fetching, so many DH-only figures could not be used (Navali Rs 13,040 cr DPR estimate, UKP land cost, Kalaburagi airport original cost and May 2012 deadline, KMERC misuse reports, Singatalur Lokayukta probe).",
+    "Year-by-year KKRDB allocation, release and spend for 2013-14 to 2015-16 and 2021-22 to 2025-26 was not found in a primary source. CAG covers 2016-17 to 2020-21 only, and kkrdb.karnataka.gov.in was not reached.",
+    "Nanjundappa Committee Special Development Plan totals for the KK districts: the CMDR page failed (SSL), and the Rs 31,000 cr / Rs 16,000 cr SDP figures were not confirmed from an opened page.",
+    "KMERC: no primary Supreme Court / CEC / KMERC filing opened. The parliamentary reply (eparlib) was unreachable. Actual spend is unknown.",
+    "UKP Stage III: amount spent to date and original completion deadline not found. Lower Mullamari (Kalaburagi), Narayanpur canal modernisation, and medical college costs were not found.",
+    "Teacher and doctor vacancy figures at district level were not found.",
+    "Vijayanagara has no separate NFHS-5 data (district created Nov 2021). The CAG KKRDB audit predates its inclusion.",
+    "NITI Aayog official ranking PDFs returned 403, so Raichur's rank rests on Public TV.",
+    "No 'what it could have bought' illustration: no unit cost was verified from an opened page."
+  ]
+}

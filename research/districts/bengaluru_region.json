@@ -1,0 +1,457 @@
+{
+  "batch": "bengaluru_region",
+  "notes": [
+    "Researched 2026-11-13. Every source_url below was opened in this session. Deccan Herald pages were read via their /amp/story/ URLs (desktop URLs return 403 to fetch tools); the amp URL is given.",
+    "NFHS district figures come from a CC-BY CSV transcription of the official IIPS NFHS-5 district factsheets (github pratapvardhan/NFHS-5). rchiips.org could not be opened (TLS certificate error), so these are marked medium confidence and should be checked against the IIPS PDF before publication. The CSV's README itself says 'Please recheck with source before doing any analysis.'",
+    "Party-in-power labels are added from the dates given in the sources: July 2012 = BJP govt; Feb 2014 to May 2018 = Congress; 2018-19 = Congress-JD(S) coalition; 2019 to May 2023 = BJP; May 2023 onward = Congress (CM Siddaramaiah, later CM D K Shivakumar per Aug 2026 reports). Union govt from 2014 = BJP-led NDA."
+  ],
+  "districts": [
+    {
+      "district": "Bengaluru Urban",
+      "items": [
+        {
+          "type": "project",
+          "title": "Namma Metro Phase 2 (75 km, 4 extensions + 2 new lines)",
+          "facts": {
+            "sanctioned_year": 2014,
+            "original_cost_cr": 26405,
+            "revised_cost_cr": 40425,
+            "spent_cr": null,
+            "original_deadline": "2019 (oneindia); DH Nov 2025 calls Dec 2026 'a six-year delay from the original target'",
+            "status": "Under construction; revised deadline December 2026 (as reported Nov 2025). Intermediate revision Rs 30,695 cr (2021). State cabinet approved Rs 40,425 cr on 22 May 2025; BMRCL had sought Rs 40,614.27 cr.",
+            "as_of": "Cost: 23 May 2025 (DH). Deadline: 9 Nov 2025 (DH)."
+          },
+          "governments": "Approved 2014 (Centre: UPA approval reported early 2014; state: Congress). Built under Congress (2013-18), Congress-JD(S) (2018-19), BJP (2019-23) and Congress (2023-). Cost hike approved by Congress state cabinet in May 2025; central review pending at that time.",
+          "summary": "Approved in 2014 at Rs 26,405 crore for completion by 2019, Metro Phase 2 now costs Rs 40,425 crore (up Rs 14,020 crore) and its deadline has moved to December 2026.",
+          "source_url": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fbengaluru%2Fkarnataka-cabinet-okays-rs-972990-crore-cost-hike-for-namma-metros-phase-2-3553615",
+          "quote": "will now cost Rs 40,425 crore, as against Rs 30,695.12 crore estimated earlier.",
+          "extra_sources": [
+            {"url": "https://www.oneindia.com/bengaluru/bangalore-namma-metro-phase-2-project-what-caused-the-project-cost-to-reach-rs-40-000-crore-3892773.html", "quote": "Originally approved for a 72 km stretch at Rs 26,405 crore", "date": "2024-07-30"},
+            {"url": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fbengaluru%2Fwhat-ails-namma-metro-bengalurus-long-promised-lifeline-3791709", "quote": "its new deadline is December 2026, a six-year delay from the original target.", "date": "2025-11-09"}
+          ],
+          "confidence": "high"
+        },
+        {
+          "type": "project",
+          "title": "Bengaluru Suburban Rail Project (BSRP, 149 km, 4 corridors, K-RIDE)",
+          "facts": {
+            "sanctioned_year": 2020,
+            "original_cost_cr": 15767,
+            "revised_cost_cr": 16876,
+            "spent_cr": null,
+            "original_deadline": "October 2025 (deadline 'set by PM Narendra Modi', per DH Jan 2026)",
+            "status": "Corridor 2 target Dec 2028, Corridor 4 Mar/Jun 2029, Corridors 1 and 3 Mar 2030. L&T pulled out of Corridor 2 in July 2025. Citizen Matters (July 2026) reports a further figure of Rs 23,342 cr; not confirmed as officially approved.",
+            "as_of": "25 Jan 2026 (DH interview with K-RIDE MD); 17 Jul 2026 (Citizen Matters)"
+          },
+          "governments": "Union Cabinet approval Oct 2020 (BJP-led Centre; BJP state govt). Executed under BJP (to 2023) and Congress (2023-). Cost revision to Rs 16,876 cr approved by Congress state cabinet.",
+          "summary": "Approved in October 2020 at Rs 15,767 crore with an October 2025 deadline, the suburban rail has no corridor running; the cost is now Rs 16,876 crore and the last corridors are due March 2030.",
+          "source_url": "https://www.deccanherald.com/amp/story/india/karnataka/bengaluru-suburban-rail-revival-new-k-ride-chief-lays-out-timelines-3873802",
+          "quote": "The state Cabinet has approved the project cost rise from Rs 15,767 crore to Rs 16,876 crore.",
+          "extra_sources": [
+            {"url": "https://thenewsminute.com/article/bengaluru-suburban-rail-project-finally-approved-after-decades-delay-134830", "quote": "the Union cabinet finally approved the dedicated suburban railway service for Bengaluru", "date": "2020-10-08"},
+            {"url": "https://citizenmatters.in/stalled-projects-and-cost-hikes-bengaluru-commuters-demand-end-to-suburban-rail-delays/", "quote": "Construction on Corridors 1 and 3 is yet to begin.", "date": "2026-07-17"}
+          ],
+          "confidence": "high"
+        },
+        {
+          "type": "project",
+          "title": "Peripheral Ring Road / Bengaluru Business Corridor (BDA, ~73 km)",
+          "facts": {
+            "sanctioned_year": 2007,
+            "original_cost_cr": 3000,
+            "revised_cost_cr": 21091,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Not built. Repeated failed tenders; rebranded Bengaluru Business Corridor. Global tender for first 20-km phase (Rs 3,348 cr) floated Mar 2026; 83% of phase-1 land acquired; 36 months from work order. ETV Bharat cites total escalation to Rs 27,000 cr.",
+            "as_of": "Rs 21,091 cr: Feb 2022 (Swarajya). Status: 31 Mar 2026 (ETV Bharat)."
+          },
+          "governments": "Proposed 2007 under JD(S)-BJP coalition; estimate of Rs 21,091 cr approved by BJP govt cabinet (2022); tendered again under Congress govt (2026). Spans every government since 2007.",
+          "summary": "First proposed in 2007 at about Rs 3,000 crore, the ring road was estimated at Rs 21,091 crore by 2022 and, 19 years on, only its first 20-km phase has been put to tender.",
+          "source_url": "https://swarajyamag.com/news-brief/karnataka-cabinet-approves-rs-21091-cr-peripheral-ring-road-project-in-bengaluru-concessionaire-to-be-granted-50-year-build-operate-transfer-contract",
+          "quote": "is now estimated to cost Rs 21,091 crore.",
+          "extra_sources": [
+            {"url": "https://www.etvbharat.com/en/state/bengaluru-business-corridor-global-tenders-floated-for-20k-first-phase-works-enn26033105183", "quote": "initially proposed in 2007 during the JDS-BJP coalition government", "date": "2026-03-31"}
+          ],
+          "confidence": "medium"
+        },
+        {
+          "type": "unspent",
+          "title": "Bengaluru Smart City: funds received vs spent, and delayed command centre (CAG 2025)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": 95.99,
+            "revised_cost_cr": null,
+            "spent_cr": 812.06,
+            "original_deadline": "ICCC: November 2021",
+            "status": "Bengaluru SPV received Rs 988 cr (GoI 488 + GoK 500) and spent Rs 812.06 cr as of June 2024. ICCC contract (Rs 95.99 cr) got four time extensions to Dec 2023 and was still incomplete; consultant recommended Rs 2.92 cr penalty, govt says penalty works out to Rs 7.83 lakh.",
+            "as_of": "June 2024 (CAG Performance Audit on Smart Cities Mission in Karnataka, 2025)"
+          },
+          "governments": "Union Smart Cities Mission with matching state share; implementation spanned Congress, coalition, BJP and Congress state governments.",
+          "summary": "CAG found Bengaluru Smart City had spent Rs 812.06 crore of Rs 988 crore received by June 2024, and its Rs 96-crore command centre due in Nov 2021 overran four extensions with a Rs 2.92 crore penalty not collected.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter-3---Financial-Management-06981df9e1148a8.23881503.pdf",
+          "quote": "2 Bengaluru 488.00 500.00 988.00 812.06",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Child nutrition: stunting and anaemia rose (NFHS-4 2015-16 vs NFHS-5 2019-21)",
+          "facts": {
+            "sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null,
+            "status": "Stunted under-5: 28.1% -> 31.3%. Anaemic children 6-59 mo: 51.7% -> 58.9%. Anaemic women 15-49: 39.6% -> 35.5%. Institutional births 95.9% -> 99.3%.",
+            "as_of": "NFHS-5 (2019-21) vs NFHS-4 (2015-16), district 'Bangalore'"
+          },
+          "governments": "n/a",
+          "summary": "In Bengaluru Urban, child stunting rose from 28.1% to 31.3% and child anaemia from 51.7% to 58.9% between NFHS-4 and NFHS-5, while institutional births reached 99.3%.",
+          "source_url": "https://raw.githubusercontent.com/pratapvardhan/NFHS-5/master/district-level/NFHS-5-KA-Karnataka.csv",
+          "quote": "Bangalore,73. Children under 5 years who are stunted (height-for-age)18 (%),31.3,28.1",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "district": "Bengaluru Rural",
+      "items": [
+        {
+          "type": "project",
+          "title": "Yettinahole balancing reservoir moved to Lakkenahalli, Doddaballapura taluk (CAG)",
+          "facts": {
+            "sanctioned_year": 2023,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Reservoir shrank from 10 TMC (2012) to 5.78 TMC (2014) to 2 TMC at Lakkenahalli (Jan 2023); land acquisition for it not initiated as of Dec 2024. CAG says delay in deciding uniform land rates (extra Rs 319.47 cr) led to redesign costing Rs 940.92 cr, i.e. Rs 621.45 cr more.",
+            "as_of": "December 2024 (CAG Performance Audit on Yettinahole, 2025)"
+          },
+          "governments": "Original 10 TMC site chosen 2012 (BJP govt); moved 2014 (Congress); uniform-rate proposal sent Sept 2019 (BJP govt) not approved; moved again Jan 2023 (BJP govt).",
+          "summary": "CAG says the government's inaction on a land-rate proposal pushed the Yettinahole storage reservoir to Doddaballapura at one-fifth the planned size and Rs 621.45 crore extra cost, with land acquisition not started as of Dec 2024.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/6.-Chapter-II---Planning-and-Financial-Management-069c3d2da1892f3.81971865.pdf",
+          "quote": "resulted in additional cost of ₹621.45 crore (₹940.92 crore - ₹319.47 crore) due to changes in scope",
+          "confidence": "high"
+        },
+        {
+          "type": "project",
+          "title": "Suburban rail Corridor 1 (KSR Bengaluru - Devanahalli/Airport, 49.9 km)",
+          "facts": {
+            "sanctioned_year": 2020,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": "Airport connectivity 'by October 2023' (Citizen Matters)",
+            "status": "Alignment only recently approved; land acquisition to take about a year; target March 2030. Construction yet to begin as of July 2026.",
+            "as_of": "25 Jan 2026 (DH); 17 Jul 2026 (Citizen Matters)"
+          },
+          "governments": "Part of BSRP approved Oct 2020 (BJP Centre and state); continuing under Congress state govt.",
+          "summary": "The suburban line meant to link the city to Devanahalli and the airport by October 2023 had not started construction by July 2026 and is now targeted for March 2030.",
+          "source_url": "https://www.deccanherald.com/amp/story/india/karnataka/bengaluru-suburban-rail-revival-new-k-ride-chief-lays-out-timelines-3873802",
+          "quote": "corridor 1 (KSR Bengaluru-Devanahalli/Airport, 49.9 km) and corridor 3 (Kengeri-Whitefield, 35.52 km) by Mar 2030.",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Child stunting and anaemia rose sharply (NFHS-4 vs NFHS-5)",
+          "facts": {
+            "sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null,
+            "status": "Stunted under-5: 28.7% -> 36.6%. Anaemic children 6-59 mo: 48.8% -> 60.8%. Anaemic women 15-49: 46.2% -> 44.2%. Institutional births 98.5% -> 100%.",
+            "as_of": "NFHS-5 (2019-21) vs NFHS-4 (2015-16)"
+          },
+          "governments": "n/a",
+          "summary": "In Bengaluru Rural, child stunting rose from 28.7% to 36.6% and child anaemia from 48.8% to 60.8% between NFHS-4 and NFHS-5.",
+          "source_url": "https://raw.githubusercontent.com/pratapvardhan/NFHS-5/master/district-level/NFHS-5-KA-Karnataka.csv",
+          "quote": "Bangalore Rural,73. Children under 5 years who are stunted (height-for-age)18 (%),36.6,28.7",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "district": "Ramanagara (Bengaluru South)",
+      "items": [
+        {
+          "type": "project",
+          "title": "Rajiv Gandhi University of Health Sciences (RGUHS) campus at Ramanagara",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": 600,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Described as a '12-year-old project' stuck on land litigation in Feb 2019. In Aug 2023 DH reported RGUHS had released Rs 400 cr under the BJP govt; in Jan 2026 RGUHS said it had paid Rs 300 cr of Rs 600 cr sought and planned to start shifting from March 2026.",
+            "as_of": "10 Jan 2026 (DH)"
+          },
+          "governments": "Conceived about 2007 (JD(S)-BJP era, per '12-year-old' in 2019); stalled through Congress, coalition and BJP govts; Rs 400 cr released under BJP govt; medical college moved to Kanakapura by Congress govt (2023).",
+          "summary": "A health-university campus planned for Ramanagara around 2007 was still not occupied in January 2026; the university says it has paid Rs 300 crore of the Rs 600 crore the government sought.",
+          "source_url": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Frguhs-to-shift-to-ramanagara-campus-this-year-3857330",
+          "quote": "Of the Rs 600 crore sought by the government for the construction of medical colleges, the varsity has already paid Rs 300 crore",
+          "extra_sources": [
+            {"url": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fdecks-yet-to-clear-for-rguhs-campus-in-ramanagara-720513.html", "quote": "The 12-year-old project is facing a lot of legal issues over the 70-acre land allotted.", "date": "2019-02-26"},
+            {"url": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Framanagara-rguhs-campus-cost-likely-to-go-up-2655627", "quote": "RGUHS has already released Rs 400 crore when the BJP government was in power", "date": "2023-08-22"}
+          ],
+          "confidence": "medium"
+        },
+        {
+          "type": "project",
+          "title": "Mekedatu balancing reservoir (Kanakapura taluk) - not started",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": 730,
+            "revised_cost_cr": 14000,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "On hold: Tamil Nadu opposition and pending central clearances. Original Rs 730 cr was for a power-only project (1996-97); current ~Rs 14,000 cr is for a reservoir + 400 MW plant, so the two figures are different scopes.",
+            "as_of": "16 Sep 2024 (DH)"
+          },
+          "governments": "Conceived 1996-97; pursued by every state government since; awaiting Union clearances.",
+          "summary": "Conceived in 1996-97 as a Rs 730-crore power project, Mekedatu is now a roughly Rs 14,000-crore reservoir plan that has not begun construction.",
+          "source_url": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fkarnatakas-five-water-projects-languishing-for-too-long-3192751",
+          "quote": "This project was first conceived in 1996-97 as a power project costing Rs 730 crore. The revised estimate of this project is around Rs 14,000 crore.",
+          "confidence": "medium"
+        },
+        {
+          "type": "outcome",
+          "title": "Human development: Ramanagara among top six districts for HDI gain (KHDR 2022)",
+          "facts": {
+            "sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null,
+            "status": "Karnataka Human Development Report 2022 lists Ramanagara among six districts where HDI increase is 'significantly high'. Exact district HDI values not obtained.",
+            "as_of": "KHDR 2022, reported 9 Mar 2023"
+          },
+          "governments": "n/a",
+          "summary": "The state's 2022 Human Development Report lists Ramanagara among the six Karnataka districts with the largest HDI gains over two decades.",
+          "source_url": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fdeprivation-amid-rise-in-karnataka-human-development-index-1198406.html",
+          "quote": "The top six districts where HDI increase is “significantly high” are Bagalkot, Ballari, Ramanagara, Mandya, Yadgir and Koppal.",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Stunting fell but child anaemia rose (NFHS-4 vs NFHS-5)",
+          "facts": {
+            "sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null,
+            "status": "Stunted under-5: 22.0% -> 15.6%. Anaemic children 6-59 mo: 53.9% -> 60.2%. Anaemic women 15-49: 47.5% -> 45.5%. Institutional births 99.3% -> 100%.",
+            "as_of": "NFHS-5 (2019-21) vs NFHS-4 (2015-16)"
+          },
+          "governments": "n/a",
+          "summary": "Ramanagara's child stunting fell from 22.0% to 15.6%, but child anaemia rose from 53.9% to 60.2% between NFHS-4 and NFHS-5.",
+          "source_url": "https://raw.githubusercontent.com/pratapvardhan/NFHS-5/master/district-level/NFHS-5-KA-Karnataka.csv",
+          "quote": "Ramanagara,73. Children under 5 years who are stunted (height-for-age)18 (%),15.6,22.0",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "district": "Chikkaballapura",
+      "items": [
+        {
+          "type": "project",
+          "title": "Yettinahole Integrated Drinking Water Project (main beneficiaries Chikkaballapura and Kolar)",
+          "facts": {
+            "sanctioned_year": 2012,
+            "original_cost_cr": 8323.50,
+            "revised_cost_cr": 23251.66,
+            "spent_cr": 15297.03,
+            "original_deadline": "None: CAG says no DPR stipulated a completion date; Govt later fixed 1 Nov 2026",
+            "status": "No water delivered to Chikkaballapura/Kolar as of CAG audit (Dec 2024). Funding gap Rs 7,954.63 cr (Mar 2024). Actual weir flows 7.20-24.70 TMC vs 32.15 TMC assumed. CM D K Shivakumar (Aug 2026) set a new target of end-2027.",
+            "as_of": "Spend: March 2024 (CAG). Status: Dec 2024 (CAG); target: 11 Aug 2026 (The Pioneer)"
+          },
+          "governments": "Approved July 2012 (BJP govt); revised Feb 2014 (Congress) and Jan 2023 (BJP); continued under Congress since 2023. All three major parties have governed during it.",
+          "summary": "Approved in 2012 at Rs 8,323.50 crore, Yettinahole now costs Rs 23,251.66 crore (up Rs 14,928.19 crore); Rs 15,297 crore was spent by March 2024 without water reaching Chikkaballapura or Kolar, and the target is now end-2027.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/6.-Chapter-II---Planning-and-Financial-Management-069c3d2da1892f3.81971865.pdf",
+          "quote": "three-fold escalation in project cost from ₹8,323.50 crore to ₹23,251.66 crore i.e., an increase of ₹14,928.19 crore.",
+          "extra_sources": [
+            {"url": "https://dailypioneer.com/news/cm-shivakumar-sets-2027-target-for-yettinahole-project", "quote": "resolved to bring Yettinahole water to Kolar and Chikkaballapura by the end of 2027", "date": "2026-08-11"}
+          ],
+          "confidence": "high"
+        },
+        {
+          "type": "unspent",
+          "title": "Yettinahole: state released only a fraction of what the project asked for (CAG)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": 15297.03,
+            "original_deadline": null,
+            "status": "VJNL proposed Rs 35,159.39 cr across years to 2023-24; got Rs 15,297.03 cr (GoK grants Rs 12,535.59 cr + borrowings Rs 2,567.66 cr). Short release 46-75% each year 2018-19 to 2023-24. Loan guarantee request pending since June 2023.",
+            "as_of": "March 2024 / May 2024 (CAG)"
+          },
+          "governments": "Shortfalls span BJP (2019-23), coalition (2018-19) and Congress (2023-24) budgets.",
+          "summary": "CAG found the government released between 25% and 54% of Yettinahole's yearly budget requirement in 2018-23, leaving a Rs 7,954.63 crore gap to finish it.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/6.-Chapter-II---Planning-and-Financial-Management-069c3d2da1892f3.81971865.pdf",
+          "quote": "the Government provided only 25 to 54 per cent of the budget requirements during 2018 -19 to 2022-23.",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Stunting and anaemia both fell (NFHS-4 vs NFHS-5)",
+          "facts": {
+            "sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null,
+            "status": "Stunted under-5: 37.7% -> 31.3%. Anaemic children 6-59 mo: 62.9% -> 59.0%. Anaemic women 15-49: 54.0% -> 45.5%. Institutional births 92.0% -> 99.0%.",
+            "as_of": "NFHS-5 (2019-21) vs NFHS-4 (2015-16)"
+          },
+          "governments": "n/a",
+          "summary": "Chikkaballapura improved: child stunting fell from 37.7% to 31.3% and women's anaemia from 54.0% to 45.5% between NFHS-4 and NFHS-5.",
+          "source_url": "https://raw.githubusercontent.com/pratapvardhan/NFHS-5/master/district-level/NFHS-5-KA-Karnataka.csv",
+          "quote": "Chikkaballapura,73. Children under 5 years who are stunted (height-for-age)18 (%),31.3,37.7",
+          "confidence": "medium"
+        },
+        {
+          "type": "outcome",
+          "title": "Maternal mortality flagged 'comparatively high' (KHDR 2022)",
+          "facts": {
+            "sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null,
+            "status": "Chikkaballapura and Tumakuru among eight districts with comparatively high MMR in Karnataka Human Development Report 2022. District MMR value not obtained.",
+            "as_of": "KHDR 2022, reported 9 Mar 2023"
+          },
+          "governments": "n/a",
+          "summary": "The state's 2022 Human Development Report lists Chikkaballapura among districts where maternal mortality is comparatively high.",
+          "source_url": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fdeprivation-amid-rise-in-karnataka-human-development-index-1198406.html",
+          "quote": "Even maternal mortality rate (MMR) is “comparatively high” in Dharwad, Chikballapur, Bidar, Hassan, Haveri, Shivamogga, Tumakuru and Chamarajanagar",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "district": "Kolar",
+      "items": [
+        {
+          "type": "project",
+          "title": "Yettinahole drinking water project (Kolar is a principal beneficiary)",
+          "facts": {
+            "sanctioned_year": 2012,
+            "original_cost_cr": 8323.50,
+            "revised_cost_cr": 23251.66,
+            "spent_cr": 15297.03,
+            "original_deadline": "None in any DPR (CAG); Govt later fixed 1 Nov 2026",
+            "status": "Not operational after 12 years (CAG, Dec 2024); new target end-2027 (Aug 2026).",
+            "as_of": "March 2024 spend; Dec 2024 status (CAG)"
+          },
+          "governments": "Approved July 2012 (BJP); revised Feb 2014 (Congress) and Jan 2023 (BJP); Congress since 2023.",
+          "summary": "Kolar's promised Yettinahole water has not arrived: CAG says the project 'could not be made operational even after 12 years' despite Rs 15,297 crore spent.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/6.-Chapter-II---Planning-and-Financial-Management-069c3d2da1892f3.81971865.pdf",
+          "quote": "The Projec t could not be made operational even after 12 years of conception.",
+          "confidence": "high"
+        },
+        {
+          "type": "project",
+          "title": "KC Valley treated-wastewater lake-filling project, Phase 2",
+          "facts": {
+            "sanctioned_year": 2019,
+            "original_cost_cr": 455,
+            "revised_cost_cr": 446,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Phase 2 approved June 2019 (Phase 1 cost Rs 1,270 cr); inaugurated Sept 2025 with completion promised by Dec 2025 for 272 lakes (222 Kolar, 50 Chintamani). CM said only 290 of 440 MLD due was being supplied. Completion after Dec 2025 not verified.",
+            "as_of": "5 Sep 2025 (DH)"
+          },
+          "governments": "Phase 1 under Congress (2013-18); Phase 2 approved by Congress-JD(S) coalition (June 2019); launched by Congress govt (Sept 2025).",
+          "summary": "KC Valley Phase 2, approved in June 2019 for Rs 455 crore, was only launched in September 2025 (now Rs 446 crore), and the CM said 290 of the 440 MLD of treated water owed was being supplied.",
+          "source_url": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fkarnataka-cm-siddaramaiah-launches-kc-valley-phase-ii-project-to-fill-30-lakes-in-kolar-3714282",
+          "quote": "the phase II project, costing Rs 446 crore, will be completed by December end and will fill 272 lakes",
+          "extra_sources": [
+            {"url": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fcabinet-okays-rs-455cr-for-kc-valley-project-phase-2-738567.html", "quote": "the Cabinet approved on Thursday Rs 455 crore for its second phase.", "date": "2019-06-06"}
+          ],
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Nutrition largely flat (NFHS-4 vs NFHS-5)",
+          "facts": {
+            "sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null,
+            "status": "Stunted under-5: 32.0% -> 31.1%. Anaemic children 6-59 mo: 57.3% -> 57.9%. Anaemic women 15-49: 44.9% -> 43.6%. Institutional births 96.4% -> 99.6%.",
+            "as_of": "NFHS-5 (2019-21) vs NFHS-4 (2015-16)"
+          },
+          "governments": "n/a",
+          "summary": "In Kolar, child stunting (32.0% to 31.1%) and child anaemia (57.3% to 57.9%) barely moved between NFHS-4 and NFHS-5.",
+          "source_url": "https://raw.githubusercontent.com/pratapvardhan/NFHS-5/master/district-level/NFHS-5-KA-Karnataka.csv",
+          "quote": "Kolar,81. Children age 6-59 months who are anaemic (<11.0 g/dl)22 (%),57.9,57.3",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "district": "Tumakuru",
+      "items": [
+        {
+          "type": "project",
+          "title": "Upper Bhadra lift irrigation project (Chikkamagaluru, Chitradurga, Tumakuru, Davanagere)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": 21473,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Revised estimate Rs 12,340 cr approved Mar 2015; now Rs 21,473 cr. Rs 5,300 cr central grant announced in Feb 2023 Union Budget still not released (Aug 2026). Original cost figures conflict across sources (DH says ~Rs 550 cr 'around 2006'), so no overrun is computed.",
+            "as_of": "16 Sep 2024 (DH); 20 Aug 2026 (PTI/ThePrint)"
+          },
+          "governments": "Revised estimate approved by Congress govt (2015); re-revised and central grant announced under BJP (state and Centre, 2023); grant still sought by Congress govt in 2026.",
+          "summary": "Upper Bhadra, meant to irrigate 2.25 lakh hectares including parts of Tumakuru, rose from a Rs 12,340 crore estimate in 2015 to Rs 21,473 crore, and the Rs 5,300 crore central grant announced in 2023 was still unreleased in August 2026.",
+          "source_url": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fkarnatakas-five-water-projects-languishing-for-too-long-3192751",
+          "quote": "Around 2006, the cost estimate was Rs 550 crore. It is now Rs 21,473 crore.",
+          "extra_sources": [
+            {"url": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Frevised-estimate-upper-bhadra-project-2117159", "quote": "administrative approval for the revised estimate of Rs 12,340 crore for the Upper Bhadra project", "date": "2015-03-12"},
+            {"url": "https://theprint.in/india/karnataka-cm-urges-amit-shah-to-expedite-rs-5300-crore-release-for-upper-bhadra-project/3020417/", "quote": "Even after being declared in Parliament, this money has not been allocated, thereby affecting the project.", "date": "2026-08-20"}
+          ],
+          "confidence": "medium"
+        },
+        {
+          "type": "unspent",
+          "title": "Tumakuru Smart City: funds parked with departments; Rs 20.71 cr trauma-centre money idle two years (CAG 2025)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": 855.15,
+            "original_deadline": null,
+            "status": "Tumakuru SPV received Rs 990 cr (GoI 490 + GoK 500), spent Rs 855.15 cr as of June 2024. Rs 20.71 cr transferred to Health dept for a district-hospital trauma care centre (16 Aug 2019) was used only in Dec 2021, contrary to MoHUA rules on direct transfers.",
+            "as_of": "June 2024 (CAG Performance Audit on Smart Cities Mission in Karnataka, 2025)"
+          },
+          "governments": "Union Smart Cities Mission; transfer made in 2019 under BJP state govt.",
+          "summary": "CAG found Tumakuru Smart City had spent Rs 855.15 crore of Rs 990 crore by June 2024, and Rs 20.71 crore it sent for a trauma care centre in 2019 sat unused for two years.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter-3---Financial-Management-06981df9e1148a8.23881503.pdf",
+          "quote": "Construction of Trauma Care Centre at district hospital 16.08.2019 The funds were utilised (December 2021) after a gap of two years",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Child stunting and anaemia rose sharply (NFHS-4 vs NFHS-5)",
+          "facts": {
+            "sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null,
+            "status": "Stunted under-5: 28.6% -> 40.3%. Anaemic children 6-59 mo: 53.8% -> 67.6%. Anaemic women 15-49: 52.7% -> 49.3%. Improved drinking water 98.8% -> 96.2%. Institutional births 96.4% -> 100%.",
+            "as_of": "NFHS-5 (2019-21) vs NFHS-4 (2015-16), district 'Tumkur'"
+          },
+          "governments": "n/a",
+          "summary": "Tumakuru's child stunting rose from 28.6% to 40.3% and child anaemia from 53.8% to 67.6% between NFHS-4 and NFHS-5, the worst movement in this batch.",
+          "source_url": "https://raw.githubusercontent.com/pratapvardhan/NFHS-5/master/district-level/NFHS-5-KA-Karnataka.csv",
+          "quote": "Tumkur,73. Children under 5 years who are stunted (height-for-age)18 (%),40.3,28.6",
+          "confidence": "medium"
+        },
+        {
+          "type": "outcome",
+          "title": "Maternal mortality flagged 'comparatively high' (KHDR 2022)",
+          "facts": {
+            "sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null,
+            "status": "Tumakuru listed among eight districts with comparatively high MMR. District value not obtained.",
+            "as_of": "KHDR 2022, reported 9 Mar 2023"
+          },
+          "governments": "n/a",
+          "summary": "The state's 2022 Human Development Report lists Tumakuru among districts with comparatively high maternal mortality.",
+          "source_url": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fdeprivation-amid-rise-in-karnataka-human-development-index-1198406.html",
+          "quote": "Even maternal mortality rate (MMR) is “comparatively high” in Dharwad, Chikballapur, Bidar, Hassan, Haveri, Shivamogga, Tumakuru and Chamarajanagar",
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    "Official NFHS-5 district factsheets on rchiips.org could not be opened (TLS certificate error); NFHS values are from a GitHub CSV transcription and must be checked against the IIPS PDFs before publishing. NITI Aayog and DHS Program PDFs returned 403.",
+    "Nanjundappa Committee (2002) taluk classifications and later movement: CMDR district studies (Chikkaballapur TC-28, Bangalore Rural TC-29) found but the site would not load over HTTPS. A search snippet suggested Bagepalli stayed 'most backward' and Gudibanda worsened; NOT used because unverified.",
+    "District HDI values (KHDR 2005 vs 2022) for these six districts: not obtained (opencity/Planning Dept data returned 403). Only qualitative KHDR 2022 mentions used.",
+    "MLA LAD fund unspent balances, district plan lapses, and special development grant (SDP) spend for these districts: not found in opened sources.",
+    "Teacher/doctor vacancy figures at district level: not searched to completion.",
+    "No 'what it could have bought' illustration: no state unit cost (e.g. PHC construction cost) opened and cited.",
+    "Upper Bhadra: original sanction cost is inconsistent across sources (Rs 2,813 cr 2003 Stage-I per a search snippet; Rs 550 cr 'around 2006' per DH; Rs 5,985 cr 2008); spend to date and Tumakuru-branch status not obtained.",
+    "Yettinahole: whether the 1 Nov 2026 deadline was met is unknown; latest found is the Aug 2026 end-2027 target. Spend after March 2024 not verified (DH July 2025 headline cites 'Rs 17K Cr Spent' but body text not readable).",
+    "Suburban rail: Citizen Matters (Jul 2026) reports a Rs 23,342 cr figure vs the cabinet-approved Rs 16,876 cr; official status of the higher figure not confirmed. Spend to date not found.",
+    "KC Valley Phase 2: completion after its Dec 2025 target not verified. HN Valley (Chikkaballapura/Bengaluru Rural) cost and status not verified.",
+    "BBMP CAG storm-water-drain audit (Report 2 of 2021) and Bengaluru 'Rs 490 crore SWD lapses' items found in search but not opened, so not used.",
+    "Metro Phase 2 spend to date not found; whether the Dec 2026 deadline will be met is unverified."
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "batch": "kittur",
+  "notes": [
+    "NFHS district figures are taken from NITI Aayog/IFPRI District Nutrition Profiles (March 2022), which reproduce NFHS-4 (2015-16) and NFHS-5 (2019-20) district factsheet values. The rchiips.org factsheets themselves could not be opened (TLS error). Values were read from the PDF text; the pairing of each percentage to 2016 or 2020 was checked by dividing the profile's 2020 headcount by its total child or women population, and every value used here matched.",
+    "The Hindu, Deccan Herald, Indian Express, New Indian Express, Times of India, inkl, Business Standard and Udayavani were blocked to the fetcher. Figures that appear only there (for example UKP-III at Rs 87,818 crore, the Kalasa-Banduri approval of Rs 1,677.3 crore, Haveri medical college revised to Rs 499 crore, and the Hubballi-Ankola sanction year 1996-97 from the SWR affidavit) were NOT used."
+  ],
+  "districts": [
+    {
+      "district": "Belagavi",
+      "items": [
+        {
+          "type": "unspent",
+          "title": "Belagavi Smart City: Rs 990 crore received, Rs 859.14 crore spent (CAG)",
+          "facts": {"sanctioned_year": 2016, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": 859.14, "received_cr": 990.00, "original_deadline": "Mission period 2015-16 to 2019-20, extended to March 2025", "status": "Rs 130.86 crore of Mission funds received but not spent as of June 2024 (990.00 minus 859.14, both CAG figures)", "as_of": "June 2024 (CAG Report No. 11 of 2025, tabled 2025)"},
+          "governments": "Smart Cities Mission is a centrally sponsored scheme of the Union government (NDA, launched 2015), with matching state funding. Belagavi was selected in Round 1 (SPV incorporated 11 May 2016). Implementation ran under Congress (2016-18), JD(S)-Congress (2018-19), BJP (2019-23) and Congress (2023-) state governments.",
+          "summary": "Belagavi received Rs 990 crore (Rs 490 crore Union, Rs 500 crore state) under the Smart Cities Mission and had spent Rs 859.14 crore by June 2024, CAG found.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter-3---Financial-Management-06981df9e1148a8.23881503.pdf",
+          "quote": "1 Belagavi 490.00 500.00 990.00 859.14",
+          "confidence": "high"
+        },
+        {
+          "type": "project",
+          "title": "Belagavi Smart City: only 3 of 107 projects awarded on time; gas and water pipes laid but unused",
+          "facts": {"sanctioned_year": 2016, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": 2.01, "original_deadline": "Projects were to be awarded by 11-11-2017", "status": "3 of 107 projects (work-order value Rs 858.11 crore) were awarded within the stipulated timeline. The 5.751 km gas pipeline (Rs 2.01 crore) and 5.72 km of water pipeline laid in smart roads were not in use at the time of audit.", "as_of": "June 2024 audit data; State Government replies April 2025"},
+          "governments": "Union Smart Cities Mission; Belagavi Smart City Ltd under successive state governments (see above).",
+          "summary": "CAG found that Belagavi Smart City awarded only 3 of its 107 projects within the deadline, and that gas pipes costing Rs 2.01 crore laid in smart roads could not be used.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter-4---Implemention-of-Projects-and-Monitoring-06981df9e14b034.71900044.pdf",
+          "quote": "BSCL laid 250mm MDPE pipes for a length of 5.751 km, costing ₹2.01 crore for gas supply in three Smart Road packages.",
+          "confidence": "high"
+        },
+        {
+          "type": "project",
+          "title": "Kalasa-Banduri (Mahadayi) drinking water project: Rs 94 crore estimate in 2000, about Rs 1,600 crore by 2020",
+          "facts": {"sanctioned_year": 2000, "original_cost_cr": 94, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "In Feb 2024, the CM said the DPR had Central Water Commission clearance but forest clearance had been deferred. The about Rs 1,600 crore figure is an experts' estimate, not an official revised cost, so no overrun is computed.", "as_of": "Cost: March 2020 (The Federal). Status: February 2024 (South First)"},
+          "governments": "Conceived in 2000 (Congress state government). The project spans Congress, JD(S)-BJP, BJP, coalition and Congress state governments. Inter-state dispute with Goa went to the Mahadayi tribunal and the Supreme Court; forest and wildlife clearances are with the Union environment ministry.",
+          "summary": "The Kalasa-Banduri drinking water project was estimated at Rs 94 crore in 2000. Experts put it at about Rs 1,600 crore by 2020, and it still lacked forest clearance in 2024.",
+          "source_url": "https://thefederal.com/states/south/karnataka/karnatakas-kalasa-banduri-project-to-get-budget-boost-after-sc-rejects-goas-plea",
+          "quote": "the estimated cost as per the tribunal report, was pegged at ₹94 crore",
+          "confidence": "medium"
+        },
+        {
+          "type": "unspent",
+          "title": "2019 floods: Belagavi damage estimate and slow house-rebuilding payments",
+          "facts": {"sanctioned_year": 2019, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": 867, "original_deadline": null, "status": "Belagavi damage was put at up to Rs 11,000 crore, with Rs 867 crore spent statewide on compensation, according to data shown to the CM. Village leaders said only a quarter of house-rebuilding funds had been released. Ramdurg MLA: 774 houses in Ramdurg taluk had received no relief.", "as_of": "June 2020"},
+          "governments": "BJP state government (B.S. Yediyurappa) from July 2019; Union NDA government (NDRF assistance).",
+          "summary": "After the August 2019 floods, data shown to the CM put Belagavi's damage at up to Rs 11,000 crore. Ten months later, villagers said only a quarter of the promised house-rebuilding money had arrived.",
+          "source_url": "https://thefederal.com/states/south/karnataka/a-year-after-floods-karnatakas-belagavi-witnesses-hardly-any-change",
+          "quote": "only one-fourth of the funds have been released so far",
+          "confidence": "medium"
+        },
+        {
+          "type": "outcome",
+          "title": "Belagavi: anaemia in women rose from 41% to 53%; child stunting fell from 37% to 33%",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Stunting (under 5) 37% to 33%; wasting 32% to 24%; child anaemia 66% to 73%; anaemia in non-pregnant women 41% to 53%; 147,004 stunted children (2020 estimate)", "as_of": "NFHS-4 (2015-16) vs NFHS-5 (2019-20)"},
+          "governments": "n/a (outcome indicator)",
+          "summary": "In Belagavi, child stunting fell from 37% to 33% between NFHS-4 and NFHS-5, but anaemia rose among children (66% to 73%) and women (41% to 53%). About 1.47 lakh under-5s are stunted.",
+          "source_url": "https://www.niti.gov.in/sites/default/files/2022-07/Belgaum-Karnataka.pdf",
+          "quote": "Burden of nutrition outcomes (2020) ... Stunted 147,004",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "district": "Bagalkot",
+      "items": [
+        {
+          "type": "project",
+          "title": "Upper Krishna Project Stage III (Almatti height raise): Rs 17,207 crore to Rs 65,000 crore",
+          "facts": {"sanctioned_year": 2012, "original_cost_cr": 17207, "revised_cost_cr": 65000, "spent_cr": null, "original_deadline": null, "status": "Not complete. The dam is to be raised from 519.6 m to 524.256 m and 22 villages would be submerged. Land acquisition alone was put at Rs 35,000 crore. Administrative sanction was raised to Rs 51,149 crore on 9 Oct 2017. Escalation from 17,207 to 65,000 is Rs 47,793 crore, though the Rs 65,000 crore figure is a reported escalation, not an administrative sanction.", "as_of": "January 2023"},
+          "governments": "Administrative approval in 2012 (BJP state government). Sanction raised in Oct 2017 (Congress, Siddaramaiah). The Rs 65,000 crore figure dates from Jan 2023 (BJP, Bommai). Compensation rates were set later by the Congress government (2023-). Raising the dam height also needs the Union government to notify the Krishna tribunal award, which other reports say is still pending.",
+          "summary": "UKP Stage III, which raises the Almatti dam, was approved in 2012 at Rs 17,207 crore. Sanction was raised to Rs 51,149 crore in 2017, and the cost was reported at Rs 65,000 crore in 2023 with work still pending.",
+          "source_url": "https://thesouthfirst.com/news/why-are-telangana-and-ap-fighting-for-reallocation-of-krishna-river-water-heres-all-about-the-dispute/",
+          "quote": "The initial project cost was estimated at ₹17,207 crore.",
+          "confidence": "high"
+        },
+        {
+          "type": "project",
+          "title": "Almatti rehabilitation: 22 villages to shift, 1.30 lakh acres to acquire, Rs 5,000 crore earmarked (2022)",
+          "facts": {"sanctioned_year": 2022, "original_cost_cr": 5000, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Announced, not completed. Separately, in July 2025 the state issued GOs to acquire 18,000 acres for the crest-gate expansion (South First, Nov 2025).", "as_of": "27 August 2022 (CM statement via ANI)"},
+          "governments": "BJP state government (CM Basavaraj Bommai) made the 2022 announcement. The Congress government (2023-) issued the 2025 acquisition GOs.",
+          "summary": "In 2022 the CM said 1.30 lakh acres would be acquired and 22 villages shifted to raise Almatti dam, with Rs 5,000 crore allocated for the shifting.",
+          "source_url": "https://theprint.in/india/foundation-stone-for-raichur-airport-to-be-laid-next-month-ktaka-cm-bommai/1103849/",
+          "quote": "acquisition of 1.30 lakh acres and shifting of 22 villages are to be done. A sum of Rs 5,000 crore is being allocated for this purpose.",
+          "confidence": "medium"
+        },
+        {
+          "type": "outcome",
+          "title": "Bagalkot: child stunting 47% to 48%; anaemia in women 40% to 48%",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Stunting 47% to 48%; wasting 25% to 17%; underweight 45% to 42%; child anaemia 63% to 64%; anaemia in non-pregnant women 40% to 48%; 92,909 stunted children", "as_of": "NFHS-4 (2015-16) vs NFHS-5 (2019-20)"},
+          "governments": "n/a (outcome indicator)",
+          "summary": "Nearly half of Bagalkot's under-5 children are stunted (48% in NFHS-5, up from 47%), and anaemia among women rose from 40% to 48%.",
+          "source_url": "https://www.niti.gov.in/sites/default/files/2022-07/Bagalkot-Karnataka.pdf",
+          "quote": "Stunted 92,909 ... Total children 192,359",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "district": "Vijayapura",
+      "items": [
+        {
+          "type": "project",
+          "title": "UKP Stage III command area: Rs 51,000 crore (2017) to Rs 80,000 crore, no 2024-25 allocation",
+          "facts": {"sanctioned_year": 2012, "original_cost_cr": null, "revised_cost_cr": 80000, "spent_cr": null, "original_deadline": null, "status": "An irrigation expert said the cost was about Rs 51,000 crore in 2017 and had risen to Rs 80,000 crore. BJP leader Govind Karjol said UKP got no grant in the 2024-25 budget. The Rs 80,000 crore is an expert's estimate, not an official sanction.", "as_of": "19 February 2024"},
+          "governments": "Spans BJP (2012 approval), Congress (2017 revision), BJP (2019-23) and Congress (2023-) state governments.",
+          "summary": "UKP-III, which irrigates large parts of Vijayapura and Bagalkot, was reported in Feb 2024 to have risen from about Rs 51,000 crore (2017) to Rs 80,000 crore, with no allocation in that year's budget.",
+          "source_url": "https://thesouthfirst.com/karnataka/karnataka-budget-2024-major-irrigation-projects-get-no-allocation-expert-blames-government/",
+          "quote": "The project cost was estimated at ₹51,000 crore in 2017.",
+          "confidence": "medium"
+        },
+        {
+          "type": "project",
+          "title": "Tubachi-Babaleshwar lift irrigation: Rs 3,600 crore, 1.30 lakh acres",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": 3600, "original_deadline": null, "status": "Completed per the article, in under three years; irrigates 1.30 lakh acres", "as_of": "27 March 2022"},
+          "governments": "Karnataka state government irrigation scheme. Sanction and construction years were not verified from an openable source, so the government in power is not attributed.",
+          "summary": "The Rs 3,600-crore Tubachi-Babaleshwar lift irrigation scheme in Vijayapura was completed in under three years and irrigates 1.30 lakh acres, according to a 2022 Scroll opinion piece.",
+          "source_url": "https://amp.scroll.in/article/1020269/once-dry-vijayapura-now-brims-with-water-a-testament-to-the-transformative-powers-of-united-effort",
+          "quote": "Rs 3,600-crore Tubachi-Babaleshwar lift irrigation project",
+          "confidence": "medium"
+        },
+        {
+          "type": "outcome",
+          "title": "Vijayapura: child stunting 45% to 46%; anaemia in women 41% to 52%",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Stunting 45% to 46%; wasting 29% to 15%; underweight 39% to 39%; child anaemia 68% to 65%; anaemia in non-pregnant women 41% to 52%; anaemia in pregnant women 58% to 71%; 103,806 stunted children", "as_of": "NFHS-4 (2015-16) vs NFHS-5 (2019-20)"},
+          "governments": "n/a (outcome indicator)",
+          "summary": "In Vijayapura, 46% of under-5 children were stunted in NFHS-5 (45% before), and anaemia among pregnant women rose from 58% to 71%.",
+          "source_url": "https://www.niti.gov.in/sites/default/files/2022-07/Bijapur-Karnataka.pdf",
+          "quote": "Stunted 103,806 ... Total children 226,157",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "district": "Dharwad",
+      "items": [
+        {
+          "type": "project",
+          "title": "Hubballi-Dharwad BRTS: Rs 970 crore for 22 km",
+          "facts": {"sanctioned_year": 2012, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": 970, "original_deadline": null, "status": "Operating. In July 2025, officials said it runs at a loss of Rs 33 per km, with about 85,000 daily riders. Groups such as Dharwad Dhwani are protesting for it to be opened to all vehicles or removed.", "as_of": "Cost: Feb 2020 (World Bank). Operations: 28 July 2025 (ThePrint)"},
+          "governments": "Approved 2012 (BJP state government). Funded by the Government of Karnataka, the Union Ministry of Housing and Urban Affairs, the World Bank and GEF under the Sustainable Urban Transport Project. Built mainly under the Congress state government (2013-18).",
+          "summary": "The 22 km Hubballi-Dharwad BRTS cost Rs 970 crore, about Rs 44 crore per km. In 2025 it was running at a loss of Rs 33 per km and faced local protests.",
+          "source_url": "https://blogs.worldbank.org/en/endpovertyinsouthasia/india-new-bus-rapid-transit-system-makes-travel-faster-safer-and-more",
+          "quote": "Built at an expense of Rs. 970 crores (US$150 million) - or roughly Rs. 44 crores per kilometer",
+          "confidence": "high"
+        },
+        {
+          "type": "unspent",
+          "title": "Hubballi-Dharwad Smart City: Rs 990 crore received, Rs 791.22 crore spent; 6 of 62 projects awarded on time (CAG)",
+          "facts": {"sanctioned_year": 2017, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": 791.22, "received_cr": 990.00, "original_deadline": "Projects were to be awarded by 10-09-2018", "status": "Rs 198.78 crore received but not spent as of June 2024 (990.00 minus 791.22). 6 of 62 projects (Rs 930 crore) were awarded on time. HD-BRTS surveillance and transport systems were not integrated with the command centre. The 87,866 extra RFID tags bought were not used.", "as_of": "June 2024 (CAG Report No. 11 of 2025)"},
+          "governments": "Union Smart Cities Mission (NDA); HD selected in Round 2 (SPV incorporated 10 March 2017). Implemented under Congress, JD(S)-Congress, BJP and Congress state governments.",
+          "summary": "Hubballi-Dharwad received Rs 990 crore under the Smart Cities Mission but had spent Rs 791.22 crore (about 80%) by June 2024, the lowest share spent among Karnataka's seven smart cities. Only 6 of its 62 projects were awarded on time.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter-3---Financial-Management-06981df9e1148a8.23881503.pdf",
+          "quote": "4 Hubballi- Dharwad 490.00 500.00 990.00 791.22",
+          "confidence": "high"
+        },
+        {
+          "type": "project",
+          "title": "Hubballi-Ankola rail line: started in the late 1990s, about 10% done, cost Rs 2,315 crore (2020) and Rs 3,749 crore (2023)",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": 3749, "spent_cr": 60, "original_deadline": null, "status": "About 10% progress (2020). About Rs 60 crore had been spent by March 2006. Stalled over wildlife and forest clearances; described as legally and procedurally stopped (Oct 2025).", "as_of": "Cost Jan 2023 (Newslaundry). Progress March 2020 (ThePrint). Spent to March 2006 and status Oct 2025 (Green Minute)"},
+          "governments": "Union government (Ministry of Railways) project, inaugurated by PM Vajpayee in 1999 (per Newslaundry). It spans every Union government since. Forest and wildlife clearance has been withheld by central and state boards several times.",
+          "summary": "The 168 km Hubballi-Ankola line was inaugurated in 1999 and was stuck at about 10% progress in 2020. Its revised cost has risen more than tenfold to Rs 3,749 crore.",
+          "source_url": "https://www.newslaundry.com/2023/01/30/red-flagged-11-times-over-green-concerns-but-karnataka-rail-project-proposal-may-get-bigger",
+          "quote": "The revised project cost has gone up over 10 times to Rs 3,749 crore",
+          "confidence": "medium"
+        },
+        {
+          "type": "outcome",
+          "title": "Dharwad: child stunting rose from 37% to 45%; child anaemia 51% to 67%",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Stunting 37% to 45%; wasting 34% to 17%; underweight 41% to 40%; child anaemia 51% to 67%; anaemia in non-pregnant women 46% to 51%; anaemia in pregnant women 54% to 68%; 71,834 stunted children", "as_of": "NFHS-4 (2015-16) vs NFHS-5 (2019-20)"},
+          "governments": "n/a (outcome indicator)",
+          "summary": "Despite being the most urbanised district in this batch, Dharwad saw child stunting rise from 37% to 45% and child anaemia from 51% to 67% between NFHS-4 and NFHS-5.",
+          "source_url": "https://www.niti.gov.in/sites/default/files/2022-07/Dharwad-Karnataka.pdf",
+          "quote": "Stunted 71,834 ... Total children 158,925",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "district": "Gadag",
+      "items": [
+        {
+          "type": "project",
+          "title": "Singatalur lift irrigation: foundation 1992-93, cost Rs 597 crore, then Rs 657 crore for phase 1 (2006)",
+          "facts": {"sanctioned_year": 1992, "original_cost_cr": null, "revised_cost_cr": 657, "spent_cr": null, "original_deadline": null, "status": "About 80% complete as of May 2006. Scope was enlarged to serve Gadag and Mundargi taluks and drinking water for Gadag town. Current status was not verified.", "as_of": "8 May 2006"},
+          "governments": "Foundation laid 1992-93 (Congress state government). The 2006 status was under the JD(S)-BJP coalition. Later status not verified.",
+          "summary": "The Singatalur lift irrigation scheme, begun in 1992-93, had its cost raised to Rs 597 crore when it was enlarged to serve Gadag and Mundargi. Phase 1 was put at Rs 657 crore in 2006, when it was about 80% done.",
+          "source_url": "https://www.oneindia.com/2006/05/08/singatalur-lift-irrigation-project-faces-roadblocks-1147097257.html",
+          "quote": "The foundation stone for the project was laid in 1992-93",
+          "confidence": "medium"
+        },
+        {
+          "type": "unspent",
+          "title": "MLA/MLC local area development funds: Gadag had Rs 3 crore unused; Rs 1,009 crore unused statewide",
+          "facts": {"sanctioned_year": 2002, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "unspent_cr": 3, "original_deadline": null, "status": "Unused. Statewide Rs 1,009 crore of KLLADS funds had been unused since 2002. Gadag had the lowest district figure (Rs 3 crore) and Uttara Kannada the highest (Rs 35 crore).", "as_of": "15 December 2017 (Planning Minister M.R. Seetharam)"},
+          "governments": "KLLADS is a state scheme; the unspent amount built up under all governments from 2002 to 2017.",
+          "summary": "Karnataka's planning minister said in 2017 that Rs 1,009 crore of MLA/MLC local area funds had gone unused since 2002, including Rs 3 crore in Gadag, the lowest of any district.",
+          "source_url": "https://www.thenewsminute.com/article/over-rs-1000-cr-k-taka-mlamlc-funds-lying-unused-2002-heres-why-73212",
+          "quote": "Rs 1,009 crore of the Karnataka Legislators Local Area Development Scheme's (KLLADS) fund has remained unused since 2002",
+          "confidence": "medium"
+        },
+        {
+          "type": "outcome",
+          "title": "Gadag: child stunting rose from 35% to 45%; women's anaemia 42% to 50%",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Stunting 35% to 45%; wasting 43% to 18%; underweight 38% to 40%; child anaemia 71% to 70%; anaemia in non-pregnant women 42% to 50%; anaemia in pregnant women 21% to 51%; 43,197 stunted children", "as_of": "NFHS-4 (2015-16) vs NFHS-5 (2019-20)"},
+          "governments": "n/a (outcome indicator)",
+          "summary": "Child stunting in Gadag rose from 35% to 45% between NFHS-4 and NFHS-5, while wasting fell sharply from 43% to 18%.",
+          "source_url": "https://www.niti.gov.in/sites/default/files/2022-07/Gadag-Karnataka.pdf",
+          "quote": "Stunted 43,197 ... Total children 95,570",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "district": "Haveri",
+      "items": [
+        {
+          "type": "project",
+          "title": "Haveri city 24x7 drinking water project: Rs 33 crore, contract 2014, 13 extensions, still incomplete",
+          "facts": {"sanctioned_year": 2014, "original_cost_cr": 33, "revised_cost_cr": null, "spent_cr": 30, "original_deadline": null, "status": "Incomplete. 195 of 206 km of pipeline laid and 13,385 of 16,385 homes connected. The last extended deadline was 30 April 2023.", "as_of": "1 December 2024"},
+          "governments": "Contract awarded in 2014 (Congress state government). Work began in 2017. Extensions ran through the JD(S)-Congress, BJP and Congress governments.",
+          "summary": "Haveri's Rs 33-crore 24x7 water project, contracted in 2014, had used Rs 30 crore by Dec 2024 but was still incomplete after 13 deadline extensions.",
+          "source_url": "https://newskarnataka.com/karnataka/haveri-citys-water-crisis-governments-promises-despite-heavy-investments/01122024/",
+          "quote": "the company has only laid 195 km of a 206 km pipeline and connected 13,385 homes instead of the target of 16,385",
+          "confidence": "medium"
+        },
+        {
+          "type": "project",
+          "title": "Haveri government medical college and hospital: Rs 450 crore at foundation (2020)",
+          "facts": {"sanctioned_year": 2020, "original_cost_cr": 450, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Foundation laid November 2020. Current completion status not verified from an openable source.", "as_of": "16 November 2020"},
+          "governments": "BJP state government (Medical Education Minister K. Sudhakar). Centrally sponsored medical-college scheme support reported elsewhere but not verified.",
+          "summary": "The foundation for Haveri's government medical college and hospital was laid in Nov 2020 at an estimated cost of Rs 450 crore.",
+          "source_url": "https://medicaldialogues.in/state-news/karnataka/minister-k-sudhakar-lays-foundation-stone-of-rs-450-crore-medical-college-and-hospital-at-haveri-71487",
+          "quote": "at an estimated cost of Rs 450 crore",
+          "confidence": "medium"
+        },
+        {
+          "type": "outcome",
+          "title": "Haveri: child stunting fell from 44% to 30%; anaemia in women about level (52% to 50%)",
+          "facts": {"sanctioned_year": null, "original_cost_cr": null, "revised_cost_cr": null, "spent_cr": null, "original_deadline": null, "status": "Stunting 44% to 30%; wasting 20% to 18%; underweight 37% to 35%; child anaemia 64% to 67%; anaemia in non-pregnant women 52% to 50%; 41,630 stunted children", "as_of": "NFHS-4 (2015-16) vs NFHS-5 (2019-20)"},
+          "governments": "n/a (outcome indicator)",
+          "summary": "Haveri is the one district in this batch where child stunting fell sharply, from 44% to 30% between NFHS-4 and NFHS-5, though two-thirds of young children remain anaemic.",
+          "source_url": "https://www.niti.gov.in/sites/default/files/2022-07/Haveri-Karnataka.pdf",
+          "quote": "Stunted 41,630 ... Total children 139,231",
+          "confidence": "medium"
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    "UKP-III latest official revised cost (reported elsewhere as Rs 87,818 crore) and actual spending to date: only in Deccan Herald, The Hindu and New Indian Express, which were blocked. No CAG or budget document with UKP-III spending was found.",
+    "Kalasa-Banduri official revised cost (Rs 1,677.3 crore in-principle approval, Rs 840.52 crore 2013 revision, Rs 244.89 crore spent on Kalasa canal): appears only in The Hindu via inkl, which was blocked, so it was not used.",
+    "Hubballi-Ankola line: original sanctioned cost and the Railways' own sanction year (1996-97 per the SWR affidavit) could not be verified from an openable source. Lok Sabha archives (eparlib) were unreachable.",
+    "Hubballi-Dharwad BRTS original sanctioned cost and deadline: no openable source, so overrun is not computed.",
+    "NFHS-5 district factsheets on rchiips.org could not be opened (certificate error), so NITI/IFPRI district nutrition profiles were used instead.",
+    "Nanjundappa Committee (2002) backward-taluk classification: CMDR taluk report cards found but cmdr.ac.in failed TLS; not used.",
+    "District Human Development Index (Karnataka HDR 2005/2022) values for these districts were not located.",
+    "District-level unspent district plan and Special Development Plan funds, and teacher/doctor vacancies by district: not found in any openable source.",
+    "2019 flood relief: Union NDRF approval for Karnataka (Rs 1,869.85 crore, Jan 2020) is on PIB, but PIB returned 403, so it was not used. District-wise flood compensation pending figures were not found.",
+    "Almatti 2025 compensation rates (Rs 40 lakh/acre wet, Rs 30 lakh/acre dry) and the Rs 75,000 crore four-year outlay are reported only by Deccan Herald and Udayavani, both blocked.",
+    "Haveri medical college revised cost (reported at Rs 499 crore) and completion status: source blocked.",
+    "No 'what it could have bought' illustration was built, because no unit cost was verified from an openable source."
+  ]
+}

@@ -1,0 +1,482 @@
+{
+  "batch": "south",
+  "districts": [
+    {
+      "district": "Mysuru",
+      "items": [
+        {
+          "type": "project",
+          "title": "Mysuru city 24x7 water supply (JnNURM remodelling of distribution network)",
+          "facts": {
+            "sanctioned_year": 2006,
+            "original_cost_cr": 194.54,
+            "revised_cost_cr": 179.17,
+            "spent_cr": 271.56,
+            "original_deadline": "November 2014 (extended to May 2015)",
+            "status": "CAG: 24x7 objective not achieved. Coverage cut from 69 to 47 metering areas. Non-revenue water was 25.69-37.01% against a 15% condition. Bills went to only 65% of consumers.",
+            "as_of": "CAG Report No. 2 of 2017 (Govt replies January 2017)"
+          },
+          "governments": "Approved December 2006 under JnNURM (80:10:10 GoI:GoK:city; JD(S)-BJP coalition in state, UPA at Centre). Contract November 2008 (BJP state govt). Completion window 2014-15 (Congress state govt). The project spans several governments.",
+          "summary": "CAG found that Rs 271.56 crore was spent on Mysuru's 24x7 water project (project cost Rs 229.94 crore plus Rs 41.62 crore for O&M), yet the city did not get 24x7 water. The sanctioned estimate was cut from Rs 194.54 crore to Rs 179.17 crore after coverage shrank from 69 to 47 zones.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2017/Chapter_2_Performance_Audit_Karnataka_Report_No_2_of_2017_on_General_and_Social_Sector.pdf",
+          "quote": "despite incurring an expenditure of `271.56 crore, the intended objective of supplying water 24x7 to the city of Mysuru was not achieved",
+          "confidence": "high"
+        },
+        {
+          "type": "project",
+          "title": "Augmentation of Mysuru water source from Kabini river (JnNURM)",
+          "facts": {
+            "sanctioned_year": 2006,
+            "original_cost_cr": 108.81,
+            "revised_cost_cr": null,
+            "spent_cr": 95.71,
+            "original_deadline": "2012",
+            "status": "At CAG joint inspection (Feb 2016), none of the three master balancing reservoirs built was in use. CAG flagged Rs 4.46 crore of avoidable expenditure on excess storage capacity.",
+            "as_of": "CAG Report No. 2 of 2017 (inspection February 2016)"
+          },
+          "governments": "Approved December 2006 / June 2009 (JD(S)-BJP coalition, then BJP state govt; UPA at Centre). Contract awarded September 2009.",
+          "summary": "Of the Rs 108.81 crore Kabini source-augmentation scheme, Rs 95.71 crore had been spent, but CAG found in 2016 that none of its three storage reservoirs was being used, with Rs 4.46 crore spent avoidably on excess capacity.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2017/Chapter_2_Performance_Audit_Karnataka_Report_No_2_of_2017_on_General_and_Social_Sector.pdf",
+          "quote": "During joint inspection (February 2016), we observed that none of the three MBRs were being used.",
+          "confidence": "high"
+        },
+        {
+          "type": "project",
+          "title": "Mysuru-Kushalnagar new railway line (87.2 km, Mysuru-Kodagu)",
+          "facts": {
+            "sanctioned_year": 2019,
+            "original_cost_cr": 1854.62,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Shelved by the Ministry of Railways (reported January 2026), citing low traffic and poor financial returns. Rs 1,000 crore was shown in the 2022-23 Union Budget. Actual spending was not reported. The only work cited is a final location survey tender worth Rs 1.26 crore.",
+            "as_of": "18 January 2026"
+          },
+          "governments": "Sanctioned 27 Feb 2019 by the Union Railway Ministry (NDA). The state was then run by the JD(S)-Congress coalition, then BJP (2019-23), then Congress (2023-). Reports say land and cost-sharing were never settled between the Centre and the state.",
+          "summary": "A rail line to Kodagu, sanctioned in February 2019 at Rs 1,854.62 crore and allocated Rs 1,000 crore in the 2022-23 Union Budget, was shelved by the Railways in January 2026 before construction began.",
+          "source_url": "https://starofmysore.com/mysuru-kushalnagar-railway-project-scrapped/amp",
+          "quote": "estimated cost of Rs. 1,854.62 crore",
+          "confidence": "medium"
+        },
+        {
+          "type": "outcome",
+          "title": "Learning levels in rural government schools (ASER 2024)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Mysuru: 23.8% of Std III-V children in govt schools can read a Std II text (state 25.2%). In Std VI-VIII, 33.1% can do division (state 33.2%). Single year only, no trend.",
+            "as_of": "ASER 2024 (rural)"
+          },
+          "governments": "n/a",
+          "summary": "In rural Mysuru only 23.8% of Std III-V government-school children could read a Std II text in 2024, below the state's 25.2% and far below Udupi's 57.8%.",
+          "source_url": "https://asercentre.org/wp-content/uploads/2022/12/Karnataka_District-Estimates.pdf",
+          "quote": "Mysuru 57.8 0.7 23.8 38.6 52.4 33.1",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "district": "Mandya",
+      "items": [
+        {
+          "type": "project",
+          "title": "Mysore Sugar Company (MySugar), state-owned sugar mill, Mandya: losses despite state aid",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": 170,
+            "original_deadline": null,
+            "status": "Listed as a sick industry. Accumulated loss was Rs 347.34 crore in 2010. The factory still owed Rs 168.07 crore in loans. Renovation began in 2010, and by 2014 about 90% of the funds had been paid to contractors.",
+            "as_of": "11 March 2014 (loss figure as of 2010)"
+          },
+          "governments": "State aid over 2004-2014 spans JD(S)-Congress, JD(S)-BJP, BJP (2008-13) and Congress (2013-) governments.",
+          "summary": "MySugar's accumulated loss reached Rs 347.34 crore by 2010 even though it received about Rs 170 crore of state aid over the previous decade, DH reported.",
+          "source_url": "https://www.deccanherald.com/content/391382/mysugar-hold-agm-today.html",
+          "quote": "the accumulated loss has increased from Rs 34.45 lakh in 2001 to Rs 347.34 crore in 2010 — despite having received Rs 170 crore State-aid",
+          "confidence": "medium"
+        },
+        {
+          "type": "project",
+          "title": "MySugar revival aid 2022-23 and 2023-24",
+          "facts": {
+            "sanctioned_year": 2023,
+            "original_cost_cr": 50,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Finance department approved Rs 50 crore for the 2023-24 crushing season. Crushing has continued since, and the 2026-27 season was launched on 8 July 2026 with a target of 5.44 lakh tonnes (DH, 8 July 2026).",
+            "as_of": "5 June 2023"
+          },
+          "governments": "The earlier Rs 50 crore budget line was under the BJP government (Bommai). The 2023 approval came under the Congress government (Siddaramaiah).",
+          "summary": "The finance department approved Rs 50 crore for MySugar's 2023-24 season. A Congress MLC claimed the previous government had approved Rs 50 crore but released only Rs 32 crore; this is a politician's claim, not an official audited figure.",
+          "source_url": "https://www.chinimandi.com/?p=225443",
+          "quote": "the Finance department has approved aid of Rs 50 crore to the Mysore Sugar factory in Mandya",
+          "confidence": "medium"
+        },
+        {
+          "type": "outcome",
+          "title": "District HDI improvement (Karnataka Human Development Report 2022)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Mandya is listed among the six districts with a 'significantly high' HDI increase. DH did not report its HDI value.",
+            "as_of": "Karnataka HDR 2022, reported 9 March 2023"
+          },
+          "governments": "n/a",
+          "summary": "The state's Human Development Report 2022 names Mandya among the six districts whose human development index rose fastest.",
+          "source_url": "https://www.deccanherald.com/india/karnataka/deprivation-amid-rise-in-karnataka-human-development-index-1198406.html",
+          "quote": "The top six districts where HDI increase is “significantly high” are Bagalkot, Ballari, Ramanagara, Mandya, Yadgir and Koppal.",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Learning levels in rural government schools (ASER 2024)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Mandya: 31.3% of Std III-V govt-school children can read a Std II text (state 25.2%). Only 27.4% of Std VI-VIII can do division (state 33.2%).",
+            "as_of": "ASER 2024 (rural)"
+          },
+          "governments": "n/a",
+          "summary": "In rural Mandya only 27.4% of Std VI-VIII government-school children could do division in 2024, below the state average of 33.2%.",
+          "source_url": "https://asercentre.org/wp-content/uploads/2022/12/Karnataka_District-Estimates.pdf",
+          "quote": "Mandya 61.4 0.0 31.3 43.1 52.2 27.4",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "district": "Chamarajanagar",
+      "items": [
+        {
+          "type": "project",
+          "title": "Hosamalangi drinking water project for Chamarajanagar town (Cauvery source)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": 276,
+            "revised_cost_cr": 286,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Proposed in 2020. In July 2024 implementation was still awaiting Urban Development Department approval. In Oct 2026 officials said it was 'likely to be completed within one and a half years', while some areas get water once a week.",
+            "as_of": "7 October 2026"
+          },
+          "governments": "Proposed 2020 (BJP govt). Pending approval in 2024 and still incomplete in 2026 (Congress govt).",
+          "summary": "First proposed in 2020 at Rs 276 crore, the Hosamalangi water project is now quoted at Rs 286 crore and is still unfinished; some town wards get water just once a week.",
+          "source_url": "https://newskarnataka.com/chamarajanagara/chamarajanagar-water-shortage-worsens-as-supply-turns-weekly/07102026/",
+          "quote": "water supply reduced to just once a week in some areas",
+          "confidence": "medium"
+        },
+        {
+          "type": "project",
+          "title": "Hosamalangi project: 2024 approval delay (supporting item for original cost)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": 276,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Awaiting Urban Development Department approval, which was held back over ongoing AMRUT works (Rs 102 crore).",
+            "as_of": "14 July 2024"
+          },
+          "governments": "Congress govt (2023-) at the time of the report. The project was first proposed in 2020 under the BJP govt.",
+          "summary": "In July 2024 the Rs 276 crore project, proposed in 2020, had still not been approved by the state's urban development department.",
+          "source_url": "https://newskarnataka.com/chamarajanagara/delay-looms-over-hosa-malangi-drinking-water-project-in-chamarajanagar/14072024/",
+          "quote": "faces potential delays as the urban development department has not yet approved its implementation",
+          "confidence": "medium"
+        },
+        {
+          "type": "outcome",
+          "title": "District HDI rank: most backward district, slow climb",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "HDI went from 0.576 to 0.601. Rank went from 25th (2005) to 22nd (2015) to 21st (2021).",
+            "as_of": "Karnataka HDR 2022, reported 9 March 2023"
+          },
+          "governments": "n/a",
+          "summary": "Chamarajanagar, described as the most backward district, saw HDI rise only from 0.576 to 0.601, and its rank climbed from 25th in 2005 to 21st in 2021.",
+          "source_url": "https://www.deccanherald.com/india/karnataka/deprivation-amid-rise-in-karnataka-human-development-index-1198406.html",
+          "quote": "HDI rose from 0.576 to 0.601 and its ranking from 25th in 2005, 22nd in 2015 to 21 in 2021",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Sanitation and nutrition baseline (draft district HDR 2014)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "23.46% of houses had toilets (76.54% open defecation). 31.70% of children were malnourished. 67.96% of pregnant women were anaemic. This was a draft report prepared by University of Mysore academics.",
+            "as_of": "3 September 2014 (draft District HDR)"
+          },
+          "governments": "n/a",
+          "summary": "A 2014 draft district human development report found only 23.46% of Chamarajanagar homes had toilets and 31.7% of children were malnourished.",
+          "source_url": "https://www.deccanherald.com/india/karnataka/chnagar-slowly-inching-away-backward-2204524",
+          "quote": "only 23.46 per cent of houses have toilets constructed under Nirmala Bharatha Abhiyan",
+          "confidence": "medium"
+        },
+        {
+          "type": "outcome",
+          "title": "Maternal mortality flagged (Karnataka HDR 2022)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Listed among eight districts with 'comparatively high' MMR (Hassan is also on the list). DH did not report the district MMR value.",
+            "as_of": "Karnataka HDR 2022, reported 9 March 2023"
+          },
+          "governments": "n/a",
+          "summary": "The HDR 2022 lists Chamarajanagar (and Hassan) among districts where maternal mortality is comparatively high.",
+          "source_url": "https://www.deccanherald.com/india/karnataka/deprivation-amid-rise-in-karnataka-human-development-index-1198406.html",
+          "quote": "maternal mortality rate (MMR) is “comparatively high” in Dharwad, Chikballapur, Bidar, Hassan, Haveri, Shivamogga, Tumakuru and Chamarajanagar",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "district": "Hassan",
+      "items": [
+        {
+          "type": "project",
+          "title": "Yettinahole Integrated Drinking Water Project (water diverted from Western Ghats streams in Hassan district to Kolar and Chikkaballapura)",
+          "facts": {
+            "sanctioned_year": 2012,
+            "original_cost_cr": 8323.50,
+            "revised_cost_cr": 23251.66,
+            "spent_cr": 15297.03,
+            "original_deadline": "None specified in any DPR (CAG). Government later fixed 1 November 2026.",
+            "status": "Not operational 12 years after conception (CAG). Funding shortfall of Rs 7,954.63 crore as of March 2024. The weirs yielded 7.20-24.70 TMC against the 32.15 TMC assumed.",
+            "as_of": "March 2024 (CAG chapter, 2025 report)"
+          },
+          "governments": "Administrative approval July 2012 (BJP govt). Revised February 2014 (Congress, Siddaramaiah). Revised again January 2023 (BJP, Bommai; cabinet Dec 2022). Execution continues under Congress (2023-). It spans five governments.",
+          "summary": "CAG reports that Yettinahole's cost rose from Rs 8,323.50 crore (2012) to Rs 23,251.66 crore (2023), an overrun of Rs 14,928.16 crore. Rs 15,297.03 crore had been spent by 2023-24 without the project becoming operational.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/6.-Chapter-II---Planning-and-Financial-Management-069c3d2da1892f3.81971865.pdf",
+          "quote": "from the originally approved ₹8,323.50 crore in July 2012 to ₹12,912.36 crore during February 2014 and to ₹23,251.66 crore during January 2023",
+          "confidence": "high"
+        },
+        {
+          "type": "unspent",
+          "title": "Yettinahole: state released only part of the budget it was asked for",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": 15297.03,
+            "original_deadline": null,
+            "status": "Government provided only 25-54% of VJNL's budget requirement in 2018-19 to 2022-23. A loan guarantee request pending since June 2023 was still undecided in May 2024.",
+            "as_of": "May 2024"
+          },
+          "governments": "2018-19 to 2022-23 spans the JD(S)-Congress coalition and the BJP governments. The guarantee decision was pending under the Congress govt (2023-).",
+          "summary": "CAG says the state gave only 25-54% of the money the project agency asked for between 2018-19 and 2022-23, leaving a Rs 7,954.63 crore gap to finish the project.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/6.-Chapter-II---Planning-and-Financial-Management-069c3d2da1892f3.81971865.pdf",
+          "quote": "VJNL faces a shortage of ₹7,954.63 crore as of March 2024 to complete the project",
+          "confidence": "high"
+        },
+        {
+          "type": "project",
+          "title": "Hassan greenfield airport (Boovanahalli)",
+          "facts": {
+            "sanctioned_year": 2021,
+            "original_cost_cr": 193.65,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": "April 2025 (Union Civil Aviation Minister, Dec 2024)",
+            "status": "Dec 2024: over 60% physically complete, 56.5% financial progress. First proposed 1967, foundation stone laid 2007, 'not seen any progress' until 2021 funding. Completion after April 2025 is not confirmed by any source opened.",
+            "as_of": "5 December 2024"
+          },
+          "governments": "Proposed 1967. Cleared during H D Deve Gowda's tenure (1990s). Foundation stone 2007 (JD(S)-BJP coalition). Rs 193.65 crore funding approved June 2021 (BJP, Yediyurappa). Construction under BJP and then Congress (2023-); UDAN scheme at Centre (NDA).",
+          "summary": "Proposed in 1967 with a foundation stone in 2007, Hassan airport got Rs 193.65 crore of state funding only in 2021 and was 60% built in December 2024, with April 2025 then given as the target.",
+          "source_url": "https://www.thenewsminute.com/article/karnataka-clears-rs-193-crores-funding-hassan-greenfield-airport-project-151046",
+          "quote": "he had laid the foundation stone at Boovanahalli, on the outskirts of Hassan, in 2007",
+          "confidence": "medium"
+        },
+        {
+          "type": "project",
+          "title": "Hassan airport progress, December 2024 (supporting item)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": "April 2025",
+            "status": "Over 60% physically complete, 56.5% financial progress",
+            "as_of": "5 December 2024"
+          },
+          "governments": "Union Civil Aviation Minister (NDA) statement in Rajya Sabha. The state was under the Congress govt.",
+          "summary": "In December 2024 the Union minister told Parliament the Hassan airport was just over 60% complete and projected completion by April 2025.",
+          "source_url": "https://www.deccanherald.com/india/hassan-airport-to-be-ready-by-april-2025-civil-aviation-minister-naidu-3305404",
+          "quote": "Over 60 per cent of the Hassan airport has been physically completed whereas financially 56.5 per cent progress was made.",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Learning levels in rural government schools (ASER 2024)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Hassan: 39.4% of Std III-V govt-school children can read a Std II text (state 25.2%). 46.4% of Std VI-VIII can do division (state 33.2%). The HDR 2022 also flags Hassan for comparatively high MMR (see Chamarajanagar item).",
+            "as_of": "ASER 2024 (rural)"
+          },
+          "governments": "n/a",
+          "summary": "Rural Hassan's government-school learning levels are well above the state average (39.4% of Std III-V children read a Std II text vs 25.2% statewide), but the HDR 2022 lists Hassan among districts with comparatively high maternal mortality.",
+          "source_url": "https://asercentre.org/wp-content/uploads/2022/12/Karnataka_District-Estimates.pdf",
+          "quote": "Hassan 61.9 0.2 39.4 59.6 71.0 46.4",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "district": "Kodagu",
+      "items": [
+        {
+          "type": "unspent",
+          "title": "Disaster-management money lying unspent with Kodagu Deputy Commissioner",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Rs 57.04 crore unspent in the DC's PD account, the highest of 9 test-checked districts. None of Kodagu's 5 taluks furnished balance information. CAG says releases were booked as expenditure, so state spending was overstated.",
+            "as_of": "31 March 2023 (CAG Report No. 8 of 2025, PA on Disaster Management)"
+          },
+          "governments": "Audit period 2017-23: Congress (to May 2018), JD(S)-Congress (2018-19), BJP (2019-May 2023).",
+          "summary": "CAG found Rs 57.04 crore of disaster-management funds sitting unspent with the Kodagu Deputy Commissioner at the end of March 2023, the largest balance among the nine districts it checked.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter---III-Financial-resources-and-Utilisation-0694513dd546d02.17872728.pdf",
+          "quote": "Kodagu 57.04 -- 05 00",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Flood losses and no structural flood-mitigation works (CAG)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Estimated flood loss: Rs 312.43 cr (2019), Rs 1,128.82 cr (2020), Rs 1,072.83 cr (2021), Rs 228.55 cr (2022). 2018 data was not furnished to CAG. The Kodagu DC told CAG that structural measures were not taken up and victims were compensated instead.",
+            "as_of": "CAG Report No. 8 of 2025 (Govt reply August 2024)"
+          },
+          "governments": "2019-2022 under BJP govt. Reply given (Aug 2024) under Congress govt.",
+          "summary": "CAG records Rs 2,742.63 crore of estimated flood losses in Kodagu over 2019-2022 (sum of four years), and the district administration admitted no permanent structural flood-mitigation works were taken up.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter---V-Flood-and-rain-hazard-0694513dd5f7181.15355983.pdf",
+          "quote": "The Deputy Commissioners of Dakshina Kannada, Davanagere and Kodagu districts replied that structural measures were not taken up",
+          "confidence": "high"
+        },
+        {
+          "type": "project",
+          "title": "Houses for 2018 flood/landslide victims",
+          "facts": {
+            "sanctioned_year": 2018,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": "About May 2019 ('ready by six months', minister, 30 Nov 2018)",
+            "status": "April 2021: 660 houses handed over by DH's village-wise tally (the minister said 786) out of 836 families who lost homes. Each house cost Rs 9.85 lakh.",
+            "as_of": "23 April 2021"
+          },
+          "governments": "Promised under the JD(S)-Congress coalition (Kumaraswamy; groundbreaking at Jambur). Most handovers in 2020-21 under the BJP govt (Yediyurappa). Built by Rajiv Gandhi Rural Housing Corporation.",
+          "summary": "Houses promised to Kodagu's 2018 flood victims 'in six months' (Nov 2018) were still being handed over in April 2021, with 660 of 836 families housed by DH's count, at Rs 9.85 lakh per house.",
+          "source_url": "https://www.deccanherald.com/india/karnataka/162-houses-handed-over-to-kodagu-flood-victims-of-2018-977803.html",
+          "quote": "As many as 35 houses in Karnangeri, 80 houses in Made, 383 houses in Jambur and 162 houses in Biligiri have been handed over",
+          "confidence": "high"
+        },
+        {
+          "type": "project",
+          "title": "2018 promise: 845 houses within six months (supporting item)",
+          "facts": {
+            "sanctioned_year": 2018,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": "six months from Nov 2018",
+            "status": "Promise. Rs 9.85 lakh per house plus Rs 32 crore earmarked for infrastructure.",
+            "as_of": "30 November 2018"
+          },
+          "governments": "JD(S)-Congress coalition (Housing Minister U T Khader).",
+          "summary": "In November 2018 the housing minister promised 845 two-bedroom houses for Kodagu flood victims within six months, at Rs 9.85 lakh each plus Rs 32 crore for infrastructure.",
+          "source_url": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2F845-two-bedroom-houses-for-flood-victims-by-may-khader-705681.html",
+          "quote": "Each house costs Rs 9.85 lakh and the government has earmarked additional Rs 32 crore for providing infrastructure",
+          "confidence": "high"
+        },
+        {
+          "type": "illustration",
+          "illustration": true,
+          "title": "What Kodagu's unspent disaster money equals in flood-victim houses",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Rs 57.04 crore (CAG, March 2023) divided by Rs 9.85 lakh per house (RGRHCL unit cost, April 2021) gives about 579 houses. The two figures come from different years and the unit cost excludes land and infrastructure.",
+            "as_of": "Unspent: 31 March 2023. Unit cost: April 2021."
+          },
+          "governments": "n/a",
+          "summary": "Illustration only: the Rs 57.04 crore lying unspent in Kodagu in March 2023 equals about 579 of the Rs 9.85 lakh houses built for its 2018 flood victims.",
+          "source_url": "https://www.deccanherald.com/india/karnataka/162-houses-handed-over-to-kodagu-flood-victims-of-2018-977803.html",
+          "quote": "an amount of Rs 9.85 lakh has been utilised on each house",
+          "confidence": "medium"
+        },
+        {
+          "type": "project",
+          "title": "Mysuru-Kushalnagar railway line (cross-listed; see Mysuru)",
+          "facts": {
+            "sanctioned_year": 2019,
+            "original_cost_cr": 1854.62,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Shelved by Railways, January 2026",
+            "as_of": "18 January 2026"
+          },
+          "governments": "Sanctioned by the Union Railway Ministry (NDA) in Feb 2019. Shelved in 2026.",
+          "summary": "Kodagu's first rail link, sanctioned in 2019 at Rs 1,854.62 crore, was shelved in January 2026.",
+          "source_url": "https://starofmysore.com/mysuru-kushalnagar-railway-project-scrapped/amp",
+          "quote": "has been shelved",
+          "confidence": "medium"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "ASER file URL is named 2022, but the PDF content is titled 'Performance of districts ... 2024' (rural; learning-level columns refer to government-school children). Column order: govt enrolment %, not-in-school %, Std III-V read Std II text %, Std III-V subtraction %, Std VI-VIII read Std II text %, Std VI-VIII division %. Verify the column mapping against the PDF before publishing.",
+    "The CAG chapter URLs on cag.gov.in redirect to the CAG's CloudFront mirror (d1jmc0u14z2tmp.cloudfront.net). Quotes were taken from the PDF text; the 2017 report renders the rupee sign as a backtick (`).",
+    "Yettinahole overrun = 23,251.66 - 8,323.50 = 14,928.16 crore. CAG's own text says 14,928.19; use CAG's figure if quoting.",
+    "The Yettinahole site-in-Hassan link is from Wikipedia ('ecologically sensitive regions of Hassan district and Dakshina Kannada district'); the CAG chapter itself does not name Hassan.",
+    "The Kodagu 2019-22 loss total (2,742.63 cr) is a sum of CAG's four yearly figures."
+  ],
+  "gaps": [
+    "NFHS-4 vs NFHS-5 district factsheets: rchiips.org fails TLS certificate checks and NITI/PIB/OpenCity mirrors returned 403, so no NFHS district trend is included for any of the five districts.",
+    "Karnataka HDR 2022 full district HDI table (values for Mysuru, Mandya, Hassan, Kodagu) could not be opened; only Chamarajanagar's values and Mandya's 'significantly high increase' are sourced.",
+    "Nanjundappa Committee (2002) taluk classification: CMDR district report cards are blocked by the network filter. Search snippets say Chamarajanagar taluk was 'most backward' and H.D. Kote 'most backward', but these are NOT included because the pages were not opened.",
+    "No audited total of all state money put into MySugar since 2000. Figures range from Rs 170 crore (DH 2014) to politicians' claims of Rs 400-500 crore, which are unverified and excluded.",
+    "Hassan airport: no opened source confirms whether the April 2025 target was met or gives a post-2023 spending figure.",
+    "Mysuru-Kushalnagar rail: no figure for money actually spent before shelving.",
+    "Visvesvaraya canal (Mandya) modernisation: only undated, conflicting cost figures (Rs 330 cr / Rs 560 cr), so it is excluded.",
+    "MLA LAD fund utilisation by district or constituency, and district plan lapses: not found in an openable official source.",
+    "Kodagu 2018 flood relief: CAG's 2025 report says 2018 loss data was not furnished. The CM Relief Fund utilisation for Kodagu (Rs 202 crore donated, per DH 2018 search snippet) was not opened or verified.",
+    "Teacher and doctor vacancies at district level: not found."
+  ]
+}

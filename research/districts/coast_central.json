@@ -1,0 +1,499 @@
+{
+  "batch": "coast_central",
+  "notes": [
+    "Government labels are the party in power at the dates given, from public record; projects span several governments.",
+    "Karnataka governments in this period: INC (S.M. Krishna) 1999-2004; INC-JD(S) 2004-06; JD(S)-BJP 2006-07; BJP 2008-13; INC 2013-18; JD(S)-INC 2018-19; BJP 2019-23; INC 2023 onward. Union: NDA 1998-2004; UPA 2004-14; NDA 2014 onward. The United Front was in power at the Union level in 1996-98.",
+    "NFHS district figures come from a CC-BY GitHub transcription of the IIPS district factsheets. rchiips.org could not be opened from this machine because of a certificate error. Re-check against the IIPS PDFs before publishing.",
+    "Several key outlets (Deccan Herald, The Hindu, inkl, eparlib/sansad, PIB archive, NITI) refused automated fetches. Facts that only appeared in their search snippets were NOT used."
+  ],
+  "districts": [
+    {
+      "district": "Chitradurga",
+      "items": [
+        {
+          "type": "project",
+          "title": "Upper Bhadra Project (lift irrigation for Chitradurga, Chikkamagaluru, Tumakuru, Davanagere)",
+          "facts": {
+            "sanctioned_year": 2003,
+            "original_cost_cr": 2813,
+            "revised_cost_cr": 21450,
+            "spent_cr": 4865,
+            "original_deadline": null,
+            "status": "Incomplete. The Centre's Rs 5,300 cr budget announcement was still unreleased as of Aug 2026.",
+            "as_of": "2022-02-19 (Swarajya). The cost is given as 'around Rs 21,450 crore'."
+          },
+          "governments": "Proposed in 2000 and approved in 2003 under the INC state government (S.M. Krishna). The BJP state government (2008-13) claims it started works in 2008. Cost revisions came under INC (2015) and BJP (2020) state governments. National-project status and central funding were pursued under the NDA Union government, which put Rs 5,300 cr in the 2023-24 budget. The INC state government has been in office since 2023.",
+          "summary": "Approved in 2003 at Rs 2,813 crore, the project was estimated at about Rs 21,450 crore by 2022, roughly 7.6 times the original. About Rs 4,865 crore had been spent by then. The implied overrun of about Rs 18,637 crore mixes price levels and includes scope changes.",
+          "source_url": "https://swarajyamag.com/amp/story/news-brief%2Fkarnatakas-upper-bhadra-irrigation-project-granted-national-project-status-what-it-means-for-people-of-the-state",
+          "quote": "proposed in 2000, was approved in 2003 with an estimated cost of Rs 2,813 crore.",
+          "quote_2": "Around Rs 4,865 crore have already been spent on the project by the Karnataka government.",
+          "confidence": "medium",
+          "caveat": "Spending figures conflict. On 2023-02-03 then-CM Bommai claimed Rs 13,000 cr had been spent (The South First). Swarajya said Rs 4,865 cr a year earlier. Neither was checked against an Assembly reply. Other reported totals are Rs 21,471 cr (The South First, 2023) and Rs 21,473.67 cr (search snippet of a Lok Sabha reply that could not be opened)."
+        },
+        {
+          "type": "unspent",
+          "title": "Upper Bhadra: Rs 5,300 crore announced in Union Budget 2023-24 still not released",
+          "facts": {
+            "sanctioned_year": 2023,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": 0,
+            "original_deadline": null,
+            "status": "Announced in Union Budget 2023-24 and not released as of 2026-08-20, according to the Karnataka CM.",
+            "as_of": "2026-08-20"
+          },
+          "governments": "Announced by the NDA Union government (FM Sitharaman) while BJP ran the state (Bommai). The INC state government has sought release since 2023.",
+          "summary": "In August 2026 Karnataka's Chief Minister said the Rs 5,300 crore the Centre announced for Upper Bhadra in the 2023-24 Union Budget had still not been released, three budget years later.",
+          "source_url": "https://theprint.in/india/karnataka-cm-urges-amit-shah-to-expedite-rs-5300-crore-release-for-upper-bhadra-project/3020417/",
+          "quote": "Even after being declared in Parliament, this money has not been allocated.",
+          "confidence": "high",
+          "caveat": "This is the state government's statement, carried by PTI. The Union position, from a Lok Sabha reply seen only as a search snippet and not opened, is that the project is not under any GoI scheme yet."
+        },
+        {
+          "type": "outcome",
+          "title": "Child stunting rose (NFHS-4 to NFHS-5)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Stunted children under 5: 28.6% (NFHS-4, 2015-16) to 36.0% (NFHS-5, 2019-20). Women 15-49 anaemic: 43.7% to 44.6%. Children 6-59 months anaemic: 64.4% to 61.1%.",
+            "as_of": "NFHS-5 Karnataka fieldwork 2019-20"
+          },
+          "governments": "This period spans the INC (2013-18), JD(S)-INC (2018-19) and BJP (2019 onward) state governments, with the NDA at the Union level.",
+          "summary": "The share of Chitradurga's under-5 children who are stunted rose from 28.6% to 36.0% between NFHS-4 and NFHS-5.",
+          "source_url": "https://raw.githubusercontent.com/Tejas360/NFHS-5/master/district-level/NFHS-5-KA-Karnataka.csv",
+          "quote": "Karnataka,KA,Chitradurga,73. Children under 5 years who are stunted (height-for-age)18 (%),36.0,28.6",
+          "confidence": "medium",
+          "caveat": "Transcribed from the IIPS district factsheet. Verify on rchiips.org before publishing."
+        }
+      ]
+    },
+    {
+      "district": "Davanagere",
+      "items": [
+        {
+          "type": "project",
+          "title": "Davanagere Smart City (Round 1, 2016): CAG audit position",
+          "facts": {
+            "sanctioned_year": 2016,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": 830.82,
+            "original_deadline": null,
+            "status": "Received Rs 990 cr (GoI 490, GoK 500) and spent Rs 830.82 cr as of June 2024. Basic amenities: 64 projects, 61 completed, 3 ongoing (cost Rs 712.79 cr, spent Rs 508.83 cr).",
+            "as_of": "June 2024 (CAG Report No. 11 of 2025, tabled 29 Jan 2026)"
+          },
+          "governments": "Davanagere was selected in Round 1 on 19 May 2016 under the NDA Union government and the INC state government (2013-18). Implementation ran through the JD(S)-INC, BJP and INC state governments.",
+          "summary": "CAG found Davanagere Smart City had received Rs 990 crore and spent Rs 830.82 crore by June 2024. Rs 159 crore of mission funds was still unspent, and the mission deadline had been extended to March 2025.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter-3---Financial-Management-06981df9e1148a8.23881503.pdf",
+          "quote": "3 Davanagere 490.00 500.00 990.00 830.82",
+          "confidence": "high",
+          "caveat": "The quote is a row of CAG Table 3.1 (Funds received GoI, GoK, Total, Expenditure; Rs crore). The unspent balance is simple arithmetic on CAG's own figures. The data is 'Information furnished by Smart Cities'."
+        },
+        {
+          "type": "project",
+          "title": "Davanagere Smart City Integrated Command & Control Centre went live 3 years 4 months late",
+          "facts": {
+            "sanctioned_year": 2018,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": "2019-10-10",
+            "status": "Went live on 2023-02-27, a delay of 3 years 4 months",
+            "as_of": "30 June 2024 (CAG)"
+          },
+          "governments": "Awarded in Oct 2018 (JD(S)-INC state government). Went live in Feb 2023 (BJP state government). The scheme is a Union NDA mission.",
+          "summary": "Davanagere's smart-city control centre was due to go live in October 2019 and went live in February 2023, 3 years 4 months late, according to CAG.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter-4---Implemention-of-Projects-and-Monitoring-06981df9e14b034.71900044.pdf",
+          "quote": "Davanagere 10.10.2018 10.10.2019 27.02.2023 3 years 4 months",
+          "confidence": "high"
+        },
+        {
+          "type": "outcome",
+          "title": "Child anaemia rose; stunting fell (NFHS-4 to NFHS-5)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Children 6-59 months anaemic: 65.9% to 70.2%. Women 15-49 anaemic: 46.9% to 51.7%. Stunting under 5: 46.4% to 38.4%.",
+            "as_of": "NFHS-5 2019-20"
+          },
+          "governments": "As for Chitradurga.",
+          "summary": "In Davanagere, anaemia rose to 70.2% of young children and 51.7% of women in NFHS-5, while stunting fell from 46.4% to 38.4%.",
+          "source_url": "https://raw.githubusercontent.com/Tejas360/NFHS-5/master/district-level/NFHS-5-KA-Karnataka.csv",
+          "quote": "Karnataka,KA,Davanagere,81. Children age 6-59 months who are anaemic (<11.0 g/dl)22 (%),70.2,65.9",
+          "confidence": "medium",
+          "caveat": "Transcription of the IIPS factsheet. Verify on rchiips.org."
+        }
+      ]
+    },
+    {
+      "district": "Shivamogga",
+      "items": [
+        {
+          "type": "project",
+          "title": "Shivamogga (Kuvempu) Airport, Sogane",
+          "facts": {
+            "sanctioned_year": 2007,
+            "original_cost_cr": 220,
+            "revised_cost_cr": 450,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Inaugurated 2023-02-27. First awarded on BOT in Nov 2007; land allotment annulled Jan 2015 with no construction; relaunched June 2020 at Rs 220 cr; cost Rs 384 cr by 2021; about Rs 450 cr at opening.",
+            "as_of": "2023-02-27"
+          },
+          "governments": "Awarded in 2007 under the JD(S)-BJP coalition. Foundation stone laid 20 June 2008 under the BJP (Yediyurappa). The land allotment was annulled in Jan 2015 under the INC government. Relaunched in June 2020 under the BJP (Yediyurappa) and inaugurated by the PM in 2023 under the NDA Union and BJP state governments.",
+          "summary": "Awarded in 2007 with its foundation stone laid in 2008, the airport saw no construction until it was relaunched in 2020 at Rs 220 crore. It opened in 2023 at about Rs 450 crore, a rise of about Rs 230 crore over the 2020 estimate and 15 years after it was first awarded.",
+          "source_url": "https://theprint.in/india/big-infra-push-for-karnataka-pm-modi-inaugurates-new-airport-development-projects-in-shivamogga/1404067",
+          "quote": "the new airport is developed at a cost of around Rs 450 crore",
+          "quote_2_source": "https://www.nbmcw.com/news/karnataka-kick-starts-220-cr-airport-project.html (18 June 2020): 'at a cost of ₹220 crore'. https://www.thenewsminute.com/amp/story/karnataka/karnataka-cm-says-shivamogga-airport-will-be-completed-next-june-150586 (13 June 2021): 'has gone up from Rs 220 crore to Rs 384 crore'",
+          "history_source": "https://organiser.org/2023/03/06/163961/bharat/shivamoga-airport-a-much-delayed-derailed-project-has-a-safe-landing/amp/ (2007 award, 2008 foundation, 2015 annulment; the outlet is RSS-affiliated, so corroborate the timeline)",
+          "confidence": "medium",
+          "caveat": "The 'original' Rs 220 cr is the 2020 relaunch estimate, not a 2007 figure. The Rs 450 cr is 'around'. Part of the rise is the upgrade for larger aircraft reported in 2021."
+        },
+        {
+          "type": "project",
+          "title": "Shivamogga Smart City: CAG audit position",
+          "facts": {
+            "sanctioned_year": 2017,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": 904.2,
+            "original_deadline": null,
+            "status": "Received Rs 990 cr and spent Rs 904.20 cr as of June 2024. The SPV had no full-time CEO for 5 years (Feb 2017 to Mar 2022). The ICCC went live 1 yr 10 months late.",
+            "as_of": "June 2024 (CAG Report No. 11 of 2025)"
+          },
+          "governments": "Round 2 selection on 07-02-2017 (NDA Union, INC state). Execution ran mostly under the JD(S)-INC and BJP state governments (2018-23).",
+          "summary": "Shivamogga Smart City spent Rs 904.20 crore of the Rs 990 crore it received. CAG found its company ran without a full-time CEO for five years and that its command centre went live 22 months late.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter-4---Implemention-of-Projects-and-Monitoring-06981df9e14b034.71900044.pdf",
+          "quote": "SSCL 07-02-2017 07.02.2017 03.03.2022 5 years",
+          "quote_context": "CAG Table 4.2, 'Non availability of CEO'. The funds row in Chapter 3 Table 3.1 reads: '6 Shivamogga 490.00 500.00 990.00 904.20'",
+          "confidence": "high"
+        },
+        {
+          "type": "unspent",
+          "title": "CAG: tender condition diluted, ineligible integrator selected for Shivamogga ICCC (Rs 41.84 cr)",
+          "facts": {
+            "sanctioned_year": 2020,
+            "original_cost_cr": 41.84,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": "2021-05-02 (scheduled go-live)",
+            "status": "Went live on 2023-03-15. CAG found the lead bidder's turnover was Rs 34.83 cr against the original Rs 100 cr requirement.",
+            "as_of": "June 2024 (CAG); State Government reply April 2025"
+          },
+          "governments": "Tender condition amended in Feb 2020 and contract awarded in Aug 2020, both under the BJP state government. The State Government (INC) replied in April 2025 defending the clause under KTPP rules.",
+          "summary": "CAG found the Rs 41.84 crore Shivamogga command-centre contract went to a lead bidder that would have been ineligible without a Feb 2020 relaxation of the tender condition. The state says the clause followed state procurement rules. This is a procedural audit finding, not a finding of fraud.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter-4---Implemention-of-Projects-and-Monitoring-06981df9e14b034.71900044.pdf",
+          "quote": "the dilution of the standard tender condition resulted in selection of ineligible LSI for implementation of ICCC project in Shivamogga.",
+          "confidence": "high",
+          "caveat": "Attribute to CAG (para 4.6.1.4) and include the State Government's reply."
+        },
+        {
+          "type": "outcome",
+          "title": "Child anaemia jumped (NFHS-4 to NFHS-5)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Children 6-59 months anaemic: 53.8% to 68.9%. Stunting: 35.3% to 29.0%. Women anaemic: 48.6% to 41.9%.",
+            "as_of": "NFHS-5 2019-20"
+          },
+          "governments": "As above.",
+          "summary": "Anaemia among Shivamogga's young children rose from 53.8% to 68.9% between NFHS-4 and NFHS-5, even as stunting fell to 29.0%.",
+          "source_url": "https://raw.githubusercontent.com/Tejas360/NFHS-5/master/district-level/NFHS-5-KA-Karnataka.csv",
+          "quote": "Karnataka,KA,Shimoga,81. Children age 6-59 months who are anaemic (<11.0 g/dl)22 (%),68.9,53.8",
+          "confidence": "medium",
+          "caveat": "Verify on rchiips.org."
+        }
+      ]
+    },
+    {
+      "district": "Chikkamagaluru",
+      "items": [
+        {
+          "type": "project",
+          "title": "Kadur-Chikkamagaluru-Belur (-Sakleshpur) new rail line",
+          "facts": {
+            "sanctioned_year": 1997,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "56 of 68 km of Kadur-Chikkamagaluru-Belur commissioned; 12 km pending",
+            "as_of": "2026-01-13"
+          },
+          "governments": "Sanctioned in 1997 under the United Front Union government. Built across NDA, UPA and NDA Union governments, with every state government since.",
+          "summary": "Sanctioned in 1997, the Kadur-Chikkamagaluru-Belur line had 56 of 68 km commissioned by January 2026, about 29 years later, with 12 km still pending.",
+          "source_url": "https://www.thehansindia.com/news/cities/bengaluru/chikkamagaluru-finally-connected-by-rail-1038917",
+          "quote": "However, 12 km remains pending",
+          "quote_2": "sanctioned back in 1997",
+          "confidence": "medium",
+          "caveat": "No cost figure was found on a page that could be opened. Snippets showed figures from Rs 194 cr to about Rs 975-994 cr, all unverified."
+        },
+        {
+          "type": "project",
+          "title": "Upper Bhadra Project (Chikkamagaluru is a beneficiary district; the Ajjampura tunnel is here)",
+          "facts": {
+            "sanctioned_year": 2003,
+            "original_cost_cr": 2813,
+            "revised_cost_cr": 21450,
+            "spent_cr": 4865,
+            "original_deadline": null,
+            "status": "Incomplete; see the Chitradurga entry",
+            "as_of": "2022-02-19"
+          },
+          "governments": "See the Chitradurga entry.",
+          "summary": "Chikkamagaluru is one of four districts promised micro-irrigation for about 2.25 lakh hectares under Upper Bhadra. Approved at Rs 2,813 crore in 2003, the project was at about Rs 21,450 crore by 2022.",
+          "source_url": "https://thesouthfirst.com/karnataka/karnataka-claims-upper-bhadra-is-a-national-project-central-government-to-yet-make-official-announcement/",
+          "quote": "Chikkamagaluru, Chitradurga, Tumakuru, and Davangere",
+          "confidence": "medium",
+          "caveat": "The district list comes from The South First (3 Feb 2023). The cost figures are from Swarajya, cited under Chitradurga."
+        },
+        {
+          "type": "outcome",
+          "title": "Child stunting rose (NFHS-4 to NFHS-5)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Stunting under 5: 21.1% to 27.3%. Children anaemic: 57.9% to 53.2%. Women anaemic: 42.2% to 40.8%.",
+            "as_of": "NFHS-5 2019-20"
+          },
+          "governments": "As above.",
+          "summary": "Stunting among Chikkamagaluru's under-5 children rose from 21.1% to 27.3% between NFHS-4 and NFHS-5, while anaemia eased slightly.",
+          "source_url": "https://raw.githubusercontent.com/Tejas360/NFHS-5/master/district-level/NFHS-5-KA-Karnataka.csv",
+          "quote": "Karnataka,KA,Chikmagalur,73. Children under 5 years who are stunted (height-for-age)18 (%),27.3,21.1",
+          "confidence": "medium",
+          "caveat": "Verify on rchiips.org."
+        }
+      ]
+    },
+    {
+      "district": "Dakshina Kannada",
+      "items": [
+        {
+          "type": "project",
+          "title": "Mangaluru Smart City: 55 works; 32 done by Aug 2023; CAG position June 2024",
+          "facts": {
+            "sanctioned_year": 2017,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": 735.57,
+            "original_deadline": null,
+            "status": "Aug 2023: 32 of 55 works completed (Rs 350.65 cr) and grants released totalled Rs 806 cr. June 2024 (CAG): received Rs 843 cr, spent Rs 735.57 cr. Basic amenities: 35 projects, only 19 completed, 16 ongoing.",
+            "as_of": "2023-08-01 (PTI) and June 2024 (CAG)"
+          },
+          "governments": "Round 2 selection in Apr 2017 (NDA Union, INC state). Work ran under the JD(S)-INC, BJP (2019-23) and INC (2023 onward) state governments.",
+          "summary": "Mangaluru received Rs 843 crore of smart-city money, less than the other cities' Rs 990 crore, and had spent Rs 735.57 crore by June 2024. Of 35 basic-amenity projects, only 19 were complete.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter-3---Financial-Management-06981df9e1148a8.23881503.pdf",
+          "quote": "5 Mangaluru 416.50 426.50 843.00 735.57",
+          "quote_2_source": "https://sahilonline.org/work-under-smart-city-project-lagging-behind-in-mangaluru-minister (PTI, 1 Aug 2023): '32 works have been completed entailing an expenditure of Rs 350.65 crore.'",
+          "confidence": "high"
+        },
+        {
+          "type": "unspent",
+          "title": "Mangaluru waterfront: works awarded without land or clearances; Rs 51.85 cr allocation set to lapse",
+          "facts": {
+            "sanctioned_year": 2020,
+            "original_cost_cr": 185.48,
+            "revised_cost_cr": null,
+            "spent_cr": 6.52,
+            "original_deadline": null,
+            "status": "Several sub-projects were dropped in Feb 2024 (water jetty, Nayar Kudru open-air theatre, Sulthan Bathery area development). CAG says Rs 51.85 cr of allocated funds would lapse. The state says part was reallocated to a road bridge and a DC office.",
+            "as_of": "June 2024 (CAG); State reply April 2025"
+          },
+          "governments": "Proposed in Mar 2020 and awarded in Apr-May 2022, both under the BJP state government. Dropped in Feb 2024 under the INC state government.",
+          "summary": "CAG found the Rs 185.48 crore Mangaluru waterfront project was awarded without land or coastal clearances. After Rs 6.52 crore was spent it was incomplete, and dropped works left Rs 51.85 crore of allocated funds facing lapse.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter-4---Implemention-of-Projects-and-Monitoring-06981df9e14b034.71900044.pdf",
+          "quote": "MSCL will not be able to utilise an amount of ₹51.8541 crore allocated funds leading to its lapsing.",
+          "confidence": "high"
+        },
+        {
+          "type": "unspent",
+          "title": "Mangaluru smart-city sewer lines: Rs 9.44 cr expenditure 'unfruitful'",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": 9.44,
+            "original_deadline": null,
+            "status": "The network is dysfunctional because 27 manholes under the AMRUT works (KUIDFC) were never built after a contractor was terminated",
+            "as_of": "June 2024 (CAG); State reply April 2025"
+          },
+          "governments": "Smart City Mission and AMRUT are NDA Union schemes executed by state agencies across the BJP and INC state governments.",
+          "summary": "CAG found Rs 9.44 crore spent on Mangaluru smart-city underground drainage was wasted because the AMRUT trunk-sewer manholes it depended on were never built.",
+          "source_url": "https://cag.gov.in/uploads/download_audit_report/2025/Chapter-4---Implemention-of-Projects-and-Monitoring-06981df9e14b034.71900044.pdf",
+          "quote": "rendering the expenditure of ₹9.44 crore incurred on the projects unfruitful.",
+          "confidence": "high"
+        },
+        {
+          "type": "project",
+          "title": "Pumpwell flyover, NH-66 Mangaluru",
+          "facts": {
+            "sanctioned_year": 2009,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": "2013-03-31",
+            "status": "Opened 2020-01-31, nearly 7 years after the original deadline",
+            "as_of": "2020-01-31"
+          },
+          "governments": "Letter of approval issued in 2009 (UPA Union). Opened in 2020 (NDA Union, BJP state). Part of the NH-66 Talapady-Kundapura widening by Navayuga Udupi Tollway (toll concession).",
+          "summary": "The Pumpwell flyover was due on 31 March 2013 and opened on 31 January 2020, almost seven years late and more than 11 years after its 2009 approval.",
+          "source_url": "https://www.thenewsminute.com/karnataka/after-delay-over-10-years-pumpwell-flyover-inaugurated-mangaluru-117234",
+          "quote": "officially slated to be inaugurated on March 31, 2013",
+          "confidence": "high",
+          "caveat": "No flyover-specific cost was found. The Rs 671 cr in snippets is the whole highway package, so do not use it as the flyover's cost."
+        },
+        {
+          "type": "outcome",
+          "title": "Women's anaemia fell; stunting roughly flat (NFHS-4 to NFHS-5)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Stunting 23.9% to 25.1%. Children anaemic 54.3% to 51.1%. Women anaemic 45.4% to 38.8%.",
+            "as_of": "NFHS-5 2019-20"
+          },
+          "governments": "As above.",
+          "summary": "Dakshina Kannada is among Karnataka's better-off districts. Even so, half its young children (51.1%) were anaemic in NFHS-5 and stunting edged up to 25.1%.",
+          "source_url": "https://raw.githubusercontent.com/Tejas360/NFHS-5/master/district-level/NFHS-5-KA-Karnataka.csv",
+          "quote": "Karnataka,KA,Dakshina Kannada,81. Children age 6-59 months who are anaemic (<11.0 g/dl)22 (%),51.1,54.3",
+          "confidence": "medium",
+          "caveat": "Verify on rchiips.org."
+        }
+      ]
+    },
+    {
+      "district": "Udupi",
+      "items": [
+        {
+          "type": "project",
+          "title": "Varahi irrigation project (Kundapura/Udupi)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": 689,
+            "original_deadline": null,
+            "status": "Mar 2017: water reached only 3,375 ha from the left-bank canal, about 13,000 ha more still to be served, right-bank canal not started. In Aug 2006 the state said Rs 101.19 cr was spent and Rs 569 cr more needed.",
+            "as_of": "2017-03-07 (Daijiworld); 2006-08-03 (OneIndia)"
+          },
+          "governments": "Started around 1980 under INC state rule; converted to lift irrigation in 2001. The 2006 figures are from a Water Resources Minister of the JD(S)-BJP government. The 2017 figures were stated at an INC-government review. Every state government since 1980 has carried it.",
+          "summary": "Started about four decades ago, Varahi had absorbed about Rs 689 crore by March 2017, according to the local MLA. Water reached only 3,375 hectares against about 16,000 planned, and the right-bank canal had not started.",
+          "source_url": "https://daijiworld.com/news/newsDisplay?newsID=441413",
+          "quote": "Rs 689 crore has been spent on the project.",
+          "quote_2_source": "https://www.oneindia.com/2006/08/03/varahi-irrigation-project-to-be-modified-1154624655.html: 'Rs 101.19 crore had been spent on the project ... another Rs 569 crore was required to complete it.'",
+          "confidence": "medium",
+          "caveat": "Rs 689 cr is an MLA's statement at a review meeting; the minister's figure omitted the unit. The widely cited 1979 approval at Rs 9.43 cr and the Upa-Lokayukta's 'Rs 100 crore loss' finding came only from blocked pages (Udayavani, Deccan Herald, Wikipedia) and were NOT verified. No current (2024-26) status was verified."
+        },
+        {
+          "type": "project",
+          "title": "Varahi-to-Udupi city drinking water (24x7) scheme",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Delayed. About 700 m of private land in Halady village was still to be acquired as of Oct 2025; Rs 0.75 cr is needed for the land and Rs 2.5 cr more to finish that stretch.",
+            "as_of": "2025-10-29"
+          },
+          "governments": "Funding was discussed in Aug 2013 under KUDCEMP phase 2 (INC state government). The scheme is executed by KUIDFC and was still incomplete in 2025 under the INC state government.",
+          "summary": "Twelve years after the state discussed piping Varahi water to Udupi city in 2013, the scheme was stuck in October 2025 on 700 metres of unacquired land.",
+          "source_url": "https://newskarnataka.com/udupi/land-acquisition-delay-stalls-varahi-drinking-water-project-in-udupi/29102025/",
+          "quote": "has been delayed due to pending land acquisition",
+          "quote_2_source": "https://infrastructuretoday.co.in/udupi-to-get-varahi-river-water-supply-soon/ (13 Aug 2013)",
+          "confidence": "medium",
+          "caveat": "No verified sanction cost. Snippets showed Rs 270-339 cr, unverified. The 2013 article's Rs 450 cr is a programme-wide phase-2 figure, not this scheme's cost."
+        },
+        {
+          "type": "outcome",
+          "title": "Women's anaemia and stunting both rose (NFHS-4 to NFHS-5)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Women anaemic 44.7% to 47.3%. Stunting 21.1% to 23.1%. Children anaemic 56.2% to 58.3%.",
+            "as_of": "NFHS-5 2019-20"
+          },
+          "governments": "As above.",
+          "summary": "Udupi, one of Karnataka's top-ranked districts, still saw anaemia among women rise to 47.3% and child stunting rise to 23.1% between NFHS-4 and NFHS-5.",
+          "source_url": "https://raw.githubusercontent.com/Tejas360/NFHS-5/master/district-level/NFHS-5-KA-Karnataka.csv",
+          "quote": "Karnataka,KA,Udupi,84. All women age 15-49 years who are anaemic22 (%),47.3,44.7",
+          "confidence": "medium",
+          "caveat": "Verify on rchiips.org."
+        }
+      ]
+    },
+    {
+      "district": "Uttara Kannada",
+      "items": [
+        {
+          "type": "project",
+          "title": "Hubballi-Ankola new rail line (163 km)",
+          "facts": {
+            "sanctioned_year": 1996,
+            "original_cost_cr": null,
+            "revised_cost_cr": 3749,
+            "spent_cr": 300,
+            "original_deadline": null,
+            "status": "About 45 km (Hubballi-Kalghatagi) laid by 2013. The rest is stalled over forest and wildlife clearances, with the line rejected at least 10 times by statutory bodies. A revised DPR (reported at Rs 17,000 cr) was awaiting Cabinet approval in Oct 2025.",
+            "as_of": "2013-06-24 (spent); 2023-01-30 (revised cost)"
+          },
+          "governments": "Sanctioned in 1996 under the United Front Union government. Work began in 2001 under the NDA. Stalled through UPA and NDA Union governments and every state government since.",
+          "summary": "Sanctioned in 1996, the Hubballi-Ankola line had used more than Rs 300 crore on about 45 km by 2013. By 2023 its cost had risen more than tenfold to Rs 3,749 crore, and 30 years on the ghat section is still unbuilt.",
+          "source_url": "https://www.constructionworld.in/transport-infrastructure/ports-and-shipping/Hubli-Ankola-railway-line-in-Karnataka-still-in-pending/8674",
+          "quote": "More than Rs 300 crore spent on laying the track covering a distance of about 45 km",
+          "quote_2_source": "https://www.newslaundry.com/2023/01/30/red-flagged-11-times-over-green-concerns-but-karnataka-rail-project-proposal-may-get-bigger: 'The revised project cost has gone up over 10 times to Rs 3,749 crore.'",
+          "confidence": "medium",
+          "caveat": "The original sanctioned cost was not found, so no overrun is computed. The Rs 17,000 cr figure was seen only in Deccan Herald snippets, which were blocked."
+        },
+        {
+          "type": "outcome",
+          "title": "Child anaemia surged (NFHS-4 to NFHS-5)",
+          "facts": {
+            "sanctioned_year": null,
+            "original_cost_cr": null,
+            "revised_cost_cr": null,
+            "spent_cr": null,
+            "original_deadline": null,
+            "status": "Children 6-59 months anaemic: 47.7% to 69.0%. Stunting: 37.9% to 29.6%. Women anaemic: 41.9% to 44.6%.",
+            "as_of": "NFHS-5 2019-20"
+          },
+          "governments": "As above.",
+          "summary": "In Uttara Kannada the share of anaemic young children jumped from 47.7% to 69.0% between NFHS-4 and NFHS-5, the largest rise in this batch.",
+          "source_url": "https://raw.githubusercontent.com/Tejas360/NFHS-5/master/district-level/NFHS-5-KA-Karnataka.csv",
+          "quote": "Karnataka,KA,Uttara Kannada,81. Children age 6-59 months who are anaemic (<11.0 g/dl)22 (%),69.0,47.7",
+          "confidence": "medium",
+          "caveat": "Verify on rchiips.org."
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    "NFHS district factsheets on rchiips.org could not be opened (certificate error). All NFHS figures come from a GitHub transcription and need checking against the IIPS PDFs.",
+    "Karnataka HDR district HDI (2005 vs 2022): the Economic Survey and OpenCity copies returned 403. Only snippets (DK 0.687 2nd, Chikkamagaluru 0.668, Udupi 0.665) were seen, so they were not used.",
+    "Nanjundappa Committee 2002 backward-taluk lists for these districts: the full list was not retrieved.",
+    "Upper Bhadra: no opened primary source (Lok Sabha replies on eparlib/sansad were unreachable) for the Rs 21,473.67 cr re-revised cost (2020 approval), the 2015 Rs 12,340 cr revision, or a reconciled expenditure figure. State claims conflict (Rs 4,865 cr in 2022 vs Rs 13,000 cr in 2023).",
+    "Tumakuru-Chitradurga-Davanagere rail line (sanctioned 2011-12; Rs 1,801 cr; Rs 359.32 cr spent to Mar 2024): figures seen only in snippets of a Lok Sabha reply and UNI, so not used. Only land acquisition progress was verifiable (Asianet, Feb 2026: 246 acres left).",
+    "Varahi irrigation: the 1979 approval cost (Rs 9.43 cr) and the Upa-Lokayukta report (Rs 100 cr loss) were seen only via blocked pages. No 2024-26 status was verified.",
+    "Karwar Project Seabird (naval base) cost history: the PIB archive and Lok Sabha replies were unreachable, so it was omitted.",
+    "Shivamogga-Shikaripura-Ranebennur rail line: only the 2023 figure of 'Rs 990 crore' (ThePrint) was found, with no sanction year or progress, so it was omitted as an item.",
+    "No district-level teacher/doctor vacancy data or CAG State Finances lapse figures specific to these districts were found in the time available.",
+    "No 'what it could have bought' illustrations included, because no unit cost was verified."
+  ]
+}
