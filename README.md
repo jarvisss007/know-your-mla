@@ -29,3 +29,14 @@ A searchable page showing what each of Karnataka's 224 MLAs declared in their 20
 ## Corrections
 
 If a figure is wrong, open an issue with the MLA's name and a link to the affidavit. Errors will be fixed.
+
+## Content
+
+`content/` holds ready-to-post Instagram carousels (1080 x 1350, five slides each), every figure taken from the verified audit:
+
+1. They doubled their own pay
+2. Yettinahole: Rs 15,297 crore spent, no drinking water delivered
+3. Bengaluru: no elected council since 2020
+4. Lokayukta: 195 cases, zero verdicts
+5. Rs 36,136 crore owed to contractors
+6. Richest state, falling behind
