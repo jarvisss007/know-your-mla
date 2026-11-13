@@ -1,0 +1,11 @@
+CAG = 'Source: CAG performance audit of the Yettinahole project (cost to January 2023, spending to March 2024)'
+SCENES = [
+ (4.5, '<div class="k">ಎತ್ತಿನಹೊಳೆ ಕುಡಿಯುವ ನೀರಿನ ಯೋಜನೆ</div><h1>₹15,297 ಕೋಟಿ ಖರ್ಚು.<br>ಒಂದು ಹನಿ ನೀರು ಬಂದಿಲ್ಲ.</h1><div class="en">Yettinahole drinking water project: Rs 15,297 crore spent, and not a drop delivered by March 2024.</div>', CAG),
+ (5.5, '<div class="k">ವೆಚ್ಚ ಎಷ್ಟು ಏರಿತು</div><div class="row"><small>2012 · ಅನುಮೋದಿತ ವೆಚ್ಚ</small>₹8,324 ಕೋಟಿ</div><div class="row"><small>2023 · ಪರಿಷ್ಕೃತ ವೆಚ್ಚ</small><b style="color:#ef5261">₹23,252 ಕೋಟಿ</b></div><div class="en">Approved at Rs 8,324 crore in 2012. Revised to Rs 23,252 crore in 2023: almost three times.</div>', CAG),
+ (4.0, '<div class="k">ಮುಗಿಯುವುದು ಯಾವಾಗ?</div><h1>ಗಡುವೇ ಇರಲಿಲ್ಲ.</h1><div class="en">The deadline? There never was one. No project report ever fixed a completion date.</div>', CAG),
+ (6.0, '<div class="k">ಕಾಮಗಾರಿ ಯಾರಿಗೆ ಹೋಯಿತು</div><div class="big r">80%</div><div class="mid">ಸಾಮರ್ಥ್ಯ ಪರಿಶೀಲಿಸದೆ ನೀಡಿದ ಕಾಮಗಾರಿಗಳು</div><div class="big">67%</div><div class="mid">ಮೌಲ್ಯದ ಕೆಲಸ ಕೇವಲ 7 ಗುತ್ತಿಗೆದಾರರಿಗೆ</div><div class="en">80% of works were awarded without checking whether bidders could do the job. 67% of the work by value went to just seven contractors.</div>', CAG),
+ (4.5, '<div class="k">ಆಗಸ್ಟ್ 2026</div><div class="big">20 / 54</div><h2 style="margin-top:24px">ಕಾಮಗಾರಿ ಪ್ಯಾಕೇಜ್‌ಗಳು ಮಾತ್ರ ಪೂರ್ಣ</h2><div class="en">By August 2026, only 20 of 54 work packages were complete.</div>', 'Source: State government statement, 20 August 2026'),
+ (5.0, '<h1>2012ರಿಂದ ಪ್ರತಿ ಸರ್ಕಾರವೂ ಇದನ್ನು ನಡೆಸಿದೆ.</h1><div class="mid">ಬಿಜೆಪಿ · ಕಾಂಗ್ರೆಸ್ · ಸಮ್ಮಿಶ್ರ</div><div class="en">Every government since 2012 has run this project: BJP, Congress and coalition.</div>', ''),
+ (6.5, '<div class="k">ಹೊಸ ಭರವಸೆ: 2027ರ ಕೊನೆ</div><h2>ಮತ್ತೆ ತಪ್ಪಿದರೆ, ಕೋಲಾರ ಮತ್ತು ಚಿಕ್ಕಬಳ್ಳಾಪುರಕ್ಕೆ ಯಾರು ಉತ್ತರಿಸುತ್ತಾರೆ?</h2><div class="url">jarvisss007.github.io/know-your-mla</div><div class="en">The new promise is the end of 2027. If it slips again, who answers to Kolar and Chikkaballapura?</div>', 'Every figure in this video comes from a public record. If one is wrong, tell us and we will correct it.'),
+]
+OUT = 'yettinahole-kn.mp4'

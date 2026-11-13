@@ -1,0 +1,10 @@
+SRC = "Source: Chief Minister's reply in the Legislative Assembly (Lokayukta cases, September 2022 to February 2026)"
+SCENES = [
+ (4.0, '<div class="k">ಕರ್ನಾಟಕ ಲೋಕಾಯುಕ್ತ</div><h1>195 ಭ್ರಷ್ಟಾಚಾರ ಪ್ರಕರಣ.<br>ಒಂದೂ ತೀರ್ಪಿಲ್ಲ.</h1><div class="en">Karnataka Lokayukta: 195 corruption cases. Not one verdict.</div>', SRC),
+ (6.0, '<div class="k">ಸೆಪ್ಟೆಂಬರ್ 2022 ರಿಂದ ಫೆಬ್ರವರಿ 2026</div><div class="row"><small>ಅಧಿಕಾರಿಗಳ ಮೇಲೆ ದಾಳಿ, ಟ್ರ್ಯಾಪ್ ಪ್ರಕರಣಗಳು</small>195</div><div class="row"><small>ಶಿಕ್ಷೆ ಅಥವಾ ಖುಲಾಸೆ</small><b style="color:#ef5261">0</b></div><div class="row"><small>ಹೈಕೋರ್ಟ್ ತಡೆ</small>62</div><div class="en">September 2022 to February 2026: 195 raid and trap cases against officials. Convictions or acquittals: zero. Stayed by the High Court: 62.</div>', SRC),
+ (5.0, '<div class="k">ಅನುಮತಿಗಾಗಿ ಕಾಯುತ್ತಿವೆ</div><div class="big r">156</div><h2 style="margin-top:24px">ಪ್ರಕರಣಗಳು ಸರ್ಕಾರದ ಅಭಿಯೋಜನಾ ಅನುಮತಿಗೆ ಕಾದಿದ್ದವು</h2><div class="en">156 cases were waiting for the government\'s permission to prosecute (August 2023).</div>', 'Source: Government sanction data, August 2023'),
+ (5.5, '<div class="k">ಹಿಂದೆ ಇನ್ನೂ ಕೆಟ್ಟದಿತ್ತು</div><div class="big">19</div><h2 style="margin-top:24px">ಶಿಕ್ಷೆಗಳು, 2,000ಕ್ಕೂ ಹೆಚ್ಚು ಪ್ರಕರಣಗಳಲ್ಲಿ</h2><div class="en">The old Anti-Corruption Bureau: 19 convictions from more than 2,000 cases, 2016 to 2022, under three governments.</div>', 'Source: Assembly records on the Anti-Corruption Bureau, March 2016 to March 2022'),
+ (4.5, '<h1>ದಾಳಿ ಸುದ್ದಿಯಾಗುತ್ತದೆ.</h1><h1 style="color:#f2b705;margin-top:20px">ತೀರ್ಪು ಭ್ರಷ್ಟಾಚಾರ ನಿಲ್ಲಿಸುತ್ತದೆ.</h1><div class="en">Raids make headlines. Verdicts stop corruption.</div>', ''),
+ (6.0, '<h2>ತೀರ್ಪುಗಳು ಯಾಕೆ ಬರುತ್ತಿಲ್ಲ? ಇದನ್ನು ನಿಮ್ಮ ಶಾಸಕರನ್ನು ಕೇಳಿ.</h2><div class="url">jarvisss007.github.io/know-your-mla</div><div class="en">Why do no verdicts arrive? Ask your MLA. Their own sworn records are here.</div>', 'Every figure in this video comes from a public record. If one is wrong, tell us and we will correct it.'),
+]
+OUT = 'lokayukta-kn.mp4'

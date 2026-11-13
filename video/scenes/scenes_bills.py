@@ -1,0 +1,10 @@
+FIN = 'Source: Finance Department note, 17 September 2026'
+SCENES = [
+ (4.0, '<div class="k">ಕರ್ನಾಟಕ ಸರ್ಕಾರದ ಬಾಕಿ</div><h1>ಗುತ್ತಿಗೆದಾರರಿಗೆ ₹36,136 ಕೋಟಿ ಬಾಕಿ.</h1><div class="en">The state owes contractors Rs 36,136 crore in unpaid bills.</div>', FIN),
+ (6.0, '<div class="k">ಸರ್ಕಾರದ ಸ್ವಂತ ಮಾತು</div><h2>ಹೊಸ ಯೋಜನೆ ಆರಂಭಿಸಬೇಡಿ ಎಂದು ಹಣಕಾಸು ಇಲಾಖೆ ಎಚ್ಚರಿಸಿದೆ.</h2><div class="mid">ಆರಂಭಿಸಿದ ಕಾಮಗಾರಿ ಮುಗಿಸಲು: ₹2 ಲಕ್ಷ ಕೋಟಿಗೂ ಹೆಚ್ಚು</div><div class="en">The Finance Department warned against starting new projects. Cost to finish works already started: over Rs 2 lakh crore.</div>', FIN),
+ (5.0, '<div class="k">ಅಪೂರ್ಣ</div><div class="big r">3,140</div><h2 style="margin-top:24px">ಯೋಜನೆಗಳು ಅಪೂರ್ಣ, ಮಾರ್ಚ್ 2024</h2><div class="en">3,140 projects counted incomplete by the national auditor in March 2024.</div>', 'Source: CAG State Finances Audit Report'),
+ (6.0, '<div class="k">ಆದಾಯ ಖಾತೆ</div><div class="row"><small>2022-23 · ಹೆಚ್ಚುವರಿ</small><b>+₹13,496 ಕೋಟಿ</b></div><div class="row"><small>2025-26 · ಕೊರತೆ</small><b style="color:#ef5261">−₹25,449 ಕೋಟಿ</b></div><div class="en">The state\'s revenue account went from a surplus of Rs 13,496 crore in 2022-23 to a deficit of Rs 25,449 crore in 2025-26.</div>', 'Source: PRS Legislative Research, Karnataka Budget Analysis 2026-27'),
+ (5.5, '<div class="k">ಬಾಕಿ ಯಾರದ್ದು?</div><h2>₹20,000 ಕೋಟಿ ಹಿಂದಿನ ಬಿಜೆಪಿ ಸರ್ಕಾರದ್ದು ಎಂದು ಮಾಜಿ ಮುಖ್ಯಮಂತ್ರಿ ಹೇಳುತ್ತಾರೆ.</h2><div class="mid">ಅಧಿಕೃತ ಪಟ್ಟಿ ಪ್ರಕಟವಾಗಿಲ್ಲ. ಯಾರೂ ಪರಿಶೀಲಿಸಲು ಆಗುವುದಿಲ್ಲ.</div><div class="en">The former Chief Minister says Rs 20,000 crore of it dates from the BJP government. No official list has been published, so nobody can check.</div>', ''),
+ (6.5, '<h2>ಯಾರಿಗೆ ಎಷ್ಟು ಬಾಕಿ, ಯಾವ ಕ್ರಮದಲ್ಲಿ ಪಾವತಿ: ಸರ್ಕಾರ ಪ್ರಕಟಿಸುತ್ತದೆಯೇ?</h2><div class="url">jarvisss007.github.io/know-your-mla</div><div class="en">Will the government publish who is owed, and in what order they will be paid?</div>', 'Every figure in this video comes from a public record. If one is wrong, tell us and we will correct it.'),
+]
+OUT = 'bills-kn.mp4'

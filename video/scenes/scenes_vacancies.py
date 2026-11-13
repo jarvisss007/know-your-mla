@@ -1,0 +1,11 @@
+HEALTH = 'Source: Karnataka Health Department vacancy figures, December 2024'
+SCENES = [
+ (4.5, '<div class="k">ಕರ್ನಾಟಕ ಆರೋಗ್ಯ ಇಲಾಖೆ</div><h1>32,870 ಹುದ್ದೆಗಳು<br>ಖಾಲಿ.</h1><div class="en">Karnataka\'s Health Department: 32,870 posts vacant.</div>', HEALTH),
+ (5.0, '<div class="k">69,915 ಮಂಜೂರಾದ ಹುದ್ದೆಗಳಲ್ಲಿ</div><div class="big r">47%</div><h2 style="margin-top:24px">ಖಾಲಿ. ಸುಮಾರು ಅರ್ಧ.</h2><div class="en">That is 32,870 of 69,915 sanctioned posts: almost half empty.</div>', HEALTH),
+ (5.5, '<div class="k">ಬಜೆಟ್‌ನಲ್ಲಿ ಆರೋಗ್ಯದ ಪಾಲು</div><div class="row"><small>ಕರ್ನಾಟಕ</small><b style="color:#ef5261">4.3%</b></div><div class="row"><small>ರಾಜ್ಯಗಳ ಸರಾಸರಿ</small>6.2%</div><div class="en">The 2026-27 budget gives health 4.3% of spending, against an average of 6.2% across states.</div>', 'Source: PRS Legislative Research, Karnataka Budget Analysis 2026-27'),
+ (5.5, '<div class="k">ಪ್ರಾಥಮಿಕ ಶಾಲಾ ಶಿಕ್ಷಕರು</div><div class="row"><small>2021-22 · ಖಾಲಿ</small>26%</div><div class="row"><small>ಡಿಸೆಂಬರ್ 2025 · ಖಾಲಿ</small><b style="color:#ef5261">25.5%</b></div><div class="en">Primary teacher posts: 26% vacant in 2021-22, 25.5% in December 2025. Two governments, almost no change.</div>', 'Sources: CAG; Assembly reply, December 2025'),
+ (5.0, '<div class="k">ನ್ಯಾಯವಾಗಿ ಹೇಳಬೇಕೆಂದರೆ</div><h2>ಶಿಶು ಮರಣ ದರ ಇಳಿದಿದೆ: 1,000 ಜನನಕ್ಕೆ 23 ರಿಂದ 14.</h2><div class="en">To be fair: infant deaths fell from 23 to 14 per 1,000 births (2018 to 2023), below the national 25.</div>', 'Source: Sample Registration System'),
+ (6.0, '<div class="k">ಒಂದು ಹುದ್ದೆ ಮಾತ್ರ ಎಂದೂ ಖಾಲಿ ಇರುವುದಿಲ್ಲ</div><h2>ಶಾಸಕರ ಮೂಲ ವೇತನ: ₹25,000 → ₹80,000</h2><div class="mid">2022 ಮತ್ತು 2025ರಲ್ಲಿ, ಚರ್ಚೆಯೇ ಇಲ್ಲದೆ</div><div class="en">One post is never left vacant. MLAs raised their own basic pay from Rs 25,000 to Rs 80,000, in 2022 and 2025, both times without debate.</div>', 'Source: Karnataka Legislators\' Salaries amendments, 2022 and 2025'),
+ (6.0, '<h2>ನಿಮ್ಮ ಊರಿನ ಆಸ್ಪತ್ರೆಯಲ್ಲಿ ವೈದ್ಯರಿದ್ದಾರೆಯೇ? ನಿಮ್ಮ ಶಾಸಕರನ್ನು ಕೇಳಿ.</h2><div class="url">jarvisss007.github.io/know-your-mla</div><div class="en">Is there a doctor at your local hospital? Ask your MLA.</div>', 'Every figure in this video comes from a public record. If one is wrong, tell us and we will correct it.'),
+]
+OUT = 'vacancies-kn.mp4'
