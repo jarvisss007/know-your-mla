@@ -1,4 +1,7 @@
-# Know Your MLA
+# Gandaberunda: Know Your MLA
+
+Gandaberunda is an independent, citizen-run publication that holds Karnataka's elected representatives to the public record. It is not affiliated with the Government of Karnataka or any political party, and does not use the official state emblem. Know Your MLA is its first project.
+
 
 A searchable page showing what each of Karnataka's 224 MLAs declared in their 2023 election affidavit: wealth, debts, criminal cases, and change in declared wealth since 2018. Available in English and Kannada.
 
@@ -21,6 +24,7 @@ A searchable page showing what each of Karnataka's 224 MLAs declared in their 20
 - `index.html` - the page (self-contained; data is embedded)
 - `data/mlas.csv` - the same data as a spreadsheet
 - `cards/` - shareable image cards
+- `brand/` - the Gandaberunda mark, profile picture and banner (original artwork)
 
 ## Corrections
 

@@ -3,9 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="What each of Karnataka's 224 MLAs declared in their 2023 election affidavit: wealth, debts and criminal cases. Search by constituency.">
+<meta name="description" content="Gandaberunda, an independent citizen publication: search all 224 Karnataka MLAs by constituency for their declared wealth, debts and criminal cases.">
+<link rel="icon" type="image/svg+xml" href="brand/mark.svg">
+<meta property="og:title" content="Gandaberunda: Know Your MLA">
+<meta property="og:description" content="What each of Karnataka's 224 MLAs swore to the Election Commission in 2023.">
+<meta property="og:image" content="https://jarvisss007.github.io/know-your-mla/brand/gandaberunda-banner.png">
 <style>:root{color-scheme:light}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Know Your MLA</title>
+<title>Gandaberunda</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Noto+Sans+Kannada:wght@400;600&display=swap">
 <style>
@@ -34,6 +38,12 @@ body { background: var(--bg); color: var(--fg); font-family: var(--body); font-s
 .flag i { flex: 1 } .flag i:first-child { background: var(--yellow) } .flag i:last-child { background: var(--red) }
 h1 { font-family: var(--display); font-weight: 700; font-size: clamp(30px, 6vw, 44px); line-height: 1.05; margin: 0; text-wrap: balance }
 .kn { font-family: var(--kn) }
+.mast { display: flex; align-items: center; gap: 14px; margin: 0 0 26px }
+.mark { width: 56px; height: 56px; flex: none }
+.brand { font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: .01em; line-height: 1.1 }
+.tagline { color: var(--muted); font-size: 13px }
+section.block h3 { font-family: var(--display); font-weight: 500; font-size: 18px; margin: 22px 0 6px }
+section.block ul.plain { margin: 0; padding-left: 20px; max-width: 72ch } section.block ul.plain li { margin-bottom: 6px }
 .top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px }
 #lang { font-family: var(--kn); font-size: 15px; padding: 8px 16px }
 .m dt.kn { text-transform: none; letter-spacing: 0; font-size: 13px }
@@ -96,12 +106,28 @@ table.t td:first-child { font-weight: 600; white-space: nowrap }
 <body>
 <div class="flag" aria-hidden="true"><i></i><i></i></div>
 <div class="wrap">
+  <div class="mast"><svg class="mark" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g fill="none" stroke="#f2b705" stroke-width="7" stroke-linecap="round">
+    <path d="M57 58 C50 50 42 42 34 31"/>
+    <path d="M63 58 C70 50 78 42 86 31"/>
+  </g>
+  <path fill="#c21f30" d="M54 64 C42 58 26 58 10 70 C24 70 36 74 51 84 Z"/>
+  <path fill="#c21f30" d="M66 64 C78 58 94 58 110 70 C96 70 84 74 69 84 Z"/>
+  <path fill="#c21f30" d="M60 52 C73 60 77 76 60 102 C43 76 47 60 60 52 Z"/>
+  <path fill="#f2b705" d="M53 99 L60 113 L67 99 L60 104 Z"/>
+  <circle cx="32" cy="27" r="8" fill="#f2b705"/>
+  <circle cx="88" cy="27" r="8" fill="#f2b705"/>
+  <path fill="#f2b705" d="M25 23 L14 27.5 L25 31 Z"/>
+  <path fill="#f2b705" d="M95 23 L106 27.5 L95 31 Z"/>
+  <circle cx="30" cy="25.5" r="1.8" fill="#161a22"/>
+  <circle cx="90" cy="25.5" r="1.8" fill="#161a22"/>
+</svg><div><div class="brand">Gandaberunda</div><div class="tagline">Watching both sides · <span class="kn">ಎರಡೂ ಕಡೆ ನೋಡುತ್ತದೆ</span></div></div></div>
   <div class="top"><h1>Know Your MLA</h1><button class="chip" type="button" id="lang">ಕನ್ನಡ</button></div>
   <p class="sub">ನಿಮ್ಮ ಶಾಸಕರನ್ನು ತಿಳಿಯಿರಿ</p>
   <p class="lead">What each of Karnataka's 224 MLAs swore to the Election Commission in 2023: their wealth, their debts and the criminal cases against them. Search for your constituency.</p>
 
     <p class="updated">Last updated 12 November 2026</p>
-  <nav class="nav" aria-label="Sections"><a href="#find">Find your MLA</a><a href="#latest">Latest</a><a href="#record">On the record</a><a href="#tested">Five MLAs tested</a><a href="#state">State of the state</a><a href="#read">How to read this</a></nav>
+  <nav class="nav" aria-label="Sections"><a href="#find">Find your MLA</a><a href="#latest">Latest</a><a href="#record">On the record</a><a href="#tested">Five MLAs tested</a><a href="#state">State of the state</a><a href="#about">About</a><a href="#read">How to read this</a></nav>
 
   <div id="find"></div>
   <div class="facts" id="facts"></div>
@@ -211,6 +237,30 @@ table.t td:first-child { font-weight: 600; white-space: nowrap }
     <li>Growth since 2018 is shown only for re-elected MLAs who could be matched across both elections.</li>
   </ul>
   </section>
+
+  <section class="block" id="about">
+    <h2>About Gandaberunda</h2>
+    <p>Gandaberunda is an independent, citizen-run publication that holds Karnataka's elected representatives to the public record. It is named after the two-headed bird of Karnataka's history, which looks both ways at once, as this work looks at every party. It is not affiliated with the Government of Karnataka or any political party, and does not use the official state emblem.</p>
+    <h3>Standards</h3>
+    <ul class="plain">
+      <li>Every figure links to its source, preferably a primary record: an affidavit, an audit report, a budget or a court order.</li>
+      <li>Allegations are attributed to whoever made them, and the person's denial is reported where one exists.</li>
+      <li>Nobody is called guilty unless a court has convicted them.</li>
+      <li>Every party gets the same scrutiny. When a case against someone is quashed or ends in acquittal, that is reported too.</li>
+      <li>No coverage of anyone's private life, or of family members who are not accused.</li>
+      <li>Research is assisted by AI tools. Every figure is checked against its source before it is published.</li>
+    </ul>
+    <h3>Independence</h3>
+    <ul class="plain">
+      <li>Gandaberunda takes no money from any party, candidate or government, and carries no advertising.</li>
+    </ul>
+    <h3>Corrections</h3>
+    <p>Errors are corrected openly and listed here with the date. To report one, <a href="https://github.com/jarvisss007/know-your-mla/issues" target="_blank" rel="noopener">open an issue on GitHub</a> with the claim and a source.</p>
+    <ul class="plain">
+      <li>12 Nov 2026: An earlier post implied the Chief Minister's declared wealth grew mainly through new income. Most of it is the declared value of one mall, on land bought in 2004.</li>
+      <li>12 Nov 2026: This page showed the wrong 2018 wealth figure for M. Krishnappa (Congress, Vijayanagar), taken from a BJP MLA of the same name. Fixed the same day.</li>
+    </ul>
+  </section>
 </div>
 
 <script>
@@ -249,6 +299,9 @@ const KN = {
   'Twelve sectors of government were tested against audit reports, budgets, national surveys and court records, and every finding was checked a second time. All twelve came back mixed: Karnataka has not stalled, but its money is under strain and much of what it starts is late.': 'ಸರ್ಕಾರದ ಹನ್ನೆರಡು ವಲಯಗಳನ್ನು ಲೆಕ್ಕಪರಿಶೋಧನಾ ವರದಿಗಳು, ಬಜೆಟ್‌ಗಳು, ರಾಷ್ಟ್ರೀಯ ಸಮೀಕ್ಷೆಗಳು ಮತ್ತು ನ್ಯಾಯಾಲಯ ದಾಖಲೆಗಳ ಆಧಾರದಲ್ಲಿ ಪರೀಕ್ಷಿಸಿ, ಪ್ರತಿ ಅಂಶವನ್ನೂ ಮತ್ತೊಮ್ಮೆ ಪರಿಶೀಲಿಸಲಾಗಿದೆ. ಎಲ್ಲ ಹನ್ನೆರಡರ ಫಲಿತಾಂಶ ಮಿಶ್ರ: ಕರ್ನಾಟಕ ನಿಂತಿಲ್ಲ, ಆದರೆ ಹಣಕಾಸಿನ ಒತ್ತಡ ಹೆಚ್ಚಿದೆ ಮತ್ತು ಆರಂಭಿಸಿದ ಹಲವು ಕೆಲಸಗಳು ವಿಳಂಬವಾಗಿವೆ. ವಿವರಗಳು ಸದ್ಯ ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿವೆ.',
   "Many of these problems began under the previous government and continued under this one. Responsibility for a department's results is not a finding of personal wrongdoing.": 'ಇವುಗಳಲ್ಲಿ ಹಲವು ಸಮಸ್ಯೆಗಳು ಹಿಂದಿನ ಸರ್ಕಾರದ ಅವಧಿಯಲ್ಲಿ ಆರಂಭವಾಗಿ ಈ ಸರ್ಕಾರದಲ್ಲೂ ಮುಂದುವರಿದಿವೆ. ಒಂದು ಇಲಾಖೆಯ ಫಲಿತಾಂಶದ ಹೊಣೆ ಎಂದರೆ ವೈಯಕ್ತಿಕ ತಪ್ಪು ಸಾಬೀತು ಎಂದಲ್ಲ.',
   'Measure': 'ಅಳತೆ', 'Figure': 'ಅಂಕಿ', 'Compared with': 'ಹೋಲಿಕೆ', 'Source': 'ಮೂಲ',
+  'About Gandaberunda': 'ಗಂಡಭೇರುಂಡ ಬಗ್ಗೆ',
+  "Gandaberunda is an independent, citizen-run publication that holds Karnataka's elected representatives to the public record. It is named after the two-headed bird of Karnataka's history, which looks both ways at once, as this work looks at every party. It is not affiliated with the Government of Karnataka or any political party, and does not use the official state emblem.": 'ಗಂಡಭೇರುಂಡ ಕರ್ನಾಟಕದ ಜನಪ್ರತಿನಿಧಿಗಳನ್ನು ಸಾರ್ವಜನಿಕ ದಾಖಲೆಗಳ ಆಧಾರದಲ್ಲಿ ಹೊಣೆಗಾರರನ್ನಾಗಿಸುವ ಸ್ವತಂತ್ರ, ನಾಗರಿಕರು ನಡೆಸುವ ಪ್ರಕಟಣೆ. ಏಕಕಾಲದಲ್ಲಿ ಎರಡೂ ಕಡೆ ನೋಡುವ ಕರ್ನಾಟಕದ ಇತಿಹಾಸದ ಎರಡು ತಲೆಯ ಪಕ್ಷಿಯ ಹೆಸರನ್ನು ಇದಕ್ಕೆ ಇಡಲಾಗಿದೆ; ಈ ಕೆಲಸವೂ ಎಲ್ಲ ಪಕ್ಷಗಳನ್ನು ಹಾಗೆಯೇ ನೋಡುತ್ತದೆ. ಇದು ಕರ್ನಾಟಕ ಸರ್ಕಾರ ಅಥವಾ ಯಾವುದೇ ರಾಜಕೀಯ ಪಕ್ಷದೊಂದಿಗೆ ಸಂಬಂಧ ಹೊಂದಿಲ್ಲ ಮತ್ತು ಅಧಿಕೃತ ರಾಜ್ಯ ಲಾಂಛನವನ್ನು ಬಳಸುವುದಿಲ್ಲ.',
+  'About': 'ನಮ್ಮ ಬಗ್ಗೆ',
   'MLA': 'ಶಾಸಕ', 'Party': 'ಪಕ್ಷ', 'What the record shows': 'ದಾಖಲೆ ಏನು ಹೇಳುತ್ತದೆ', 'Status': 'ಸ್ಥಿತಿ', 'Congress': 'ಕಾಂಗ್ರೆಸ್', 'BJP': 'ಬಿಜೆಪಿ',
   'Convicted in October 2024 in the Belekeri illegal iron ore export case; 7 years': 'ಅಕ್ಟೋಬರ್ 2024ರಲ್ಲಿ ಬೇಲೆಕೇರಿ ಅಕ್ರಮ ಕಬ್ಬಿಣದ ಅದಿರು ರಫ್ತು ಪ್ರಕರಣದಲ್ಲಿ ಶಿಕ್ಷೆ; 7 ವರ್ಷ',
   'Convicted in May 2025 in the Obulapuram illegal mining case; 7 years': 'ಮೇ 2025ರಲ್ಲಿ ಓಬಳಾಪುರಂ ಅಕ್ರಮ ಗಣಿಗಾರಿಕೆ ಪ್ರಕರಣದಲ್ಲಿ ಶಿಕ್ಷೆ; 7 ವರ್ಷ',

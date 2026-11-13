@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Gandaberunda mark">
+  <g fill="none" stroke="#f2b705" stroke-width="7" stroke-linecap="round">
+    <path d="M57 58 C50 50 42 42 34 31"/>
+    <path d="M63 58 C70 50 78 42 86 31"/>
+  </g>
+  <path fill="#c21f30" d="M54 64 C42 58 26 58 10 70 C24 70 36 74 51 84 Z"/>
+  <path fill="#c21f30" d="M66 64 C78 58 94 58 110 70 C96 70 84 74 69 84 Z"/>
+  <path fill="#c21f30" d="M60 52 C73 60 77 76 60 102 C43 76 47 60 60 52 Z"/>
+  <path fill="#f2b705" d="M53 99 L60 113 L67 99 L60 104 Z"/>
+  <circle cx="32" cy="27" r="8" fill="#f2b705"/>
+  <circle cx="88" cy="27" r="8" fill="#f2b705"/>
+  <path fill="#f2b705" d="M25 23 L14 27.5 L25 31 Z"/>
+  <path fill="#f2b705" d="M95 23 L106 27.5 L95 31 Z"/>
+  <circle cx="30" cy="25.5" r="1.8" fill="#161a22"/>
+  <circle cx="90" cy="25.5" r="1.8" fill="#161a22"/>
+</svg>
