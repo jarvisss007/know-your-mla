@@ -154,3 +154,15 @@ def stage2(parts, label=True):
             '<rect x="0" y="470" width="900" height="30" rx="8" fill="#232935"/>' + g +
             ('<text x="890" y="26" text-anchor="end" font-family="Segoe UI" font-size="22" fill="#6f7888">Fictional characters · ಕಾಲ್ಪನಿಕ ಪಾತ್ರಗಳು</text>' if label else '') +
             '</svg>')
+
+def raju(expr='neutral'):
+    """Raju, a small civil contractor (Mallanna's friend). Same build as Mallanna, hard hat, orange vest."""
+    base = mallanna(expr)
+    base = base.replace('#8fb8de', '#6d7a8a').replace('#7aa4ca', '#5d6a7a').replace('#2f8f5b', '#f08a24').replace('#e8e2c8', '#ffe28a')
+    hat = ('<path d="M120 140 q100 -110 200 0 z" fill="#f2b705"/><rect x="104" y="132" width="232" height="18" rx="9" fill="#d99e00"/>')
+    return base.replace('</g>', hat + '</g>', 1) if base.endswith('</g>') else base + hat
+
+def bi(kn, en, lang, cls='b m', style=''):
+    """Speech bubble with the primary language big and the other small."""
+    big, small = (kn, en) if lang == 'kn' else (en, kn)
+    return '<div class="%s"%s>%s<small>%s</small></div>' % (cls, (' style="%s"' % style) if style else '', big, small)
