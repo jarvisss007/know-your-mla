@@ -101,6 +101,35 @@ table.t td:first-child { font-weight: 600; white-space: nowrap }
 .card .src { font-size: 12px; color: var(--muted); margin: 8px 0 0 } .card .src a { color: inherit }
 .card ul { margin: 0; padding-left: 18px } .card li { margin-bottom: 6px; font-size: 14px }
 @media (max-width: 560px) { .news li { grid-template-columns: 1fr } }
+
+/* Tidy pass: one-line sticky section bar, clearer search, phone-friendly tables */
+html { scroll-behavior: smooth }
+section.block, #find { scroll-margin-top: 60px }
+.nav { position: sticky; top: 0; z-index: 5; flex-wrap: nowrap; overflow-x: auto; gap: 8px; margin: 0 -16px 22px; padding: 10px 16px; background: var(--bg); border-bottom: 1px solid var(--line); scrollbar-width: none; -webkit-overflow-scrolling: touch }
+.nav::-webkit-scrollbar { display: none }
+.nav a { flex: none; white-space: nowrap; font-size: 13px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--fg) }
+.nav a:hover { border-color: var(--accent); color: var(--accent) }
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px 20px }
+.controls input[type=search] { font-size: 16px; padding: 14px 16px; border-width: 2px; border-color: var(--fg) }
+.controls input[type=search]:focus { outline: 3px solid var(--yellow); outline-offset: 1px }
+.controls select { padding: 13px 12px }
+.more { display: block; width: 100%; padding: 13px 16px; font-weight: 600 }
+.facts { border-top: 0; padding-top: 0 }
+table.t a { color: var(--accent) }
+section.block .card h3 { margin: 0 }
+@media (max-width: 640px) {
+  .facts { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+  .controls select { flex: 1 1 100% }
+  .tw { overflow: visible; border: 0; background: none }
+  table.t, table.t tbody { display: block; min-width: 0 }
+  table.t thead { display: none }
+  table.t tr { display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-bottom: 8px }
+  table.t td, table.t tr:last-child td { display: block; padding: 0; border: 0; margin-bottom: 6px; white-space: normal }
+  table.t td:first-child { font-family: var(--display); font-weight: 500; font-size: 17px; white-space: normal; margin-bottom: 2px }
+  table.t td:last-child { margin-bottom: 0; font-size: 13px }
+  table.t:not(.lab) td:nth-child(2) { color: var(--muted); font-size: 13px }
+  table.t.lab td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; color: var(--muted); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; margin-top: 6px }
+}
 </style>
 
 </head>
@@ -243,7 +272,7 @@ table.t td:first-child { font-weight: 600; white-space: nowrap }
   <section class="block" id="state">
     <h2>State of the state</h2>
     <p>Twelve sectors of government were tested against audit reports, budgets, national surveys and court records, and every finding was checked a second time. All twelve came back mixed: Karnataka has not stalled, but its money is under strain and much of what it starts is late.</p>
-    <div class="tw"><table class="t">
+    <div class="tw"><table class="t lab">
       <thead><tr><th>Measure</th><th>Figure</th><th>Compared with</th><th>Source</th></tr></thead>
       <tbody>
         <tr><td>Revenue balance</td><td>Deficit of Rs 25,449 crore (2025-26)</td><td>Surplus of Rs 13,496 crore in 2022-23</td><td><a href="https://prsindia.org/files/budget/budget_state/karnataka/2026/Budget_Analysis_2026-27-KA.pdf" target="_blank" rel="noopener">PRS</a></td></tr>
@@ -341,7 +370,7 @@ try { const s = localStorage.getItem('kym-sort'); if (s) $('sort').value = s; co
 
 const UI = {
   en: { crore: v => 'Rs ' + v + ' crore', from: v => 'from Rs ' + v + ' crore', assets: 'Assets', debts: 'Debts', cases: 'Cases', since: 'Since 2018',
-    na: 'Not in archive', none: 'None declared', notshown: 'Not shown', nomatch: 'No match', read: 'Read the sworn affidavit', find: 'Find in the ADR winners list',
+    na: 'Not in archive', none: 'None declared', notshown: 'Not shown', nomatch: 'No 2018 figure', read: 'Read the sworn affidavit', find: 'Find in the ADR winners list',
     first: n => `Showing the first ${FIRST} of ${n} MLAs. Search above, or show them all.`, all: n => `Showing all ${n} MLAs`, some: (a, n) => `Showing ${a} of ${n} MLAs`,
     more: 'Show all 224 MLAs', empty: 'No MLA matches that search. Try the constituency name as it appears on your voter slip.',
     ph: 'Search a constituency or a name', toggle: 'ಕನ್ನಡ',
@@ -403,6 +432,10 @@ function applyFixed() {
     if (el.dataset.enHtml === undefined) { el.dataset.enHtml = el.innerHTML; el.dataset.enText = el.textContent.replace(/\s+/g, ' ').trim() }
     const kn = KN[el.dataset.enText];
     if (lang === 'kn' && kn) { el.textContent = kn; el.classList.add('kn') } else { el.innerHTML = el.dataset.enHtml; el.classList.remove('kn') }
+  });
+  document.querySelectorAll('table.t.lab').forEach(tb => {
+    const heads = [...tb.querySelectorAll('thead th')].map(th => th.textContent.trim());
+    tb.querySelectorAll('tbody tr').forEach(tr => [...tr.children].forEach((td, i) => { td.dataset.label = heads[i] || '' }));
   });
 }
 
