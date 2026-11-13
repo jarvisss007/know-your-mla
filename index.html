@@ -98,6 +98,7 @@ table.t td:first-child { font-weight: 600; white-space: nowrap }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 12px }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; min-width: 0 }
 .card h3 { font-family: var(--display); font-weight: 500; font-size: 17px; margin: 0 } .card .meta { color: var(--muted); font-size: 13px; margin: 2px 0 10px }
+.card .src { font-size: 12px; color: var(--muted); margin: 8px 0 0 } .card .src a { color: inherit }
 .card ul { margin: 0; padding-left: 18px } .card li { margin-bottom: 6px; font-size: 14px }
 @media (max-width: 560px) { .news li { grid-template-columns: 1fr } }
 </style>
@@ -158,6 +159,7 @@ table.t td:first-child { font-weight: 600; white-space: nowrap }
       <li><time datetime="2026-09-10">10 Sep 2026</time><span>The Enforcement Directorate searched premises linked to Public Works minister Satish Jarkiholi and alleged bribes from contractors. He said the seized cash is his and that he will cooperate. <a href="https://theprint.in/india/ed-flags-overseas-shareholding-of-ktaka-minister-satish-jarkiholis-family-bribes-in-pwd/3040665/" target="_blank" rel="noopener">ThePrint</a></span></li>
       <li><time datetime="2026-07-15">Jul 2026</time><span>Lokayukta police sought the Governor's sanction to prosecute Congress MLA B.Z. Zameer Ahmed Khan over about Rs 25 crore they allege is beyond his known income. He denies wrongdoing. <a href="https://www.deccanherald.com/india/karnataka/karnataka-lokayukta-seeks-governors-nod-to-prosecute-zameer-ahmed-khan-in-disproportionate-assets-case-4070646" target="_blank" rel="noopener">Deccan Herald</a></span></li>
       <li><time datetime="2026-06-03">3 Jun 2026</time><span>D.K. Shivakumar was sworn in as Chief Minister. The assets case against him is with the state Lokayukta, which works within the government he now heads. <a href="https://www.business-standard.com/politics/the-laborious-road-ahead-for-d-k-shivakumar-on-jobs-growth-and-welfare-126060100009_1.html" target="_blank" rel="noopener">Business Standard</a></span></li>
+      <li><time datetime="2026-04-26">26 Apr 2026</time><span>A special court for elected representatives acquitted BJP MLA Munirathna in three cases over alleged fake bills for civil works in 2008-09. <a href="https://udayavani.com/karnataka/politics-bengaluru-fake-bill-scam-mla-munirathna-acquitted-169769?lang=en" target="_blank" rel="noopener">Udayavani</a></span></li>
       <li><time datetime="2026-02-21">21 Feb 2026</time><span>Lokayukta police detained BJP MLA Chandru Lamani, alleging he accepted Rs 5 lakh from a contractor. The case is pending. <a href="https://www.deccanherald.com/india/karnataka/karnataka-mla-chandru-lamani-arrested-for-accepting-rs-5-lakh-bribe-from-contractor-3906900" target="_blank" rel="noopener">Deccan Herald</a></span></li>
     </ul>
   </section>
@@ -166,18 +168,17 @@ table.t td:first-child { font-weight: 600; white-space: nowrap }
     <h2>On the record</h2>
     <p>Sitting MLAs with a conviction, a chargesheet or an agency action in a corruption-related matter. An allegation is not a finding of guilt, and each person named denies wrongdoing unless a conviction is shown.</p>
     <div class="tw"><table class="t">
-      <thead><tr><th>MLA</th><th>Party</th><th>What the record shows</th><th>Status</th></tr></thead>
+      <thead><tr><th>MLA</th><th>Party</th><th>What the record shows</th><th>Status</th><th>Source</th></tr></thead>
       <tbody>
-        <tr><td>Satish Sail</td><td>Congress</td><td>Convicted in October 2024 in the Belekeri illegal iron ore export case; 7 years</td><td><span class="tag conv">Convicted, on appeal</span></td></tr>
-        <tr><td>G. Janardhan Reddy</td><td>BJP</td><td>Convicted in May 2025 in the Obulapuram illegal mining case; 7 years</td><td><span class="tag conv">Convicted, on appeal</span></td></tr>
-        <tr><td>D.K. Shivakumar</td><td>Congress</td><td>CBI alleges Rs 74.93 crore in assets beyond known income, 2013 to 2018; moved to the state Lokayukta in December 2023</td><td><span class="tag pend">No chargesheet found</span></td></tr>
-        <tr><td>B. Nagendra</td><td>Congress</td><td>Enforcement Directorate chargesheet names him in the Valmiki Corporation fund diversion</td><td><span class="tag pend">Trial pending</span></td></tr>
-        <tr><td>K.C. Veerendra</td><td>Congress</td><td>Arrested by the Enforcement Directorate in August 2025 in a betting case; cash and gold seized</td><td><span class="tag pend">Pending</span></td></tr>
-        <tr><td>B.Z. Zameer Ahmed Khan</td><td>Congress</td><td>Lokayukta alleges about Rs 25 crore beyond known income</td><td><span class="tag pend">Sanction sought</span></td></tr>
-        <tr><td>Satish Jarkiholi</td><td>Congress</td><td>Enforcement Directorate search in September 2026 under foreign-exchange law</td><td><span class="tag pend">Under investigation</span></td></tr>
-        <tr><td>Chandru Lamani</td><td>BJP</td><td>Lokayukta trap in February 2026, alleged Rs 5 lakh bribe</td><td><span class="tag pend">Pending</span></td></tr>
-        <tr><td>Munirathna</td><td>BJP</td><td>Charges framed in April 2022 in the municipal bills case; chargesheeted in further cases in 2024</td><td><span class="tag pend">Trials pending</span></td></tr>
-        <tr><td>K. Gopalaiah</td><td>BJP</td><td>A special court ordered further investigation into a molasses export permission granted during his time as Excise minister</td><td><span class="tag pend">Under investigation</span></td></tr>
+        <tr><td>Satish Sail</td><td>Congress</td><td>Convicted in October 2024 in the Belekeri illegal iron ore export case; 7 years. The High Court suspended the sentence in November 2024 while his appeal is heard</td><td><span class="tag conv">Convicted; sentence suspended</span></td><td><a href="https://www.theweek.in/wire-updates/national/2024/10/26/lgm2-ka-court-mla-jail.html" target="_blank" rel="noopener">The Week (PTI)</a> · <a href="https://www.millenniumpost.in/nation/karnataka-hc-suspends-congress-mlas-prison-term-in-belekeri-iron-ore-case-586817" target="_blank" rel="noopener">Millennium Post (PTI)</a></td></tr>
+        <tr><td>G. Janardhan Reddy</td><td>BJP</td><td>Convicted in May 2025 in the Obulapuram illegal mining case; 7 years. The Telangana High Court suspended the conviction and sentence in June 2025, and his seat was restored</td><td><span class="tag conv">Conviction suspended; on appeal</span></td><td><a href="https://www.thenewsminute.com/karnataka/what-janardhan-reddys-7-year-sentence-means-to-his-karnataka-mla-seat" target="_blank" rel="noopener">The News Minute</a> · <a href="https://www.barandbench.com/news/telangana-high-court-stays-conviction-of-karnataka-mla-g-janardhana-reddy-in-illegal-mining-case" target="_blank" rel="noopener">Bar and Bench</a> · <a href="https://www.thenewsminute.com/karnataka/janardhana-reddy-back-as-mla-after-telangana-hc-order" target="_blank" rel="noopener">The News Minute</a></td></tr>
+        <tr><td>D.K. Shivakumar</td><td>Congress</td><td>CBI alleges Rs 74.93 crore in assets beyond known income, 2013 to 2018; moved to the state Lokayukta in December 2023</td><td><span class="tag pend">No chargesheet found</span></td><td><a href="https://www.tribuneindia.com/news/india/relief-to-shivakumar-hc-rejects-cbi-plea-to-continue-da-case-probe/amp" target="_blank" rel="noopener">Tribune</a> · <a href="https://www.thenewsminute.com/karnataka/karnataka-deputy-cm-dk-shivakumar-booked-in-disproportionate-assets-case" target="_blank" rel="noopener">The News Minute</a></td></tr>
+        <tr><td>B. Nagendra</td><td>Congress</td><td>Enforcement Directorate chargesheet names him in the Valmiki Corporation fund diversion</td><td><span class="tag pend">Chargesheeted; on bail</span></td><td><a href="https://www.deccanchronicle.com/news/karnataka-ed-names-nagendra-in-valmiki-corp-fraud-1822577" target="_blank" rel="noopener">Deccan Chronicle</a> · <a href="https://theprint.in/india/valmiki-corporation-scam-ed-questions-ex-ktaka-minister-b-nagendra-again/3036152/" target="_blank" rel="noopener">ThePrint (PTI)</a></td></tr>
+        <tr><td>K.C. Veerendra</td><td>Congress</td><td>Arrested by the Enforcement Directorate in August 2025 in a betting case; cash and gold seized</td><td><span class="tag pend">Pending; on bail</span></td><td><a href="https://www.tribuneindia.com/news/india/ed-arrests-karnataka-cong-mla-in-betting-case-12-cr-cash-seized" target="_blank" rel="noopener">Tribune</a> · <a href="https://theprint.in/judiciary/how-bengaluru-court-poked-gaping-holes-in-ed-case-against-congress-mla-alleged-online-betting-kingpin/2821633" target="_blank" rel="noopener">ThePrint</a></td></tr>
+        <tr><td>B.Z. Zameer Ahmed Khan</td><td>Congress</td><td>Lokayukta alleges about Rs 25 crore beyond known income</td><td><span class="tag pend">Sanction sought</span></td><td><a href="https://www.deccanherald.com/india/karnataka/karnataka-lokayukta-seeks-governors-nod-to-prosecute-zameer-ahmed-khan-in-disproportionate-assets-case-4070646" target="_blank" rel="noopener">Deccan Herald</a> · <a href="https://www.tribuneindia.com/news/india/lokayukta-police-seek-karnataka-governors-nod-to-prosecute-former-minister-zameer-ahmed-khan/" target="_blank" rel="noopener">Tribune (PTI)</a></td></tr>
+        <tr><td>Satish Jarkiholi</td><td>Congress</td><td>Enforcement Directorate search in September 2026 under foreign-exchange law</td><td><span class="tag pend">Under investigation</span></td><td><a href="https://theprint.in/india/ed-flags-overseas-shareholding-of-ktaka-minister-satish-jarkiholis-family-bribes-in-pwd/3040665/" target="_blank" rel="noopener">ThePrint (PTI)</a></td></tr>
+        <tr><td>Chandru Lamani</td><td>BJP</td><td>Lokayukta trap in February 2026, alleged Rs 5 lakh bribe</td><td><span class="tag pend">Pending</span></td><td><a href="https://www.deccanherald.com/india/karnataka/karnataka-mla-chandru-lamani-arrested-for-accepting-rs-5-lakh-bribe-from-contractor-3906900" target="_blank" rel="noopener">Deccan Herald</a> · <a href="https://www.tribuneindia.com/news/india/bjp-mla-caught-by-lokayukta-while-accepting-rs-5-lakh-bribe/" target="_blank" rel="noopener">Tribune</a></td></tr>
+        <tr><td>K. Gopalaiah</td><td>BJP</td><td>A special court rejected the Lokayukta's closure report and ordered further investigation into a molasses export permission granted during his time as Excise minister</td><td><span class="tag pend">Under investigation</span></td><td><a href="https://www.deccanherald.com/india/karnataka/bengaluru-court-orders-probe-into-molasses-export-case-against-ex-minister-gopalaiah-3537097" target="_blank" rel="noopener">Deccan Herald</a></td></tr>
       </tbody>
     </table></div>
   </section>
@@ -187,20 +188,20 @@ table.t td:first-child { font-weight: 600; white-space: nowrap }
     <p>Five affidavits were read line by line across elections, and every figure was re-derived by an independent check. None of this shows wrongdoing. These are the facts that held up.</p>
     <div class="cards">
       <div class="card"><h3>K. Gopalaiah</h3><p class="meta">BJP · Mahalakshmi Layout</p><ul>
-        <li>About Rs 30 crore of property bought from November 2018 to November 2022, on about Rs 7.4 crore of declared income. New loans cover the difference.</li>
-        <li>His declared income rose from Rs 16.84 lakh to Rs 3.47 crore in one year. No reason is given.</li></ul></div>
+        <li>About Rs 30 crore of property bought from November 2018 to November 2022, against about Rs 7.4 crore of income he, his wife and a dependant declared for 2017-18 to 2021-22. New loans cover the difference.</li>
+        <li>His declared income rose from Rs 16.84 lakh in 2020-21 to Rs 3.47 crore in 2021-22. No reason is given.</li></ul><p class="src">Affidavits: <a href="https://www.myneta.info/karnataka2018/candidate.php?candidate_id=6410" target="_blank" rel="noopener">2018</a> · <a href="https://www.myneta.info/karnataka2018/candidate.php?candidate_id=8767" target="_blank" rel="noopener">2019 by-election</a> · <a href="https://www.myneta.info/Karnataka2023/candidate.php?candidate_id=7531" target="_blank" rel="noopener">2023</a></p></div>
       <div class="card"><h3>Satish Jarkiholi</h3><p class="meta">Congress · Yemkanmardi</p><ul>
         <li>About nine-tenths of his rise from Rs 42.5 crore to Rs 175.3 crore is higher values on land held before 2018.</li>
-        <li>One plot is listed as 10 acres, inherited, in three affidavits and as 57 acres, bought for Rs 28,000, in 2023.</li></ul></div>
+        <li>One plot at Shingalapur (survey no. 71) is listed as 10 acres, inherited, in 2013 and 2018, and as 57 acres, bought in 1984 for Rs 28,000, in 2023.</li></ul><p class="src">Affidavits: <a href="https://www.myneta.info/karnatka2008/candidate.php?candidate_id=354" target="_blank" rel="noopener">2008</a> · <a href="https://www.myneta.info/karnataka2013/candidate.php?candidate_id=708" target="_blank" rel="noopener">2013</a> · <a href="https://www.myneta.info/karnataka2018/candidate.php?candidate_id=6911" target="_blank" rel="noopener">2018</a> · <a href="https://www.myneta.info/Karnataka2023/candidate.php?candidate_id=8416" target="_blank" rel="noopener">2023</a></p></div>
       <div class="card"><h3>Munirathna</h3><p class="meta">BJP · Rajarajeshwarinagar</p><ul>
         <li>19 properties costing about Rs 25 crore bought between June 2018 and September 2020.</li>
-        <li>A corruption case declared in 2018 does not appear in his 2020 or 2023 affidavits. Its outcome could not be found.</li></ul></div>
+        <li>A Prevention of Corruption Act case declared in 2018 (Cr. No. 25/2015) does not appear in his 2020 or 2023 affidavits. Its outcome could not be found.</li></ul><p class="src">Affidavits: <a href="https://www.myneta.info/karnataka2018/candidate.php?candidate_id=6406" target="_blank" rel="noopener">2018</a> · <a href="https://www.myneta.info/karnataka2018/candidate.php?candidate_id=8815" target="_blank" rel="noopener">2020 by-election</a> · <a href="https://www.myneta.info/Karnataka2023/candidate.php?candidate_id=7760" target="_blank" rel="noopener">2023</a></p></div>
       <div class="card"><h3>N.A. Haris</h3><p class="meta">Congress · Shantinagar</p><ul>
         <li>Nearly all of his rise from Rs 190 crore to Rs 439 crore is revaluation of property bought before 2018.</li>
-        <li>He chairs Bengaluru's development authority while his family holds city land bought between 1990 and 2006. No decision about that land was found.</li></ul></div>
+        <li>He was made chairman of Bengaluru's development authority in January 2024 (<a href="https://www.thenewsminute.com/karnataka/na-haris-in-new-bda-chief-says-he-is-committed-to-a-vision-for-bengaluru" target="_blank" rel="noopener">The News Minute</a>); his family holds city land bought between 1990 and 2006. No decision about that land was found.</li></ul><p class="src">Affidavits: <a href="https://www.myneta.info/karnataka2018/candidate.php?candidate_id=6746" target="_blank" rel="noopener">2018</a> · <a href="https://www.myneta.info/Karnataka2023/candidate.php?candidate_id=7674" target="_blank" rel="noopener">2023</a></p></div>
       <div class="card"><h3>Priyakrishna</h3><p class="meta">Congress · Govindarajanagar</p><ul>
-        <li>He has bought no property since 2013.</li>
-        <li>Rs 780.88 crore of his liabilities sits in one line of creditors that the archive does not name.</li></ul></div>
+        <li>His latest dated property purchase is from October 2013.</li>
+        <li>Rs 780.88 crore of his liabilities sits in one line of "sundry creditors" that the affidavit does not name.</li></ul><p class="src">Affidavits: <a href="https://www.myneta.info/karnatka2008/candidate.php?candidate_id=1954" target="_blank" rel="noopener">2009 by-election</a> · <a href="https://www.myneta.info/karnataka2013/candidate.php?candidate_id=202" target="_blank" rel="noopener">2013</a> · <a href="https://www.myneta.info/karnataka2018/candidate.php?candidate_id=6038" target="_blank" rel="noopener">2018</a> · <a href="https://www.myneta.info/Karnataka2023/candidate.php?candidate_id=7960" target="_blank" rel="noopener">2023</a></p></div>
     </div>
   </section>
 
@@ -290,6 +291,9 @@ table.t td:first-child { font-weight: 600; white-space: nowrap }
     <ul class="plain">
       <li>12 Nov 2026: An earlier post implied the Chief Minister's declared wealth grew mainly through new income. Most of it is the declared value of one mall, on land bought in 2004.</li>
       <li>12 Nov 2026: This page showed the wrong 2018 wealth figure for M. Krishnappa (Congress, Vijayanagar), taken from a BJP MLA of the same name. Fixed the same day.</li>
+      <li>12 Nov 2026: "On the record" listed Munirathna (BJP) with a pending trial in the municipal fake-bills case. A special court acquitted him in three such cases in April 2026. He has been removed from the table, and the acquittal is under "Latest".</li>
+      <li>12 Nov 2026: "On the record" did not say that the High Courts suspended Satish Sail's sentence (November 2024) and G. Janardhan Reddy's conviction (June 2025), or that B. Nagendra and K.C. Veerendra are on bail. This has been added, and every row now links its source.</li>
+      <li>12 Nov 2026: "Five MLAs tested" said one of Satish Jarkiholi's plots was listed as inherited in three affidavits. It is two: 2013 and 2018. It also said Priyakrishna had bought no property since 2013. His latest dated purchase is from October 2013, after that year's election. Each card now links the affidavits it relies on.</li>
     </ul>
   </section>
 </div>
@@ -335,23 +339,25 @@ const KN = {
   'About': 'ನಮ್ಮ ಬಗ್ಗೆ',
   'For journalists': 'ಪತ್ರಕರ್ತರಿಗೆ',
   'MLA': 'ಶಾಸಕ', 'Party': 'ಪಕ್ಷ', 'What the record shows': 'ದಾಖಲೆ ಏನು ಹೇಳುತ್ತದೆ', 'Status': 'ಸ್ಥಿತಿ', 'Congress': 'ಕಾಂಗ್ರೆಸ್', 'BJP': 'ಬಿಜೆಪಿ',
-  'Convicted in October 2024 in the Belekeri illegal iron ore export case; 7 years': 'ಅಕ್ಟೋಬರ್ 2024ರಲ್ಲಿ ಬೇಲೆಕೇರಿ ಅಕ್ರಮ ಕಬ್ಬಿಣದ ಅದಿರು ರಫ್ತು ಪ್ರಕರಣದಲ್ಲಿ ಶಿಕ್ಷೆ; 7 ವರ್ಷ',
-  'Convicted in May 2025 in the Obulapuram illegal mining case; 7 years': 'ಮೇ 2025ರಲ್ಲಿ ಓಬಳಾಪುರಂ ಅಕ್ರಮ ಗಣಿಗಾರಿಕೆ ಪ್ರಕರಣದಲ್ಲಿ ಶಿಕ್ಷೆ; 7 ವರ್ಷ',
   'CBI alleges Rs 74.93 crore in assets beyond known income, 2013 to 2018; moved to the state Lokayukta in December 2023': '2013ರಿಂದ 2018ರ ಅವಧಿಯಲ್ಲಿ ತಿಳಿದ ಆದಾಯಕ್ಕಿಂತ ₹74.93 ಕೋಟಿ ಹೆಚ್ಚು ಆಸ್ತಿ ಎಂದು ಸಿಬಿಐ ಆರೋಪ; ಡಿಸೆಂಬರ್ 2023ರಲ್ಲಿ ಪ್ರಕರಣ ರಾಜ್ಯ ಲೋಕಾಯುಕ್ತಕ್ಕೆ ವರ್ಗ',
   'Enforcement Directorate chargesheet names him in the Valmiki Corporation fund diversion': 'ವಾಲ್ಮೀಕಿ ನಿಗಮದ ಹಣ ದುರ್ಬಳಕೆ ಪ್ರಕರಣದಲ್ಲಿ ಇಡಿ ಆರೋಪಪಟ್ಟಿಯಲ್ಲಿ ಹೆಸರು',
   'Arrested by the Enforcement Directorate in August 2025 in a betting case; cash and gold seized': 'ಬೆಟ್ಟಿಂಗ್ ಪ್ರಕರಣದಲ್ಲಿ ಆಗಸ್ಟ್ 2025ರಲ್ಲಿ ಇಡಿಯಿಂದ ಬಂಧನ; ನಗದು ಮತ್ತು ಚಿನ್ನ ವಶ',
   'Lokayukta alleges about Rs 25 crore beyond known income': 'ತಿಳಿದ ಆದಾಯಕ್ಕಿಂತ ಸುಮಾರು ₹25 ಕೋಟಿ ಹೆಚ್ಚು ಆಸ್ತಿ ಎಂದು ಲೋಕಾಯುಕ್ತ ಆರೋಪ',
   'Enforcement Directorate search in September 2026 under foreign-exchange law': 'ಸೆಪ್ಟೆಂಬರ್ 2026ರಲ್ಲಿ ವಿದೇಶಿ ವಿನಿಮಯ ಕಾನೂನಿನಡಿ ಇಡಿ ಶೋಧ',
-  'Lokayukta trap in February 2026, alleged Rs 5 lakh bribe': 'ಫೆಬ್ರವರಿ 2026ರಲ್ಲಿ ಲೋಕಾಯುಕ್ತ ಬಲೆ; ₹5 ಲಕ್ಷ ಲಂಚದ ಆರೋಪ',
-  'Charges framed in April 2022 in the municipal bills case; chargesheeted in further cases in 2024': 'ಬಿಬಿಎಂಪಿ ಬಿಲ್ ಪ್ರಕರಣದಲ್ಲಿ ಏಪ್ರಿಲ್ 2022ರಲ್ಲಿ ಆರೋಪ ನಿಗದಿ; 2024ರಲ್ಲಿ ಇತರ ಪ್ರಕರಣಗಳಲ್ಲಿ ಆರೋಪಪಟ್ಟಿ',
-  'A special court ordered further investigation into a molasses export permission granted during his time as Excise minister': 'ಅವರು ಅಬಕಾರಿ ಸಚಿವರಾಗಿದ್ದಾಗ ನೀಡಿದ ಕಾಕಂಬಿ ರಫ್ತು ಅನುಮತಿ ಕುರಿತು ಹೆಚ್ಚಿನ ತನಿಖೆಗೆ ವಿಶೇಷ ನ್ಯಾಯಾಲಯ ಆದೇಶ',
-  'Convicted, on appeal': 'ಶಿಕ್ಷೆ; ಮೇಲ್ಮನವಿ ಬಾಕಿ', 'No chargesheet found': 'ಆರೋಪಪಟ್ಟಿ ಕಂಡುಬಂದಿಲ್ಲ', 'Trial pending': 'ವಿಚಾರಣೆ ಬಾಕಿ', 'Trials pending': 'ವಿಚಾರಣೆ ಬಾಕಿ', 'Pending': 'ಬಾಕಿ',
+  'Lokayukta trap in February 2026, alleged Rs 5 lakh bribe': 'ಫೆಬ್ರವರಿ 2026ರಲ್ಲಿ ಲೋಕಾಯುಕ್ತ ಬಲೆ; ₹5 ಲಕ್ಷ ಲಂಚದ ಆರೋಪ', 'No chargesheet found': 'ಆರೋಪಪಟ್ಟಿ ಕಂಡುಬಂದಿಲ್ಲ', 'Pending': 'ಬಾಕಿ',
   'Sanction sought': 'ಅಭಿಯೋಜನೆಗೆ ಅನುಮತಿ ಕೋರಲಾಗಿದೆ', 'Under investigation': 'ತನಿಖೆ ನಡೆಯುತ್ತಿದೆ',
   'Every figure is self-declared by the MLA in a sworn affidavit and archived by the Association for Democratic Reforms at myneta.info. Nobody audits these figures.': 'ಇಲ್ಲಿರುವ ಪ್ರತಿ ಅಂಕಿಯನ್ನೂ ಶಾಸಕರೇ ಪ್ರಮಾಣಪತ್ರದಲ್ಲಿ ಘೋಷಿಸಿದ್ದಾರೆ. ಅಸೋಸಿಯೇಷನ್ ಫಾರ್ ಡೆಮಾಕ್ರಟಿಕ್ ರಿಫಾರ್ಮ್ಸ್ (ಎಡಿಆರ್) ಇವನ್ನು myneta.info ನಲ್ಲಿ ಸಂಗ್ರಹಿಸಿದೆ. ಈ ಅಂಕಿಗಳನ್ನು ಯಾರೂ ಲೆಕ್ಕಪರಿಶೋಧನೆ ಮಾಡುವುದಿಲ್ಲ.',
   'A declared case is not a conviction. Counts include protest and election-code cases alongside corruption cases. Open the affidavit to see the charges.': 'ಘೋಷಿತ ಪ್ರಕರಣ ಎಂದರೆ ಶಿಕ್ಷೆ ಎಂದಲ್ಲ. ಪ್ರತಿಭಟನೆ ಮತ್ತು ಚುನಾವಣಾ ನೀತಿ ಸಂಹಿತೆ ಪ್ರಕರಣಗಳೂ ಈ ಎಣಿಕೆಯಲ್ಲಿ ಸೇರಿವೆ. ಆರೋಪಗಳನ್ನು ನೋಡಲು ಪ್ರಮಾಣಪತ್ರ ತೆರೆಯಿರಿ.',
   'Declared wealth is not evidence of wrongdoing. Growth often reflects land being revalued, not new income.': 'ಘೋಷಿತ ಆಸ್ತಿ ತಪ್ಪಿನ ಪುರಾವೆಯಲ್ಲ. ಏರಿಕೆ ಹೆಚ್ಚಾಗಿ ಭೂಮಿಯ ಮರುಮೌಲ್ಯಮಾಪನದಿಂದ ಬರುತ್ತದೆ, ಹೊಸ ಆದಾಯದಿಂದಲ್ಲ.',
   'Figures are from the 2023 election. Some seats have changed hands since. Asset figures were not available for 14 MLAs.': 'ಅಂಕಿಗಳು 2023ರ ಚುನಾವಣೆಯವು. ನಂತರ ಕೆಲವು ಕ್ಷೇತ್ರಗಳಲ್ಲಿ ಶಾಸಕರು ಬದಲಾಗಿದ್ದಾರೆ. 14 ಶಾಸಕರ ಆಸ್ತಿ ವಿವರ ಲಭ್ಯವಿಲ್ಲ.',
   'Growth since 2018 is shown only for re-elected MLAs who could be matched across both elections.': '2018ರಿಂದ ಏರಿಕೆಯನ್ನು ಎರಡೂ ಚುನಾವಣೆಗಳಲ್ಲಿ ಹೊಂದಿಸಬಹುದಾದ ಮರು ಆಯ್ಕೆಯಾದ ಶಾಸಕರಿಗೆ ಮಾತ್ರ ತೋರಿಸಲಾಗಿದೆ.',
+  'Convicted in October 2024 in the Belekeri illegal iron ore export case; 7 years. The High Court suspended the sentence in November 2024 while his appeal is heard': 'ಅಕ್ಟೋಬರ್ 2024ರಲ್ಲಿ ಬೇಲೆಕೇರಿ ಅಕ್ರಮ ಕಬ್ಬಿಣದ ಅದಿರು ರಫ್ತು ಪ್ರಕರಣದಲ್ಲಿ ಶಿಕ್ಷೆ; 7 ವರ್ಷ. ಮೇಲ್ಮನವಿ ವಿಚಾರಣೆ ನಡೆಯುವವರೆಗೆ ಹೈಕೋರ್ಟ್ ನವೆಂಬರ್ 2024ರಲ್ಲಿ ಶಿಕ್ಷೆಯನ್ನು ಅಮಾನತುಗೊಳಿಸಿದೆ',
+  'Convicted in May 2025 in the Obulapuram illegal mining case; 7 years. The Telangana High Court suspended the conviction and sentence in June 2025, and his seat was restored': 'ಮೇ 2025ರಲ್ಲಿ ಓಬಳಾಪುರಂ ಅಕ್ರಮ ಗಣಿಗಾರಿಕೆ ಪ್ರಕರಣದಲ್ಲಿ ಶಿಕ್ಷೆ; 7 ವರ್ಷ. ತೆಲಂಗಾಣ ಹೈಕೋರ್ಟ್ ಜೂನ್ 2025ರಲ್ಲಿ ದೋಷನಿರ್ಣಯ ಮತ್ತು ಶಿಕ್ಷೆಯನ್ನು ಅಮಾನತುಗೊಳಿಸಿದ್ದು, ಅವರ ಶಾಸಕ ಸ್ಥಾನ ಮರಳಿ ದೊರೆತಿದೆ',
+  "A special court rejected the Lokayukta's closure report and ordered further investigation into a molasses export permission granted during his time as Excise minister": 'ಅವರು ಅಬಕಾರಿ ಸಚಿವರಾಗಿದ್ದಾಗ ನೀಡಿದ ಕಾಕಂಬಿ ರಫ್ತು ಅನುಮತಿ ಕುರಿತು ಲೋಕಾಯುಕ್ತದ ಮುಕ್ತಾಯ ವರದಿಯನ್ನು ವಿಶೇಷ ನ್ಯಾಯಾಲಯ ತಿರಸ್ಕರಿಸಿ, ಹೆಚ್ಚಿನ ತನಿಖೆಗೆ ಆದೇಶಿಸಿದೆ',
+  'Convicted; sentence suspended': 'ಶಿಕ್ಷೆ; ಶಿಕ್ಷೆ ಅಮಾನತು',
+  'Conviction suspended; on appeal': 'ದೋಷನಿರ್ಣಯ ಅಮಾನತು; ಮೇಲ್ಮನವಿಯಲ್ಲಿ',
+  'Chargesheeted; on bail': 'ಆರೋಪಪಟ್ಟಿ ಸಲ್ಲಿಕೆ; ಜಾಮೀನಿನಲ್ಲಿ',
+  'Pending; on bail': 'ಬಾಕಿ; ಜಾಮೀನಿನಲ್ಲಿ'
 };
 const FIXED = '.lead, .updated, .nav a, section.block h2, section.block > p, table.t th, table.t td, .tag, .notes li';
 function applyFixed() {
