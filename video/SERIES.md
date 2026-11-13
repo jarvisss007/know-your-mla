@@ -38,6 +38,19 @@ Running gags: the Neta's garland gets bigger every episode (his declared wealth)
 | 9 | ಮಗನ ಊರು (The son in the city) | Mallanna's nephew in Bengaluru: no corporator to complain to | No council since 2020; metro and suburban rail delays |
 | 10 | ಪ್ರಶ್ನೆ ಕೇಳಿ (Ask) | Town meeting; the Neta comes; nobody takes the bag | How to check an affidavit, file an RTI (Rs 10), complain to the Lokayukta; the 2028 report cards |
 
+## Companion mini-series: ಆಳುವ ಕುಟುಂಬ (The Ruling Family)
+
+Record-only Shorts on the family of the sitting Chief Minister, because they hold the most power in the state. No characters: documents, dates and their own words. Each episode ends with one question and the line "We asked. Their answer:" (or "No answer by <date>").
+
+| # | Title | Built from |
+|---|---|---|
+| A | Their own numbers | D.K. Shivakumar's declared assets at every election since 2004; D.K. Suresh's since 2013 (affidavits, ADR/myneta) |
+| B | The cases, and where they went | Dated timeline: 2017 IT searches, 2019 ED arrest/bail, 2020 CBI DA case, 2023 transfer to Lokayukta, later rulings: what is established, what is pending |
+| C | Whose schools? | The family's private institutions vs government-school facts; the daughter's public remarks on government teachers, quoted exactly |
+| D | The richest Chief Minister? | Declared assets vs every other serving CM (ADR figures) |
+
+Rules: right of reply sent by the channel owner before each episode, with a deadline; no conclusion beyond the record ("black money", "corrupt" etc. are never stated without a finding); after this family, previous CMs' families from other parties get the same series.
+
 ## Format of every episode
 
 1. Cold open (0-4 s): a line from the Neta that everyone has heard.
