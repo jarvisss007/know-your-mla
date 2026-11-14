@@ -131,6 +131,19 @@ section.block .card h3 { margin: 0 }
   table.t:not(.lab) td:nth-child(2) { color: var(--muted); font-size: 13px }
   table.t.lab td[data-label]:not(:first-child)::before { content: attr(data-label); display: block; color: var(--muted); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; margin-top: 6px }
 }
+
+.dpick{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0 6px}
+.dpick label{font-weight:600}
+.dpick select{font:inherit;font-size:17px;padding:10px 12px;border-radius:10px;background:var(--card,#161b22);color:inherit;border:1px solid #3a4250;min-width:240px;max-width:100%}
+.dsum{background:var(--card,#161b22);border:1px solid #2b3240;border-left:4px solid #f2b705;border-radius:12px;padding:14px 16px;margin:8px 0 14px}
+.dsum .big3{display:flex;flex-wrap:wrap;gap:18px;margin:6px 0 10px}
+.dsum .big3 div b{display:block;font-size:24px}
+.dsum .big3 div span{font-size:13px;opacity:.75}
+.dsum ul{list-style:none;padding:0;margin:6px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.dsum li button{font:inherit;font-size:14px;background:transparent;color:inherit;border:1px solid #3a4250;border-radius:999px;padding:4px 10px;cursor:pointer}
+.dsum li button:hover,.dsum li button:focus-visible{border-color:#f2b705}
+.dsum li small{opacity:.7}
+.dnone{opacity:.8;font-style:italic}
 </style>
 
 </head>
@@ -158,7 +171,7 @@ section.block .card h3 { margin: 0 }
   <p class="lead">What each of Karnataka's 224 MLAs swore to the Election Commission when they were elected: their wealth, their debts and the criminal cases against them. Search for your constituency.</p>
 
     <p class="updated">Last updated 13 November 2026</p>
-  <nav class="nav" aria-label="Sections"><a href="#find">Find your MLA</a><a href="#latest">Latest</a><a href="#record">On the record</a><a href="#tested">Five MLAs tested</a><a href="#cabinet">Nine ministers tested</a><a href="#state">State of the state</a><a href="#press">For journalists</a><a href="#about">About</a><a href="#read">How to read this</a></nav>
+  <nav class="nav" aria-label="Sections"><a href="#find">Find your MLA</a><a href="#latest">Latest</a><a href="#record">On the record</a><a href="#tested">Five MLAs tested</a><a href="#cabinet">Nine ministers tested</a><a href="#state">State of the state</a><a href="#districts">District by district</a><a href="#press">For journalists</a><a href="#about">About</a><a href="#read">How to read this</a></nav>
 
   <div id="find"></div>
   <div class="facts" id="facts"></div>
@@ -293,6 +306,57 @@ section.block .card h3 { margin: 0 }
     <p>Many of these problems began under the previous government and continued under this one. Responsibility for a department's results is not a finding of personal wrongdoing.</p>
   </section>
 
+  <section class="block" id="districts">
+    <h2>District by district</h2>
+    <p>Big projects and public funds across the 31 districts, as recorded by the national auditor, Parliament and the state government. Every figure here was checked a second time against the original document; where a later report changed the picture, the newer fact is shown.</p>
+    <div class="dpick"><label for="dsel" id="dlab">Choose your district</label><select id="dsel"></select></div>
+    <div id="dsum" class="dsum" hidden></div>
+    <h3>Where the money went</h3>
+    <div class="tw"><table class="t lab">
+      <thead><tr><th>District</th><th>Project or fund</th><th>What the record shows</th><th>Source</th></tr></thead>
+      <tbody class="dt">
+        <tr data-d="Kolar|Chikkaballapura"><td>Kolar, Chikkaballapura</td><td>Yettinahole drinking water</td><td>Approved in 2012 at Rs 8,323.50 crore; now Rs 23,251.66 crore. Rs 15,297 crore spent by March 2024. No project report set a completion date, and the auditor found it "could not be made operational even after 12 years". The government now promises water by the end of 2027.</td><td><a href="https://cag.gov.in/uploads/download_audit_report/2025/6.-Chapter-II---Planning-and-Financial-Management-069c3d2da1892f3.81971865.pdf" target="_blank" rel="noopener">CAG Report No. 10, 2026</a></td></tr>
+        <tr data-d="Bengaluru Urban"><td>Bengaluru Urban</td><td>Namma Metro Phase 2</td><td>Approved in January 2014 at Rs 26,405 crore, due in 2020. Cost raised to Rs 40,425 crore in May 2025. The last section is now due March to May 2027.</td><td><a href="https://www.theweek.in/wire-updates/national/2025/05/22/mds21-ka-cabinet-decisions.html" target="_blank" rel="noopener">The Week (PTI)</a></td></tr>
+        <tr data-d="Bengaluru Urban|Bengaluru Rural"><td>Bengaluru Urban, Bengaluru Rural</td><td>Suburban rail</td><td>Approved in October 2020 at Rs 15,767 crore. In June 2022 the Prime Minister promised it in 40 months (about October 2025); no corridor was built by then. Cost raised to Rs 16,876 crore in January 2026; the airport line is now due March 2030.</td><td><a href="https://www.deccanherald.com/india/karnataka/bengaluru-suburban-rail-revival-new-k-ride-chief-lays-out-timelines-3873802" target="_blank" rel="noopener">Deccan Herald</a></td></tr>
+        <tr data-d="Bagalkot|Vijayapura"><td>Bagalkot, Vijayapura</td><td>Upper Krishna Project, Stage III</td><td>Approved in January 2012 at Rs 17,207 crore; revised to Rs 51,148.94 crore in October 2017; put at Rs 87,818 crore by the Chief Minister in September 2025, with 59,354 acres of land still to be acquired.</td><td><a href="https://assets.thehansindia.com/karnataka/cabinet-approves-enhanced-compensation-of-rs-40-lakh-per-acre-1007165" target="_blank" rel="noopener">The Hans India</a></td></tr>
+        <tr data-d="Chitradurga|Davanagere|Chikkamagaluru|Tumakuru"><td>Chitradurga, Davanagere, Chikkamagaluru, Tumakuru</td><td>Upper Bhadra irrigation</td><td>Stage I approved in 2003 at Rs 2,813 crore; the whole project re-revised to Rs 21,473.67 crore in 2020, due March 2026. Rs 5,300 crore was put in the 2023-24 Union Budget, but the Centre told the Lok Sabha in August 2024 the project is under no central scheme. In August 2026 the Chief Minister said the money had not come.</td><td><a href="https://sansad.in/getFile/loksabhaquestions/annex/182/AS257_FaOdjD.pdf?source=pqals" target="_blank" rel="noopener">Lok Sabha reply</a></td></tr>
+        <tr data-d="Uttara Kannada|Dharwad"><td>Uttara Kannada, Dharwad</td><td>Hubballi-Ankola rail line</td><td>Sanctioned in the mid-1990s and inaugurated in 1999. By August 2024 only earthwork and bridges on the 47-km Hubballi-Kiravatti section were done; the rest awaits forest and wildlife clearance for 569.64 hectares.</td><td><a href="https://sansad.in/getFile/loksabhaquestions/annex/182/AU2628_ddlChP.pdf?source=pqals" target="_blank" rel="noopener">Lok Sabha reply</a></td></tr>
+        <tr data-d="Bengaluru Urban|Tumakuru|Dharwad|Belagavi|Dakshina Kannada|Shivamogga|Davanagere"><td>Seven cities</td><td>Smart City Mission</td><td>Hubballi-Dharwad awarded 6 of 62 projects on time and Belagavi 3 of 107. Mangaluru dropped works and cannot use Rs 51.85 crore; Rs 9.44 crore of its drainage spending was "unfruitful". Davanagere's command centre opened 3 years 4 months late. Shivamogga had no full-time CEO for five years.</td><td><a href="https://cag.gov.in/uploads/download_audit_report/2025/Chapter-4---Implemention-of-Projects-and-Monitoring-06981df9e14b034.71900044.pdf" target="_blank" rel="noopener">CAG Report No. 11 of 2025</a></td></tr>
+        <tr data-d="Kalaburagi|Bidar|Yadgir|Raichur|Koppal|Ballari|Vijayanagara"><td>Kalaburagi, Bidar, Yadgir, Raichur, Koppal, Ballari, Vijayanagara</td><td>Kalyana Karnataka development board</td><td>Spent 74% of released funds with physical progress of up to 70%. Rs 387.52 crore of assistance was lost because funds went unused (the government disputes this). 3,731 works worth Rs 738.65 crore were cancelled in 2013-21. In Kalaburagi, Rs 5.60 crore on five abandoned park works was "rendered wasteful".</td><td><a href="https://cag.gov.in/uploads/download_audit_report/2022/Executive-summary-063f74dd849f3e5.57928385.pdf" target="_blank" rel="noopener">CAG Report No. 10 of 2022</a></td></tr>
+        <tr data-d="Ballari"><td>Ballari</td><td>Mining-area development fund</td><td>Of Rs 1,912.55 crore collected from 2015-16 to 2022-23, Rs 629.62 crore (39.5%) was used: the lowest of the five districts audited.</td><td><a href="https://cag.gov.in/uploads/download_audit_report/2025/Chapter---III-Collection-of-DMFT-Funds-06943928230ce21.71895304.pdf" target="_blank" rel="noopener">CAG Report No. 7 of 2025</a></td></tr>
+        <tr data-d="Mysuru"><td>Mysuru</td><td>24x7 water supply</td><td>Rs 271.56 crore spent, and the city still did not get round-the-clock water. Coverage was cut from 69 zones to 47, and 25.69% to 37.01% of water was lost or unbilled, against a 15% condition.</td><td><a href="https://cag.gov.in/uploads/download_audit_report/2017/Chapter_2_Performance_Audit_Karnataka_Report_No_2_of_2017_on_General_and_Social_Sector.pdf" target="_blank" rel="noopener">CAG Report No. 2 of 2017</a></td></tr>
+        <tr data-d="Kodagu"><td>Kodagu</td><td>Flood and disaster funds</td><td>Rs 57.04 crore sat unspent with the Deputy Commissioner in March 2023, the largest such balance of nine districts audited. The DC told the auditor that structural flood-protection works were not taken up. After the 2018 floods, 845 houses were promised in six months; in April 2021 the minister said 786 of 836 families had houses.</td><td><a href="https://cag.gov.in/uploads/download_audit_report/2025/Chapter---III-Financial-resources-and-Utilisation-0694513dd546d02.17872728.pdf" target="_blank" rel="noopener">CAG Report No. 8 of 2025</a> · <a href="https://www.deccanherald.com/india/karnataka/162-houses-handed-over-to-kodagu-flood-victims-of-2018-977803.html" target="_blank" rel="noopener">Deccan Herald</a></td></tr>
+        <tr data-d="Shivamogga"><td>Shivamogga</td><td>Airport</td><td>Foundation stone laid in 2008; the private contract was cancelled in 2015 with nothing built. Relaunched in 2020 at Rs 220 crore and opened in February 2023 at around Rs 450 crore.</td><td><a href="https://www.deccanherald.com/india/karnataka/karnataka-cm-b-s-yediyurappa-relaunches-his-pet-shivamogga-airport-project-849767.html" target="_blank" rel="noopener">Deccan Herald</a></td></tr>
+        <tr data-d="Bagalkot|Ballari|Belagavi|Bengaluru Rural|Bengaluru Urban|Bidar|Chamarajanagar|Chikkaballapura|Chikkamagaluru|Chitradurga|Dakshina Kannada|Davanagere|Dharwad|Gadag|Hassan|Haveri|Kalaburagi|Kodagu|Kolar|Koppal|Mandya|Mysuru|Raichur|Ramanagara|Shivamogga|Tumakuru|Udupi|Uttara Kannada|Vijayanagara|Vijayapura|Yadgir"><td>All districts</td><td>MLA and MLC local area funds</td><td>In December 2017 the Planning Minister said Rs 406 crore of these funds from 2002-2013 had lapsed unused, and about Rs 1,000 crore released from 2013 to September 2017 was still unspent.</td><td><a href="https://www.deccanherald.com/content/648202/just-elections-govt-unearths-rs.html" target="_blank" rel="noopener">Deccan Herald</a></td></tr>
+      </tbody>
+    </table></div>
+    <p id="dnone1" class="dnone" hidden></p>
+    <h3>Children and women</h3>
+    <p>Two national health surveys, 2015-16 and 2019-21, measured the same things in every district. In these districts, things got worse; two improved.</p>
+    <div class="tw"><table class="t lab">
+      <thead><tr><th>District</th><th>Measure</th><th>2015-16</th><th>2019-21</th><th>Source</th></tr></thead>
+      <tbody class="dt">
+        <tr data-d="Tumakuru"><td>Tumakuru</td><td>Children under 5 who are stunted</td><td>28.6%</td><td>40.3%</td><td><a href="http://web.archive.org/web/20221210034257id_/http://rchiips.org/nfhs/NFHS-5_FCTS/KA/Tumkur.pdf" target="_blank" rel="noopener">NFHS-5 factsheet</a></td></tr>
+        <tr data-d="Tumakuru"><td>Tumakuru</td><td>Children 6-59 months with anaemia</td><td>53.8%</td><td>67.6%</td><td><a href="http://web.archive.org/web/20221210034257id_/http://rchiips.org/nfhs/NFHS-5_FCTS/KA/Tumkur.pdf" target="_blank" rel="noopener">NFHS-5 factsheet</a></td></tr>
+        <tr data-d="Bengaluru Rural"><td>Bengaluru Rural</td><td>Children under 5 who are stunted</td><td>28.7%</td><td>36.6%</td><td><a href="http://web.archive.org/web/20231017165448id_/http://rchiips.org/nfhs/NFHS-5_FCTS/KA/Bangalore%20Rural.pdf" target="_blank" rel="noopener">NFHS-5 factsheet</a></td></tr>
+        <tr data-d="Dharwad"><td>Dharwad</td><td>Children under 5 who are stunted</td><td>37%</td><td>45%</td><td><a href="https://www.niti.gov.in/sites/default/files/2022-07/Dharwad-Karnataka.pdf" target="_blank" rel="noopener">NITI district profile</a></td></tr>
+        <tr data-d="Gadag"><td>Gadag</td><td>Children under 5 who are stunted</td><td>35%</td><td>45%</td><td><a href="https://www.niti.gov.in/sites/default/files/2022-07/Gadag-Karnataka.pdf" target="_blank" rel="noopener">NITI district profile</a></td></tr>
+        <tr data-d="Chitradurga"><td>Chitradurga</td><td>Children under 5 who are stunted</td><td>29%</td><td>36%</td><td><a href="https://www.niti.gov.in/sites/default/files/2022-07/Chitradurga-Karnataka.pdf" target="_blank" rel="noopener">NITI district profile</a></td></tr>
+        <tr data-d="Uttara Kannada"><td>Uttara Kannada</td><td>Children 6-59 months with anaemia</td><td>48%</td><td>69%</td><td><a href="https://www.niti.gov.in/sites/default/files/2022-07/Uttara%20Kannada-Karnataka.pdf" target="_blank" rel="noopener">NITI district profile</a></td></tr>
+        <tr data-d="Shivamogga"><td>Shivamogga</td><td>Children 6-59 months with anaemia</td><td>54%</td><td>69%</td><td><a href="https://www.niti.gov.in/sites/default/files/2022-07/Shimoga-Karnataka.pdf" target="_blank" rel="noopener">NITI district profile</a></td></tr>
+        <tr data-d="Belagavi"><td>Belagavi</td><td>Non-pregnant women 15-49 with anaemia</td><td>41%</td><td>53%</td><td><a href="https://www.niti.gov.in/sites/default/files/2022-07/Belgaum-Karnataka.pdf" target="_blank" rel="noopener">NITI district profile</a></td></tr>
+        <tr data-d="Yadgir"><td>Yadgir</td><td>Children 6-59 months with anaemia</td><td>74%</td><td>76%</td><td><a href="https://cag.gov.in/uploads/download_audit_report/2022/Executive-summary-063f74dd849f3e5.57928385.pdf" target="_blank" rel="noopener">CAG Report No. 10 of 2022</a></td></tr>
+        <tr data-d="Kalaburagi"><td>Kalaburagi</td><td>Children 6-59 months with anaemia</td><td>72.4%</td><td>75.1%</td><td><a href="https://cag.gov.in/uploads/download_audit_report/2022/Executive-summary-063f74dd849f3e5.57928385.pdf" target="_blank" rel="noopener">CAG Report No. 10 of 2022</a></td></tr>
+        <tr data-d="Raichur"><td>Raichur</td><td>Children 6-59 months with anaemia</td><td>70.6%</td><td>73.6%</td><td><a href="https://cag.gov.in/uploads/download_audit_report/2022/Executive-summary-063f74dd849f3e5.57928385.pdf" target="_blank" rel="noopener">CAG Report No. 10 of 2022</a></td></tr>
+        <tr data-d="Haveri"><td>Haveri</td><td>Children under 5 who are stunted (improved)</td><td>44%</td><td>30%</td><td><a href="https://www.niti.gov.in/sites/default/files/2022-07/Haveri-Karnataka.pdf" target="_blank" rel="noopener">NITI district profile</a></td></tr>
+        <tr data-d="Chikkaballapura"><td>Chikkaballapura</td><td>Children under 5 who are stunted (improved)</td><td>38%</td><td>31%</td><td><a href="https://www.niti.gov.in/sites/default/files/2022-07/Chikkaballapura-Karnataka.pdf" target="_blank" rel="noopener">NITI district profile</a></td></tr>
+      </tbody>
+    </table></div>
+    <p id="dnone2" class="dnone" hidden></p>
+    <p data-d="Kalaburagi" class="dline">Kalaburagi: income per person grew 47.96% from 2013-14 to 2019-20, against 74.84% for the state (<a href="https://cag.gov.in/uploads/download_audit_report/2022/Executive-summary-063f74dd849f3e5.57928385.pdf" target="_blank" rel="noopener">CAG</a>).</p>
+    <p>Most of these projects ran under several governments of different parties. A late or over-cost project is a finding about the government of the day, not proof of personal wrongdoing by any MLA.</p>
+  </section>
+
   <section class="block" id="press">
     <h2>For journalists</h2>
     <p>Everything on this site is free to use, with or without credit. Each story below rests on public records linked on this page, and the full dataset can be downloaded.</p>
@@ -398,6 +462,13 @@ const KN = {
   'Court orders and agency actions involving sitting MLAs and ministers, newest first. Each links to the report it comes from.': 'ಹಾಲಿ ಶಾಸಕರು ಮತ್ತು ಸಚಿವರಿಗೆ ಸಂಬಂಧಿಸಿದ ನ್ಯಾಯಾಲಯದ ಆದೇಶಗಳು ಮತ್ತು ತನಿಖಾ ಸಂಸ್ಥೆಗಳ ಕ್ರಮಗಳು. ವಿವರಗಳು ಸದ್ಯ ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿವೆ.',
   'Sitting MLAs with a conviction, a chargesheet or an agency action in a corruption-related matter. An allegation is not a finding of guilt, and each person named denies wrongdoing unless a conviction is shown.': 'ಭ್ರಷ್ಟಾಚಾರ ಸಂಬಂಧಿತ ಪ್ರಕರಣದಲ್ಲಿ ಶಿಕ್ಷೆ, ಆರೋಪಪಟ್ಟಿ ಅಥವಾ ತನಿಖಾ ಸಂಸ್ಥೆಯ ಕ್ರಮ ಎದುರಿಸಿರುವ ಹಾಲಿ ಶಾಸಕರು. ಆರೋಪ ಎಂದರೆ ಅಪರಾಧ ಸಾಬೀತು ಎಂದಲ್ಲ. ಶಿಕ್ಷೆ ಎಂದು ತೋರಿಸದ ಹೊರತು ಪ್ರತಿಯೊಬ್ಬರೂ ಆರೋಪಗಳನ್ನು ನಿರಾಕರಿಸಿದ್ದಾರೆ.',
   'Five affidavits were read line by line across elections, and every figure was re-derived by an independent check. None of this shows wrongdoing. These are the facts that held up.': 'ಐವರು ಶಾಸಕರ ಪ್ರಮಾಣಪತ್ರಗಳನ್ನು ಸಾಲು ಸಾಲಾಗಿ ಓದಿ, ಪ್ರತಿ ಅಂಕಿಯನ್ನೂ ಸ್ವತಂತ್ರವಾಗಿ ಮರುಪರಿಶೀಲಿಸಲಾಗಿದೆ. ಇದು ಯಾವುದೇ ತಪ್ಪನ್ನು ತೋರಿಸುವುದಿಲ್ಲ. ವಿವರಗಳು ಸದ್ಯ ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿವೆ.',
+  "District by district": "ಜಿಲ್ಲಾವಾರು",
+  "Where the money went": "ಹಣ ಎಲ್ಲಿ ಹೋಯಿತು",
+  "Children and women": "ಮಕ್ಕಳು ಮತ್ತು ಮಹಿಳೆಯರು",
+  "Big projects and public funds across the 31 districts, as recorded by the national auditor, Parliament and the state government. Every figure here was checked a second time against the original document; where a later report changed the picture, the newer fact is shown.": "31 ಜಿಲ್ಲೆಗಳ ದೊಡ್ಡ ಯೋಜನೆಗಳು ಮತ್ತು ಸಾರ್ವಜನಿಕ ನಿಧಿಗಳು, ರಾಷ್ಟ್ರೀಯ ಲೆಕ್ಕಪರಿಶೋಧಕರು, ಸಂಸತ್ತು ಮತ್ತು ರಾಜ್ಯ ಸರ್ಕಾರದ ದಾಖಲೆಗಳಂತೆ. ಪ್ರತಿ ಅಂಕಿಯನ್ನೂ ಮೂಲ ದಾಖಲೆಯೊಂದಿಗೆ ಮತ್ತೊಮ್ಮೆ ಪರಿಶೀಲಿಸಲಾಗಿದೆ. ವಿವರಗಳು ಸದ್ಯ ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿವೆ.",
+  "Most of these projects ran under several governments of different parties. A late or over-cost project is a finding about the government of the day, not proof of personal wrongdoing by any MLA.": "ಈ ಯೋಜನೆಗಳಲ್ಲಿ ಹೆಚ್ಚಿನವು ಬೇರೆ ಬೇರೆ ಪಕ್ಷಗಳ ಹಲವು ಸರ್ಕಾರಗಳ ಅವಧಿಯಲ್ಲಿ ನಡೆದಿವೆ. ತಡವಾದ ಅಥವಾ ವೆಚ್ಚ ಮೀರಿದ ಯೋಜನೆ ಆಗಿನ ಸರ್ಕಾರದ ಬಗ್ಗೆ ಸಂಶೋಧನೆ; ಯಾವುದೇ ಶಾಸಕರ ವೈಯಕ್ತಿಕ ತಪ್ಪಿನ ಪುರಾವೆ ಅಲ್ಲ.",
+  "Two national health surveys, 2015-16 and 2019-21, measured the same things in every district. In these districts, things got worse; two improved.": "2015-16 ಮತ್ತು 2019-21ರ ಎರಡು ರಾಷ್ಟ್ರೀಯ ಆರೋಗ್ಯ ಸಮೀಕ್ಷೆಗಳು ಪ್ರತಿ ಜಿಲ್ಲೆಯಲ್ಲೂ ಒಂದೇ ಅಂಶಗಳನ್ನು ಅಳೆದಿವೆ. ಈ ಜಿಲ್ಲೆಗಳಲ್ಲಿ ಪರಿಸ್ಥಿತಿ ಹದಗೆಟ್ಟಿದೆ; ಎರಡರಲ್ಲಿ ಸುಧಾರಿಸಿದೆ.",
+  "District": "ಜಿಲ್ಲೆ", "Project or fund": "ಯೋಜನೆ ಅಥವಾ ನಿಧಿ", "What the record shows": "ದಾಖಲೆ ಏನು ಹೇಳುತ್ತದೆ",
   'State of the state': 'ರಾಜ್ಯದ ಸ್ಥಿತಿ',
   'Twelve sectors of government were tested against audit reports, budgets, national surveys and court records, and every finding was checked a second time. All twelve came back mixed: Karnataka has not stalled, but its money is under strain and much of what it starts is late.': 'ಸರ್ಕಾರದ ಹನ್ನೆರಡು ವಲಯಗಳನ್ನು ಲೆಕ್ಕಪರಿಶೋಧನಾ ವರದಿಗಳು, ಬಜೆಟ್‌ಗಳು, ರಾಷ್ಟ್ರೀಯ ಸಮೀಕ್ಷೆಗಳು ಮತ್ತು ನ್ಯಾಯಾಲಯ ದಾಖಲೆಗಳ ಆಧಾರದಲ್ಲಿ ಪರೀಕ್ಷಿಸಿ, ಪ್ರತಿ ಅಂಶವನ್ನೂ ಮತ್ತೊಮ್ಮೆ ಪರಿಶೀಲಿಸಲಾಗಿದೆ. ಎಲ್ಲ ಹನ್ನೆರಡರ ಫಲಿತಾಂಶ ಮಿಶ್ರ: ಕರ್ನಾಟಕ ನಿಂತಿಲ್ಲ, ಆದರೆ ಹಣಕಾಸಿನ ಒತ್ತಡ ಹೆಚ್ಚಿದೆ ಮತ್ತು ಆರಂಭಿಸಿದ ಹಲವು ಕೆಲಸಗಳು ವಿಳಂಬವಾಗಿವೆ. ವಿವರಗಳು ಸದ್ಯ ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿವೆ.',
   "Many of these problems began under the previous government and continued under this one. Responsibility for a department's results is not a finding of personal wrongdoing.": 'ಇವುಗಳಲ್ಲಿ ಹಲವು ಸಮಸ್ಯೆಗಳು ಹಿಂದಿನ ಸರ್ಕಾರದ ಅವಧಿಯಲ್ಲಿ ಆರಂಭವಾಗಿ ಈ ಸರ್ಕಾರದಲ್ಲೂ ಮುಂದುವರಿದಿವೆ. ಒಂದು ಇಲಾಖೆಯ ಫಲಿತಾಂಶದ ಹೊಣೆ ಎಂದರೆ ವೈಯಕ್ತಿಕ ತಪ್ಪು ಸಾಬೀತು ಎಂದಲ್ಲ.',
@@ -427,7 +498,7 @@ const KN = {
   'Chargesheeted; on bail': 'ಆರೋಪಪಟ್ಟಿ ಸಲ್ಲಿಕೆ; ಜಾಮೀನಿನಲ್ಲಿ',
   'Pending; on bail': 'ಬಾಕಿ; ಜಾಮೀನಿನಲ್ಲಿ'
 };
-const FIXED = '.lead, .updated, .nav a, section.block h2, section.block > p, table.t th, table.t td, .tag, .notes li';
+const FIXED = '.lead, .updated, .nav a, section.block h2, #districts > h3, section.block > p, table.t th, table.t td, .tag, .notes li';
 function applyFixed() {
   document.querySelectorAll(FIXED).forEach(el => {
     if (el.querySelector && el.querySelector('.tag')) return;           // the cell wraps a tag; the tag itself is handled
@@ -491,6 +562,44 @@ $('more').addEventListener('click', () => { showAll = true; render() });
 $('sort').addEventListener('change', () => { try { localStorage.setItem('kym-sort', $('sort').value) } catch (e) {} render() });
 $('lang').addEventListener('click', () => { lang = lang === 'en' ? 'kn' : 'en'; try { localStorage.setItem('kym-lang', lang) } catch (e) {} chrome(); render() });
 chrome(); render();
+
+const DIST = {"Kanakapura": "Ramanagara", "Gauribidanur": "Chikkaballapura", "Govindarajanagar": "Bengaluru Urban", "Hebbal": "Bengaluru Urban", "Shantinagar": "Bengaluru Urban", "Belur": "Hassan", "Haliyal": "Uttara Kannada", "Hanur": "Chamarajanagar", "Bagepalli": "Chikkaballapura", "Davanagere South": "Davanagere", "Vijayanagar": "Bengaluru Urban", "Rajarajeshwarinagar": "Bengaluru Urban", "Gangavathi": "Koppal", "Chickpet": "Bengaluru Urban", "Channapatna": "Ramanagara", "Davanagere North": "Davanagere", "Pulakeshinagar (SC)": "Bengaluru Urban", "Yemkanamardi (ST)": "Belagavi", "Babaleshwar": "Vijayapura", "Kalaghatgi": "Dharwad", "Hiriyur": "Chitradurga", "Chitradurga": "Chitradurga", "Shikaripura": "Shivamogga", "Sirsi": "Uttara Kannada", "K.R. Pura": "Bengaluru Urban", "Bommanahalli": "Bengaluru Urban", "Hukkeri": "Belagavi", "B.T.M Layout": "Bengaluru Urban", "Mahalakshmi Layout": "Bengaluru Urban", "Hosakote": "Bengaluru Rural", "Hubli-Dharwad-West": "Dharwad", "Maddur": "Mandya", "Ramanagaram": "Ramanagara", "Bellary City": "Ballari", "Bangalore South": "Bengaluru Urban", "Padmanabanagar": "Bengaluru Urban", "Bidar": "Bidar", "Holenarasipur": "Hassan", "Chamrajapet": "Bengaluru Urban", "Nagamangala": "Mandya", "Krishnarajpet": "Mandya", "Puttur": "Dakshina Kannada", "Sorab": "Shivamogga", "Jevargi": "Kalaburagi", "Chintamani": "Chikkaballapura", "Ranebennur": "Haveri", "Bhatkal": "Uttara Kannada", "Yelahanka": "Bengaluru Urban", "Mulbagal (SC)": "Kolar", "Devanahalli (SC)": "Bengaluru Rural", "Jamkhandi": "Bagalkot", "Karwar": "Uttara Kannada", "Mahadevapura (SC)": "Bengaluru Urban", "Nippani": "Belagavi", "Shiggaon": "Haveri", "Varuna": "Mysuru", "Gokak": "Belagavi", "Vijayanagara": "Vijayanagara", "Gandhinagar": "Bengaluru Urban", "Bangarapet (SC)": "Kolar", "Yelburga": "Koppal", "Hadagali (SC)": "Vijayanagara", "C.V. Ramannnagar (SC)": "Bengaluru Urban", "Mangalore City South": "Dakshina Kannada", "Melukote": "Mandya", "Sira": "Tumakuru", "Kunigal": "Tumakuru", "Hunsur": "Mysuru", "Arakalgud": "Hassan", "Athani": "Belagavi", "Arabhavi": "Belagavi", "Basavana Bagevadi": "Vijayapura", "Magadi": "Ramanagara", "Anekal (SC)": "Bengaluru Urban", "Madhugiri": "Tumakuru", "Tumkur City": "Tumakuru", "Jayanagar": "Bengaluru Urban", "Kapu": "Udupi", "Belgaum Uttar": "Belagavi", "Sringeri": "Chikkamagaluru", "Bantwal": "Dakshina Kannada", "Kolar": "Kolar", "Lingsugur (SC)": "Raichur", "Virajpet": "Kodagu", "Sedam": "Kalaburagi", "Dasarahalli": "Bengaluru Urban", "Yeshwanthapura": "Bengaluru Urban", "Gundlupet": "Chamarajanagar", "Gulbarga Rural (SC)": "Kalaburagi", "Bijapur City": "Vijayapura", "Holalkere (SC)": "Chitradurga", "Malur": "Kolar", "Shorapur (ST)": "Yadgir", "Malavalli (SC)": "Mandya", "Chamundeshwari": "Mysuru", "Pavagada (SC)": "Tumakuru", "Challakere (ST)": "Chitradurga", "Muddebihal": "Vijayapura", "Mandya": "Mandya", "Shivajinagar": "Bengaluru Urban", "Gadag": "Gadag", "Yellapur": "Uttara Kannada", "Koratagere (SC)": "Tumakuru", "Honnali": "Davanagere", "Kundapur": "Udupi", "Raichur": "Raichur", "Dharwad": "Dharwad", "Gulbarga Uttar": "Kalaburagi", "Piriyapatna": "Mysuru", "Chikkodi-Sadalga": "Belagavi", "Kagwad": "Belagavi", "Bellary (ST)": "Ballari", "Malleshwaram": "Bengaluru Urban", "Gubbi": "Tumakuru", "Kanakagiri (SC)": "Koppal", "Nargund": "Gadag", "Chittapur (SC)": "Kalaburagi", "Byatarayanapura": "Bengaluru Urban", "Shrirangapattana": "Mandya", "Kudligi (ST)": "Vijayanagara", "Srinivasapur": "Kolar", "Tarikere": "Chikkamagaluru", "Bailahongal": "Belagavi", "Shahapur": "Yadgir", "Heggadadevankote (ST)": "Mysuru", "Raybag (SC)": "Belagavi", "Koppal": "Koppal", "Chamarajanagar": "Chamarajanagar", "Tumkur Rural": "Tumakuru", "Terdal": "Bagalkot", "Belgaum Rural": "Belagavi", "Kolar Gold Field (SC)": "Kolar", "Indi": "Vijayapura", "Mangalore City North": "Dakshina Kannada", "Bagalkot": "Bagalkot", "Yadgir": "Yadgir", "Aurad (SC)": "Bidar", "Mudigere (SC)": "Chikkamagaluru", "Raichur Rural (ST)": "Raichur", "Tiptur": "Tumakuru", "Basavanagudi": "Bengaluru Urban", "Haveri (SC)": "Haveri", "Hangal": "Haveri", "Hagaribommanahalli (SC)": "Vijayanagara", "Hungund": "Bagalkot", "Belgaum Dakshin": "Belagavi", "Baindur": "Udupi", "Shravanabelagola": "Hassan", "Arsikere": "Hassan", "Sindhanur": "Raichur", "Siraguppa (ST)": "Ballari", "Narasimharaja": "Mysuru", "Humnabad": "Bidar", "Kampli (ST)": "Ballari", "Bhalki": "Bidar", "Karkala": "Udupi", "Hassan": "Hassan", "Kudachi (SC)": "Belagavi", "Sindgi": "Vijayapura", "Harapanahalli": "Vijayanagara", "Krishnarajanagara": "Mysuru", "Madikeri": "Kodagu", "Mangalore": "Dakshina Kannada", "Bhadravathi": "Shivamogga", "Udupi": "Udupi", "Gulbarga Dakshin": "Kalaburagi", "Ron": "Gadag", "Chickamagalur": "Chikkamagaluru", "Molakalmuru (ST)": "Chitradurga", "Sakaleshpur (SC)": "Hassan", "Nelamangala (SC)": "Bengaluru Rural", "Tirthahalli": "Shivamogga", "Shirahatti (SC)": "Gadag", "Navalgund": "Dharwad", "Channagiri": "Davanagere", "Nagthan (SC)": "Vijayapura", "Hubli-Dharwad-East (SC)": "Dharwad", "Hirekerur": "Haveri", "Harihar": "Davanagere", "Badami": "Bagalkot", "Kittur": "Belagavi", "Moodabidri": "Dakshina Kannada", "Sagar": "Shivamogga", "Rajajinagar": "Bengaluru Urban", "Afzalpur": "Kalaburagi", "Basavakalyan": "Bidar", "Kadur": "Chikkamagaluru", "Kollegal (SC)": "Chamarajanagar", "Bidar South": "Bidar", "Byadgi": "Haveri", "Kumta": "Uttara Kannada", "Nanjangud (SC)": "Mysuru", "Saundatti Yellamma": "Belagavi", "Devara Hippargi": "Vijayapura", "Aland": "Kalaburagi", "Bilgi": "Bagalkot", "Chamaraja": "Mysuru", "T. Narasipur (SC)": "Mysuru", "Kushtagi": "Koppal", "Khanapur": "Belagavi", "Belthangady": "Dakshina Kannada", "Shimoga Rural (SC)": "Shivamogga", "Maski (ST)": "Raichur", "Hosadurga": "Chitradurga", "Sandur (ST)": "Ballari", "Chincholi (SC)": "Kalaburagi", "Manvi (ST)": "Raichur", "Gurmitkal": "Yadgir", "Sidlaghatta": "Chikkaballapura", "Turuvekere": "Tumakuru", "Jagalur (ST)": "Davanagere", "Chikknayakanhalli": "Tumakuru", "Ramdurg": "Belagavi", "Kundgol": "Dharwad", "Hubli-Dharwad-Central": "Dharwad", "Shimoga": "Shivamogga", "Mayakonda (SC)": "Davanagere", "Devadurga (ST)": "Raichur", "Doddaballapur": "Bengaluru Rural", "Chikkaballapur": "Chikkaballapura", "Mudhol (SC)": "Bagalkot", "Krishnaraja": "Mysuru", "Sullia (SC)": "Dakshina Kannada", "Sarvagnanagar": "Bengaluru Urban"};
+const DUI = {
+  en: { lab: 'Choose your district', all: 'All 31 districts', mlas: 'MLAs', assets: 'combined declared assets', cases: 'with declared cases', tap: 'Tap a name to open their record.', none1: 'No project in this district has been through the second check yet. Research continues.', none2: 'No district health figure has been checked for this district yet.', cr: v => 'Rs ' + v + ' cr' },
+  kn: { lab: 'ನಿಮ್ಮ ಜಿಲ್ಲೆ ಆಯ್ಕೆಮಾಡಿ', all: 'ಎಲ್ಲ 31 ಜಿಲ್ಲೆಗಳು', mlas: 'ಶಾಸಕರು', assets: 'ಒಟ್ಟು ಘೋಷಿತ ಆಸ್ತಿ', cases: 'ಪ್ರಕರಣ ಘೋಷಿಸಿದವರು', tap: 'ದಾಖಲೆ ನೋಡಲು ಹೆಸರಿನ ಮೇಲೆ ಒತ್ತಿ.', none1: 'ಈ ಜಿಲ್ಲೆಯ ಯಾವ ಯೋಜನೆಯೂ ಇನ್ನೂ ಎರಡನೇ ಪರಿಶೀಲನೆ ಮುಗಿಸಿಲ್ಲ. ಸಂಶೋಧನೆ ಮುಂದುವರಿದಿದೆ.', none2: 'ಈ ಜಿಲ್ಲೆಯ ಆರೋಗ್ಯ ಅಂಕಿಗಳನ್ನು ಇನ್ನೂ ಪರಿಶೀಲಿಸಿಲ್ಲ.', cr: v => '₹' + v + ' ಕೋಟಿ' }
+};
+let dsel = '';
+try { dsel = localStorage.getItem('kym-dist') || '' } catch (e) {}
+function districts() {
+  const t = DUI[lang], sel = $('dsel'), names = [...new Set(Object.values(DIST))].sort();
+  if (dsel && !names.includes(dsel)) dsel = '';
+  $('dlab').textContent = t.lab; $('dlab').classList.toggle('kn', lang === 'kn');
+  sel.innerHTML = `<option value="">${t.all}</option>` + names.map(n => `<option${n === dsel ? ' selected' : ''}>${n}</option>`).join('');
+  const tabs = document.querySelectorAll('#districts tbody.dt');
+  tabs.forEach((tb, i) => {
+    let shown = 0;
+    tb.querySelectorAll('tr').forEach(tr => { const on = !dsel || tr.dataset.d.split('|').includes(dsel); tr.hidden = !on; if (on) shown++ });
+    const msg = $('dnone' + (i + 1)); msg.hidden = shown > 0; msg.textContent = i ? t.none2 : t.none1;
+    tb.closest('.tw').hidden = shown === 0;
+  });
+  document.querySelectorAll('#districts .dline').forEach(p => { p.hidden = !!dsel && p.dataset.d !== dsel });
+  const box = $('dsum');
+  if (!dsel) { box.hidden = true; return }
+  const ms = D.filter(d => DIST[d.c] === dsel).sort((x, y) => (y.a ?? -1) - (x.a ?? -1));
+  const tot = ms.reduce((z, d) => z + (d.a || 0), 0), withK = ms.filter(d => d.k > 0).length;
+  const byP = {}; ms.forEach(d => { byP[d.p] = (byP[d.p] || 0) + 1 });
+  const pp = Object.entries(byP).sort((x, y) => y[1] - x[1]).map(([p, n]) => `<span class="party ${pclass(p)}">${esc(u().party[p] || p)} ${n}</span>`).join(' ');
+  box.hidden = false;
+  box.innerHTML = `<h3 style="margin:0">${esc(dsel)}</h3><div class="big3"><div><b>${ms.length}</b><span>${t.mlas}</span></div><div><b>${t.cr(Math.round(tot).toLocaleString('en-IN'))}</b><span>${t.assets}</span></div><div><b>${withK}</b><span>${t.cases}</span></div></div><p style="margin:0 0 6px">${pp}</p><p style="margin:0;font-size:14px;opacity:.8">${t.tap}</p><ul>`
+    + ms.map(d => `<li><button type="button" data-n="${esc(d.n)}">${esc(d.n)} <small>· ${esc(d.c)}${d.a != null ? ' · ' + t.cr(num(d.a).lakh ? (d.a).toFixed(2) : num(d.a)) : ''}</small></button></li>`).join('') + '</ul>';
+}
+$('dsel').addEventListener('change', e => { dsel = e.target.value; try { localStorage.setItem('kym-dist', dsel) } catch (x) {} districts() });
+$('dsum').addEventListener('click', e => { const b = e.target.closest('button[data-n]'); if (!b) return;
+  $('q').value = b.dataset.n; party = 'All'; showAll = false;
+  document.querySelectorAll('.chip[data-p]').forEach(c => c.setAttribute('aria-pressed', c.dataset.p === 'All'));
+  render(); document.getElementById('find').scrollIntoView({ behavior: 'smooth' }) });
+$('lang').addEventListener('click', districts);
+districts();
 </script>
 
 </body>
