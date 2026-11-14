@@ -3,6 +3,10 @@
 # Karnataka (audit period 2019-20 to 2023-24), Executive Summary pp. v-vii.
 BPM = 96
 
+# Mallanna's Kannada lines and the chorus in the channel owner's own voice (recorded 2026-11-14).
+REC = {'kn': {'0.0': 'voice/ep11/m1.wav', '2.0': 'voice/ep11/m2.wav', '4.0': 'voice/ep11/m3.wav',
+              '6.0': 'voice/ep11/m4.wav', 'chorus': 'voice/ep11/chorus.wav'}}
+
 CAG = 'Source: CAG performance audit, Jal Jeevan Mission, Government of Karnataka (2019-20 to 2023-24)'
 COV = 'Sources: PTI, 1 May 2026 (Karnataka about 87%); Union Minister of State, 19 Nov 2025 (states at 100%)'
 FUNDS = ('Sources: CAG JJM audit; Union Jal Shakti Minister, Lok Sabha, 11 Dec 2025; Karnataka CM\'s memorandum, Nov 2025. '

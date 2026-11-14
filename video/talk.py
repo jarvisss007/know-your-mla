@@ -99,8 +99,14 @@ def page(sc, lang, line, mouth_open, blink):
 def shoot(html, png, prof):
     hp = png[:-4] + '.html'
     io.open(hp, 'w', encoding='utf-8').write(html)
-    run([CHROME, '--headless=new', '--disable-gpu', '--hide-scrollbars', '--force-device-scale-factor=1',
-         '--window-size=%d,%d' % (W, H), '--user-data-dir=' + prof, '--screenshot=' + png, 'file://' + hp])
+    for attempt in range(5):  # headless Chrome sometimes fails when another render is running; retry
+        try:
+            run([CHROME, '--headless=new', '--disable-gpu', '--hide-scrollbars', '--force-device-scale-factor=1',
+                 '--window-size=%d,%d' % (W, H), '--user-data-dir=' + prof, '--screenshot=' + png, 'file://' + hp])
+            break
+        except subprocess.CalledProcessError:
+            if attempt == 4: raise
+            import time; time.sleep(2 + attempt * 2)
     im = Image.open(png).convert('RGB')
     assert im.size == (W, H), im.size
     return im
@@ -120,6 +126,12 @@ def tts(text, lang, who, path):
     # trim silence at the ends
     nz = np.where(np.abs(a) > 0.01)[0]
     return a[max(0, nz[0] - 400): nz[-1] + 800] if len(nz) else a
+
+
+def load_rec(path):
+    """A recorded voice clip (already trimmed and levelled), as mono float samples at SR."""
+    raw = run([FFMPEG, '-v', 'error', '-i', path, '-f', 's16le', '-ac', '1', '-ar', str(SR), '-']).stdout
+    return np.frombuffer(raw, dtype=np.int16).astype(np.float32) / 32768
 
 
 def stretch(a, target_sec, path):
@@ -239,6 +251,8 @@ def build(scene_file, lang, out, bdir):
     voice = []      # (t, samples)
     hits, t = [], 0.0
     chorus_start = None
+    # Recorded human voice lines, if the episode provides them: REC = {'kn': {'scene.line': 'path.wav', 'chorus': 'path.wav'}}
+    rec = {k: (v if os.path.isabs(v) else os.path.join(HERE, v)) for k, v in getattr(ep, 'REC', {}).get(lang, {}).items()}
     for si, sc in enumerate(ep.SCENES):
         t0 = t
         if sc.get('hit'): hits.append(t + 0.05)
@@ -246,6 +260,17 @@ def build(scene_file, lang, out, bdir):
         if sc.get('chorus'):
             chorus_start = t0
             bar = beat * 4
+            rc = rec.get('chorus')
+            if rc:  # a real recorded chorus: keep the human voice in front, add a light crowd behind it
+                a = load_rec(rc)
+                crowd = np.zeros(len(a) + 2000)
+                for k_, (p, d) in enumerate(((1.0, 0), (0.95, 700), (1.05, 1400))):
+                    idx = np.clip((np.arange(len(a)) * p).astype(int), 0, len(a) - 1)
+                    crowd[d:d + len(a)] += a[idx] * (1.0 if k_ == 0 else 0.3)
+                voice.append((t, crowd * 0.9))
+                timeline.append((t, t + len(a) / SR, si, ('c', ' '.join(sc['chant'][lang]), '')))
+                t += len(a) / SR + sc.get('tail', 1.0)
+                continue
             for li, line in enumerate(sc['chant'][lang]):
                 for rep in range(sc.get('reps', 2)):
                     a = tts(line, lang, 'c', os.path.join(bdir, 'ch%d_%d_%s.wav' % (li, rep, lang)))
@@ -262,7 +287,8 @@ def build(scene_file, lang, out, bdir):
             continue
         for li, line in enumerate(sc['lines']):
             who, kn, en = line[0], line[1], line[2]
-            a = tts(kn if lang == 'kn' else en, lang, who, os.path.join(bdir, 's%d_l%d_%s.wav' % (si, li, lang)))
+            rp = rec.get('%d.%d' % (si, li))
+            a = load_rec(rp) if rp else tts(kn if lang == 'kn' else en, lang, who, os.path.join(bdir, 's%d_l%d_%s.wav' % (si, li, lang)))
             voice.append((t, a))
             timeline.append((t, t + len(a) / SR, si, line))
             t += len(a) / SR + 0.25
