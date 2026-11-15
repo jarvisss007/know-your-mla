@@ -1,0 +1,238 @@
+{
+ "results": [
+  {
+   "district": "Ramanagara (Bengaluru South)",
+   "title": "Disaster-management money unspent with the DC",
+   "verdict": "confirmed",
+   "correct_text": "CAG found Rs 19.26 crore unspent in the Ramanagara Deputy Commissioner's disaster-management PD account at the end of March 2023, plus Rs 0.87 crore with taluks. Only 1 of the district's 4 taluks gave audit its figures. CAG said these balances mean the state overstated its disaster-management spending, because money released to districts was booked as spent.",
+   "source_url": "https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2025/Chapter---III-Financial-resources-and-Utilisation-0694513dd546d02.17872728.pdf",
+   "source_label": "CAG Report No. 8 of 2025 (Disaster Management), Table 3.3",
+   "note": "Opened the PDF. Table 3.3 row: 'Ramanagara 19.26 0.87 04 01'. Report tabled 17 Dec 2025 (cag.gov.in/en/audit-report/details/123611). Audit period 2017-23: Congress until May 2018, JD(S)-Congress 2018-19, BJP 2019-May 2023."
+  },
+  {
+   "district": "Ramanagara (Bengaluru South)",
+   "title": "RGUHS campus at Ramanagara",
+   "verdict": "unverifiable",
+   "correct_text": "",
+   "source_url": "https://medicaldialogues.in/amp/news/education/medical-colleges/nmc-rejects-karnatakas-proposal-for-3-new-medical-colleges-over-faculty-infrastructure-gaps-174392",
+   "source_label": "Medical Dialogues, 6 Jul 2026",
+   "note": "All three Deccan Herald sources in the draft (Rs 300 cr paid of Rs 600 cr sought, Rs 400 cr released, '12-year-old project') return 403, including the /amp/ URLs, so those figures cannot be checked. The only source that opened, Medical Dialogues (6 Jul 2026), says the campus near Archakarahalli, estimated at about Rs 600 crore, was 'nearly 70%' complete, and that NMC again refused a Ramanagara medical college. It is a trade outlet and no second source was found. Do not publish the Rs 300/400 cr figures or the 2007 start date."
+  },
+  {
+   "district": "Mandya",
+   "title": "MySugar co-generation plant: Rs 124 crore investment unfruitful",
+   "verdict": "confirmed",
+   "correct_text": "In 1999 the state-owned Mysore Sugar Company proposed a 30 MW bagasse co-generation plant, to be finished by March 2003 at Rs 76.35 crore. Its trial run came only in January 2007, and the plant was not run after that for want of bagasse. CAG found that Rs 74.98 crore spent on the co-generation plant and Rs 49.10 crore on mill modernisation (Rs 124.08 crore in all) had become unfruitful as of November 2015. The state also bore Rs 59.04 crore in interest after releasing Rs 99.74 crore to settle the project's HUDCO loan.",
+   "source_url": "https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2016/Karnataka_PSUs_Report_No_3_2016.pdf",
+   "source_label": "CAG Report No. 3 of 2016 (PSUs, year ended March 2015), para 3.4",
+   "note": "Opened the full report; para 3.4 quoted. The company admitted (Dec 2015) that the plant was not working for lack of bagasse. Governments: proposed 1999; due 2003 under Congress (S M Krishna); trial 2007 under JD(S)-BJP; mill modernisation decided Dec 2008 and awarded Sept 2010 under BJP; audit and reply under Congress (2013-18). The draft's DH figure (accumulated loss Rs 347.34 cr in 2010) could not be opened, because DH returns 403."
+  },
+  {
+   "district": "Mandya",
+   "title": "MySugar accumulated losses (CAG)",
+   "verdict": "corrected",
+   "correct_text": "According to its latest finalised accounts (2012-13, finalised in 2015-16), the Mysore Sugar Company had accumulated losses of Rs 416.67 crore, loans outstanding of Rs 184.63 crore and a net loss of Rs 50.27 crore that year. The Board for Industrial and Financial Reconstruction had declared it a sick company in September 2005.",
+   "source_url": "https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2016/Annexures_Karnataka_PSUs_Report_No_3_2016.pdf",
+   "source_label": "CAG Report No. 3 of 2016, Appendix-2 and para 3.5",
+   "note": "This replaces the draft's DH figure of Rs 347.34 cr (2010), which could not be opened. The Appendix-2 row reads: paid-up 8.73, loans 184.63, accumulated (-)416.67, turnover 109.79, net (-)50.27, capital employed (-)96.06, 828 employees. The BIFR sick declaration is in para 3.5. These figures are a decade old, and no current CAG figure was found. The draft's 2026 crushing status (DH, 8 Jul 2026) was not opened."
+  },
+  {
+   "district": "Hassan",
+   "title": "Yettinahole drinking water project (diverts west-flowing streams near Sakaleshpura)",
+   "verdict": "confirmed",
+   "correct_text": "Approved in July 2012 at Rs 8,323.50 crore, the Yettinahole project's estimate was revised to Rs 12,912.36 crore in February 2014 and Rs 23,251.66 crore in January 2023. CAG found that Rs 15,297.03 crore had been spent by March 2024, that none of the project reports set a completion date, and that the project 'could not be made operational even after 12 years of conception'. VJNL faced a Rs 7,954.63 crore shortfall to finish it, and the eight weirs' recorded flows ranged from 7.20 to 24.70 TMC against the 32.15 TMC assumed in the DPR.",
+   "source_url": "https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2025/6.-Chapter-II---Planning-and-Financial-Management-069c3d2da1892f3.81971865.pdf",
+   "source_label": "CAG Report No. 10 (Yettinahole PA, year ended March 2023), Ch II",
+   "note": "Opened Ch I and Ch II. Report No. 10, tabled 29 Jan 2026 (cag.gov.in/en/audit-report/details/123863). Ch I confirms the water is diverted from streams near Sakaleshpura (Hassan district) and that 'needy areas of Hassan' are among the beneficiaries; the main beneficiaries are Kolar and Chikkaballapura. Arithmetic flag: CAG's own split (grants Rs 12,535.59 cr + borrowings Rs 2,567.66 cr) sums to Rs 15,103.25 cr, not Rs 15,297.03 cr, so quote the total as CAG gives it. Governments: approved under BJP (2012), revised under Congress (2014) and BJP (2023), with execution continuing under Congress. The draft's '1 November 2026 deadline' was not verified, so omit it. Current (Nov 2026) status was not verified."
+  },
+  {
+   "district": "Hassan",
+   "title": "Hassan greenfield airport, Boovanahalli",
+   "verdict": "corrected",
+   "correct_text": "First proposed in 1967, Hassan airport had its foundation stone laid at Boovanahalli in 2007 under the JD(S)-BJP coalition, and The News Minute reported in June 2021 that it had made no progress since. On 21 June 2021 the BJP state cabinet cleared Rs 193.65 crore for it. In December 2025 the state infrastructure minister said it was likely to be completed in 2025-26 and that Rs 164.47 crore had been released, after an earlier 2024-25 target was missed.",
+   "source_url": "https://www.thenewsminute.com/article/karnataka-clears-rs-193-crores-funding-hassan-greenfield-airport-project-151046",
+   "source_label": "The News Minute, 22 Jun 2021; Goodreturns, 15 Dec 2025",
+   "note": "TNM was opened; the same article also quotes Rs 196.35 cr, so use 193.65 (the cabinet figure). The Dec 2025 status is from Goodreturns (https://www.goodreturns.in/news/hassan-airport-update-karnataka-minister-reveals-completion-timeline-for-new-airport-near-bengaluru-1476481.html), a weaker outlet, quoting minister M B Patil. The draft's DH Rajya Sabha item (60% physical / 56.5% financial, Dec 2024) returns 403. The South First (17 Jul 2024) quotes the Hassan DC as saying it would not finish on time. No report of the airport opening was found as of 15 Nov 2026, but absence is not proof, so do not state either way."
+  },
+  {
+   "district": "Chamarajanagar",
+   "title": "Mysuru-Chamarajanagar rail electrification: Rs 81.05 crore unproductive",
+   "verdict": "confirmed",
+   "correct_text": "CAG found that South Western Railway electrified the Mysuru-Chamarajanagar section without an unconditional no-objection certificate from the Airports Authority of India. That left Rs 81.05 crore of expenditure unproductive and added a recurring Rs 80.20 lakh a month to haul coaching stock with diesel locomotives.",
+   "source_url": "https://cag.gov.in/uploads/PressRelease/PR-Press-Brief-English-Approved-06a80895d292804-53454298.pdf",
+   "source_label": "CAG Report No. 14 of 2026 (Union Govt, Railways), Para 3.1",
+   "note": "Opened the CAG press brief (13 Aug 2026). The report was laid in Parliament on 12 Aug 2026 and covers the period up to FY 2023-24 (Union Railway Ministry, NDA government). The section runs across Mysuru and Chamarajanagar districts. The full chapter (dates, AAI reply) was not opened, so publish only what the press brief states."
+  },
+  {
+   "district": "Chamarajanagar",
+   "title": "Hosamalangi drinking water project (Rs 276 / 286 crore)",
+   "verdict": "unverifiable",
+   "correct_text": "",
+   "source_url": "https://newskarnataka.com/chamarajanagara/chamarajanagar-water-shortage-worsens-as-supply-turns-weekly/07102026/",
+   "source_label": "NewsKarnataka, 14 Jul 2024 and 7 Oct 2026",
+   "note": "Neither NewsKarnataka page returned article text when fetched (only site navigation), and no second outlet covering the project was found. The figures exist only in search snippets. Do not publish."
+  },
+  {
+   "district": "Udupi",
+   "title": "Varahi irrigation diversion weir: cost rose from Rs 13.47 cr to Rs 72.33 cr",
+   "verdict": "confirmed",
+   "correct_text": "CAG found that the Varahi irrigation project's diversion weir was awarded in January 2005 at Rs 13.47 crore, to be finished in 24 months. With design changes and added works, its cost rose to Rs 72.33 crore. Rates revised in August 2007 without applying the 40.22% tender discount gave the contractor an undue benefit of Rs 20.53 crore, and Rs 8.75 crore of additional works were handed over without open tenders, in violation of the KTPP Act.",
+   "source_url": "https://cag.gov.in/uploads/download_audit_report/2009/Karnataka_Commercial_2009_chap2.pdf",
+   "source_label": "CAG Audit Report (Commercial), year ended March 2009, para 2.1.26",
+   "note": "Opened the PDF. The Rs 20.53 cr was computed on 3 of 17 items. CAG also noted (para 2.1.25) that KPCL turning the upstream power station into a peaking station (Jan 2009) cut the continuous water flow the project relied on. Command area 15,701 ha. Award came under the Congress-JD(S) coalition (2005) and the rate revision under the JD(S)-BJP coalition (2007). Name no contractor. Report number not shown on the chapter PDF."
+  },
+  {
+   "district": "Udupi",
+   "title": "Varahi irrigation: Rs 689 crore spent, 3,375 ha served (2017)",
+   "verdict": "corrected",
+   "correct_text": "At a March 2017 review, MLC Pratapchandra Shetty said Rs 689 crore had been spent on the Varahi irrigation project. He said its left-bank canal was supplying water to only 3,375 hectares, that another 13,000 hectares were still to be reached, and that the right-bank canal had not been started. Udupi in-charge minister Pramod Madhwaraj said the project had not yet benefited farmers.",
+   "source_url": "https://daijiworld.com/news/newsDisplay?newsID=441413",
+   "source_label": "Daijiworld, 7 Mar 2017",
+   "note": "Correction: the draft attributes the Rs 689 crore to the minister, but his quote omits the unit; the full 'Rs 689 crore' is Shetty's. This is a single regional source, and the attempts to reach second sources (Business Standard/PTI 2015 returned 403, Coastal Digest 404) failed. The 2006 OneIndia figures were not reopened. Current status (2026) not verified. Congress government in 2017."
+  },
+  {
+   "district": "Dakshina Kannada",
+   "title": "Mangaluru Smart City waterfront: Rs 51.85 crore set to lapse",
+   "verdict": "confirmed",
+   "correct_text": "In March 2020 Mangaluru Smart City Limited proposed a Rs 185.48 crore waterfront project, and works were awarded in April-May 2022 without possession of land or coastal-zone clearances. CAG said that after Rs 6.52 crore had been spent the promenade was still incomplete, and that dropped works (water jetty, Nayar Kudru open-air theatre) meant Rs 51.85 crore of allocated funds would lapse. The state replied in April 2025 that Rs 30 crore had been moved to a road bridge and the rest to a DC-office project.",
+   "source_url": "https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2025/Chapter-4---Implemention-of-Projects-and-Monitoring-06981df9e14b034.71900044.pdf",
+   "source_label": "CAG Report No. 11 of 2025 (Smart City Mission), para 4.10.7",
+   "note": "Opened the PDF. The figure is printed as '51.8541 crore'; the works were dropped at the 29 Feb 2024 board meeting. The report was tabled 29 Jan 2026 (cag.gov.in/en/audit-report/details/123892). Proposal and award came under the BJP state government, the drop under Congress; Smart City Mission is an NDA Union scheme. Contractors are named in the table, but do not name them."
+  },
+  {
+   "district": "Dakshina Kannada",
+   "title": "Mangaluru smart-city sewer lines: Rs 9.44 crore unfruitful",
+   "verdict": "confirmed",
+   "correct_text": "CAG found that the Rs 9.44 crore underground-drainage network laid under Mangaluru's Smart City Mission was dysfunctional, because 27 manholes on the AMRUT trunk sewers it was meant to connect to were never built. The state said in April 2025 that the KUIDFC contractor had been terminated. Separately, only 19 of Mangaluru's 35 basic-amenity projects were complete, with 16 ongoing.",
+   "source_url": "https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2025/Chapter-4---Implemention-of-Projects-and-Monitoring-06981df9e14b034.71900044.pdf",
+   "source_label": "CAG Report No. 11 of 2025, para 4.11.1 and Table 4.12",
+   "note": "Opened the PDF. Table 4.12 row: 'Mangaluru 35 19 16 685.86 511.56' (cost/expenditure in Rs crore). CAG: 'the manholes were not constructed till date'. The 19/35 count is as of the audit (around June 2024)."
+  },
+  {
+   "district": "Dakshina Kannada",
+   "title": "Pumpwell flyover, NH-66 Mangaluru",
+   "verdict": "confirmed",
+   "correct_text": "The Pumpwell flyover in Mangaluru, approved for construction in 2009 and officially due to open on 31 March 2013, was inaugurated on 31 January 2020, almost seven years late.",
+   "source_url": "https://www.thenewsminute.com/karnataka/after-delay-over-10-years-pumpwell-flyover-inaugurated-mangaluru-117234",
+   "source_label": "The News Minute, 31 Jan 2020",
+   "note": "Opened. The flyover was built by the NH-66 toll concessionaire (concession runs to 2035), so do not name the private company. The local MP's counterclaim that the work itself took about three years is in the article. Approval came under the UPA Union government (2009) and the opening under the NDA Union and BJP state governments. No project cost is given, so do not add one."
+  },
+  {
+   "district": "Chikkamagaluru",
+   "title": "Kadur-Chikkamagaluru-Belur(-Sakleshpur) rail line",
+   "verdict": "corrected",
+   "correct_text": "The Kadur-Chikkamagaluru-Sakleshpur line was sanctioned in 1996-97, when H D Deve Gowda was Prime Minister. Its first 45 km section, Kadur to Chikkamagaluru, opened in November 2013. In January 2026 the Railway Ministry said 56 km of the 68 km Kadur-Chikkamagaluru-Belur stretch had been commissioned, leaving about 12 km to Belur, while the Belur-Sakleshpur part is not yet built.",
+   "source_url": "https://www.thehansindia.com/news/cities/bengaluru/chikkamagaluru-finally-connected-by-rail-1038917",
+   "source_label": "The Hans India, 13 Jan 2026; Deccan Chronicle, 20 Nov 2013; Construction World, 15 Jan 2026",
+   "note": "Correction: 'sanctioned 1997' becomes 1996-97 (Deccan Chronicle, https://www.deccanchronicle.com/131120/news-current-affairs/article/indira%E2%80%99s-dream-kadur-rail-line-opened-after-35-years, which gives 45.125 km and a 50:50 state cost share). The 56/68 km figure comes from a Railway Ministry post on X, reported by Hans India and Construction World; the ministry post itself was not opened. Calling Belur-Sakleshpur 'not yet built' is an inference from the 68 km stretch being incomplete. Current (Nov 2026) status of the last 12 km was not found. The Pink Book cost figures could not be reached (indianrailways.gov.in refused connection), so give no cost."
+  },
+  {
+   "district": "Gadag",
+   "title": "Gadag 100-bed MCH: 1,166 days late, nominal penalty",
+   "verdict": "confirmed",
+   "correct_text": "The renovation and expansion of the 100-bed Mother and Child Hospital at Gadag (contract Rs 14.52 crore, agreement May 2014) was due on 25 November 2015 but finished on 31 January 2019, 1,166 days late. Of that delay, 230 days were attributed to the contractor, yet officials levied Rs 1,000 a day instead of the contractual Rs 25,950. CAG put the short levy at Rs 57.39 lakh.",
+   "source_url": "https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2021/9.%20Full%20Report-0614b01d87f87e6.86228196.pdf",
+   "source_label": "CAG Report No. 3 of 2021 (Compliance Audit, year ended March 2020), para 2.6 and Appendix 2.11",
+   "note": "Opened the PDF. Appendix 2.11: contract 1451.54 lakh, penalty due Rs 59,68,500, collected Rs 2,30,000, difference Rs 57,38,500. The state replied (Apr 2021) that nominal penalties avoided price escalation, and CAG rejected that. The work ran under Congress (2014-18) and the JD(S)-Congress coalition (2018-19). Do not name the contractor. The draft's Singatalur and MLA-LAD items were not re-checked this round."
+  },
+  {
+   "district": "Haveri",
+   "title": "Disaster-management money unspent with the DC",
+   "verdict": "confirmed",
+   "correct_text": "CAG found Rs 27.58 crore unspent in the Haveri Deputy Commissioner's disaster-management PD account at the end of March 2023. None of Haveri's 8 taluks gave audit their balances. CAG also estimated Haveri's flood losses at Rs 2,720.64 crore in 2019, Rs 602.27 crore in 2020, Rs 1,222.02 crore in 2021 and Rs 208.51 crore in 2022.",
+   "source_url": "https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2025/Chapter---III-Financial-resources-and-Utilisation-0694513dd546d02.17872728.pdf",
+   "source_label": "CAG Report No. 8 of 2025 (Disaster Management), Table 3.3 and Table 5.2",
+   "note": "Opened both chapter PDFs. Table 3.3 row: 'Haveri 27.58 -- 08 00'. Table 5.2 is in Ch V (https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2025/Chapter---V-Flood-and-rain-hazard-0694513dd5f7181.15355983.pdf). Tabled 17 Dec 2025. Audit period 2017-23 (Congress, coalition and BJP governments)."
+  },
+  {
+   "district": "Haveri",
+   "title": "Haveri city 24x7 water (Rs 33 crore, KUIDFC)",
+   "verdict": "corrected",
+   "correct_text": "NewsKarnataka reported on 1 December 2024 that Haveri's 24x7 drinking water project, awarded in 2014 with work starting in 2017, had used Rs 30 crore of its Rs 33 crore budget but was still incomplete after its last extended deadline of 30 April 2023. By that report, 195 of 206 km of pipeline had been laid and 13,385 of 16,385 homes connected.",
+   "source_url": "https://newskarnataka.com/karnataka/haveri-citys-water-crisis-governments-promises-despite-heavy-investments/01122024/",
+   "source_label": "NewsKarnataka, 1 Dec 2024",
+   "note": "Weak sourcing, so an editor may prefer to hold it. The same article says 'ten extensions' in its intro and '13 extensions' later, so the extension count is dropped. A search snippet of a Times of India article says the cost was revised to Rs 38 crore, but toi.com cannot be fetched, so that is unverified. No second outlet was opened and no status after Dec 2024 was found. Award came under Congress (2014), with work running across the coalition, BJP and Congress governments. The draft's Rs 450 cr Haveri medical college item was not re-checked."
+  },
+  {
+   "district": "Kodagu",
+   "title": "Disaster money unspent; no structural flood works",
+   "verdict": "corrected",
+   "correct_text": "CAG found Rs 57.04 crore unspent in the Kodagu Deputy Commissioner's disaster-management PD account at the end of March 2023, the largest DC-account balance among the nine districts it test-checked. None of Kodagu's five taluks gave audit their balances. The Kodagu DC told audit that structural flood-mitigation measures had not been taken up and that affected people were compensated instead. CAG estimated Kodagu's flood losses at Rs 1,128.82 crore in 2020 and Rs 1,072.83 crore in 2021.",
+   "source_url": "https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2025/Chapter---III-Financial-resources-and-Utilisation-0694513dd546d02.17872728.pdf",
+   "source_label": "CAG Report No. 8 of 2025, Tables 3.3 and 5.2; Ch V",
+   "note": "Opened both chapters. Qualify 'largest' as the DC-account balance: Belagavi's DC (51.08) plus taluk (22.18) balances total Rs 73.26 cr, and Kodagu's taluk balances are unknown. The structural-measures reply came jointly from the DCs of Dakshina Kannada, Davanagere and Kodagu; the government replied (Aug 2024) that departments would be urged to act. Do not combine it with the draft's 'Rs 57 cr = 579 houses' calculation, which mixes years and is an estimate."
+  },
+  {
+   "district": "Kodagu",
+   "title": "Mysuru-Kushalnagar railway line shelved",
+   "verdict": "confirmed",
+   "correct_text": "The 87.2 km Mysuru (Belagola)-Kushalnagar line, sanctioned by the Railway Ministry on 27 February 2019 at an estimated Rs 1,854.62 crore, has been shelved for 'low traffic potential and poor financial returns', the South Western Railway's Mysuru divisional manager said in January 2026.",
+   "source_url": "https://starofmysore.com/mysuru-kushalnagar-railway-project-scrapped/amp",
+   "source_label": "Star of Mysore, 18 Jan 2026",
+   "note": "Opened. Star of Mysore is a regional daily, and the DH report on the same news (low-traffic-potential...3868958) returns 403, so this rests on a single source. The state government's refusal to share costs and the MP's push to revive the line appear in other Star of Mysore reports; there is a Congress-vs-MP dispute over blame, so attribute any claim about it. Sanctioned under the NDA Union government and shelved under it (2026)."
+  },
+  {
+   "district": "Kodagu",
+   "title": "2018 flood-victim houses",
+   "verdict": "unverifiable",
+   "correct_text": "",
+   "source_url": "https://www.deccanherald.com/india/karnataka/162-houses-handed-over-to-kodagu-flood-victims-of-2018-977803.html",
+   "source_label": "Deccan Herald, 30 Nov 2018 and 23 Apr 2021",
+   "note": "Both DH articles return 403 (including the /amp/ URLs) in this round. An earlier round's reading (845 promised in six months, Nov 2018; 786 of 836 families housed by Apr 2021 per the minister; Rs 9.85 lakh per house) cannot be reconfirmed here."
+  },
+  {
+   "district": "Koppal",
+   "title": "PWD Koppal: Rs 3.09 crore paid on fake/duplicate bills",
+   "verdict": "confirmed",
+   "correct_text": "In a test check of four months (January and March 2018, February and March 2019) covering Rs 310.51 crore of spending by the PWD's Koppal division, CAG found Rs 3.09 crore paid through 28 fake or duplicate work bills, including payments made twice for the same measurements. CAG said collusion between officials and contractors 'could not be ruled out'. The state replied in November 2021 that Rs 2.80 crore had been recovered.",
+   "source_url": "https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2022/Report-No.-3-of-the-Year-2022-(Karnataka)-Compliance-Audit-Report-2019-20--English-068b1378c26b296.14605077.pdf",
+   "source_label": "CAG Report No. 3 of 2022 (year ended March 2020), para 2.7",
+   "note": "Opened the PDF. 'Misappropriated' is CAG's word, so attribute it to CAG. The collusion point is CAG's inference, not a finding of guilt. The test-checked months fall under Congress (Jan and Mar 2018) and the JD(S)-Congress coalition (Feb and Mar 2019); the reply came under BJP (2021)."
+  },
+  {
+   "district": "Koppal",
+   "title": "Tungabhadra dam: crest gate 19 washed away (Aug 2024); all 33 gates replaced",
+   "verdict": "confirmed",
+   "correct_text": "Crest gate 19 of the Tungabhadra dam was washed away in August 2024 when its chain link snapped during heavy inflows. All 33 spillway gates were then replaced at a cost of about Rs 51 crore, according to Water Resources Minister Ramalinga Reddy, and the new gates were inaugurated on 25 June 2026.",
+   "source_url": "https://theprint.in/india/cm-shivakumar-inaugurates-33-spillway-gates-of-tungabhadra-dam/2969415/",
+   "source_label": "PTI via ThePrint, 25 Jun 2026",
+   "note": "Opened (PTI copy, Koppal dateline). The cost is the minister's 'approximately Rs 51 crore'. The dam is run by the inter-state Tungabhadra Board. The headline says CM Shivakumar inaugurated them (Congress government)."
+  },
+  {
+   "district": "Koppal",
+   "title": "Navali balancing reservoir: DPR funded 2020, not built",
+   "verdict": "corrected",
+   "correct_text": "In May 2020 Karnataka approved release of Rs 14.30 crore to prepare a detailed project report for a balancing reservoir at Navali on the Tungabhadra in Koppal district. The plan was meant to offset the roughly 31 TMC of storage the dam had lost to silt, out of its original 134.7 TMC.",
+   "source_url": "https://www.thenewsminute.com/article/after-10-yr-delay-karnataka-govt-begin-constructing-tungabhadra-balancing-dam-124788",
+   "source_label": "The News Minute, 18 May 2020",
+   "note": "Opened. The 2020 decision was announced by the then Water Resources Minister under the BJP government. TNM does not mention inter-state consent. The 2026 status ('mentioned in the budget, no progress', DPR Rs 13,040 / 15,600 cr) comes only from webjosh and DH (403), so it is not verified and should not be stated; 'not built' in the title is the draft's claim and is unverified for 2026."
+  },
+  {
+   "district": "Bidar",
+   "title": "Bidar 100-bed MCH: Rs 97.59 lakh paid for work not yet done",
+   "verdict": "confirmed",
+   "correct_text": "For the Rs 19.93 crore, 100-bed Mother and Child Hospital at Bidar, CAG found that engineers certified items such as a lift, a diesel generator and a modular operation theatre as executed during check measurements in April-June 2018, before they were supplied or installed. That led to an 'irregular payment' of Rs 97.59 lakh, part of Rs 4.64 crore paid in September 2018. The state disputed this in April 2021, and CAG rejected the reply.",
+   "source_url": "https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2021/9.%20Full%20Report-0614b01d87f87e6.86228196.pdf",
+   "source_label": "CAG Report No. 3 of 2021 (year ended March 2020), para 2.8",
+   "note": "Opened the PDF. CAG says the facts indicate a 'possibility of collusion'; attribute that to CAG, and name no one. The same report (para 2.6) found a penalty of Rs 100 a day levied instead of Rs 1,99,356 a day for 60 days of contractor delay on this hospital wing. The work was tendered under Congress (2017), with payment and completion (Mar 2019) under the JD(S)-Congress coalition."
+  },
+  {
+   "district": "Bidar",
+   "title": "Karanja irrigation project: Rs 635 crore spent, short of water",
+   "verdict": "confirmed",
+   "correct_text": "In January 2017 Water Resources Minister M B Patil told a review meeting that the state had spent Rs 635 crore on the Karanja irrigation project in Bidar district, meant to irrigate 29,722 hectares. He said civil works were complete but the canals fell short of water because of low yield in the catchment, and proposed two lift-irrigation schemes drawing on the Manjra river.",
+   "source_url": "https://daijiworld.com/news/newsDisplay?newsID=433018",
+   "source_label": "Daijiworld, 17 Jan 2017",
+   "note": "Opened. This is a single source reporting a minister's statement (Congress government, Siddaramaiah). Actual irrigated area is not stated, so do not add one. Current status was not verified."
+  },
+  {
+   "district": "Bidar",
+   "title": "Bidar airport: flights stop-start since 2020",
+   "verdict": "corrected",
+   "correct_text": "Bidar airport's UDAN flights began on 7 February 2020 and stopped on 26 December 2023 after viability-gap funding ran out. Star Air resumed the Bengaluru-Bidar service on 16 April 2025 but suspended it again from 13 April 2026, when its contract with the state expired; in May 2026 the state cabinet approved a restart.",
+   "source_url": "https://thesouthfirst.com/karnataka/air-connectivity-in-karnataka-reality-check-of-airports-in-tier-2-and-3-cities/",
+   "source_label": "The South First, 17 Jul 2024; PTI via The Week, 16 Apr 2025; Asianet Newsable, 1 May 2026",
+   "note": "All three were opened: https://www.theweek.in/wire-updates/business/2025/04/16/dcm131-avi-starair-bidar.html ; https://newsable.asianetnews.com/karnataka-news/bidar-bengaluru-flights-to-resume-karnataka-government-approves-air-service-restart-articleshow-o2tor1g . Correction to the draft: the suspension was not a single seven-month gap; service restarted in 2025 and stopped again in 2026. A DH report of a June 2026 resumption with Rs 28.47 cr VGF returns 403, so it is not verified. Whether flights are running in Nov 2026 is unknown. The 2020 start came under the BJP govt and Union UDAN scheme, and the 2025-26 events under Congress."
+  }
+ ]
+}
