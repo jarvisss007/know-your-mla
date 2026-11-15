@@ -24,3 +24,12 @@ These methods are all described in public enforcement reports (Income Tax and ED
 - Public office-holders and registered entities only. We do not investigate private individuals' homes, land or lives; that is for agencies with legal powers.
 - A pattern goes to the authorities (Income Tax Benami Prohibition Unit, Lokayukta, ED complaint) with documents attached, or to an established newsroom. It is published only when the documents prove the fact itself, with the person's reply.
 - Every number is re-derived from the original document by a second, independent check.
+
+## Investigators' tests we apply (public-record versions)
+
+1. **Net worth test** (the method that convicted Al Capone): growth in declared net worth (assets minus liabilities) between two affidavits, set against the total income the person and spouse declared to the Income Tax department for the years in between (listed in the affidavit). Growth far beyond income, after allowing for revaluation of land already owned, is a lead.
+2. **Follow the goods**: where a physical or licence trail must match the money (ore mined vs royalty paid vs exported, sand permits vs revenue, liquor licences vs excise collected), compare the two. This is how the Lokayukta proved the Bellary mining case in 2011.
+3. **Match two records that should agree**: budget released vs spent, works paid vs works done, a minister's statement vs the auditor's finding. Most CAG findings on this site come from this test.
+4. **Put everything in writing**: every lead, check and reply is kept on file with its source, so findings survive pressure and can be handed to the authorities intact.
+
+Investigators also seize records, summon witnesses and use insiders. We have none of those powers, so anything that needs them goes to the authorities as a documented complaint.
