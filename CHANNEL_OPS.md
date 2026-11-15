@@ -2,9 +2,14 @@
 
 The channel owner has asked Claude to run the YouTube channel (@GandaberundaKA) and the Know Your MLA site day to day: gather live information, verify it, build videos, upload them, and keep the record current, with the goal of reaching all of Karnataka and then all of India. This file is the standing routine. Every session, scheduled or interactive, follows it.
 
-## Who does what (15 Nov 2026)
+## Who does what (owner's decision, 15 Nov 2026)
 
-Two Claude sessions work on this project. Uploads and the video schedule are run from `video/upload_sched.json` by the session that built the talking-format Shorts; `video/upload_all.json` and `video/upload_manifest.json` are superseded (everything in them is already on the channel). Before uploading anything, check Studio and `upload_sched.json` so nothing is posted twice.
+Two Claude sessions work on this project, never on the same files:
+
+- **Video session** (built the talking-format Shorts): owns `video/` (renderers, scenes, voice, songs, `upload_sched.json`), all YouTube uploads, scheduling, music and descriptions.
+- **Research and site session**: owns `research/`, `index.html` and `data/`, the right-of-reply process, district and minister research, and constituency report cards. It hands verified facts to the video session as files in `research/` (each with source URL, quote, date) and never uploads to YouTube.
+
+`video/upload_all.json` and `video/upload_manifest.json` are superseded; everything in them is on the channel.
 
 ## Daily routine
 
@@ -13,7 +18,7 @@ Two Claude sessions work on this project. Uploads and the video schedule are run
 3. **Verify.** Every new figure is opened at its source and re-checked by a second, independent pass before it is used. Record each in `research/` with URL, quote, date and confidence.
 4. **Correct first.** If anything already published is now wrong or outdated (a deadline passed, a case moved, a figure revised), fix the site and the video description the same day, and note it in the site's corrections log.
 5. **Build.** Turn the best verified item into an episode (Mallanna Asks, The Ruling Family, district stories), in Kannada and English, with the source on every screen and a fairness beat.
-6. **Upload.** Work through `video/upload_manifest.json` in order until YouTube's daily cap stops it. Schedule Kannada at 06:30 Pacific (8 PM India) and English at 07:30 Pacific (9 PM India). Add the channel music track. Mark each entry done in the manifest with its link.
+6. **Upload (video session only).** Work through `video/upload_sched.json` in order until YouTube's daily cap stops it. Schedule Kannada at 06:30 Pacific (8 PM India) and English at 07:30 Pacific (9 PM India). Add the channel music track. Mark each entry done in the manifest with its link.
 7. **Save.** Commit and push everything (scenes, videos, manifest, research) to this repo. Nothing lives only on one machine.
 8. **Report.** A short log entry in `ops/log/YYYY-MM-DD.md`: what was checked, built, uploaded, corrected, and what needs the owner.
 
