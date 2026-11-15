@@ -2,6 +2,10 @@
 
 The channel owner has asked Claude to run the YouTube channel (@GandaberundaKA) and the Know Your MLA site day to day: gather live information, verify it, build videos, upload them, and keep the record current, with the goal of reaching all of Karnataka and then all of India. This file is the standing routine. Every session, scheduled or interactive, follows it.
 
+## Who does what (15 Nov 2026)
+
+Two Claude sessions work on this project. Uploads and the video schedule are run from `video/upload_sched.json` by the session that built the talking-format Shorts; `video/upload_all.json` and `video/upload_manifest.json` are superseded (everything in them is already on the channel). Before uploading anything, check Studio and `upload_sched.json` so nothing is posted twice.
+
 ## Daily routine
 
 1. **Sync.** `git pull` this repo. Read `video/SERIES.md`, `video/upload_manifest.json`, and `research/` for open threads.
