@@ -166,6 +166,34 @@ section.block .card h3 { margin: 0 }
 .rcsh .wa{background:#25d366;color:#0b1f12}
 .rcsh .cp{background:#2b3240;color:#eceef2}
 .rcin .fine{font-size:12px;opacity:.65;margin-top:12px}
+
+/* Pages: one tab = one page. The tab bar stays pinned; only the chosen page shows. */
+.mast { justify-content: space-between; margin-bottom: 18px }
+.mast .mark { margin-right: -2px }
+.mastt { flex: 1; min-width: 0 }
+.nav { top: env(safe-area-inset-top, 0px); margin: 0 calc(-1 * max(16px, env(safe-area-inset-left, 0px))) 26px; padding: 10px max(16px, env(safe-area-inset-left, 0px));
+  box-shadow: 0 1px 0 var(--line); border-bottom: 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 28px), transparent);
+          mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 28px), transparent) }
+.nav a { font-weight: 500; transition: background .15s, color .15s, border-color .15s }
+.nav a[aria-current=page] { background: var(--fg); color: var(--bg); border-color: var(--fg) }
+body.routed .page:not(.on) { display: none }
+body.routed section.block { margin-top: 0; padding-top: 0; border-top: 0 }
+body.routed section.block > h2:first-child { font-size: clamp(26px, 5vw, 34px); margin-bottom: 8px }
+.pager { display: flex; justify-content: space-between; gap: 12px; margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 14px }
+.pager a { color: var(--accent); text-decoration: none; max-width: 48% } .pager a:hover { text-decoration: underline }
+.pager .nx { margin-left: auto; text-align: right }
+.sitefoot { margin-top: 28px; color: var(--muted); font-size: 12px }
+.rep { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 12px }
+.rep .card { position: relative; display: grid; gap: 6px; align-content: start; transition: border-color .15s }
+.rep .card:hover { border-color: var(--accent) }
+.rep a.go { color: var(--fg); text-decoration: none } .rep a.go::after { content: ""; position: absolute; inset: 0; border-radius: 10px }
+.rep .langs { position: relative; z-index: 1 } .rep .langs a { color: var(--accent) }
+.rep .kicker { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600 }
+.rep .card p { margin: 0; font-size: 14px; color: var(--muted) }
+.rep .langs { font-size: 13px; color: var(--muted) }
+section.block > p a { color: var(--accent) }
+.testv { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .05em; background: var(--yellow); color: #161a22; padding: 2px 8px; border-radius: 4px }
 </style>
 
 </head>
@@ -187,15 +215,16 @@ section.block .card h3 { margin: 0 }
   <path fill="#f2b705" d="M95 23 L106 27.5 L95 31 Z"/>
   <circle cx="30" cy="25.5" r="1.8" fill="#161a22"/>
   <circle cx="90" cy="25.5" r="1.8" fill="#161a22"/>
-</svg><div><div class="brand">Gandaberunda</div><div class="tagline">Watching both sides · <span class="kn">ಎರಡೂ ಕಡೆ ನೋಡುತ್ತದೆ</span></div></div></div>
-  <div class="top"><h1>Know Your MLA</h1><button class="chip" type="button" id="lang">ಕನ್ನಡ</button></div>
+</svg><div class="mastt"><div class="brand">Gandaberunda</div><div class="tagline">Watching both sides · <span class="kn">ಎರಡೂ ಕಡೆ ನೋಡುತ್ತದೆ</span></div></div><button class="chip" type="button" id="lang">ಕನ್ನಡ</button></div>
+  <nav class="nav" aria-label="Pages"><a href="#find">Find your MLA</a><a href="#latest">Latest</a><a href="#record">On the record</a><a href="#tested">Five MLAs tested</a><a href="#cabinet">Nine ministers tested</a><a href="#state">State of the state</a><a href="#districts">District by district</a><a href="#officials">Officials</a><a href="#research">Research</a><a href="farmers.html">Farmers</a><a href="#eyes">Be our eyes</a><a href="#press">For journalists</a><a href="#read">How to read this</a><a href="#about">About</a></nav>
+
+
+  <section class="page" id="find">
+  <div class="top"><h1>Know Your MLA</h1></div>
   <p class="sub">ನಿಮ್ಮ ಶಾಸಕರನ್ನು ತಿಳಿಯಿರಿ</p>
   <p class="lead">What each of Karnataka's 224 MLAs swore to the Election Commission when they were elected: their wealth, their debts and the criminal cases against them. Search for your constituency.</p>
 
     <p class="updated">Last updated 13 November 2026</p>
-  <nav class="nav" aria-label="Sections"><a href="#find">Find your MLA</a><a href="#latest">Latest</a><a href="#record">On the record</a><a href="#tested">Five MLAs tested</a><a href="#cabinet">Nine ministers tested</a><a href="#state">State of the state</a><a href="#districts">District by district</a><a href="#officials">Officials</a><a href="#eyes">Be our eyes</a><a href="farmers.html">Farmers: schemes for you</a><a href="#press">For journalists</a><a href="#about">About</a><a href="#read">How to read this</a></nav>
-
-  <div id="find"></div>
   <div class="facts" id="facts"></div>
 
   <div class="controls">
@@ -212,9 +241,10 @@ section.block .card h3 { margin: 0 }
   <p class="count" id="count" aria-live="polite"></p>
   <ul class="list" id="list"></ul>
   <button class="chip more" type="button" id="more">Show all 224 MLAs</button>
+  </section>
 
 
-  <section class="block" id="latest">
+  <section class="block page" id="latest">
     <h2>Latest</h2>
     <p>Court orders and agency actions involving sitting MLAs and ministers, newest first. Each links to the report it comes from.</p>
     <ul class="news">
@@ -229,7 +259,7 @@ section.block .card h3 { margin: 0 }
     </ul>
   </section>
 
-  <section class="block" id="record">
+  <section class="block page" id="record">
     <h2>On the record</h2>
     <p>Sitting MLAs with a conviction, a chargesheet or an agency action in a corruption-related matter. An allegation is not a finding of guilt, and each person named denies wrongdoing unless a conviction is shown.</p>
     <div class="tw"><table class="t">
@@ -248,7 +278,7 @@ section.block .card h3 { margin: 0 }
     </table></div>
   </section>
 
-  <section class="block" id="tested">
+  <section class="block page" id="tested">
     <h2>Five MLAs tested</h2>
     <p>Five affidavits were read line by line across elections, and every figure was re-derived by an independent check. None of this shows wrongdoing. These are the facts that held up.</p>
     <div class="cards">
@@ -270,7 +300,7 @@ section.block .card h3 { margin: 0 }
     </div>
   </section>
 
-  <section class="block" id="cabinet">
+  <section class="block page" id="cabinet">
     <h2>Nine ministers tested</h2>
     <p>Nine members of the cabinet were put through six public-record tests, and every finding was re-derived by an independent check. No test produced proof of wrongdoing. These are the open questions and the clean results. The ministers have not yet been asked for comment; any reply will be published here in full. The rest of the cabinet has not been tested yet.</p>
     <div class="cards">
@@ -303,7 +333,7 @@ section.block .card h3 { margin: 0 }
     </div>
   </section>
 
-  <section class="block" id="state">
+  <section class="block page" id="state">
     <h2>State of the state</h2>
     <p>Twelve sectors of government were tested against audit reports, budgets, national surveys and court records, and every finding was checked a second time. All twelve came back mixed: Karnataka has not stalled, but its money is under strain and much of what it starts is late.</p>
     <div class="tw"><table class="t lab">
@@ -326,7 +356,7 @@ section.block .card h3 { margin: 0 }
     <p>Many of these problems began under the previous government and continued under this one. Responsibility for a department's results is not a finding of personal wrongdoing.</p>
   </section>
 
-  <section class="block" id="districts">
+  <section class="block page" id="districts">
     <h2>District by district</h2>
     <p>Big projects and public funds across the 31 districts, as recorded by the national auditor, Parliament and the state government. Every figure here was checked a second time against the original document; where a later report changed the picture, the newer fact is shown.</p>
     <div class="dpick"><label for="dsel" id="dlab">Choose your district</label><select id="dsel"></select></div>
@@ -390,7 +420,7 @@ section.block .card h3 { margin: 0 }
     <p>Most of these projects ran under several governments of different parties. A late or over-cost project is a finding about the government of the day, not proof of personal wrongdoing by any MLA.</p>
   </section>
 
-  <section class="block" id="officials">
+  <section class="block page" id="officials">
     <h2>Officials: many cases, no verdicts yet</h2>
     <p>Since September 2022 the Lokayukta police have registered 1,248 corruption cases against Karnataka government officers and employees. By the government's own count, no court has so far held a single government servant guilty in any of them.</p>
     <div class="tw" style="margin-bottom:16px"><table class="t lab">
@@ -414,7 +444,24 @@ section.block .card h3 { margin: 0 }
     <ul class="notes"><li>Sources, both read in the original Kannada: Chief Minister's written reply to <a href="https://kla.kar.nic.in/council/Replies/unstarred/20082026/usq628(20082026).pdf" target="_blank" rel="noopener">Legislative Council unstarred question 452 (628), 20 August 2026</a>; Chief Minister's written reply to <a href="https://kla.kar.nic.in/assembly/answers/16assembly/pdf/10032026/1324.pdf" target="_blank" rel="noopener">Legislative Assembly unstarred question 1324, 10 March 2026</a>.</li></ul>
   </section>
 
-  <section class="block" id="eyes">
+  <section class="block page" id="research">
+    <h2>Research</h2>
+    <p>Longer pieces that set what the record says against what happened. <span class="testv">TEST VERSIONS</span> These are still being checked: a Kannada reader is reviewing the translations, and rows marked "checked once" need a second check. Every figure links to its source. If you find an error, <a href="https://github.com/jarvisss007/know-your-mla/issues" target="_blank" rel="noopener">tell us</a>.</p>
+    <h3>Money and delivery</h3>
+    <div class="rep">
+      <div class="card"><span class="kicker">Karnataka · all governments</span><h3><a class="go" href="reports/paper_vs_ground.html">Paper vs Ground</a></h3><p>What audits and official replies say was sanctioned or recovered, beside what the same records say happened: rural jobs, tap water, Smart Cities, rations, forest and land.</p><span class="langs">English · Also in <a href="reports/paper_vs_ground_kn.html" lang="kn" class="kn">ಕನ್ನಡ</div></span></a>
+      <div class="card"><span class="kicker">Farmers</span><h3><a class="go" href="reports/farm_money_ledger.html">Farm money ledger</a></h3><p>Nine places where farm money can be followed from the announcement to the farmer: drought relief, support prices, milk incentive, drip irrigation, floods, PM-KISAN.</p><span class="langs">English · Also in <a href="reports/farm_money_ledger_kn.html" lang="kn" class="kn">ಕನ್ನಡ</div></span></a>
+      <div class="card"><span class="kicker">Farmers</span><h3><a class="go" href="farmers.html">Raitha scheme finder</a></h3><p>Answer eight questions and see which central and state schemes you may be eligible for, in Kannada and English.</p></div>
+    </div>
+    <h3>From space: what changed on the ground</h3>
+    <p>Free Sentinel-2 satellite pictures of one constituency, compared pixel by pixel for 2019 and 2026: green cover, open water, lakes, and new bare or built-up ground. They measure land cover only and say nothing about who caused a change. The series will cover a constituency held by each of the three main parties; the third is being prepared.</p>
+    <div class="rep">
+      <div class="card"><span class="kicker">AC 184 · Ramanagara (Bengaluru South)</span><h3><a class="go" href="reports/satellite/kanakapura/">Kanakapura from space</a></h3><p>Mostly season and rainfall, not land use: a check of 30 dates shows why. Includes the 15 largest patches of new bare ground, with map links, to be checked on foot.</p></div>
+      <div class="card"><span class="kicker">AC 174 · Bengaluru Urban</span><h3><a class="go" href="reports/satellite/mahadevapura/">Mahadevapura from space</a></h3><p>Lakes that showed open water again, Bellandur's drained bed, and how much green cover the pictures show was lost. A check of other dates is under way.</p></div>
+    </div>
+  </section>
+
+  <section class="block page" id="eyes">
     <h2>Be our eyes</h2>
     <p>Investigators who uncover hidden money work on the ground. You can be that, in your own town. Pick a project from the District by district list, go and see it, and send us dated photos, or file a Right to Information request and send us the reply. Every reply is an official record nobody can dismiss.</p>
     <ul class="plain">
@@ -434,7 +481,7 @@ section.block .card h3 { margin: 0 }
     <div class="cards" style="margin-top:14px"><div class="card"><h3 class="okn">Permission to prosecute</h3><p class="meta okn">To: Public Information Officer of the department</p><p class="rtitxt okn">Under the RTI Act 2005, please provide for [department], from 1 January 2022 to date: (1) the number of requests received from the Karnataka Lokayukta for sanction to prosecute or investigate officials; (2) for each request, the date received, the designation of the official and the date of the decision, if any; (3) the number of requests still pending as on today, and the date since which each has been pending.</p><p><button type="button" class="rcb rticp">Copy</button></p></div><div class="card"><h3 class="okn">Cases in your district</h3><p class="meta okn">To: Public Information Officer, Karnataka Lokayukta</p><p class="rtitxt okn">Under the RTI Act 2005, please provide for [district], from 1 January 2022 to date: (1) the number of cases registered under the Prevention of Corruption Act, separately for trap cases and disproportionate-assets cases; (2) the number in which a chargesheet has been filed; (3) the number awaiting sanction to prosecute; (4) the number stayed by a court; (5) the number ended in conviction, in acquittal, and closed with a B report.</p><p><button type="button" class="rcb rticp">Copy</button></p></div><div class="card"><h3 class="okn">Suspended or still in the post</h3><p class="meta okn">To: Public Information Officer of the department</p><p class="rtitxt okn">Under the RTI Act 2005, please provide for [department], [district], from 1 January 2022 to date: (1) the number of officials against whom the Lokayukta registered a case; (2) for each, by designation, whether the official was suspended, with the date; (3) whether the suspension was later revoked, with the date; (4) the current posting of each official.</p><p><button type="button" class="rcb rticp">Copy</button></p></div></div>
   </section>
 
-  <section class="block" id="press">
+  <section class="block page" id="press">
     <h2>For journalists</h2>
     <p>Everything on this site is free to use, with or without credit. Each story below rests on public records linked on this page, and the full dataset can be downloaded.</p>
     <div class="cards">
@@ -455,6 +502,13 @@ section.block .card h3 { margin: 0 }
         <li>32,870 of 69,915 Health Department posts were vacant in December 2024.</li>
         <li>The Assembly has sat fewer than the 60 days its own law requires in every year since 2016.</li></ul></div>
     </div>
+    <h3>New research (test versions)</h3>
+    <ul class="plain">
+      <li><a href="reports/paper_vs_ground.html">Paper vs Ground</a>: audit and official figures on what was sanctioned against what happened, in rural jobs, tap water, Smart Cities, rations, forest and land. Also in <a href="reports/paper_vs_ground_kn.html" class="kn">ಕನ್ನಡ</a>.</li>
+      <li><a href="reports/farm_money_ledger.html">Farm money ledger</a>: nine places where farm money can be followed from the announcement to the farmer. Also in <a href="reports/farm_money_ledger_kn.html" class="kn">ಕನ್ನಡ</a>.</li>
+      <li>Satellite comparisons, 2019 and 2026: <a href="reports/satellite/kanakapura/">Kanakapura</a> and <a href="reports/satellite/mahadevapura/">Mahadevapura</a>. The Kanakapura page lists 15 locations of new bare ground with coordinates, for anyone who can visit them.</li>
+      <li>All of these are on the <a href="#research">Research</a> page. They are still being checked; quote the underlying source, which every row links.</li>
+    </ul>
     <h3>Data and images</h3>
     <ul class="plain">
       <li><a href="https://github.com/jarvisss007/know-your-mla/blob/main/data/mlas.csv" target="_blank" rel="noopener">The full MLA dataset</a> as a spreadsheet: name, constituency, party, declared cases, assets and liabilities for 2023, and assets for 2018 where matched.</li>
@@ -465,7 +519,7 @@ section.block .card h3 { margin: 0 }
     <p>To ask a question, request the working files or report an error, <a href="https://github.com/jarvisss007/know-your-mla/issues" target="_blank" rel="noopener">open an issue on GitHub</a>.</p>
   </section>
 
-  <section class="block" id="read">
+  <section class="block page" id="read">
     <h2>How to read this</h2>
   <ul class="notes">
     <li>Every figure is self-declared by the MLA in a sworn affidavit and archived by the Association for Democratic Reforms at <a href="https://www.myneta.info/Karnataka2023/" target="_blank" rel="noopener">myneta.info</a>. Nobody audits these figures.</li>
@@ -476,7 +530,7 @@ section.block .card h3 { margin: 0 }
   </ul>
   </section>
 
-  <section class="block" id="about">
+  <section class="block page" id="about">
     <h2>About Gandaberunda</h2>
     <p>Gandaberunda is an independent, citizen-run publication that holds Karnataka's elected representatives to the public record. It is named after the two-headed bird of Karnataka's history, which looks both ways at once, as this work looks at every party. It is not affiliated with the Government of Karnataka or any political party, and does not use the official state emblem.</p>
     <h3>Standards</h3>
@@ -709,7 +763,7 @@ $('dsel').addEventListener('change', e => { dsel = e.target.value; try { localSt
 $('dsum').addEventListener('click', e => { const b = e.target.closest('button[data-n]'); if (!b) return;
   $('q').value = b.dataset.n; party = 'All'; showAll = false;
   document.querySelectorAll('.chip[data-p]').forEach(c => c.setAttribute('aria-pressed', c.dataset.p === 'All'));
-  render(); document.getElementById('find').scrollIntoView({ behavior: 'smooth' }) });
+  render(); if (location.hash !== '#find') location.hash = '#find'; else window.scrollTo(0, 0) });
 $('lang').addEventListener('click', districts);
 districts();
 
@@ -762,6 +816,37 @@ document.querySelectorAll('.rticp').forEach(b => b.addEventListener('click', () 
   const t = b.closest('.card').querySelector('.rtitxt').textContent;
   try { navigator.clipboard.writeText(t); b.textContent = lang === 'kn' ? 'ನಕಲಾಯಿತು' : 'Copied' } catch (e) {}
 }));
+// Pages: each tab shows one page; the URL hash names it (#press, #research ...), so every page has its own link.
+(function () {
+  const pages = [...document.querySelectorAll('.page')], nav = document.querySelector('.nav');
+  const tabs = [...nav.querySelectorAll('a[href^="#"]')];
+  pages.forEach(p => {
+    const i = tabs.findIndex(a => a.getAttribute('href') === '#' + p.id), pv = tabs[i - 1], nx = tabs[i + 1];
+    const d = document.createElement('nav'); d.className = 'pager'; d.setAttribute('aria-label', 'Next and previous page');
+    d.innerHTML = (pv ? `<a href="${pv.getAttribute('href')}">← ${pv.textContent}</a>` : '') + (nx ? `<a class="nx" href="${nx.getAttribute('href')}">${nx.textContent} →</a>` : '');
+    p.appendChild(d);
+  });
+  function show() {
+    const h = decodeURIComponent(location.hash.slice(1));
+    let el = h && !h.startsWith('mla=') ? document.getElementById(h) : null;
+    const page = (el && el.closest('.page')) || document.getElementById('find');
+    pages.forEach(p => p.classList.toggle('on', p === page));
+    tabs.forEach(a => {
+      if (a.getAttribute('href') === '#' + page.id) {
+        a.setAttribute('aria-current', 'page');
+        nav.scrollTo({ left: a.offsetLeft - nav.clientWidth / 2 + a.offsetWidth / 2, behavior: 'smooth' });
+      } else a.removeAttribute('aria-current');
+    });
+    const hd = page.querySelector('h2, h1');
+    document.title = page.id === 'find' ? 'Gandaberunda' : (hd ? hd.textContent.trim() + ' · Gandaberunda' : 'Gandaberunda');
+    if (el && el !== page) el.scrollIntoView(); else window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+  document.body.classList.add('routed');
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  addEventListener('hashchange', show);
+  addEventListener('load', () => setTimeout(show, 0));  // the browser's own jump to #anchor runs after the first show()
+  show();
+})();
 </script>
 
 </body>

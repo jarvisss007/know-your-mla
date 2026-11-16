@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Farm Money Ledger · Gandaberunda</title>
+<meta name="description" content="Nine places where Karnataka's farm money can be followed from the announcement to the farmer.">
+<link rel="icon" type="image/svg+xml" href="../brand/mark.svg">
+<style>:root{padding-top:env(safe-area-inset-top,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: one ledger column; each entry pairs "promised/sought" with "reached", a bar where the two are comparable, and who held the purse. */
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8;
+  --red: #c21f30; --yellow: #f2b705; --track: #e3e6ec; --ok: #1a8f4c; --warn: #b45309;
+  --display: "Space Grotesk", "Noto Sans Kannada", system-ui, sans-serif;
+  --body: "Noto Sans Kannada", system-ui, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --track: #2b313d; --ok: #4fcf86; --warn: #f0a04b; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --track: #2b313d; --ok: #4fcf86; --warn: #f0a04b; color-scheme: dark }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 880px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 28px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.25; }
+h1 { font-size: clamp(1.8rem, 4.5vw, 2.5rem); }
+h2 { font-size: 1.15rem; }
+p { margin: 0; }
+.eyebrow { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--red); font-weight: 600; }
+.draft { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em; background: var(--yellow); color: #161a22; padding: 2px 8px; border-radius: 4px; }
+.lede { color: var(--muted); max-width: 64ch; }
+.key { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .85rem; color: var(--muted); }
+.key span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.list { display: grid; gap: 14px; }
+.entry { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; display: grid; gap: 12px; min-width: 0; }
+.entry header { display: flex; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; align-items: baseline; }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: .72rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--track); color: var(--fg); white-space: nowrap; }
+.tag.hi { color: var(--ok); background: transparent; border: 1px solid currentColor; }
+.tag.md { color: var(--warn); background: transparent; border: 1px solid currentColor; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; }
+.pair .lbl { font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.pair .v { font-family: var(--display); font-weight: 700; font-size: 1.35rem; font-variant-numeric: tabular-nums; line-height: 1.2; }
+.pair .s { font-size: .88rem; color: var(--muted); }
+.ground .v { color: var(--red); }
+.bar { display: grid; gap: 4px; }
+.track { height: 12px; border-radius: 6px; background: var(--track); overflow: hidden; }
+.fill { height: 100%; background: var(--red); border-radius: 6px; }
+.bar .cap { font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.fair { font-size: .9rem; border-left: 3px solid var(--yellow); padding-left: 12px; }
+.src { font-size: .8rem; color: var(--muted); overflow-wrap: anywhere; }
+.src a { color: inherit; }
+.foot { font-size: .85rem; color: var(--muted); display: grid; gap: 8px; max-width: 70ch; }
+@media (max-width: 560px) { .pair { grid-template-columns: 1fr; } }
+</style>
+
+</head>
+<body>
+<div style="position:sticky;top:0;z-index:20;background:#11141a;color:#eceef2;font:600 14px/1.4 Inter,system-ui,sans-serif;padding:10px max(16px,env(safe-area-inset-left,0px));display:flex;gap:8px 16px;flex-wrap:wrap;align-items:center;border-bottom:3px solid #f2b705"><a href="../index.html#research" style="color:#f5c93a;text-decoration:none">← Gandaberunda · Research</a><span style="color:#9aa3b2;font-weight:400">Test version: still being checked · <a href="farm_money_ledger_kn.html" style="color:#eceef2">ಕನ್ನಡ</a></span></div>
+<div class="wrap">
+  <div style="display:grid;gap:8px">
+    <span class="eyebrow">Gandaberunda · Paper vs Ground: farmers</span>
+    <h1>Farm money: what was promised or sought, and what reached the field</h1>
+    <span><span class="draft">TEST VERSION · UNDER REVIEW</span></span>
+  </div>
+  <p class="lede">Nine places where Karnataka's farm money can be followed from the announcement to the farmer, from audit reports, Parliament and Assembly replies, and the press. Each entry names the government that held the money at the time. Several gaps sit between the Centre and the state, and several run across governments of both parties.</p>
+  <div class="key">
+    <span><span class="tag hi">Audit / official</span> read in a CAG report or official reply</span>
+    <span><span class="tag md">Press</span> reputable press citing official figures; second check pending</span>
+  </div>
+
+  <div class="list">
+
+    <article class="entry">
+      <header><h2>Drought relief, 2023-24</h2><div class="tags"><span class="tag">Centre: BJP</span><span class="tag">State: Congress</span><span class="tag hi">Official figures</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">Karnataka asked the Centre (NDRF)</div><div class="v">₹18,171 crore</div><div class="s">memoranda Sep-Nov 2023</div></div>
+        <div class="ground"><div class="lbl">Centre released</div><div class="v">≈ ₹3,454 crore</div><div class="s">April 2024, after the state went to the Supreme Court</div></div>
+      </div>
+      <div class="bar"><div class="track"><div class="fill" style="width:19%"></div></div><div class="cap">About 19% of the amount sought</div></div>
+      <p class="fair">Context: ₹12,577 crore of the request was "gratuitous relief", which NDRF norms treat differently. The state paid farmers from its own funds without waiting for the Centre.</p>
+      <p class="src">Sources: <a href="https://www.thenewsminute.com/karnataka/union-government-releases-rs-3454-crore-as-drought-relief-to-karnataka" target="_blank" rel="noopener">The News Minute, 27 Apr 2024</a>; <a href="https://thesouthfirst.com/karnataka/around-₹3400-crore-released-to-karnataka-for-drought-management-union-government-tells-sc/" target="_blank" rel="noopener">The South First, 29 Apr 2024</a>. Reported release figures vary: ₹3,454, ₹3,498.8 and "around ₹3,400" crore.</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>Support-price crops, 2025-26 season</h2><div class="tags"><span class="tag">Centre: BJP</span><span class="tag">State: Congress</span><span class="tag md">Press, one outlet</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">State bought from farmers (ragi, jowar, paddy)</div><div class="v">₹4,422 crore</div><div class="s">5.69 lakh tonnes of ragi alone</div></div>
+        <div class="ground"><div class="lbl">Centre had reimbursed</div><div class="v">₹190 crore</div><div class="s">as of 7 July 2026</div></div>
+      </div>
+      <div class="bar"><div class="track"><div class="fill" style="width:4.3%"></div></div><div class="cap">About 4% reimbursed</div></div>
+      <p class="fair">Context: farmers were paid. The gap is money owed back to the state. Older claims of ₹1,903 crore (the article's web address says 1,902; confirm) go back to the 2009-10 season, so governments of every party left claims open.</p>
+      <p class="src">Source: <a href="https://www.siasat.com/karnataka-seeks-release-of-rs-1902-cr-pending-msp-dues-3504326/" target="_blank" rel="noopener">Siasat, 9 Jul 2026</a> (state food minister's meeting, 7 Jul).</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>Milk incentive (₹5 a litre)</h2><div class="tags"><span class="tag">State: BJP, then Congress</span><span class="tag hi">Official figures</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">Promised</div><div class="v">₹5 / litre</div><div class="s">about ₹119 crore a month statewide</div></div>
+        <div class="ground"><div class="lbl">Left unpaid</div><div class="v">≈ ₹800 crore</div><div class="s">May 2024; general-category farmers unpaid since Sep 2023</div></div>
+      </div>
+      <p class="fair">Context: the minister's own year-by-year list shows dues every year, from ₹54 crore in 2019 to ₹208 crore in 2023, under both governments. In December 2024, ₹606.69 crore was unpaid for June to October 2024.</p>
+      <p class="src">Sources: <a href="https://thesouthfirst.com/karnataka/karnataka-farmers-decry-delay-in-milk-incentives-dues-as-kmf-sponsors-t20-world-cup-teams/" target="_blank" rel="noopener">The South First, 30 May 2024</a>; Assembly reply reported by <a href="https://dairynews.today/news/bjp-criticizes-congress-over-rs-600-crore-unpaid-incentives-to-karnataka-dairy-farmers.html" target="_blank" rel="noopener">Dairy News Today, 18 Dec 2024</a>; minister's list via ETV Bharat, 5 Mar 2025.</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>Drip and sprinkler irrigation, 2017-21</h2><div class="tags"><span class="tag">State: Congress, JD(S)-Congress, BJP</span><span class="tag hi">CAG audit</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">Area planned</div><div class="v">15.70 lakh ha</div><div class="s">State Irrigation Plan</div></div>
+        <div class="ground"><div class="lbl">Area covered</div><div class="v">11.81 lakh ha</div><div class="s">shortfall 3.89 lakh ha</div></div>
+      </div>
+      <div class="bar"><div class="track"><div class="fill" style="width:75%"></div></div><div class="cap">75% of target</div></div>
+      <p class="fair">Context: the auditor found the state had not released its 57% share in full. The scheme improved over the period and reached 103% of target in 2020-21.</p>
+      <p class="src">Source: <a href="https://saiindia.gov.in/uploads/download_audit_report/2021/Report-No.-1-of-2023,-Govt.-of-Karnataka-06a2fc893535d84.40165326.pdf" target="_blank" rel="noopener">CAG Report No. 1 of 2023, para 2.2.5.2</a>.</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>Flood crop loss, 2025</h2><div class="tags"><span class="tag">State: Congress</span><span class="tag">Centre: BJP</span><span class="tag md">Press</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">Crop loss estimated</div><div class="v">≈ ₹10,748 crore</div><div class="s">14.58 lakh hectares damaged</div></div>
+        <div class="ground"><div class="lbl">Paid to farmers</div><div class="v">₹2,252 crore</div><div class="s">to 14.24 lakh farmers (₹1,218 crore SDRF + ₹1,034 crore state top-up)</div></div>
+      </div>
+      <p class="fair">Context: relief compensates for inputs; it was never meant to cover the full crop value. The state asked the Centre for ₹614.90 crore, and no release has been reported yet.</p>
+      <p class="src">Source: <a href="https://eng.ruralvoice.in/karnataka-rolls-out-rs-1033-crore-flood-relief-package-for-affected-farmers" target="_blank" rel="noopener">Rural Voice, 28 Nov 2025</a>.</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>PM-KISAN: eligible farmers left out</h2><div class="tags"><span class="tag">Centre: BJP</span><span class="tag">State: Congress</span><span class="tag hi">Official letters</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">State said were eligible but unpaid</div><div class="v">30,000+</div><div class="s">Aug-Nov 2025 instalment; state letter, 17 Dec 2025</div></div>
+        <div class="ground"><div class="lbl">Centre added back</div><div class="v">22,000+</div><div class="s">22nd instalment</div></div>
+      </div>
+      <p class="fair">Context: roughly 8,000 farmers are not accounted for in either statement.</p>
+      <p class="src">Source: <a href="https://www.thehansindia.com/news/cities/bengaluru/centre-responds-positively-to-agriculture-ministers-request-pm-kisan-funds-to-be-released-to-over-22000-ktaka-farmers-1048472" target="_blank" rel="noopener">Hans India, 14 Feb 2026</a>.</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>PM-KISAN recoveries parked in bank accounts</h2><div class="tags"><span class="tag">State: BJP (audit year 2022-23)</span><span class="tag hi">CAG audit</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">Money recovered from ineligible farmers</div><div class="v">Owed to the Centre</div><div class="s">should go back to the Consolidated Fund</div></div>
+        <div class="ground"><div class="lbl">Still sitting in two state accounts</div><div class="v">₹11.80 crore</div><div class="s">not remitted</div></div>
+      </div>
+      <p class="src">Source: <a href="https://saiindia.gov.in/uploads/download_audit_report/2024/Report-No.-1,-2024,-Karnataka-06a2bd061d78130.42642970.pdf" target="_blank" rel="noopener">CAG State Finances Report No. 1 of 2024, para 3.7.1.6(a)</a>.</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>Agriculture budget: unspent, then overspent</h2><div class="tags"><span class="tag">State: BJP 2020-23, Congress 2023-24</span><span class="tag hi">CAG audit</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">2020-23 (revenue provision)</div><div class="v">5.3% to 9.7%</div><div class="s">left unspent each year</div></div>
+        <div class="ground"><div class="lbl">2023-24</div><div class="v">15.7% over</div><div class="s">₹6,654 crore spent against ₹5,749 crore budgeted</div></div>
+      </div>
+      <p class="fair">Context: neither direction proves money went missing. Late central releases and timing explain much of it. A budget figure on its own does not show what reached farmers.</p>
+      <p class="src">Sources: CAG Report No. 1 of 2024, Table 3.12; <a href="https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf" target="_blank" rel="noopener">CAG Report No. 4 of 2025, Table 3.8</a>.</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>Drought 2026, so far</h2><div class="tags"><span class="tag">State: Congress</span><span class="tag">Centre: BJP</span><span class="tag md">Press · still unfolding</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">Karnataka asked the Centre</div><div class="v">₹22,401 crore</div><div class="s">3 Nov 2026; 226 taluks, 57.93 lakh ha affected</div></div>
+        <div class="ground"><div class="lbl">State's first instalment</div><div class="v">₹2,500</div><div class="s">per farmer, from 5 Nov; some farmers report ₹1,500 or ₹2,000</div></div>
+      </div>
+      <p class="fair">Context: the state has promised at least ₹5,000 per farmer, and the Centre had not announced a release by 16 Nov 2026.</p>
+      <p class="src">Sources: <a href="https://english.varthabharati.in/karnataka/karnataka-seeks-rs-22400-cr-drought-relief-from-centre-urges-early-release-2287835" target="_blank" rel="noopener">Vartha Bharati, 3 Nov 2026</a>; <a href="https://www.newkerala.com/news/a/karnataka-govt-assures-minimum-rs-5000-drought-relief-719.htm" target="_blank" rel="noopener">IANS, 10 Nov 2026</a>.</p>
+    </article>
+  </div>
+
+  <footer class="foot">
+    <p>DRAFT, 16 Nov 2026. The rows tagged "Press" need a second, independent check before publication. Every press link must be re-opened in a browser.</p>
+    <p>Not found yet: Krishi Bhagya ponds targeted against built, crop insurance premiums against claims for Karnataka, and any district-level target-against-actual pair. Details are in DELIVERY_LEDGER_RESEARCH.md.</p>
+  </footer>
+</div>
+
+</body>
+</html>
