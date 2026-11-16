@@ -13,7 +13,7 @@ HERE = pathlib.Path(__file__).parent
 rows = list(csv.DictReader(open(HERE / "tracker.csv", encoding="utf-8")))
 rows.sort(key=lambda r: (r["id"][:10], int(r["id"][11:])))
 
-LADDER = ["Action taken", "Suspended", "Chargesheet filed", "Sanction to prosecute", "Trial under way", "Verdict"]
+LADDER = ["Action taken", "Suspended or beyond", "Chargesheet filed", "Sanction to prosecute", "Trial under way", "Verdict"]
 STAGE_RANK = {"Raided": 0, "Searched": 0, "Arrested": 0, "Suspended": 1, "Chargesheet filed": 2,
               "Sanction to prosecute": 3, "Trial under way": 4, "Verdict": 5}
 
@@ -200,7 +200,7 @@ footer {{ border-top: 2px solid var(--fg); padding-top: 14px; }}
   <div><span class="draft">DRAFT · NOT PUBLISHED</span></div>
   <div class="eyebrow">Gandaberunda · Karnataka officials · reports read up to {d(checked)}</div>
   <h1>After the <span>raid</span></h1>
-  <p class="lede">{n} Karnataka officials were raided, trapped, searched or suspended on {days} days between {d(first)} and {d(last)}, in the reports read so far. This page follows each one from that first day towards a verdict.</p>
+  <p class="lede">{n} Karnataka officials were raided, trapped, searched, arrested, suspended or charged on {days} days between {d(first)} and {d(last)}, in the reports read so far. This page follows each one from that first day towards a verdict.</p>
   <p class="muted">A raid or an arrest is an allegation, not a finding of guilt. Asset figures are the agency's first-day estimates. The page gives the post, not the person: names are in the linked reports and are added here only after the FIR and the person's reply are checked.</p>
 </header>
 
