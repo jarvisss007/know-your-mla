@@ -194,6 +194,28 @@ body.routed section.block > h2:first-child { font-size: clamp(26px, 5vw, 34px); 
 .rep .langs { font-size: 13px; color: var(--muted) }
 section.block > p a { color: var(--accent) }
 .testv { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .05em; background: var(--yellow); color: #161a22; padding: 2px 8px; border-radius: 4px }
+
+/* Have your say */
+.join { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 14px; align-items: start }
+.join .card { display: grid; gap: 12px; padding: 18px }
+.join .card h3 { font-size: 19px } .join .card h3 .kn { display: block; font-size: 14px; color: var(--muted); font-weight: 400; margin-top: 2px }
+.join label, .join .lbl { font-size: 13px; font-weight: 600; display: block; margin-bottom: 4px }
+.join select, .join textarea { font: inherit; font-size: 16px; width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--fg) }
+.join textarea { min-height: 84px; resize: vertical }
+.join .chips { margin: 0 }
+.join .row2 { display: flex; flex-wrap: wrap; gap: 8px }
+.btn { font: inherit; font-size: 15px; font-weight: 600; border-radius: 999px; padding: 10px 18px; cursor: pointer; border: 1px solid var(--fg); background: var(--fg); color: var(--bg); text-decoration: none; display: inline-flex; align-items: center; gap: 6px }
+.btn.ghost { background: transparent; color: var(--fg); border-color: var(--line) }
+.btn.wa { background: #25d366; border-color: #25d366; color: #0b1f12 }
+.btn[disabled] { opacity: .45; cursor: not-allowed }
+.fine { font-size: 12px; color: var(--muted); margin: 0 }
+.result { border-left: 4px solid var(--yellow); background: var(--bg); border-radius: 8px; padding: 10px 12px; font-size: 14px }
+.result a { color: var(--accent) }
+.hero-join { display: grid; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--yellow); border-radius: 12px; padding: 18px 20px; margin: 0 0 22px }
+.hero-join b { font-family: var(--display); font-size: 18px }
+.hero-join a { color: var(--accent); font-weight: 600 }
+.counter { font-family: var(--display); font-size: 15px }
+.counter b { font-size: 22px }
 </style>
 
 </head>
@@ -216,7 +238,7 @@ section.block > p a { color: var(--accent) }
   <circle cx="30" cy="25.5" r="1.8" fill="#161a22"/>
   <circle cx="90" cy="25.5" r="1.8" fill="#161a22"/>
 </svg><div class="mastt"><div class="brand">Gandaberunda</div><div class="tagline">Watching both sides · <span class="kn">ಎರಡೂ ಕಡೆ ನೋಡುತ್ತದೆ</span></div></div><button class="chip" type="button" id="lang">ಕನ್ನಡ</button></div>
-  <nav class="nav" aria-label="Pages"><a href="#find">Find your MLA</a><a href="#latest">Latest</a><a href="#record">On the record</a><a href="#tested">Five MLAs tested</a><a href="#cabinet">Nine ministers tested</a><a href="#state">State of the state</a><a href="#districts">District by district</a><a href="#officials">Officials</a><a href="#research">Research</a><a href="farmers.html">Farmers</a><a href="#eyes">Be our eyes</a><a href="#press">For journalists</a><a href="#read">How to read this</a><a href="#about">About</a></nav>
+  <nav class="nav" aria-label="Pages"><a href="#find">Find your MLA</a><a href="#join">Have your say</a><a href="#latest">Latest</a><a href="#record">On the record</a><a href="#tested">Five MLAs tested</a><a href="#cabinet">Nine ministers tested</a><a href="#state">State of the state</a><a href="#districts">District by district</a><a href="#officials">Officials</a><a href="#research">Research</a><a href="farmers.html">Farmers</a><a href="#eyes">Be our eyes</a><a href="#press">For journalists</a><a href="#read">How to read this</a><a href="#about">About</a></nav>
 
 
   <section class="page" id="find">
@@ -225,6 +247,7 @@ section.block > p a { color: var(--accent) }
   <p class="lead">What each of Karnataka's 224 MLAs swore to the Election Commission when they were elected: their wealth, their debts and the criminal cases against them. Search for your constituency.</p>
 
     <p class="updated">Last updated 13 November 2026</p>
+  <div class="hero-join"><b>This site grows from what you tell us.</b><span>Pick what we should dig into next, ask for your own constituency to be checked from space, or report what you saw on the ground. <a href="#join">Have your say →</a></span><span class="kn" style="color:var(--muted)">ಮುಂದೆ ನಾವು ಏನನ್ನು ಪರಿಶೀಲಿಸಬೇಕು ಎಂದು ನೀವೇ ಹೇಳಿ.</span></div>
   <div class="facts" id="facts"></div>
 
   <div class="controls">
@@ -243,6 +266,49 @@ section.block > p a { color: var(--accent) }
   <button class="chip more" type="button" id="more">Show all 224 MLAs</button>
   </section>
 
+
+  <section class="block page" id="join">
+    <h2>Have your say</h2>
+    <p>Gandaberunda is run by citizens, and what we look at next comes from you. Choose below, add a line if you like, and send it. Every suggestion is read. <span class="kn">ನಿಮ್ಮ ಸಲಹೆಯಂತೆ ನಮ್ಮ ಮುಂದಿನ ಸಂಶೋಧನೆ.</span></p>
+    <p class="counter" id="jcount" hidden></p>
+    <div class="join">
+
+      <div class="card" id="jnext">
+        <h3>What should we dig into next?<span class="kn">ಮುಂದೆ ನಾವು ಏನನ್ನು ಪರಿಶೀಲಿಸಬೇಕು?</span></h3>
+        <div><span class="lbl">Tap one or more</span><div class="chips" id="jtopics"></div></div>
+        <div><label for="jdist">Your district</label><select id="jdist"><option value="">Choose (optional)</option></select></div>
+        <div><label for="jtext">Anything specific? A project, a scheme, a place</label><textarea id="jtext" maxlength="1200" placeholder="For example: the new bus stand in our taluk was paid for in 2023 and is still not built."></textarea></div>
+        <div class="row2"><button class="btn" type="button" data-send="next" disabled>Send suggestion</button><button class="btn ghost" type="button" data-copy="next" disabled>Copy text</button></div>
+      </div>
+
+      <div class="card" id="jspace">
+        <h3>See your constituency from space<span class="kn">ನಿಮ್ಮ ಕ್ಷೇತ್ರವನ್ನು ಉಪಗ್ರಹದಿಂದ ನೋಡಿ</span></h3>
+        <p class="fine" style="font-size:14px">We compare free satellite pictures from 2019 and 2026: green cover, lakes and tanks, and new bare or built-up ground. Three constituencies are done. Ask for yours and the most-requested go next.</p>
+        <div><label for="jac">Your constituency</label><select id="jac"><option value="">Choose your constituency</option></select></div>
+        <div class="result" id="jacres" hidden></div>
+      </div>
+
+      <div class="card" id="jfield">
+        <h3>Been near one of these places?<span class="kn">ಈ ಸ್ಥಳಗಳ ಹತ್ತಿರ ಹೋಗಿದ್ದೀರಾ?</span></h3>
+        <p class="fine" style="font-size:14px">Satellites found patches that turned bare between 2019 and 2026. Only someone on the ground can say what they are. Never enter private land or photograph people.</p>
+        <div class="row2" style="gap:10px">
+          <div style="flex:1 1 140px"><label for="jfseat">Constituency</label><select id="jfseat"><option>Kanakapura</option><option>Holenarasipur</option></select></div>
+          <div style="flex:1 1 140px"><label for="jfnum">Patch</label><select id="jfnum"></select></div>
+        </div>
+        <p class="fine" id="jfmap"></p>
+        <div><span class="lbl">What is there now?</span><div class="chips" id="jfwhat"></div></div>
+        <div><label for="jftext">Details: what you saw, and when</label><textarea id="jftext" maxlength="1200" placeholder="For example: new layout with roads and stone posts, seen 10 Nov 2026."></textarea></div>
+        <div class="row2"><button class="btn" type="button" data-send="field" disabled>Send report</button><button class="btn ghost" type="button" data-copy="field" disabled>Copy text</button></div>
+      </div>
+
+      <div class="card" id="jshare">
+        <h3>Pass it on<span class="kn">ಇತರರಿಗೂ ತಿಳಿಸಿ</span></h3>
+        <p class="fine" style="font-size:14px">The more people check their MLA, the harder these records are to ignore. Send a page to your family or village WhatsApp group.</p>
+        <div class="row2" id="jsharebtns"></div>
+      </div>
+    </div>
+    <p class="fine" style="margin-top:14px">Sending opens a form on GitHub, which needs a free account; what you send there is public. Don't include your phone number, and don't accuse a named person: send records, not rumours. No account? Use "Copy text" and pass it to someone who has one. If an official asked you for a bribe, complain to the <a href="https://lokayukta.karnataka.gov.in/" target="_blank" rel="noopener" style="color:var(--accent)">Karnataka Lokayukta</a>, which can act on it.</p>
+  </section>
 
   <section class="block page" id="latest">
     <h2>Latest</h2>
@@ -817,6 +883,63 @@ document.querySelectorAll('.rticp').forEach(b => b.addEventListener('click', () 
   const t = b.closest('.card').querySelector('.rtitxt').textContent;
   try { navigator.clipboard.writeText(t); b.textContent = lang === 'kn' ? 'ನಕಲಾಯಿತು' : 'Copied' } catch (e) {}
 }));
+// Have your say: builds a prefilled GitHub issue (or copyable text) from the choices; nothing is stored on this site.
+(function () {
+  const REPO = 'https://github.com/jarvisss007/know-your-mla';
+  const SITE = 'https://jarvisss007.github.io/know-your-mla/';
+  const DONE = { Kanakapura: 'reports/satellite/kanakapura/', Holenarasipur: 'reports/satellite/holenarasipur/', Mahadevapura: 'reports/satellite/mahadevapura/' };
+  const PATCH = {"Kanakapura":[[1,40.2,12.3973,77.3217],[2,34.5,12.41145,77.34674],[3,26.3,12.40554,77.3294],[4,17.5,12.41784,77.31793],[5,17.1,12.40667,77.32417],[6,15.7,12.455,77.35798],[7,13.7,12.40876,77.35471],[8,11.5,12.42671,77.31699],[9,10.8,12.49486,77.34574],[10,10.5,12.38232,77.37111],[11,10.3,12.44691,77.42374],[12,9.9,12.39777,77.35066],[13,9.8,12.47281,77.62065],[14,9.5,12.37912,77.38579],[15,8.4,12.42168,77.33341]],"Holenarasipur":[[1,40.0,12.80142,76.30874],[2,34.0,12.93456,76.35045],[3,29.1,12.97213,76.13042],[4,24.6,12.95928,76.13156],[5,15.0,12.90812,76.19013],[6,11.6,13.09903,76.21687],[7,11.0,12.99849,76.29317],[8,7.5,12.75237,76.20386],[9,7.2,13.06184,76.16679],[10,6.9,12.78784,76.31254],[11,6.6,12.87489,76.14012],[12,6.2,12.97401,76.2145],[13,5.8,12.76735,76.26905],[14,5.7,12.91518,76.18924],[15,5.7,12.7642,76.28488]]};
+  const TOPICS = ['My constituency from space', "Where my district's drought relief went", 'A scheme that is not reaching people', 'A public work paid for but not done', "My MLA's assets and cases", 'Officials raided: what happened next', 'Lakes and land encroachment', 'Something else'];
+  const WHAT = ['Buildings or a layout', 'Quarry or mining', 'Farm field, ploughed or harvested', 'Burnt ground', 'Cleared trees or scrub', 'Road or public work', 'Nothing has changed', 'Something else'];
+  const $j = id => document.getElementById(id);
+  const chipSet = (box, items, multi) => {
+    box.innerHTML = items.map(x => `<button type="button" class="chip" aria-pressed="false">${x}</button>`).join('');
+    box.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return;
+      if (!multi) box.querySelectorAll('.chip').forEach(c => c !== b && c.setAttribute('aria-pressed', 'false'));
+      b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true'); update(); });
+  };
+  const picked = box => [...box.querySelectorAll('.chip[aria-pressed=true]')].map(b => b.textContent);
+  chipSet($j('jtopics'), TOPICS, true); chipSet($j('jfwhat'), WHAT, false);
+  [...new Set(Object.values(DIST))].sort().forEach(d => $j('jdist').add(new Option(d, d)));
+  [...D].sort((a, b) => a.c.localeCompare(b.c)).forEach(d => $j('jac').add(new Option(`${d.c} (${d.n})`, d.c)));
+  function showMap() { const p = PATCH[$j('jfseat').value].find(x => String(x[0]) === $j('jfnum').value);
+    $j('jfmap').innerHTML = p ? `Location ${p[2].toFixed(4)}, ${p[3].toFixed(4)}: <a style="color:var(--accent)" target="_blank" rel="noopener" href="https://www.openstreetmap.org/?mlat=${p[2]}&mlon=${p[3]}#map=16/${p[2]}/${p[3]}">open map</a> · <a style="color:var(--accent)" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=${p[2]},${p[3]}">directions</a>` : ''; }
+  function fillPatches() { const s = $j('jfseat').value; $j('jfnum').innerHTML = PATCH[s].map(p => `<option value="${p[0]}">#${p[0]}: ${p[1]} ha</option>`).join(''); showMap(); }
+  $j('jfseat').addEventListener('change', () => { fillPatches(); update() }); $j('jfnum').addEventListener('change', () => { showMap(); update() });
+  fillPatches();
+  function msg(kind) {
+    if (kind === 'next') { const tp = picked($j('jtopics')), d = $j('jdist').value, x = $j('jtext').value.trim();
+      if (!tp.length && !x) return null;
+      return { title: 'Suggestion: ' + (tp[0] || 'idea') + (d ? ' (' + d + ')' : ''),
+               body: `**Topics:** ${tp.join('; ') || 'not chosen'}\n**District:** ${d || 'not given'}\n\n${x}\n\n_Sent from the Have your say page._` }; }
+    if (kind === 'field') { const s = $j('jfseat').value, n = $j('jfnum').value, w = picked($j('jfwhat'))[0], x = $j('jftext').value.trim();
+      if (!w && !x) return null; const p = PATCH[s].find(q => String(q[0]) === n);
+      return { title: `Field report: ${s} patch #${n}` + (w ? ' (' + w + ')' : ''),
+               body: `**Constituency:** ${s}\n**Patch:** #${n}, ${p[1]} ha, ${p[2]}, ${p[3]}\n**What is there now:** ${w || 'not chosen'}\n\n${x}\n\n_Sent from the Have your say page. Photos can be attached here._` }; }
+    if (kind === 'space') { const c = $j('jac').value;
+      return { title: `Satellite check request: ${c}`, body: `Please compare ${c} from space next.\n\n_Sent from the Have your say page. Add a line on why, if you like._` }; }
+  }
+  const url = m => `${REPO}/issues/new?title=${encodeURIComponent(m.title)}&body=${encodeURIComponent(m.body)}`;
+  function update() { ['next', 'field'].forEach(k => { const ok = !!msg(k); document.querySelectorAll(`[data-send=${k}],[data-copy=${k}]`).forEach(b => b.disabled = !ok) }) }
+  ['jtext', 'jftext'].forEach(id => $j(id).addEventListener('input', update)); $j('jdist').addEventListener('change', update);
+  document.querySelectorAll('[data-send]').forEach(b => b.addEventListener('click', () => { const m = msg(b.dataset.send); if (m) window.open(url(m), '_blank', 'noopener') }));
+  document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', async () => { const m = msg(b.dataset.copy); if (!m) return;
+    const txt = m.title + '\n\n' + m.body.replace(/\*\*/g, '').replace(/_/g, '');
+    try { await navigator.clipboard.writeText(txt); b.textContent = 'Copied' } catch (e) { b.textContent = 'Copy failed' } setTimeout(() => b.textContent = 'Copy text', 2000) }));
+  $j('jac').addEventListener('change', () => { const c = $j('jac').value, r = $j('jacres'); if (!c) { r.hidden = true; return }
+    r.hidden = false;
+    if (DONE[c]) r.innerHTML = `${c} is done. <a href="${DONE[c]}">See ${c} from space →</a>`;
+    else { const m = msg('space'); r.innerHTML = `${c} is not done yet. <a href="${url(m)}" target="_blank" rel="noopener">Ask for ${c} →</a> <span class="fine">(opens GitHub)</span>`; } });
+  const SH = [['Find your MLA', 'See what your MLA swore about their wealth and criminal cases', SITE],
+              ['Farmers', 'ರೈತರೇ, ನಿಮಗೆ ಸಿಗಬೇಕಾದ ಯೋಜನೆಗಳು ಯಾವುವು? 8 ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರಿಸಿ', SITE + 'farmers.html'],
+              ['Research', 'What Karnataka paid for, and what actually happened', SITE + '#research']];
+  $j('jsharebtns').innerHTML = SH.map(s => `<a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(s[1] + ': ' + s[2])}">WhatsApp: ${s[0]}</a>`).join('');
+  // how many people have written in so far (public count from GitHub; stays hidden if it can't be read)
+  fetch('https://api.github.com/repos/jarvisss007/know-your-mla').then(r => r.ok ? r.json() : null).then(j => {
+    if (j && j.open_issues_count > 0) { const c = $j('jcount'); c.hidden = false;
+      c.innerHTML = `<b>${j.open_issues_count}</b> suggestions and reports so far. <a href="${REPO}/issues" target="_blank" rel="noopener" style="color:var(--accent)">Read them</a>`; } }).catch(() => {});
+})();
+
 // Pages: each tab shows one page; the URL hash names it (#press, #research ...), so every page has its own link.
 (function () {
   const pages = [...document.querySelectorAll('.page')], nav = document.querySelector('.nav');
