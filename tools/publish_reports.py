@@ -41,7 +41,7 @@ PAGES = [
      ["truecolor_2019_2026.png", "change_map_2019_2026.png", "clusters.png", "field_checks.csv"], None),
     ("research/satellite/DRAFT_mahadevapura_scorecard.html", "satellite/mahadevapura/index.html", "Mahadevapura From Space · Gandaberunda",
      "Sentinel-2 land-cover comparison of Mahadevapura constituency, February 2019 and February 2026.", None,
-     ["truecolor_2019_2026.png", "change_map_2019_2026.png"], MAHADEVAPURA_NOTE),
+     ["truecolor_2019_2026.png", "change_map_2019_2026.png"], None),
 ]
 
 

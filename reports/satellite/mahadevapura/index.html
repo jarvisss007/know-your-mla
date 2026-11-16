@@ -13,15 +13,18 @@
 /* Layout: one column; headline change tiles, the two images, the lake table, then limits and data credits. */
 :root {
   --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8;
-  --red: #c21f30; --yellow: #f2b705; --blue: #1f6fbf;
+  --red: #c21f30; --yellow: #f2b705; --blue: #1f6fbf; --grid: #e7eaef; --warn-bg: #fff6d6; --warn-line: #e8c547;
+  --s19: #8a6d3b; --s25: #9aa3b2; --s26: #1f6fbf;
   --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
-  --red: #ef5261; --yellow: #f5c93a; --blue: #6aaef0; color-scheme: dark } }
+  --red: #ef5261; --yellow: #f5c93a; --blue: #6aaef0; --grid: #232834; --warn-bg: #2a2410; --warn-line: #7a6420;
+  --s19: #d2a764; --s25: #6b7383; --s26: #6aaef0; color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
-  --red: #ef5261; --yellow: #f5c93a; --blue: #6aaef0; color-scheme: dark }
+  --red: #ef5261; --yellow: #f5c93a; --blue: #6aaef0; --grid: #232834; --warn-bg: #2a2410; --warn-line: #7a6420;
+  --s19: #d2a764; --s25: #6b7383; --s26: #6aaef0; color-scheme: dark }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.6; }
 .wrap { max-width: 960px; margin: 0 auto; padding-block: 28px 64px;
@@ -32,7 +35,7 @@ p { margin: 0; }
 .eyebrow { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--red); font-weight: 600; }
 .draft { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em; background: var(--yellow); color: #161a22; padding: 2px 8px; border-radius: 4px; }
 .lede { color: var(--muted); max-width: 66ch; }
-.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr)); gap: 12px; }
 .tile { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: grid; gap: 4px; align-content: start; }
 .tile .k { font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
 .tile .v { font-family: var(--display); font-size: 2rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.1; }
@@ -53,6 +56,17 @@ td.up { color: var(--blue); font-weight: 600; } td.dn { color: var(--red); font-
 ul.limits { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; max-width: 72ch; }
 .foot { font-size: .85rem; color: var(--muted); }
 .foot a { color: inherit; }
+.warn { background: var(--warn-bg); border: 1px solid var(--warn-line); border-radius: 10px; padding: 14px 18px; display: grid; gap: 6px; max-width: 75ch; }
+.warn strong { font-family: var(--display); }
+.chart { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+.chart svg { width: 100%; height: auto; display: block; }
+.grid { stroke: var(--grid); stroke-width: 1; }
+.ax { fill: var(--muted); font: 12px var(--body); }
+.ln { fill: none; stroke-width: 2; }
+.lab { font: 600 13px var(--body); }
+.s19 { stroke: var(--s19); fill: var(--s19); } .s25 { stroke: var(--s25); fill: var(--s25); } .s26 { stroke: var(--s26); fill: var(--s26); }
+.ln.s19, .ln.s25, .ln.s26 { fill: none; }
+.pt { stroke: var(--surface); stroke-width: 1.5; } .pt.pick { stroke: var(--fg); stroke-width: 2; }
 </style>
 
 </head>
@@ -64,15 +78,22 @@ ul.limits { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; max-width: 
     <h1>Mahadevapura from space, February 2019 and February 2026</h1>
     <span><span class="draft">TEST VERSION · UNDER REVIEW</span></span>
   </div>
-  <div style="background:var(--surface);border:1px solid var(--yellow);border-left:4px solid var(--yellow);border-radius:10px;padding:12px 16px;max-width:75ch"><strong>Check in progress.</strong> In Kanakapura, a check of every clean date showed that most of the change in green cover was season and rainfall, not land use. The same check is being run here. Until it is done, treat the green-cover figure below as unconfirmed.</div>
   <p class="lede">Two cloud-free Sentinel-2 satellite pictures of Assembly constituency 174 are compared pixel by pixel at 10 m. They were taken on almost the same date, 13 February 2019 and 11 February 2026, seven years apart. This is the first constituency in a planned series. It measures land cover only and says nothing about who caused any change.</p>
 
+  <div class="warn"><strong>Read this first: the green-cover change is within the normal swing between dates.</strong><p>A check of every clean January-to-March picture (36 dates in 2019, 2025 and 2026) found that green cover here moves by several points from one week to the next. Comparing 2019 and 2026 pictures taken within three days of each other, 2026 was lower in four pairs and higher in four, by between 6 points less and 16 points more. The pair used below (13 Feb 2019 and 11 Feb 2026) shows 3 points less, which is inside that range. So these pictures do not show a real loss of green cover, and the −748 ha below should not be quoted as one. The lake changes are a separate question: they are visible in the pictures themselves.</p></div>
+
   <div class="tiles">
-    <div class="tile"><span class="k">Green cover (NDVI &gt; 0.4)</span><span class="v r">−748 ha</span><span class="s">7,263 → 6,515 ha · 28.9% → 26.0% of the area</span></div>
+    <div class="tile"><span class="k">Green cover (NDVI &gt; 0.4)</span><span class="v">−748 ha</span><span class="s">7,263 → 6,515 ha · 28.9% → 26.0% of the area</span></div>
     <div class="tile"><span class="k">Open water (MNDWI &gt; 0)</span><span class="v b">+283 ha</span><span class="s">383 → 665 ha · mostly weed-covered lakes showing open water again</span></div>
     <div class="tile"><span class="k">Built-up or bare (proxy)</span><span class="v">−197 ha net</span><span class="s">8,176 → 7,978 ha · but 3,453 ha newly entered it, 1,049 ha of that green in 2019</span></div>
     <div class="tile"><span class="k">Area compared</span><span class="v">25,099 ha</span><span class="s">99.8% of the constituency clear in both pictures</span></div>
   </div>
+
+  <section style="display:grid;gap:12px;min-width:0">
+    <h2>Is the change real? Green cover on every clean date, January to March</h2>
+    <div class="chart"><svg viewBox="0 0 640 300" role="img" aria-label="Share of Mahadevapura with green cover on every clean satellite date, January to March, in 2019, 2025 and 2026"><line x1="44" x2="576" y1="266.0" y2="266.0" class="grid"/><text x="38" y="270.0" text-anchor="end" class="ax">0%</text><line x1="44" x2="576" y1="216.0" y2="216.0" class="grid"/><text x="38" y="220.0" text-anchor="end" class="ax">10%</text><line x1="44" x2="576" y1="166.0" y2="166.0" class="grid"/><text x="38" y="170.0" text-anchor="end" class="ax">20%</text><line x1="44" x2="576" y1="116.0" y2="116.0" class="grid"/><text x="38" y="120.0" text-anchor="end" class="ax">30%</text><line x1="44" x2="576" y1="66.0" y2="66.0" class="grid"/><text x="38" y="70.0" text-anchor="end" class="ax">40%</text><line x1="44" x2="576" y1="16.0" y2="16.0" class="grid"/><text x="38" y="20.0" text-anchor="end" class="ax">50%</text><text x="44.0" y="288" text-anchor="middle" class="ax">1 Jan</text><text x="229.3" y="288" text-anchor="middle" class="ax">1 Feb</text><text x="396.7" y="288" text-anchor="middle" class="ax">1 Mar</text><text x="576.0" y="288" text-anchor="middle" class="ax">31 Mar</text><polyline points="61.9,82.4 91.8,88.9 151.6,105.1 181.5,194.7 301.0,128.1 330.9,171.8 360.8,146.9 390.7,155.7 450.5,190.9 480.4,164.2 510.2,199.2 540.1,194.6 570.0,204.9" class="ln s19"/><circle cx="61.9" cy="82.4" r="3" class="pt s19"><title>2019-01-04: 36.7% green</title></circle><circle cx="91.8" cy="88.9" r="3" class="pt s19"><title>2019-01-09: 35.4% green</title></circle><circle cx="151.6" cy="105.1" r="3" class="pt s19"><title>2019-01-19: 32.2% green</title></circle><circle cx="181.5" cy="194.7" r="3" class="pt s19"><title>2019-01-24: 14.3% green</title></circle><circle cx="301.0" cy="128.1" r="5" class="pt s19 pick"><title>2019-02-13: 27.6% green</title></circle><circle cx="330.9" cy="171.8" r="3" class="pt s19"><title>2019-02-18: 18.9% green</title></circle><circle cx="360.8" cy="146.9" r="3" class="pt s19"><title>2019-02-23: 23.8% green</title></circle><circle cx="390.7" cy="155.7" r="3" class="pt s19"><title>2019-02-28: 22.1% green</title></circle><circle cx="450.5" cy="190.9" r="3" class="pt s19"><title>2019-03-10: 15.0% green</title></circle><circle cx="480.4" cy="164.2" r="3" class="pt s19"><title>2019-03-15: 20.4% green</title></circle><circle cx="510.2" cy="199.2" r="3" class="pt s19"><title>2019-03-20: 13.4% green</title></circle><circle cx="540.1" cy="194.6" r="3" class="pt s19"><title>2019-03-25: 14.3% green</title></circle><circle cx="570.0" cy="204.9" r="3" class="pt s19"><title>2019-03-30: 12.2% green</title></circle><polyline points="79.9,24.8 109.8,38.2 199.4,62.6 259.2,94.8 289.1,93.5 319.0,119.3 348.9,120.5 378.7,135.0 438.5,161.1 468.4,139.4 480.4,150.3 558.1,116.3" class="ln s25"/><circle cx="79.9" cy="24.8" r="3" class="pt s25"><title>2025-01-07: 48.2% green</title></circle><circle cx="109.8" cy="38.2" r="3" class="pt s25"><title>2025-01-12: 45.6% green</title></circle><circle cx="199.4" cy="62.6" r="3" class="pt s25"><title>2025-01-27: 40.7% green</title></circle><circle cx="259.2" cy="94.8" r="3" class="pt s25"><title>2025-02-06: 34.2% green</title></circle><circle cx="289.1" cy="93.5" r="3" class="pt s25"><title>2025-02-11: 34.5% green</title></circle><circle cx="319.0" cy="119.3" r="3" class="pt s25"><title>2025-02-16: 29.3% green</title></circle><circle cx="348.9" cy="120.5" r="3" class="pt s25"><title>2025-02-21: 29.1% green</title></circle><circle cx="378.7" cy="135.0" r="3" class="pt s25"><title>2025-02-26: 26.2% green</title></circle><circle cx="438.5" cy="161.1" r="3" class="pt s25"><title>2025-03-08: 21.0% green</title></circle><circle cx="468.4" cy="139.4" r="3" class="pt s25"><title>2025-03-13: 25.3% green</title></circle><circle cx="480.4" cy="150.3" r="3" class="pt s25"><title>2025-03-15: 23.1% green</title></circle><circle cx="558.1" cy="116.3" r="3" class="pt s25"><title>2025-03-28: 29.9% green</title></circle><polyline points="79.9,98.7 139.6,96.1 169.5,112.8 199.4,128.5 229.3,140.9 259.2,140.6 289.1,143.6 408.6,154.1 438.5,142.5 450.5,143.8 468.4,196.4" class="ln s26"/><circle cx="79.9" cy="98.7" r="3" class="pt s26"><title>2026-01-07: 33.5% green</title></circle><circle cx="139.6" cy="96.1" r="3" class="pt s26"><title>2026-01-17: 34.0% green</title></circle><circle cx="169.5" cy="112.8" r="3" class="pt s26"><title>2026-01-22: 30.6% green</title></circle><circle cx="199.4" cy="128.5" r="3" class="pt s26"><title>2026-01-27: 27.5% green</title></circle><circle cx="229.3" cy="140.9" r="3" class="pt s26"><title>2026-02-01: 25.0% green</title></circle><circle cx="259.2" cy="140.6" r="3" class="pt s26"><title>2026-02-06: 25.1% green</title></circle><circle cx="289.1" cy="143.6" r="5" class="pt s26 pick"><title>2026-02-11: 24.5% green</title></circle><circle cx="408.6" cy="154.1" r="3" class="pt s26"><title>2026-03-03: 22.4% green</title></circle><circle cx="438.5" cy="142.5" r="3" class="pt s26"><title>2026-03-08: 24.7% green</title></circle><circle cx="450.5" cy="143.8" r="3" class="pt s26"><title>2026-03-10: 24.4% green</title></circle><circle cx="468.4" cy="196.4" r="3" class="pt s26"><title>2026-03-13: 13.9% green</title></circle><text x="584" y="120.3" class="lab s25">2025</text><text x="584" y="200.4" class="lab s26">2026</text><text x="584" y="216.4" class="lab s19">2019</text></svg></div>
+    <p class="foot">Share of the constituency with NDVI above 0.4, computed at 20 m on every Sentinel-2 date with less than 1% cloud inside the boundary (tile 43PGQ). Large dots are the two dates used for the tiles and maps. Data: research/satellite/mahadevapura_datecheck/ in the repo.</p>
+  </section>
 
   <div class="maps">
     <figure><img src="truecolor_2019_2026.png" alt="True-colour satellite images of Mahadevapura constituency, 13 February 2019 on the left and 11 February 2026 on the right, with the boundary in yellow"><figcaption>True colour, 13 Feb 2019 (left) and 11 Feb 2026 (right). Yellow line: constituency boundary. Bellandur's lake bed, bottom left, looks pale and drained in 2026.</figcaption></figure>
@@ -104,7 +125,7 @@ ul.limits { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; max-width: 
   <section style="display:grid;gap:12px">
     <h2>Limits</h2>
     <ul class="limits">
-      <li>One picture per year. February lake levels depend on the previous monsoon, and crop timing shows up as green cover lost or gained.</li>
+      <li>One picture per year. February lake levels depend on the previous monsoon, and crop timing shows up as green cover lost or gained. The date check above shows how large that effect is.</li>
       <li>The built-up figure is a proxy. It also catches bare soil, harvested fields, cleared plots and drained lake beds, and it misses many real roofs. Do not quote it as "construction".</li>
       <li>Thresholds are standard textbook values, not tuned for Bengaluru. Trust the direction of change more than the exact hectares.</li>
       <li>10 m pixels blur roads, tree lines and small ponds. Lakes under 2 ha are not measured.</li>

@@ -1,0 +1,10 @@
+{
+  "_status": "DRAFT - date check only for Mahadevapura (AC 174). Headline numbers stay in ../metrics.json; this folder only tests whether the 13 Feb 2019 / 11 Feb 2026 pair is typical of its season.",
+  "ac_name": "Mahadevapura",
+  "ac_no": 174,
+  "boundary": "../data/boundary/mahadevapura_ac174.geojson",
+  "dst_crs": "EPSG:32643",
+  "tile": "43PGQ",
+  "search_windows": {"2019": "2019-01-01/2019-03-31", "2025": "2025-01-01/2025-03-31", "2026": "2026-01-01/2026-03-31"},
+  "max_tile_cloud_pct": 30
+}

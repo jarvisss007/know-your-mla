@@ -5,15 +5,18 @@
 /* Layout: one column; headline change tiles, the two images, the lake table, then limits and data credits. */
 :root {
   --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8;
-  --red: #c21f30; --yellow: #f2b705; --blue: #1f6fbf;
+  --red: #c21f30; --yellow: #f2b705; --blue: #1f6fbf; --grid: #e7eaef; --warn-bg: #fff6d6; --warn-line: #e8c547;
+  --s19: #8a6d3b; --s25: #9aa3b2; --s26: #1f6fbf;
   --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, "Segoe UI", sans-serif;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
-  --red: #ef5261; --yellow: #f5c93a; --blue: #6aaef0; color-scheme: dark } }
+  --red: #ef5261; --yellow: #f5c93a; --blue: #6aaef0; --grid: #232834; --warn-bg: #2a2410; --warn-line: #7a6420;
+  --s19: #d2a764; --s25: #6b7383; --s26: #6aaef0; color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
-  --red: #ef5261; --yellow: #f5c93a; --blue: #6aaef0; color-scheme: dark }
+  --red: #ef5261; --yellow: #f5c93a; --blue: #6aaef0; --grid: #232834; --warn-bg: #2a2410; --warn-line: #7a6420;
+  --s19: #d2a764; --s25: #6b7383; --s26: #6aaef0; color-scheme: dark }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.6; }
 .wrap { max-width: 960px; margin: 0 auto; padding-block: 28px 64px;
@@ -24,7 +27,7 @@ p { margin: 0; }
 .eyebrow { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--red); font-weight: 600; }
 .draft { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em; background: var(--yellow); color: #161a22; padding: 2px 8px; border-radius: 4px; }
 .lede { color: var(--muted); max-width: 66ch; }
-.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr)); gap: 12px; }
 .tile { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: grid; gap: 4px; align-content: start; }
 .tile .k { font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
 .tile .v { font-family: var(--display); font-size: 2rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.1; }
@@ -45,6 +48,9 @@ td.up { color: var(--blue); font-weight: 600; } td.dn { color: var(--red); font-
 ul.limits { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; max-width: 72ch; }
 .foot { font-size: .85rem; color: var(--muted); }
 .foot a { color: inherit; }
+.warn { background: var(--warn-bg); border: 1px solid var(--warn-line); border-radius: 10px; padding: 14px 18px; display: grid; gap: 6px; max-width: 75ch; }
+.warn strong { font-family: var(--display); }
+/*CHART_CSS*/
 </style>
 
 <div class="wrap">
@@ -55,12 +61,20 @@ ul.limits { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; max-width: 
   </div>
   <p class="lede">Two cloud-free Sentinel-2 satellite pictures of Assembly constituency 174 are compared pixel by pixel at 10 m. They were taken on almost the same date, 13 February 2019 and 11 February 2026, seven years apart. This is the first constituency in a planned series. It measures land cover only and says nothing about who caused any change.</p>
 
+  <div class="warn"><strong>Read this first: the green-cover change is within the normal swing between dates.</strong><p>A check of every clean January-to-March picture (36 dates in 2019, 2025 and 2026) found that green cover here moves by several points from one week to the next. Comparing 2019 and 2026 pictures taken within three days of each other, 2026 was lower in four pairs and higher in four, by between 6 points less and 16 points more. The pair used below (13 Feb 2019 and 11 Feb 2026) shows 3 points less, which is inside that range. So these pictures do not show a real loss of green cover, and the −748 ha below should not be quoted as one. The lake changes are a separate question: they are visible in the pictures themselves.</p></div>
+
   <div class="tiles">
-    <div class="tile"><span class="k">Green cover (NDVI &gt; 0.4)</span><span class="v r">−748 ha</span><span class="s">7,263 → 6,515 ha · 28.9% → 26.0% of the area</span></div>
+    <div class="tile"><span class="k">Green cover (NDVI &gt; 0.4)</span><span class="v">−748 ha</span><span class="s">7,263 → 6,515 ha · 28.9% → 26.0% of the area</span></div>
     <div class="tile"><span class="k">Open water (MNDWI &gt; 0)</span><span class="v b">+283 ha</span><span class="s">383 → 665 ha · mostly weed-covered lakes showing open water again</span></div>
     <div class="tile"><span class="k">Built-up or bare (proxy)</span><span class="v">−197 ha net</span><span class="s">8,176 → 7,978 ha · but 3,453 ha newly entered it, 1,049 ha of that green in 2019</span></div>
     <div class="tile"><span class="k">Area compared</span><span class="v">25,099 ha</span><span class="s">99.8% of the constituency clear in both pictures</span></div>
   </div>
+
+  <section style="display:grid;gap:12px;min-width:0">
+    <h2>Is the change real? Green cover on every clean date, January to March</h2>
+    <div class="chart"><!--CHART--></div>
+    <p class="foot">Share of the constituency with NDVI above 0.4, computed at 20 m on every Sentinel-2 date with less than 1% cloud inside the boundary (tile 43PGQ). Large dots are the two dates used for the tiles and maps. Data: research/satellite/mahadevapura_datecheck/ in the repo.</p>
+  </section>
 
   <div class="maps">
     <figure><img src="truecolor_2019_2026.png" alt="True-colour satellite images of Mahadevapura constituency, 13 February 2019 on the left and 11 February 2026 on the right, with the boundary in yellow"><figcaption>True colour, 13 Feb 2019 (left) and 11 Feb 2026 (right). Yellow line: constituency boundary. Bellandur's lake bed, bottom left, looks pale and drained in 2026.</figcaption></figure>
@@ -81,7 +95,7 @@ ul.limits { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; max-width: 
   <section style="display:grid;gap:12px">
     <h2>Limits</h2>
     <ul class="limits">
-      <li>One picture per year. February lake levels depend on the previous monsoon, and crop timing shows up as green cover lost or gained.</li>
+      <li>One picture per year. February lake levels depend on the previous monsoon, and crop timing shows up as green cover lost or gained. The date check above shows how large that effect is.</li>
       <li>The built-up figure is a proxy. It also catches bare soil, harvested fields, cleared plots and drained lake beds, and it misses many real roofs. Do not quote it as "construction".</li>
       <li>Thresholds are standard textbook values, not tuned for Bengaluru. Trust the direction of change more than the exact hectares.</li>
       <li>10 m pixels blur roads, tree lines and small ponds. Lakes under 2 ha are not measured.</li>
