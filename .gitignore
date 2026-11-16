@@ -7,3 +7,5 @@ video/build_talk/
 
 __pycache__/
 video/out/talk/
+video/studio3d/node_modules/
+video/studio3d/build/

@@ -42,6 +42,9 @@ body{width:1080px;height:1920px;background:radial-gradient(ellipse at 50% 30%,#1
 .url{font:800 46px LAT,sans-serif;color:#f2b705;margin-top:24px}
 .chorus{position:absolute;left:60px;right:60px;top:300px;text-align:center;font:900 84px/1.3 KN,LAT,sans-serif;color:#f2b705;text-shadow:0 6px 30px rgba(242,183,5,.35)}
 .chorus small{display:block;font:600 40px/1.4 LAT,sans-serif;color:#eceef2;margin-top:24px}
+.bub .w{color:rgba(17,20,26,.42);border-radius:10px}
+.bub.lit .w{color:#11141a}
+.bub.hot .w{color:#fff;background:#11141a;box-shadow:0 0 0 5px #11141a}
 '''.replace('KN,', KN_FONT + ',').replace('LAT,', LAT_FONT + ',')
 
 
@@ -77,13 +80,20 @@ def stage_svg(sc, speaker, mouth_open, blink):
     return svg.replace('width="850" height="470"', 'width="850" height="470"')
 
 
-def page(sc, lang, line, mouth_open, blink):
+RECT_JS = ('<script>document.body.setAttribute("data-r",[...document.querySelectorAll(".bub .w")].map(e=>{const r=e.getBoundingClientRect();'
+           'return [r.left,r.top,r.right,r.bottom].map(Math.round)}).flat().join(","))</script>')
+
+
+def page(sc, lang, line, mouth_open, blink, wmode='', empty=False, card=None, probe=False):
+    """wmode: '' = words dim (not yet spoken), 'lit' = all spoken, 'hot' = all in the current-word style.
+    empty: no card and no bubble (the plate that entrances animate over). card: override the card HTML (count-up frames)."""
     kick = sc['kicker'][0 if lang == 'kn' else 1]
-    body = sc['card_' + lang]
+    body = '' if empty else (card if card is not None else sc['card_' + lang])
     bub = ''
-    if line and line[0] in ('m', 'k'):
+    if line and line[0] in ('m', 'k') and not empty:
         big, small = (line[1], line[2]) if lang == 'kn' else (line[2], line[1])
-        bub = '<div class="bub %s">%s<small>%s</small></div>' % ('lm' if line[0] == 'm' else 'lk', big, small)
+        words = ' '.join('<span class="w">%s</span>' % w for w in big.split(' ') if w)
+        bub = '<div class="bub %s %s">%s<small>%s</small></div>' % ('lm' if line[0] == 'm' else 'lk', wmode, words, small)
     chorus = ''
     if sc.get('chorus'):
         c = sc['chorus'][lang]
@@ -93,7 +103,79 @@ def page(sc, lang, line, mouth_open, blink):
     return ('<!doctype html><html><head><meta charset="utf-8"><style>' + CSS + '</style>' + STYLE + '</head><body>'
             '<div class="flag"><i></i><i></i></div><div class="brand">Gandaberunda · ಗಂಡಭೇರುಂಡ</div>'
             '<div class="k">' + kick + '</div><div class="card">' + body + '</div>' + chorus + bub +
-            '<div class="stage">' + stage_svg(sc, line[0] if line else '', mouth_open, blink) + '</div>' + src + '</body></html>')
+            '<div class="stage">' + stage_svg(sc, line[0] if line else '', mouth_open, blink) + '</div>' + src +
+            (RECT_JS if probe else '') + '</body></html>')
+
+
+def word_rects(html, path, prof):
+    """Pixel boxes of each word in the bubble, measured by Chrome itself (so Kannada shaping and wrapping are exact)."""
+    io.open(path, 'w', encoding='utf-8').write(html)
+    for attempt in range(5):
+        try:
+            dom = run([CHROME, '--headless=new', '--disable-gpu', '--hide-scrollbars', '--force-device-scale-factor=1',
+                       '--window-size=%d,%d' % (W, H), '--user-data-dir=' + prof, '--dump-dom', 'file://' + path]).stdout.decode('utf-8', 'ignore')
+            break
+        except subprocess.CalledProcessError:
+            if attempt == 4: raise
+            import time; time.sleep(2 + attempt * 2)
+    m = re.search(r'data-r="([\d,\-]*)"', dom)
+    v = [int(x) for x in m.group(1).split(',')] if m and m.group(1) else []
+    return [tuple(v[i:i + 4]) for i in range(0, len(v), 4)]
+
+
+# ---------- motion helpers ----------
+CARD_BOX, BUB_BOX = (0, 262, W, 918), (0, 918, W, 1212)
+
+
+def ease_out(u):
+    u = min(1.0, max(0.0, u)); return 1 - (1 - u) ** 3
+
+
+def ease_back(u):
+    u = min(1.0, max(0.0, u)); c = 1.70158; return 1 + (c + 1) * (u - 1) ** 3 + c * (u - 1) ** 2
+
+
+def fx(frame, plate, box, s=1.0, alpha=1.0, dy=0, anchor=(0.1, 0.5)):
+    """Re-draw one region of the frame scaled / shifted / faded over the empty plate."""
+    x0, y0, x1, y1 = box; w, h = x1 - x0, y1 - y0
+    src = frame.crop(box)
+    if abs(s - 1) > 1e-3: src = src.resize((max(1, int(w * s)), max(1, int(h * s))), Image.BILINEAR)
+    base = plate.crop(box)
+    layer = base.copy()
+    layer.paste(src, (int(anchor[0] * w * (1 - s)), int(anchor[1] * h * (1 - s)) + int(dy)))
+    frame.paste(Image.blend(base, layer, min(1.0, max(0.0, alpha))), (x0, y0))
+
+
+def fmt_like(orig, val):
+    """Format val the way the original number token is written (Indian or western commas, same decimals)."""
+    dec = len(orig.split('.')[1]) if '.' in orig else 0
+    txt = ('%.*f' % (dec, val)); ip, fp = (txt.split('.') + [''])[:2]
+    if ',' in orig:
+        if re.match(r'^\d{1,2}(,\d{2})+,\d{3}', orig):
+            head, tail = ip[:-3], ip[-3:]
+            parts = []
+            while len(head) > 2: parts.insert(0, head[-2:]); head = head[:-2]
+            if head: parts.insert(0, head)
+            ip = ','.join(parts + [tail]) if parts else tail
+        else:
+            ip = '{:,}'.format(int(ip))
+    return ip + ('.' + fp if dec else '')
+
+
+def countup_cards(card_html, steps=7):
+    """If the card's big figure is a single number, return card variants counting up to it (else None)."""
+    m = re.search(r'<div class="big[^"]*">(.*?)</div>', card_html, re.S)
+    if not m: return None
+    toks = re.findall(r'\d[\d,]*(?:\.\d+)?', re.sub(r'<small>.*?</small>', '', m.group(1), flags=re.S))
+    if len(toks) != 1: return None
+    tok = toks[0]; val = float(tok.replace(',', ''))
+    if val < 10: return None
+    out = []
+    for i in range(steps):
+        f = ease_out((i + 1) / (steps + 1))
+        inner = m.group(1).replace(tok, fmt_like(tok, val * f), 1)
+        out.append(card_html[:m.start(1)] + inner + card_html[m.end(1):])
+    return out
 
 
 def shoot(html, png, prof):
@@ -317,6 +399,31 @@ def build(scene_file, lang, out, bdir):
             cache[key] = shoot(page(ep.SCENES[si], lang, line, mo, bl), p, prof)
         return cache[key]
 
+    plates, kar, counts = {}, {}, {}
+    def plate(si):
+        if si not in plates:
+            plates[si] = shoot(page(ep.SCENES[si], lang, None, 0, 0, empty=True), os.path.join(bdir, 'p_%s_%d.png' % (lang, si)), prof)
+        return plates[si]
+    def karaoke(si, line):
+        key = (si, line[1])
+        if key not in kar:
+            n = len(kar); sc = ep.SCENES[si]
+            rects = word_rects(page(sc, lang, line, 0, 0, probe=True), os.path.join(bdir, 'k_%s_%d.html' % (lang, n)), prof)
+            lit = shoot(page(sc, lang, line, 0, 0, wmode='lit'), os.path.join(bdir, 'kl_%s_%d.png' % (lang, n)), prof)
+            hot = shoot(page(sc, lang, line, 0, 0, wmode='hot'), os.path.join(bdir, 'kh_%s_%d.png' % (lang, n)), prof)
+            words = [w for w in (line[1] if lang == 'kn' else line[2]).split(' ') if w]
+            if len(rects) != len(words): rects = []
+            wt = np.cumsum([len(w) + 1.5 for w in words]); wt = wt / wt[-1] if len(wt) else wt
+            kar[key] = (rects, lit, hot, wt)
+        return kar[key]
+    def count_imgs(si):
+        if si not in counts:
+            sc = ep.SCENES[si]
+            cards = countup_cards(sc['card_' + lang]) if sc.get('hit') and not sc.get('chorus') else None
+            counts[si] = [shoot(page(sc, lang, None, 0, 0, card=c), os.path.join(bdir, 'c_%s_%d_%d.png' % (lang, si, i)), prof).crop(CARD_BOX)
+                          for i, c in enumerate(cards)] if cards else []
+        return counts[si]
+
     spans = {}
     for (a0, a1, si, ln) in timeline:
         if ln is None: spans[si] = (a0, a1)
@@ -347,6 +454,36 @@ def build(scene_file, lang, out, bdir):
         if cur and cur[0] == 'c':
             mo = 1 if r > 0.03 else 0
         im = img(si, cur, mo, bl)
+        sc = ep.SCENES[si]
+        if not sc.get('chorus'):
+            im = im.copy(); pl = plate(si)
+            if cur and cur[0] in ('m', 'k'):
+                cb0, cb1 = next((b0, b1) for (b0, b1, s2, ln) in lines_by_t if s2 == si and ln is cur)
+                first = next(ln for (b0, b1, s2, ln) in lines_by_t if s2 == si) is cur
+                # word-by-word captions: spoken words go solid, the word being said gets the dark pill
+                rects, lit, hot, wt = karaoke(si, cur)
+                if rects and tt >= cb0:
+                    u = (tt - cb0) / max(0.05, cb1 - cb0)
+                    wi = int(np.searchsorted(wt, u, side='right')) if u < 1 else len(rects)
+                    for j, (rx0, ry0, rx1, ry1) in enumerate(rects[:wi + 1]):
+                        bx = (max(0, rx0 - 6), max(0, ry0 - 6), min(W, rx1 + 6), min(H, ry1 + 6))
+                        if j < wi: im.paste(lit.crop(bx), bx[:2])
+                        elif j == wi: im.paste(hot.crop(bx), bx[:2])
+                # bubble pops in on each new line
+                pop0 = a0 + 0.12 if first else cb0
+                anchor = (0.22, 1.0) if cur[0] == 'm' else (0.78, 1.0)
+                if tt < pop0: fx(im, pl, BUB_BOX, alpha=0.0)
+                elif tt - pop0 < 0.24:
+                    u = (tt - pop0) / 0.24
+                    fx(im, pl, BUB_BOX, s=0.86 + 0.14 * ease_back(u), alpha=u * 2.5, anchor=anchor)
+            # card entrance: figures count up and land with a punch on hits; other cards slide up
+            te = tt - a0
+            if sc.get('hit'):
+                ci = count_imgs(si)
+                if ci and te < 0.56: im.paste(ci[min(len(ci) - 1, int(te / 0.08))], CARD_BOX[:2])
+                if te < 0.4: fx(im, pl, CARD_BOX, s=1 + 0.2 * (1 - ease_out(te / 0.4)), alpha=te / 0.12)
+            elif te < 0.4:
+                e = ease_out(te / 0.4); fx(im, pl, CARD_BOX, alpha=e, dy=(1 - e) * 60)
         # camera push-in across the scene, shake + flash on hits
         p = (tt - a0) / max(0.1, a1 - a0)
         z = 1.0 + 0.06 * min(1, max(0, p))
@@ -356,7 +493,7 @@ def build(scene_file, lang, out, bdir):
             if 0 <= tt - h < 0.35:
                 k_ = 1 - (tt - h) / 0.35
                 dx, dy = int(14 * k_ * math.sin(tt * 90)), int(10 * k_ * math.cos(tt * 77))
-                flash = 0.55 * k_
+                flash = 0.3 * max(0.0, 1 - (tt - h) / 0.16)
         cw, ch = int(W / z), int(H / z)
         x0 = (W - cw) // 2 + dx; y0 = int((H - ch) * 0.35) + dy
         x0 = max(0, min(W - cw, x0)); y0 = max(0, min(H - ch, y0))
