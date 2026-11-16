@@ -81,4 +81,4 @@ Not yet read (blocked or pending): Deccan Herald on the single largest haul from
 
 ## Tracker
 
-The raid-to-verdict tracker built from this note is in `research/officials_tracker/`: `tracker.csv` (one row per official, designation only), `build.py`, and the review page `DRAFT_officials_tracker.html`. As of 16 Nov 2026 it holds 48 officials over 10 action days; no row has had its follow-up check yet, and no raid report has been found for May, August, October or November 2026.
+The raid-to-verdict tracker built from this note is in `research/officials_tracker/`: `tracker.csv` (one row per official, designation only), `build.py`, and the review page `DRAFT_officials_tracker.html`. As of 16 Nov 2026 it holds 55 officials over 10 action days. A follow-up check by press search (16 Nov 2026) found no chargesheet, sanction decision, trial or verdict for any of the 48 checked; 7 officials added from a next-day report are unchecked. No raid report has been found for May, October or November 2026, and one August report would not open.
