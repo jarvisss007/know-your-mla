@@ -47,3 +47,10 @@ e-NAM (5 Karnataka mandis), 10,000 FPO scheme (no individual benefit), AIF, AHID
 6. Ragi/paddy procurement per-farmer limits for 2026-27.
 7. Official Kannada scheme names.
 8. Whether the KCC 4% rate covers ₹5 lakh yet.
+
+## Open-checks pass, 16 Nov 2026 (details: OPEN_CHECKS_RESULTS.md)
+- Resolved in part: KCC. PIB (11 Mar 2026) says the limit was raised to Rs 5 lakh; the last RBI circular seen (Jan 2026) still says Rs 3 lakh. The page wording (Rs 3 lakh certain, Rs 5 lakh announced) stands.
+- Raitha Vidya Nidhi: 2021 order amounts added to the finder, labelled as the 2021 order.
+- Ragi MSP Rs 5,205 is the national MSP. The procurement dates found in the same search were Gujarat's and are not used.
+- Name check: one budget list calls the Rs 5/litre scheme "Ksheera Bhagya". Ksheera Bhagya is usually the school-milk scheme, and KMF calls the incentive Ksheera Dhaare. A native check is still needed.
+- Everything else (Krishi Bhagya rates, drip top-up, Ganga Kalyana, rabi dates, procurement limits, Kannada names) is still open. It needs raitamitra, SSP, KMDC, Samrakshane and KFCSC pages opened from India.
