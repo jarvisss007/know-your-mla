@@ -1,0 +1,326 @@
+<title>Raitha Scheme Finder</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: one column — questions card on top, matched schemes below as a list of slips, sources at the foot. */
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8;
+  --red: #c21f30; --yellow: #f2b705; --chip: #eef0f4; --ok: #1a8f4c; --warn: #b45309; --low: #8a8f99;
+  --sel: #fff4cc; --sel-line: #c99a00;
+  --display: "Space Grotesk", "Noto Sans Kannada", system-ui, sans-serif;
+  --body: "Noto Sans Kannada", system-ui, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --chip: #232835; --ok: #4fcf86; --warn: #f0a04b; --low: #8d94a1;
+  --sel: #3a3214; --sel-line: #f5c93a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --chip: #232835; --ok: #4fcf86; --warn: #f0a04b; --low: #8d94a1;
+  --sel: #3a3214; --sel-line: #f5c93a; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 860px; margin: 0 auto; padding-block: 24px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 24px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.25; }
+h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); }
+h2 { font-size: 1.25rem; }
+p { margin: 0; }
+.top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+.eyebrow { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--red); font-weight: 600; }
+.draft { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em; background: var(--yellow); color: #161a22; padding: 2px 8px; border-radius: 4px; }
+.lang { display: flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.lang button { font: inherit; font-size: .9rem; padding: 6px 14px; border: 0; background: var(--surface); color: var(--fg); cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.lede { color: var(--muted); max-width: 62ch; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: grid; gap: 20px; }
+fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 8px; min-width: 0; }
+legend { font-weight: 600; padding: 0; margin-bottom: 8px; }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.opts label { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--chip); cursor: pointer; font-size: .95rem; }
+.opts input { accent-color: var(--red); margin: 0; }
+.opts label:has(input:checked) { background: var(--sel); border-color: var(--sel-line); }
+.opts label:has(input:focus-visible) { outline: 2px solid var(--red); outline-offset: 2px; }
+.hint { font-size: .85rem; color: var(--muted); }
+.example { font-size: .85rem; color: var(--warn); }
+.summary { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.summary .n { font-family: var(--display); font-size: 2.4rem; font-weight: 700; color: var(--red); font-variant-numeric: tabular-nums; }
+.list { display: grid; gap: 12px; }
+.slip { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: grid; gap: 8px; min-width: 0; }
+.slip header { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
+.slip .who { font-size: .8rem; color: var(--muted); }
+.benefit { font-weight: 800; font-size: 1.05rem; }
+.row { display: grid; grid-template-columns: 7.5em 1fr; gap: 4px 12px; font-size: .92rem; }
+.row dt { color: var(--muted); }
+.row dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.conf { font-size: .75rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; }
+.conf.hi { color: var(--ok); } .conf.md { color: var(--warn); } .conf.lo { color: var(--low); }
+.src { font-size: .8rem; color: var(--muted); }
+.src a { color: inherit; }
+.empty { color: var(--muted); }
+.check { display: grid; gap: 6px; padding-left: 1.2em; margin: 0; }
+.foot { font-size: .85rem; color: var(--muted); display: grid; gap: 8px; }
+@media (max-width: 520px) { .row { grid-template-columns: 1fr; } .row dt { margin-top: 4px; } }
+@media (prefers-reduced-motion: no-preference) { .slip { animation: in .25s ease-out both; } @keyframes in { from { transform: translateY(4px); } } }
+</style>
+
+<div class="wrap">
+  <div class="top">
+    <div style="display:grid;gap:6px">
+      <span class="eyebrow" data-t="eyebrow"></span>
+      <h1 data-t="h1"></h1>
+      <span><span class="draft">DRAFT</span></span>
+    </div>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-kn" data-lang="kn">ಕನ್ನಡ</button>
+      <button type="button" id="lang-en" data-lang="en">English</button>
+    </div>
+  </div>
+  <p class="lede" data-t="lede"></p>
+
+  <form class="card" id="q" autocomplete="off"></form>
+
+  <section style="display:grid;gap:12px">
+    <div class="summary"><span class="n" id="count">0</span><h2 data-t="matched"></h2></div>
+    <p class="example" id="exnote" data-t="example"></p>
+    <div class="list" id="out"></div>
+  </section>
+
+  <section class="card">
+    <h2 data-t="docsH"></h2>
+    <ul class="check" id="docs"></ul>
+  </section>
+
+  <footer class="foot">
+    <p data-t="foot1"></p>
+    <p data-t="foot2"></p>
+    <p data-t="foot3"></p>
+  </footer>
+</div>
+
+<script>
+const T = {
+  eyebrow: { kn: "ಗಂಡಭೇರುಂಡ · ರೈತರಿಗಾಗಿ", en: "Gandaberunda · for farmers" },
+  h1: { kn: "ನಿಮಗೆ ಸಿಗುವ ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು", en: "Government schemes you qualify for" },
+  lede: { kn: "ಎಂಟು ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರಿಸಿ. ಕೇಂದ್ರ ಮತ್ತು ರಾಜ್ಯ ಸರ್ಕಾರದ ಯಾವ ಯೋಜನೆಗಳು ನಿಮಗೆ ಅನ್ವಯಿಸುತ್ತವೆ, ಎಷ್ಟು ಹಣ ಸಿಗುತ್ತದೆ, ಎಲ್ಲಿ ಅರ್ಜಿ ಹಾಕಬೇಕು ಎಂದು ಕೆಳಗೆ ತೋರಿಸುತ್ತದೆ.", en: "Answer eight questions. The list below shows which central and state schemes apply to you, how much they pay and where to apply." },
+  matched: { kn: "ಯೋಜನೆಗಳು ನಿಮಗೆ ಅನ್ವಯಿಸಬಹುದು", en: "schemes may apply to you" },
+  example: { kn: "ಇವು ಉದಾಹರಣೆ ಉತ್ತರಗಳು (ಮಳೆಯಾಶ್ರಿತ, 3 ಎಕರೆ, ರಾಗಿ ಮತ್ತು ಹಸು). ನಿಮ್ಮ ಉತ್ತರ ಆಯ್ಕೆ ಮಾಡಿ.", en: "These are example answers (rainfed, 3 acres, ragi and a cow). Change them to yours." },
+  docsH: { kn: "ಯಾವುದೇ ಕಚೇರಿಗೆ ಹೋಗುವ ಮುನ್ನ ಇವು ಕೈಯಲ್ಲಿರಲಿ", en: "Carry these to any office" },
+  foot1: { kn: "ಇದು ಕರಡು. ಮೊತ್ತಗಳು ಬದಲಾಗುತ್ತವೆ; ಅರ್ಜಿ ಹಾಕುವ ಮುನ್ನ ರೈತ ಸಂಪರ್ಕ ಕೇಂದ್ರ ಅಥವಾ ಬ್ಯಾಂಕಿನಲ್ಲಿ ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ. ನಾವು ಯಾವುದೇ ಹಣ ಅಥವಾ ದಾಖಲೆ ಕೇಳುವುದಿಲ್ಲ.", en: "This is a draft. Amounts change; confirm at the Raitha Samparka Kendra or your bank before applying. We never ask for money or documents." },
+  foot2: { kn: "ಹಸಿರು: ಸರ್ಕಾರಿ ದಾಖಲೆಯಲ್ಲಿ ಓದಿದ್ದು. ಕಿತ್ತಳೆ: ಪತ್ರಿಕಾ ವರದಿ. ಬೂದು: ಕಚೇರಿಯಲ್ಲಿ ಖಚಿತಪಡಿಸಿ. ಮಾಹಿತಿ ಪರಿಶೀಲಿಸಿದ ದಿನಾಂಕ: 16 ನವೆಂಬರ್ 2026.", en: "Green: read in a government document. Orange: press report. Grey: confirm at the office. Facts checked as of 16 November 2026." },
+  foot3: { kn: "ಕನ್ನಡ ಪಠ್ಯವನ್ನು ಸ್ಥಳೀಯ ಓದುಗರು ಪರಿಶೀಲಿಸಬೇಕಿದೆ.", en: "The Kannada text still needs a native speaker's review." },
+  conf: { hi: { kn: "ಸರ್ಕಾರಿ ದಾಖಲೆ", en: "Official source" }, md: { kn: "ಪತ್ರಿಕಾ ವರದಿ", en: "Press report" }, lo: { kn: "ಖಚಿತಪಡಿಸಿ", en: "Confirm first" } },
+  lbl: { benefit: { kn: "ಸಿಗುವುದು", en: "You get" }, how: { kn: "ಎಲ್ಲಿ", en: "Where" }, note: { kn: "ಗಮನಿಸಿ", en: "Note" }, src: { kn: "ಮೂಲ", en: "Source" }, central: { kn: "ಕೇಂದ್ರ ಯೋಜನೆ", en: "Central scheme" }, state: { kn: "ರಾಜ್ಯ ಯೋಜನೆ", en: "State scheme" } },
+  none: { kn: "ಈ ಉತ್ತರಗಳಿಗೆ ಯಾವ ಯೋಜನೆಯೂ ಹೊಂದುತ್ತಿಲ್ಲ. ಜಮೀನು ಅಥವಾ ಬೆಳೆಯ ಉತ್ತರ ಬದಲಿಸಿ ನೋಡಿ.", en: "No scheme matches these answers. Try changing the land or crop answer." },
+};
+
+const Q = [
+  { id: "land", type: "radio", kn: "ಜಮೀನು ಯಾರ ಹೆಸರಿನಲ್ಲಿದೆ?", en: "Whose name is the land in?", opts: [
+    ["own", "ನನ್ನ ಹೆಸರಿನಲ್ಲಿ (ಪಹಣಿ/RTC)", "My name (on the RTC)"],
+    ["tenant", "ಬೇರೆಯವರ ಜಮೀನು ಗೇಣಿಗೆ ಉಳುಮೆ", "I farm someone else's land (tenant)"],
+    ["none", "ಜಮೀನು ಇಲ್ಲ", "No land"] ] },
+  { id: "size", type: "radio", kn: "ಎಷ್ಟು ಜಮೀನು?", en: "How much land?", hint: { kn: "1 ಹೆಕ್ಟೇರ್ = ಸುಮಾರು 2.5 ಎಕರೆ", en: "1 hectare ≈ 2.5 acres" }, opts: [
+    ["s1", "2.5 ಎಕರೆಗಿಂತ ಕಡಿಮೆ", "Under 2.5 acres"],
+    ["s2", "2.5 ರಿಂದ 5 ಎಕರೆ", "2.5 to 5 acres"],
+    ["s3", "5 ರಿಂದ 12.5 ಎಕರೆ", "5 to 12.5 acres"],
+    ["s4", "12.5 ಎಕರೆಗಿಂತ ಹೆಚ್ಚು", "Over 12.5 acres"] ] },
+  { id: "cat", type: "radio", kn: "ನಿಮ್ಮ ವರ್ಗ", en: "Your category", opts: [
+    ["gen", "ಸಾಮಾನ್ಯ", "General"], ["sc", "ಪರಿಶಿಷ್ಟ ಜಾತಿ (SC)", "SC"], ["st", "ಪರಿಶಿಷ್ಟ ಪಂಗಡ (ST)", "ST"],
+    ["obc", "ಹಿಂದುಳಿದ ವರ್ಗ", "Backward class (OBC)"], ["min", "ಅಲ್ಪಸಂಖ್ಯಾತ", "Minority"] ] },
+  { id: "crop", type: "checkbox", kn: "ನೀವು ಏನು ಬೆಳೆಯುತ್ತೀರಿ ಅಥವಾ ಸಾಕುತ್ತೀರಿ? (ಎಲ್ಲವನ್ನೂ ಆರಿಸಿ)", en: "What do you grow or rear? (pick all)", opts: [
+    ["millet", "ಸಿರಿಧಾನ್ಯ (ನವಣೆ, ಸಾಮೆ, ಹಾರಕ, ಬರಗು, ಕೊರಲೆ, ಊದಲು)", "Minor millets (foxtail, little, kodo, proso, browntop, barnyard)"],
+    ["grain", "ರಾಗಿ, ಜೋಳ, ಭತ್ತ, ಮೆಕ್ಕೆಜೋಳ, ತೊಗರಿ", "Ragi, jowar, paddy, maize, tur"],
+    ["horti", "ಹಣ್ಣು, ತರಕಾರಿ, ಹೂವು", "Fruit, vegetables, flowers"],
+    ["coconut", "ತೆಂಗು", "Coconut"],
+    ["dairy", "ಹಸು/ಎಮ್ಮೆ (ಹಾಲು ಸಂಘಕ್ಕೆ ಹಾಕುತ್ತೇನೆ)", "Cows/buffalo (I pour milk at a society)"] ] },
+  { id: "water", type: "radio", kn: "ನೀರು ಎಲ್ಲಿಂದ?", en: "Where does your water come from?", opts: [
+    ["rain", "ಮಳೆ ಮಾತ್ರ", "Rain only"], ["bore", "ಕೊಳವೆಬಾವಿ ಅಥವಾ ಬಾವಿ", "Borewell or well"], ["canal", "ಕಾಲುವೆ/ಕೆರೆ", "Canal or tank"] ] },
+  { id: "age", type: "radio", kn: "ನಿಮ್ಮ ವಯಸ್ಸು 18 ರಿಂದ 40 ರ ಒಳಗಿದೆಯೇ?", en: "Are you between 18 and 40?", opts: [["y", "ಹೌದು", "Yes"], ["n", "ಇಲ್ಲ", "No"]] },
+  { id: "kid", type: "radio", kn: "ನಿಮ್ಮ ಮಕ್ಕಳು SSLC ನಂತರ ಓದುತ್ತಿದ್ದಾರೆಯೇ?", en: "Is a child of yours studying after SSLC?", opts: [["y", "ಹೌದು", "Yes"], ["n", "ಇಲ್ಲ", "No"]] },
+  { id: "loss", type: "radio", kn: "ಈ ವರ್ಷ ಬರ ಅಥವಾ ನೆರೆಯಿಂದ ಬೆಳೆ ನಷ್ಟವಾಗಿದೆಯೇ?", en: "Did drought or flood damage your crop this year?", opts: [["y", "ಹೌದು", "Yes"], ["n", "ಇಲ್ಲ", "No"]] },
+];
+
+const EXAMPLE = { land: "own", size: "s2", cat: "gen", crop: ["grain", "dairy"], water: "rain", age: "n", kid: "y", loss: "y" };
+
+const hasLand = a => a.land === "own" || a.land === "tenant";
+const small = a => a.size === "s1" || a.size === "s2";           // up to 2 ha = small and marginal
+const crop = (a, c) => a.crop.includes(c);
+const growsCrops = a => a.crop.some(c => c !== "dairy");
+
+const S = [
+  { id: "pmkisan", lvl: "central", conf: "hi", when: a => a.land === "own",
+    kn: { name: "ಪಿಎಂ-ಕಿಸಾನ್", benefit: "ವರ್ಷಕ್ಕೆ ₹6,000 (ಮೂರು ಕಂತು, ತಲಾ ₹2,000) ನೇರವಾಗಿ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ", how: "pmkisan.gov.in, ಪಿಎಂ-ಕಿಸಾನ್ ಆ್ಯಪ್ ಅಥವಾ ಹತ್ತಿರದ CSC/ಗ್ರಾಮ ಒನ್. e-KYC ಕಡ್ಡಾಯ.", note: "ಆದಾಯ ತೆರಿಗೆ ಕಟ್ಟುವವರು, ಸರ್ಕಾರಿ ನೌಕರರು (ಗ್ರೂಪ್ D ಹೊರತು), ₹10,000+ ಪಿಂಚಣಿದಾರರು, ವೈದ್ಯ/ವಕೀಲ/ಎಂಜಿನಿಯರ್‌ಗಳಿಗೆ ಇಲ್ಲ. ಗೇಣಿದಾರರಿಗೆ ಇಲ್ಲ." },
+    en: { name: "PM-KISAN", benefit: "₹6,000 a year (three instalments of ₹2,000) straight to your bank account", how: "pmkisan.gov.in, the PM-KISAN app, or a CSC / Grama One centre. e-KYC is required.", note: "Not for income-tax payers, government staff (except Group D), pensioners drawing ₹10,000+, doctors, lawyers, engineers. Tenants are not covered." },
+    src: ["PIB backgrounder, 20 Jun 2026", "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/jun/doc2026620898101.pdf"] },
+
+  { id: "zeroloan", lvl: "state", conf: "md", when: a => hasLand(a) && growsCrops(a),
+    kn: { name: "ಶೂನ್ಯ ಬಡ್ಡಿ ಬೆಳೆ ಸಾಲ (ಸಹಕಾರ ಸಂಘ)", benefit: "₹5 ಲಕ್ಷದವರೆಗೆ ಅಲ್ಪಾವಧಿ ಬೆಳೆ ಸಾಲ 0% ಬಡ್ಡಿಗೆ; ₹15 ಲಕ್ಷದವರೆಗೆ ಮಧ್ಯಮ/ದೀರ್ಘಾವಧಿ ಸಾಲ 3% ಬಡ್ಡಿಗೆ", how: "ನಿಮ್ಮ ಊರಿನ ಪ್ರಾಥಮಿಕ ಕೃಷಿ ಪತ್ತಿನ ಸಹಕಾರ ಸಂಘ (PACS) ಅಥವಾ ಜಿಲ್ಲಾ ಕೇಂದ್ರ ಸಹಕಾರ ಬ್ಯಾಂಕ್ (DCC).", note: "ಸಮಯಕ್ಕೆ ಸರಿಯಾಗಿ ಮರುಪಾವತಿ ಮಾಡಿದರೆ ಮಾತ್ರ ಶೂನ್ಯ ಬಡ್ಡಿ. ಸಂಘದ ಸದಸ್ಯರಾಗಿರಬೇಕು." },
+    en: { name: "Zero-interest crop loan (cooperatives)", benefit: "Short-term crop loan up to ₹5 lakh at 0%; medium/long-term loan up to ₹15 lakh at 3%", how: "Your village primary agricultural credit society (PACS) or the district central cooperative (DCC) bank.", note: "Zero interest only if you repay on time. You must be a society member." },
+    src: ["2026-27 budget scheme list (IMPRI, 4 Sep 2026); limits set in 2023-24", "https://www.impriindia.com/?p=75134"] },
+
+  { id: "kcc", lvl: "central", conf: "hi", when: a => hasLand(a) || crop(a, "dairy"),
+    kn: { name: "ಕಿಸಾನ್ ಕ್ರೆಡಿಟ್ ಕಾರ್ಡ್ (KCC)", benefit: "ಬೆಳೆ ಸಾಲ 7% ಬಡ್ಡಿ; ಸಮಯಕ್ಕೆ ಕಟ್ಟಿದರೆ 3% ವಾಪಸ್, ಅಂದರೆ 4%. ₹2 ಲಕ್ಷದವರೆಗೆ ಜಾಮೀನು ಬೇಡ.", how: "ಯಾವುದೇ ವಾಣಿಜ್ಯ, ಗ್ರಾಮೀಣ ಅಥವಾ ಸಹಕಾರ ಬ್ಯಾಂಕ್. ಒಂದು ಪುಟದ ಅರ್ಜಿ.", note: "ಗೇಣಿದಾರರು ಮತ್ತು ಹೈನುಗಾರರೂ ಪಡೆಯಬಹುದು. 4% ಬಡ್ಡಿ ₹3 ಲಕ್ಷದವರೆಗೆ ಖಚಿತ; ₹5 ಲಕ್ಷ ಘೋಷಣೆಯಾಗಿದೆ, ಬ್ಯಾಂಕಿನಲ್ಲಿ ಕೇಳಿ." },
+    en: { name: "Kisan Credit Card (KCC)", benefit: "Crop loan at 7%; 3% back if repaid on time, so 4%. No collateral up to ₹2 lakh.", how: "Any commercial, rural or cooperative bank. One-page form.", note: "Tenants and dairy farmers can get it too. 4% is confirmed up to ₹3 lakh; ₹5 lakh has been announced, so ask your bank which applies." },
+    src: ["PIB backgrounder, 11 Mar 2026", "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/mar/doc2026311819801.pdf"] },
+
+  { id: "pmfby", lvl: "central", conf: "hi", when: a => hasLand(a) && growsCrops(a),
+    kn: { name: "ಬೆಳೆ ವಿಮೆ (ಪಿಎಂ ಫಸಲ್ ಬಿಮಾ)", benefit: "ನೀವು ಕಟ್ಟುವುದು: ಮುಂಗಾರು 2%, ಹಿಂಗಾರು 1.5%, ತೋಟಗಾರಿಕೆ/ವಾಣಿಜ್ಯ ಬೆಳೆ 5%. ಉಳಿದ ಪ್ರೀಮಿಯಂ ಸರ್ಕಾರ ಕಟ್ಟುತ್ತದೆ.", how: "ಬ್ಯಾಂಕ್, CSC ಅಥವಾ pmfby.gov.in. ಸಹಾಯವಾಣಿ 14447.", note: "ಗೇಣಿದಾರರೂ ಸೇರಬಹುದು. ಕೊನೆಯ ದಿನಾಂಕ ಬೆಳೆ ಮತ್ತು ಜಿಲ್ಲೆಗೆ ಬೇರೆ; ಹಿಂಗಾರು 2026-27 ದಿನಾಂಕ ಇನ್ನೂ ಸಿಕ್ಕಿಲ್ಲ." },
+    en: { name: "Crop insurance (PM Fasal Bima)", benefit: "You pay 2% for kharif, 1.5% for rabi, 5% for horticulture/commercial crops. Government pays the rest of the premium.", how: "Your bank, a CSC, or pmfby.gov.in. Helpline 14447.", note: "Tenants can join. Cut-off dates differ by crop and district; rabi 2026-27 dates not yet found." },
+    src: ["PIB backgrounder, 29 Aug 2026", "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc_9735_20260829_18493301.pdf"] },
+
+  { id: "croploss", lvl: "state", conf: "md", when: a => hasLand(a) && a.loss === "y",
+    kn: { name: "ಬೆಳೆ ನಷ್ಟ ಪರಿಹಾರ (ಇನ್‌ಪುಟ್ ಸಬ್ಸಿಡಿ)", benefit: "ಪ್ರತಿ ಹೆಕ್ಟೇರ್‌ಗೆ: ಮಳೆಯಾಶ್ರಿತ ₹17,000, ನೀರಾವರಿ ₹25,500, ಬಹುವಾರ್ಷಿಕ ಬೆಳೆ ₹31,000 (ಗರಿಷ್ಠ 2 ಹೆಕ್ಟೇರ್). 2026 ಬರ: ಪ್ರತಿ ರೈತರಿಗೆ ಕನಿಷ್ಠ ₹5,000.", how: "ಸಮೀಕ್ಷೆಯ ನಂತರ ಗ್ರಾಮವಾರು ಪಟ್ಟಿ ಪ್ರಕಟವಾಗುತ್ತದೆ; ಹೆಸರು ಇಲ್ಲದಿದ್ದರೆ ಗ್ರಾಮ ಆಡಳಿತ ಅಧಿಕಾರಿ ಅಥವಾ ತಹಶೀಲ್ದಾರ್ ಕಚೇರಿಗೆ ಆಕ್ಷೇಪಣೆ ಸಲ್ಲಿಸಿ. ಹಣ ನೇರವಾಗಿ ಬ್ಯಾಂಕ್‌ಗೆ.", note: "ನಿಮ್ಮ ಬ್ಯಾಂಕ್ ಖಾತೆ ಆಧಾರ್ ಮತ್ತು FRUITS ID ಗೆ ಜೋಡಣೆ ಆಗಿರಲಿ. ಮೊದಲ ಕಂತು ₹2,000 ಅಥವಾ ₹2,500 ಬಂದಿದ್ದರೆ ಉಳಿದದ್ದು ಬರಲಿದೆ." },
+    en: { name: "Crop-loss relief (input subsidy)", benefit: "Per hectare: rainfed ₹17,000, irrigated ₹25,500, perennial ₹31,000 (up to 2 ha). 2026 drought: at least ₹5,000 per farmer.", how: "After the survey a village list is published; if your name is missing, object at the village administrative officer or tahsildar office. Money goes straight to your bank.", note: "Keep your bank account linked to Aadhaar and your FRUITS ID. If a first instalment of ₹2,000 or ₹2,500 came, the balance is due." },
+    src: ["Rates: Mangalorean/IANS, 27 Nov 2025; ₹5,000 minimum: Revenue Minister via IANS, 10 Nov 2026", "https://www.newkerala.com/news/a/karnataka-govt-assures-minimum-rs-5000-drought-relief-719.htm"] },
+
+  { id: "raithasiri", lvl: "state", conf: "md", when: a => hasLand(a) && crop(a, "millet"),
+    kn: { name: "ರೈತ ಸಿರಿ (ಸಿರಿಧಾನ್ಯ ಪ್ರೋತ್ಸಾಹ)", benefit: "ಪ್ರತಿ ಹೆಕ್ಟೇರ್‌ಗೆ ₹10,000, ನೇರವಾಗಿ ಬ್ಯಾಂಕ್‌ಗೆ", how: "ರೈತ ಸಂಪರ್ಕ ಕೇಂದ್ರ (RSK). ಬೆಳೆ ಸಮೀಕ್ಷೆಯಲ್ಲಿ ಸಿರಿಧಾನ್ಯ ದಾಖಲಾಗಿರಬೇಕು.", note: "ಹಳೆಯ ವರದಿಗಳ ಪ್ರಕಾರ ಗರಿಷ್ಠ 2 ಹೆಕ್ಟೇರ್. ರಾಗಿ/ಜೋಳ ಸೇರಿದೆಯೇ ಎಂದು RSK ನಲ್ಲಿ ಕೇಳಿ." },
+    en: { name: "Raitha Siri (millet incentive)", benefit: "₹10,000 per hectare, straight to your bank", how: "Raitha Samparka Kendra (RSK). Millets must be recorded in the crop survey.", note: "Older reports give a 2-hectare cap. Ask at the RSK whether ragi and jowar count." },
+    src: ["2026-27 budget scheme list (IMPRI, 4 Sep 2026): ₹10,000/ha, ₹20 crore", "https://www.impriindia.com/?p=75134"] },
+
+  { id: "msp", lvl: "central", conf: "md", when: a => hasLand(a) && (crop(a, "grain") || crop(a, "millet") || crop(a, "coconut")),
+    kn: { name: "ಬೆಂಬಲ ಬೆಲೆ ಖರೀದಿ (MSP)", benefit: "ಪ್ರತಿ ಕ್ವಿಂಟಾಲ್‌ಗೆ 2026-27: ರಾಗಿ ₹5,205, ಭತ್ತ ₹2,441, ಜೋಳ (ಹೈಬ್ರಿಡ್) ₹4,023, ತೊಗರಿ ₹8,450, ಮೆಕ್ಕೆಜೋಳ ₹2,410. ಕೊಬ್ಬರಿ (ಉಂಡೆ) ₹12,500.", how: "ಸರ್ಕಾರದ ಖರೀದಿ ಕೇಂದ್ರದಲ್ಲಿ FRUITS ID ಜೊತೆ ನೋಂದಣಿ. ಭತ್ತ ಖರೀದಿ ನವೆಂಬರ್ ಮೊದಲ ವಾರದಿಂದ ಆರಂಭ ಎಂದು ವರದಿ.", note: "ಮಾರುಕಟ್ಟೆ ಬೆಲೆ MSP ಗಿಂತ ಕಡಿಮೆ ಇದ್ದಾಗ ಉಪಯೋಗ. ಪ್ರತಿ ರೈತರ ಗರಿಷ್ಠ ಪ್ರಮಾಣ ಮತ್ತು ದಿನಾಂಕ ಜಿಲ್ಲಾ ಆಹಾರ ಇಲಾಖೆಯಲ್ಲಿ ಕೇಳಿ." },
+    en: { name: "Support-price procurement (MSP)", benefit: "Per quintal, 2026-27: ragi ₹5,205, paddy ₹2,441, jowar (hybrid) ₹4,023, tur ₹8,450, maize ₹2,410. Copra (ball) ₹12,500.", how: "Register at a government procurement centre with your FRUITS ID. Paddy buying reported to start in the first week of November.", note: "Useful when the market price is below MSP. Ask the district food department for the per-farmer limit and dates." },
+    src: ["Cabinet MSP decision via All India Radio, 13 May 2026; copra: PIB, 18 Aug 2026", "https://www.newsonair.gov.in/cabinet-approves-msp-for-kharif-crops-for-2026-27-season/"] },
+
+  { id: "krishibhagya", lvl: "state", conf: "lo", when: a => a.land === "own" && a.water === "rain",
+    kn: { name: "ಕೃಷಿ ಭಾಗ್ಯ (ಕೃಷಿ ಹೊಂಡ)", benefit: "ಕೃಷಿ ಹೊಂಡ, ಪಾಲಿಥೀನ್ ಹೊದಿಕೆ, ಡೀಸೆಲ್/ಸೌರ ಪಂಪ್, ತುಂತುರು ನೀರಾವರಿಗೆ ಸಹಾಯಧನ", how: "ರೈತ ಸಂಪರ್ಕ ಕೇಂದ್ರ (RSK), FRUITS ID ಜೊತೆ.", note: "ಸಹಾಯಧನದ ಶೇಕಡಾ (ಸಾಮಾನ್ಯ 80%, SC/ST 90% ಎಂದು ಅನಧಿಕೃತ ಪುಟಗಳು ಹೇಳುತ್ತವೆ) ಮತ್ತು ನಿಮ್ಮ ತಾಲೂಕು ಸೇರಿದೆಯೇ ಎಂದು RSK ನಲ್ಲಿ ಖಚಿತಪಡಿಸಿ." },
+    en: { name: "Krishi Bhagya (farm ponds)", benefit: "Subsidy for a farm pond, its plastic lining, a diesel or solar pump and sprinklers", how: "Raitha Samparka Kendra (RSK), with your FRUITS ID.", note: "Confirm at the RSK the subsidy percent (unofficial pages say 80% general, 90% SC/ST) and whether your taluk is covered." },
+    src: ["Live in 2026-27 budget (32,138 ponds built); rates not confirmed at an official source", "https://www.impriindia.com/?p=75134"] },
+
+  { id: "drip", lvl: "central", conf: "hi", when: a => a.land === "own" && a.water !== "rain",
+    kn: { name: "ಹನಿ/ತುಂತುರು ನೀರಾವರಿ (ಪರ್ ಡ್ರಾಪ್ ಮೋರ್ ಕ್ರಾಪ್)", benefit: "ಸಣ್ಣ ಮತ್ತು ಅತಿ ಸಣ್ಣ ರೈತರಿಗೆ 55%, ಇತರರಿಗೆ 45% ಸಹಾಯಧನ (5 ಹೆಕ್ಟೇರ್‌ವರೆಗೆ). ರಾಜ್ಯ ಇನ್ನಷ್ಟು ಸೇರಿಸಬಹುದು.", how: "ಕೃಷಿ ಅಥವಾ ತೋಟಗಾರಿಕೆ ಇಲಾಖೆ (RSK / ತೋಟಗಾರಿಕೆ ಕಚೇರಿ).", note: "ಕರ್ನಾಟಕದ ಹೆಚ್ಚುವರಿ ಸಹಾಯಧನ (ಕೆಲವು ವರದಿಗಳಲ್ಲಿ 90%) ಖಚಿತಪಡಿಸಿಲ್ಲ. ಅದೇ ಜಮೀನಿಗೆ 7 ವರ್ಷದ ನಂತರ ಮತ್ತೆ ಸಿಗುತ್ತದೆ." },
+    en: { name: "Drip / sprinkler (Per Drop More Crop)", benefit: "55% subsidy for small and marginal farmers, 45% for others (up to 5 ha). The state may add more.", how: "Agriculture or horticulture department (RSK / horticulture office).", note: "Karnataka's top-up (some reports say 90%) is not confirmed. The same land can be helped again after 7 years." },
+    src: ["PIB backgrounder, 29 Aug 2026", "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc_9732_20260829_12330401.pdf"] },
+
+  { id: "kusum", lvl: "central", conf: "md", when: a => a.land === "own" && a.water === "bore",
+    kn: { name: "ಸೌರ ಪಂಪ್ (ಪಿಎಂ-ಕುಸುಮ್ ಬಿ)", benefit: "7.5 HP ವರೆಗಿನ ಸೌರ ಪಂಪ್: ಕೇಂದ್ರ 30% + ರಾಜ್ಯ 50%; ನೀವು ಕಟ್ಟುವುದು ಸುಮಾರು 20%", how: "souramitra.com ನಲ್ಲಿ ನೋಂದಣಿ. KREDL ಸಹಾಯವಾಣಿ 080-22202100.", note: "ಈಗ ಅರ್ಜಿ ತೆರೆದಿದೆಯೇ ಖಚಿತವಿಲ್ಲ. ಯೋಜನೆ 31 ಮಾರ್ಚ್ 2027ಕ್ಕೆ ಮುಗಿಯುತ್ತದೆ." },
+    en: { name: "Solar pump (PM-KUSUM B)", benefit: "Solar pump up to 7.5 HP: Centre 30% + state 50%; you pay about 20%", how: "Register at souramitra.com. KREDL helpline 080-22202100.", note: "Not confirmed that applications are open now. The scheme ends 31 March 2027." },
+    src: ["Lok Sabha answer, 5 Aug 2026 (central 30%); state share: press, Dec 2025 and Jul 2026", "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2818_f9D4HN.pdf"] },
+
+  { id: "gangakalyana", lvl: "state", conf: "lo", when: a => a.land === "own" && small(a) && a.cat !== "gen" && a.water !== "canal",
+    kn: { name: "ಗಂಗಾ ಕಲ್ಯಾಣ (ಉಚಿತ ಕೊಳವೆಬಾವಿ)", benefit: "ಕೊಳವೆಬಾವಿ ಕೊರೆಸುವುದು, ಪಂಪ್ ಮತ್ತು ವಿದ್ಯುತ್ ಸಂಪರ್ಕ ಸರ್ಕಾರದ ವೆಚ್ಚದಲ್ಲಿ", how: "ನಿಮ್ಮ ವರ್ಗದ ಅಭಿವೃದ್ಧಿ ನಿಗಮ (ಅಂಬೇಡ್ಕರ್, ವಾಲ್ಮೀಕಿ, ದೇವರಾಜ ಅರಸು, ಅಲ್ಪಸಂಖ್ಯಾತರ ನಿಗಮ) ಅಥವಾ ಸೇವಾ ಸಿಂಧು.", note: "ಘಟಕ ವೆಚ್ಚ ಮತ್ತು ಆದಾಯ ಮಿತಿ ಅಧಿಕೃತವಾಗಿ ಖಚಿತಪಡಿಸಿಲ್ಲ. ಸಣ್ಣ/ಅತಿ ಸಣ್ಣ ರೈತರಿಗೆ ಮಾತ್ರ." },
+    en: { name: "Ganga Kalyana (free borewell)", benefit: "Borewell drilling, pump and power connection paid by the government", how: "The development corporation for your category (Ambedkar, Valmiki, Devaraj Urs, Minorities) or Seva Sindhu.", note: "Unit cost and income limit not confirmed at an official source. Small and marginal farmers only." },
+    src: ["2026-27 budget scheme list (IMPRI, 4 Sep 2026): ₹380 crore, SC/ST/OBC small farmers", "https://www.impriindia.com/?p=75134"] },
+
+  { id: "smam", lvl: "central", conf: "hi", when: a => a.land === "own" && growsCrops(a),
+    kn: { name: "ಕೃಷಿ ಯಂತ್ರೋಪಕರಣ ಸಹಾಯಧನ", benefit: a => (a.cat === "sc" || a.cat === "st" || small(a)) ? "ಯಂತ್ರದ ಬೆಲೆಯ 50% ಸಹಾಯಧನ" : "ಯಂತ್ರದ ಬೆಲೆಯ 40% ಸಹಾಯಧನ", how: "ರೈತ ಸಂಪರ್ಕ ಕೇಂದ್ರ (RSK). ಬಾಡಿಗೆಗೆ ಬೇಕಿದ್ದರೆ ಕೃಷಿ ಯಂತ್ರಧಾರೆ ಕೇಂದ್ರ.", note: "SC/ST ಮತ್ತು 5 ಎಕರೆ ಒಳಗಿನ ರೈತರಿಗೆ 50%, ಇತರರಿಗೆ 40%. ಪ್ರತಿ ಯಂತ್ರದ ಗರಿಷ್ಠ ಮೊತ್ತ RSK ನಲ್ಲಿ ಕೇಳಿ." },
+    en: { name: "Farm machinery subsidy (SMAM)", benefit: a => (a.cat === "sc" || a.cat === "st" || small(a)) ? "50% of the machine's price" : "40% of the machine's price", how: "Raitha Samparka Kendra (RSK). To hire machines instead, a Krishi Yantra Dhare centre.", note: "50% for SC/ST and farmers with up to 5 acres, 40% for others. Ask the RSK for the cap per machine." },
+    src: ["PIB backgrounder, 9 Jul 2026", "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/jul/doc202679916301.pdf"] },
+
+  { id: "midh", lvl: "central", conf: "hi", when: a => a.land === "own" && crop(a, "horti"),
+    kn: { name: "ತೋಟಗಾರಿಕೆ ಅಭಿವೃದ್ಧಿ (MIDH)", benefit: "ಹೊಸ ತೋಟಕ್ಕೆ ವೆಚ್ಚದ 40% (2 ಹೆಕ್ಟೇರ್‌ವರೆಗೆ); ಪಾಲಿಹೌಸ್/ನೆರಳು ಮನೆಗೆ 50% (2,500 ಚ.ಮೀ.ವರೆಗೆ)", how: "ತಾಲೂಕು ತೋಟಗಾರಿಕೆ ಇಲಾಖೆ ಕಚೇರಿ.", note: "ಕರ್ನಾಟಕದ ಸ್ವಂತ ತೋಟಗಾರಿಕೆ ಯೋಜನೆಗಳೂ ಇವೆ; ಅದೇ ಕಚೇರಿಯಲ್ಲಿ ಕೇಳಿ." },
+    en: { name: "Horticulture mission (MIDH)", benefit: "40% of cost for a new orchard (up to 2 ha); 50% for a polyhouse or shade net (up to 2,500 sq m)", how: "Taluk horticulture department office.", note: "Karnataka also runs its own horticulture schemes; ask at the same office." },
+    src: ["MIDH Operational Guidelines 2025", "https://nhb.gov.in/writereaddata/082825102800MIDH%20Guideline%202025.pdf"] },
+
+  { id: "coconut", lvl: "central", conf: "hi", when: a => a.land === "own" && crop(a, "coconut"),
+    kn: { name: "ತೆಂಗು ಅಭಿವೃದ್ಧಿ ಮಂಡಳಿ ನೆರವು", benefit: "ಹೊಸ ತೆಂಗು ನಾಟಿಗೆ ಹೆಕ್ಟೇರ್‌ಗೆ ₹56,000 (ಎರಡು ಕಂತು); ಮರುನಾಟಿ/ಪುನಶ್ಚೇತನಕ್ಕೆ ಹೆಕ್ಟೇರ್‌ಗೆ ₹54,000 ವರೆಗೆ", how: "ತೆಂಗು ಅಭಿವೃದ್ಧಿ ಮಂಡಳಿ ಕಚೇರಿ ಅಥವಾ ತೋಟಗಾರಿಕೆ ಇಲಾಖೆ.", note: "0.08 ರಿಂದ 2 ಹೆಕ್ಟೇರ್ ವರೆಗೆ." },
+    en: { name: "Coconut Development Board aid", benefit: "₹56,000 per hectare for new coconut planting (two instalments); up to ₹54,000 per hectare for replanting", how: "Coconut Development Board office or the horticulture department.", note: "0.08 to 2 hectares per farmer." },
+    src: ["PIB, 18 Aug 2026", "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc2026818961601.pdf"] },
+
+  { id: "milk", lvl: "state", conf: "md", when: a => crop(a, "dairy"),
+    kn: { name: "ಕ್ಷೀರಧಾರೆ (ಹಾಲಿನ ಪ್ರೋತ್ಸಾಹಧನ)", benefit: "ಹಾಲು ಒಕ್ಕೂಟದ ಸಂಘಕ್ಕೆ ಹಾಕುವ ಪ್ರತಿ ಲೀಟರ್‌ಗೆ ₹5, ನೇರವಾಗಿ ಬ್ಯಾಂಕ್‌ಗೆ", how: "ನಿಮ್ಮ ಹಾಲು ಉತ್ಪಾದಕರ ಸಹಕಾರ ಸಂಘ (KMF).", note: "ಹಿಂದೆ ತಿಂಗಳುಗಟ್ಟಲೆ ಬಾಕಿ ಉಳಿದಿತ್ತು. ನಿಮ್ಮ ಬಾಕಿ ಎಷ್ಟು ಎಂದು ಸಂಘದಲ್ಲಿ ಕೇಳಿ." },
+    en: { name: "Ksheeradhare (milk incentive)", benefit: "₹5 for every litre poured at a KMF society, paid to your bank", how: "Your milk producers' cooperative society (KMF).", note: "Payments have run months late before. Ask the society how much is owed to you." },
+    src: ["KMF statement, Jun 2026 (agrimoon); 2026-27 budget list", "https://agrimoon.com/?p=11700"] },
+
+  { id: "pmkmy", lvl: "central", conf: "hi", when: a => a.land === "own" && small(a) && a.age === "y",
+    kn: { name: "ರೈತ ಪಿಂಚಣಿ (ಪಿಎಂ ಕಿಸಾನ್ ಮಾನ್‌ಧನ್)", benefit: "60 ವರ್ಷದ ನಂತರ ತಿಂಗಳಿಗೆ ₹3,000 ಪಿಂಚಣಿ. ನೀವು ತಿಂಗಳಿಗೆ ₹55–₹200 ಕಟ್ಟುತ್ತೀರಿ, ಸರ್ಕಾರ ಅಷ್ಟೇ ಸೇರಿಸುತ್ತದೆ.", how: "ಹತ್ತಿರದ CSC ಅಥವಾ pmkmy.gov.in. ಪಿಎಂ-ಕಿಸಾನ್ ಹಣದಿಂದಲೇ ಕಡಿತ ಮಾಡಬಹುದು.", note: "5 ಎಕರೆ (2 ಹೆಕ್ಟೇರ್) ಒಳಗಿನ ರೈತರಿಗೆ. ಪತಿ/ಪತ್ನಿಗೆ ಕುಟುಂಬ ಪಿಂಚಣಿ ₹1,500." },
+    en: { name: "Farmer pension (PM Kisan Maandhan)", benefit: "₹3,000 a month after age 60. You pay ₹55–₹200 a month and the government matches it.", how: "Nearest CSC or pmkmy.gov.in. It can be deducted from your PM-KISAN money.", note: "For farmers with up to 5 acres (2 ha). Spouse gets a family pension of ₹1,500." },
+    src: ["PIB backgrounder, 9 Sep 2024 (no later change found)", "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/sep/doc202499390501.pdf"] },
+
+  { id: "vidyanidhi", lvl: "state", conf: "lo", when: a => a.land === "own" && a.kid === "y",
+    kn: { name: "ರೈತ ವಿದ್ಯಾ ನಿಧಿ (ವಿದ್ಯಾರ್ಥಿ ವೇತನ)", benefit: "ರೈತರ ಮಕ್ಕಳಿಗೆ ವರ್ಷಕ್ಕೆ ಸುಮಾರು ₹2,500 ರಿಂದ ₹11,000 (ಕೋರ್ಸ್ ಅನುಸಾರ)", how: "ರಾಜ್ಯ ವಿದ್ಯಾರ್ಥಿ ವೇತನ ಪೋರ್ಟಲ್ (SSP). ಪೋಷಕರ FRUITS ID ಮೂಲಕ ಪರಿಶೀಲನೆ.", note: "ಮೊತ್ತ ಮತ್ತು ಕೊನೆಯ ದಿನಾಂಕ ಅಧಿಕೃತವಾಗಿ ಖಚಿತಪಡಿಸಿಲ್ಲ; SSP ನಲ್ಲಿ ನೋಡಿ." },
+    en: { name: "Raitha Vidya Nidhi (scholarship)", benefit: "About ₹2,500 to ₹11,000 a year for farmers' children, by course", how: "State Scholarship Portal (SSP). Checked against the parent's FRUITS ID.", note: "Amounts and deadline not confirmed at an official source; check the SSP." },
+    src: ["Not confirmed at an official source; scholarship aggregators only", ""] },
+
+  { id: "soil", lvl: "central", conf: "hi", when: a => a.land === "own" && growsCrops(a),
+    kn: { name: "ಮಣ್ಣು ಆರೋಗ್ಯ ಚೀಟಿ", benefit: "ಮಣ್ಣು ಪರೀಕ್ಷೆ ಮತ್ತು ಯಾವ ಗೊಬ್ಬರ ಎಷ್ಟು ಹಾಕಬೇಕು ಎಂಬ ಸಲಹೆ", how: "ರೈತ ಸಂಪರ್ಕ ಕೇಂದ್ರ ಅಥವಾ soilhealth.dac.gov.in.", note: "ಹಣ ಸಿಗುವುದಿಲ್ಲ, ಆದರೆ ಗೊಬ್ಬರದ ಖರ್ಚು ಕಡಿಮೆ ಮಾಡಬಹುದು." },
+    en: { name: "Soil Health Card", benefit: "A soil test with advice on which fertiliser and how much", how: "Raitha Samparka Kendra or soilhealth.dac.gov.in.", note: "No cash, but it can cut fertiliser spending." },
+    src: ["PIB, 24 Jul 2026", "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/jul/doc2026724930801.pdf"] },
+];
+
+const DOCS = [
+  { kn: "FRUITS ರೈತ ID (ರಾಜ್ಯದ ಹೆಚ್ಚಿನ ಯೋಜನೆಗಳಿಗೆ ಬೇಕು; RSK ನಲ್ಲಿ ಮಾಡಿಸಿಕೊಳ್ಳಿ)", en: "FRUITS farmer ID (needed for most state schemes; get it at the RSK)" },
+  { kn: "ಆಧಾರ್ ಕಾರ್ಡ್", en: "Aadhaar card" },
+  { kn: "ಪಹಣಿ / RTC (ಜಮೀನು ದಾಖಲೆ)", en: "RTC / pahani (land record)" },
+  { kn: "ಆಧಾರ್‌ಗೆ ಜೋಡಣೆಯಾದ ಬ್ಯಾಂಕ್ ಪಾಸ್‌ಬುಕ್", en: "Bank passbook for an account linked to Aadhaar" },
+  { kn: "ಜಾತಿ ಪ್ರಮಾಣಪತ್ರ (SC/ST/ಹಿಂದುಳಿದ/ಅಲ್ಪಸಂಖ್ಯಾತ ಸಹಾಯಧನಕ್ಕೆ)", en: "Caste certificate (for SC/ST/backward/minority rates)" },
+  { kn: "ಗೇಣಿದಾರರು: ಗೇಣಿ ಒಪ್ಪಂದ ಅಥವಾ ಬಿತ್ತನೆ ಪ್ರಮಾಣಪತ್ರ", en: "Tenants: lease agreement or sowing certificate" },
+];
+
+let lang = "kn";
+try { lang = localStorage.getItem("rsf-lang") || "kn"; } catch (e) {}
+const form = document.getElementById("q");
+
+function buildForm() {
+  const prev = readAnswers(true);
+  form.innerHTML = "";
+  for (const q of Q) {
+    const fs = document.createElement("fieldset");
+    const lg = document.createElement("legend"); lg.textContent = q[lang]; fs.append(lg);
+    if (q.hint) { const h = document.createElement("p"); h.className = "hint"; h.textContent = q.hint[lang]; fs.append(h); }
+    const box = document.createElement("div"); box.className = "opts";
+    for (const [v, kn, en] of q.opts) {
+      const id = `q-${q.id}-${v}`;
+      const l = document.createElement("label"); l.htmlFor = id;
+      const i = document.createElement("input"); i.type = q.type; i.name = q.id; i.value = v; i.id = id;
+      const cur = prev ? prev[q.id] : EXAMPLE[q.id];
+      i.checked = Array.isArray(cur) ? cur.includes(v) : cur === v;
+      l.append(i, document.createTextNode(lang === "kn" ? kn : en));
+      box.append(l);
+    }
+    fs.append(box); form.append(fs);
+  }
+}
+
+function readAnswers(allowNull) {
+  if (!form.elements.length) return allowNull ? null : EXAMPLE;
+  const a = {};
+  for (const q of Q) {
+    const els = [...form.querySelectorAll(`input[name="${q.id}"]`)];
+    a[q.id] = q.type === "checkbox" ? els.filter(e => e.checked).map(e => e.value) : (els.find(e => e.checked) || {}).value;
+  }
+  return a;
+}
+
+let touched = false;
+function render() {
+  const a = readAnswers();
+  const hits = S.filter(s => { try { return s.when(a); } catch (e) { return false; } });
+  document.getElementById("count").textContent = hits.length.toLocaleString(lang === "kn" ? "kn-IN" : "en-IN");
+  document.getElementById("exnote").hidden = touched;
+  const out = document.getElementById("out"); out.innerHTML = "";
+  if (!hits.length) { const p = document.createElement("p"); p.className = "empty"; p.textContent = T.none[lang]; out.append(p); }
+  for (const s of hits) {
+    const t = s[lang];
+    const el = document.createElement("article"); el.className = "slip";
+    const benefit = typeof t.benefit === "function" ? t.benefit(a) : t.benefit;
+    const srcLink = s.src[1] ? `<a href="${s.src[1]}" target="_blank" rel="noopener">${esc(s.src[0])}</a>` : esc(s.src[0]);
+    el.innerHTML = `
+      <header><div><div class="who">${T.lbl[s.lvl][lang]}</div><h3>${esc(t.name)}</h3></div>
+      <span class="conf ${s.conf}">${T.conf[s.conf][lang]}</span></header>
+      <p class="benefit">${esc(benefit)}</p>
+      <dl class="row"><dt>${T.lbl.how[lang]}</dt><dd>${esc(t.how)}</dd><dt>${T.lbl.note[lang]}</dt><dd>${esc(t.note)}</dd></dl>
+      <p class="src">${T.lbl.src[lang]}: ${srcLink}</p>`;
+    out.append(el);
+  }
+}
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function applyLang() {
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-t]").forEach(el => { el.textContent = T[el.dataset.t][lang]; });
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+  const ul = document.getElementById("docs"); ul.innerHTML = "";
+  for (const d of DOCS) { const li = document.createElement("li"); li.textContent = d[lang]; ul.append(li); }
+  buildForm(); render();
+}
+
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => {
+  lang = b.dataset.lang; try { localStorage.setItem("rsf-lang", lang); } catch (e) {} applyLang();
+}));
+form.addEventListener("change", () => { touched = true; render(); });
+form.addEventListener("submit", e => e.preventDefault());
+applyLang();
+</script>
