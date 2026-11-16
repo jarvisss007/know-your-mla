@@ -51,7 +51,9 @@ KINDS = [
     ("Trap (bribe)", r"trap|bribe|red-handed|caught|nab|ಲಂಚ|ಬಲೆ"),
     ("Raid / assets", r"raid|search|disproportionate|assets|ದಾಳಿ|ಆಸ್ತಿ"),
 ]
-KARNATAKA = r"karnataka|bengaluru|bangalore|mysuru|mangaluru|belagavi|kalaburagi|hubballi|dharwad|davanagere|shivamogga|tumakuru|ballari|vijayapura|bidar|raichur|hassan|mandya|udupi|kodagu|madikeri|chitradurga|koppal|gadag|haveri|yadgir|chikkamagaluru|chikkaballapur|kolar|ramanagara|bagalkot|uttara kannada|karwar|lokayukta|ಲೋಕಾಯುಕ್ತ"
+KARNATAKA = r"karnataka|bengaluru|bangalore|mysuru|mangaluru|belagavi|kalaburagi|hubballi|dharwad|davanagere|shivamogga|tumakuru|ballari|vijayapura|bidar|raichur|hassan|mandya|udupi|kodagu|madikeri|chitradurga|koppal|gadag|haveri|yadgir|chikkamagaluru|chikkaballapur|kolar|ramanagara|bagalkot|uttara kannada|karwar|k'taka|kptcl|bescom|hescom|gescom|kiadb|bbmp|\bgba\b|kpsc"
+# Other states have a Lokayukta too; these headlines are dropped unless a Karnataka place is named.
+ELSEWHERE = r"madhya pradesh|\bmp\b|bhopal|indore|gwalior|jabalpur|maharashtra|kerala|rajasthan|uttar pradesh|delhi|gujarat|odisha|andhra|telangana|tamil nadu|bihar|goa\b"
 
 
 def feed(query, lang, days):
@@ -141,8 +143,13 @@ def main():
     rows = []
     for it in new:
         text = it["title"]
-        if not re.search(KARNATAKA, text, re.I) and "ಲೋಕಾಯುಕ್ತ" not in text:
-            continue
+        in_ka = re.search(KARNATAKA, text, re.I)
+        kannada = re.search("[ಀ-೿]", text)
+        if not in_ka and not kannada:
+            if not re.search(r"lokayukta|lokayukt", text, re.I) or re.search(ELSEWHERE, text, re.I):
+                continue
+            if "Bhaskar" in it["outlet"]:  # Dainik Bhaskar's Lokayukta stories are Madhya Pradesh / Rajasthan
+                continue
         kind = next((k for k, rx in KINDS if re.search(rx, text, re.I)), "Other")
         try:
             when = email.utils.parsedate_to_datetime(it["date"]).date().isoformat()
