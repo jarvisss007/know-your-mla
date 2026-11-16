@@ -1,0 +1,188 @@
+<title>Paper vs Ground</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: one reading column; every claim is a ledger row with "on paper" as the full track and "on the ground" as the filled part. */
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8;
+  --red: #c21f30; --yellow: #f2b705; --track: #e3e6ec; --ok: #1a8f4c; --warn: #b45309;
+  --display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --body: Inter, "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --track: #2b313d; --ok: #4fcf86; --warn: #f0a04b; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --track: #2b313d; --ok: #4fcf86; --warn: #f0a04b; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font: 16px/1.55 var(--body);
+  padding-block: 28px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+a { color: inherit; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1; letter-spacing: -0.02em; }
+h1 span { color: var(--red); }
+h2 { font-size: 1.5rem; }
+p { margin: 0; max-width: 66ch; }
+.eyebrow { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.draft { display: inline-block; background: var(--yellow); color: #161a22; font-weight: 600; font-size: .8rem; padding: 3px 10px; border-radius: 3px; letter-spacing: .04em; }
+header { display: flex; flex-direction: column; gap: 14px; }
+.lede { font-size: 1.1rem; }
+.muted { color: var(--muted); font-size: .9rem; }
+
+.gaps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0; border-block: 2px solid var(--fg); }
+.gap { padding: 16px 14px 16px 0; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.gap b { font: 700 2.4rem/1 var(--display); color: var(--red); font-variant-numeric: tabular-nums; }
+.gap span { font-size: .88rem; }
+
+section { display: flex; flex-direction: column; gap: 6px; }
+section > p { margin-bottom: 10px; color: var(--muted); }
+.row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 18px 0; border-top: 1px solid var(--line); }
+.row h3 { font-size: 1.05rem; }
+.pair { display: flex; flex-wrap: wrap; gap: 6px 28px; font-variant-numeric: tabular-nums; }
+.pair div { min-width: 0; }
+.pair small { display: block; color: var(--muted); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+.pair strong { font: 700 1.25rem/1.2 var(--display); }
+.bar { height: 12px; background: var(--track); border-radius: 2px; position: relative; overflow: hidden; }
+.bar i { position: absolute; inset: 0 auto 0 0; background: var(--red); min-width: 3px; }
+.barcap { display: flex; justify-content: space-between; font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.barcap b { color: var(--red); }
+.note { font-size: .92rem; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: .8rem; color: var(--muted); align-items: center; }
+.chip { border: 1px solid var(--line); border-radius: 999px; padding: 1px 9px; background: var(--surface); color: var(--fg); white-space: nowrap; }
+.chip.al { border-color: var(--warn); color: var(--warn); }
+.chip.c2 { border-color: var(--ok); color: var(--ok); }
+
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; min-width: 620px; }
+th, td { text-align: left; padding: 9px 12px 9px 0; border-top: 1px solid var(--line); vertical-align: top; }
+th { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border-top: 2px solid var(--fg); }
+.st { font-weight: 600; white-space: nowrap; }
+.st.go { color: var(--ok); } .st.need { color: var(--warn); }
+ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; max-width: 70ch; }
+footer { border-top: 2px solid var(--fg); padding-top: 14px; }
+</style>
+
+<div class="wrap">
+<header>
+  <div><span class="draft">DRAFT · NOT PUBLISHED</span></div>
+  <div class="eyebrow">Gandaberunda · Karnataka · figures as read on 16 Nov 2026</div>
+  <h1>Paper <span>vs</span> Ground</h1>
+  <p class="lede">What Karnataka's records say was sanctioned, released or recovered, set beside what the same records say actually happened. Every row comes from an auditor, Parliament, a government statement or a named press report, and says which.</p>
+  <p class="muted">Amounts are in rupees crore (1 crore = 10 million). Lakh = 100,000. Percentages on the bars are our arithmetic on the two figures shown.</p>
+</header>
+
+<div class="gaps" id="gaps"></div>
+
+<section><h2>Money released, work done</h2>
+<p>Public works and central schemes. All figures here are from Comptroller and Auditor General (CAG) reports unless marked.</p>
+<div id="works"></div></section>
+
+<section><h2>Welfare that leaked</h2>
+<p>The ration system and the guarantee schemes. Grain leakage has fallen sharply; the open problem is who is on the lists.</p>
+<div id="welfare"></div></section>
+
+<section><h2>Forest and land</h2>
+<p>Forest diverted, land recovered from encroachers, and land the state acquired and left unused.</p>
+<div id="land"></div></section>
+
+<section><h2>What satellites and open data can check next</h2>
+<p>This is the part no audit does every month. Each check below sets a government record against a free, independent picture of the ground.</p>
+<div class="tbl"><table>
+<thead><tr><th>Claim on paper</th><th>Independent check</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>Tree loss in the Western Ghats districts</td><td>Hansen forest-change tiles, 30 m, yearly 2001 to 2024, free with no login</td><td class="st go">Ready now</td></tr>
+<tr><td>MGNREGA asset exists where the record says</td><td>Bhuvan geotagged photos against satellite imagery. The CAG did exactly this in Yelburga taluk and found three works "suspect"</td><td class="st go">Ready, slow by hand</td></tr>
+<tr><td>Bengaluru ward works were paid for</td><td>OpenCity's BBMP work-order and payment files by ward</td><td class="st need">Needs a manual download</td></tr>
+<tr><td>Compensatory plantations were raised</td><td>Sentinel-2 and Dynamic World tree cover over each plantation site, year by year</td><td class="st need">Needs site coordinates</td></tr>
+<tr><td>Industrial land (KIADB) is in use</td><td>Building footprints and night lights inside each industrial area</td><td class="st need">Needs area boundaries</td></tr>
+<tr><td>Evicted government land stayed clear</td><td>Sentinel-2 and building footprints on the survey numbers listed as evicted</td><td class="st need">Needs survey numbers</td></tr>
+<tr><td>Lake area matches the revenue record</td><td>Sentinel-2 water extent against the recorded lake boundary</td><td class="st need">Needs lake boundaries</td></tr>
+<tr><td>A road was resurfaced</td><td>Dated street-level photos or phone video from citizens</td><td class="st need">Needs ground reports</td></tr>
+</tbody></table></div>
+<p class="muted">Karnataka's own portals (land records, KGIS maps, the forest department, e-procurement, Mahiti Kanaja) refused connections from the United States during this research. They need to be opened from a connection in India before the "needs" rows can move.</p>
+</section>
+
+<section><h2>Held back from this draft</h2>
+<ul>
+<li>Recent MLA local-area fund (KLLADS) figures. Nothing newer than 2018 could be opened at its source; the state has no public portal for these works.</li>
+<li>The rupee total in the 2025 Justice Nagamohan Das report on 761 Bengaluru works. One newspaper carries a figure; the wire report of the same event carries none.</li>
+<li>The "40% commission" inquiry. Press reports say the commission found no clear proof of a fixed 40% but "some truth" to commission claims. We have not seen the report itself.</li>
+<li>Reported 2026 audit observations on ineligible ration cards and Gruha Lakshmi bank accounts. They rest on one outlet's account of an audit that has not been tabled.</li>
+<li>Any district-by-district table of forest encroachment. None was found in a document we could open.</li>
+</ul>
+</section>
+
+<footer class="muted">Rows marked "checked twice" were re-read in the source document by a second, independent pass. Rows marked "checked once" still need that pass before anything is published. No row states wrongdoing by a named person.</footer>
+</div>
+
+<script>
+const S = {
+ mg:  ["CAG Report 13 of 2025 (MGNREGS)", "https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf"],
+ jjm: ["CAG Report 12 of 2025 (Jal Jeevan Mission)", "https://cag.gov.in/webroot/uploads/download_audit_report/2025/Combined-Pdf_JJM-Final-03.03.26-069c25b7fcf4287.01649139.pdf"],
+ sc:  ["CAG Report 11 of 2025 (Smart Cities)", "https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-Print-final-06981dd464a8a09.83668109.pdf"],
+ sf:  ["CAG State Finances 2024-25 (Report 2 of 2026)", "https://cag.gov.in/webroot/uploads/download_audit_report/2026/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2024-25---English-(1)-069c4e127015905.57315868.pdf"],
+ rr:  ["Karnataka Lokayukta report of Jan 2022, as reported by The News Minute, 27 Sep 2022", "https://www.thenewsminute.com/karnataka/how-kickback-bengaluru-road-contracts-work-step-step-guide-168358"],
+ ic:  ["ICRIER policy brief (2024), Annexure 1; ICRIER Working Paper 294 (2015)", "https://icrier.org/pdf/pb-27.pdf"],
+ bpl: ["PTI, 20 Nov 2024 and 17 Sep 2025 (official figures)", "https://www.theweek.in/wire-updates/national/2025/09/17/mes29-ka-bpl-cards-cm.html"],
+ gl:  ["Department statement, PTI via ThePrint, 25 Jun 2026", "https://theprint.in/india/ktaka-govt-says-gruha-lakshmi-implementation-transparent-bjp-demands-sit-to-probe-scam/2970062/"],
+ rice:["Food minister in the Legislative Council, 8 Dec 2025, PTI via ThePrint", "https://theprint.in/india/570-people-held-in-karnataka-for-illegal-hoarding-sale-of-anna-bhagya-rice-minister/2801282"],
+ val: ["CBI chargesheets filed 2 Jun 2026, The News Minute", "https://www.thenewsminute.com/karnataka/karnataka-valmiki-corp-scam-cbi-names-former-minister-nagendra-as-prime-accused-in-charge-sheet"],
+ ca:  ["CAG Report 3 of 2019, para 3.2", "https://cag.gov.in/en/audit-report/details/55704"],
+ enc: ["CAG Report 5 of 2018, chapter 8", "https://cag.gov.in/en/audit-report/details/49792"],
+ fe:  ["Forest minister's statements, Deccan Herald, 28 May 2024", "https://www.deccanherald.com/india/karnataka/karnataka-forest-dept-recovered-2600-acres-worth-rs-1500-crore-in-one-year-eshwar-khandre-3041907"],
+ ki:  ["CAG Report 8 of 2017, chapter 2 (KIADB)", "https://cag.gov.in/uploads/download_audit_report/2017/Chapter_2_Performance_Audit_of_Report_No_8_of_2017_-_Economic_Sector_Government_of_Karnataka.pdf"],
+ bda: ["CAG Report 3 of 2012, executive summary (BDA)", "https://cag.gov.in/uploads/download_audit_report/2012/Karnataka_Report_3_2012_Exe_Summ.pdf"],
+ fsi: ["India State of Forest Report 2023, vol 1", "https://fsi.nic.in/uploads/isfr2023/isfr_book_eng-vol-1_2023.pdf"],
+ gfw: ["Global Forest Watch data, version 2025", "https://www.globalforestwatch.org/dashboards/country/IND/16/"],
+ lake:["BBMP affidavit to the High Court, as reported by Construction World, 6 Jan 2025", "https://www.constructionworld.in/urban-infrastructure/wastewater-and-sewage-treatment/bengaluru-lakes-encroached-bbmp-reveals-extent/67209"]
+};
+// t title | a,b = [label, value] | p = percent done (omit for no bar) | cap = bar caption | n note | s source key | k kind | c checks (2|1) | al = allegation
+const D = {
+works: [
+ {t:"Rural job scheme works: approved vs completed", a:["Approved 2019-24","62.0 lakh works"], b:["Completed","25.85 lakh"], p:42, cap:"completed", n:"26.77 lakh approved works were never taken up, more than the number completed. In 2023-24 the completion rate was 15%.", s:"mg", k:"Audit", c:2},
+ {t:"Rural job scheme: money flagged as misappropriated vs recovered", a:["Flagged by social audits","Rs 187.38 cr"], b:["Shown as recovered","Rs 20.73 cr"], p:11.1, cap:"recovered", n:"Rs 90.14 crore was closed with no recovery at all. The scheme's own data system claimed 94% recovery, which the CAG calls \"incorrect and misleading\".", s:"mg", k:"Audit", c:2},
+ {t:"Tap water mission: households to connect vs connected", a:["Target","72.14 lakh homes"], b:["Connected, Nov 2024","47.62 lakh"], p:66, cap:"connected", n:"In 26 of 181 villages checked, places reported as fully covered had households getting no water from the scheme.", s:"jjm", k:"Audit", c:2},
+ {t:"Tap water mission: central money allocated vs drawn", a:["Allocated 2019-24","Rs 24,819 cr"], b:["Received by the state","Rs 11,189 cr"], p:45.1, cap:"drawn", n:"The CAG says the shortfall was mainly because the state could not use money already released.", s:"jjm", k:"Audit", c:2},
+ {t:"Smart Cities: projects awarded on time", a:["Projects","645"], b:["Awarded within the set time","45"], p:7, cap:"on time", n:"160 of the 544 projects first planned were dropped. Seven cities received Rs 6,781 crore and had spent Rs 5,788 crore by June 2024.", s:"sc", k:"Audit", c:2},
+ {t:"State projects left incomplete", a:["Incomplete projects, Mar 2025","4,328"], b:["Money spent and blocked","Rs 5,066 cr"], n:"276 of these were stalled because bills of Rs 2,298 crore were unpaid. Separately, Rs 10,448 crore of budget was surrendered on the last day of the financial year.", s:"sf", k:"Audit", c:2},
+ {t:"Bengaluru (RR Nagar): works billed with nothing on the ground", a:["Loss found","Rs 118.25 cr"], b:["Works with no work done","at least 57"], n:"A Lokayukta finding about works routed through a state agency in 2019-20. It concerns the agency and officials.", s:"rr", k:"Lokayukta, via press", c:1}
+],
+welfare: [
+ {t:"Ration grain not reaching households", a:["2011-12","46.4%"], b:["2022-23","6.2%"], n:"India as a whole lost about 28% in 2022-23. A second research estimate puts Karnataka at 17% that year; the methods differ, so both are quoted.", s:"ic", k:"Research estimate", c:1},
+ {t:"Ineligible BPL ration cards: found vs acted on", a:["Found by state survey, 2024","22,62,482"], b:["Removed or reclassified, Sep 2025","3,65,614"], p:16.2, cap:"acted on", n:"The state describes the action as moving cards to the above-poverty category, not cancelling them.", s:"bpl", k:"Government figure", c:1},
+ {t:"Gruha Lakshmi paid to women who had died", a:["Credited to 1,08,755 deceased","Rs 115 cr"], b:["Recovered","Rs 15.24 cr"], p:13.3, cap:"recovered", n:"These are the department's own figures, given in June 2026.", s:"gl", k:"Government figure", c:1},
+ {t:"Anna Bhagya rice caught being diverted", a:["Seized","29,603 quintals"], b:["Arrested","570 people"], n:"314 vehicles were confiscated. The period covered was not stated in the report we read.", s:"rice", k:"Government figure", c:1},
+ {t:"Valmiki Scheduled Tribes corporation funds", a:["Alleged diverted","Rs 89.63 cr"], b:["Recovered, per state police team","over Rs 49.96 cr"], n:"The state police team, the Enforcement Directorate and the CBI have each filed chargesheets. No court has tried the case, and the agencies differ on who was responsible.", s:"val", k:"Allegation, untried", c:1, al:1}
+],
+land: [
+ {t:"Replacement forest: required vs planted", a:["Required for 105 diversions, 2013-18","911 ha"], b:["Raised","450 ha"], p:49.3, cap:"planted", n:"In 2023-24 the state's afforestation fund closed the year with Rs 764.85 crore unspent (CAG State Finances 2023-24).", s:"ca", k:"Audit", c:1},
+ {t:"Government land recovered vs secured, statewide", a:["Recovered from encroachers","2,62,293 acres"], b:["Fenced or marked","18,274 acres"], p:7, cap:"secured", n:"No fines were levied in any district the auditors checked, and an inspection found evicted land occupied again.", s:"enc", k:"Audit", c:1},
+ {t:"Government land recovered vs secured, Bengaluru", a:["Recovered","31,050 acres"], b:["Fenced or marked","483 acres"], p:1.55, cap:"secured", n:"Bengaluru Urban and Rural districts together, position in March 2017.", s:"enc", k:"Audit", c:1},
+ {t:"Forest encroachment: stated vs recovered in a year", a:["Encroached, per the minister","about 2 lakh acres"], b:["Recovered to May 2024","2,602 acres"], p:1.3, cap:"recovered", n:"The weakest-sourced row in this section: it rests on ministerial statements, not a document we could read.", s:"fe", k:"Minister's statement, via press", c:1},
+ {t:"Industrial land acquired and left idle", a:["Developed, unallotted, 2017","6,593 acres"], b:["Undeveloped land bank","30,508 acres"], n:"Another 28,719 acres stayed frozen under preliminary notification, in two cases for over 15 years. 467 allottees left 1,113 acres unused past the four-year limit and it was not taken back.", s:"ki", k:"Audit", c:1},
+ {t:"Bengaluru layouts: land handed back after acquisition", a:["Denotified after possession, 2007-11","212 acres"], b:["Denotified bypassing the committee","610 acres"], n:"The CAG says denotifying land after possession was done \"in defiance of the law\".", s:"bda", k:"Audit", c:1},
+ {t:"Bengaluru lakes: encroached vs reclaimed", a:["Encroached, 183 lakes","235 acres"], b:["Reclaimed, 13 lakes","7 acres"], p:3, cap:"reclaimed", n:"Covers only lakes in the city corporation's custody. Other counts for the whole district are far higher but name no document.", s:"lake", k:"Court affidavit, via press", c:1},
+ {t:"Tree and forest cover, 2021 to 2023", a:["Forest cover","+148 sq km"], b:["Forest plus tree cover","-459 sq km"], n:"Forest cover rose slightly, but trees outside forests fell by 607 sq km, the second-largest combined drop of any state.", s:"fsi", k:"Forest Survey of India", c:1},
+ {t:"Tree-cover loss seen by satellite, 2001 to 2024", a:["Karnataka","57,379 ha"], b:["Worst year","2023: 5,021 ha"], n:"Seven districts hold about 98% of it: Dakshina Kannada, Udupi, Chikkamagaluru, Shivamogga, Hassan, Kodagu, Uttara Kannada. This count includes plantation harvest, so it is not all deforestation.", s:"gfw", k:"Satellite data", c:1}
+]};
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+for (const [id, rows] of Object.entries(D)) {
+  document.getElementById(id).innerHTML = rows.map(r => `
+  <article class="row">
+    <h3>${esc(r.t)}</h3>
+    <div class="pair"><div><small>${esc(r.a[0])}</small><strong>${esc(r.a[1])}</strong></div><div><small>${esc(r.b[0])}</small><strong>${esc(r.b[1])}</strong></div></div>
+    ${r.p != null ? `<div class="bar" role="img" aria-label="${r.p}% ${esc(r.cap)}"><i style="width:${r.p}%"></i></div><div class="barcap"><span><b>${r.p}%</b> ${esc(r.cap)}</span><span>on paper: 100%</span></div>` : ""}
+    <p class="note">${esc(r.n)}</p>
+    <div class="meta"><span class="chip${r.al ? " al" : ""}">${esc(r.k)}</span><span class="chip${r.c === 2 ? " c2" : ""}">checked ${r.c === 2 ? "twice" : "once"}</span><a href="${S[r.s][1]}" target="_blank" rel="noopener">${esc(S[r.s][0])}</a></div>
+  </article>`).join("");
+}
+document.getElementById("gaps").innerHTML = [
+ ["1.55%", "of government land recovered in Bengaluru was fenced or marked (CAG, 2018)"],
+ ["11%", "of rural job scheme money flagged as misappropriated was recovered (CAG, 2025)"],
+ ["42%", "of rural job scheme works approved in 2019-24 were completed (CAG, 2025)"],
+ ["49%", "of the replacement forest required for diversions was planted (CAG, 2019)"]
+].map(g => `<div class="gap"><b>${g[0]}</b><span>${g[1]}</span></div>`).join("");
+</script>
