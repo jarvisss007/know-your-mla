@@ -129,7 +129,7 @@
 ## Description template (every episode)
 ```
 <Kannada title> | <English title>
-ಯಾವ ಯೋಜನೆ ನಿಮಗೆ ಸಿಗುತ್ತದೆ? 8 ಪ್ರಶ್ನೆ ಉತ್ತರಿಸಿ: <finder link>
+ಯಾವ ಯೋಜನೆ ನಿಮಗೆ ಸಿಗುತ್ತದೆ? 8 ಪ್ರಶ್ನೆ ಉತ್ತರಿಸಿ: https://jarvisss007.github.io/know-your-mla/farmers.html
 Sources: <source line(s) from the scene table, with URL from SOURCES_DRAFT.md>
 Facts as of 16 Nov 2026. Amounts change; confirm at your Raitha Samparka Kendra or bank before applying.
 Gandaberunda never asks for money or documents.
@@ -137,6 +137,6 @@ Gandaberunda never asks for money or documents.
 ```
 
 ## Open before publishing
-1. The finder link: the finder is a private claude.ai draft. It needs a public home (for example `farmers.html` on the site) before any Short points to it. That's a site change for the owner to approve.
+1. Finder link (live since 16 Nov 2026): https://jarvisss007.github.io/know-your-mla/farmers.html
 2. Second-pass checks on episodes 2, 3, 5 and 8.
 3. Native Kannada review of every line.
