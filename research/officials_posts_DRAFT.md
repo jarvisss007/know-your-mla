@@ -78,3 +78,7 @@ Names are in the source articles (The South First, 9 Jul 2026; PTI via ThePrint,
 - https://www.deccanherald.com/india/karnataka/complaints-pile-up-action-lokayukta-2148605 (2023 pending-complaints ranking; not opened, Deccan Herald blocks fetches)
 
 Not yet read (blocked or pending): Deccan Herald on the single largest haul from one officer; Deccan Herald on IAS/KAS officers not filing property returns; ED press release PDF.
+
+## Tracker
+
+The raid-to-verdict tracker built from this note is in `research/officials_tracker/`: `tracker.csv` (one row per official, designation only), `build.py`, and the review page `DRAFT_officials_tracker.html`. As of 16 Nov 2026 it holds 48 officials over 10 action days; no row has had its follow-up check yet, and no raid report has been found for May, August, October or November 2026.
