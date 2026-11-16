@@ -1,0 +1,24 @@
+{
+  "_status": "DRAFT prose for make_rural_page.py, written from metrics.json, data/robustness_dates.json and the subagent's check of the images.",
+  "date_phrase": "February 2019 and February 2026",
+  "d19": "21 Feb 2019",
+  "d26": "19 Feb 2026",
+  "pick_dates": ["2019-02-21", "2026-02-19"],
+  "as_of": "16 Nov 2026",
+  "scene_credit": "Sentinel-2B scene of 21 Feb 2019 and Sentinel-2C scene of 19 Feb 2026, tile 43PFQ",
+  "lede": "Two cloud-free Sentinel-2 satellite pictures of Assembly constituency 197 in Hassan district are compared pixel by pixel at 10 m. They were taken two days apart in the calendar, seven years apart: 21 February 2019 and 19 February 2026. This is the third constituency in a series that covers a seat held by each of the three main parties. It measures land cover only and says nothing about who caused any change.",
+  "warning_title": "Read this first: the change here is mostly a wet year against a dry one.",
+  "warning": "Holenarasipur is farmland and tanks. On the 30 clean dates checked, green cover moved 7 to 10 points within a single February. Around 19 to 21 February it stood at 34% in 2019, 47% in 2025 and 41% in 2026. 2026 was greener and less bare than 2019 on every matched pair of dates, by 8 to 25 points, so the direction holds; the pair used below shows the smallest gap of all. That fits a dry 2018-19 season and a wet 2025-26 one. Do not quote the tiles below as land restored. The fuller tanks are real for that date, but tanks fill and empty with each monsoon.",
+  "chart_title": "Is the change real? Green cover on every clean date, January to March",
+  "chart_note": "Share of the constituency with NDVI above 0.4, computed at 20 m on every Sentinel-2 date with less than 1% cloud inside the boundary (tile 43PFQ). Large dots are the two dates used for the tiles and maps. The gap between years is mostly how wet the previous monsoon was.",
+  "change_caption": "Most of the green lost and new red is farmland between harvest and sowing.",
+  "forest_note": "OpenStreetMap maps only about 588 ha of forest here and no protected area, so this split says little.",
+  "limits": [
+    "One picture per year, in the dry season. Green cover changes week by week; the date check above shows how much.",
+    "The bare or built-up figure is a proxy. In this rural seat it is mostly bare soil, harvested fields and dry grass, so its fall says nothing about buildings.",
+    "The two years use different satellites (Sentinel-2B and 2C) and processing versions. The -1000 reflectance offset for products processed from 2022 was applied.",
+    "Thresholds are standard textbook values, not tuned for Karnataka. Trust the direction of change more than the exact hectares.",
+    "10 m pixels blur roads, tree lines and small tanks. Water bodies under 2 ha are not measured; most tanks here are unnamed in OpenStreetMap and are listed by their map id.",
+    "The boundary is DataMeet's digitised map of the 2008 constituencies. Here it has a second, 105 ha piece just north of the main area, which may be a digitising error. Check edges against the official map before using any figure near them."
+  ]
+}

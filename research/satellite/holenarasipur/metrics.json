@@ -1,0 +1,6124 @@
+{
+  "title": "Holenarasipur (AC 197) Sentinel-2 land-cover change, dry season 2019 vs 2026",
+  "generated_utc": "2026-11-16T23:44:05+00:00",
+  "status": "DRAFT - first-pass, unreviewed. Proxies from two single dates, not a land-use survey. Describes land cover only.",
+  "boundary": {
+    "source": "DataMeet maps repo, docs/data/geojson/ac.geojson (Assembly Constituencies scraped from ECI polling-station site psleci.nic.in)",
+    "url": "https://github.com/datameet/maps/blob/master/docs/data/geojson/ac.geojson",
+    "license": "CC BY 2.5 India (DataMeet)",
+    "feature_properties": {
+      "OBJECTID": 2353,
+      "ST_CODE": "29",
+      "ST_NAME": "KARNATAKA",
+      "DT_CODE": "23",
+      "DIST_NAME": "HASSAN",
+      "AC_NO": 197.0,
+      "AC_NAME": "Holenarasipur",
+      "PC_NO": 16.0,
+      "PC_NAME": "HASSAN",
+      "PC_ID": 2916.0,
+      "STATUS": null,
+      "Shape_Leng": 2.105433,
+      "Shape_Area": 0.079207
+    },
+    "district_note": "Hassan district; the DataMeet file (OBJECTID 2353) labels it DIST_NAME HASSAN, PC_NO 16 HASSAN",
+    "delimitation": "2008 (Delimitation Order 2008; Karnataka first used it in the 2008 election). Inferred: STATUS field empty (DataMeet marks only pre-delimitation states).",
+    "known_issues": "DataMeet README: 'There is some shift in the data'. Polygon has 2 part(s), 166 vertices. Treat edges as approximate.",
+    "area_ha_epsg32643": 95053.1,
+    "part_areas_ha": [
+      94948.5,
+      104.6
+    ]
+  },
+  "imagery": {
+    "collection": "sentinel-2-l2a (Microsoft Planetary Computer STAC, anonymous SAS-signed asset URLs)",
+    "stac_api": "https://planetarycomputer.microsoft.com/api/stac/v1",
+    "selection": "All Jan-Mar acquisitions were grouped by date and relative orbit (every one over Holenarasipur is orbit R062, and the single tile 43PFQ covers the whole boundary, so no mosaic is needed) and scored by the SCL cloud/shadow/no-data fraction inside the boundary on a 60 m grid (data/candidates.json). Rule: among dates with under 0.1% masked, take the 2019/2026 pair closest in day-of-year, preferring the Feb window used for Kanakapura and Mahadevapura (11-13 Feb). Chose 21 Feb 2019 (Sentinel-2B; 0.023% masked at 60 m) and 19 Feb 2026 (Sentinel-2C; 0.000% masked), two days apart in the calendar, same orbit and tile. The only other 2-day pairs that clean were 7 Jan 2019/5 Jan 2026 (0.032%/0.000%) and 28 Mar 2019/26 Mar 2026 (0.008%/0.001%, marginally cleaner, but six weeks later in the dry season than the other constituencies' pairs); both are covered by robustness_check.py. 2026 had clean dates, so no 2025 fallback was needed.",
+    "scenes": {
+      "2019": {
+        "datetime": "2019-02-21T05:18:39.024000Z",
+        "platform": "Sentinel-2B",
+        "relative_orbit": 62,
+        "tiles": [
+          {
+            "id": "S2B_MSIL2A_20190221T051839_R062_T43PFQ_20201007T191241",
+            "mgrs_tile": "43PFQ",
+            "processing_baseline": "02.12",
+            "tile_cloud_cover_pct": 0.015411,
+            "reflectance_offset_applied": 0,
+            "pixels_supplied_inside_boundary": 9505294,
+            "stac_item_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-2-l2a/items/S2B_MSIL2A_20190221T051839_R062_T43PFQ_20201007T191241"
+          }
+        ],
+        "scl_class_pct_inside_boundary": {
+          "dark area": 0.741,
+          "cloud shadow": 0.003,
+          "vegetation": 25.931,
+          "not vegetated": 72.301,
+          "water": 0.827,
+          "unclassified": 0.173,
+          "cloud medium prob": 0.019,
+          "cloud high prob": 0.006
+        },
+        "masked_pct_inside_boundary": 0.027,
+        "sanity_median_B08_on_SCL_water": 0.0267,
+        "sanity_median_B04_inside": 0.1134
+      },
+      "2026": {
+        "datetime": "2026-02-19T05:18:51.025000Z",
+        "platform": "Sentinel-2C",
+        "relative_orbit": 62,
+        "tiles": [
+          {
+            "id": "S2C_MSIL2A_20260219T051851_R062_T43PFQ_20260219T102113",
+            "mgrs_tile": "43PFQ",
+            "processing_baseline": "05.12",
+            "tile_cloud_cover_pct": 0.030179,
+            "reflectance_offset_applied": -1000,
+            "pixels_supplied_inside_boundary": 9505294,
+            "stac_item_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-2-l2a/items/S2C_MSIL2A_20260219T051851_R062_T43PFQ_20260219T102113"
+          }
+        ],
+        "scl_class_pct_inside_boundary": {
+          "dark area": 0.17,
+          "vegetation": 26.286,
+          "not vegetated": 70.816,
+          "water": 1.702,
+          "unclassified": 1.025
+        },
+        "masked_pct_inside_boundary": 0.0,
+        "sanity_median_B08_on_SCL_water": 0.0336,
+        "sanity_median_B04_inside": 0.0961
+      }
+    }
+  },
+  "method": {
+    "grid": "EPSG:32643, 10.0 m pixels, 3074x5318; 10 m bands nearest-neighbour, B11 (20 m) bilinear, SCL (20 m) nearest. Same-date tiles mosaicked (first listed tile wins in overlaps).",
+    "reflectance": "L2A (DN + BOA_ADD_OFFSET)/10000; offset -1000 for processing baseline >= 04.00 (decided per tile), 0 before",
+    "cloud_mask": "SCL classes excluded: ['no data', 'saturated/defective', 'cloud shadow', 'cloud medium prob', 'cloud high prob', 'thin cirrus']. Areas counted only on pixels valid in BOTH dates inside the boundary.",
+    "thresholds": {
+      "vegetation": "NDVI = (B08-B04)/(B08+B04) > 0.4",
+      "open_water_headline": "MNDWI = (B03-B11)/(B03+B11) > 0  (Xu 2006)",
+      "open_water_secondary": "NDWI = (B03-B08)/(B03+B08) > 0  (McFeeters 1996), comparison only",
+      "builtup_bare_proxy": "NDBI = (B11-B08)/(B11+B08) > 0 AND NDVI < 0.2 AND not MNDWI water. A PROXY: also catches bare soil, dry/harvested fields, cleared plots, quarries, rock, dry grass"
+    },
+    "pixel_area_ha": 0.01,
+    "comparison_area_ha": 95026.8,
+    "comparison_area_pct_of_boundary": 99.97,
+    "note_categories": "Categories are independent thresholds; a pixel can be in none of them. They do not sum to 100%."
+  },
+  "results_inside_boundary": {
+    "by_year": {
+      "2019": {
+        "vegetation_ndvi_gt_0.4": {
+          "ha": 32090.5,
+          "pct": 33.77
+        },
+        "open_water_mndwi_gt_0": {
+          "ha": 679.8,
+          "pct": 0.72
+        },
+        "open_water_ndwi_mcfeeters_gt_0_secondary": {
+          "ha": 881.3,
+          "pct": 0.93
+        },
+        "builtup_bare_proxy": {
+          "ha": 13399.8,
+          "pct": 14.1
+        }
+      },
+      "2026": {
+        "vegetation_ndvi_gt_0.4": {
+          "ha": 38961.2,
+          "pct": 41.0
+        },
+        "open_water_mndwi_gt_0": {
+          "ha": 2019.9,
+          "pct": 2.13
+        },
+        "open_water_ndwi_mcfeeters_gt_0_secondary": {
+          "ha": 1986.0,
+          "pct": 2.09
+        },
+        "builtup_bare_proxy": {
+          "ha": 9001.7,
+          "pct": 9.47
+        }
+      }
+    },
+    "net_change": {
+      "vegetation_ndvi_gt_0.4": {
+        "ha_change": 6870.7,
+        "pct_point_change": 7.23,
+        "relative_change_pct": 21.4
+      },
+      "open_water_mndwi_gt_0": {
+        "ha_change": 1340.1,
+        "pct_point_change": 1.41,
+        "relative_change_pct": 197.1
+      },
+      "open_water_ndwi_mcfeeters_gt_0_secondary": {
+        "ha_change": 1104.7,
+        "pct_point_change": 1.16,
+        "relative_change_pct": 125.3
+      },
+      "builtup_bare_proxy": {
+        "ha_change": -4398.1,
+        "pct_point_change": -4.63,
+        "relative_change_pct": -32.8
+      }
+    },
+    "gross_pixel_transitions": {
+      "vegetation_lost_ha": 7858.2,
+      "vegetation_gained_ha": 14728.8,
+      "water_lost_ha": 47.5,
+      "water_gained_ha": 1387.6,
+      "builtup_proxy_new_ha": 4510.4,
+      "builtup_proxy_no_longer_ha": 8908.4,
+      "of_new_builtup_proxy_was_vegetation_2019_ha": 397.1
+    }
+  },
+  "vegetation_inside_vs_outside_osm_protected_forest": {
+    "source": "OpenStreetMap via Overpass: boundary=protected_area|national_park, leisure=nature_reserve, landuse=forest; \"https://overpass.kumi.systems/api/interpreter\" queried \"2026-11-16T23:25:38+00:00\"",
+    "features": [
+      {
+        "osm": "way/336292429",
+        "name": null,
+        "tags": {
+          "landuse": "forest",
+          "natural": "wood"
+        },
+        "ha_inside_boundary": 522.3
+      },
+      {
+        "osm": "way/336229152",
+        "name": "Gendekatte forest",
+        "tags": {
+          "landuse": "forest"
+        },
+        "ha_inside_boundary": 50.1
+      },
+      {
+        "osm": "way/336232764",
+        "name": null,
+        "tags": {
+          "landuse": "forest",
+          "natural": "wood"
+        },
+        "ha_inside_boundary": 15.0
+      }
+    ],
+    "regions": {
+      "osm_protected_area": {
+        "area_ha_inside_boundary": 0.0,
+        "compared_ha": 0.0,
+        "by_year": {
+          "2019": {
+            "vegetation_ndvi_gt_0.4": {
+              "ha": 0.0,
+              "pct": null
+            },
+            "open_water_mndwi_gt_0": {
+              "ha": 0.0,
+              "pct": null
+            },
+            "open_water_ndwi_mcfeeters_gt_0_secondary": {
+              "ha": 0.0,
+              "pct": null
+            },
+            "builtup_bare_proxy": {
+              "ha": 0.0,
+              "pct": null
+            }
+          },
+          "2026": {
+            "vegetation_ndvi_gt_0.4": {
+              "ha": 0.0,
+              "pct": null
+            },
+            "open_water_mndwi_gt_0": {
+              "ha": 0.0,
+              "pct": null
+            },
+            "open_water_ndwi_mcfeeters_gt_0_secondary": {
+              "ha": 0.0,
+              "pct": null
+            },
+            "builtup_bare_proxy": {
+              "ha": 0.0,
+              "pct": null
+            }
+          }
+        },
+        "net_change": {
+          "vegetation_ndvi_gt_0.4": {
+            "ha_change": 0.0,
+            "pct_point_change": null,
+            "relative_change_pct": null
+          },
+          "open_water_mndwi_gt_0": {
+            "ha_change": 0.0,
+            "pct_point_change": null,
+            "relative_change_pct": null
+          },
+          "open_water_ndwi_mcfeeters_gt_0_secondary": {
+            "ha_change": 0.0,
+            "pct_point_change": null,
+            "relative_change_pct": null
+          },
+          "builtup_bare_proxy": {
+            "ha_change": 0.0,
+            "pct_point_change": null,
+            "relative_change_pct": null
+          }
+        },
+        "vegetation_lost_ha": 0.0,
+        "vegetation_gained_ha": 0.0,
+        "builtup_proxy_new_ha": 0.0
+      },
+      "osm_landuse_forest": {
+        "area_ha_inside_boundary": 587.5,
+        "compared_ha": 587.5,
+        "by_year": {
+          "2019": {
+            "vegetation_ndvi_gt_0.4": {
+              "ha": 190.3,
+              "pct": 32.39
+            },
+            "open_water_mndwi_gt_0": {
+              "ha": 0.0,
+              "pct": 0.0
+            },
+            "open_water_ndwi_mcfeeters_gt_0_secondary": {
+              "ha": 0.0,
+              "pct": 0.0
+            },
+            "builtup_bare_proxy": {
+              "ha": 9.3,
+              "pct": 1.58
+            }
+          },
+          "2026": {
+            "vegetation_ndvi_gt_0.4": {
+              "ha": 201.0,
+              "pct": 34.21
+            },
+            "open_water_mndwi_gt_0": {
+              "ha": 0.5,
+              "pct": 0.09
+            },
+            "open_water_ndwi_mcfeeters_gt_0_secondary": {
+              "ha": 0.5,
+              "pct": 0.09
+            },
+            "builtup_bare_proxy": {
+              "ha": 4.1,
+              "pct": 0.7
+            }
+          }
+        },
+        "net_change": {
+          "vegetation_ndvi_gt_0.4": {
+            "ha_change": 10.7,
+            "pct_point_change": 1.82,
+            "relative_change_pct": 5.6
+          },
+          "open_water_mndwi_gt_0": {
+            "ha_change": 0.5,
+            "pct_point_change": 0.09,
+            "relative_change_pct": null
+          },
+          "open_water_ndwi_mcfeeters_gt_0_secondary": {
+            "ha_change": 0.5,
+            "pct_point_change": 0.09,
+            "relative_change_pct": null
+          },
+          "builtup_bare_proxy": {
+            "ha_change": -5.2,
+            "pct_point_change": -0.88,
+            "relative_change_pct": -55.9
+          }
+        },
+        "vegetation_lost_ha": 68.2,
+        "vegetation_gained_ha": 79.0,
+        "builtup_proxy_new_ha": 1.0
+      },
+      "protected_or_forest_union": {
+        "area_ha_inside_boundary": 587.5,
+        "compared_ha": 587.5,
+        "by_year": {
+          "2019": {
+            "vegetation_ndvi_gt_0.4": {
+              "ha": 190.3,
+              "pct": 32.39
+            },
+            "open_water_mndwi_gt_0": {
+              "ha": 0.0,
+              "pct": 0.0
+            },
+            "open_water_ndwi_mcfeeters_gt_0_secondary": {
+              "ha": 0.0,
+              "pct": 0.0
+            },
+            "builtup_bare_proxy": {
+              "ha": 9.3,
+              "pct": 1.58
+            }
+          },
+          "2026": {
+            "vegetation_ndvi_gt_0.4": {
+              "ha": 201.0,
+              "pct": 34.21
+            },
+            "open_water_mndwi_gt_0": {
+              "ha": 0.5,
+              "pct": 0.09
+            },
+            "open_water_ndwi_mcfeeters_gt_0_secondary": {
+              "ha": 0.5,
+              "pct": 0.09
+            },
+            "builtup_bare_proxy": {
+              "ha": 4.1,
+              "pct": 0.7
+            }
+          }
+        },
+        "net_change": {
+          "vegetation_ndvi_gt_0.4": {
+            "ha_change": 10.7,
+            "pct_point_change": 1.82,
+            "relative_change_pct": 5.6
+          },
+          "open_water_mndwi_gt_0": {
+            "ha_change": 0.5,
+            "pct_point_change": 0.09,
+            "relative_change_pct": null
+          },
+          "open_water_ndwi_mcfeeters_gt_0_secondary": {
+            "ha_change": 0.5,
+            "pct_point_change": 0.09,
+            "relative_change_pct": null
+          },
+          "builtup_bare_proxy": {
+            "ha_change": -5.2,
+            "pct_point_change": -0.88,
+            "relative_change_pct": -55.9
+          }
+        },
+        "vegetation_lost_ha": 68.2,
+        "vegetation_gained_ha": 79.0,
+        "builtup_proxy_new_ha": 1.0
+      },
+      "outside_protected_and_forest": {
+        "area_ha_inside_boundary": 94465.4,
+        "compared_ha": 94439.3,
+        "by_year": {
+          "2019": {
+            "vegetation_ndvi_gt_0.4": {
+              "ha": 31900.2,
+              "pct": 33.78
+            },
+            "open_water_mndwi_gt_0": {
+              "ha": 679.8,
+              "pct": 0.72
+            },
+            "open_water_ndwi_mcfeeters_gt_0_secondary": {
+              "ha": 881.3,
+              "pct": 0.93
+            },
+            "builtup_bare_proxy": {
+              "ha": 13390.5,
+              "pct": 14.18
+            }
+          },
+          "2026": {
+            "vegetation_ndvi_gt_0.4": {
+              "ha": 38760.1,
+              "pct": 41.04
+            },
+            "open_water_mndwi_gt_0": {
+              "ha": 2019.4,
+              "pct": 2.14
+            },
+            "open_water_ndwi_mcfeeters_gt_0_secondary": {
+              "ha": 1985.6,
+              "pct": 2.1
+            },
+            "builtup_bare_proxy": {
+              "ha": 8997.6,
+              "pct": 9.53
+            }
+          }
+        },
+        "net_change": {
+          "vegetation_ndvi_gt_0.4": {
+            "ha_change": 6859.9,
+            "pct_point_change": 7.26,
+            "relative_change_pct": 21.5
+          },
+          "open_water_mndwi_gt_0": {
+            "ha_change": 1339.6,
+            "pct_point_change": 1.42,
+            "relative_change_pct": 197.1
+          },
+          "open_water_ndwi_mcfeeters_gt_0_secondary": {
+            "ha_change": 1104.3,
+            "pct_point_change": 1.17,
+            "relative_change_pct": 125.3
+          },
+          "builtup_bare_proxy": {
+            "ha_change": -4392.9,
+            "pct_point_change": -4.65,
+            "relative_change_pct": -32.8
+          }
+        },
+        "vegetation_lost_ha": 7789.9,
+        "vegetation_gained_ha": 14649.9,
+        "builtup_proxy_new_ha": 4509.3
+      }
+    }
+  },
+  "water_bodies_osm": {
+    "query": "Overpass API: way/relation natural=water or landuse=reservoir intersecting the boundary polygon, named or not",
+    "note": "Overpass endpoint https://overpass-api.de/api/interpreter, queried 2026-11-16T23:21:26+00:00; response cached in data/osm_water_all.json and reused. Water ha = pixels with MNDWI>0 inside the OSM outline (clipped to the boundary); measured only if >= 2.0 ha. Water bodies covered by weeds count as vegetation. OSM outlines are volunteer-drawn and current-day; overlapping OSM features (e.g. a river polygon and a reservoir polygon) are listed separately and can double count.",
+    "named_count": 12,
+    "total_count": 245,
+    "water_bodies": [
+      {
+        "name": "unnamed way/59748146",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/59748146"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 13.07214,
+        "point_lon": 76.20789,
+        "osm_polygon_ha_inside_boundary": 140.37,
+        "osm_polygon_ha_total": 140.37,
+        "pixels": 14026,
+        "water_ha_2019": 1.1,
+        "vegetation_ha_2019": 25.5,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 109.8,
+        "vegetation_ha_2026": 9.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 108.7
+      },
+      {
+        "name": "unnamed way/59736329",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/59736329"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.89808,
+        "point_lon": 76.23833,
+        "osm_polygon_ha_inside_boundary": 124.82,
+        "osm_polygon_ha_total": 124.82,
+        "pixels": 12489,
+        "water_ha_2019": 59.3,
+        "vegetation_ha_2019": 17.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 62.0,
+        "vegetation_ha_2026": 27.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.7
+      },
+      {
+        "name": "unnamed way/59748147",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/59748147"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 13.06967,
+        "point_lon": 76.24433,
+        "osm_polygon_ha_inside_boundary": 96.63,
+        "osm_polygon_ha_total": 96.63,
+        "pixels": 9667,
+        "water_ha_2019": 31.1,
+        "vegetation_ha_2019": 7.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 65.6,
+        "vegetation_ha_2026": 9.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 34.5
+      },
+      {
+        "name": "unnamed way/188020925",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/188020925"
+        ],
+        "water_tag": [
+          "river"
+        ],
+        "name_kn": [],
+        "point_lat": 12.82233,
+        "point_lon": 76.18426,
+        "osm_polygon_ha_inside_boundary": 91.39,
+        "osm_polygon_ha_total": 91.39,
+        "pixels": 9143,
+        "water_ha_2019": 50.9,
+        "vegetation_ha_2019": 15.8,
+        "valid_pct_2019": 98.0,
+        "water_ha_2026": 73.0,
+        "vegetation_ha_2026": 9.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 22.1
+      },
+      {
+        "name": "unnamed way/173752033",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/173752033"
+        ],
+        "water_tag": [
+          "river"
+        ],
+        "name_kn": [],
+        "point_lat": 12.80245,
+        "point_lon": 76.22997,
+        "osm_polygon_ha_inside_boundary": 91.3,
+        "osm_polygon_ha_total": 91.3,
+        "pixels": 9164,
+        "water_ha_2019": 11.0,
+        "vegetation_ha_2019": 43.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 30.2,
+        "vegetation_ha_2026": 37.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 19.2
+      },
+      {
+        "name": "unnamed way/281061751",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/281061751"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 13.13449,
+        "point_lon": 76.14638,
+        "osm_polygon_ha_inside_boundary": 84.77,
+        "osm_polygon_ha_total": 84.77,
+        "pixels": 8482,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 3.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 22.3,
+        "vegetation_ha_2026": 8.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 22.3
+      },
+      {
+        "name": "unnamed way/59748148",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/59748148"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06244,
+        "point_lon": 76.26968,
+        "osm_polygon_ha_inside_boundary": 74.52,
+        "osm_polygon_ha_total": 74.52,
+        "pixels": 7454,
+        "water_ha_2019": 5.0,
+        "vegetation_ha_2019": 18.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 30.8,
+        "vegetation_ha_2026": 28.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 25.8
+      },
+      {
+        "name": "unnamed way/281060091",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/281060091"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 13.10721,
+        "point_lon": 76.18371,
+        "osm_polygon_ha_inside_boundary": 72.77,
+        "osm_polygon_ha_total": 72.77,
+        "pixels": 7272,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 2.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 5.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "unnamed way/119067632",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/119067632"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.93034,
+        "point_lon": 76.34355,
+        "osm_polygon_ha_inside_boundary": 71.64,
+        "osm_polygon_ha_total": 71.64,
+        "pixels": 7155,
+        "water_ha_2019": 46.4,
+        "vegetation_ha_2019": 17.9,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 48.7,
+        "vegetation_ha_2026": 13.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.3
+      },
+      {
+        "name": "unnamed way/119067636",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/119067636"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.9619,
+        "point_lon": 76.24254,
+        "osm_polygon_ha_inside_boundary": 68.85,
+        "osm_polygon_ha_total": 68.85,
+        "pixels": 6868,
+        "water_ha_2019": 1.7,
+        "vegetation_ha_2019": 22.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 39.5,
+        "vegetation_ha_2026": 22.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 37.8
+      },
+      {
+        "name": "unnamed way/158811644",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/158811644"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 13.09118,
+        "point_lon": 76.19709,
+        "osm_polygon_ha_inside_boundary": 68.59,
+        "osm_polygon_ha_total": 68.59,
+        "pixels": 6857,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 3.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 28.6,
+        "vegetation_ha_2026": 9.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 28.6
+      },
+      {
+        "name": "Shantigrama Kere",
+        "named_in_osm": true,
+        "osm_ids": [
+          "way/206303271"
+        ],
+        "water_tag": [],
+        "name_kn": [
+          "ಶಾಂತಿಗ್ರಾಮ ಕೆರೆ"
+        ],
+        "point_lat": 12.99288,
+        "point_lon": 76.21275,
+        "osm_polygon_ha_inside_boundary": 64.84,
+        "osm_polygon_ha_total": 64.84,
+        "pixels": 6459,
+        "water_ha_2019": 12.7,
+        "vegetation_ha_2019": 29.7,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 52.1,
+        "vegetation_ha_2026": 8.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 39.4
+      },
+      {
+        "name": "unnamed way/323182558",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/323182558"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.03181,
+        "point_lon": 76.24203,
+        "osm_polygon_ha_inside_boundary": 64.74,
+        "osm_polygon_ha_total": 64.74,
+        "pixels": 6480,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 5.0,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 9.3,
+        "vegetation_ha_2026": 10.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 9.3
+      },
+      {
+        "name": "unnamed way/169207834",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/169207834"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 13.0955,
+        "point_lon": 76.2347,
+        "osm_polygon_ha_inside_boundary": 62.34,
+        "osm_polygon_ha_total": 62.34,
+        "pixels": 6231,
+        "water_ha_2019": 0.2,
+        "vegetation_ha_2019": 0.5,
+        "valid_pct_2019": 99.9,
+        "water_ha_2026": 4.2,
+        "vegetation_ha_2026": 8.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 4.0
+      },
+      {
+        "name": "unnamed way/119067640",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/119067640"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.99329,
+        "point_lon": 76.33583,
+        "osm_polygon_ha_inside_boundary": 60.78,
+        "osm_polygon_ha_total": 60.78,
+        "pixels": 6086,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 2.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 47.8,
+        "vegetation_ha_2026": 1.4,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 47.8
+      },
+      {
+        "name": "unnamed way/59748151",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/59748151"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 13.1216,
+        "point_lon": 76.22516,
+        "osm_polygon_ha_inside_boundary": 60.74,
+        "osm_polygon_ha_total": 60.74,
+        "pixels": 6058,
+        "water_ha_2019": 0.1,
+        "vegetation_ha_2019": 3.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 41.5,
+        "vegetation_ha_2026": 5.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 41.4
+      },
+      {
+        "name": "unnamed way/157378262",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/157378262"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.86485,
+        "point_lon": 76.16715,
+        "osm_polygon_ha_inside_boundary": 60.21,
+        "osm_polygon_ha_total": 60.21,
+        "pixels": 6028,
+        "water_ha_2019": 16.1,
+        "vegetation_ha_2019": 40.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 25.2,
+        "vegetation_ha_2026": 37.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 9.1
+      },
+      {
+        "name": "unnamed way/301642808",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/301642808"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.12661,
+        "point_lon": 76.18314,
+        "osm_polygon_ha_inside_boundary": 53.67,
+        "osm_polygon_ha_total": 53.67,
+        "pixels": 5369,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 12.0,
+        "valid_pct_2019": 99.9,
+        "water_ha_2026": 4.5,
+        "vegetation_ha_2026": 16.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 4.5
+      },
+      {
+        "name": "unnamed way/338966714",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/338966714"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.77197,
+        "point_lon": 76.25833,
+        "osm_polygon_ha_inside_boundary": 50.67,
+        "osm_polygon_ha_total": 50.67,
+        "pixels": 5064,
+        "water_ha_2019": 3.1,
+        "vegetation_ha_2019": 47.9,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 18.4,
+        "vegetation_ha_2026": 31.9,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 15.3
+      },
+      {
+        "name": "Koushika Kere",
+        "named_in_osm": true,
+        "osm_ids": [
+          "relation/16405389"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [
+          "ಕೌಶಿಕ ಕೆರೆ"
+        ],
+        "point_lat": 12.96619,
+        "point_lon": 76.14826,
+        "osm_polygon_ha_inside_boundary": 44.78,
+        "osm_polygon_ha_total": 44.78,
+        "pixels": 4483,
+        "water_ha_2019": 6.5,
+        "vegetation_ha_2019": 9.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 43.4,
+        "vegetation_ha_2026": 0.4,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 36.9
+      },
+      {
+        "name": "unnamed way/119067631",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/119067631"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 13.01361,
+        "point_lon": 76.33485,
+        "osm_polygon_ha_inside_boundary": 41.22,
+        "osm_polygon_ha_total": 41.22,
+        "pixels": 4121,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 2.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 20.0,
+        "vegetation_ha_2026": 12.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 20.0
+      },
+      {
+        "name": "unnamed way/866650286",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/866650286"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.08165,
+        "point_lon": 76.18602,
+        "osm_polygon_ha_inside_boundary": 39.06,
+        "osm_polygon_ha_total": 39.06,
+        "pixels": 3902,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 7.6,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 20.6,
+        "vegetation_ha_2026": 4.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 20.6
+      },
+      {
+        "name": "unnamed way/119067630",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/119067630"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.94892,
+        "point_lon": 76.32434,
+        "osm_polygon_ha_inside_boundary": 38.62,
+        "osm_polygon_ha_total": 38.62,
+        "pixels": 3859,
+        "water_ha_2019": 15.9,
+        "vegetation_ha_2019": 4.0,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 28.4,
+        "vegetation_ha_2026": 3.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 12.5
+      },
+      {
+        "name": "unnamed way/119067633",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/119067633"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.91034,
+        "point_lon": 76.34744,
+        "osm_polygon_ha_inside_boundary": 36.88,
+        "osm_polygon_ha_total": 36.88,
+        "pixels": 3683,
+        "water_ha_2019": 19.9,
+        "vegetation_ha_2019": 31.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 19.7,
+        "vegetation_ha_2026": 15.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -0.2
+      },
+      {
+        "name": "unnamed way/301642806",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/301642806"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.11833,
+        "point_lon": 76.13977,
+        "osm_polygon_ha_inside_boundary": 36.82,
+        "osm_polygon_ha_total": 36.82,
+        "pixels": 3681,
+        "water_ha_2019": 0.7,
+        "vegetation_ha_2019": 6.3,
+        "valid_pct_2019": 97.0,
+        "water_ha_2026": 19.9,
+        "vegetation_ha_2026": 5.4,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 19.2
+      },
+      {
+        "name": "unnamed way/1570188396",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1570188396"
+        ],
+        "water_tag": [
+          "river"
+        ],
+        "name_kn": [],
+        "point_lat": 12.79551,
+        "point_lon": 76.2578,
+        "osm_polygon_ha_inside_boundary": 35.08,
+        "osm_polygon_ha_total": 35.08,
+        "pixels": 3516,
+        "water_ha_2019": 0.7,
+        "vegetation_ha_2019": 19.5,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 9.8,
+        "vegetation_ha_2026": 18.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 9.1
+      },
+      {
+        "name": "unnamed way/323182563",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/323182563"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.03004,
+        "point_lon": 76.3259,
+        "osm_polygon_ha_inside_boundary": 34.76,
+        "osm_polygon_ha_total": 34.76,
+        "pixels": 3476,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 17.7,
+        "vegetation_ha_2026": 4.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 17.7
+      },
+      {
+        "name": "Mosale Kere",
+        "named_in_osm": true,
+        "osm_ids": [
+          "way/388311139"
+        ],
+        "water_tag": [],
+        "name_kn": [
+          "ಮೊಸಳೆ ಕೆರೆ"
+        ],
+        "point_lat": 12.90817,
+        "point_lon": 76.14054,
+        "osm_polygon_ha_inside_boundary": 33.44,
+        "osm_polygon_ha_total": 33.44,
+        "pixels": 3342,
+        "water_ha_2019": 20.3,
+        "vegetation_ha_2019": 4.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 25.4,
+        "vegetation_ha_2026": 4.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 5.1
+      },
+      {
+        "name": "unnamed way/119067637",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/119067637"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.95501,
+        "point_lon": 76.34922,
+        "osm_polygon_ha_inside_boundary": 33.36,
+        "osm_polygon_ha_total": 33.36,
+        "pixels": 3339,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 10.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 28.0,
+        "vegetation_ha_2026": 3.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 28.0
+      },
+      {
+        "name": "unnamed way/119067639",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/119067639"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.99023,
+        "point_lon": 76.24555,
+        "osm_polygon_ha_inside_boundary": 30.77,
+        "osm_polygon_ha_total": 30.77,
+        "pixels": 3076,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.5,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 17.6,
+        "vegetation_ha_2026": 4.9,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 17.6
+      },
+      {
+        "name": "unnamed way/1570132258",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1570132258"
+        ],
+        "water_tag": [
+          "river"
+        ],
+        "name_kn": [],
+        "point_lat": 12.78869,
+        "point_lon": 76.22743,
+        "osm_polygon_ha_inside_boundary": 30.35,
+        "osm_polygon_ha_total": 30.35,
+        "pixels": 3033,
+        "water_ha_2019": 8.7,
+        "vegetation_ha_2019": 8.6,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 14.7,
+        "vegetation_ha_2026": 8.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 6.0
+      },
+      {
+        "name": "unnamed way/169209022",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/169209022"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 13.10251,
+        "point_lon": 76.23992,
+        "osm_polygon_ha_inside_boundary": 30.29,
+        "osm_polygon_ha_total": 30.29,
+        "pixels": 3027,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 1.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 5.3,
+        "vegetation_ha_2026": 4.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 5.3
+      },
+      {
+        "name": "unnamed way/321110536",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/321110536"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.75819,
+        "point_lon": 76.24956,
+        "osm_polygon_ha_inside_boundary": 28.13,
+        "osm_polygon_ha_total": 28.13,
+        "pixels": 2817,
+        "water_ha_2019": 10.6,
+        "vegetation_ha_2019": 21.7,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 17.1,
+        "vegetation_ha_2026": 11.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 6.5
+      },
+      {
+        "name": "unnamed way/359220752",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/359220752"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.86536,
+        "point_lon": 76.28486,
+        "osm_polygon_ha_inside_boundary": 27.03,
+        "osm_polygon_ha_total": 27.03,
+        "pixels": 2698,
+        "water_ha_2019": 11.8,
+        "vegetation_ha_2019": 10.6,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 12.2,
+        "vegetation_ha_2026": 9.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.4
+      },
+      {
+        "name": "Ambuga Kere",
+        "named_in_osm": true,
+        "osm_ids": [
+          "way/327757573"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [
+          "ಅಂಬುಗ ಕೆರೆ"
+        ],
+        "point_lat": 12.93027,
+        "point_lon": 76.15112,
+        "osm_polygon_ha_inside_boundary": 26.67,
+        "osm_polygon_ha_total": 26.67,
+        "pixels": 2664,
+        "water_ha_2019": 14.1,
+        "vegetation_ha_2019": 0.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 21.3,
+        "vegetation_ha_2026": 1.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 7.2
+      },
+      {
+        "name": "unnamed way/158811641",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/158811641"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 13.06605,
+        "point_lon": 76.19301,
+        "osm_polygon_ha_inside_boundary": 26.15,
+        "osm_polygon_ha_total": 26.15,
+        "pixels": 2617,
+        "water_ha_2019": 1.0,
+        "vegetation_ha_2019": 4.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 9.1,
+        "vegetation_ha_2026": 12.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 8.1
+      },
+      {
+        "name": "unnamed way/169211607",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/169211607"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 13.08626,
+        "point_lon": 76.2544,
+        "osm_polygon_ha_inside_boundary": 25.47,
+        "osm_polygon_ha_total": 25.47,
+        "pixels": 2543,
+        "water_ha_2019": 10.6,
+        "vegetation_ha_2019": 7.5,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 16.8,
+        "vegetation_ha_2026": 2.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 6.2
+      },
+      {
+        "name": "unnamed way/119067634",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/119067634"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.92041,
+        "point_lon": 76.32125,
+        "osm_polygon_ha_inside_boundary": 24.51,
+        "osm_polygon_ha_total": 24.51,
+        "pixels": 2464,
+        "water_ha_2019": 23.0,
+        "vegetation_ha_2019": 0.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 23.6,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.6
+      },
+      {
+        "name": "Koravangala Kere",
+        "named_in_osm": true,
+        "osm_ids": [
+          "way/385255549"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [
+          "ಕೋರವಂಗಲ ಕೆರೆ"
+        ],
+        "point_lat": 13.05578,
+        "point_lon": 76.17168,
+        "osm_polygon_ha_inside_boundary": 24.07,
+        "osm_polygon_ha_total": 24.07,
+        "pixels": 2410,
+        "water_ha_2019": 2.8,
+        "vegetation_ha_2019": 4.7,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 21.0,
+        "vegetation_ha_2026": 1.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 18.2
+      },
+      {
+        "name": "unnamed way/1570132252",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1570132252"
+        ],
+        "water_tag": [
+          "river"
+        ],
+        "name_kn": [],
+        "point_lat": 12.79059,
+        "point_lon": 76.24011,
+        "osm_polygon_ha_inside_boundary": 23.18,
+        "osm_polygon_ha_total": 23.18,
+        "pixels": 2318,
+        "water_ha_2019": 0.1,
+        "vegetation_ha_2019": 9.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 8.5,
+        "vegetation_ha_2026": 9.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 8.4
+      },
+      {
+        "name": "unnamed way/1228379456",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1228379456"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07488,
+        "point_lon": 76.1635,
+        "osm_polygon_ha_inside_boundary": 22.72,
+        "osm_polygon_ha_total": 22.72,
+        "pixels": 2270,
+        "water_ha_2019": 0.5,
+        "vegetation_ha_2019": 0.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 18.5,
+        "vegetation_ha_2026": 0.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 18.0
+      },
+      {
+        "name": "unnamed way/160893264",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/160893264"
+        ],
+        "water_tag": [
+          "river"
+        ],
+        "name_kn": [],
+        "point_lat": 12.83369,
+        "point_lon": 76.15685,
+        "osm_polygon_ha_inside_boundary": 21.79,
+        "osm_polygon_ha_total": 36.04,
+        "pixels": 2180,
+        "water_ha_2019": 14.8,
+        "vegetation_ha_2019": 2.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 18.1,
+        "vegetation_ha_2026": 1.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 3.3
+      },
+      {
+        "name": "unnamed way/338966440",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/338966440"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.79837,
+        "point_lon": 76.30066,
+        "osm_polygon_ha_inside_boundary": 21.28,
+        "osm_polygon_ha_total": 21.28,
+        "pixels": 2134,
+        "water_ha_2019": 9.8,
+        "vegetation_ha_2019": 5.0,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 10.6,
+        "vegetation_ha_2026": 4.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.8
+      },
+      {
+        "name": "unnamed way/861042321",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/861042321"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.08353,
+        "point_lon": 76.14546,
+        "osm_polygon_ha_inside_boundary": 20.23,
+        "osm_polygon_ha_total": 20.23,
+        "pixels": 2023,
+        "water_ha_2019": 1.9,
+        "vegetation_ha_2019": 2.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 15.4,
+        "vegetation_ha_2026": 1.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 13.5
+      },
+      {
+        "name": "unnamed way/1212209892",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1212209892"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 12.92035,
+        "point_lon": 76.26192,
+        "osm_polygon_ha_inside_boundary": 19.53,
+        "osm_polygon_ha_total": 19.53,
+        "pixels": 1952,
+        "water_ha_2019": 0.9,
+        "vegetation_ha_2019": 3.7,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 15.5,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 14.6
+      },
+      {
+        "name": "unnamed way/358905370",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/358905370"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.74771,
+        "point_lon": 76.23223,
+        "osm_polygon_ha_inside_boundary": 19.44,
+        "osm_polygon_ha_total": 19.44,
+        "pixels": 1946,
+        "water_ha_2019": 5.3,
+        "vegetation_ha_2019": 5.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 10.8,
+        "vegetation_ha_2026": 8.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 5.5
+      },
+      {
+        "name": "unnamed way/341589055",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/341589055"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.0474,
+        "point_lon": 76.32254,
+        "osm_polygon_ha_inside_boundary": 18.98,
+        "osm_polygon_ha_total": 18.98,
+        "pixels": 1901,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 16.9,
+        "vegetation_ha_2026": 0.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 16.9
+      },
+      {
+        "name": "unnamed way/119067635",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/119067635"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.96251,
+        "point_lon": 76.31722,
+        "osm_polygon_ha_inside_boundary": 18.69,
+        "osm_polygon_ha_total": 18.69,
+        "pixels": 1874,
+        "water_ha_2019": 9.1,
+        "vegetation_ha_2019": 0.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 14.0,
+        "vegetation_ha_2026": 2.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 4.9
+      },
+      {
+        "name": "unnamed way/323182550",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/323182550"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.00981,
+        "point_lon": 76.29847,
+        "osm_polygon_ha_inside_boundary": 16.97,
+        "osm_polygon_ha_total": 16.97,
+        "pixels": 1692,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 12.3,
+        "vegetation_ha_2026": 0.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 12.3
+      },
+      {
+        "name": "unnamed way/119067638",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/119067638"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.96982,
+        "point_lon": 76.31101,
+        "osm_polygon_ha_inside_boundary": 16.1,
+        "osm_polygon_ha_total": 16.1,
+        "pixels": 1611,
+        "water_ha_2019": 7.1,
+        "vegetation_ha_2019": 0.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 12.9,
+        "vegetation_ha_2026": 0.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 5.8
+      },
+      {
+        "name": "unnamed way/339407685",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/339407685"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.89808,
+        "point_lon": 76.3261,
+        "osm_polygon_ha_inside_boundary": 15.07,
+        "osm_polygon_ha_total": 15.07,
+        "pixels": 1505,
+        "water_ha_2019": 5.7,
+        "vegetation_ha_2019": 2.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 10.7,
+        "vegetation_ha_2026": 3.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 5.0
+      },
+      {
+        "name": "unnamed way/861529353",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/861529353"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.08194,
+        "point_lon": 76.17594,
+        "osm_polygon_ha_inside_boundary": 14.67,
+        "osm_polygon_ha_total": 14.67,
+        "pixels": 1473,
+        "water_ha_2019": 0.2,
+        "vegetation_ha_2019": 0.5,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 10.7,
+        "vegetation_ha_2026": 1.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 10.5
+      },
+      {
+        "name": "unnamed way/1241946900",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1241946900"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 13.03449,
+        "point_lon": 76.21351,
+        "osm_polygon_ha_inside_boundary": 14.62,
+        "osm_polygon_ha_total": 14.62,
+        "pixels": 1468,
+        "water_ha_2019": 2.2,
+        "vegetation_ha_2019": 1.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 6.4,
+        "vegetation_ha_2026": 0.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 4.2
+      },
+      {
+        "name": "unnamed way/328235751",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328235751"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 12.7898,
+        "point_lon": 76.20015,
+        "osm_polygon_ha_inside_boundary": 14.49,
+        "osm_polygon_ha_total": 14.49,
+        "pixels": 1445,
+        "water_ha_2019": 0.6,
+        "vegetation_ha_2019": 9.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 10.4,
+        "vegetation_ha_2026": 5.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 9.8
+      },
+      {
+        "name": "unnamed way/363449254",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/363449254"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 12.87116,
+        "point_lon": 76.26465,
+        "osm_polygon_ha_inside_boundary": 14.46,
+        "osm_polygon_ha_total": 14.46,
+        "pixels": 1447,
+        "water_ha_2019": 3.3,
+        "vegetation_ha_2019": 2.7,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 4.0,
+        "vegetation_ha_2026": 1.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.7
+      },
+      {
+        "name": "unnamed way/301642802",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/301642802"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.11757,
+        "point_lon": 76.15736,
+        "osm_polygon_ha_inside_boundary": 14.09,
+        "osm_polygon_ha_total": 14.09,
+        "pixels": 1406,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.7,
+        "valid_pct_2019": 99.4,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 1.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "unnamed way/288781306",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/288781306"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 13.13934,
+        "point_lon": 76.1357,
+        "osm_polygon_ha_inside_boundary": 13.37,
+        "osm_polygon_ha_total": 25.95,
+        "pixels": 1339,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 10.5,
+        "vegetation_ha_2026": 1.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 10.5
+      },
+      {
+        "name": "unnamed way/319355719",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/319355719"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.02376,
+        "point_lon": 76.33508,
+        "osm_polygon_ha_inside_boundary": 12.83,
+        "osm_polygon_ha_total": 12.83,
+        "pixels": 1281,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 3.5,
+        "vegetation_ha_2026": 3.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 3.5
+      },
+      {
+        "name": "unnamed way/862836762",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862836762"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.04404,
+        "point_lon": 76.2647,
+        "osm_polygon_ha_inside_boundary": 12.43,
+        "osm_polygon_ha_total": 12.43,
+        "pixels": 1244,
+        "water_ha_2019": 0.8,
+        "vegetation_ha_2019": 0.6,
+        "valid_pct_2019": 97.7,
+        "water_ha_2026": 4.8,
+        "vegetation_ha_2026": 1.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 4.0
+      },
+      {
+        "name": "unnamed way/338969403",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/338969403"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.92612,
+        "point_lon": 76.22671,
+        "osm_polygon_ha_inside_boundary": 12.03,
+        "osm_polygon_ha_total": 12.03,
+        "pixels": 1207,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 9.0,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 4.4,
+        "vegetation_ha_2026": 3.9,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 4.4
+      },
+      {
+        "name": "unnamed way/863537261",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/863537261"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07461,
+        "point_lon": 76.27665,
+        "osm_polygon_ha_inside_boundary": 11.8,
+        "osm_polygon_ha_total": 11.8,
+        "pixels": 1178,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.3,
+        "valid_pct_2019": 98.0,
+        "water_ha_2026": 0.2,
+        "vegetation_ha_2026": 0.9,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.2
+      },
+      {
+        "name": "unnamed way/338968292",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/338968292"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.89133,
+        "point_lon": 76.19218,
+        "osm_polygon_ha_inside_boundary": 11.03,
+        "osm_polygon_ha_total": 11.03,
+        "pixels": 1103,
+        "water_ha_2019": 4.0,
+        "vegetation_ha_2019": 2.9,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 4.0,
+        "vegetation_ha_2026": 3.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "unnamed way/323182555",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/323182555"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.02183,
+        "point_lon": 76.29048,
+        "osm_polygon_ha_inside_boundary": 10.48,
+        "osm_polygon_ha_total": 10.48,
+        "pixels": 1044,
+        "water_ha_2019": 0.4,
+        "vegetation_ha_2019": 0.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 5.5,
+        "vegetation_ha_2026": 1.4,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 5.1
+      },
+      {
+        "name": "unnamed way/339250835",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/339250835"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.96206,
+        "point_lon": 76.36569,
+        "osm_polygon_ha_inside_boundary": 9.83,
+        "osm_polygon_ha_total": 9.83,
+        "pixels": 977,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 2.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 6.5,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 6.5
+      },
+      {
+        "name": "unnamed way/323182553",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/323182553"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.04868,
+        "point_lon": 76.24179,
+        "osm_polygon_ha_inside_boundary": 9.56,
+        "osm_polygon_ha_total": 9.56,
+        "pixels": 957,
+        "water_ha_2019": 4.2,
+        "vegetation_ha_2019": 0.4,
+        "valid_pct_2019": 89.3,
+        "water_ha_2026": 1.9,
+        "vegetation_ha_2026": 4.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -2.3
+      },
+      {
+        "name": "unnamed way/864183696",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/864183696"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07234,
+        "point_lon": 76.11607,
+        "osm_polygon_ha_inside_boundary": 9.31,
+        "osm_polygon_ha_total": 9.31,
+        "pixels": 933,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.3,
+        "valid_pct_2019": 99.1,
+        "water_ha_2026": 6.9,
+        "vegetation_ha_2026": 0.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 6.9
+      },
+      {
+        "name": "Sathenahalli Lake",
+        "named_in_osm": true,
+        "osm_ids": [
+          "way/327756937"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [
+          "ಶೆಟ್ಟಿಹಳ್ಳಿ ಕೆರೆ"
+        ],
+        "point_lat": 12.93696,
+        "point_lon": 76.13668,
+        "osm_polygon_ha_inside_boundary": 9.19,
+        "osm_polygon_ha_total": 9.19,
+        "pixels": 924,
+        "water_ha_2019": 6.2,
+        "vegetation_ha_2019": 0.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 8.0,
+        "vegetation_ha_2026": 0.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.8
+      },
+      {
+        "name": "unnamed way/336309898",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/336309898"
+        ],
+        "water_tag": [
+          "reservoir"
+        ],
+        "name_kn": [],
+        "point_lat": 12.84627,
+        "point_lon": 76.15994,
+        "osm_polygon_ha_inside_boundary": 9.19,
+        "osm_polygon_ha_total": 9.19,
+        "pixels": 924,
+        "water_ha_2019": 3.8,
+        "vegetation_ha_2019": 2.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 4.2,
+        "vegetation_ha_2026": 6.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.4
+      },
+      {
+        "name": "unnamed way/360541606",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/360541606"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 12.88024,
+        "point_lon": 76.23067,
+        "osm_polygon_ha_inside_boundary": 9.11,
+        "osm_polygon_ha_total": 9.11,
+        "pixels": 915,
+        "water_ha_2019": 2.4,
+        "vegetation_ha_2019": 3.9,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 7.1,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 4.7
+      },
+      {
+        "name": "unnamed way/358907021",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/358907021"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.78215,
+        "point_lon": 76.32265,
+        "osm_polygon_ha_inside_boundary": 8.98,
+        "osm_polygon_ha_total": 8.98,
+        "pixels": 894,
+        "water_ha_2019": 0.8,
+        "vegetation_ha_2019": 4.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 4.1,
+        "vegetation_ha_2026": 1.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 3.3
+      },
+      {
+        "name": "unnamed way/864184684",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/864184684"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.09221,
+        "point_lon": 76.13621,
+        "osm_polygon_ha_inside_boundary": 8.07,
+        "osm_polygon_ha_total": 8.07,
+        "pixels": 803,
+        "water_ha_2019": 1.1,
+        "vegetation_ha_2019": 0.6,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 5.0,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 3.9
+      },
+      {
+        "name": "unnamed way/863569545",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/863569545"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.03594,
+        "point_lon": 76.25648,
+        "osm_polygon_ha_inside_boundary": 7.74,
+        "osm_polygon_ha_total": 7.74,
+        "pixels": 770,
+        "water_ha_2019": 1.3,
+        "vegetation_ha_2019": 1.4,
+        "valid_pct_2019": 88.6,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 4.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -1.3
+      },
+      {
+        "name": "unnamed way/323205774",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/323205774"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06015,
+        "point_lon": 76.18097,
+        "osm_polygon_ha_inside_boundary": 7.65,
+        "osm_polygon_ha_total": 7.65,
+        "pixels": 766,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 4.5,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 6.2,
+        "vegetation_ha_2026": 1.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 6.2
+      },
+      {
+        "name": "unnamed way/328236150",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328236150"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 12.78056,
+        "point_lon": 76.21358,
+        "osm_polygon_ha_inside_boundary": 7.5,
+        "osm_polygon_ha_total": 7.5,
+        "pixels": 753,
+        "water_ha_2019": 0.3,
+        "vegetation_ha_2019": 6.0,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.3,
+        "vegetation_ha_2026": 4.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.0
+      },
+      {
+        "name": "unnamed way/338967186",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/338967186"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.78537,
+        "point_lon": 76.17344,
+        "osm_polygon_ha_inside_boundary": 7.46,
+        "osm_polygon_ha_total": 7.46,
+        "pixels": 740,
+        "water_ha_2019": 1.7,
+        "vegetation_ha_2019": 4.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.1,
+        "vegetation_ha_2026": 3.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.4
+      },
+      {
+        "name": "unnamed way/338968426",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/338968426"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.90225,
+        "point_lon": 76.2014,
+        "osm_polygon_ha_inside_boundary": 7.34,
+        "osm_polygon_ha_total": 7.34,
+        "pixels": 733,
+        "water_ha_2019": 1.4,
+        "vegetation_ha_2019": 3.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 3.1,
+        "vegetation_ha_2026": 1.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.7
+      },
+      {
+        "name": "unnamed way/158811647",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/158811647"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 13.1125,
+        "point_lon": 76.26128,
+        "osm_polygon_ha_inside_boundary": 7.08,
+        "osm_polygon_ha_total": 7.08,
+        "pixels": 714,
+        "water_ha_2019": 0.4,
+        "vegetation_ha_2019": 0.0,
+        "valid_pct_2019": 93.3,
+        "water_ha_2026": 4.2,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 3.8
+      },
+      {
+        "name": "unnamed way/863537262",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/863537262"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06929,
+        "point_lon": 76.28491,
+        "osm_polygon_ha_inside_boundary": 6.72,
+        "osm_polygon_ha_total": 6.72,
+        "pixels": 672,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.1,
+        "vegetation_ha_2026": 0.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.1
+      },
+      {
+        "name": "unnamed way/862961115",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862961115"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.0729,
+        "point_lon": 76.25703,
+        "osm_polygon_ha_inside_boundary": 6.46,
+        "osm_polygon_ha_total": 6.46,
+        "pixels": 649,
+        "water_ha_2019": 4.9,
+        "vegetation_ha_2019": 0.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 3.7,
+        "vegetation_ha_2026": 1.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -1.2
+      },
+      {
+        "name": "unnamed way/868430182",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/868430182"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06651,
+        "point_lon": 76.30812,
+        "osm_polygon_ha_inside_boundary": 6.39,
+        "osm_polygon_ha_total": 6.39,
+        "pixels": 645,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 4.3,
+        "vegetation_ha_2026": 0.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 4.3
+      },
+      {
+        "name": "K Hirihalli Doddakere",
+        "named_in_osm": true,
+        "osm_ids": [
+          "way/328228510"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [
+          "ಕೌಶಿಕ ಹಿರೀಹಳ್ಳಿ ದೊಡ್ಡಕೆರೆ"
+        ],
+        "point_lat": 12.93622,
+        "point_lon": 76.15805,
+        "osm_polygon_ha_inside_boundary": 6.38,
+        "osm_polygon_ha_total": 6.38,
+        "pixels": 636,
+        "water_ha_2019": 2.2,
+        "vegetation_ha_2019": 0.6,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 4.7,
+        "vegetation_ha_2026": 0.4,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.5
+      },
+      {
+        "name": "Maavinakatte",
+        "named_in_osm": true,
+        "osm_ids": [
+          "way/302338612"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [
+          "ಮಾವಿನಕಟ್ಟೆ"
+        ],
+        "point_lat": 13.02554,
+        "point_lon": 76.17773,
+        "osm_polygon_ha_inside_boundary": 6.31,
+        "osm_polygon_ha_total": 6.31,
+        "pixels": 631,
+        "water_ha_2019": 0.1,
+        "vegetation_ha_2019": 3.0,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.8,
+        "vegetation_ha_2026": 1.9,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.7
+      },
+      {
+        "name": "unnamed way/339341971",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/339341971"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.96869,
+        "point_lon": 76.29968,
+        "osm_polygon_ha_inside_boundary": 6.26,
+        "osm_polygon_ha_total": 6.26,
+        "pixels": 625,
+        "water_ha_2019": 3.0,
+        "vegetation_ha_2019": 0.7,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 4.6,
+        "vegetation_ha_2026": 0.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.6
+      },
+      {
+        "name": "unnamed way/169211023",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/169211023"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07621,
+        "point_lon": 76.32281,
+        "osm_polygon_ha_inside_boundary": 5.89,
+        "osm_polygon_ha_total": 5.89,
+        "pixels": 584,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 89.7,
+        "water_ha_2026": 2.7,
+        "vegetation_ha_2026": 0.4,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.7
+      },
+      {
+        "name": "unnamed way/866652162",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/866652162"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.05695,
+        "point_lon": 76.19246,
+        "osm_polygon_ha_inside_boundary": 5.83,
+        "osm_polygon_ha_total": 5.83,
+        "pixels": 584,
+        "water_ha_2019": 0.1,
+        "vegetation_ha_2019": 0.5,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.5,
+        "vegetation_ha_2026": 1.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.4
+      },
+      {
+        "name": "unnamed way/328380334",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328380334"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.76661,
+        "point_lon": 76.19109,
+        "osm_polygon_ha_inside_boundary": 5.78,
+        "osm_polygon_ha_total": 5.78,
+        "pixels": 576,
+        "water_ha_2019": 1.2,
+        "vegetation_ha_2019": 1.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 3.0,
+        "vegetation_ha_2026": 2.9,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.8
+      },
+      {
+        "name": "unnamed way/359222337",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/359222337"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.92634,
+        "point_lon": 76.23238,
+        "osm_polygon_ha_inside_boundary": 5.43,
+        "osm_polygon_ha_total": 5.43,
+        "pixels": 539,
+        "water_ha_2019": 1.5,
+        "vegetation_ha_2019": 0.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.9,
+        "vegetation_ha_2026": 0.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.4
+      },
+      {
+        "name": "unnamed way/862833214",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862833214"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06054,
+        "point_lon": 76.20961,
+        "osm_polygon_ha_inside_boundary": 5.42,
+        "osm_polygon_ha_total": 5.42,
+        "pixels": 542,
+        "water_ha_2019": 1.4,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 97.0,
+        "water_ha_2026": 2.1,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.7
+      },
+      {
+        "name": "unnamed way/321979061",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/321979061"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.04543,
+        "point_lon": 76.15307,
+        "osm_polygon_ha_inside_boundary": 5.34,
+        "osm_polygon_ha_total": 5.34,
+        "pixels": 537,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 4.6,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 3.6,
+        "vegetation_ha_2026": 2.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 3.6
+      },
+      {
+        "name": "unnamed way/862959905",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862959905"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.03644,
+        "point_lon": 76.2736,
+        "osm_polygon_ha_inside_boundary": 5.14,
+        "osm_polygon_ha_total": 5.14,
+        "pixels": 516,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.5,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "unnamed way/377323607",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/377323607"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.95036,
+        "point_lon": 76.11421,
+        "osm_polygon_ha_inside_boundary": 4.94,
+        "osm_polygon_ha_total": 4.94,
+        "pixels": 495,
+        "water_ha_2019": 1.1,
+        "vegetation_ha_2019": 0.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 3.1,
+        "vegetation_ha_2026": 0.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.0
+      },
+      {
+        "name": "unnamed way/861529354",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/861529354"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.0865,
+        "point_lon": 76.1771,
+        "osm_polygon_ha_inside_boundary": 4.93,
+        "osm_polygon_ha_total": 4.93,
+        "pixels": 495,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.9,
+        "valid_pct_2019": 97.6,
+        "water_ha_2026": 2.4,
+        "vegetation_ha_2026": 0.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.4
+      },
+      {
+        "name": "unnamed way/862961803",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862961803"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.09409,
+        "point_lon": 76.22452,
+        "osm_polygon_ha_inside_boundary": 4.91,
+        "osm_polygon_ha_total": 4.91,
+        "pixels": 490,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.6,
+        "valid_pct_2019": 95.1,
+        "water_ha_2026": 0.6,
+        "vegetation_ha_2026": 0.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.6
+      },
+      {
+        "name": "unnamed way/862961804",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862961804"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.09449,
+        "point_lon": 76.21415,
+        "osm_polygon_ha_inside_boundary": 4.75,
+        "osm_polygon_ha_total": 4.75,
+        "pixels": 479,
+        "water_ha_2019": 0.3,
+        "vegetation_ha_2019": 0.0,
+        "valid_pct_2019": 96.7,
+        "water_ha_2026": 0.2,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -0.1
+      },
+      {
+        "name": "unnamed way/862835676",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862835676"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.04797,
+        "point_lon": 76.24773,
+        "osm_polygon_ha_inside_boundary": 4.66,
+        "osm_polygon_ha_total": 4.66,
+        "pixels": 461,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "unnamed way/1241946899",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1241946899"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.03181,
+        "point_lon": 76.20082,
+        "osm_polygon_ha_inside_boundary": 4.62,
+        "osm_polygon_ha_total": 4.62,
+        "pixels": 460,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.4,
+        "vegetation_ha_2026": 0.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.4
+      },
+      {
+        "name": "unnamed way/862961116",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862961116"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07455,
+        "point_lon": 76.27114,
+        "osm_polygon_ha_inside_boundary": 4.56,
+        "osm_polygon_ha_total": 4.56,
+        "pixels": 461,
+        "water_ha_2019": 1.4,
+        "vegetation_ha_2019": 1.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.1,
+        "vegetation_ha_2026": 0.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.7
+      },
+      {
+        "name": "unnamed way/862959906",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862959906"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.05055,
+        "point_lon": 76.27892,
+        "osm_polygon_ha_inside_boundary": 4.38,
+        "osm_polygon_ha_total": 4.38,
+        "pixels": 441,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.0,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "unnamed way/302338616",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/302338616"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.98547,
+        "point_lon": 76.17927,
+        "osm_polygon_ha_inside_boundary": 4.37,
+        "osm_polygon_ha_total": 4.37,
+        "pixels": 434,
+        "water_ha_2019": 0.1,
+        "vegetation_ha_2019": 1.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.8,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.7
+      },
+      {
+        "name": "unnamed way/360541603",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/360541603"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 12.89473,
+        "point_lon": 76.22092,
+        "osm_polygon_ha_inside_boundary": 4.25,
+        "osm_polygon_ha_total": 4.25,
+        "pixels": 427,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 2.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.8,
+        "vegetation_ha_2026": 1.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.8
+      },
+      {
+        "name": "unnamed way/319354429",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/319354429"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.05613,
+        "point_lon": 76.27631,
+        "osm_polygon_ha_inside_boundary": 4.02,
+        "osm_polygon_ha_total": 4.02,
+        "pixels": 401,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.1,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.1
+      },
+      {
+        "name": "unnamed way/355537687",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/355537687"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.75685,
+        "point_lon": 76.2257,
+        "osm_polygon_ha_inside_boundary": 4.0,
+        "osm_polygon_ha_total": 4.0,
+        "pixels": 400,
+        "water_ha_2019": 0.2,
+        "vegetation_ha_2019": 2.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 3.2,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 3.0
+      },
+      {
+        "name": "unnamed way/863839079",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/863839079"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07667,
+        "point_lon": 76.12644,
+        "osm_polygon_ha_inside_boundary": 3.94,
+        "osm_polygon_ha_total": 3.94,
+        "pixels": 394,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 80.7,
+        "water_ha_2026": 2.3,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.3
+      },
+      {
+        "name": "unnamed way/323182547",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/323182547"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.04318,
+        "point_lon": 76.22746,
+        "osm_polygon_ha_inside_boundary": 3.92,
+        "osm_polygon_ha_total": 3.92,
+        "pixels": 393,
+        "water_ha_2019": 0.2,
+        "vegetation_ha_2019": 0.6,
+        "valid_pct_2019": 96.9,
+        "water_ha_2026": 2.0,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.8
+      },
+      {
+        "name": "unnamed way/862833215",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862833215"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.11333,
+        "point_lon": 76.16848,
+        "osm_polygon_ha_inside_boundary": 3.86,
+        "osm_polygon_ha_total": 3.86,
+        "pixels": 386,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 2.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "unnamed way/1212209899",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1212209899"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.95886,
+        "point_lon": 76.14355,
+        "osm_polygon_ha_inside_boundary": 3.85,
+        "osm_polygon_ha_total": 3.85,
+        "pixels": 388,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 2.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.6,
+        "vegetation_ha_2026": 0.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.6
+      },
+      {
+        "name": "Balagatte",
+        "named_in_osm": true,
+        "osm_ids": [
+          "way/323205777"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [
+          "ಬಳಗಟ್ಟೆ"
+        ],
+        "point_lat": 13.02478,
+        "point_lon": 76.18791,
+        "osm_polygon_ha_inside_boundary": 3.83,
+        "osm_polygon_ha_total": 3.83,
+        "pixels": 380,
+        "water_ha_2019": 0.2,
+        "vegetation_ha_2019": 0.7,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.4,
+        "vegetation_ha_2026": 1.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.2
+      },
+      {
+        "name": "Annayyakere",
+        "named_in_osm": true,
+        "osm_ids": [
+          "way/1256351854"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.03522,
+        "point_lon": 76.19256,
+        "osm_polygon_ha_inside_boundary": 3.77,
+        "osm_polygon_ha_total": 3.77,
+        "pixels": 380,
+        "water_ha_2019": 1.2,
+        "vegetation_ha_2019": 0.5,
+        "valid_pct_2019": 86.3,
+        "water_ha_2026": 1.6,
+        "vegetation_ha_2026": 1.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.4
+      },
+      {
+        "name": "unnamed way/328236250",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328236250"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.76085,
+        "point_lon": 76.20739,
+        "osm_polygon_ha_inside_boundary": 3.75,
+        "osm_polygon_ha_total": 3.75,
+        "pixels": 376,
+        "water_ha_2019": 1.1,
+        "vegetation_ha_2019": 2.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.8,
+        "vegetation_ha_2026": 2.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.7
+      },
+      {
+        "name": "unnamed way/863537260",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/863537260"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.08285,
+        "point_lon": 76.26865,
+        "osm_polygon_ha_inside_boundary": 3.68,
+        "osm_polygon_ha_total": 3.68,
+        "pixels": 369,
+        "water_ha_2019": 0.9,
+        "vegetation_ha_2019": 1.0,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.5,
+        "vegetation_ha_2026": 0.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.6
+      },
+      {
+        "name": "unnamed way/862835678",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862835678"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06437,
+        "point_lon": 76.22966,
+        "osm_polygon_ha_inside_boundary": 3.67,
+        "osm_polygon_ha_total": 3.67,
+        "pixels": 367,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.5,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.1,
+        "vegetation_ha_2026": 0.9,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.1
+      },
+      {
+        "name": "unnamed way/864183695",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/864183695"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06927,
+        "point_lon": 76.11218,
+        "osm_polygon_ha_inside_boundary": 3.63,
+        "osm_polygon_ha_total": 3.63,
+        "pixels": 364,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.7,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.4,
+        "vegetation_ha_2026": 1.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.4
+      },
+      {
+        "name": "unnamed way/862835677",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862835677"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.05825,
+        "point_lon": 76.23269,
+        "osm_polygon_ha_inside_boundary": 3.49,
+        "osm_polygon_ha_total": 3.49,
+        "pixels": 347,
+        "water_ha_2019": 0.9,
+        "vegetation_ha_2019": 0.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.7,
+        "vegetation_ha_2026": 0.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -0.2
+      },
+      {
+        "name": "unnamed way/365243670",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/365243670"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 13.14399,
+        "point_lon": 76.19761,
+        "osm_polygon_ha_inside_boundary": 3.47,
+        "osm_polygon_ha_total": 3.47,
+        "pixels": 350,
+        "water_ha_2019": 0.1,
+        "vegetation_ha_2019": 0.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.3,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.2
+      },
+      {
+        "name": "unnamed way/316907893",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/316907893"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.11018,
+        "point_lon": 76.1307,
+        "osm_polygon_ha_inside_boundary": 3.45,
+        "osm_polygon_ha_total": 3.45,
+        "pixels": 344,
+        "water_ha_2019": 0.6,
+        "vegetation_ha_2019": 0.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.0,
+        "vegetation_ha_2026": 0.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.4
+      },
+      {
+        "name": "unnamed way/353809167",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/353809167"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.73393,
+        "point_lon": 76.25721,
+        "osm_polygon_ha_inside_boundary": 3.33,
+        "osm_polygon_ha_total": 5.93,
+        "pixels": 333,
+        "water_ha_2019": 0.8,
+        "vegetation_ha_2019": 1.6,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.4,
+        "vegetation_ha_2026": 0.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.6
+      },
+      {
+        "name": "unnamed way/863836597",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/863836597"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07769,
+        "point_lon": 76.14105,
+        "osm_polygon_ha_inside_boundary": 3.31,
+        "osm_polygon_ha_total": 3.31,
+        "pixels": 332,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.8,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.8
+      },
+      {
+        "name": "unnamed way/1217331625",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1217331625"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06023,
+        "point_lon": 76.13234,
+        "osm_polygon_ha_inside_boundary": 3.29,
+        "osm_polygon_ha_total": 3.29,
+        "pixels": 328,
+        "water_ha_2019": 1.2,
+        "vegetation_ha_2019": 0.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.0,
+        "vegetation_ha_2026": 0.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.8
+      },
+      {
+        "name": "unnamed way/343748529",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/343748529"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.87063,
+        "point_lon": 76.13347,
+        "osm_polygon_ha_inside_boundary": 3.28,
+        "osm_polygon_ha_total": 3.28,
+        "pixels": 331,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 1.1,
+        "valid_pct_2019": 83.1,
+        "water_ha_2026": 1.2,
+        "vegetation_ha_2026": 0.9,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.2
+      },
+      {
+        "name": "unnamed way/302338614",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/302338614"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.98788,
+        "point_lon": 76.19291,
+        "osm_polygon_ha_inside_boundary": 3.27,
+        "osm_polygon_ha_total": 3.27,
+        "pixels": 330,
+        "water_ha_2019": 0.1,
+        "vegetation_ha_2019": 1.9,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.3,
+        "vegetation_ha_2026": 0.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.2
+      },
+      {
+        "name": "unnamed way/1222801246",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1222801246"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.0612,
+        "point_lon": 76.1538,
+        "osm_polygon_ha_inside_boundary": 3.2,
+        "osm_polygon_ha_total": 3.2,
+        "pixels": 319,
+        "water_ha_2019": 0.2,
+        "vegetation_ha_2019": 0.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.1,
+        "vegetation_ha_2026": 0.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.9
+      },
+      {
+        "name": "unnamed way/864184682",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/864184682"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.09808,
+        "point_lon": 76.13388,
+        "osm_polygon_ha_inside_boundary": 3.17,
+        "osm_polygon_ha_total": 3.17,
+        "pixels": 317,
+        "water_ha_2019": 0.2,
+        "vegetation_ha_2019": 0.9,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.6,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.4
+      },
+      {
+        "name": "unnamed way/353806206",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/353806206"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.74975,
+        "point_lon": 76.28142,
+        "osm_polygon_ha_inside_boundary": 3.16,
+        "osm_polygon_ha_total": 3.16,
+        "pixels": 321,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.6,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.6
+      },
+      {
+        "name": "unnamed way/360541600",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/360541600"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.87399,
+        "point_lon": 76.22019,
+        "osm_polygon_ha_inside_boundary": 3.06,
+        "osm_polygon_ha_total": 3.06,
+        "pixels": 304,
+        "water_ha_2019": 0.3,
+        "vegetation_ha_2019": 1.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.4,
+        "vegetation_ha_2026": 1.9,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.1
+      },
+      {
+        "name": "unnamed way/216967249",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/216967249"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.89827,
+        "point_lon": 76.14396,
+        "osm_polygon_ha_inside_boundary": 2.99,
+        "osm_polygon_ha_total": 2.99,
+        "pixels": 297,
+        "water_ha_2019": 1.0,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.9,
+        "vegetation_ha_2026": 0.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.9
+      },
+      {
+        "name": "unnamed way/1212209895",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1212209895"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.90849,
+        "point_lon": 76.27278,
+        "osm_polygon_ha_inside_boundary": 2.81,
+        "osm_polygon_ha_total": 2.81,
+        "pixels": 283,
+        "water_ha_2019": 2.0,
+        "vegetation_ha_2019": 0.0,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.2,
+        "vegetation_ha_2026": 0.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.2
+      },
+      {
+        "name": "unnamed way/360541601",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/360541601"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 12.88314,
+        "point_lon": 76.22173,
+        "osm_polygon_ha_inside_boundary": 2.8,
+        "osm_polygon_ha_total": 2.8,
+        "pixels": 280,
+        "water_ha_2019": 0.2,
+        "vegetation_ha_2019": 2.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.0,
+        "vegetation_ha_2026": 1.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.8
+      },
+      {
+        "name": "unnamed way/328235252",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328235252"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.82242,
+        "point_lon": 76.20397,
+        "osm_polygon_ha_inside_boundary": 2.71,
+        "osm_polygon_ha_total": 2.71,
+        "pixels": 270,
+        "water_ha_2019": 1.1,
+        "vegetation_ha_2019": 0.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.2,
+        "vegetation_ha_2026": 2.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -0.9
+      },
+      {
+        "name": "unnamed way/338966995",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/338966995"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.80745,
+        "point_lon": 76.17144,
+        "osm_polygon_ha_inside_boundary": 2.64,
+        "osm_polygon_ha_total": 2.64,
+        "pixels": 265,
+        "water_ha_2019": 0.1,
+        "vegetation_ha_2019": 1.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.8,
+        "vegetation_ha_2026": 1.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.7
+      },
+      {
+        "name": "unnamed way/360542712",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/360542712"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 12.91353,
+        "point_lon": 76.22118,
+        "osm_polygon_ha_inside_boundary": 2.61,
+        "osm_polygon_ha_total": 2.61,
+        "pixels": 264,
+        "water_ha_2019": 0.3,
+        "vegetation_ha_2019": 2.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.0,
+        "vegetation_ha_2026": 0.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.7
+      },
+      {
+        "name": "unnamed way/377826781",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/377826781"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.94815,
+        "point_lon": 76.12369,
+        "osm_polygon_ha_inside_boundary": 2.6,
+        "osm_polygon_ha_total": 2.6,
+        "pixels": 257,
+        "water_ha_2019": 1.0,
+        "vegetation_ha_2019": 0.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.0,
+        "vegetation_ha_2026": 0.4,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "unnamed relation/2150702",
+        "named_in_osm": false,
+        "osm_ids": [
+          "relation/2150702"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.84844,
+        "point_lon": 76.20488,
+        "osm_polygon_ha_inside_boundary": 2.58,
+        "osm_polygon_ha_total": 2.58,
+        "pixels": 252,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 1.7,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.2,
+        "vegetation_ha_2026": 0.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.2
+      },
+      {
+        "name": "unnamed way/358229329",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/358229329"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.71991,
+        "point_lon": 76.20188,
+        "osm_polygon_ha_inside_boundary": 2.56,
+        "osm_polygon_ha_total": 2.56,
+        "pixels": 252,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 1.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 0.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "unnamed way/865266497",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/865266497"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.10714,
+        "point_lon": 76.11425,
+        "osm_polygon_ha_inside_boundary": 2.53,
+        "osm_polygon_ha_total": 2.53,
+        "pixels": 248,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.4,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.4
+      },
+      {
+        "name": "unnamed way/864184681",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/864184681"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.10734,
+        "point_lon": 76.12589,
+        "osm_polygon_ha_inside_boundary": 2.42,
+        "osm_polygon_ha_total": 2.42,
+        "pixels": 241,
+        "water_ha_2019": 0.1,
+        "vegetation_ha_2019": 0.4,
+        "valid_pct_2019": 83.4,
+        "water_ha_2026": 1.0,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.9
+      },
+      {
+        "name": "unnamed way/868430179",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/868430179"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07553,
+        "point_lon": 76.30196,
+        "osm_polygon_ha_inside_boundary": 2.35,
+        "osm_polygon_ha_total": 2.35,
+        "pixels": 232,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.0,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.3,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.3
+      },
+      {
+        "name": "unnamed way/329913760",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/329913760"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.98638,
+        "point_lon": 76.2196,
+        "osm_polygon_ha_inside_boundary": 2.29,
+        "osm_polygon_ha_total": 2.29,
+        "pixels": 226,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 1.0,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.4,
+        "vegetation_ha_2026": 1.4,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.4
+      },
+      {
+        "name": "unnamed way/328374912",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328374912"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.75245,
+        "point_lon": 76.18764,
+        "osm_polygon_ha_inside_boundary": 2.25,
+        "osm_polygon_ha_total": 2.25,
+        "pixels": 220,
+        "water_ha_2019": 0.3,
+        "vegetation_ha_2019": 0.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.8,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.5
+      },
+      {
+        "name": "unnamed way/355791639",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/355791639"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.73127,
+        "point_lon": 76.23649,
+        "osm_polygon_ha_inside_boundary": 2.24,
+        "osm_polygon_ha_total": 2.24,
+        "pixels": 223,
+        "water_ha_2019": 0.3,
+        "vegetation_ha_2019": 0.6,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.6,
+        "vegetation_ha_2026": 0.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.3
+      },
+      {
+        "name": "unnamed way/377440102",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/377440102"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.97471,
+        "point_lon": 76.12741,
+        "osm_polygon_ha_inside_boundary": 2.22,
+        "osm_polygon_ha_total": 2.22,
+        "pixels": 222,
+        "water_ha_2019": 0.5,
+        "vegetation_ha_2019": 1.7,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.8,
+        "vegetation_ha_2026": 0.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.3
+      },
+      {
+        "name": "unnamed way/865266117",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/865266117"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.12006,
+        "point_lon": 76.1345,
+        "osm_polygon_ha_inside_boundary": 2.2,
+        "osm_polygon_ha_total": 2.2,
+        "pixels": 226,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 0.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "unnamed way/861042997",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/861042997"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.08742,
+        "point_lon": 76.14045,
+        "osm_polygon_ha_inside_boundary": 2.13,
+        "osm_polygon_ha_total": 2.13,
+        "pixels": 210,
+        "water_ha_2019": 0.4,
+        "vegetation_ha_2019": 0.0,
+        "valid_pct_2019": 78.1,
+        "water_ha_2026": 1.6,
+        "vegetation_ha_2026": 0.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.2
+      },
+      {
+        "name": "unnamed way/864184683",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/864184683"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.09409,
+        "point_lon": 76.12986,
+        "osm_polygon_ha_inside_boundary": 2.07,
+        "osm_polygon_ha_total": 2.07,
+        "pixels": 207,
+        "water_ha_2019": 0.3,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 67.1,
+        "water_ha_2026": 0.8,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.5
+      },
+      {
+        "name": "unnamed way/377298569",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/377298569"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.93249,
+        "point_lon": 76.14705,
+        "osm_polygon_ha_inside_boundary": 2.05,
+        "osm_polygon_ha_total": 2.05,
+        "pixels": 206,
+        "water_ha_2019": 0.2,
+        "vegetation_ha_2019": 1.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.9,
+        "vegetation_ha_2026": 1.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.7
+      },
+      {
+        "name": "unnamed way/863537259",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/863537259"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07113,
+        "point_lon": 76.29095,
+        "osm_polygon_ha_inside_boundary": 2.03,
+        "osm_polygon_ha_total": 2.03,
+        "pixels": 200,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 94.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "unnamed way/336229158",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/336229158"
+        ],
+        "water_tag": [
+          "reservoir"
+        ],
+        "name_kn": [],
+        "point_lat": 12.97856,
+        "point_lon": 76.13509,
+        "osm_polygon_ha_inside_boundary": 2.01,
+        "osm_polygon_ha_total": 2.01,
+        "pixels": 201,
+        "water_ha_2019": 0.3,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.7,
+        "vegetation_ha_2026": 0.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.4
+      },
+      {
+        "name": "unnamed way/921781951",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/921781951"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 12.88569,
+        "point_lon": 76.32222,
+        "osm_polygon_ha_inside_boundary": 2.01,
+        "osm_polygon_ha_total": 2.01,
+        "pixels": 203,
+        "water_ha_2019": 0.7,
+        "vegetation_ha_2019": 0.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.0,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.3
+      },
+      {
+        "name": "unnamed way/319354431",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/319354431"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.99775,
+        "point_lon": 76.27451,
+        "osm_polygon_ha_inside_boundary": 1.99,
+        "osm_polygon_ha_total": 1.99,
+        "pixels": 201,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/360541602",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/360541602"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 12.90681,
+        "point_lon": 76.21426,
+        "osm_polygon_ha_inside_boundary": 1.98,
+        "osm_polygon_ha_total": 1.98,
+        "pixels": 198,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/338967110",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/338967110"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.79259,
+        "point_lon": 76.18084,
+        "osm_polygon_ha_inside_boundary": 1.96,
+        "osm_polygon_ha_total": 1.96,
+        "pixels": 194,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/328380335",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328380335"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.7795,
+        "point_lon": 76.1889,
+        "osm_polygon_ha_inside_boundary": 1.88,
+        "osm_polygon_ha_total": 1.88,
+        "pixels": 189,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/343748694",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/343748694"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.87293,
+        "point_lon": 76.15323,
+        "osm_polygon_ha_inside_boundary": 1.87,
+        "osm_polygon_ha_total": 1.87,
+        "pixels": 187,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/328380337",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328380337"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.78031,
+        "point_lon": 76.19884,
+        "osm_polygon_ha_inside_boundary": 1.85,
+        "osm_polygon_ha_total": 1.85,
+        "pixels": 184,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/377441443",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/377441443"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.96134,
+        "point_lon": 76.13097,
+        "osm_polygon_ha_inside_boundary": 1.85,
+        "osm_polygon_ha_total": 1.85,
+        "pixels": 185,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/328374911",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328374911"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.75523,
+        "point_lon": 76.18522,
+        "osm_polygon_ha_inside_boundary": 1.82,
+        "osm_polygon_ha_total": 1.82,
+        "pixels": 185,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed relation/2150701",
+        "named_in_osm": false,
+        "osm_ids": [
+          "relation/2150701"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.85239,
+        "point_lon": 76.22394,
+        "osm_polygon_ha_inside_boundary": 1.78,
+        "osm_polygon_ha_total": 1.78,
+        "pixels": 176,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/328235479",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328235479"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.80301,
+        "point_lon": 76.2017,
+        "osm_polygon_ha_inside_boundary": 1.75,
+        "osm_polygon_ha_total": 1.75,
+        "pixels": 177,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/357501465",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/357501465"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.75966,
+        "point_lon": 76.16865,
+        "osm_polygon_ha_inside_boundary": 1.75,
+        "osm_polygon_ha_total": 1.75,
+        "pixels": 175,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/328216661",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328216661"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.98715,
+        "point_lon": 76.16102,
+        "osm_polygon_ha_inside_boundary": 1.74,
+        "osm_polygon_ha_total": 1.74,
+        "pixels": 171,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/355791966",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/355791966"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.72802,
+        "point_lon": 76.22482,
+        "osm_polygon_ha_inside_boundary": 1.74,
+        "osm_polygon_ha_total": 1.74,
+        "pixels": 170,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/323205773",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/323205773"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.03147,
+        "point_lon": 76.18037,
+        "osm_polygon_ha_inside_boundary": 1.71,
+        "osm_polygon_ha_total": 1.71,
+        "pixels": 172,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/360541599",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/360541599"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.87623,
+        "point_lon": 76.22692,
+        "osm_polygon_ha_inside_boundary": 1.69,
+        "osm_polygon_ha_total": 1.69,
+        "pixels": 161,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/302338609",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/302338609"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.02194,
+        "point_lon": 76.17505,
+        "osm_polygon_ha_inside_boundary": 1.67,
+        "osm_polygon_ha_total": 1.67,
+        "pixels": 166,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/323205772",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/323205772"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.01384,
+        "point_lon": 76.21658,
+        "osm_polygon_ha_inside_boundary": 1.67,
+        "osm_polygon_ha_total": 1.67,
+        "pixels": 168,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/328235000",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328235000"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.83455,
+        "point_lon": 76.19244,
+        "osm_polygon_ha_inside_boundary": 1.65,
+        "osm_polygon_ha_total": 1.65,
+        "pixels": 167,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/360541604",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/360541604"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.89628,
+        "point_lon": 76.21697,
+        "osm_polygon_ha_inside_boundary": 1.61,
+        "osm_polygon_ha_total": 1.61,
+        "pixels": 162,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/353806359",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/353806359"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.75141,
+        "point_lon": 76.27563,
+        "osm_polygon_ha_inside_boundary": 1.59,
+        "osm_polygon_ha_total": 1.59,
+        "pixels": 159,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/862836760",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862836760"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06022,
+        "point_lon": 76.2856,
+        "osm_polygon_ha_inside_boundary": 1.58,
+        "osm_polygon_ha_total": 1.58,
+        "pixels": 160,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/323205775",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/323205775"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.04405,
+        "point_lon": 76.17435,
+        "osm_polygon_ha_inside_boundary": 1.55,
+        "osm_polygon_ha_total": 1.55,
+        "pixels": 154,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/863839078",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/863839078"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07545,
+        "point_lon": 76.12414,
+        "osm_polygon_ha_inside_boundary": 1.54,
+        "osm_polygon_ha_total": 1.54,
+        "pixels": 152,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/863569543",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/863569543"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06053,
+        "point_lon": 76.29983,
+        "osm_polygon_ha_inside_boundary": 1.51,
+        "osm_polygon_ha_total": 1.51,
+        "pixels": 149,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/863569544",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/863569544"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.04696,
+        "point_lon": 76.25618,
+        "osm_polygon_ha_inside_boundary": 1.44,
+        "osm_polygon_ha_total": 1.44,
+        "pixels": 144,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/336229161",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/336229161"
+        ],
+        "water_tag": [
+          "reservoir"
+        ],
+        "name_kn": [],
+        "point_lat": 12.9772,
+        "point_lon": 76.13843,
+        "osm_polygon_ha_inside_boundary": 1.43,
+        "osm_polygon_ha_total": 1.43,
+        "pixels": 142,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/359221634",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/359221634"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.89517,
+        "point_lon": 76.2294,
+        "osm_polygon_ha_inside_boundary": 1.4,
+        "osm_polygon_ha_total": 1.4,
+        "pixels": 137,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/358229632",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/358229632"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.72645,
+        "point_lon": 76.21993,
+        "osm_polygon_ha_inside_boundary": 1.39,
+        "osm_polygon_ha_total": 1.39,
+        "pixels": 139,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/861529352",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/861529352"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.08082,
+        "point_lon": 76.15423,
+        "osm_polygon_ha_inside_boundary": 1.35,
+        "osm_polygon_ha_total": 1.35,
+        "pixels": 134,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/385255550",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/385255550"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.05219,
+        "point_lon": 76.17952,
+        "osm_polygon_ha_inside_boundary": 1.33,
+        "osm_polygon_ha_total": 1.33,
+        "pixels": 129,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/377325475",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/377325475"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.98348,
+        "point_lon": 76.12755,
+        "osm_polygon_ha_inside_boundary": 1.29,
+        "osm_polygon_ha_total": 1.29,
+        "pixels": 127,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/360541605",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/360541605"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.89067,
+        "point_lon": 76.21504,
+        "osm_polygon_ha_inside_boundary": 1.28,
+        "osm_polygon_ha_total": 1.28,
+        "pixels": 129,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/328178990",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328178990"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.02901,
+        "point_lon": 76.18239,
+        "osm_polygon_ha_inside_boundary": 1.24,
+        "osm_polygon_ha_total": 1.24,
+        "pixels": 121,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/862960934",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862960934"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.04279,
+        "point_lon": 76.27131,
+        "osm_polygon_ha_inside_boundary": 1.22,
+        "osm_polygon_ha_total": 1.22,
+        "pixels": 118,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/861042998",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/861042998"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.0855,
+        "point_lon": 76.13436,
+        "osm_polygon_ha_inside_boundary": 1.18,
+        "osm_polygon_ha_total": 1.18,
+        "pixels": 123,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/338967109",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/338967109"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.79888,
+        "point_lon": 76.18228,
+        "osm_polygon_ha_inside_boundary": 1.15,
+        "osm_polygon_ha_total": 1.15,
+        "pixels": 114,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/861042322",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/861042322"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.10134,
+        "point_lon": 76.14843,
+        "osm_polygon_ha_inside_boundary": 1.13,
+        "osm_polygon_ha_total": 1.13,
+        "pixels": 112,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/868430742",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/868430742"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07359,
+        "point_lon": 76.29406,
+        "osm_polygon_ha_inside_boundary": 1.11,
+        "osm_polygon_ha_total": 1.11,
+        "pixels": 110,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/563063086",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/563063086"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06,
+        "point_lon": 76.27937,
+        "osm_polygon_ha_inside_boundary": 1.1,
+        "osm_polygon_ha_total": 1.1,
+        "pixels": 110,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/861529355",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/861529355"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.0918,
+        "point_lon": 76.17728,
+        "osm_polygon_ha_inside_boundary": 1.09,
+        "osm_polygon_ha_total": 1.09,
+        "pixels": 112,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/864183697",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/864183697"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07415,
+        "point_lon": 76.12154,
+        "osm_polygon_ha_inside_boundary": 1.09,
+        "osm_polygon_ha_total": 1.09,
+        "pixels": 113,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/377296364",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/377296364"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.95492,
+        "point_lon": 76.15663,
+        "osm_polygon_ha_inside_boundary": 1.07,
+        "osm_polygon_ha_total": 1.07,
+        "pixels": 107,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/359219216",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/359219216"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.88643,
+        "point_lon": 76.25468,
+        "osm_polygon_ha_inside_boundary": 0.96,
+        "osm_polygon_ha_total": 0.96,
+        "pixels": 95,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/862836761",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862836761"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.04027,
+        "point_lon": 76.27548,
+        "osm_polygon_ha_inside_boundary": 0.95,
+        "osm_polygon_ha_total": 0.95,
+        "pixels": 99,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/358229554",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/358229554"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.72366,
+        "point_lon": 76.21558,
+        "osm_polygon_ha_inside_boundary": 0.94,
+        "osm_polygon_ha_total": 0.94,
+        "pixels": 89,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/863836595",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/863836595"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07887,
+        "point_lon": 76.12732,
+        "osm_polygon_ha_inside_boundary": 0.94,
+        "osm_polygon_ha_total": 0.94,
+        "pixels": 96,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/328216186",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328216186"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.98624,
+        "point_lon": 76.15832,
+        "osm_polygon_ha_inside_boundary": 0.93,
+        "osm_polygon_ha_total": 0.93,
+        "pixels": 94,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/357501372",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/357501372"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.75939,
+        "point_lon": 76.16523,
+        "osm_polygon_ha_inside_boundary": 0.93,
+        "osm_polygon_ha_total": 0.93,
+        "pixels": 94,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/1217331626",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1217331626"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06002,
+        "point_lon": 76.12944,
+        "osm_polygon_ha_inside_boundary": 0.92,
+        "osm_polygon_ha_total": 0.92,
+        "pixels": 90,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/868430743",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/868430743"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07634,
+        "point_lon": 76.29796,
+        "osm_polygon_ha_inside_boundary": 0.89,
+        "osm_polygon_ha_total": 0.89,
+        "pixels": 87,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/323205770",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/323205770"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.01322,
+        "point_lon": 76.21317,
+        "osm_polygon_ha_inside_boundary": 0.87,
+        "osm_polygon_ha_total": 0.87,
+        "pixels": 92,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/358229553",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/358229553"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.72032,
+        "point_lon": 76.21221,
+        "osm_polygon_ha_inside_boundary": 0.85,
+        "osm_polygon_ha_total": 0.85,
+        "pixels": 85,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/865266496",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/865266496"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.10299,
+        "point_lon": 76.1114,
+        "osm_polygon_ha_inside_boundary": 0.85,
+        "osm_polygon_ha_total": 0.85,
+        "pixels": 82,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/865266498",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/865266498"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.12365,
+        "point_lon": 76.13092,
+        "osm_polygon_ha_inside_boundary": 0.85,
+        "osm_polygon_ha_total": 0.85,
+        "pixels": 85,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/377297124",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/377297124"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.94328,
+        "point_lon": 76.15346,
+        "osm_polygon_ha_inside_boundary": 0.77,
+        "osm_polygon_ha_total": 0.77,
+        "pixels": 76,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/377325474",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/377325474"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.98352,
+        "point_lon": 76.12575,
+        "osm_polygon_ha_inside_boundary": 0.76,
+        "osm_polygon_ha_total": 0.76,
+        "pixels": 78,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/861568340",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/861568340"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07637,
+        "point_lon": 76.15978,
+        "osm_polygon_ha_inside_boundary": 0.74,
+        "osm_polygon_ha_total": 0.74,
+        "pixels": 74,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/355538594",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/355538594"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.74784,
+        "point_lon": 76.21497,
+        "osm_polygon_ha_inside_boundary": 0.73,
+        "osm_polygon_ha_total": 0.73,
+        "pixels": 74,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/448756362",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/448756362"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.99118,
+        "point_lon": 76.15146,
+        "osm_polygon_ha_inside_boundary": 0.73,
+        "osm_polygon_ha_total": 0.73,
+        "pixels": 70,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/865266118",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/865266118"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.11946,
+        "point_lon": 76.12758,
+        "osm_polygon_ha_inside_boundary": 0.66,
+        "osm_polygon_ha_total": 1.03,
+        "pixels": 64,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/1217331627",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1217331627"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 13.05798,
+        "point_lon": 76.1315,
+        "osm_polygon_ha_inside_boundary": 0.65,
+        "osm_polygon_ha_total": 0.65,
+        "pixels": 65,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/360542278",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/360542278"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.87025,
+        "point_lon": 76.22512,
+        "osm_polygon_ha_inside_boundary": 0.64,
+        "osm_polygon_ha_total": 0.64,
+        "pixels": 66,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/862835679",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/862835679"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06805,
+        "point_lon": 76.22799,
+        "osm_polygon_ha_inside_boundary": 0.62,
+        "osm_polygon_ha_total": 0.62,
+        "pixels": 59,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/861529351",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/861529351"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.08039,
+        "point_lon": 76.16207,
+        "osm_polygon_ha_inside_boundary": 0.55,
+        "osm_polygon_ha_total": 0.55,
+        "pixels": 57,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/863836596",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/863836596"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.09156,
+        "point_lon": 76.14199,
+        "osm_polygon_ha_inside_boundary": 0.55,
+        "osm_polygon_ha_total": 0.55,
+        "pixels": 54,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/376979563",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/376979563"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.94918,
+        "point_lon": 76.15629,
+        "osm_polygon_ha_inside_boundary": 0.49,
+        "osm_polygon_ha_total": 0.49,
+        "pixels": 51,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/1222801248",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1222801248"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06381,
+        "point_lon": 76.11315,
+        "osm_polygon_ha_inside_boundary": 0.49,
+        "osm_polygon_ha_total": 23.23,
+        "pixels": 50,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "Kunakatte",
+        "named_in_osm": true,
+        "osm_ids": [
+          "way/260745093"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [
+          "ಕುನಕಟ್ಟೆ"
+        ],
+        "point_lat": 13.02737,
+        "point_lon": 76.18907,
+        "osm_polygon_ha_inside_boundary": 0.47,
+        "osm_polygon_ha_total": 0.47,
+        "pixels": 46,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/355537530",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/355537530"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.76583,
+        "point_lon": 76.22854,
+        "osm_polygon_ha_inside_boundary": 0.44,
+        "osm_polygon_ha_total": 0.44,
+        "pixels": 46,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/377579093",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/377579093"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.94051,
+        "point_lon": 76.11327,
+        "osm_polygon_ha_inside_boundary": 0.42,
+        "osm_polygon_ha_total": 0.42,
+        "pixels": 41,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/420813723",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/420813723"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.02848,
+        "point_lon": 76.17481,
+        "osm_polygon_ha_inside_boundary": 0.39,
+        "osm_polygon_ha_total": 0.39,
+        "pixels": 38,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/863836598",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/863836598"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.08559,
+        "point_lon": 76.16461,
+        "osm_polygon_ha_inside_boundary": 0.38,
+        "osm_polygon_ha_total": 0.38,
+        "pixels": 39,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/868430181",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/868430181"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.06197,
+        "point_lon": 76.29386,
+        "osm_polygon_ha_inside_boundary": 0.38,
+        "osm_polygon_ha_total": 0.38,
+        "pixels": 31,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/871452731",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/871452731"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.03491,
+        "point_lon": 76.18439,
+        "osm_polygon_ha_inside_boundary": 0.38,
+        "osm_polygon_ha_total": 0.38,
+        "pixels": 37,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/861568339",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/861568339"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.07795,
+        "point_lon": 76.15699,
+        "osm_polygon_ha_inside_boundary": 0.35,
+        "osm_polygon_ha_total": 0.35,
+        "pixels": 35,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/868430180",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/868430180"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.05985,
+        "point_lon": 76.29395,
+        "osm_polygon_ha_inside_boundary": 0.33,
+        "osm_polygon_ha_total": 0.33,
+        "pixels": 30,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/918127606",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/918127606"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.95601,
+        "point_lon": 76.16547,
+        "osm_polygon_ha_inside_boundary": 0.33,
+        "osm_polygon_ha_total": 0.33,
+        "pixels": 35,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/420811259",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/420811259"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.03237,
+        "point_lon": 76.17694,
+        "osm_polygon_ha_inside_boundary": 0.32,
+        "osm_polygon_ha_total": 0.32,
+        "pixels": 33,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/866654341",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/866654341"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.05633,
+        "point_lon": 76.19825,
+        "osm_polygon_ha_inside_boundary": 0.25,
+        "osm_polygon_ha_total": 0.25,
+        "pixels": 24,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/360542277",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/360542277"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.84867,
+        "point_lon": 76.16667,
+        "osm_polygon_ha_inside_boundary": 0.21,
+        "osm_polygon_ha_total": 0.21,
+        "pixels": 21,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/377296362",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/377296362"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.94845,
+        "point_lon": 76.15894,
+        "osm_polygon_ha_inside_boundary": 0.19,
+        "osm_polygon_ha_total": 0.19,
+        "pixels": 19,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/1222801249",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1222801249"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.05854,
+        "point_lon": 76.12312,
+        "osm_polygon_ha_inside_boundary": 0.18,
+        "osm_polygon_ha_total": 4.75,
+        "pixels": 14,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/1126189806",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1126189806"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.94408,
+        "point_lon": 76.16276,
+        "osm_polygon_ha_inside_boundary": 0.14,
+        "osm_polygon_ha_total": 0.14,
+        "pixels": 15,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/377579094",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/377579094"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.93995,
+        "point_lon": 76.11191,
+        "osm_polygon_ha_inside_boundary": 0.13,
+        "osm_polygon_ha_total": 0.13,
+        "pixels": 15,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/308361992",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/308361992"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.94909,
+        "point_lon": 76.38021,
+        "osm_polygon_ha_inside_boundary": 0.12,
+        "osm_polygon_ha_total": 18.25,
+        "pixels": 10,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/328236367",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328236367"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.76003,
+        "point_lon": 76.18771,
+        "osm_polygon_ha_inside_boundary": 0.12,
+        "osm_polygon_ha_total": 0.12,
+        "pixels": 12,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/1578778482",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/1578778482"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 13.03517,
+        "point_lon": 76.15349,
+        "osm_polygon_ha_inside_boundary": 0.11,
+        "osm_polygon_ha_total": 1.05,
+        "pixels": 11,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/321979064",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/321979064"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "name_kn": [],
+        "point_lat": 13.02685,
+        "point_lon": 76.17282,
+        "osm_polygon_ha_inside_boundary": 0.08,
+        "osm_polygon_ha_total": 6.89,
+        "pixels": 8,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/336229160",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/336229160"
+        ],
+        "water_tag": [
+          "reservoir"
+        ],
+        "name_kn": [],
+        "point_lat": 12.97899,
+        "point_lon": 76.14107,
+        "osm_polygon_ha_inside_boundary": 0.07,
+        "osm_polygon_ha_total": 0.79,
+        "pixels": 8,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/328167695",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328167695"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.9904,
+        "point_lon": 76.14743,
+        "osm_polygon_ha_inside_boundary": 0.06,
+        "osm_polygon_ha_total": 0.06,
+        "pixels": 5,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "Thippegundi",
+        "named_in_osm": true,
+        "osm_ids": [
+          "way/353816519"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [
+          "ತಿಪ್ಪೆಗುಂಡಿ"
+        ],
+        "point_lat": 13.02926,
+        "point_lon": 76.18704,
+        "osm_polygon_ha_inside_boundary": 0.02,
+        "osm_polygon_ha_total": 0.02,
+        "pixels": 2,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/433296556",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/433296556"
+        ],
+        "water_tag": [
+          "reservoir"
+        ],
+        "name_kn": [],
+        "point_lat": 12.94572,
+        "point_lon": 76.15874,
+        "osm_polygon_ha_inside_boundary": 0.02,
+        "osm_polygon_ha_total": 0.02,
+        "pixels": 2,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/328169969",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328169969"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.94153,
+        "point_lon": 76.16517,
+        "osm_polygon_ha_inside_boundary": 0.01,
+        "osm_polygon_ha_total": 0.01,
+        "pixels": 2,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/328231664",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/328231664"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.93618,
+        "point_lon": 76.16199,
+        "osm_polygon_ha_inside_boundary": 0.01,
+        "osm_polygon_ha_total": 0.01,
+        "pixels": 1,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/358229552",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/358229552"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.72157,
+        "point_lon": 76.21359,
+        "osm_polygon_ha_inside_boundary": 0.01,
+        "osm_polygon_ha_total": 0.33,
+        "pixels": 2,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/377460686",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/377460686"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.94196,
+        "point_lon": 76.16477,
+        "osm_polygon_ha_inside_boundary": 0.01,
+        "osm_polygon_ha_total": 0.01,
+        "pixels": 1,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/330605942",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/330605942"
+        ],
+        "water_tag": [
+          "pond"
+        ],
+        "name_kn": [],
+        "point_lat": 12.94978,
+        "point_lon": 76.14767,
+        "osm_polygon_ha_inside_boundary": 0.0,
+        "osm_polygon_ha_total": 0.0,
+        "pixels": 0,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      },
+      {
+        "name": "unnamed way/433281871",
+        "named_in_osm": false,
+        "osm_ids": [
+          "way/433281871"
+        ],
+        "water_tag": [],
+        "name_kn": [],
+        "point_lat": 12.94463,
+        "point_lon": 76.15434,
+        "osm_polygon_ha_inside_boundary": 0.0,
+        "osm_polygon_ha_total": 0.0,
+        "pixels": 1,
+        "note": "under 2.0 ha mapped area; too few pixels for a meaningful water estimate"
+      }
+    ]
+  },
+  "new_bare_or_builtup_proxy_clusters": {
+    "definition": "4-connected regions of pixels that were NOT built-up/bare proxy on 21 Feb 2019 (vegetation or other non-bare cover) and ARE built-up/bare proxy on 19 Feb 2026, valid in both dates, inside the boundary. Label: 'new bare or built-up ground (proxy)'. Each could be a quarry, construction, a cleared or ploughed field, harvested cropland, dry grass or burnt vegetation or a drained water body; this analysis does not and cannot say which, nor anything about cause, ownership or legality.",
+    "nbr_note": "NBR = (B08-B12)/(B08+B12); dNBR = NBR(first date) - NBR(second date), median over the cluster. Reported only as a spectral descriptor: dNBR above ~0.1 is commonly read in the literature as a possible recent-burn signal, but dry soil, harvest and clearing can also raise it. Unverified; no ground truth.",
+    "stats": {
+      "n_regions": 91468,
+      "regions_ge_1ha": 387,
+      "regions_ge_5ha": 17,
+      "ha_in_regions_ge_1ha": 907.1,
+      "ha_in_regions_lt_1ha": 3603.2
+    },
+    "largest": [
+      {
+        "rank": 1,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 40.0,
+        "centroid_lat": 12.80141,
+        "centroid_lon": 76.30874,
+        "nearest_member_pixel_lat": 12.80142,
+        "nearest_member_pixel_lon": 76.30874,
+        "bbox_lonlat": [
+          76.30398,
+          12.79733,
+          76.31296,
+          12.80705
+        ],
+        "pct_was_vegetation_2019": 0.4,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.097,
+        "median_nbr_2026": -0.15,
+        "median_dnbr": 0.05
+      },
+      {
+        "rank": 2,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 33.95,
+        "centroid_lat": 12.93455,
+        "centroid_lon": 76.35047,
+        "nearest_member_pixel_lat": 12.93456,
+        "nearest_member_pixel_lon": 76.35045,
+        "bbox_lonlat": [
+          76.3456,
+          12.93246,
+          76.35539,
+          12.93711
+        ],
+        "pct_was_vegetation_2019": 27.6,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.003,
+        "median_nbr_2026": -0.095,
+        "median_dnbr": 0.121
+      },
+      {
+        "rank": 3,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 29.08,
+        "centroid_lat": 12.97211,
+        "centroid_lon": 76.13044,
+        "nearest_member_pixel_lat": 12.97213,
+        "nearest_member_pixel_lon": 76.13042,
+        "bbox_lonlat": [
+          76.12575,
+          12.96858,
+          76.13381,
+          12.97758
+        ],
+        "pct_was_vegetation_2019": 6.7,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.255,
+        "median_nbr_2026": -0.147,
+        "median_dnbr": -0.098
+      },
+      {
+        "rank": 4,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 24.61,
+        "centroid_lat": 12.95932,
+        "centroid_lon": 76.13156,
+        "nearest_member_pixel_lat": 12.95928,
+        "nearest_member_pixel_lon": 76.13156,
+        "bbox_lonlat": [
+          76.12836,
+          12.95491,
+          76.13504,
+          12.96356
+        ],
+        "pct_was_vegetation_2019": 21.6,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.083,
+        "median_nbr_2026": -0.131,
+        "median_dnbr": 0.049
+      },
+      {
+        "rank": 5,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 15.02,
+        "centroid_lat": 12.90816,
+        "centroid_lon": 76.1901,
+        "nearest_member_pixel_lat": 12.90812,
+        "nearest_member_pixel_lon": 76.19013,
+        "bbox_lonlat": [
+          76.18583,
+          12.9052,
+          76.19351,
+          12.91059
+        ],
+        "pct_was_vegetation_2019": 5.5,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.133,
+        "median_nbr_2026": -0.209,
+        "median_dnbr": 0.07
+      },
+      {
+        "rank": 6,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 11.61,
+        "centroid_lat": 13.09899,
+        "centroid_lon": 76.21685,
+        "nearest_member_pixel_lat": 13.09903,
+        "nearest_member_pixel_lon": 76.21687,
+        "bbox_lonlat": [
+          76.21487,
+          13.09683,
+          76.21849,
+          13.10133
+        ],
+        "pct_was_vegetation_2019": 2.9,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.104,
+        "median_nbr_2026": -0.19,
+        "median_dnbr": 0.083
+      },
+      {
+        "rank": 7,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 11.02,
+        "centroid_lat": 12.99851,
+        "centroid_lon": 76.29313,
+        "nearest_member_pixel_lat": 12.99849,
+        "nearest_member_pixel_lon": 76.29317,
+        "bbox_lonlat": [
+          76.29035,
+          12.99647,
+          76.29544,
+          13.00006
+        ],
+        "pct_was_vegetation_2019": 0.3,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.081,
+        "median_nbr_2026": -0.158,
+        "median_dnbr": 0.074
+      },
+      {
+        "rank": 8,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 7.52,
+        "centroid_lat": 12.75241,
+        "centroid_lon": 76.20385,
+        "nearest_member_pixel_lat": 12.75237,
+        "nearest_member_pixel_lon": 76.20386,
+        "bbox_lonlat": [
+          76.20205,
+          12.74944,
+          76.20603,
+          12.75422
+        ],
+        "pct_was_vegetation_2019": 0.1,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.147,
+        "median_nbr_2026": -0.237,
+        "median_dnbr": 0.086
+      },
+      {
+        "rank": 9,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 7.25,
+        "centroid_lat": 13.06185,
+        "centroid_lon": 76.16677,
+        "nearest_member_pixel_lat": 13.06184,
+        "nearest_member_pixel_lon": 76.16679,
+        "bbox_lonlat": [
+          76.1647,
+          13.05927,
+          76.16906,
+          13.06368
+        ],
+        "pct_was_vegetation_2019": 18.6,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.075,
+        "median_nbr_2026": -0.045,
+        "median_dnbr": -0.025
+      },
+      {
+        "rank": 10,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 6.93,
+        "centroid_lat": 12.7878,
+        "centroid_lon": 76.31258,
+        "nearest_member_pixel_lat": 12.78784,
+        "nearest_member_pixel_lon": 76.31254,
+        "bbox_lonlat": [
+          76.31027,
+          12.78573,
+          76.31545,
+          12.78959
+        ],
+        "pct_was_vegetation_2019": 0.6,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.121,
+        "median_nbr_2026": -0.144,
+        "median_dnbr": 0.024
+      },
+      {
+        "rank": 11,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 6.62,
+        "centroid_lat": 12.87487,
+        "centroid_lon": 76.14,
+        "nearest_member_pixel_lat": 12.87489,
+        "nearest_member_pixel_lon": 76.14012,
+        "bbox_lonlat": [
+          76.13785,
+          12.87269,
+          76.14174,
+          12.87701
+        ],
+        "pct_was_vegetation_2019": 1.2,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.135,
+        "median_nbr_2026": -0.237,
+        "median_dnbr": 0.101
+      },
+      {
+        "rank": 12,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 6.16,
+        "centroid_lat": 12.97405,
+        "centroid_lon": 76.21452,
+        "nearest_member_pixel_lat": 12.97401,
+        "nearest_member_pixel_lon": 76.2145,
+        "bbox_lonlat": [
+          76.21187,
+          12.97235,
+          76.21631,
+          12.97676
+        ],
+        "pct_was_vegetation_2019": 0.3,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.079,
+        "median_nbr_2026": -0.292,
+        "median_dnbr": 0.2
+      },
+      {
+        "rank": 13,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 5.82,
+        "centroid_lat": 12.76737,
+        "centroid_lon": 76.26906,
+        "nearest_member_pixel_lat": 12.76735,
+        "nearest_member_pixel_lon": 76.26905,
+        "bbox_lonlat": [
+          76.26725,
+          12.76577,
+          76.27076,
+          12.76874
+        ],
+        "pct_was_vegetation_2019": 0.5,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.007,
+        "median_nbr_2026": -0.097,
+        "median_dnbr": 0.085
+      },
+      {
+        "rank": 14,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 5.71,
+        "centroid_lat": 12.91516,
+        "centroid_lon": 76.1892,
+        "nearest_member_pixel_lat": 12.91518,
+        "nearest_member_pixel_lon": 76.18924,
+        "bbox_lonlat": [
+          76.18734,
+          12.91207,
+          76.19059,
+          12.91811
+        ],
+        "pct_was_vegetation_2019": 7.7,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.109,
+        "median_nbr_2026": -0.246,
+        "median_dnbr": 0.122
+      },
+      {
+        "rank": 15,
+        "label": "new bare or built-up ground (proxy)",
+        "area_ha": 5.67,
+        "centroid_lat": 12.76419,
+        "centroid_lon": 76.28485,
+        "nearest_member_pixel_lat": 12.7642,
+        "nearest_member_pixel_lon": 76.28488,
+        "bbox_lonlat": [
+          76.28262,
+          12.76299,
+          76.28668,
+          12.76577
+        ],
+        "pct_was_vegetation_2019": 0.0,
+        "pct_inside_osm_protected_or_forest": 0.0,
+        "median_nbr_2019": -0.079,
+        "median_nbr_2026": -0.101,
+        "median_dnbr": 0.024
+      }
+    ]
+  },
+  "robustness_other_dates": {
+    "note": "DRAFT robustness check, 20 m grid, tile 43PFQ only, all Jan-Mar R062 dates with <1% masked inside the boundary (60 m scoring). Not the headline numbers.",
+    "dates": [
+      {
+        "date": "2019-01-02",
+        "platform": "Sentinel-2B",
+        "id": "S2B_MSIL2A_20190102T052219_R062_T43PFQ_20201007T221307",
+        "baseline": "02.12",
+        "offset": 0,
+        "valid_pct": 99.14,
+        "veg_pct": 57.14,
+        "builtup_bare_proxy_pct": 1.72,
+        "median_ndvi": 0.4347
+      },
+      {
+        "date": "2019-01-07",
+        "platform": "Sentinel-2A",
+        "id": "S2A_MSIL2A_20190107T052211_R062_T43PFQ_20201007T232804",
+        "baseline": "02.12",
+        "offset": 0,
+        "valid_pct": 99.96,
+        "veg_pct": 51.69,
+        "builtup_bare_proxy_pct": 2.46,
+        "median_ndvi": 0.4085
+      },
+      {
+        "date": "2019-01-17",
+        "platform": "Sentinel-2A",
+        "id": "S2A_MSIL2A_20190117T052141_R062_T43PFQ_20201008T021330",
+        "baseline": "02.12",
+        "offset": 0,
+        "valid_pct": 99.86,
+        "veg_pct": 39.47,
+        "builtup_bare_proxy_pct": 2.8,
+        "median_ndvi": 0.3538
+      },
+      {
+        "date": "2019-01-22",
+        "platform": "Sentinel-2B",
+        "id": "S2B_MSIL2A_20190122T052119_R062_T43PFQ_20201008T034351",
+        "baseline": "02.12",
+        "offset": 0,
+        "valid_pct": 99.98,
+        "veg_pct": 37.05,
+        "builtup_bare_proxy_pct": 3.85,
+        "median_ndvi": 0.3417
+      },
+      {
+        "date": "2019-02-06",
+        "platform": "Sentinel-2A",
+        "id": "S2A_MSIL2A_20190206T052011_R062_T43PFQ_20201007T142316",
+        "baseline": "02.12",
+        "offset": 0,
+        "valid_pct": 99.66,
+        "veg_pct": 26.68,
+        "builtup_bare_proxy_pct": 10.27,
+        "median_ndvi": 0.2962
+      },
+      {
+        "date": "2019-02-16",
+        "platform": "Sentinel-2A",
+        "id": "S2A_MSIL2A_20190216T051901_R062_T43PFQ_20201007T171755",
+        "baseline": "02.12",
+        "offset": 0,
+        "valid_pct": 99.28,
+        "veg_pct": 30.39,
+        "builtup_bare_proxy_pct": 9.95,
+        "median_ndvi": 0.3059
+      },
+      {
+        "date": "2019-02-21",
+        "platform": "Sentinel-2B",
+        "id": "S2B_MSIL2A_20190221T051839_R062_T43PFQ_20201007T191241",
+        "baseline": "02.12",
+        "offset": 0,
+        "valid_pct": 99.97,
+        "veg_pct": 33.45,
+        "builtup_bare_proxy_pct": 12.39,
+        "median_ndvi": 0.3109
+      },
+      {
+        "date": "2019-02-26",
+        "platform": "Sentinel-2A",
+        "id": "S2A_MSIL2A_20190226T051751_R062_T43PFQ_20201007T204633",
+        "baseline": "02.12",
+        "offset": 0,
+        "valid_pct": 99.99,
+        "veg_pct": 29.74,
+        "builtup_bare_proxy_pct": 14.09,
+        "median_ndvi": 0.2948
+      },
+      {
+        "date": "2019-03-13",
+        "platform": "Sentinel-2B",
+        "id": "S2B_MSIL2A_20190313T051649_R062_T43PFQ_20201007T061803",
+        "baseline": "02.12",
+        "offset": 0,
+        "valid_pct": 99.99,
+        "veg_pct": 28.69,
+        "builtup_bare_proxy_pct": 20.96,
+        "median_ndvi": 0.2825
+      },
+      {
+        "date": "2019-03-18",
+        "platform": "Sentinel-2A",
+        "id": "S2A_MSIL2A_20190318T051651_R062_T43PFQ_20221118T221849",
+        "baseline": "05.00",
+        "offset": -1000,
+        "valid_pct": 99.93,
+        "veg_pct": 27.44,
+        "builtup_bare_proxy_pct": 20.34,
+        "median_ndvi": 0.2791
+      },
+      {
+        "date": "2019-03-23",
+        "platform": "Sentinel-2B",
+        "id": "S2B_MSIL2A_20190323T051649_R062_T43PFQ_20201007T094824",
+        "baseline": "02.12",
+        "offset": 0,
+        "valid_pct": 99.97,
+        "veg_pct": 22.05,
+        "builtup_bare_proxy_pct": 22.18,
+        "median_ndvi": 0.2637
+      },
+      {
+        "date": "2019-03-28",
+        "platform": "Sentinel-2A",
+        "id": "S2A_MSIL2A_20190328T051651_R062_T43PFQ_20201007T113213",
+        "baseline": "02.12",
+        "offset": 0,
+        "valid_pct": 99.99,
+        "veg_pct": 27.12,
+        "builtup_bare_proxy_pct": 20.56,
+        "median_ndvi": 0.278
+      },
+      {
+        "date": "2025-01-05",
+        "platform": "Sentinel-2A",
+        "id": "S2A_MSIL2A_20250105T052221_R062_T43PFQ_20250107T095049",
+        "baseline": "05.11",
+        "offset": -1000,
+        "valid_pct": 100.0,
+        "veg_pct": 74.27,
+        "builtup_bare_proxy_pct": 1.1,
+        "median_ndvi": 0.5132
+      },
+      {
+        "date": "2025-02-04",
+        "platform": "Sentinel-2C",
+        "id": "S2C_MSIL2A_20250204T052051_R062_T43PFQ_20250204T102014",
+        "baseline": "05.11",
+        "offset": -1000,
+        "valid_pct": 99.97,
+        "veg_pct": 53.35,
+        "builtup_bare_proxy_pct": 3.08,
+        "median_ndvi": 0.4165
+      },
+      {
+        "date": "2025-02-09",
+        "platform": "Sentinel-2B",
+        "id": "S2B_MSIL2A_20250209T051859_R062_T43PFQ_20250209T075235",
+        "baseline": "05.11",
+        "offset": -1000,
+        "valid_pct": 100.0,
+        "veg_pct": 52.5,
+        "builtup_bare_proxy_pct": 3.2,
+        "median_ndvi": 0.4129
+      },
+      {
+        "date": "2025-02-14",
+        "platform": "Sentinel-2C",
+        "id": "S2C_MSIL2A_20250214T051941_R062_T43PFQ_20250214T102811",
+        "baseline": "05.11",
+        "offset": -1000,
+        "valid_pct": 100.0,
+        "veg_pct": 49.52,
+        "builtup_bare_proxy_pct": 4.04,
+        "median_ndvi": 0.3976
+      },
+      {
+        "date": "2025-02-19",
+        "platform": "Sentinel-2B",
+        "id": "S2B_MSIL2A_20250219T051759_R062_T43PFQ_20250219T085701",
+        "baseline": "05.11",
+        "offset": -1000,
+        "valid_pct": 100.0,
+        "veg_pct": 46.59,
+        "builtup_bare_proxy_pct": 5.03,
+        "median_ndvi": 0.3827
+      },
+      {
+        "date": "2025-02-24",
+        "platform": "Sentinel-2C",
+        "id": "S2C_MSIL2A_20250224T051841_R062_T43PFQ_20250224T103411",
+        "baseline": "05.11",
+        "offset": -1000,
+        "valid_pct": 100.0,
+        "veg_pct": 43.17,
+        "builtup_bare_proxy_pct": 4.84,
+        "median_ndvi": 0.3672
+      },
+      {
+        "date": "2025-03-31",
+        "platform": "Sentinel-2B",
+        "id": "S2B_MSIL2A_20250331T051649_R062_T43PFQ_20250331T085816",
+        "baseline": "05.11",
+        "offset": -1000,
+        "valid_pct": 100.0,
+        "veg_pct": 48.15,
+        "builtup_bare_proxy_pct": 3.6,
+        "median_ndvi": 0.3904
+      },
+      {
+        "date": "2026-01-05",
+        "platform": "Sentinel-2B",
+        "id": "S2B_MSIL2A_20260105T052119_R062_T43PFQ_20260105T074657",
+        "baseline": "05.11",
+        "offset": -1000,
+        "valid_pct": 100.0,
+        "veg_pct": 65.16,
+        "builtup_bare_proxy_pct": 1.55,
+        "median_ndvi": 0.4777
+      },
+      {
+        "date": "2026-01-20",
+        "platform": "Sentinel-2C",
+        "id": "S2C_MSIL2A_20260120T052131_R062_T43PFQ_20260120T083615",
+        "baseline": "05.11",
+        "offset": -1000,
+        "valid_pct": 99.94,
+        "veg_pct": 54.58,
+        "builtup_bare_proxy_pct": 1.85,
+        "median_ndvi": 0.4207
+      },
+      {
+        "date": "2026-01-30",
+        "platform": "Sentinel-2C",
+        "id": "S2C_MSIL2A_20260130T052051_R062_T43PFQ_20260130T100710",
+        "baseline": "05.11",
+        "offset": -1000,
+        "valid_pct": 100.0,
+        "veg_pct": 52.07,
+        "builtup_bare_proxy_pct": 2.43,
+        "median_ndvi": 0.4102
+      },
+      {
+        "date": "2026-02-04",
+        "platform": "Sentinel-2B",
+        "id": "S2B_MSIL2A_20260204T051919_R062_T43PFQ_20260204T090926",
+        "baseline": "05.12",
+        "offset": -1000,
+        "valid_pct": 100.0,
+        "veg_pct": 51.48,
+        "builtup_bare_proxy_pct": 4.54,
+        "median_ndvi": 0.4083
+      },
+      {
+        "date": "2026-02-09",
+        "platform": "Sentinel-2C",
+        "id": "S2C_MSIL2A_20260209T051951_R062_T43PFQ_20260209T102711",
+        "baseline": "05.12",
+        "offset": -1000,
+        "valid_pct": 100.0,
+        "veg_pct": 44.67,
+        "builtup_bare_proxy_pct": 5.02,
+        "median_ndvi": 0.3744
+      },
+      {
+        "date": "2026-02-14",
+        "platform": "Sentinel-2B",
+        "id": "S2B_MSIL2A_20260214T051819_R062_T43PFQ_20260214T092109",
+        "baseline": "05.12",
+        "offset": -1000,
+        "valid_pct": 99.29,
+        "veg_pct": 45.83,
+        "builtup_bare_proxy_pct": 6.66,
+        "median_ndvi": 0.3771
+      },
+      {
+        "date": "2026-02-19",
+        "platform": "Sentinel-2C",
+        "id": "S2C_MSIL2A_20260219T051851_R062_T43PFQ_20260219T102113",
+        "baseline": "05.12",
+        "offset": -1000,
+        "valid_pct": 100.0,
+        "veg_pct": 40.98,
+        "builtup_bare_proxy_pct": 8.11,
+        "median_ndvi": 0.3544
+      },
+      {
+        "date": "2026-03-06",
+        "platform": "Sentinel-2B",
+        "id": "S2B_MSIL2A_20260306T051649_R062_T43PFQ_20260306T091756",
+        "baseline": "05.12",
+        "offset": -1000,
+        "valid_pct": 100.0,
+        "veg_pct": 46.93,
+        "builtup_bare_proxy_pct": 7.56,
+        "median_ndvi": 0.3816
+      },
+      {
+        "date": "2026-03-11",
+        "platform": "Sentinel-2C",
+        "id": "S2C_MSIL2A_20260311T051651_R062_T43PFQ_20260311T103414",
+        "baseline": "05.12",
+        "offset": -1000,
+        "valid_pct": 99.85,
+        "veg_pct": 44.63,
+        "builtup_bare_proxy_pct": 8.65,
+        "median_ndvi": 0.3681
+      },
+      {
+        "date": "2026-03-26",
+        "platform": "Sentinel-2B",
+        "id": "S2B_MSIL2A_20260326T051649_R062_T43PFQ_20260326T091052",
+        "baseline": "05.12",
+        "offset": -1000,
+        "valid_pct": 100.0,
+        "veg_pct": 44.62,
+        "builtup_bare_proxy_pct": 10.13,
+        "median_ndvi": 0.368
+      }
+    ]
+  },
+  "outputs": [
+    "metrics.json",
+    "truecolor_2019_2026.png",
+    "change_map_2019_2026.png",
+    "clusters.png",
+    "METHOD.md",
+    "config.json",
+    "extract_boundary.py",
+    "search_scenes.py",
+    "fetch_osm.py",
+    "analyze.py",
+    "data/candidates.json",
+    "data/osm_water_all.json",
+    "data/osm_forest_protected.json",
+    "data/osm_query_log.json",
+    "robustness_check.py",
+    "data/robustness_dates.json",
+    "data/run_log.txt",
+    "data/boundary/holenarasipur_ac197.geojson"
+  ]
+}

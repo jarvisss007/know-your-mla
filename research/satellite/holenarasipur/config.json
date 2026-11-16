@@ -1,0 +1,25 @@
+{
+  "_status": "DRAFT - parameters for the Holenarasipur run of the Sentinel-2 land-cover pipeline (copied from ../kanakapura/, which was adapted from ../analyze.py, Mahadevapura AC 174)",
+  "state": "KARNATAKA",
+  "ac_name": "Holenarasipur",
+  "ac_no": 197,
+  "display_name": "Holenarasipur (AC 197)",
+  "district": "Hassan",
+  "district_note": "Hassan district; the DataMeet file (OBJECTID 2353) labels it DIST_NAME HASSAN, PC_NO 16 HASSAN",
+  "boundary_source": "../data/boundary/datameet_ac.geojson",
+  "boundary_objectid": 2353,
+  "boundary": "data/boundary/holenarasipur_ac197.geojson",
+  "dst_crs": "EPSG:32643",
+  "res_m": 10,
+  "search_windows": {"2019": "2019-01-01/2019-03-31", "2026": "2026-01-01/2026-03-31", "2025": "2025-01-01/2025-03-31"},
+  "max_tile_cloud_pct": 30,
+  "scenes": {
+    "2019": ["S2B_MSIL2A_20190221T051839_R062_T43PFQ_20201007T191241"],
+    "2026": ["S2C_MSIL2A_20260219T051851_R062_T43PFQ_20260219T102113"]
+  },
+  "scene_choice_note": "All Jan-Mar acquisitions were grouped by date and relative orbit (every one over Holenarasipur is orbit R062, and the single tile 43PFQ covers the whole boundary, so no mosaic is needed) and scored by the SCL cloud/shadow/no-data fraction inside the boundary on a 60 m grid (data/candidates.json). Rule: among dates with under 0.1% masked, take the 2019/2026 pair closest in day-of-year, preferring the Feb window used for Kanakapura and Mahadevapura (11-13 Feb). Chose 21 Feb 2019 (Sentinel-2B; 0.023% masked at 60 m) and 19 Feb 2026 (Sentinel-2C; 0.000% masked), two days apart in the calendar, same orbit and tile. The only other 2-day pairs that clean were 7 Jan 2019/5 Jan 2026 (0.032%/0.000%) and 28 Mar 2019/26 Mar 2026 (0.008%/0.001%, marginally cleaner, but six weeks later in the dry season than the other constituencies' pairs); both are covered by robustness_check.py. 2026 had clean dates, so no 2025 fallback was needed.",
+  "robustness_tile": "43PFQ",
+  "robustness_orbit": 62,
+  "n_clusters": 15,
+  "min_lake_ha": 2.0
+}
