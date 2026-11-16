@@ -176,9 +176,21 @@ footer {{ border-top: 2px solid var(--fg); padding-top: 14px; }}
 </header>
 
 <section>
-  <h2>How far the cases have got</h2>
+  <h2>The government's own count</h2>
+  <ol class="ladder">
+    <li><b>1,248</b><span>Lokayukta cases against officials, 10 Sep 2022 to 13 Aug 2026</span></li>
+    <li><b>364</b><span>Chargesheet filed</span></li>
+    <li><b>648</b><span>Still under investigation</span></li>
+    <li><b>218</b><span>Stayed by courts</span></li>
+    <li class="zero"><b>0</b><span>Government servants held guilty so far</span></li>
+  </ol>
+  <p class="muted">From the Chief Minister's written reply to Legislative Council unstarred question 452 (628), 20 Aug 2026, read in the original: 939 bribery-trap cases and 309 disproportionate-assets cases, 1,451 officers and employees in all; 18 more cases were closed. <a href="https://kla.kar.nic.in/council/Replies/unstarred/20082026/usq628(20082026).pdf">The reply (PDF, Kannada)</a>. Press reports of this reply mislabelled the 939 trap cases as assets cases.</p>
+</section>
+
+<section>
+  <h2>How far the 2026 cases have got</h2>
   <ol class="ladder">{ladder_html}</ol>
-  <p class="muted">Each number counts officials whose case reached that step or a later one, as far as the reports read show. A zero means no report of that step was found. It does not mean the step has not happened: the follow-up check on {d(checked)} was a web search by name, mostly in English, and did not cover court case-status sites or Lokayukta records. {unchecked} officials added from a later report have not been checked yet. {len(moved)} rows carry a later development of another kind (a court order, further searches, a posting, a separate case); each is shown in the table with its source.</p>
+  <p class="muted">Each number counts officials whose case reached that step or a later one, as far as the reports read show. A zero means no report of that step was found. It does not mean the step has not happened: the follow-up check on {d(checked)} was a web search by name in English and Kannada. It could not reach Vijaya Karnataka, Kannada Prabha or Prajavani, and did not cover court case-status sites or Lokayukta records. {unchecked} officials added late have not been checked yet. {len(moved)} rows carry a later development of another kind (a court order, further searches, a posting, a separate case); each is shown in the table with its source.</p>
 </section>
 
 <section>
@@ -198,10 +210,10 @@ footer {{ border-top: 2px solid var(--fg); padding-top: 14px; }}
 <section>
   <h2>What is missing</h2>
   <ul>
-    <li>This is not every case of 2026. No raid report for May, October or November 2026 has been found. A Deccan Herald report dated 20 Aug 2026 on a single Bengaluru official would not open and is not in the table.</li>
+    <li>This is not every case of 2026. No assets raid was found for May or November 2026. A Mysuru raid reported on 5 Feb 2026 is a lead only. Bribery-trap cases are not tracked systematically: there were many more in 2026 than the few shown here.</li>
     <li>The follow-up check was a press search. Chargesheets, sanction requests, court stays and verdicts are rarely reported and must come from Lokayukta replies, RTI answers and court records. The outcome of the High Court hearing of 22 Jul 2026 in the excise matter was not found.</li>
-    <li>Two follow-up entries are weak and marked as such: a posting reported by one outlet with the order unseen, and an arrest in a separate case matched by name and former post.</li>
-    <li>Several rows rest on a single news report. Where the district or department is "not stated", the report did not give it.</li>
+    <li>Follow-up entries marked UNVERIFIED rest on a single outlet. The arrest in a separate case is matched by name and former post.</li>
+    <li>Several asset figures come from one small outlet, and reports of the same raid often differ on the post, the department or the amount; the notes say where.</li>
   </ul>
 </section>
 

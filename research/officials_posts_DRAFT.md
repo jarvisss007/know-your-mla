@@ -5,16 +5,33 @@ Everything below is from news reports of Lokayukta, ED and legislature statement
 
 ## 1. The big picture (what the government itself told the legislature)
 
-| Fact | Figure | Source |
-|---|---|---|
-| Lokayukta cases registered, Sept 2022 to Aug 2026 | 1,248 | Reply in the Legislative Council to MLCs Madhu G. Madegowda and Dhananjaya Sarji, as reported by Organiser, 12 Sep 2026 |
-| Of those: chargesheet filed / still under investigation / stayed by courts / closed (B-report) | 364 / 648 / 218 / 18 | same |
-| Government employees declared guilty in these cases so far | none, per the report | same |
-| Cases against senior officers (IAS, IPS, KAS and others), Sept 2022 to Feb 2026 | 195 (104 raids + 91 traps); 89 under investigation, 62 stayed by the High Court; no conviction or acquittal | CM's Assembly reply to MLA Munirathna, 10 Mar 2026, as reported by The News Minute, 12 Mar 2026 |
-| Officials for whom permission to investigate/prosecute was still pending with departments | 84 officials in 22 cases (some proposals dating to 2020-22) | Organiser, 4 Jun 2026, citing unnamed Lokayukta documents. Weak sourcing |
-| Same problem in 2024 | 206 officials across 27 departments awaiting sanction | PTI, 5 Oct 2024, citing a Lokayukta official |
+Checked against the original replies on 16 Nov 2026. Cover pages are saved in `research/officials_tracker/sources/`.
 
-Problems to fix before use: the Organiser figures do not fully add up (disproportionate-assets cases by group sum to 1,227 against a stated 939; bribery 887 + DA 939 exceeds 1,248). Get the actual Council reply (unstarred question dated 20 Aug 2026) from the legislature website. Organiser is a single, partisan source.
+**Legislative Council, unstarred question 452 (628), Dr Dhananjaya Sarji, answered 20 Aug 2026 by the Chief Minister** (https://kla.kar.nic.in/council/Replies/unstarred/20082026/usq628(20082026).pdf). Period 10 Sep 2022 to 13 Aug 2026, Lokayukta police wing, Prevention of Corruption Act:
+
+| Fact | Figure |
+|---|---|
+| Cases registered against government officers and employees | 1,248 = 939 trap (bribery) cases + 309 disproportionate-assets (raid) cases |
+| Stayed by courts | 218 |
+| Closed with a B final report | 18 |
+| Chargesheet filed | 364 |
+| Still under investigation | 648 |
+| Government servants held guilty by a court in these 1,248 cases | none so far |
+| Officers and employees involved, by class (a headcount, not a case count; total 1,451) | IAS 1, IPS 1, KAS 27, Group A 212, Group B 376, Group C 733, Group D 28, public representatives 24, outsourced 49 |
+| Other Prevention of Corruption Act cases (neither trap nor assets) in the same period | 115 |
+| Separately: sentences pronounced since 2023 in PC Act cases already at trial | 148 cases (as we read it, older cases, not among the 1,248) |
+
+**Legislative Council, unstarred question 489 (560), Madhu G. Madegowda, answered 20 Aug 2026** (https://kla.kar.nic.in/council/Replies/unstarred/20082026/usq560(20082026).pdf). Period 1 Jan 2023 to 13 Aug 2026: 887 bribery (trap) cases; 290 at trial stage; 126 stayed by courts. Cover answer read by a second pass only.
+
+**Legislative Assembly, unstarred question 1324, Munirathna, answered 10 Mar 2026 by the Chief Minister** (https://kla.kar.nic.in/assembly/answers/16assembly/pdf/10032026/1324.pdf). Period 10 Sep 2022 to 28 Feb 2026, IAS, IPS, KAS and other senior officers: 104 raid cases + 91 trap cases = 195; 89 under investigation; no conviction and no acquittal. The "62 stayed by the High Court" figure reported by The News Minute is not in the cover answer; it can only come from counting the 25-page annexure, which we have not done. Cover answer read by a second pass only.
+
+**Corrections to the press reports.** Organiser (12 Sep 2026) and Vartha Bharati (4 Sep 2026) merged the two Council replies and got three things wrong: they called the 939 trap cases "disproportionate-assets cases" (assets cases are 309); they presented the class table as assets cases when it is a headcount across all 1,248 cases; and they gave Group A as 12 when the reply says 212. They also left out the 24 public representatives. Do not quote either outlet for these figures; quote the reply.
+
+**Sanction to prosecute** (not yet checked against a primary document): 84 officials in 22 cases awaiting permission (Organiser, 4 Jun 2026, citing unnamed Lokayukta documents; weak); 206 officials across 27 departments awaiting sanction in 2024 (PTI, 5 Oct 2024, citing a Lokayukta official).
+
+**How long a case can take.** In March 2026 a special court for Lokayukta cases convicted a former managing director of the Karnataka Council for Technical Upgradation in an assets case with a check period of December 1982 to July 2014 (three years' rigorous imprisonment, Rs 4.5 crore fine), and asked the investigating officer and two official witnesses to explain lapses, criticising years of delay (Deccan Herald, 31 Mar 2026, https://www.deccanherald.com/india/karnataka/da-case-special-court-seeks-explanation-from-three-officials-for-misleading-report-3951322).
+
+Not done: the annexures (district-wise and department-wise tables, 200+ pages each) have not been read.
 
 **The story in one line:** many raids, very few finished trials. The choke points are (a) government sanction to prosecute and (b) court stays.
 
@@ -34,7 +51,7 @@ Tally of the two 2026 raid days read in full (8 July and 22 Sept 2026; 18 offici
 
 Other departments named in 2026 reports: Excise (section 3), BESCOM (a Lokayukta official called it the source of most recent trap cases), RTO offices and check-posts (surprise inspections), sub-registrar offices, police postings.
 
-Legislature data on disproportionate-assets cases by rank (same Council reply): Group C 733, Group B 376, outsourced staff 49, Group D 28, KAS 27, Group A 12, IAS 1, IPS 1. Most cases are against junior and middle staff, not the top.
+By class (Council reply, headcount across all 1,248 cases): Group C 733, Group B 376, Group A 212, outsourced staff 49, Group D 28, KAS 27, public representatives 24, IAS 1, IPS 1. Most of those named are junior and middle staff, but Group A is 212, not 12 as the press reported.
 
 Older department ranking (pending Lokayukta complaints, March 2023): Rural Development and Panchayat Raj 4,371; Revenue 3,826; Urban Development 2,331.
 
@@ -81,4 +98,4 @@ Not yet read (blocked or pending): Deccan Herald on the single largest haul from
 
 ## Tracker
 
-The raid-to-verdict tracker built from this note is in `research/officials_tracker/`: `tracker.csv` (one row per official, designation only), `build.py`, and the review page `DRAFT_officials_tracker.html`. As of 16 Nov 2026 it holds 55 officials over 10 action days. A follow-up check by press search (16 Nov 2026) found no chargesheet, sanction decision, trial or verdict for any of the 48 checked; 7 officials added from a next-day report are unchecked. No raid report has been found for May, October or November 2026, and one August report would not open.
+The raid-to-verdict tracker built from this note is in `research/officials_tracker/`: `tracker.csv` (one row per official, designation only), `build.py`, and the review page `DRAFT_officials_tracker.html`. As of 16 Nov 2026 it holds 61 officials over 13 action days. Follow-up checks by press search in English and Kannada (16 Nov 2026) found no chargesheet, sanction decision, trial or verdict for any of the 55 checked; 6 officials added late are unchecked. Vijaya Karnataka, Kannada Prabha and Prajavani could not be searched; court and Lokayukta records were not checked.
