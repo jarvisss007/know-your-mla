@@ -79,6 +79,35 @@ def d(iso):
     return f"{int(dd)} {MONTHS[int(m) - 1]} {y}"
 
 
+# Where the money was found: asset types the agency reported, per official (assets.csv).
+assets = list(csv.DictReader(open(HERE / "assets.csv", encoding="utf-8")))
+na = len(assets)
+
+
+def present(col):
+    return [a for a in assets if a[col].strip()]
+
+
+def colsum(col):
+    return sum(num(a[col]) or 0 for a in assets if num(a[col]) is not None)
+
+
+def lakh(v):
+    return f"Rs {v / 100:.2f} crore" if v >= 100 else f"Rs {v:.0f} lakh"
+
+
+money_rows = [
+    ("Farmland", len(present("farmland_acres")), f"at least {colsum('farmland_acres'):.0f} acres where the area was given"),
+    ("Houses or flats", len(present("houses")), f"at least {colsum('houses'):.0f} where counted"),
+    ("House sites and plots", len(present("sites")), f"at least {colsum('sites'):.0f} where counted"),
+    ("Gold, silver or jewellery", len(present("gold_silver_lakh")), f"at least {lakh(colsum('gold_silver_lakh'))} where valued"),
+    ("Cash found in the searches", len(present("cash_lakh")), f"at least {lakh(colsum('cash_lakh'))} where valued"),
+    ("Bank deposits and investments", len(present("deposits_lakh")), f"at least {lakh(colsum('deposits_lakh'))} where valued"),
+    ("A business or commercial property", len(present("business")), "; ".join(sorted({a['business'] for a in present('business')}))),
+    ("Assets reported in relatives' or associates' hands", len(present("others_names")), "as stated in the report; never attributed to a named person here"),
+]
+money_html = "".join(f"<tr><td>{e(k)}</td><td class=\"n\">{c} of {na}</td><td>{e(d)}</td></tr>" for k, c, d in money_rows)
+
 ladder_html = "".join(
     f'<li class="{"zero" if c == 0 else ""}"><b>{c}</b><span>{e(name)}</span></li>'
     for name, c in zip(LADDER, reached))
@@ -191,6 +220,16 @@ footer {{ border-top: 2px solid var(--fg); padding-top: 14px; }}
   <h2>How far the 2026 cases have got</h2>
   <ol class="ladder">{ladder_html}</ol>
   <p class="muted">Each number counts officials whose case reached that step or a later one, as far as the reports read show. A zero means no report of that step was found. It does not mean the step has not happened: the follow-up check on {d(checked)} was a web search by name in English and Kannada. It could not reach Vijaya Karnataka, Kannada Prabha or Prajavani, and did not cover court case-status sites or Lokayukta records. {unchecked} officials added late have not been checked yet. {len(moved)} rows carry a later development of another kind (a court order, further searches, a posting, a separate case); each is shown in the table with its source.</p>
+</section>
+
+<section>
+  <h2>Where the money was found</h2>
+  <p class="muted">For {na} of the {n} officials, a report listed what kind of assets the agency found. This is what those lists contain. It shows where wealth is kept, not that any of it is illegal: each figure is a first-day claim that the case still has to prove.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Kind of asset</th><th class="n">Officials</th><th>Amount reported</th></tr></thead>
+    <tbody>{money_html}</tbody>
+  </table></div>
+  <p class="muted">Counts are minimums: many reports list an asset without a number or a value. Per-official detail and sources are in assets.csv beside this page.</p>
 </section>
 
 <section>
