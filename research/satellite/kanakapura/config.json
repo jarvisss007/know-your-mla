@@ -1,0 +1,21 @@
+{
+  "_status": "DRAFT - parameters for the Kanakapura run of the Sentinel-2 land-cover pipeline (adapted from ../analyze.py, Mahadevapura AC 174)",
+  "state": "KARNATAKA",
+  "ac_name": "Kanakapura",
+  "ac_no": 184,
+  "display_name": "Kanakapura (AC 184)",
+  "district_note": "Ramanagara district (renamed Bengaluru South district in 2025); the DataMeet file labels it with the pre-2007 district name BANGALORE RURAL",
+  "boundary_source": "../data/boundary/datameet_ac.geojson",
+  "boundary": "data/boundary/kanakapura_ac184.geojson",
+  "dst_crs": "EPSG:32643",
+  "res_m": 10,
+  "search_windows": {"2019": "2019-01-01/2019-03-31", "2026": "2026-01-01/2026-03-31", "2025": "2025-01-01/2025-03-31"},
+  "max_tile_cloud_pct": 30,
+  "scenes": {
+    "2019": ["S2A_MSIL2A_20190213T050921_R019_T43PGP_20201007T162012", "S2A_MSIL2A_20190213T050921_R019_T43PGQ_20201007T162011"],
+    "2026": ["S2B_MSIL2A_20260211T050839_R019_T43PGP_20260211T085923", "S2B_MSIL2A_20260211T050839_R019_T43PGQ_20260211T085923"]
+  },
+  "scene_choice_note": "All Jan-Mar acquisitions were grouped by date and relative orbit (every one over Kanakapura is orbit R019, tiles 43PGP + 43PGQ) and scored by the SCL cloud/shadow/no-data fraction inside the boundary on a 60 m mosaic (data/candidates.json). Chose 13 Feb 2019 (Sentinel-2A; 0.002% masked at 60 m, the cleanest 2019 date) and 11 Feb 2026 (Sentinel-2B; 0.000% masked), two days apart in the calendar, same orbit and tiles. This is the same date pair used for Mahadevapura. 6 Feb 2026 (Sentinel-2C) was equally clean but 7 days further from the 2019 day-of-year. 2026 had clean dates, so no 2025 fallback was needed.",
+  "n_clusters": 15,
+  "min_lake_ha": 2.0
+}

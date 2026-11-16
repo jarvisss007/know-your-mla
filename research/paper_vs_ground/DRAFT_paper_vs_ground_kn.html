@@ -1,0 +1,189 @@
+<title>ಕಾಗದದಲ್ಲಿ ಮತ್ತು ನೆಲದಲ್ಲಿ</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Kannada:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: one reading column; every claim is a ledger row with "on paper" as the full track and "on the ground" as the filled part. */
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8;
+  --red: #c21f30; --yellow: #f2b705; --track: #e3e6ec; --ok: #1a8f4c; --warn: #b45309;
+  --display: "Space Grotesk", "Noto Sans Kannada", "Nirmala UI", "Tunga", "Segoe UI", system-ui, sans-serif;
+  --body: Inter, "Noto Sans Kannada", "Nirmala UI", "Tunga", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --track: #2b313d; --ok: #4fcf86; --warn: #f0a04b; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --track: #2b313d; --ok: #4fcf86; --warn: #f0a04b; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font: 16px/1.55 var(--body);
+  padding-block: 28px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+a { color: inherit; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1; letter-spacing: -0.02em; }
+h1 span { color: var(--red); }
+h2 { font-size: 1.5rem; }
+p { margin: 0; max-width: 66ch; }
+.eyebrow { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.draft { display: inline-block; background: var(--yellow); color: #161a22; font-weight: 600; font-size: .8rem; padding: 3px 10px; border-radius: 3px; letter-spacing: .04em; }
+header { display: flex; flex-direction: column; gap: 14px; }
+.lede { font-size: 1.1rem; }
+.muted { color: var(--muted); font-size: .9rem; }
+
+.gaps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0; border-block: 2px solid var(--fg); }
+.gap { padding: 16px 14px 16px 0; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.gap b { font: 700 2.4rem/1 var(--display); color: var(--red); font-variant-numeric: tabular-nums; }
+.gap span { font-size: .88rem; }
+
+section { display: flex; flex-direction: column; gap: 6px; }
+section > p { margin-bottom: 10px; color: var(--muted); }
+.row { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 18px 0; border-top: 1px solid var(--line); }
+.row h3 { font-size: 1.05rem; }
+.pair { display: flex; flex-wrap: wrap; gap: 6px 28px; font-variant-numeric: tabular-nums; }
+.pair div { min-width: 0; }
+.pair small { display: block; color: var(--muted); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+.pair strong { font: 700 1.25rem/1.2 var(--display); }
+.bar { height: 12px; background: var(--track); border-radius: 2px; position: relative; overflow: hidden; }
+.bar i { position: absolute; inset: 0 auto 0 0; background: var(--red); min-width: 3px; }
+.barcap { display: flex; justify-content: space-between; font-size: .8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.barcap b { color: var(--red); }
+.note { font-size: .92rem; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 12px; font-size: .8rem; color: var(--muted); align-items: center; }
+.chip { border: 1px solid var(--line); border-radius: 999px; padding: 1px 9px; background: var(--surface); color: var(--fg); white-space: nowrap; }
+.chip.al { border-color: var(--warn); color: var(--warn); }
+.chip.c2 { border-color: var(--ok); color: var(--ok); }
+
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; min-width: 620px; }
+th, td { text-align: left; padding: 9px 12px 9px 0; border-top: 1px solid var(--line); vertical-align: top; }
+th { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border-top: 2px solid var(--fg); }
+.st { font-weight: 600; white-space: nowrap; }
+.st.go { color: var(--ok); } .st.need { color: var(--warn); }
+ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; max-width: 70ch; }
+footer { border-top: 2px solid var(--fg); padding-top: 14px; }
+</style>
+
+<div class="wrap" lang="kn">
+<header>
+  <div><span class="draft">ಕರಡು · ಪ್ರಕಟಿಸಿಲ್ಲ</span></div>
+  <p><b>ಕನ್ನಡ ಅನುವಾದ ಕರಡು — ಸ್ಥಳೀಯ ಕನ್ನಡ ಓದುಗರು ಪರಿಶೀಲಿಸಬೇಕು</b></p>
+  <div class="eyebrow">ಗಂಡಭೇರುಂಡ · ಕರ್ನಾಟಕ · ಅಂಕಿಗಳನ್ನು 16 ನವೆಂಬರ್ 2026ರಂದು ಓದಲಾಗಿದೆ</div>
+  <h1>ಕಾಗದದಲ್ಲಿ <span>ಮತ್ತು</span> ನೆಲದಲ್ಲಿ</h1>
+  <p class="lede">ಕರ್ನಾಟಕದ ದಾಖಲೆಗಳ ಪ್ರಕಾರ ಮಂಜೂರಾದ, ಬಿಡುಗಡೆಯಾದ ಅಥವಾ ವಸೂಲಾದದ್ದು ಏನು, ಮತ್ತು ಅದೇ ದಾಖಲೆಗಳ ಪ್ರಕಾರ ನಿಜವಾಗಿ ನಡೆದದ್ದು ಏನು: ಎರಡನ್ನೂ ಇಲ್ಲಿ ಪಕ್ಕಪಕ್ಕದಲ್ಲಿ ಇಡಲಾಗಿದೆ. ಪ್ರತಿ ಸಾಲೂ ಲೆಕ್ಕಪರಿಶೋಧಕರು, ಸಂಸತ್ತು, ಸರ್ಕಾರದ ಹೇಳಿಕೆ ಅಥವಾ ಹೆಸರಿಸಿದ ಪತ್ರಿಕಾ ವರದಿಯಿಂದ ಬಂದಿದೆ, ಮತ್ತು ಯಾವುದರಿಂದ ಎಂದು ಹೇಳುತ್ತದೆ.</p>
+  <p class="muted">ಮೊತ್ತಗಳು ರೂಪಾಯಿ ಕೋಟಿಗಳಲ್ಲಿವೆ (1 ಕೋಟಿ = 10 ದಶಲಕ್ಷ). ಲಕ್ಷ = 100,000. ಪಟ್ಟಿಗಳ ಮೇಲಿನ ಶೇಕಡಾ ಅಂಕಿಗಳನ್ನು ತೋರಿಸಿದ ಎರಡು ಅಂಕಿಗಳಿಂದ ನಾವೇ ಲೆಕ್ಕ ಹಾಕಿದ್ದೇವೆ.</p>
+</header>
+
+<div class="gaps" id="gaps"></div>
+
+<section><h2>ಬಿಡುಗಡೆಯಾದ ಹಣ, ಆದ ಕೆಲಸ</h2>
+<p>ಸಾರ್ವಜನಿಕ ಕಾಮಗಾರಿಗಳು ಮತ್ತು ಕೇಂದ್ರ ಯೋಜನೆಗಳು. ಬೇರೆ ಗುರುತು ಇಲ್ಲದಿದ್ದರೆ, ಇಲ್ಲಿನ ಎಲ್ಲ ಅಂಕಿಗಳು CAG (ಭಾರತದ ಮಹಾಲೇಖಪಾಲರು) ವರದಿಗಳಿಂದ ಬಂದಿವೆ.</p>
+<div id="works"></div></section>
+
+<section><h2>ಸೋರಿಕೆಯಾದ ಕಲ್ಯಾಣ ಹಣ</h2>
+<p>ಪಡಿತರ ವ್ಯವಸ್ಥೆ ಮತ್ತು ಗ್ಯಾರಂಟಿ ಯೋಜನೆಗಳು. ಧಾನ್ಯದ ಸೋರಿಕೆ ಬಹಳ ಕಡಿಮೆಯಾಗಿದೆ; ಈಗ ಉಳಿದಿರುವ ಸಮಸ್ಯೆ ಎಂದರೆ ಪಟ್ಟಿಗಳಲ್ಲಿ ಯಾರಿದ್ದಾರೆ ಎಂಬುದು.</p>
+<div id="welfare"></div></section>
+
+<section><h2>ಅರಣ್ಯ ಮತ್ತು ಭೂಮಿ</h2>
+<p>ಬೇರೆ ಉದ್ದೇಶಕ್ಕೆ ಬಳಸಿದ ಅರಣ್ಯ, ಒತ್ತುವರಿದಾರರಿಂದ ವಾಪಸ್ ಪಡೆದ ಭೂಮಿ, ಮತ್ತು ಸರ್ಕಾರ ಸ್ವಾಧೀನಪಡಿಸಿಕೊಂಡು ಬಳಸದೆ ಬಿಟ್ಟ ಭೂಮಿ.</p>
+<div id="land"></div></section>
+
+<section><h2>ಮುಂದೆ ಉಪಗ್ರಹ ಮತ್ತು ಮುಕ್ತ ದತ್ತಾಂಶದಿಂದ ಏನನ್ನು ಪರಿಶೀಲಿಸಬಹುದು</h2>
+<p>ಯಾವ ಲೆಕ್ಕಪರಿಶೋಧನೆಯೂ ಪ್ರತಿ ತಿಂಗಳು ಮಾಡದ ಭಾಗ ಇದು. ಕೆಳಗಿನ ಪ್ರತಿ ಪರಿಶೀಲನೆಯೂ ಒಂದು ಸರ್ಕಾರಿ ದಾಖಲೆಯನ್ನು ನೆಲದ ಉಚಿತ, ಸ್ವತಂತ್ರ ಚಿತ್ರದ ಜೊತೆ ಹೋಲಿಸುತ್ತದೆ.</p>
+<div class="tbl"><table>
+<thead><tr><th>ಕಾಗದದಲ್ಲಿನ ಹೇಳಿಕೆ</th><th>ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ</th><th>ಸ್ಥಿತಿ</th></tr></thead>
+<tbody>
+<tr><td>ಪಶ್ಚಿಮ ಘಟ್ಟದ ಜಿಲ್ಲೆಗಳಲ್ಲಿ ಮರಗಳ ನಷ್ಟ</td><td>Hansen ಅರಣ್ಯ-ಬದಲಾವಣೆ ನಕ್ಷೆಗಳು, 30 ಮೀ, 2001 ರಿಂದ 2024ರವರೆಗೆ ಪ್ರತಿ ವರ್ಷ, ಉಚಿತ, ಲಾಗಿನ್ ಬೇಕಿಲ್ಲ</td><td class="st go">ಈಗಲೇ ಸಿದ್ಧ</td></tr>
+<tr><td>MGNREGA (ನರೇಗಾ, ಗ್ರಾಮೀಣ ಉದ್ಯೋಗ ಖಾತರಿ) ಆಸ್ತಿ ದಾಖಲೆಯಲ್ಲಿ ಹೇಳಿದ ಜಾಗದಲ್ಲೇ ಇದೆ</td><td>Bhuvan ಜಿಯೋಟ್ಯಾಗ್ ಫೋಟೋಗಳನ್ನು ಉಪಗ್ರಹ ಚಿತ್ರಗಳ ಜೊತೆ ಹೋಲಿಸುವುದು. CAG ಯಲಬುರ್ಗಾ ತಾಲೂಕಿನಲ್ಲಿ ಇದನ್ನೇ ಮಾಡಿ ಮೂರು ಕಾಮಗಾರಿಗಳು "ಸಂಶಯಾಸ್ಪದ" ಎಂದು ಕಂಡುಕೊಂಡಿತು</td><td class="st go">ಸಿದ್ಧ, ಕೈಯಿಂದ ಮಾಡಲು ನಿಧಾನ</td></tr>
+<tr><td>ಬೆಂಗಳೂರು ವಾರ್ಡ್ ಕಾಮಗಾರಿಗಳಿಗೆ ಹಣ ಪಾವತಿಯಾಗಿದೆ</td><td>OpenCity ಯಲ್ಲಿರುವ BBMP (ಬೃಹತ್ ಬೆಂಗಳೂರು ಮಹಾನಗರ ಪಾಲಿಕೆ) ಕಾಮಗಾರಿ ಆದೇಶ ಮತ್ತು ಪಾವತಿ ಕಡತಗಳು, ವಾರ್ಡ್‌ವಾರು</td><td class="st need">ಕೈಯಿಂದ ಡೌನ್‌ಲೋಡ್ ಮಾಡಬೇಕು</td></tr>
+<tr><td>ಪರಿಹಾರ ನೆಡುತೋಪುಗಳನ್ನು ಬೆಳೆಸಲಾಗಿದೆ</td><td>ಪ್ರತಿ ನೆಡುತೋಪಿನ ಜಾಗದ ಮೇಲೆ Sentinel-2 ಮತ್ತು Dynamic World ಮರದ ಹೊದಿಕೆ, ವರ್ಷದಿಂದ ವರ್ಷಕ್ಕೆ</td><td class="st need">ಜಾಗದ ಅಕ್ಷಾಂಶ-ರೇಖಾಂಶ ಬೇಕು</td></tr>
+<tr><td>ಕೈಗಾರಿಕಾ ಭೂಮಿ (KIADB, ಕರ್ನಾಟಕ ಕೈಗಾರಿಕಾ ಪ್ರದೇಶಾಭಿವೃದ್ಧಿ ಮಂಡಳಿ) ಬಳಕೆಯಲ್ಲಿದೆ</td><td>ಪ್ರತಿ ಕೈಗಾರಿಕಾ ಪ್ರದೇಶದೊಳಗಿನ ಕಟ್ಟಡಗಳ ಹೆಜ್ಜೆಗುರುತು ಮತ್ತು ರಾತ್ರಿಯ ದೀಪಗಳು</td><td class="st need">ಪ್ರದೇಶದ ಗಡಿಗಳು ಬೇಕು</td></tr>
+<tr><td>ತೆರವುಗೊಳಿಸಿದ ಸರ್ಕಾರಿ ಭೂಮಿ ಖಾಲಿಯಾಗಿಯೇ ಉಳಿದಿದೆ</td><td>ತೆರವು ಎಂದು ಪಟ್ಟಿ ಮಾಡಿದ ಸರ್ವೆ ನಂಬರ್‌ಗಳ ಮೇಲೆ Sentinel-2 ಮತ್ತು ಕಟ್ಟಡಗಳ ಹೆಜ್ಜೆಗುರುತು</td><td class="st need">ಸರ್ವೆ ನಂಬರ್‌ಗಳು ಬೇಕು</td></tr>
+<tr><td>ಕೆರೆಯ ವಿಸ್ತೀರ್ಣ ಕಂದಾಯ ದಾಖಲೆಗೆ ಹೊಂದುತ್ತದೆ</td><td>ದಾಖಲೆಯಲ್ಲಿರುವ ಕೆರೆಯ ಗಡಿಯ ಜೊತೆ Sentinel-2 ನೀರಿನ ವಿಸ್ತೀರ್ಣ</td><td class="st need">ಕೆರೆಯ ಗಡಿಗಳು ಬೇಕು</td></tr>
+<tr><td>ರಸ್ತೆಗೆ ಮರುಡಾಂಬರೀಕರಣ ಆಗಿದೆ</td><td>ನಾಗರಿಕರಿಂದ ದಿನಾಂಕವಿರುವ ರಸ್ತೆ ಮಟ್ಟದ ಫೋಟೋಗಳು ಅಥವಾ ಫೋನ್ ವಿಡಿಯೋ</td><td class="st need">ನೆಲದ ವರದಿಗಳು ಬೇಕು</td></tr>
+</tbody></table></div>
+<p class="muted">ಕರ್ನಾಟಕದ ಸ್ವಂತ ಪೋರ್ಟಲ್‌ಗಳು (ಭೂ ದಾಖಲೆಗಳು, KGIS ನಕ್ಷೆಗಳು, ಅರಣ್ಯ ಇಲಾಖೆ, ಇ-ಸಂಗ್ರಹಣೆ, ಮಾಹಿತಿ ಕಣಜ) ಈ ಸಂಶೋಧನೆಯ ವೇಳೆ ಅಮೆರಿಕದಿಂದ ಬಂದ ಸಂಪರ್ಕಗಳನ್ನು ನಿರಾಕರಿಸಿದವು. "ಬೇಕು" ಎಂದಿರುವ ಸಾಲುಗಳು ಮುಂದೆ ಸಾಗಬೇಕಾದರೆ ಇವನ್ನು ಭಾರತದೊಳಗಿನ ಸಂಪರ್ಕದಿಂದ ತೆರೆಯಬೇಕು.</p>
+</section>
+
+<section><h2>ಈ ಕರಡಿನಿಂದ ಹೊರಗಿಟ್ಟದ್ದು</h2>
+<ul>
+<li>ಶಾಸಕರ ಸ್ಥಳೀಯ ಪ್ರದೇಶಾಭಿವೃದ್ಧಿ ನಿಧಿಯ (KLLADS) ಇತ್ತೀಚಿನ ಅಂಕಿಗಳು. ಅದರ ಮೂಲದಲ್ಲಿ 2018ಕ್ಕಿಂತ ಹೊಸದು ಯಾವುದನ್ನೂ ತೆರೆಯಲು ಆಗಲಿಲ್ಲ; ಈ ಕಾಮಗಾರಿಗಳಿಗೆ ರಾಜ್ಯದ ಸಾರ್ವಜನಿಕ ಪೋರ್ಟಲ್ ಇಲ್ಲ.</li>
+<li>761 ಬೆಂಗಳೂರು ಕಾಮಗಾರಿಗಳ ಕುರಿತ 2025ರ ನ್ಯಾಯಮೂರ್ತಿ ನಾಗಮೋಹನ್ ದಾಸ್ ವರದಿಯಲ್ಲಿನ ಒಟ್ಟು ರೂಪಾಯಿ ಮೊತ್ತ. ಒಂದು ಪತ್ರಿಕೆ ಒಂದು ಅಂಕಿಯನ್ನು ಪ್ರಕಟಿಸಿದೆ; ಅದೇ ಕಾರ್ಯಕ್ರಮದ ಸುದ್ದಿಸಂಸ್ಥೆ ವರದಿಯಲ್ಲಿ ಯಾವ ಅಂಕಿಯೂ ಇಲ್ಲ.</li>
+<li>"40% ಕಮಿಷನ್" ತನಿಖೆ. ನಿಗದಿತ 40% ಗೆ ಆಯೋಗಕ್ಕೆ ಸ್ಪಷ್ಟ ಪುರಾವೆ ಸಿಗಲಿಲ್ಲ, ಆದರೆ ಕಮಿಷನ್ ಆರೋಪಗಳಲ್ಲಿ "ಸ್ವಲ್ಪ ಸತ್ಯ" ಇದೆ ಎಂದು ಪತ್ರಿಕಾ ವರದಿಗಳು ಹೇಳುತ್ತವೆ. ನಾವು ವರದಿಯನ್ನೇ ನೋಡಿಲ್ಲ.</li>
+<li>ಅನರ್ಹ ಪಡಿತರ ಚೀಟಿಗಳು ಮತ್ತು ಗೃಹಲಕ್ಷ್ಮಿ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳ ಬಗ್ಗೆ ವರದಿಯಾದ 2026ರ ಲೆಕ್ಕಪರಿಶೋಧನಾ ಆಕ್ಷೇಪಣೆಗಳು. ಇನ್ನೂ ಸದನದಲ್ಲಿ ಮಂಡಿಸದ ಲೆಕ್ಕಪರಿಶೋಧನೆಯ ಬಗ್ಗೆ ಒಂದೇ ಮಾಧ್ಯಮದ ವರದಿಯನ್ನು ಇವು ಆಧರಿಸಿವೆ.</li>
+<li>ಅರಣ್ಯ ಒತ್ತುವರಿಯ ಜಿಲ್ಲಾವಾರು ಯಾವುದೇ ಕೋಷ್ಟಕ. ನಾವು ತೆರೆಯಲು ಸಾಧ್ಯವಾದ ಯಾವ ದಾಖಲೆಯಲ್ಲೂ ಅದು ಸಿಗಲಿಲ್ಲ.</li>
+</ul>
+</section>
+
+<footer class="muted">"ಎರಡು ಬಾರಿ ಪರಿಶೀಲಿಸಲಾಗಿದೆ" ಎಂದು ಗುರುತಿಸಿದ ಸಾಲುಗಳನ್ನು ಎರಡನೇ, ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆಯಲ್ಲಿ ಮೂಲ ದಾಖಲೆಯಲ್ಲಿ ಮತ್ತೆ ಓದಲಾಗಿದೆ. "ಒಂದು ಬಾರಿ ಪರಿಶೀಲಿಸಲಾಗಿದೆ" ಎಂದು ಗುರುತಿಸಿದ ಸಾಲುಗಳಿಗೆ ಏನನ್ನಾದರೂ ಪ್ರಕಟಿಸುವ ಮುನ್ನ ಆ ಎರಡನೇ ಪರಿಶೀಲನೆ ಇನ್ನೂ ಬೇಕು. ಯಾವ ಸಾಲೂ ಹೆಸರಿಸಿದ ಯಾವುದೇ ವ್ಯಕ್ತಿಯ ತಪ್ಪನ್ನು ಹೇಳುವುದಿಲ್ಲ.</footer>
+</div>
+
+<script>
+const S = {
+ mg:  ["CAG Report 13 of 2025 (MGNREGS)", "https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf"],
+ jjm: ["CAG Report 12 of 2025 (Jal Jeevan Mission)", "https://cag.gov.in/webroot/uploads/download_audit_report/2025/Combined-Pdf_JJM-Final-03.03.26-069c25b7fcf4287.01649139.pdf"],
+ sc:  ["CAG Report 11 of 2025 (Smart Cities)", "https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-Print-final-06981dd464a8a09.83668109.pdf"],
+ sf:  ["CAG State Finances 2024-25 (Report 2 of 2026)", "https://cag.gov.in/webroot/uploads/download_audit_report/2026/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2024-25---English-(1)-069c4e127015905.57315868.pdf"],
+ rr:  ["Karnataka Lokayukta report of Jan 2022, as reported by The News Minute, 27 Sep 2022", "https://www.thenewsminute.com/karnataka/how-kickback-bengaluru-road-contracts-work-step-step-guide-168358"],
+ ic:  ["ICRIER Working Paper 294 (Gulati and Saini, 2015), Table 1 for 46.4%; ICRIER policy brief (2024), Annexure 1 for 6.2%", "https://icrier.org/pdf/Working_Paper_294.pdf"],
+ bpl: ["PTI via The Week, 20 Nov 2024 (22,62,482) and 17 Sep 2025 (3,65,614)", "https://www.theweek.in/wire-updates/national/2024/11/20/mes16-ka-bpl-cards.html"],
+ gl:  ["Department statement, PTI via ThePrint, 25 Jun 2026", "https://theprint.in/india/ktaka-govt-says-gruha-lakshmi-implementation-transparent-bjp-demands-sit-to-probe-scam/2970062/"],
+ rice:["Food minister in the Legislative Council, 8 Dec 2025, PTI via ThePrint", "https://theprint.in/india/570-people-held-in-karnataka-for-illegal-hoarding-sale-of-anna-bhagya-rice-minister/2801282"],
+ val: ["State SIT chargesheet, The News Minute, 6 Aug 2024 (recovery figure); CBI chargesheets, 2 Jun 2026", "https://www.thenewsminute.com/karnataka/karnataka-sit-files-chargesheet-in-valmiki-corp-scam-ex-minister-nagendra-not-named"],
+ ca:  ["CAG Report 3 of 2019, para 3.2.2.1, Table 3.1", "https://cag.gov.in/en/audit-report/details/55704"],
+ enc: ["CAG Report 5 of 2018, chapter 8", "https://cag.gov.in/en/audit-report/details/49792"],
+ fe:  ["Forest minister's statements, Deccan Herald, 28 May 2024 (2,602 acres); the 2 lakh acres figure is not in this article", "https://www.deccanherald.com/india/karnataka/karnataka-forest-dept-recovered-2600-acres-worth-rs-1500-crore-in-one-year-eshwar-khandre-3041907"],
+ ki:  ["CAG Report 8 of 2017, chapter 2 (KIADB)", "https://cag.gov.in/uploads/download_audit_report/2017/Chapter_2_Performance_Audit_of_Report_No_8_of_2017_-_Economic_Sector_Government_of_Karnataka.pdf"],
+ bda: ["CAG Report 3 of 2012, executive summary (BDA)", "https://cag.gov.in/uploads/download_audit_report/2012/Karnataka_Report_3_2012_Exe_Summ.pdf"],
+ fsi: ["India State of Forest Report 2023, vol 1", "https://fsi.nic.in/uploads/isfr2023/isfr_book_eng-vol-1_2023.pdf"],
+ gfw: ["Global Forest Watch data, version 2025", "https://www.globalforestwatch.org/dashboards/country/IND/16/"],
+ lake:["Affidavit in a Karnataka High Court PIL, as reported by Construction World, 6 Jan 2025", "https://www.constructionworld.in/urban-infrastructure/wastewater-and-sewage-treatment/bengaluru-lakes-encroached-bbmp-reveals-extent/67209"]
+};
+// t title | a,b = [label, value] | p = percent done (omit for no bar) | cap = bar caption | n note | s source key | k kind | c checks (2|1) | al = allegation
+const D = {
+works: [
+ {t:"ಗ್ರಾಮೀಣ ಉದ್ಯೋಗ ಯೋಜನೆಯ ಕಾಮಗಾರಿಗಳು: ಮಂಜೂರಾದವು ಮತ್ತು ಪೂರ್ಣಗೊಂಡವು", a:["ಮಂಜೂರು 2019-24","62.0 ಲಕ್ಷ ಕಾಮಗಾರಿಗಳು"], b:["ಪೂರ್ಣಗೊಂಡವು","25.85 ಲಕ್ಷ"], p:42, cap:"ಪೂರ್ಣಗೊಂಡಿದೆ", n:"ಮಂಜೂರಾದ 26.77 ಲಕ್ಷ ಕಾಮಗಾರಿಗಳನ್ನು ಎಂದೂ ಆರಂಭಿಸಲೇ ಇಲ್ಲ; ಇದು ಪೂರ್ಣಗೊಂಡ ಕಾಮಗಾರಿಗಳ ಸಂಖ್ಯೆಗಿಂತ ಹೆಚ್ಚು. 2023-24ರಲ್ಲಿ ಪೂರ್ಣಗೊಳ್ಳುವ ಪ್ರಮಾಣ 15% ಇತ್ತು.", s:"mg", k:"ಲೆಕ್ಕಪರಿಶೋಧನೆ", c:2},
+ {t:"ಗ್ರಾಮೀಣ ಉದ್ಯೋಗ ಯೋಜನೆ: ದುರುಪಯೋಗ ಎಂದು ಗುರುತಿಸಿದ ಹಣ ಮತ್ತು ವಸೂಲಾದ ಹಣ", a:["ಸಾಮಾಜಿಕ ಲೆಕ್ಕಪರಿಶೋಧನೆಯಲ್ಲಿ ಗುರುತಿಸಿದ್ದು","ರೂ. 187.38 ಕೋಟಿ"], b:["ವಸೂಲಾಗಿದೆ ಎಂದು ತೋರಿಸಿದ್ದು","ರೂ. 20.73 ಕೋಟಿ"], p:11.1, cap:"ವಸೂಲಾಗಿದೆ", n:"ರೂ. 90.14 ಕೋಟಿಯ ಲೆಕ್ಕವನ್ನು ಯಾವುದೇ ವಸೂಲಿ ಇಲ್ಲದೆಯೇ ಮುಚ್ಚಲಾಯಿತು. ಯೋಜನೆಯ ಸ್ವಂತ ದತ್ತಾಂಶ ವ್ಯವಸ್ಥೆ 94% ವಸೂಲಿ ಎಂದು ಹೇಳಿತ್ತು; CAG ಇದನ್ನು \"ತಪ್ಪು ಮತ್ತು ದಾರಿತಪ್ಪಿಸುವಂಥದ್ದು\" ಎನ್ನುತ್ತದೆ.", s:"mg", k:"ಲೆಕ್ಕಪರಿಶೋಧನೆ", c:2},
+ {t:"ನಲ್ಲಿ ನೀರು ಮಿಷನ್: ಸಂಪರ್ಕ ನೀಡಬೇಕಿದ್ದ ಮನೆಗಳು ಮತ್ತು ಸಂಪರ್ಕ ಪಡೆದ ಮನೆಗಳು", a:["ಗುರಿ","72.14 ಲಕ್ಷ ಮನೆಗಳು"], b:["ಸಂಪರ್ಕ ಪಡೆದವು, ನವೆಂಬರ್ 2024","47.62 ಲಕ್ಷ"], p:66, cap:"ಸಂಪರ್ಕ ಸಿಕ್ಕಿದೆ", n:"ಪರಿಶೀಲಿಸಿದ 181 ಹಳ್ಳಿಗಳ ಪೈಕಿ 26ರಲ್ಲಿ, ಪೂರ್ತಿ ಸಂಪರ್ಕ ಆಗಿದೆ ಎಂದು ವರದಿ ಮಾಡಿದ ಸ್ಥಳಗಳಲ್ಲಿ ಯೋಜನೆಯಿಂದ ನೀರು ಸಿಗದ ಮನೆಗಳಿದ್ದವು.", s:"jjm", k:"ಲೆಕ್ಕಪರಿಶೋಧನೆ", c:2},
+ {t:"ನಲ್ಲಿ ನೀರು ಮಿಷನ್: ಹಂಚಿಕೆಯಾದ ಕೇಂದ್ರದ ಹಣ ಮತ್ತು ಪಡೆದ ಹಣ", a:["ಹಂಚಿಕೆ 2019-24","ರೂ. 24,819 ಕೋಟಿ"], b:["ರಾಜ್ಯ ಪಡೆದದ್ದು","ರೂ. 11,189 ಕೋಟಿ"], p:45.1, cap:"ಪಡೆಯಲಾಗಿದೆ", n:"ಈಗಾಗಲೇ ಬಿಡುಗಡೆಯಾದ ಹಣವನ್ನು ರಾಜ್ಯ ಬಳಸಲು ಆಗದಿದ್ದದ್ದೇ ಈ ಕೊರತೆಗೆ ಮುಖ್ಯ ಕಾರಣ ಎಂದು CAG ಹೇಳುತ್ತದೆ.", s:"jjm", k:"ಲೆಕ್ಕಪರಿಶೋಧನೆ", c:2},
+ {t:"ಸ್ಮಾರ್ಟ್ ಸಿಟಿ: ಸಮಯಕ್ಕೆ ಸರಿಯಾಗಿ ಗುತ್ತಿಗೆ ನೀಡಿದ ಯೋಜನೆಗಳು", a:["ಯೋಜನೆಗಳು","645"], b:["ನಿಗದಿತ ಸಮಯದೊಳಗೆ ಗುತ್ತಿಗೆ ನೀಡಿದ್ದು","45"], p:7, cap:"ಸಮಯಕ್ಕೆ ಸರಿಯಾಗಿ", n:"ಮೊದಲು ಯೋಜಿಸಿದ್ದ 544 ಯೋಜನೆಗಳಲ್ಲಿ 160 ಕೈಬಿಡಲಾಯಿತು. ಏಳು ನಗರಗಳು ರೂ. 6,781 ಕೋಟಿ ಪಡೆದು, ಜೂನ್ 2024ರ ವೇಳೆಗೆ ರೂ. 5,788 ಕೋಟಿ ಖರ್ಚು ಮಾಡಿದ್ದವು.", s:"sc", k:"ಲೆಕ್ಕಪರಿಶೋಧನೆ", c:2},
+ {t:"ಅಪೂರ್ಣವಾಗಿ ಉಳಿದ ರಾಜ್ಯದ ಯೋಜನೆಗಳು", a:["ಅಪೂರ್ಣ ಯೋಜನೆಗಳು, ಮಾರ್ಚ್ 2025","4,328"], b:["ಖರ್ಚಾಗಿ ಸಿಕ್ಕಿಹಾಕಿಕೊಂಡ ಹಣ","ರೂ. 5,066 ಕೋಟಿ"], n:"ಇವುಗಳಲ್ಲಿ 276 ಯೋಜನೆಗಳು ರೂ. 2,298 ಕೋಟಿ ಬಿಲ್ ಪಾವತಿ ಆಗದ ಕಾರಣ ನಿಂತುಹೋದವು. ಇದರ ಜೊತೆಗೆ, ಆರ್ಥಿಕ ವರ್ಷದ ಕೊನೆಯ ದಿನ ರೂ. 10,448 ಕೋಟಿ ಬಜೆಟ್ ಹಣವನ್ನು ವಾಪಸ್ (ಸರೆಂಡರ್) ಮಾಡಲಾಯಿತು.", s:"sf", k:"ಲೆಕ್ಕಪರಿಶೋಧನೆ", c:2},
+ {t:"ಬೆಂಗಳೂರು (ಆರ್‌ಆರ್ ನಗರ): ನೆಲದಲ್ಲಿ ಏನೂ ಇಲ್ಲದೆ ಬಿಲ್ ಮಾಡಿದ ಕಾಮಗಾರಿಗಳು", a:["ಕಂಡುಬಂದ ನಷ್ಟ","ರೂ. 118.25 ಕೋಟಿ"], b:["ಕೆಲಸವೇ ಆಗದ ಕಾಮಗಾರಿಗಳು","ಕನಿಷ್ಠ 57"], n:"2019-20ರಲ್ಲಿ ಒಂದು ರಾಜ್ಯ ಸಂಸ್ಥೆಯ ಮೂಲಕ ನಡೆದ ಕಾಮಗಾರಿಗಳ ಬಗ್ಗೆ ಲೋಕಾಯುಕ್ತದ ಪತ್ತೆ. ಇದು ಆ ಸಂಸ್ಥೆ ಮತ್ತು ಅಧಿಕಾರಿಗಳಿಗೆ ಸಂಬಂಧಿಸಿದ್ದು.", s:"rr", k:"ಲೋಕಾಯುಕ್ತ, ಪತ್ರಿಕೆಯ ಮೂಲಕ", c:1}
+],
+welfare: [
+ {t:"ಮನೆಗಳಿಗೆ ತಲುಪದ ಪಡಿತರ ಧಾನ್ಯ", a:["2011-12","46.4%"], b:["2022-23","6.2%"], n:"2022-23ರಲ್ಲಿ ಇಡೀ ಭಾರತದಲ್ಲಿ ಸುಮಾರು 28% ಸೋರಿಹೋಯಿತು. ಇನ್ನೊಂದು ಸಂಶೋಧನಾ ಅಂದಾಜು ಆ ವರ್ಷ ಕರ್ನಾಟಕಕ್ಕೆ 17% ಎನ್ನುತ್ತದೆ; ವಿಧಾನಗಳು ಬೇರೆ, ಹಾಗಾಗಿ ಎರಡನ್ನೂ ಕೊಡಲಾಗಿದೆ. ತಮ್ಮ ವಿಧಾನಗಳನ್ನು ನೇರವಾಗಿ ಹೋಲಿಸಲು ಆಗುವುದಿಲ್ಲ ಎಂದು ಎರಡು ICRIER ಪ್ರಬಂಧಗಳೇ ಹೇಳುತ್ತವೆ; ಹಾಗಾಗಿ ಈ ಇಳಿಕೆಯನ್ನು ಸೂಚನೆಯಾಗಿ ಮಾತ್ರ ಓದಿ. 17% ಅಂದಾಜು (Pingali and Puri, Ideas for India, 11 Aug 2025) 2011-12ಕ್ಕೆ 34.7% ಎನ್ನುತ್ತದೆ.", s:"ic", k:"ಸಂಶೋಧನಾ ಅಂದಾಜು", c:2},
+ {t:"ಅನರ್ಹ BPL (ಬಡತನ ರೇಖೆಗಿಂತ ಕೆಳಗಿನ) ಪಡಿತರ ಚೀಟಿಗಳು: ಪತ್ತೆಯಾದವು ಮತ್ತು ಕ್ರಮ ಕೈಗೊಂಡವು", a:["ರಾಜ್ಯದ ಸಮೀಕ್ಷೆಯಲ್ಲಿ ಪತ್ತೆ, 2024","22,62,482"], b:["ತೆಗೆದುಹಾಕಿದ್ದು ಅಥವಾ ವರ್ಗ ಬದಲಿಸಿದ್ದು, ಸೆಪ್ಟೆಂಬರ್ 2025","3,65,614"], p:16.2, cap:"ಕ್ರಮ ಕೈಗೊಳ್ಳಲಾಗಿದೆ", n:"ರಾಜ್ಯ ಈ ಕ್ರಮವನ್ನು ಚೀಟಿಗಳ ರದ್ದತಿ ಎಂದು ಹೇಳದೆ, ಅವನ್ನು ಬಡತನ ರೇಖೆಗಿಂತ ಮೇಲಿನ ವರ್ಗಕ್ಕೆ ವರ್ಗಾಯಿಸುವುದು ಎಂದು ವಿವರಿಸುತ್ತದೆ. ಎರಡು ಅಂಕಿಗಳು ಬೇರೆ ಬೇರೆ ವರದಿಗಳಿಂದ ಬಂದಿವೆ; 3,65,614 ಚೀಟಿಗಳು 22,62,482ರಲ್ಲೇ ಸೇರಿವೆ ಎಂದು ಮೂಲಗಳು ಹೇಳುವುದಿಲ್ಲ.", s:"bpl", k:"ಸರ್ಕಾರಿ ಅಂಕಿ", c:2},
+ {t:"ಮೃತಪಟ್ಟ ಮಹಿಳೆಯರಿಗೆ ಪಾವತಿಯಾದ ಗೃಹಲಕ್ಷ್ಮಿ ಹಣ", a:["ಮೃತಪಟ್ಟ 1,08,755 ಜನರ ಖಾತೆಗೆ ಜಮೆ","ರೂ. 115 ಕೋಟಿ"], b:["ವಸೂಲಾಗಿದ್ದು","ರೂ. 15.24 ಕೋಟಿ"], p:13.3, cap:"ವಸೂಲಾಗಿದೆ", n:"ಇವು ಇಲಾಖೆಯೇ ಜೂನ್ 2026ರಲ್ಲಿ ನೀಡಿದ ಅಂಕಿಗಳು. ಸಾವಿನ ಮಾಹಿತಿ ತಡವಾಗಿ ಬಂದದ್ದೇ ಕಾರಣ ಎಂದು ಇಲಾಖೆ ಹೇಳಿತು.", s:"gl", k:"ಸರ್ಕಾರಿ ಅಂಕಿ", c:2},
+ {t:"ಬೇರೆಡೆಗೆ ಸಾಗಿಸುವಾಗ ಸಿಕ್ಕಿಬಿದ್ದ ಅನ್ನಭಾಗ್ಯ ಅಕ್ಕಿ", a:["ವಶಪಡಿಸಿಕೊಂಡದ್ದು","29,603 ಕ್ವಿಂಟಾಲ್"], b:["ಬಂಧಿತರು","570 ಜನ"], n:"314 ವಾಹನಗಳನ್ನು ಜಪ್ತಿ ಮಾಡಲಾಯಿತು. ಇದು ಯಾವ ಅವಧಿಯದು ಎಂದು ನಾವು ಓದಿದ ವರದಿಯಲ್ಲಿ ಹೇಳಿಲ್ಲ.", s:"rice", k:"ಸರ್ಕಾರಿ ಅಂಕಿ", c:1},
+ {t:"ವಾಲ್ಮೀಕಿ ಪರಿಶಿಷ್ಟ ಪಂಗಡಗಳ ನಿಗಮದ ಹಣ", a:["ಬೇರೆಡೆಗೆ ಹರಿಸಲಾಗಿದೆ ಎಂಬ ಆರೋಪ","ರೂ. 89.63 ಕೋಟಿ"], b:["ವಶ ಅಥವಾ ವಸೂಲಿ (ಆಸ್ತಿ ಮತ್ತು ನಗದು), ರಾಜ್ಯ ಪೊಲೀಸ್ ತಂಡದ ಪ್ರಕಾರ","ರೂ. 49.96 ಕೋಟಿಗಿಂತ ಹೆಚ್ಚು"], n:"ರಾಜ್ಯ ಪೊಲೀಸ್ ತಂಡ, ಜಾರಿ ನಿರ್ದೇಶನಾಲಯ ಮತ್ತು CBI (ಕೇಂದ್ರ ತನಿಖಾ ದಳ) ಪ್ರತ್ಯೇಕವಾಗಿ ಆರೋಪಪಟ್ಟಿ ಸಲ್ಲಿಸಿವೆ. ಯಾವ ನ್ಯಾಯಾಲಯವೂ ಪ್ರಕರಣದ ವಿಚಾರಣೆ ನಡೆಸಿಲ್ಲ, ಮತ್ತು ಯಾರು ಹೊಣೆ ಎಂಬ ಬಗ್ಗೆ ಈ ಸಂಸ್ಥೆಗಳ ನಡುವೆ ಭಿನ್ನಾಭಿಪ್ರಾಯವಿದೆ.", s:"val", k:"ಆರೋಪ, ವಿಚಾರಣೆ ಆಗಿಲ್ಲ", c:2, al:1}
+],
+land: [
+ {t:"ಪರಿಹಾರ ಅರಣ್ಯ: ಬೆಳೆಸಬೇಕಿದ್ದದ್ದು ಮತ್ತು ನೆಟ್ಟದ್ದು", a:["ಅರಣ್ಯ ಭೂಮಿಯನ್ನು ಬೇರೆ ಉದ್ದೇಶಕ್ಕೆ ಬಳಸಿದ 105 ಪ್ರಕರಣಗಳಿಗೆ ಬೇಕಿದ್ದದ್ದು, 2013-18","911 ಹೆಕ್ಟೇರ್"], b:["ಬೆಳೆಸಿದ್ದು","450 ಹೆಕ್ಟೇರ್"], p:49.3, cap:"ನೆಡಲಾಗಿದೆ", n:"2023-24ರಲ್ಲಿ ರಾಜ್ಯದ ಅರಣ್ಯೀಕರಣ ನಿಧಿ 2023-24ನೇ ಸಾಲನ್ನು ರೂ. 764.85 ಕೋಟಿ ಉಳಿಕೆಯೊಂದಿಗೆ ಮುಗಿಸಿತು (CAG State Finances 2023-24, para 2.6.4).", s:"ca", k:"ಲೆಕ್ಕಪರಿಶೋಧನೆ", c:2},
+ {t:"ವಾಪಸ್ ಪಡೆದ ಸರ್ಕಾರಿ ಭೂಮಿ ಮತ್ತು ಸಂರಕ್ಷಿಸಿದ ಭೂಮಿ, ರಾಜ್ಯದಾದ್ಯಂತ", a:["ತೆರವಿನ ನಂತರ ವಾಪಸ್ ಪಡೆದದ್ದು","2,62,293 ಎಕರೆ"], b:["ಸಂರಕ್ಷಿಸಲಾಗಿದೆ ಎಂದು ಹೇಳಿದ್ದು (ಬೇಲಿ, ಕಂದಕ ಅಥವಾ ನಾಮಫಲಕ)","18,274 ಎಕರೆ"], p:7, cap:"ಸಂರಕ್ಷಿತ", n:"ಲೆಕ್ಕಪರಿಶೋಧಕರು ಪರಿಶೀಲಿಸಿದ ಯಾವ ಜಿಲ್ಲೆಯಲ್ಲೂ ದಂಡ ವಿಧಿಸಿರಲಿಲ್ಲ, ಮತ್ತು ಒಂದು ಜಂಟಿ ತಪಾಸಣೆಯಲ್ಲಿ (ಮೇ 2017) ತೆರವುಗೊಳಿಸಿದ ಭೂಮಿ ಮತ್ತೆ ಒತ್ತುವರಿಯಾಗಿರುವುದನ್ನು ಲೆಕ್ಕಪರಿಶೋಧಕರು ಕಂಡರು.", s:"enc", k:"ಲೆಕ್ಕಪರಿಶೋಧನೆ", c:2},
+ {t:"ವಾಪಸ್ ಪಡೆದ ಸರ್ಕಾರಿ ಭೂಮಿ ಮತ್ತು ಸಂರಕ್ಷಿಸಿದ ಭೂಮಿ, ಬೆಂಗಳೂರು", a:["ವಾಪಸ್ ಪಡೆದದ್ದು","31,050 ಎಕರೆ"], b:["ಸಂರಕ್ಷಿಸಲಾಗಿದೆ ಎಂದು ಹೇಳಿದ್ದು","483 ಎಕರೆ"], p:1.55, cap:"ಸಂರಕ್ಷಿತ", n:"ಬೆಂಗಳೂರು ನಗರ ಮತ್ತು ಗ್ರಾಮಾಂತರ ಜಿಲ್ಲೆಗಳು ಸೇರಿ, ಮಾರ್ಚ್ 2017ರ ಸ್ಥಿತಿ.", s:"enc", k:"ಲೆಕ್ಕಪರಿಶೋಧನೆ", c:2},
+ {t:"ಅರಣ್ಯ ಒತ್ತುವರಿ: ಹೇಳಲಾದದ್ದು ಮತ್ತು ಒಂದು ವರ್ಷದಲ್ಲಿ ವಾಪಸ್ ಪಡೆದದ್ದು", a:["ಒತ್ತುವರಿ, ವಿಧಾನಸಭೆಯಲ್ಲಿ ಉಲ್ಲೇಖಿಸಿದ ದಾಖಲೆಗಳ ಪ್ರಕಾರ (2015ರವರೆಗಿನ ಮಾಹಿತಿ)","ಸುಮಾರು 2 ಲಕ್ಷ ಎಕರೆ"], b:["ಮೇ 2024ರವರೆಗೆ ವಾಪಸ್ ಪಡೆದದ್ದು","2,602 ಎಕರೆ"], p:1.3, cap:"ವಾಪಸ್ ಪಡೆಯಲಾಗಿದೆ", n:"ಈ ವಿಭಾಗದಲ್ಲಿ ಅತಿ ದುರ್ಬಲ ಮೂಲವಿರುವ ಸಾಲು ಇದು: ಇದು ನಾವು ಓದಬಹುದಾದ ದಾಖಲೆಯನ್ನಲ್ಲ, ಸಚಿವರ ಹೇಳಿಕೆಗಳನ್ನು ಆಧರಿಸಿದೆ.", s:"fe", k:"ಸಚಿವರ ಹೇಳಿಕೆ, ಪತ್ರಿಕೆಯ ಮೂಲಕ", c:1},
+ {t:"ಸ್ವಾಧೀನಪಡಿಸಿಕೊಂಡು ಬಳಸದೆ ಬಿಟ್ಟ ಕೈಗಾರಿಕಾ ಭೂಮಿ", a:["ಅಭಿವೃದ್ಧಿಪಡಿಸಿದ, ಹಂಚಿಕೆಯಾಗದ, 2017","6,593 ಎಕರೆ"], b:["ಅಭಿವೃದ್ಧಿಯಾಗದ ಭೂ ಸಂಗ್ರಹ, ಅಕ್ಟೋಬರ್ 2016","30,508 ಎಕರೆ"], n:"ಇನ್ನೂ 28,719 ಎಕರೆ ಪ್ರಾಥಮಿಕ ಅಧಿಸೂಚನೆಯ ಹಂತದಲ್ಲೇ ಸ್ಥಗಿತವಾಗಿ ಉಳಿಯಿತು; ಎರಡು ಪ್ರಕರಣಗಳಲ್ಲಿ 15 ವರ್ಷಕ್ಕೂ ಹೆಚ್ಚು ಕಾಲ. ಮಾದರಿಯಾಗಿ ಪರಿಶೀಲಿಸಿದ ನಾಲ್ಕು ಕಚೇರಿಗಳಲ್ಲಿ, 467 ಹಂಚಿಕೆದಾರರು 1,113 ಎಕರೆಯನ್ನು ನಾಲ್ಕು ವರ್ಷದ ಮಿತಿ ಮೀರಿದರೂ ಬಳಸಿರಲಿಲ್ಲ, ಮತ್ತು ಅದನ್ನು ವಾಪಸ್ ಪಡೆಯಲಿಲ್ಲ.", s:"ki", k:"ಲೆಕ್ಕಪರಿಶೋಧನೆ", c:2},
+ {t:"ಬೆಂಗಳೂರು ಬಡಾವಣೆಗಳು: ಸ್ವಾಧೀನದ ನಂತರ ವಾಪಸ್ ಕೊಟ್ಟ ಭೂಮಿ", a:["ಸ್ವಾಧೀನ ಪಡೆದ ನಂತರ ಡಿನೋಟಿಫೈ (ಅಧಿಸೂಚನೆಯಿಂದ ಕೈಬಿಡುವುದು) ಮಾಡಿದ್ದು, 2007-11","ಸುಮಾರು 213 ಎಕರೆ (212 ಎಕರೆ 39 ಗುಂಟೆ)"], b:["ಸಮಿತಿಯನ್ನು ಬದಿಗೊತ್ತಿ ಡಿನೋಟಿಫೈ ಮಾಡಿದ್ದು, 2007-12","ಸುಮಾರು 610 ಎಕರೆ"], n:"ಸ್ವಾಧೀನದ ನಂತರ ಭೂಮಿಯನ್ನು ಡಿನೋಟಿಫೈ ಮಾಡಿದ್ದು \"ಕಾನೂನನ್ನು ಧಿಕ್ಕರಿಸಿ\" ನಡೆದಿದೆ ಎಂದು CAG ಹೇಳುತ್ತದೆ.", s:"bda", k:"ಲೆಕ್ಕಪರಿಶೋಧನೆ", c:2},
+ {t:"ಬೆಂಗಳೂರು ಕೆರೆಗಳು: ಒತ್ತುವರಿ ಮತ್ತು ಮರುವಶ", a:["ಒತ್ತುವರಿ, 183 ಕೆರೆಗಳು","235 ಎಕರೆ"], b:["ಮರುವಶ, 13 ಕೆರೆಗಳು","7 ಎಕರೆ"], p:3, cap:"ಮರುವಶ", n:"ಈ ಪ್ರಮಾಣಪತ್ರವನ್ನು (ಅಫಿಡವಿಟ್) ಕರ್ನಾಟಕ ಹೈಕೋರ್ಟ್‌ನ ಒಂದು ಸಾರ್ವಜನಿಕ ಹಿತಾಸಕ್ತಿ ಅರ್ಜಿಯಲ್ಲಿ (PIL) ಸಲ್ಲಿಸಲಾಗಿದೆ. ಇಡೀ ಜಿಲ್ಲೆಗೆ ಬೇರೆ ಲೆಕ್ಕಗಳು ಇದಕ್ಕಿಂತ ಬಹಳ ಹೆಚ್ಚಿವೆ, ಆದರೆ ಅವು ಯಾವ ದಾಖಲೆಯನ್ನೂ ಹೆಸರಿಸುವುದಿಲ್ಲ.", s:"lake", k:"ನ್ಯಾಯಾಲಯದ ಅಫಿಡವಿಟ್, ಪತ್ರಿಕೆಯ ಮೂಲಕ", c:1},
+ {t:"ಮರ ಮತ್ತು ಅರಣ್ಯ ಹೊದಿಕೆ, 2021 ರಿಂದ 2023", a:["ಅರಣ್ಯ ಹೊದಿಕೆ","+148 ಚ.ಕಿ.ಮೀ."], b:["ಅರಣ್ಯ ಮತ್ತು ಮರದ ಹೊದಿಕೆ ಸೇರಿ","-459 ಚ.ಕಿ.ಮೀ."], n:"ಅರಣ್ಯ ಹೊದಿಕೆ ಸ್ವಲ್ಪ ಏರಿತು, ಆದರೆ ಅರಣ್ಯದ ಹೊರಗಿನ ಮರಗಳು 607 ಚ.ಕಿ.ಮೀ. ಕಡಿಮೆಯಾದವು; ಎರಡೂ ಸೇರಿಸಿದಾಗ ಇದು ಎಲ್ಲ ರಾಜ್ಯಗಳಲ್ಲಿ ಎರಡನೇ ಅತಿ ದೊಡ್ಡ ಇಳಿಕೆ.", s:"fsi", k:"Forest Survey of India (ಭಾರತೀಯ ಅರಣ್ಯ ಸಮೀಕ್ಷೆ)", c:2},
+ {t:"ಉಪಗ್ರಹ ಕಂಡ ಮರದ ಹೊದಿಕೆ ನಷ್ಟ, 2001 ರಿಂದ 2024", a:["ಕರ್ನಾಟಕ","57,379 ಹೆಕ್ಟೇರ್"], b:["ಅತಿ ಕೆಟ್ಟ ವರ್ಷ","2023: 5,021 ಹೆಕ್ಟೇರ್"], n:"ಇದರಲ್ಲಿ ಸುಮಾರು 98% ಏಳು ಜಿಲ್ಲೆಗಳಲ್ಲಿದೆ: ದಕ್ಷಿಣ ಕನ್ನಡ, ಉಡುಪಿ, ಚಿಕ್ಕಮಗಳೂರು, ಶಿವಮೊಗ್ಗ, ಹಾಸನ, ಕೊಡಗು, ಉತ್ತರ ಕನ್ನಡ. ಈ ಲೆಕ್ಕದಲ್ಲಿ ನೆಡುತೋಪಿನ ಕಟಾವು ಕೂಡ ಸೇರಿದೆ, ಹಾಗಾಗಿ ಇದೆಲ್ಲವೂ ಅರಣ್ಯನಾಶವಲ್ಲ. ಒಂದು ಬಾರಿ ಪರಿಶೀಲಿಸಲಾಗಿದೆ: ಈ ಅಂಕಿಯನ್ನು ನೇರ (ಲೈವ್) ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ನಿಂದ ಸ್ವತಂತ್ರವಾಗಿ ಓದಿಲ್ಲ.", s:"gfw", k:"ಉಪಗ್ರಹ ದತ್ತಾಂಶ", c:1}
+]};
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+for (const [id, rows] of Object.entries(D)) {
+  document.getElementById(id).innerHTML = rows.map(r => `
+  <article class="row">
+    <h3>${esc(r.t)}</h3>
+    <div class="pair"><div><small>${esc(r.a[0])}</small><strong>${esc(r.a[1])}</strong></div><div><small>${esc(r.b[0])}</small><strong>${esc(r.b[1])}</strong></div></div>
+    ${r.p != null ? `<div class="bar" role="img" aria-label="${r.p}% ${esc(r.cap)}"><i style="width:${r.p}%"></i></div><div class="barcap"><span><b>${r.p}%</b> ${esc(r.cap)}</span><span>ಕಾಗದದಲ್ಲಿ: 100%</span></div>` : ""}
+    <p class="note">${esc(r.n)}</p>
+    <div class="meta"><span class="chip${r.al ? " al" : ""}">${esc(r.k)}</span><span class="chip${r.c === 2 ? " c2" : ""}">${r.c === 2 ? "ಎರಡು ಬಾರಿ" : "ಒಂದು ಬಾರಿ"} ಪರಿಶೀಲಿಸಲಾಗಿದೆ</span><a href="${S[r.s][1]}" target="_blank" rel="noopener">${esc(S[r.s][0])}</a></div>
+  </article>`).join("");
+}
+document.getElementById("gaps").innerHTML = [
+ ["1.55%", "ಬೆಂಗಳೂರಿನಲ್ಲಿ ವಾಪಸ್ ಪಡೆದ ಸರ್ಕಾರಿ ಭೂಮಿಯಲ್ಲಿ ಸಂರಕ್ಷಿಸಲಾಗಿದೆ ಎಂದು ಹೇಳಲಾದ ಪಾಲು (CAG, 2018)"],
+ ["11%", "ದುರುಪಯೋಗ ಎಂದು ಗುರುತಿಸಿದ ಗ್ರಾಮೀಣ ಉದ್ಯೋಗ ಯೋಜನೆಯ ಹಣದಲ್ಲಿ ವಸೂಲಾದ ಪಾಲು (CAG, 2025)"],
+ ["42%", "2019-24ರಲ್ಲಿ ಮಂಜೂರಾದ ಗ್ರಾಮೀಣ ಉದ್ಯೋಗ ಯೋಜನೆಯ ಕಾಮಗಾರಿಗಳಲ್ಲಿ ಪೂರ್ಣಗೊಂಡ ಪಾಲು (CAG, 2025)"],
+ ["49%", "ಅರಣ್ಯ ಭೂಮಿಯ ಬೇರೆ ಬಳಕೆಗೆ ಬದಲಾಗಿ ಬೆಳೆಸಬೇಕಿದ್ದ ಪರಿಹಾರ ಅರಣ್ಯದಲ್ಲಿ ನೆಟ್ಟ ಪಾಲು (CAG, 2019)"]
+].map(g => `<div class="gap"><b>${g[0]}</b><span>${g[1]}</span></div>`).join("");
+</script>

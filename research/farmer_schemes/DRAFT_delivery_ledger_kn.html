@@ -1,0 +1,168 @@
+<title>ಕೃಷಿ ಹಣದ ಲೆಕ್ಕಪುಸ್ತಕ</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: one ledger column; each entry pairs "promised/sought" with "reached", a bar where the two are comparable, and who held the purse. */
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8;
+  --red: #c21f30; --yellow: #f2b705; --track: #e3e6ec; --ok: #1a8f4c; --warn: #b45309;
+  --display: "Space Grotesk", "Noto Sans Kannada", "Nirmala UI", "Tunga", system-ui, sans-serif;
+  --body: "Noto Sans Kannada", "Nirmala UI", "Tunga", system-ui, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --track: #2b313d; --ok: #4fcf86; --warn: #f0a04b; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --track: #2b313d; --ok: #4fcf86; --warn: #f0a04b; color-scheme: dark }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 880px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 28px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.25; }
+h1 { font-size: clamp(1.8rem, 4.5vw, 2.5rem); }
+h2 { font-size: 1.15rem; }
+p { margin: 0; }
+.eyebrow { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--red); font-weight: 600; }
+.draft { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em; background: var(--yellow); color: #161a22; padding: 2px 8px; border-radius: 4px; }
+.lede { color: var(--muted); max-width: 64ch; }
+.key { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .85rem; color: var(--muted); }
+.key span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.list { display: grid; gap: 14px; }
+.entry { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; display: grid; gap: 12px; min-width: 0; }
+.entry header { display: flex; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; align-items: baseline; }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: .72rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--track); color: var(--fg); white-space: nowrap; }
+.tag.hi { color: var(--ok); background: transparent; border: 1px solid currentColor; }
+.tag.md { color: var(--warn); background: transparent; border: 1px solid currentColor; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; }
+.pair .lbl { font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.pair .v { font-family: var(--display); font-weight: 700; font-size: 1.35rem; font-variant-numeric: tabular-nums; line-height: 1.2; }
+.pair .s { font-size: .88rem; color: var(--muted); }
+.ground .v { color: var(--red); }
+.bar { display: grid; gap: 4px; }
+.track { height: 12px; border-radius: 6px; background: var(--track); overflow: hidden; }
+.fill { height: 100%; background: var(--red); border-radius: 6px; }
+.bar .cap { font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.fair { font-size: .9rem; border-left: 3px solid var(--yellow); padding-left: 12px; }
+.src { font-size: .8rem; color: var(--muted); overflow-wrap: anywhere; }
+.src a { color: inherit; }
+.foot { font-size: .85rem; color: var(--muted); display: grid; gap: 8px; max-width: 70ch; }
+@media (max-width: 560px) { .pair { grid-template-columns: 1fr; } }
+</style>
+
+<div class="wrap" lang="kn">
+  <div style="display:grid;gap:8px">
+    <span class="eyebrow">ಗಂಡಭೇರುಂಡ · ಕಾಗದದಲ್ಲಿ ಮತ್ತು ನೆಲದಲ್ಲಿ: ರೈತರು</span>
+    <h1>ಕೃಷಿ ಹಣ: ಭರವಸೆ ನೀಡಿದ್ದು ಅಥವಾ ಕೇಳಿದ್ದು ಎಷ್ಟು, ಹೊಲಕ್ಕೆ ತಲುಪಿದ್ದು ಎಷ್ಟು</h1>
+    <span><span class="draft">ಕರಡು · ಪ್ರಕಟಣೆಗೆ ಅಲ್ಲ</span></span>
+    <p class="fair"><b>ಕನ್ನಡ ಅನುವಾದ ಕರಡು — ಸ್ಥಳೀಯ ಕನ್ನಡ ಓದುಗರು ಪರಿಶೀಲಿಸಬೇಕು</b></p>
+  </div>
+  <p class="lede">ಕರ್ನಾಟಕದ ಕೃಷಿ ಹಣವನ್ನು ಘೋಷಣೆಯಿಂದ ರೈತರವರೆಗೆ ಹಿಂಬಾಲಿಸಬಹುದಾದ ಒಂಬತ್ತು ಕಡೆಗಳು. ಇವು ಲೆಕ್ಕಪರಿಶೋಧನಾ ವರದಿಗಳು, ಸಂಸತ್ತು ಮತ್ತು ವಿಧಾನಸಭೆಯ ಉತ್ತರಗಳು ಮತ್ತು ಪತ್ರಿಕೆಗಳಿಂದ ಬಂದಿವೆ. ಆ ಸಮಯದಲ್ಲಿ ಹಣ ಯಾವ ಸರ್ಕಾರದ ಕೈಯಲ್ಲಿತ್ತು ಎಂದು ಪ್ರತಿ ನಮೂದು ಹೇಳುತ್ತದೆ. ಹಲವು ಅಂತರಗಳು ಕೇಂದ್ರ ಮತ್ತು ರಾಜ್ಯದ ನಡುವೆ ಇವೆ, ಮತ್ತು ಹಲವು ಎರಡೂ ಪಕ್ಷಗಳ ಸರ್ಕಾರಗಳ ಕಾಲದಲ್ಲಿ ಮುಂದುವರಿದಿವೆ.</p>
+  <div class="key">
+    <span><span class="tag hi">ಲೆಕ್ಕಪರಿಶೋಧನೆ / ಅಧಿಕೃತ</span> CAG (ಮಹಾಲೇಖಪಾಲರು) ವರದಿ ಅಥವಾ ಅಧಿಕೃತ ಉತ್ತರದಲ್ಲಿ ಓದಿದ್ದು</span>
+    <span><span class="tag md">ಪತ್ರಿಕೆ</span> ಅಧಿಕೃತ ಅಂಕಿಗಳನ್ನು ಉಲ್ಲೇಖಿಸುವ ವಿಶ್ವಾಸಾರ್ಹ ಪತ್ರಿಕೆ; ಎರಡನೇ ಪರಿಶೀಲನೆ ಬಾಕಿ ಇದೆ</span>
+  </div>
+
+  <div class="list">
+
+    <article class="entry">
+      <header><h2>ಬರ ಪರಿಹಾರ, 2023-24</h2><div class="tags"><span class="tag">ಕೇಂದ್ರ: ಬಿಜೆಪಿ</span><span class="tag">ರಾಜ್ಯ: ಕಾಂಗ್ರೆಸ್</span><span class="tag hi">ಅಧಿಕೃತ ಅಂಕಿಗಳು</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">ಕರ್ನಾಟಕ ಕೇಂದ್ರದಿಂದ ಕೇಳಿದ್ದು (NDRF, ರಾಷ್ಟ್ರೀಯ ವಿಪತ್ತು ಪರಿಹಾರ ನಿಧಿ)</div><div class="v">₹18,171 ಕೋಟಿ</div><div class="s">ಮನವಿ ಪತ್ರಗಳು, ಸೆಪ್ಟೆಂಬರ್-ನವೆಂಬರ್ 2023</div></div>
+        <div class="ground"><div class="lbl">ಕೇಂದ್ರ ಬಿಡುಗಡೆ ಮಾಡಿದ್ದು</div><div class="v">≈ ₹3,454 ಕೋಟಿ</div><div class="s">ಏಪ್ರಿಲ್ 2024, ರಾಜ್ಯ ಸುಪ್ರೀಂ ಕೋರ್ಟ್‌ಗೆ ಹೋದ ನಂತರ</div></div>
+      </div>
+      <div class="bar"><div class="track"><div class="fill" style="width:19%"></div></div><div class="cap">ಕೇಳಿದ ಮೊತ್ತದ ಸುಮಾರು 19%</div></div>
+      <p class="fair">ಹಿನ್ನೆಲೆ: ಕೇಳಿದ ಮೊತ್ತದಲ್ಲಿ ₹12,577 ಕೋಟಿ "ಉಚಿತ ಪರಿಹಾರ" (gratuitous relief) ಆಗಿತ್ತು; NDRF ನಿಯಮಗಳು ಇದನ್ನು ಬೇರೆ ರೀತಿಯಲ್ಲಿ ಪರಿಗಣಿಸುತ್ತವೆ. ರಾಜ್ಯ ಕೇಂದ್ರಕ್ಕಾಗಿ ಕಾಯದೆ ತನ್ನ ಸ್ವಂತ ಹಣದಿಂದ ರೈತರಿಗೆ ಪಾವತಿಸಿತು.</p>
+      <p class="src">ಮೂಲಗಳು: <a href="https://www.thenewsminute.com/karnataka/union-government-releases-rs-3454-crore-as-drought-relief-to-karnataka" target="_blank" rel="noopener">The News Minute, 27 Apr 2024</a>; <a href="https://thesouthfirst.com/karnataka/around-₹3400-crore-released-to-karnataka-for-drought-management-union-government-tells-sc/" target="_blank" rel="noopener">The South First, 29 Apr 2024</a>. ಬಿಡುಗಡೆಯ ಮೊತ್ತ ವರದಿಗಳಲ್ಲಿ ಬೇರೆ ಬೇರೆ ಇದೆ: ₹3,454, ₹3,498.8 ಮತ್ತು "ಸುಮಾರು ₹3,400" ಕೋಟಿ.</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>ಬೆಂಬಲ ಬೆಲೆ ಬೆಳೆಗಳು, 2025-26 ಹಂಗಾಮು</h2><div class="tags"><span class="tag">ಕೇಂದ್ರ: ಬಿಜೆಪಿ</span><span class="tag">ರಾಜ್ಯ: ಕಾಂಗ್ರೆಸ್</span><span class="tag md">ಪತ್ರಿಕೆ, ಒಂದೇ ಮಾಧ್ಯಮ</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">ರಾಜ್ಯ ರೈತರಿಂದ ಖರೀದಿಸಿದ್ದು (ರಾಗಿ, ಜೋಳ, ಭತ್ತ)</div><div class="v">₹4,422 ಕೋಟಿ</div><div class="s">ರಾಗಿಯೇ 5.69 ಲಕ್ಷ ಟನ್</div></div>
+        <div class="ground"><div class="lbl">ಕೇಂದ್ರ ಮರುಪಾವತಿ ಮಾಡಿದ್ದು</div><div class="v">₹190 ಕೋಟಿ</div><div class="s">7 ಜುಲೈ 2026ರ ವೇಳೆಗೆ</div></div>
+      </div>
+      <div class="bar"><div class="track"><div class="fill" style="width:4.3%"></div></div><div class="cap">ಸುಮಾರು 4% ಮರುಪಾವತಿ ಆಗಿದೆ</div></div>
+      <p class="fair">ಹಿನ್ನೆಲೆ: ರೈತರಿಗೆ ಹಣ ಪಾವತಿ ಆಗಿದೆ. ಇಲ್ಲಿನ ಅಂತರ ಎಂದರೆ ರಾಜ್ಯಕ್ಕೆ ವಾಪಸ್ ಬರಬೇಕಾದ ಹಣ. ₹1,903 ಕೋಟಿಯ (ಲೇಖನದ ವೆಬ್ ವಿಳಾಸದಲ್ಲಿ 1,902 ಎಂದಿದೆ; ಖಚಿತಪಡಿಸಬೇಕು) ಹಳೆಯ ಬೇಡಿಕೆಗಳು 2009-10 ಹಂಗಾಮಿನಿಂದ ಬಾಕಿ ಇವೆ; ಅಂದರೆ ಎಲ್ಲ ಪಕ್ಷಗಳ ಸರ್ಕಾರಗಳೂ ಬೇಡಿಕೆಗಳನ್ನು ಬಾಕಿ ಬಿಟ್ಟಿವೆ.</p>
+      <p class="src">ಮೂಲ: <a href="https://www.siasat.com/karnataka-seeks-release-of-rs-1902-cr-pending-msp-dues-3504326/" target="_blank" rel="noopener">Siasat, 9 Jul 2026</a> (ರಾಜ್ಯ ಆಹಾರ ಸಚಿವರ ಸಭೆ, 7 ಜುಲೈ).</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>ಹಾಲಿನ ಪ್ರೋತ್ಸಾಹಧನ (ಲೀಟರ್‌ಗೆ ₹5)</h2><div class="tags"><span class="tag">ರಾಜ್ಯ: ಬಿಜೆಪಿ, ನಂತರ ಕಾಂಗ್ರೆಸ್</span><span class="tag hi">ಅಧಿಕೃತ ಅಂಕಿಗಳು</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">ಭರವಸೆ</div><div class="v">₹5 / ಲೀಟರ್</div><div class="s">ರಾಜ್ಯದಾದ್ಯಂತ ತಿಂಗಳಿಗೆ ಸುಮಾರು ₹119 ಕೋಟಿ</div></div>
+        <div class="ground"><div class="lbl">ಪಾವತಿ ಆಗದೆ ಉಳಿದದ್ದು</div><div class="v">≈ ₹800 ಕೋಟಿ</div><div class="s">ಮೇ 2024; ಸಾಮಾನ್ಯ ವರ್ಗದ ರೈತರಿಗೆ ಸೆಪ್ಟೆಂಬರ್ 2023ರಿಂದ ಪಾವತಿ ಆಗಿಲ್ಲ</div></div>
+      </div>
+      <p class="fair">ಹಿನ್ನೆಲೆ: ಸಚಿವರೇ ನೀಡಿದ ವರ್ಷವಾರು ಪಟ್ಟಿಯಲ್ಲಿ ಪ್ರತಿ ವರ್ಷವೂ ಬಾಕಿ ಇದೆ, 2019ರಲ್ಲಿ ₹54 ಕೋಟಿಯಿಂದ 2023ರಲ್ಲಿ ₹208 ಕೋಟಿವರೆಗೆ, ಎರಡೂ ಸರ್ಕಾರಗಳ ಕಾಲದಲ್ಲಿ. ಡಿಸೆಂಬರ್ 2024ರಲ್ಲಿ, ಜೂನ್‌ನಿಂದ ಅಕ್ಟೋಬರ್ 2024ರವರೆಗಿನ ₹606.69 ಕೋಟಿ ಪಾವತಿ ಬಾಕಿ ಇತ್ತು.</p>
+      <p class="src">ಮೂಲಗಳು: <a href="https://thesouthfirst.com/karnataka/karnataka-farmers-decry-delay-in-milk-incentives-dues-as-kmf-sponsors-t20-world-cup-teams/" target="_blank" rel="noopener">The South First, 30 May 2024</a>; ವಿಧಾನಸಭೆಯ ಉತ್ತರ, ವರದಿ ಮಾಡಿದ್ದು <a href="https://dairynews.today/news/bjp-criticizes-congress-over-rs-600-crore-unpaid-incentives-to-karnataka-dairy-farmers.html" target="_blank" rel="noopener">Dairy News Today, 18 Dec 2024</a>; ಸಚಿವರ ಪಟ್ಟಿ, ETV Bharat, 5 Mar 2025 ಮೂಲಕ.</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>ಹನಿ ಮತ್ತು ತುಂತುರು ನೀರಾವರಿ, 2017-21</h2><div class="tags"><span class="tag">ರಾಜ್ಯ: ಕಾಂಗ್ರೆಸ್, ಜೆಡಿ(ಎಸ್)-ಕಾಂಗ್ರೆಸ್, ಬಿಜೆಪಿ</span><span class="tag hi">CAG ಲೆಕ್ಕಪರಿಶೋಧನೆ</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">ಯೋಜಿಸಿದ ಪ್ರದೇಶ</div><div class="v">15.70 ಲಕ್ಷ ಹೆಕ್ಟೇರ್</div><div class="s">ರಾಜ್ಯ ನೀರಾವರಿ ಯೋಜನೆ</div></div>
+        <div class="ground"><div class="lbl">ಒಳಗೊಂಡ ಪ್ರದೇಶ</div><div class="v">11.81 ಲಕ್ಷ ಹೆಕ್ಟೇರ್</div><div class="s">ಕೊರತೆ 3.89 ಲಕ್ಷ ಹೆಕ್ಟೇರ್</div></div>
+      </div>
+      <div class="bar"><div class="track"><div class="fill" style="width:75%"></div></div><div class="cap">ಗುರಿಯ 75%</div></div>
+      <p class="fair">ಹಿನ್ನೆಲೆ: ರಾಜ್ಯ ತನ್ನ 57% ಪಾಲನ್ನು ಪೂರ್ತಿಯಾಗಿ ಬಿಡುಗಡೆ ಮಾಡಿರಲಿಲ್ಲ ಎಂದು ಲೆಕ್ಕಪರಿಶೋಧಕರು ಕಂಡುಕೊಂಡರು. ಈ ಅವಧಿಯಲ್ಲಿ ಯೋಜನೆ ಸುಧಾರಿಸಿತು ಮತ್ತು 2020-21ರಲ್ಲಿ ಗುರಿಯ 103% ತಲುಪಿತು.</p>
+      <p class="src">ಮೂಲ: <a href="https://saiindia.gov.in/uploads/download_audit_report/2021/Report-No.-1-of-2023,-Govt.-of-Karnataka-06a2fc893535d84.40165326.pdf" target="_blank" rel="noopener">CAG Report No. 1 of 2023, para 2.2.5.2</a>.</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>ನೆರೆಯಿಂದ ಬೆಳೆ ನಷ್ಟ, 2025</h2><div class="tags"><span class="tag">ರಾಜ್ಯ: ಕಾಂಗ್ರೆಸ್</span><span class="tag">ಕೇಂದ್ರ: ಬಿಜೆಪಿ</span><span class="tag md">ಪತ್ರಿಕೆ</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">ಅಂದಾಜು ಬೆಳೆ ನಷ್ಟ</div><div class="v">≈ ₹10,748 ಕೋಟಿ</div><div class="s">14.58 ಲಕ್ಷ ಹೆಕ್ಟೇರ್ ಹಾನಿ</div></div>
+        <div class="ground"><div class="lbl">ರೈತರಿಗೆ ಪಾವತಿಸಿದ್ದು</div><div class="v">₹2,252 ಕೋಟಿ</div><div class="s">14.24 ಲಕ್ಷ ರೈತರಿಗೆ (SDRF ಅಥವಾ ರಾಜ್ಯ ವಿಪತ್ತು ಪರಿಹಾರ ನಿಧಿಯಿಂದ ₹1,218 ಕೋಟಿ + ರಾಜ್ಯದ ಹೆಚ್ಚುವರಿ ₹1,034 ಕೋಟಿ)</div></div>
+      </div>
+      <p class="fair">ಹಿನ್ನೆಲೆ: ಪರಿಹಾರವು ಕೃಷಿ ಒಳಸುರಿ (ಇನ್‌ಪುಟ್) ಖರ್ಚನ್ನು ತುಂಬಿಕೊಡುತ್ತದೆ; ಬೆಳೆಯ ಪೂರ್ತಿ ಬೆಲೆಯನ್ನು ತುಂಬುವುದು ಅದರ ಉದ್ದೇಶ ಎಂದೂ ಆಗಿರಲಿಲ್ಲ. ರಾಜ್ಯ ಕೇಂದ್ರದಿಂದ ₹614.90 ಕೋಟಿ ಕೇಳಿದೆ; ಇನ್ನೂ ಯಾವುದೇ ಬಿಡುಗಡೆ ವರದಿಯಾಗಿಲ್ಲ.</p>
+      <p class="src">ಮೂಲ: <a href="https://eng.ruralvoice.in/karnataka-rolls-out-rs-1033-crore-flood-relief-package-for-affected-farmers" target="_blank" rel="noopener">Rural Voice, 28 Nov 2025</a>.</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>PM-KISAN (ಪಿಎಂ-ಕಿಸಾನ್): ಅರ್ಹ ರೈತರು ಹೊರಗುಳಿದರು</h2><div class="tags"><span class="tag">ಕೇಂದ್ರ: ಬಿಜೆಪಿ</span><span class="tag">ರಾಜ್ಯ: ಕಾಂಗ್ರೆಸ್</span><span class="tag hi">ಅಧಿಕೃತ ಪತ್ರಗಳು</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">ಅರ್ಹರು ಆದರೆ ಹಣ ಸಿಕ್ಕಿಲ್ಲ ಎಂದು ರಾಜ್ಯ ಹೇಳಿದವರು</div><div class="v">30,000+</div><div class="s">ಆಗಸ್ಟ್-ನವೆಂಬರ್ 2025 ಕಂತು; ರಾಜ್ಯದ ಪತ್ರ, 17 ಡಿಸೆಂಬರ್ 2025</div></div>
+        <div class="ground"><div class="lbl">ಕೇಂದ್ರ ಮತ್ತೆ ಸೇರಿಸಿದವರು</div><div class="v">22,000+</div><div class="s">22ನೇ ಕಂತು</div></div>
+      </div>
+      <p class="fair">ಹಿನ್ನೆಲೆ: ಸುಮಾರು 8,000 ರೈತರ ಲೆಕ್ಕ ಈ ಎರಡು ಹೇಳಿಕೆಗಳಲ್ಲಿ ಯಾವುದರಲ್ಲೂ ಸಿಗುವುದಿಲ್ಲ.</p>
+      <p class="src">ಮೂಲ: <a href="https://www.thehansindia.com/news/cities/bengaluru/centre-responds-positively-to-agriculture-ministers-request-pm-kisan-funds-to-be-released-to-over-22000-ktaka-farmers-1048472" target="_blank" rel="noopener">Hans India, 14 Feb 2026</a>.</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>PM-KISAN: ವಸೂಲಾದ ಹಣ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳಲ್ಲೇ ಉಳಿದಿದೆ</h2><div class="tags"><span class="tag">ರಾಜ್ಯ: ಬಿಜೆಪಿ (ಲೆಕ್ಕಪರಿಶೋಧನಾ ವರ್ಷ 2022-23)</span><span class="tag hi">CAG ಲೆಕ್ಕಪರಿಶೋಧನೆ</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">ಅನರ್ಹ ರೈತರಿಂದ ವಸೂಲು ಮಾಡಿದ ಹಣ</div><div class="v">ಕೇಂದ್ರಕ್ಕೆ ಸೇರಬೇಕು</div><div class="s">ಸಂಚಿತ ನಿಧಿಗೆ (Consolidated Fund) ವಾಪಸ್ ಹೋಗಬೇಕು</div></div>
+        <div class="ground"><div class="lbl">ಇನ್ನೂ ರಾಜ್ಯದ ಎರಡು ಖಾತೆಗಳಲ್ಲಿ ಇರುವುದು</div><div class="v">₹11.80 ಕೋಟಿ</div><div class="s">ವಾಪಸ್ ಕಳುಹಿಸಿಲ್ಲ</div></div>
+      </div>
+      <p class="src">ಮೂಲ: <a href="https://saiindia.gov.in/uploads/download_audit_report/2024/Report-No.-1,-2024,-Karnataka-06a2bd061d78130.42642970.pdf" target="_blank" rel="noopener">CAG State Finances Report No. 1 of 2024, para 3.7.1.6(a)</a>.</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>ಕೃಷಿ ಬಜೆಟ್: ಮೊದಲು ಖರ್ಚಾಗದೆ ಉಳಿಯಿತು, ನಂತರ ಹೆಚ್ಚು ಖರ್ಚಾಯಿತು</h2><div class="tags"><span class="tag">ರಾಜ್ಯ: ಬಿಜೆಪಿ 2020-23, ಕಾಂಗ್ರೆಸ್ 2023-24</span><span class="tag hi">CAG ಲೆಕ್ಕಪರಿಶೋಧನೆ</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">2020-23 (ರಾಜಸ್ವ ವೆಚ್ಚಕ್ಕೆ ಇಟ್ಟ ಹಣ)</div><div class="v">5.3% ರಿಂದ 9.7%</div><div class="s">ಪ್ರತಿ ವರ್ಷ ಖರ್ಚಾಗದೆ ಉಳಿಯಿತು</div></div>
+        <div class="ground"><div class="lbl">2023-24</div><div class="v">15.7% ಹೆಚ್ಚು</div><div class="s">₹5,749 ಕೋಟಿ ಬಜೆಟ್ ಇದ್ದಾಗ ₹6,654 ಕೋಟಿ ಖರ್ಚು</div></div>
+      </div>
+      <p class="fair">ಹಿನ್ನೆಲೆ: ಈ ಎರಡರಲ್ಲಿ ಯಾವುದೂ ಹಣ ಕಾಣೆಯಾಗಿದೆ ಎಂದು ಸಾಬೀತು ಮಾಡುವುದಿಲ್ಲ. ಕೇಂದ್ರದ ತಡವಾದ ಬಿಡುಗಡೆ ಮತ್ತು ಸಮಯದ ವ್ಯತ್ಯಾಸ ಇದರ ಬಹುಭಾಗವನ್ನು ವಿವರಿಸುತ್ತವೆ. ಬಜೆಟ್ ಅಂಕಿ ಒಂದರಿಂದಲೇ ರೈತರಿಗೆ ಏನು ತಲುಪಿತು ಎಂದು ತಿಳಿಯುವುದಿಲ್ಲ.</p>
+      <p class="src">ಮೂಲಗಳು: CAG Report No. 1 of 2024, Table 3.12; <a href="https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf" target="_blank" rel="noopener">CAG Report No. 4 of 2025, Table 3.8</a>.</p>
+    </article>
+
+    <article class="entry">
+      <header><h2>ಬರ 2026, ಇಲ್ಲಿಯವರೆಗೆ</h2><div class="tags"><span class="tag">ರಾಜ್ಯ: ಕಾಂಗ್ರೆಸ್</span><span class="tag">ಕೇಂದ್ರ: ಬಿಜೆಪಿ</span><span class="tag md">ಪತ್ರಿಕೆ · ಇನ್ನೂ ನಡೆಯುತ್ತಿದೆ</span></div></header>
+      <div class="pair">
+        <div><div class="lbl">ಕರ್ನಾಟಕ ಕೇಂದ್ರದಿಂದ ಕೇಳಿದ್ದು</div><div class="v">₹22,401 ಕೋಟಿ</div><div class="s">3 ನವೆಂಬರ್ 2026; 226 ತಾಲೂಕುಗಳು, 57.93 ಲಕ್ಷ ಹೆಕ್ಟೇರ್ ಬಾಧಿತ</div></div>
+        <div class="ground"><div class="lbl">ರಾಜ್ಯದ ಮೊದಲ ಕಂತು</div><div class="v">₹2,500</div><div class="s">ಪ್ರತಿ ರೈತರಿಗೆ, 5 ನವೆಂಬರ್‌ನಿಂದ; ಕೆಲವು ರೈತರು ತಮಗೆ ₹1,500 ಅಥವಾ ₹2,000 ಬಂದಿದೆ ಎನ್ನುತ್ತಾರೆ</div></div>
+      </div>
+      <p class="fair">ಹಿನ್ನೆಲೆ: ಪ್ರತಿ ರೈತರಿಗೆ ಕನಿಷ್ಠ ₹5,000 ನೀಡುವುದಾಗಿ ರಾಜ್ಯ ಭರವಸೆ ನೀಡಿದೆ; 16 ನವೆಂಬರ್ 2026ರವರೆಗೆ ಕೇಂದ್ರ ಯಾವುದೇ ಬಿಡುಗಡೆ ಘೋಷಿಸಿರಲಿಲ್ಲ.</p>
+      <p class="src">ಮೂಲಗಳು: <a href="https://english.varthabharati.in/karnataka/karnataka-seeks-rs-22400-cr-drought-relief-from-centre-urges-early-release-2287835" target="_blank" rel="noopener">Vartha Bharati, 3 Nov 2026</a>; <a href="https://www.newkerala.com/news/a/karnataka-govt-assures-minimum-rs-5000-drought-relief-719.htm" target="_blank" rel="noopener">IANS, 10 Nov 2026</a>.</p>
+    </article>
+  </div>
+
+  <footer class="foot">
+    <p>ಕರಡು, 16 ನವೆಂಬರ್ 2026. "ಪತ್ರಿಕೆ" ಎಂದು ಗುರುತಿಸಿದ ನಮೂದುಗಳಿಗೆ ಪ್ರಕಟಣೆಗೆ ಮುನ್ನ ಇನ್ನೊಂದು ಸ್ವತಂತ್ರ ಪರಿಶೀಲನೆ ಬೇಕು. ಪ್ರತಿ ಪತ್ರಿಕಾ ಲಿಂಕ್ ಅನ್ನು ಬ್ರೌಸರ್‌ನಲ್ಲಿ ಮತ್ತೆ ತೆರೆದು ನೋಡಬೇಕು.</p>
+    <p>ಇನ್ನೂ ಸಿಕ್ಕಿಲ್ಲ: ಕೃಷಿ ಭಾಗ್ಯ ಹೊಂಡಗಳು (ಗುರಿ ಎಷ್ಟು, ನಿರ್ಮಿಸಿದ್ದು ಎಷ್ಟು), ಕರ್ನಾಟಕದಲ್ಲಿ ಬೆಳೆ ವಿಮೆ (ಕಟ್ಟಿದ ಪ್ರೀಮಿಯಂ ಎಷ್ಟು, ಕ್ಲೇಮ್ ಎಷ್ಟು), ಮತ್ತು ಜಿಲ್ಲಾ ಮಟ್ಟದ ಯಾವುದೇ ಗುರಿ-ಸಾಧನೆ ಜೋಡಿ. ವಿವರಗಳು DELIVERY_LEDGER_RESEARCH.md ನಲ್ಲಿವೆ.</p>
+  </footer>
+</div>

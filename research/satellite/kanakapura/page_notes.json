@@ -1,0 +1,24 @@
+{
+  "_status": "DRAFT prose for make_rural_page.py, written after looking at the images and metrics.json. Numbers in this prose are copied from metrics.json and data/robustness_dates.json.",
+  "date_phrase": "February 2019 and February 2026",
+  "d19": "13 Feb 2019",
+  "d26": "11 Feb 2026",
+  "pick_dates": ["2019-02-13", "2026-02-11"],
+  "as_of": "16 Nov 2026",
+  "scene_credit": "Sentinel-2A scene of 13 Feb 2019 and Sentinel-2B scene of 11 Feb 2026, tile 43PGP",
+  "lede": "Two cloud-free Sentinel-2 satellite pictures of Assembly constituency 184 (Ramanagara, now Bengaluru South district) are compared pixel by pixel at 10 m. They were taken two days apart in the calendar, seven years apart: 13 February 2019 and 11 February 2026. This is the second constituency in a planned series. It measures land cover only and says nothing about who caused any change.",
+  "warning_title": "Read this first: most of the change here is weather and season, not land use.",
+  "warning": "Kanakapura is mostly farmland, scrub and dry deciduous forest, and in January to March it dries out fast. On the 30 clean dates checked, green cover fell from about 48% of the area in early January 2019 to about 16% by late March. Around 11 to 13 February it stood at 22% in 2019, 52% in 2025 and 29% in 2026. So 2026 was greener than 2019 on every pair of dates checked, but the size of the gap depends on which day is picked and on the rain before it. Do not quote the tiles below as forest gained or land restored.",
+  "chart_title": "Is the change real? Green cover on every clean date, January to March",
+  "chart_note": "Share of the constituency with NDVI above 0.4, computed at 20 m on every Sentinel-2 date with less than 1% cloud inside the boundary. Large dots are the two dates used for the tiles and maps. The fall within each year is the dry season. The gap between years is mostly how wet the previous monsoon was.",
+  "change_caption": "Much of the green-lost and red in the south-west is farmland and forest edge that was green on one date and dry or burnt on the other.",
+  "forest_note": "Inside the forests the green share went from 9.7% to 24.1%. That fits dry deciduous trees being in leaf on one date and bare on the other, and should not be read as new forest.",
+  "limits": [
+    "One picture per year, in the dry season. Green cover changes week by week here; the date check above shows how much.",
+    "The bare or built-up figure is a proxy. In this rural seat it is mostly bare soil, harvested fields, dry grass and burnt scrub, so its fall from 2019 to 2026 says nothing about buildings.",
+    "The two years use different satellites (Sentinel-2A and 2B) and processing versions. The -1000 reflectance offset for products processed from 2022 was applied.",
+    "Thresholds are standard textbook values, not tuned for Karnataka. Trust the direction of change more than the exact hectares.",
+    "10 m pixels blur roads, tree lines and small tanks. Water bodies under 2 ha are not measured.",
+    "The boundary is DataMeet's digitised map of the 2008 constituencies, which has known shifts. Forest, protected-area and water outlines are OpenStreetMap's and are approximate. Check edges against official maps before using any figure near them."
+  ]
+}

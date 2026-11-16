@@ -1,0 +1,123 @@
+<title>Kanakapura From Space</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&family=Noto+Sans+Kannada:wght@400;600&display=swap">
+<style>
+/* Layout: headline tiles, the "is it real?" date check, images, forest/water/cluster tables, limits. */
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8; --grid: #e7eaef;
+  --red: #c21f30; --yellow: #f2b705; --blue: #1f6fbf; --warn-bg: #fff6d6; --warn-line: #e8c547;
+  --s19: #8a6d3b; --s25: #9aa3b2; --s26: #1f6fbf;
+  --display: "Space Grotesk", system-ui, sans-serif; --body: "Inter", system-ui, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d; --grid: #232834;
+  --red: #ef5261; --yellow: #f5c93a; --blue: #6aaef0; --warn-bg: #2a2410; --warn-line: #7a6420;
+  --s19: #d2a764; --s25: #6b7383; --s26: #6aaef0; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d; --grid: #232834;
+  --red: #ef5261; --yellow: #f5c93a; --blue: #6aaef0; --warn-bg: #2a2410; --warn-line: #7a6420;
+  --s19: #d2a764; --s25: #6b7383; --s26: #6aaef0; color-scheme: dark }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 960px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 28px; }
+h1, h2 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.2; }
+h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); } h2 { font-size: 1.25rem; }
+p { margin: 0; }
+a { color: var(--blue); }
+.eyebrow { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--red); font-weight: 600; }
+.draft { display: inline-block; font-size: .75rem; font-weight: 700; letter-spacing: .06em; background: var(--yellow); color: #161a22; padding: 2px 8px; border-radius: 4px; }
+.lede { color: var(--muted); max-width: 66ch; }
+.sec { display: grid; gap: 12px; min-width: 0; }
+.warn { background: var(--warn-bg); border: 1px solid var(--warn-line); border-radius: 10px; padding: 14px 18px; display: grid; gap: 6px; max-width: 75ch; }
+.warn strong { font-family: var(--display); }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr)); gap: 12px; }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: grid; gap: 4px; align-content: start; }
+.tile .k { font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.tile .v { font-family: var(--display); font-size: 2rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.tile .s { font-size: .88rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.chart { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+.chart svg { width: 100%; height: auto; display: block; }
+.grid { stroke: var(--grid); stroke-width: 1; }
+.ax { fill: var(--muted); font: 12px var(--body); }
+.ln { fill: none; stroke-width: 2; }
+.lab { font: 600 13px var(--body); }
+.s19 { stroke: var(--s19); fill: var(--s19); } .s25 { stroke: var(--s25); fill: var(--s25); } .s26 { stroke: var(--s26); fill: var(--s26); }
+.ln.s19, .ln.s25, .ln.s26 { fill: none; }
+.pt { stroke: var(--surface); stroke-width: 1.5; } .pt.pick { stroke: var(--fg); stroke-width: 2; }
+figure { margin: 0; display: grid; gap: 8px; min-width: 0; }
+figure img { width: 100%; max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line); display: block; }
+figcaption { font-size: .85rem; color: var(--muted); }
+.maps { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+@media (max-width: 720px) { .maps { grid-template-columns: 1fr; } }
+.tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; font-variant-numeric: tabular-nums; min-width: 600px; }
+th, td { padding: 8px 12px; text-align: right; border-bottom: 1px solid var(--line); }
+th:first-child, td:first-child { text-align: left; }
+th { font-size: .75rem; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+td.up { color: var(--blue); font-weight: 600; } td.dn { color: var(--red); font-weight: 600; }
+.kn { font-family: "Noto Sans Kannada", var(--body); color: var(--muted); font-size: .85rem; }
+.flag { font-size: .7rem; border: 1px solid var(--muted); color: var(--muted); border-radius: 999px; padding: 0 6px; margin-left: 4px; }
+ul.limits { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; max-width: 72ch; }
+.foot { font-size: .85rem; color: var(--muted); max-width: 80ch; }
+.foot a { color: inherit; }
+</style>
+
+<div class="wrap">
+  <div style="display:grid;gap:8px">
+    <span class="eyebrow">Gandaberunda · What changed on the ground</span>
+    <h1>Kanakapura from space, February 2019 and February 2026</h1>
+    <span><span class="draft">DRAFT · PILOT · NOT FOR PUBLICATION</span></span>
+  </div>
+  <p class="lede">Two cloud-free Sentinel-2 satellite pictures of Assembly constituency 184 (Ramanagara, now Bengaluru South district) are compared pixel by pixel at 10 m. They were taken two days apart in the calendar, seven years apart: 13 February 2019 and 11 February 2026. This is the second constituency in a planned series. It measures land cover only and says nothing about who caused any change.</p>
+
+  <div class="warn"><strong>Read this first: most of the change here is weather and season, not land use.</strong><p>Kanakapura is mostly farmland, scrub and dry deciduous forest, and in January to March it dries out fast. On the 30 clean dates checked, green cover fell from about 48% of the area in early January 2019 to about 16% by late March. Around 11 to 13 February it stood at 22% in 2019, 52% in 2025 and 29% in 2026. So 2026 was greener than 2019 on every pair of dates checked, but the size of the gap depends on which day is picked and on the rain before it. Do not quote the tiles below as forest gained or land restored.</p></div>
+
+  <div class="tiles">
+    <div class="tile"><span class="k">Green cover (NDVI &gt; 0.4)</span><span class="v">+7,620 ha</span><span class="s">24,586 → 32,206 ha · 22.6% → 29.6% of the area</span></div>
+    <div class="tile"><span class="k">Open water (MNDWI &gt; 0)</span><span class="v">+120 ha</span><span class="s">551 → 670 ha</span></div>
+    <div class="tile"><span class="k">Bare or built-up (proxy)</span><span class="v">−6,366 ha net</span><span class="s">14,418 → 8,052 ha · 3,759 ha newly entered it</span></div>
+    <div class="tile"><span class="k">Area compared</span><span class="v">108,864 ha</span><span class="s">100.0% of the constituency clear in both pictures</span></div>
+  </div>
+
+  <section class="sec"><h2>Is the change real? Green cover on every clean date, January to March</h2><div class="chart"><svg viewBox="0 0 640 300" role="img" aria-label="Share of the constituency with green cover on every clean satellite date, January to March, in 2019, 2025 and 2026"><line x1="44" x2="576" y1="266.0" y2="266.0" class="grid"/><text x="38" y="270.0" text-anchor="end" class="ax">0%</text><line x1="44" x2="576" y1="210.4" y2="210.4" class="grid"/><text x="38" y="214.4" text-anchor="end" class="ax">20%</text><line x1="44" x2="576" y1="154.9" y2="154.9" class="grid"/><text x="38" y="158.9" text-anchor="end" class="ax">40%</text><line x1="44" x2="576" y1="99.3" y2="99.3" class="grid"/><text x="38" y="103.3" text-anchor="end" class="ax">60%</text><line x1="44" x2="576" y1="43.8" y2="43.8" class="grid"/><text x="38" y="47.8" text-anchor="end" class="ax">80%</text><text x="44.0" y="288" text-anchor="middle" class="ax">1 Jan</text><text x="229.3" y="288" text-anchor="middle" class="ax">1 Feb</text><text x="396.7" y="288" text-anchor="middle" class="ax">1 Mar</text><text x="576.0" y="288" text-anchor="middle" class="ax">31 Mar</text><polyline points="61.9,131.4 91.8,155.7 121.7,178.2 151.6,179.7 271.1,214.0 301.0,204.7 330.9,204.7 360.8,208.2 450.5,217.0 480.4,219.5 510.2,217.9 540.1,222.6 570.0,220.9" class="ln s19"/><circle cx="61.9" cy="131.4" r="3" class="pt s19"><title>2019-01-04: 48.5% green</title></circle><circle cx="91.8" cy="155.7" r="3" class="pt s19"><title>2019-01-09: 39.7% green</title></circle><circle cx="121.7" cy="178.2" r="3" class="pt s19"><title>2019-01-14: 31.6% green</title></circle><circle cx="151.6" cy="179.7" r="3" class="pt s19"><title>2019-01-19: 31.1% green</title></circle><circle cx="271.1" cy="214.0" r="3" class="pt s19"><title>2019-02-08: 18.7% green</title></circle><circle cx="301.0" cy="204.7" r="5" class="pt s19 pick"><title>2019-02-13: 22.1% green</title></circle><circle cx="330.9" cy="204.7" r="3" class="pt s19"><title>2019-02-18: 22.1% green</title></circle><circle cx="360.8" cy="208.2" r="3" class="pt s19"><title>2019-02-23: 20.8% green</title></circle><circle cx="450.5" cy="217.0" r="3" class="pt s19"><title>2019-03-10: 17.6% green</title></circle><circle cx="480.4" cy="219.5" r="3" class="pt s19"><title>2019-03-15: 16.7% green</title></circle><circle cx="510.2" cy="217.9" r="3" class="pt s19"><title>2019-03-20: 17.3% green</title></circle><circle cx="540.1" cy="222.6" r="3" class="pt s19"><title>2019-03-25: 15.6% green</title></circle><circle cx="570.0" cy="220.9" r="3" class="pt s19"><title>2019-03-30: 16.2% green</title></circle><polyline points="109.8,25.0 259.2,98.1 289.1,122.0 319.0,151.8 348.9,171.4 378.7,183.1 480.4,197.2" class="ln s25"/><circle cx="109.8" cy="25.0" r="3" class="pt s25"><title>2025-01-12: 86.8% green</title></circle><circle cx="259.2" cy="98.1" r="3" class="pt s25"><title>2025-02-06: 60.5% green</title></circle><circle cx="289.1" cy="122.0" r="3" class="pt s25"><title>2025-02-11: 51.8% green</title></circle><circle cx="319.0" cy="151.8" r="3" class="pt s25"><title>2025-02-16: 41.1% green</title></circle><circle cx="348.9" cy="171.4" r="3" class="pt s25"><title>2025-02-21: 34.1% green</title></circle><circle cx="378.7" cy="183.1" r="3" class="pt s25"><title>2025-02-26: 29.9% green</title></circle><circle cx="480.4" cy="197.2" r="3" class="pt s25"><title>2025-03-15: 24.8% green</title></circle><polyline points="79.9,106.7 139.6,132.9 169.5,138.6 199.4,158.6 229.3,174.8 259.2,174.2 289.1,184.7 319.0,197.5 408.6,205.9 450.5,200.6" class="ln s26"/><circle cx="79.9" cy="106.7" r="3" class="pt s26"><title>2026-01-07: 57.3% green</title></circle><circle cx="139.6" cy="132.9" r="3" class="pt s26"><title>2026-01-17: 47.9% green</title></circle><circle cx="169.5" cy="138.6" r="3" class="pt s26"><title>2026-01-22: 45.9% green</title></circle><circle cx="199.4" cy="158.6" r="3" class="pt s26"><title>2026-01-27: 38.6% green</title></circle><circle cx="229.3" cy="174.8" r="3" class="pt s26"><title>2026-02-01: 32.8% green</title></circle><circle cx="259.2" cy="174.2" r="3" class="pt s26"><title>2026-02-06: 33.0% green</title></circle><circle cx="289.1" cy="184.7" r="5" class="pt s26 pick"><title>2026-02-11: 29.3% green</title></circle><circle cx="319.0" cy="197.5" r="3" class="pt s26"><title>2026-02-16: 24.7% green</title></circle><circle cx="408.6" cy="205.9" r="3" class="pt s26"><title>2026-03-03: 21.6% green</title></circle><circle cx="450.5" cy="200.6" r="3" class="pt s26"><title>2026-03-10: 23.6% green</title></circle><text x="584" y="201.2" class="lab s25">2025</text><text x="584" y="217.2" class="lab s26">2026</text><text x="584" y="233.2" class="lab s19">2019</text></svg></div><p class="foot">Share of the constituency with NDVI above 0.4, computed at 20 m on every Sentinel-2 date with less than 1% cloud inside the boundary. Large dots are the two dates used for the tiles and maps. The fall within each year is the dry season. The gap between years is mostly how wet the previous monsoon was.</p></section>
+
+  <div class="maps">
+    <figure><img src="truecolor_2019_2026.png" alt="True-colour satellite images of Kanakapura, February 2019 and February 2026, with the boundary in yellow"><figcaption>True colour. Left: 13 Feb 2019. Right: 11 Feb 2026. Yellow line: constituency boundary.</figcaption></figure>
+    <figure><img src="change_map_2019_2026.png" alt="Change map: green marks green cover lost, blue marks water lost, red marks new bare or built-up ground"><figcaption>Change map. Green: green cover lost. Blue: water lost. Red: new bare or built-up ground (proxy). Much of the green-lost and red in the south-west is farmland and forest edge that was green on one date and dry or burnt on the other.</figcaption></figure>
+  </div>
+
+  <section class="sec">
+    <h2>Forests and protected areas compared with the rest</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Area</th><th>Hectares</th><th>Green 2019</th><th>Green 2026</th><th>Green lost (ha)</th><th>Green gained (ha)</th><th>New bare (ha)</th></tr></thead>
+      <tbody><tr><td>Inside protected areas and forests (OSM)</td><td>32,122</td><td>9.7%</td><td>24.1%</td><td>906</td><td>5,537</td><td>463</td></tr><tr><td>Everywhere else</td><td>76,747</td><td>28.0%</td><td>31.9%</td><td>5,688</td><td>8,676</td><td>3,297</td></tr></tbody>
+    </table></div>
+    <p class="foot">OpenStreetMap outlines inside the boundary: Cauvery WLS (21,409 ha), Chilandi State Forest (12,345 ha), Bannerghatta National Park (6,888 ha), Bananthamari Reserved Forest (1,832 ha), Cauvery North WLS (252 ha), Gangadharagudda Reserved Forest (201 ha), Tenginakal Reserved Forest (176 ha). Inside the forests the green share went from 9.7% to 24.1%. That fits dry deciduous trees being in leaf on one date and bare on the other, and should not be read as new forest.</p>
+  </section>
+  <section class="sec">
+    <h2>Water bodies: the ten biggest changes in open water (hectares)</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Water body (OpenStreetMap)</th><th>Location</th><th>Water 2019</th><th>Water 2026</th><th>Change</th><th>Green on it 2019</th><th>Green on it 2026</th></tr></thead>
+      <tbody><tr><td>Honaganahalli Kere <span lang="kn" class="kn">ಹೊನ್ನಿಗನಹಳ್ಳಿ ಕೆರೆ</span> <span class="flag">edge</span></td><td><a href="https://www.openstreetmap.org/?mlat=12.43559&mlon=77.27391#map=16/12.43559/77.27391" target="_blank" rel="noopener">12.4356, 77.2739</a></td><td>0.0</td><td>27.9</td><td class="up">+27.9</td><td>24.1</td><td>7.2</td></tr><tr><td>Unnamed (way/127303374)</td><td><a href="https://www.openstreetmap.org/?mlat=12.39718&mlon=77.61063#map=16/12.39718/77.61063" target="_blank" rel="noopener">12.3972, 77.6106</a></td><td>3.9</td><td>18.0</td><td class="up">+14.1</td><td>6.8</td><td>0.5</td></tr><tr><td>Unnamed (way/56139378)</td><td><a href="https://www.openstreetmap.org/?mlat=12.42142&mlon=77.37172#map=16/12.42142/77.37172" target="_blank" rel="noopener">12.4214, 77.3717</a></td><td>44.7</td><td>50.9</td><td class="up">+6.2</td><td>68.7</td><td>44.5</td></tr><tr><td>Unnamed (way/1159138439)</td><td><a href="https://www.openstreetmap.org/?mlat=12.50563&mlon=77.44513#map=16/12.50563/77.44513" target="_blank" rel="noopener">12.5056, 77.4451</a></td><td>1.4</td><td>6.9</td><td class="up">+5.5</td><td>0.3</td><td>0.2</td></tr><tr><td>Unnamed (way/1159138442)</td><td><a href="https://www.openstreetmap.org/?mlat=12.49935&mlon=77.52265#map=16/12.49935/77.52265" target="_blank" rel="noopener">12.4993, 77.5226</a></td><td>6.4</td><td>2.0</td><td class="dn">−4.4</td><td>3.3</td><td>7.1</td></tr><tr><td>Unnamed (way/971759790) <span class="flag">edge</span></td><td><a href="https://www.openstreetmap.org/?mlat=12.57168&mlon=77.32955#map=16/12.57168/77.32955" target="_blank" rel="noopener">12.5717, 77.3295</a></td><td>14.8</td><td>10.6</td><td class="dn">−4.2</td><td>0.4</td><td>2.9</td></tr><tr><td>Unnamed (way/409592628)</td><td><a href="https://www.openstreetmap.org/?mlat=12.41054&mlon=77.58512#map=16/12.41054/77.58512" target="_blank" rel="noopener">12.4105, 77.5851</a></td><td>17.5</td><td>20.4</td><td class="up">+2.9</td><td>0.8</td><td>0.2</td></tr><tr><td>Unnamed (way/392169037)</td><td><a href="https://www.openstreetmap.org/?mlat=12.39292&mlon=77.37221#map=16/12.39292/77.37221" target="_blank" rel="noopener">12.3929, 77.3722</a></td><td>7.1</td><td>4.3</td><td class="dn">−2.8</td><td>3.0</td><td>1.8</td></tr><tr><td>Unnamed (way/376415068)</td><td><a href="https://www.openstreetmap.org/?mlat=12.52116&mlon=77.37782#map=16/12.52116/77.37782" target="_blank" rel="noopener">12.5212, 77.3778</a></td><td>6.8</td><td>4.0</td><td class="dn">−2.8</td><td>0.1</td><td>0.6</td></tr><tr><td>Unnamed (relation/2018006)</td><td><a href="https://www.openstreetmap.org/?mlat=12.43958&mlon=77.54635#map=16/12.43958/77.54635" target="_blank" rel="noopener">12.4396, 77.5464</a></td><td>11.8</td><td>13.8</td><td class="up">+2.0</td><td>2.9</td><td>1.7</td></tr></tbody>
+    </table></div>
+    <p class="foot">59 water polygons in OpenStreetMap touch the boundary and 4 have names; those of at least 2 ha are measured. "Green on it" is usually weeds or crops on a dry bed. Tanks fill and empty with each monsoon, so one February picture says little about a tank's long-term state. "Edge" marks a polygon that crosses the boundary; only the part inside is counted.</p>
+  </section>
+
+  <section class="sec">
+    <h2>Places to check on the ground: the 15 largest patches of new bare or built-up ground</h2>
+    <figure><img src="clusters.png" alt="Map of Kanakapura with the 15 largest new bare-ground patches numbered"><figcaption>Numbers match the table. Background: the 2026 picture.</figcaption></figure>
+    <div class="tablewrap"><table>
+      <thead><tr><th>#</th><th>Hectares</th><th>Location (opens map)</th><th>Green in 2019</th><th>In OSM forest</th><th>Burn index (dNBR)</th></tr></thead>
+      <tbody><tr><td>1</td><td>40.2</td><td><a href="https://www.openstreetmap.org/?mlat=12.3973&mlon=77.3217#map=16/12.3973/77.3217" target="_blank" rel="noopener">12.3973, 77.3217</a></td><td>1%</td><td>0%</td><td>0.22</td></tr><tr><td>2</td><td>34.5</td><td><a href="https://www.openstreetmap.org/?mlat=12.41145&mlon=77.34674#map=16/12.41145/77.34674" target="_blank" rel="noopener">12.4115, 77.3467</a></td><td>35%</td><td>18%</td><td>0.29</td></tr><tr><td>3</td><td>26.3</td><td><a href="https://www.openstreetmap.org/?mlat=12.40554&mlon=77.3294#map=16/12.40554/77.3294" target="_blank" rel="noopener">12.4055, 77.3294</a></td><td>3%</td><td>0%</td><td>0.12</td></tr><tr><td>4</td><td>17.5</td><td><a href="https://www.openstreetmap.org/?mlat=12.41784&mlon=77.31793#map=16/12.41784/77.31793" target="_blank" rel="noopener">12.4178, 77.3179</a></td><td>4%</td><td>0%</td><td>0.12</td></tr><tr><td>5</td><td>17.1</td><td><a href="https://www.openstreetmap.org/?mlat=12.40667&mlon=77.32417#map=16/12.40667/77.32417" target="_blank" rel="noopener">12.4067, 77.3242</a></td><td>0%</td><td>0%</td><td>0.19</td></tr><tr><td>6</td><td>15.7</td><td><a href="https://www.openstreetmap.org/?mlat=12.455&mlon=77.35798#map=16/12.455/77.35798" target="_blank" rel="noopener">12.4550, 77.3580</a></td><td>21%</td><td>0%</td><td>0.12</td></tr><tr><td>7</td><td>13.7</td><td><a href="https://www.openstreetmap.org/?mlat=12.40876&mlon=77.35471#map=16/12.40876/77.35471" target="_blank" rel="noopener">12.4088, 77.3547</a></td><td>17%</td><td>16%</td><td>0.34</td></tr><tr><td>8</td><td>11.5</td><td><a href="https://www.openstreetmap.org/?mlat=12.42671&mlon=77.31699#map=16/12.42671/77.31699" target="_blank" rel="noopener">12.4267, 77.3170</a></td><td>4%</td><td>0%</td><td>0.05</td></tr><tr><td>9</td><td>10.8</td><td><a href="https://www.openstreetmap.org/?mlat=12.49486&mlon=77.34574#map=16/12.49486/77.34574" target="_blank" rel="noopener">12.4949, 77.3457</a></td><td>1%</td><td>0%</td><td>0.07</td></tr><tr><td>10</td><td>10.5</td><td><a href="https://www.openstreetmap.org/?mlat=12.38232&mlon=77.37111#map=16/12.38232/77.37111" target="_blank" rel="noopener">12.3823, 77.3711</a></td><td>23%</td><td>100%</td><td>0.27</td></tr><tr><td>11</td><td>10.3</td><td><a href="https://www.openstreetmap.org/?mlat=12.44691&mlon=77.42374#map=16/12.44691/77.42374" target="_blank" rel="noopener">12.4469, 77.4237</a></td><td>2%</td><td>0%</td><td>0.21</td></tr><tr><td>12</td><td>9.9</td><td><a href="https://www.openstreetmap.org/?mlat=12.39777&mlon=77.35066#map=16/12.39777/77.35066" target="_blank" rel="noopener">12.3978, 77.3507</a></td><td>2%</td><td>100%</td><td>0.10</td></tr><tr><td>13</td><td>9.8</td><td><a href="https://www.openstreetmap.org/?mlat=12.47281&mlon=77.62065#map=16/12.47281/77.62065" target="_blank" rel="noopener">12.4728, 77.6206</a></td><td>18%</td><td>0%</td><td>0.05</td></tr><tr><td>14</td><td>9.5</td><td><a href="https://www.openstreetmap.org/?mlat=12.37912&mlon=77.38579#map=16/12.37912/77.38579" target="_blank" rel="noopener">12.3791, 77.3858</a></td><td>0%</td><td>0%</td><td>0.22</td></tr><tr><td>15</td><td>8.4</td><td><a href="https://www.openstreetmap.org/?mlat=12.42168&mlon=77.33341#map=16/12.42168/77.33341" target="_blank" rel="noopener">12.4217, 77.3334</a></td><td>0%</td><td>0%</td><td>0.04</td></tr></tbody>
+    </table></div>
+    <p class="foot">Each patch went from not bare in 2019 to bare or built-up on the 2026 date. It could be a quarry, construction, a ploughed or harvested field, dry grass, burnt scrub or a drained tank. This analysis cannot tell which and says nothing about cause, ownership or legality. A dNBR above about 0.1 is often seen on burnt ground but also on harvest and clearing. In all, 305 patches are 1 ha or larger and 34 are 5 ha or larger. A blank field-check sheet for these locations is in field_checks.csv in the repo: a photo and one line on what is there turns a proxy into a fact.</p>
+  </section>
+
+  <section class="sec">
+    <h2>Limits</h2>
+    <ul class="limits"><li>One picture per year, in the dry season. Green cover changes week by week here; the date check above shows how much.</li><li>The bare or built-up figure is a proxy. In this rural seat it is mostly bare soil, harvested fields, dry grass and burnt scrub, so its fall from 2019 to 2026 says nothing about buildings.</li><li>The two years use different satellites (Sentinel-2A and 2B) and processing versions. The -1000 reflectance offset for products processed from 2022 was applied.</li><li>Thresholds are standard textbook values, not tuned for Karnataka. Trust the direction of change more than the exact hectares.</li><li>10 m pixels blur roads, tree lines and small tanks. Water bodies under 2 ha are not measured.</li><li>The boundary is DataMeet&#x27;s digitised map of the 2008 constituencies, which has known shifts. Forest, protected-area and water outlines are OpenStreetMap&#x27;s and are approximate. Check edges against official maps before using any figure near them.</li></ul>
+  </section>
+
+  <p class="foot">Data: Copernicus Sentinel-2 L2A via Microsoft Planetary Computer (Sentinel-2A scene of 13 Feb 2019 and Sentinel-2B scene of 11 Feb 2026, tile 43PGP); boundary from <a href="https://github.com/datameet/maps" target="_blank" rel="noopener">DataMeet</a> (CC BY 2.5 India); water, forest and protected-area outlines from OpenStreetMap (ODbL). Method, scripts and every number are in research/satellite/kanakapura/ in the repo (METHOD.md, metrics.json). DRAFT, 16 Nov 2026.</p>
+</div>
