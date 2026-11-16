@@ -1,0 +1,1295 @@
+{
+  "title": "Mahadevapura (Karnataka AC 174) Sentinel-2 land-cover change, dry season 2019 vs 2026",
+  "generated_utc": "2026-11-16T21:24:50+00:00",
+  "status": "DRAFT - first-pass, unreviewed. Proxies from two single scenes, not a land-use survey.",
+  "boundary": {
+    "source": "DataMeet maps repo, docs/data/geojson/ac.geojson (Assembly Constituencies scraped from ECI polling-station site psleci.nic.in)",
+    "url": "https://github.com/datameet/maps/blob/master/docs/data/geojson/ac.geojson",
+    "license": "CC BY 2.5 India (DataMeet)",
+    "feature_properties": {
+      "OBJECTID": 2362,
+      "ST_CODE": "29",
+      "ST_NAME": "KARNATAKA",
+      "DT_CODE": "20",
+      "DIST_NAME": "BANGALORE",
+      "AC_NO": 174.0,
+      "AC_NAME": "Mahadevapura",
+      "PC_NO": 25.0,
+      "PC_NAME": "BANGALORE CENTRAL",
+      "PC_ID": 2925.0,
+      "STATUS": null,
+      "Shape_Leng": 1.047925,
+      "Shape_Area": 0.020926
+    },
+    "delimitation": "2008 (Delimitation of Parliamentary and Assembly Constituencies Order, 2008; Karnataka first used it in the 2008 election). Inferred: the feature sits in PC 25 'Bangalore Central', a seat created by the 2008 delimitation; the STATUS field is empty (DataMeet marks only pre-delimitation states).",
+    "known_issues": "DataMeet README: 'There is some shift in the data'. Polygon is coarse (73 vertices). Treat edges as approximate to tens of metres.",
+    "area_ha_utm43n": 25148.7,
+    "rejected_alternative": "DataMeet eci/AC_Data/States/S10 shapefile: coordinates not georeferenced (bbox around -12,1), unusable."
+  },
+  "imagery": {
+    "collection": "sentinel-2-l2a (Microsoft Planetary Computer STAC, anonymous SAS-signed asset URLs)",
+    "stac_api": "https://planetarycomputer.microsoft.com/api/stac/v1",
+    "selection": "All Jan-Mar scenes with tile cloud <20% were scored by SCL cloud/shadow fraction inside the boundary (data/candidates.json). Chose one scene per year from the same tile (43PGQ) and relative orbit (R019) with near-identical day of year (13 Feb vs 11 Feb) to minimise seasonal and viewing-geometry differences; both have <0.3% masked pixels inside the boundary. 2026 dry season had clean scenes, so no 2025 fallback was needed.",
+    "scenes": {
+      "2019": {
+        "id": "S2A_MSIL2A_20190213T050921_R019_T43PGQ_20201007T162011",
+        "datetime": "2019-02-13T05:09:21.024000Z",
+        "platform": "Sentinel-2A",
+        "mgrs_tile": "43PGQ",
+        "relative_orbit": 19,
+        "processing_baseline": "02.12",
+        "tile_cloud_cover_pct": 0.066927,
+        "reflectance_offset_applied": 0,
+        "stac_item_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-2-l2a/items/S2A_MSIL2A_20190213T050921_R019_T43PGQ_20201007T162011",
+        "scl_class_pct_inside_boundary": {
+          "dark area": 0.636,
+          "cloud shadow": 0.086,
+          "vegetation": 14.29,
+          "not vegetated": 82.784,
+          "water": 1.05,
+          "unclassified": 1.042,
+          "cloud medium prob": 0.069,
+          "cloud high prob": 0.042
+        },
+        "masked_pct_inside_boundary": 0.198,
+        "sanity_median_B08_on_SCL_water": 0.0236,
+        "sanity_median_B04_inside": 0.1244
+      },
+      "2026": {
+        "id": "S2B_MSIL2A_20260211T050839_R019_T43PGQ_20260211T085923",
+        "datetime": "2026-02-11T05:08:39.024000Z",
+        "platform": "Sentinel-2B",
+        "mgrs_tile": "43PGQ",
+        "relative_orbit": 19,
+        "processing_baseline": "05.12",
+        "tile_cloud_cover_pct": 0.001801,
+        "reflectance_offset_applied": -1000,
+        "stac_item_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-2-l2a/items/S2B_MSIL2A_20260211T050839_R019_T43PGQ_20260211T085923",
+        "scl_class_pct_inside_boundary": {
+          "dark area": 0.136,
+          "vegetation": 9.477,
+          "not vegetated": 87.814,
+          "water": 2.023,
+          "unclassified": 0.549,
+          "thin cirrus": 0.0
+        },
+        "masked_pct_inside_boundary": 0.0,
+        "sanity_median_B08_on_SCL_water": 0.0341,
+        "sanity_median_B04_inside": 0.1326
+      }
+    }
+  },
+  "method": {
+    "grid": "EPSG:32643, 10.0 m pixels; 10 m bands nearest-neighbour, B11 (20 m) bilinear-resampled to 10 m, SCL (20 m) nearest",
+    "reflectance": "L2A DN/10000 after adding BOA_ADD_OFFSET (-1000 for processing baseline >= 04.00, i.e. the 2026 scene; 0 for the 2019 reprocessed baseline 02.12 scene)",
+    "cloud_mask": "SCL classes excluded: ['no data', 'saturated/defective', 'cloud shadow', 'cloud medium prob', 'cloud high prob', 'thin cirrus']. Areas are counted only on pixels valid in BOTH scenes inside the boundary.",
+    "thresholds": {
+      "vegetation": "NDVI = (B08-B04)/(B08+B04) > 0.4",
+      "open_water_headline": "MNDWI = (B03-B11)/(B03+B11) > 0  (Xu 2006, modified NDWI using SWIR)",
+      "open_water_secondary": "NDWI = (B03-B08)/(B03+B08) > 0  (McFeeters 1996), reported for comparison only",
+      "builtup_bare_proxy": "NDBI = (B11-B08)/(B11+B08) > 0 AND NDVI < 0.2 AND not MNDWI water. A PROXY: also catches bare soil, dry fields, cleared plots, quarries, rock"
+    },
+    "pixel_area_ha": 0.01,
+    "comparison_area_ha": 25099.2,
+    "comparison_area_pct_of_boundary": 99.8,
+    "note_categories": "Categories are independent thresholds; a pixel can be in none of them (e.g. NDVI 0.2-0.4 sparse vegetation/mixed pixels). They do not sum to 100%."
+  },
+  "results_inside_boundary": {
+    "by_year": {
+      "2019": {
+        "vegetation_ndvi_gt_0.4": {
+          "ha": 7262.9,
+          "pct": 28.94
+        },
+        "open_water_mndwi_gt_0": {
+          "ha": 382.6,
+          "pct": 1.52
+        },
+        "open_water_ndwi_mcfeeters_gt_0_secondary": {
+          "ha": 358.1,
+          "pct": 1.43
+        },
+        "builtup_bare_proxy": {
+          "ha": 8175.6,
+          "pct": 32.57
+        }
+      },
+      "2026": {
+        "vegetation_ndvi_gt_0.4": {
+          "ha": 6515.3,
+          "pct": 25.96
+        },
+        "open_water_mndwi_gt_0": {
+          "ha": 665.4,
+          "pct": 2.65
+        },
+        "open_water_ndwi_mcfeeters_gt_0_secondary": {
+          "ha": 518.4,
+          "pct": 2.07
+        },
+        "builtup_bare_proxy": {
+          "ha": 7978.4,
+          "pct": 31.79
+        }
+      }
+    },
+    "net_change_2019_to_2026": {
+      "vegetation_ndvi_gt_0.4": {
+        "ha_change": -747.6,
+        "pct_point_change": -2.98,
+        "relative_change_pct": -10.3
+      },
+      "open_water_mndwi_gt_0": {
+        "ha_change": 282.8,
+        "pct_point_change": 1.13,
+        "relative_change_pct": 73.9
+      },
+      "open_water_ndwi_mcfeeters_gt_0_secondary": {
+        "ha_change": 160.3,
+        "pct_point_change": 0.64,
+        "relative_change_pct": 44.8
+      },
+      "builtup_bare_proxy": {
+        "ha_change": -197.2,
+        "pct_point_change": -0.78,
+        "relative_change_pct": -2.4
+      }
+    },
+    "gross_pixel_transitions": {
+      "vegetation_lost_ha": 3257.1,
+      "vegetation_gained_ha": 2509.5,
+      "water_lost_ha": 196.8,
+      "water_gained_ha": 479.6,
+      "builtup_proxy_new_ha": 3452.8,
+      "builtup_proxy_no_longer_ha": 3650.0,
+      "of_new_builtup_proxy_was_vegetation_2019_ha": 1048.7
+    }
+  },
+  "lakes_osm": {
+    "query": "Overpass API: way/relation natural=water with a name tag, inside the boundary polygon",
+    "note": "Overpass endpoint https://overpass-api.de/api/interpreter, queried 2026-11-16T21:18:25Z; response cached in data/osm_named_water.json and reused. Water ha = pixels with MNDWI>0 inside the OSM outline (clipped to the boundary). Lakes covered by weeds (e.g. water hyacinth) count as vegetation, not water. OSM outlines are volunteer-drawn and current-day.",
+    "lakes": [
+      {
+        "name": "Bellandur Lake",
+        "osm_ids": [
+          "relation/19751547"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 231.87,
+        "osm_polygon_ha_total": 315.36,
+        "pixels": 23188,
+        "boundary_flag": "Lake straddles the polygon edge; only the part inside the DataMeet polygon is counted.",
+        "water_ha_2019": 86.0,
+        "vegetation_ha_2019": 142.7,
+        "valid_pct_2019": 99.8,
+        "water_ha_2026": 41.6,
+        "vegetation_ha_2026": 77.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -44.4
+      },
+      {
+        "name": "Varthur Lake",
+        "osm_ids": [
+          "relation/19306126"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 154.32,
+        "osm_polygon_ha_total": 154.32,
+        "pixels": 15435,
+        "water_ha_2019": 40.3,
+        "vegetation_ha_2019": 110.8,
+        "valid_pct_2019": 99.8,
+        "water_ha_2026": 90.3,
+        "vegetation_ha_2026": 54.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 50.0
+      },
+      {
+        "name": "Yellamallappa Chetty Lake",
+        "osm_ids": [
+          "way/28091209"
+        ],
+        "water_tag": [],
+        "osm_polygon_ha_inside_boundary": 93.08,
+        "osm_polygon_ha_total": 137.74,
+        "pixels": 9310,
+        "boundary_flag": "Near the K.R. Puram / Mahadevapura edge; inclusion depends on the approximate DataMeet boundary.",
+        "water_ha_2019": 53.0,
+        "vegetation_ha_2019": 34.5,
+        "valid_pct_2019": 97.9,
+        "water_ha_2026": 52.0,
+        "vegetation_ha_2026": 40.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -1.0
+      },
+      {
+        "name": "Hosakote lake",
+        "osm_ids": [
+          "way/41667728"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 80.24,
+        "osm_polygon_ha_total": 307.3,
+        "pixels": 8027,
+        "boundary_flag": "OSM name suggests Hoskote (Bengaluru Rural district, outside the city); its presence inside the polygon may reflect the DataMeet boundary shift. Verify against the official ECI/CEO Karnataka map before citing.",
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 13.6,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 13.9,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "Ramapura Kere",
+        "osm_ids": [
+          "relation/19353942"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 42.05,
+        "osm_polygon_ha_total": 51.79,
+        "pixels": 4214,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 41.8,
+        "valid_pct_2019": 99.7,
+        "water_ha_2026": 37.9,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 37.9
+      },
+      {
+        "name": "Dodda Gubbi Kere",
+        "osm_ids": [
+          "way/35927597"
+        ],
+        "water_tag": [],
+        "osm_polygon_ha_inside_boundary": 38.54,
+        "osm_polygon_ha_total": 38.54,
+        "pixels": 3857,
+        "water_ha_2019": 0.5,
+        "vegetation_ha_2019": 18.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 29.1,
+        "vegetation_ha_2026": 2.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 28.6
+      },
+      {
+        "name": "Doddanekundi Lake",
+        "osm_ids": [
+          "relation/20742762"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 36.69,
+        "osm_polygon_ha_total": 36.69,
+        "pixels": 3670,
+        "water_ha_2019": 0.3,
+        "vegetation_ha_2019": 32.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 32.0,
+        "vegetation_ha_2026": 0.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 31.7
+      },
+      {
+        "name": "Bidarahalli Lake",
+        "osm_ids": [
+          "way/35927607"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 24.78,
+        "osm_polygon_ha_total": 24.78,
+        "pixels": 2471,
+        "water_ha_2019": 0.9,
+        "vegetation_ha_2019": 7.0,
+        "valid_pct_2019": 94.5,
+        "water_ha_2026": 5.9,
+        "vegetation_ha_2026": 9.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 5.0
+      },
+      {
+        "name": "Halanayakanahalli Lake",
+        "osm_ids": [
+          "way/1069600852"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 24.27,
+        "osm_polygon_ha_total": 24.27,
+        "pixels": 2430,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 5.7,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 5.2,
+        "vegetation_ha_2026": 16.4,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 5.2
+      },
+      {
+        "name": "Gunjuru Lake",
+        "osm_ids": [
+          "way/148216683"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 20.61,
+        "osm_polygon_ha_total": 20.61,
+        "pixels": 2063,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 7.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 0.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "Chikka Bellanduru Lake",
+        "osm_ids": [
+          "way/27993463"
+        ],
+        "water_tag": [],
+        "osm_polygon_ha_inside_boundary": 20.25,
+        "osm_polygon_ha_total": 20.25,
+        "pixels": 2033,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 4.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 3.1,
+        "vegetation_ha_2026": 12.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 3.1
+      },
+      {
+        "name": "Kannuru Lake",
+        "osm_ids": [
+          "relation/17368637"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 19.13,
+        "osm_polygon_ha_total": 19.13,
+        "pixels": 1914,
+        "water_ha_2019": 0.1,
+        "vegetation_ha_2019": 12.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.1,
+        "vegetation_ha_2026": 17.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "Kaikondrahalli Lake",
+        "osm_ids": [
+          "relation/6820030"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 16.54,
+        "osm_polygon_ha_total": 16.54,
+        "pixels": 1650,
+        "water_ha_2019": 6.2,
+        "vegetation_ha_2019": 10.7,
+        "valid_pct_2019": 78.4,
+        "water_ha_2026": 12.2,
+        "vegetation_ha_2026": 15.4,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 6.0
+      },
+      {
+        "name": "Saul Kere",
+        "osm_ids": [
+          "way/350098022"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 16.53,
+        "osm_polygon_ha_total": 16.53,
+        "pixels": 1659,
+        "water_ha_2019": 0.2,
+        "vegetation_ha_2019": 6.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 8.0,
+        "vegetation_ha_2026": 7.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 7.8
+      },
+      {
+        "name": "Kodigehalli Lake",
+        "osm_ids": [
+          "relation/16071328"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 15.41,
+        "osm_polygon_ha_total": 15.41,
+        "pixels": 1539,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.5,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 12.4,
+        "vegetation_ha_2026": 0.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 12.4
+      },
+      {
+        "name": "Gunjuru Palya Lake",
+        "osm_ids": [
+          "way/1088209009"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 12.84,
+        "osm_polygon_ha_total": 12.84,
+        "pixels": 1281,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 5.9,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 3.6,
+        "vegetation_ha_2026": 6.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 3.6
+      },
+      {
+        "name": "Kasavanahalli Lake",
+        "osm_ids": [
+          "way/62381586"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 12.69,
+        "osm_polygon_ha_total": 12.69,
+        "pixels": 1265,
+        "water_ha_2019": 7.5,
+        "vegetation_ha_2019": 1.4,
+        "valid_pct_2019": 99.4,
+        "water_ha_2026": 11.7,
+        "vegetation_ha_2026": 0.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 4.2
+      },
+      {
+        "name": "Lal Bahadur Shastri Nagar Lake",
+        "osm_ids": [
+          "relation/8250847"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 11.15,
+        "osm_polygon_ha_total": 11.15,
+        "pixels": 1111,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 1.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 4.0,
+        "vegetation_ha_2026": 1.9,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 4.0
+      },
+      {
+        "name": "Chikkabelanduru Kere",
+        "osm_ids": [
+          "way/1062555441"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 10.78,
+        "osm_polygon_ha_total": 10.78,
+        "pixels": 1076,
+        "water_ha_2019": 0.1,
+        "vegetation_ha_2019": 2.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.9,
+        "vegetation_ha_2026": 6.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.8
+      },
+      {
+        "name": "Nallurahalli Lake",
+        "osm_ids": [
+          "way/130111880"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 8.86,
+        "osm_polygon_ha_total": 8.86,
+        "pixels": 888,
+        "water_ha_2019": 5.8,
+        "vegetation_ha_2019": 2.6,
+        "valid_pct_2019": 99.5,
+        "water_ha_2026": 5.5,
+        "vegetation_ha_2026": 0.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -0.3
+      },
+      {
+        "name": "Manduru Lake",
+        "osm_ids": [
+          "way/1092941890"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 8.46,
+        "osm_polygon_ha_total": 8.46,
+        "pixels": 847,
+        "water_ha_2019": 0.6,
+        "vegetation_ha_2019": 5.7,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 6.5,
+        "vegetation_ha_2026": 1.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 5.9
+      },
+      {
+        "name": "Haralur Lake",
+        "osm_ids": [
+          "way/111563782"
+        ],
+        "water_tag": [],
+        "osm_polygon_ha_inside_boundary": 7.94,
+        "osm_polygon_ha_total": 7.94,
+        "pixels": 795,
+        "water_ha_2019": 1.1,
+        "vegetation_ha_2019": 1.0,
+        "valid_pct_2019": 56.7,
+        "water_ha_2026": 6.9,
+        "vegetation_ha_2026": 0.4,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 5.8
+      },
+      {
+        "name": "Hoodi Lake",
+        "osm_ids": [
+          "way/33300618"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 7.69,
+        "osm_polygon_ha_total": 7.69,
+        "pixels": 768,
+        "water_ha_2019": 6.0,
+        "vegetation_ha_2019": 7.2,
+        "valid_pct_2019": 95.3,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 2.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -6.0
+      },
+      {
+        "name": "Cheemasandra Lake",
+        "osm_ids": [
+          "way/1298349248"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 7.61,
+        "osm_polygon_ha_total": 7.61,
+        "pixels": 758,
+        "water_ha_2019": 3.7,
+        "vegetation_ha_2019": 1.1,
+        "valid_pct_2019": 96.3,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 6.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -3.7
+      },
+      {
+        "name": "Mahadevapura Lake",
+        "osm_ids": [
+          "relation/17426667"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 7.53,
+        "osm_polygon_ha_total": 7.53,
+        "pixels": 755,
+        "water_ha_2019": 3.9,
+        "vegetation_ha_2019": 0.3,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 6.2,
+        "vegetation_ha_2026": 1.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.3
+      },
+      {
+        "name": "Kundalahalli Lake",
+        "osm_ids": [
+          "way/120904870"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 7.5,
+        "osm_polygon_ha_total": 7.5,
+        "pixels": 751,
+        "water_ha_2019": 2.8,
+        "vegetation_ha_2019": 0.4,
+        "valid_pct_2019": 87.9,
+        "water_ha_2026": 5.9,
+        "vegetation_ha_2026": 1.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 3.1
+      },
+      {
+        "name": "Doddakannelli Lake",
+        "osm_ids": [
+          "relation/17083906"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 7.03,
+        "osm_polygon_ha_total": 7.03,
+        "pixels": 700,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 5.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 5.8,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 5.8
+      },
+      {
+        "name": "Thubarahalli Lake",
+        "osm_ids": [
+          "relation/14671536"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 7.0,
+        "osm_polygon_ha_total": 7.0,
+        "pixels": 695,
+        "water_ha_2019": 3.8,
+        "vegetation_ha_2019": 1.6,
+        "valid_pct_2019": 85.0,
+        "water_ha_2026": 4.1,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.3
+      },
+      {
+        "name": "Sulakunte Lake",
+        "osm_ids": [
+          "way/1092680601"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 6.88,
+        "osm_polygon_ha_total": 6.88,
+        "pixels": 687,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.1,
+        "vegetation_ha_2026": 1.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.1
+      },
+      {
+        "name": "Hadosiddapura Lake",
+        "osm_ids": [
+          "way/477154739"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 6.06,
+        "osm_polygon_ha_total": 6.06,
+        "pixels": 606,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 3.3,
+        "vegetation_ha_2026": 0.8,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 3.3
+      },
+      {
+        "name": "Kodathi Kere",
+        "osm_ids": [
+          "way/1092680603"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 5.44,
+        "osm_polygon_ha_total": 5.44,
+        "pixels": 540,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 1.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 5.4,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "Nimbekaipura Lake",
+        "osm_ids": [
+          "way/185479477"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 4.58,
+        "osm_polygon_ha_total": 4.58,
+        "pixels": 459,
+        "water_ha_2019": 1.2,
+        "vegetation_ha_2019": 0.8,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.6,
+        "vegetation_ha_2026": 0.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.4
+      },
+      {
+        "name": "Pattandur Agrahara Lake",
+        "osm_ids": [
+          "way/866148184"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 4.53,
+        "osm_polygon_ha_total": 4.53,
+        "pixels": 445,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 4.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 3.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "Sheelavathana Kere",
+        "osm_ids": [
+          "way/45860708"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 4.47,
+        "osm_polygon_ha_total": 4.47,
+        "pixels": 449,
+        "water_ha_2019": 1.9,
+        "vegetation_ha_2019": 0.3,
+        "valid_pct_2019": 85.3,
+        "water_ha_2026": 3.3,
+        "vegetation_ha_2026": 4.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.4
+      },
+      {
+        "name": "Munekolala Lake",
+        "osm_ids": [
+          "relation/18077306"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 4.44,
+        "osm_polygon_ha_total": 4.44,
+        "pixels": 444,
+        "water_ha_2019": 1.6,
+        "vegetation_ha_2019": 4.0,
+        "valid_pct_2019": 95.5,
+        "water_ha_2026": 3.5,
+        "vegetation_ha_2026": 1.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.9
+      },
+      {
+        "name": "Panathuru Kere",
+        "osm_ids": [
+          "relation/17062035"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 4.16,
+        "osm_polygon_ha_total": 4.16,
+        "pixels": 420,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.7,
+        "vegetation_ha_2026": 0.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 2.7
+      },
+      {
+        "name": "Yerappanahalli Lake",
+        "osm_ids": [
+          "way/1226525966"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 4.12,
+        "osm_polygon_ha_total": 4.12,
+        "pixels": 412,
+        "water_ha_2019": 3.7,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 96.6,
+        "water_ha_2026": 2.9,
+        "vegetation_ha_2026": 0.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -0.8
+      },
+      {
+        "name": "Seetharampalya Lake",
+        "osm_ids": [
+          "relation/18077307"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 4.03,
+        "osm_polygon_ha_total": 4.03,
+        "pixels": 404,
+        "water_ha_2019": 1.3,
+        "vegetation_ha_2019": 3.5,
+        "valid_pct_2019": 96.0,
+        "water_ha_2026": 1.9,
+        "vegetation_ha_2026": 3.7,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.6
+      },
+      {
+        "name": "Hegondanahalli Lake",
+        "osm_ids": [
+          "way/1092680606"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 3.77,
+        "osm_polygon_ha_total": 4.81,
+        "pixels": 381,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 1.0,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.1,
+        "vegetation_ha_2026": 0.0,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.1
+      },
+      {
+        "name": "Deverabisanahalli Lake",
+        "osm_ids": [
+          "relation/17083842"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 3.74,
+        "osm_polygon_ha_total": 3.74,
+        "pixels": 372,
+        "water_ha_2019": 2.6,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.6,
+        "vegetation_ha_2026": 0.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "Katamanallur Lake",
+        "osm_ids": [
+          "way/193671225"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 3.73,
+        "osm_polygon_ha_total": 3.73,
+        "pixels": 375,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 3.0,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.6,
+        "vegetation_ha_2026": 3.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.6
+      },
+      {
+        "name": "Bhoganahalli Lake",
+        "osm_ids": [
+          "way/790389588"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 3.68,
+        "osm_polygon_ha_total": 3.68,
+        "pixels": 367,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 1.4,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.4
+      },
+      {
+        "name": "Bidare Agrahara Lake",
+        "osm_ids": [
+          "relation/19470051"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 3.59,
+        "osm_polygon_ha_total": 3.59,
+        "pixels": 356,
+        "water_ha_2019": 0.2,
+        "vegetation_ha_2019": 0.2,
+        "valid_pct_2019": 60.7,
+        "water_ha_2026": 1.6,
+        "vegetation_ha_2026": 2.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.4
+      },
+      {
+        "name": "Pattandur Agrahara Kunte",
+        "osm_ids": [
+          "way/122129754"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 3.55,
+        "osm_polygon_ha_total": 3.55,
+        "pixels": 354,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 1.7,
+        "valid_pct_2019": 50.3,
+        "water_ha_2026": 0.1,
+        "vegetation_ha_2026": 3.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.1
+      },
+      {
+        "name": "Kannamangala Lake",
+        "osm_ids": [
+          "way/1092941892"
+        ],
+        "water_tag": [
+          "reservoir"
+        ],
+        "osm_polygon_ha_inside_boundary": 3.49,
+        "osm_polygon_ha_total": 3.49,
+        "pixels": 352,
+        "water_ha_2019": 0.3,
+        "vegetation_ha_2019": 0.9,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 2.2,
+        "vegetation_ha_2026": 0.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.9
+      },
+      {
+        "name": "Ambalipura Upper Lake",
+        "osm_ids": [
+          "way/27993889"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 3.44,
+        "osm_polygon_ha_total": 3.44,
+        "pixels": 344,
+        "water_ha_2019": 1.0,
+        "vegetation_ha_2019": 1.5,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 2.3,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -1.0
+      },
+      {
+        "name": "Devara Kere",
+        "osm_ids": [
+          "way/1421748891"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 3.42,
+        "osm_polygon_ha_total": 3.42,
+        "pixels": 343,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.6,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "Chikka Gubbi Kere",
+        "osm_ids": [
+          "way/42857728"
+        ],
+        "water_tag": [],
+        "osm_polygon_ha_inside_boundary": 2.65,
+        "osm_polygon_ha_total": 2.65,
+        "pixels": 263,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.4,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.6,
+        "vegetation_ha_2026": 2.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.6
+      },
+      {
+        "name": "Prestige Tranquility Lake",
+        "osm_ids": [
+          "way/579281807"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 2.49,
+        "osm_polygon_ha_total": 2.49,
+        "pixels": 251,
+        "water_ha_2019": 1.4,
+        "vegetation_ha_2019": 0.2,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 2.5,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": -1.4
+      },
+      {
+        "name": "Chinnappanahalli Lake",
+        "osm_ids": [
+          "relation/6183523"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 2.26,
+        "osm_polygon_ha_total": 2.26,
+        "pixels": 227,
+        "water_ha_2019": 0.6,
+        "vegetation_ha_2019": 0.5,
+        "valid_pct_2019": 70.0,
+        "water_ha_2026": 1.6,
+        "vegetation_ha_2026": 2.2,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 1.0
+      },
+      {
+        "name": "Ambalipura Lower Lake",
+        "osm_ids": [
+          "way/232981265"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 2.2,
+        "osm_polygon_ha_total": 2.2,
+        "pixels": 219,
+        "water_ha_2019": 0.6,
+        "vegetation_ha_2019": 1.1,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.8,
+        "vegetation_ha_2026": 1.6,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.2
+      },
+      {
+        "name": "Carmelaram Lake",
+        "osm_ids": [
+          "way/27993527"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 2.09,
+        "osm_polygon_ha_total": 2.09,
+        "pixels": 207,
+        "water_ha_2019": 0.0,
+        "vegetation_ha_2019": 0.9,
+        "valid_pct_2019": 100.0,
+        "water_ha_2026": 0.0,
+        "vegetation_ha_2026": 0.1,
+        "valid_pct_2026": 100.0,
+        "water_ha_change": 0.0
+      },
+      {
+        "name": "Konadasapura lake",
+        "osm_ids": [
+          "way/870802287"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 1.51,
+        "osm_polygon_ha_total": 1.51,
+        "pixels": 152,
+        "note": "under 2 ha mapped area; too few 10 m pixels for a meaningful water estimate"
+      },
+      {
+        "name": "Goshala Lake",
+        "osm_ids": [
+          "relation/17426666"
+        ],
+        "water_tag": [],
+        "osm_polygon_ha_inside_boundary": 1.27,
+        "osm_polygon_ha_total": 1.27,
+        "pixels": 129,
+        "note": "under 2 ha mapped area; too few 10 m pixels for a meaningful water estimate"
+      },
+      {
+        "name": "Iblur Lake",
+        "osm_ids": [
+          "relation/3120373"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 1.2,
+        "osm_polygon_ha_total": 2.36,
+        "pixels": 121,
+        "note": "under 2 ha mapped area; too few 10 m pixels for a meaningful water estimate"
+      },
+      {
+        "name": "Garudacharpalya Lake",
+        "osm_ids": [
+          "way/95639129"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 1.1,
+        "osm_polygon_ha_total": 1.1,
+        "pixels": 109,
+        "note": "under 2 ha mapped area; too few 10 m pixels for a meaningful water estimate"
+      },
+      {
+        "name": "Panathur Chikka Kere",
+        "osm_ids": [
+          "relation/18077305"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 0.91,
+        "osm_polygon_ha_total": 0.91,
+        "pixels": 89,
+        "note": "under 2 ha mapped area; too few 10 m pixels for a meaningful water estimate"
+      },
+      {
+        "name": "Sulikunte Chikka Kere",
+        "osm_ids": [
+          "way/1421748910"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 0.44,
+        "osm_polygon_ha_total": 0.44,
+        "pixels": 43,
+        "note": "under 2 ha mapped area; too few 10 m pixels for a meaningful water estimate"
+      },
+      {
+        "name": "Leachate Pond",
+        "osm_ids": [
+          "way/412922538"
+        ],
+        "water_tag": [],
+        "osm_polygon_ha_inside_boundary": 0.21,
+        "osm_polygon_ha_total": 0.21,
+        "pixels": 19,
+        "note": "under 2 ha mapped area; too few 10 m pixels for a meaningful water estimate"
+      },
+      {
+        "name": "Kalkere Lake",
+        "osm_ids": [
+          "relation/17390865"
+        ],
+        "water_tag": [
+          "lake"
+        ],
+        "osm_polygon_ha_inside_boundary": 0.09,
+        "osm_polygon_ha_total": 48.65,
+        "pixels": 10,
+        "note": "under 2 ha mapped area; too few 10 m pixels for a meaningful water estimate"
+      },
+      {
+        "name": "Oracle Tech Hub Entrance Fountain",
+        "osm_ids": [
+          "way/688590268"
+        ],
+        "water_tag": [
+          "fishpond"
+        ],
+        "osm_polygon_ha_inside_boundary": 0.04,
+        "osm_polygon_ha_total": 0.04,
+        "pixels": 4,
+        "note": "under 2 ha mapped area; too few 10 m pixels for a meaningful water estimate"
+      },
+      {
+        "name": "Kalyani",
+        "osm_ids": [
+          "way/450307520",
+          "way/1243259765",
+          "way/1528352425"
+        ],
+        "water_tag": [
+          "pond",
+          "reservoir"
+        ],
+        "osm_polygon_ha_inside_boundary": 0.03,
+        "osm_polygon_ha_total": 0.03,
+        "pixels": 1,
+        "note": "under 2 ha mapped area; too few 10 m pixels for a meaningful water estimate"
+      }
+    ]
+  },
+  "outputs": [
+    "metrics.json",
+    "truecolor_2019_2026.png",
+    "change_map_2019_2026.png",
+    "METHOD.md",
+    "search_scenes.py",
+    "analyze.py",
+    "data/candidates.json",
+    "data/osm_named_water.json",
+    "data/boundary/mahadevapura_ac174.geojson"
+  ]
+}

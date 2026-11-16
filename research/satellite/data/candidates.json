@@ -1,0 +1,882 @@
+[
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190330T050659_R019_T43PHQ_20201105T111551",
+  "datetime": "2019-03-30T05:06:59.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.013656,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190330T050659_R019_T43PGQ_20201007T122704",
+  "datetime": "2019-03-30T05:06:59.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.019859,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0007586734507236027,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190325T050651_R019_T43PHQ_20201007T102327",
+  "datetime": "2019-03-25T05:06:51.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.025451,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190325T050651_R019_T43PGQ_20201007T102322",
+  "datetime": "2019-03-25T05:06:51.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.029033,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0014235067890935522,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190320T050649_R019_T43PHQ_20201007T084109",
+  "datetime": "2019-03-20T05:06:49.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.017601,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190320T050649_R019_T43PGQ_20201007T084110",
+  "datetime": "2019-03-20T05:06:49.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 1.093557,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.001189701763398857,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190315T050651_R019_T43PHQ_20201007T065105",
+  "datetime": "2019-03-15T05:06:51.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.039419,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190315T050651_R019_T43PGQ_20201007T065107",
+  "datetime": "2019-03-15T05:06:51.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.061027,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0020803875755691244,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190310T050649_R019_T43PHQ_20201007T051514",
+  "datetime": "2019-03-10T05:06:49.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 1.954771,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190310T050649_R019_T43PGQ_20201007T051513",
+  "datetime": "2019-03-10T05:06:49.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 17.439225,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0013010374899201404,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190305T050701_R019_T43PHQ_20201030T153335",
+  "datetime": "2019-03-05T05:07:01.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 9.174462,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190228T050739_R019_T43PHQ_20201007T213742",
+  "datetime": "2019-02-28T05:07:39.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 10.757595,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190228T050739_R019_T43PGQ_20201007T213740",
+  "datetime": "2019-02-28T05:07:39.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 7.939543,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.005741742467740473,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190223T050811_R019_T43PHQ_20201007T194337",
+  "datetime": "2019-02-23T05:08:11.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.113135,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190223T050811_R019_T43PGQ_20201007T194342",
+  "datetime": "2019-02-23T05:08:11.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 1.659904,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0014012396437892956,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190218T050849_R019_T43PHQ_20201007T180920",
+  "datetime": "2019-02-18T05:08:49.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 1.515589,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190218T050849_R019_T43PGQ_20201007T180919",
+  "datetime": "2019-02-18T05:08:49.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.080658,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.001013155111343679,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190213T050921_R019_T43PHQ_20201007T162016",
+  "datetime": "2019-02-13T05:09:21.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.044452,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190213T050921_R019_T43PGQ_20201007T162011",
+  "datetime": "2019-02-13T05:09:21.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.066927,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0019770044009422183,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190208T050959_R019_T43PHQ_20201007T150628",
+  "datetime": "2019-02-08T05:09:59.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.735721,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190208T050959_R019_T43PGQ_20201007T150627",
+  "datetime": "2019-02-08T05:09:59.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 9.256828,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.017290438328755313,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190203T051021_R019_T43PHQ_20201007T133422",
+  "datetime": "2019-02-03T05:10:21.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.643711,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190203T051021_R019_T43PGQ_20201007T133419",
+  "datetime": "2019-02-03T05:10:21.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 7.258989,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.011507342591164078,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190124T051111_R019_T43PHQ_20201008T040918",
+  "datetime": "2019-01-24T05:11:11.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 1.637878,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190124T051111_R019_T43PGQ_20201008T040921",
+  "datetime": "2019-01-24T05:11:11.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 2.939154,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0077171563583038165,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190119T051129_R019_T43PHQ_20201008T025359",
+  "datetime": "2019-01-19T05:11:29.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.512679,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190119T051129_R019_T43PGQ_20201008T025359",
+  "datetime": "2019-01-19T05:11:29.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.476881,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0019706423594267166,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190114T051151_R019_T43PGQ_20201008T012358",
+  "datetime": "2019-01-14T05:11:51.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 5.694808,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.1977608794886191,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190109T051209_R019_T43PHQ_20201008T000902",
+  "datetime": "2019-01-09T05:12:09.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.567357,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2B_MSIL2A_20190109T051209_R019_T43PGQ_20201008T000902",
+  "datetime": "2019-01-09T05:12:09.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.133785,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.004575898360024748,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190104T051211_R019_T43PHQ_20201007T223836",
+  "datetime": "2019-01-04T05:12:11.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.113311,
+  "baseline": "02.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2019,
+  "id": "S2A_MSIL2A_20190104T051211_R019_T43PGQ_20201007T223838",
+  "datetime": "2019-01-04T05:12:11.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.295894,
+  "baseline": "02.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0032700893389679816,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2C_MSIL2A_20260328T050651_R019_T43PHQ_20260328T102419",
+  "datetime": "2026-03-28T05:06:51.025000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 1.162212,
+  "baseline": "05.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2C_MSIL2A_20260328T050651_R019_T43PGQ_20260328T102419",
+  "datetime": "2026-03-28T05:06:51.025000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 4.656644,
+  "baseline": "05.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.05783413839667011,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2B_MSIL2A_20260323T050649_R019_T43PHQ_20260323T091003",
+  "datetime": "2026-03-23T05:06:49.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.238135,
+  "baseline": "05.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2B_MSIL2A_20260323T050649_R019_T43PGQ_20260323T091003",
+  "datetime": "2026-03-23T05:06:49.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 2.642392,
+  "baseline": "05.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0288168670444659,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2A_MSIL2A_20260320T051241_R019_T43PHQ_20260320T102809",
+  "datetime": "2026-03-20T05:12:41.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 10.846023,
+  "baseline": "05.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2A_MSIL2A_20260320T051241_R019_T43PGQ_20260320T102809",
+  "datetime": "2026-03-20T05:12:41.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 13.12083,
+  "baseline": "05.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.4514536469607732,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2B_MSIL2A_20260313T050649_R019_T43PHQ_20260313T091002",
+  "datetime": "2026-03-13T05:06:49.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 4.330301,
+  "baseline": "05.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2B_MSIL2A_20260313T050649_R019_T43PGQ_20260313T091002",
+  "datetime": "2026-03-13T05:06:49.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.116109,
+  "baseline": "05.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.003328938222986374,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2A_MSIL2A_20260310T051241_R019_T43PHQ_20260310T105217",
+  "datetime": "2026-03-10T05:12:41.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 4.388516,
+  "baseline": "05.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2A_MSIL2A_20260310T051241_R019_T43PGQ_20260310T105217",
+  "datetime": "2026-03-10T05:12:41.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.020798,
+  "baseline": "05.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2C_MSIL2A_20260308T050651_R019_T43PHQ_20260308T101312",
+  "datetime": "2026-03-08T05:06:51.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.240185,
+  "baseline": "05.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2C_MSIL2A_20260308T050651_R019_T43PGQ_20260308T101312",
+  "datetime": "2026-03-08T05:06:51.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 2.401468,
+  "baseline": "05.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2B_MSIL2A_20260303T050649_R019_T43PHQ_20260303T101734",
+  "datetime": "2026-03-03T05:06:49.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.002933,
+  "baseline": "05.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2B_MSIL2A_20260303T050649_R019_T43PGQ_20260303T101734",
+  "datetime": "2026-03-03T05:06:49.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.006865,
+  "baseline": "05.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2C_MSIL2A_20260226T050801_R019_T43PHQ_20260226T101013",
+  "datetime": "2026-02-26T05:08:01.025000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 6.417895,
+  "baseline": "05.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2C_MSIL2A_20260216T050911_R019_T43PGQ_20260216T100811",
+  "datetime": "2026-02-16T05:09:11.025000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 6.201909,
+  "baseline": "05.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.3662913592342647,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2B_MSIL2A_20260211T050839_R019_T43PHQ_20260211T085923",
+  "datetime": "2026-02-11T05:08:39.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 11.607075,
+  "baseline": "05.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2B_MSIL2A_20260211T050839_R019_T43PGQ_20260211T085923",
+  "datetime": "2026-02-11T05:08:39.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.001801,
+  "baseline": "05.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 1.5905103788754774e-06,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2C_MSIL2A_20260206T051011_R019_T43PHQ_20260206T101110",
+  "datetime": "2026-02-06T05:10:11.025000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.047691,
+  "baseline": "05.12",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2C_MSIL2A_20260206T051011_R019_T43PGQ_20260206T101110",
+  "datetime": "2026-02-06T05:10:11.025000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.000289,
+  "baseline": "05.12",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2B_MSIL2A_20260201T050929_R019_T43PHQ_20260201T085208",
+  "datetime": "2026-02-01T05:09:29.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.307401,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2B_MSIL2A_20260201T050929_R019_T43PGQ_20260201T085208",
+  "datetime": "2026-02-01T05:09:29.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.000253,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 1.5905103788754774e-06,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2C_MSIL2A_20260127T051101_R019_T43PHQ_20260127T095309",
+  "datetime": "2026-01-27T05:11:01.025000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 15.357342,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2C_MSIL2A_20260127T051101_R019_T43PGQ_20260127T095309",
+  "datetime": "2026-01-27T05:11:01.025000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.881836,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2B_MSIL2A_20260122T051019_R019_T43PHQ_20260122T084749",
+  "datetime": "2026-01-22T05:10:19.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.855146,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2B_MSIL2A_20260122T051019_R019_T43PGQ_20260122T084749",
+  "datetime": "2026-01-22T05:10:19.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.000664,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 1.5905103788754774e-06,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2C_MSIL2A_20260117T051141_R019_T43PHQ_20260117T081509",
+  "datetime": "2026-01-17T05:11:41.025000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.321389,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2C_MSIL2A_20260117T051141_R019_T43PGQ_20260117T081509",
+  "datetime": "2026-01-17T05:11:41.025000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.073325,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 1.5905103788754774e-06,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2026,
+  "id": "S2C_MSIL2A_20260107T051211_R019_T43PHQ_20260107T082109",
+  "datetime": "2026-01-07T05:12:11.025000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 1.415002,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2026,
+  "id": "S2C_MSIL2A_20260107T051211_R019_T43PGQ_20260107T082109",
+  "datetime": "2026-01-07T05:12:11.025000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.054555,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250328T050659_R019_T43PHQ_20250328T075231",
+  "datetime": "2025-03-28T05:06:59.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 14.34065,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250328T050659_R019_T43PGQ_20250328T075231",
+  "datetime": "2025-03-28T05:06:59.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 17.292337,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.002513006398623254,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250318T050659_R019_T43PGQ_20250318T080831",
+  "datetime": "2025-03-18T05:06:59.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 3.84283,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.006088473730335327,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2025,
+  "id": "S2A_MSIL2A_20250315T051241_R019_T43PHQ_20250315T113317",
+  "datetime": "2025-03-15T05:12:41.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.000173,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2025,
+  "id": "S2A_MSIL2A_20250315T051241_R019_T43PGQ_20250315T113317",
+  "datetime": "2025-03-15T05:12:41.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.000289,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2025,
+  "id": "S2C_MSIL2A_20250313T050711_R019_T43PHQ_20250313T102208",
+  "datetime": "2025-03-13T05:07:11.025000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 11.960063,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2025,
+  "id": "S2C_MSIL2A_20250313T050711_R019_T43PGQ_20250313T102208",
+  "datetime": "2025-03-13T05:07:11.025000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 3.618279,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250308T050659_R019_T43PHQ_20250308T072151",
+  "datetime": "2025-03-08T05:06:59.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 2e-05,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250308T050659_R019_T43PGQ_20250308T072151",
+  "datetime": "2025-03-08T05:06:59.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.081327,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0003308261588060993,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250226T050659_R019_T43PHQ_20250226T071341",
+  "datetime": "2025-02-26T05:06:59.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.010584,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250226T050659_R019_T43PGQ_20250226T071341",
+  "datetime": "2025-02-26T05:06:59.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.000372,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2025,
+  "id": "S2C_MSIL2A_20250221T050851_R019_T43PHQ_20250221T120413",
+  "datetime": "2025-02-21T05:08:51.025000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 2.7e-05,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2025,
+  "id": "S2C_MSIL2A_20250221T050851_R019_T43PGQ_20250221T120413",
+  "datetime": "2025-02-21T05:08:51.025000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.000654,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250216T050809_R019_T43PHQ_20250216T073441",
+  "datetime": "2025-02-16T05:08:09.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.000478,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250216T050809_R019_T43PGQ_20250216T073441",
+  "datetime": "2025-02-16T05:08:09.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.000141,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2025,
+  "id": "S2C_MSIL2A_20250211T051001_R019_T43PHQ_20250211T102211",
+  "datetime": "2025-02-11T05:10:01.025000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.001155,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2025,
+  "id": "S2C_MSIL2A_20250211T051001_R019_T43PGQ_20250211T102211",
+  "datetime": "2025-02-11T05:10:01.025000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 0.001635,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 2.2267145304256683e-05,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250206T050909_R019_T43PHQ_20250206T071445",
+  "datetime": "2025-02-06T05:09:09.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.000212,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250206T050909_R019_T43PGQ_20250206T071445",
+  "datetime": "2025-02-06T05:09:09.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 9.8e-05,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 1.5905103788754774e-06,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2025,
+  "id": "S2C_MSIL2A_20250201T051101_R019_T43PHQ_20250201T095810",
+  "datetime": "2025-02-01T05:11:01.025000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 9.494909,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250127T051009_R019_T43PHQ_20250127T075517",
+  "datetime": "2025-01-27T05:10:09.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 0.179412,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250127T051009_R019_T43PGQ_20250127T075517",
+  "datetime": "2025-01-27T05:10:09.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 4.030059,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 1.5905103788754774e-06,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2025,
+  "id": "S2A_MSIL2A_20250112T051151_R019_T43PHQ_20250112T082206",
+  "datetime": "2025-01-12T05:11:51.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 6.121051,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2025,
+  "id": "S2A_MSIL2A_20250112T051151_R019_T43PGQ_20250112T082206",
+  "datetime": "2025-01-12T05:11:51.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 3.099342,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 1.5905103788754774e-06,
+  "poly_nodata_frac": 0.0
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250107T051119_R019_T43PHQ_20250107T080132",
+  "datetime": "2025-01-07T05:11:19.024000Z",
+  "tile": "43PHQ",
+  "tile_cloud_pct": 12.041314,
+  "baseline": "05.11",
+  "covers_polygon": false
+ },
+ {
+  "year": 2025,
+  "id": "S2B_MSIL2A_20250107T051119_R019_T43PGQ_20250107T080132",
+  "datetime": "2025-01-07T05:11:19.024000Z",
+  "tile": "43PGQ",
+  "tile_cloud_pct": 1.233824,
+  "baseline": "05.11",
+  "covers_polygon": true,
+  "poly_bad_frac": 0.0,
+  "poly_nodata_frac": 0.0
+ }
+]
