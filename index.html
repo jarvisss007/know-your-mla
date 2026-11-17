@@ -965,10 +965,10 @@ document.querySelectorAll('.rticp').forEach(b => b.addEventListener('click', () 
   ['jtext', 'jftext'].forEach(id => $j(id).addEventListener('input', update)); $j('jdist').addEventListener('change', update);
   document.querySelectorAll('[data-send]').forEach(b => b.addEventListener('click', () => { const m = msg(b.dataset.send); if (m) window.open(url(m), '_blank', 'noopener') }));
   document.querySelectorAll('[data-gh]').forEach(b => b.addEventListener('click', () => { const m = msg(b.dataset.gh); if (m) window.open(gh(m), '_blank', 'noopener') }));
-  $j('jac').addEventListener('change', () => { const c = $j('jac').value, r = $j('jacres'); if (!c) { r.hidden = true; return }
+  $j('jac').addEventListener('change', () => { const c = $j('jac').value, r = $j('jacres'), base = c.replace(/\s*\((SC|ST)\)$/, ''); if (!c) { r.hidden = true; return }
     r.hidden = false;
     const k = lang === 'kn';
-    if (DONE[c]) r.innerHTML = k ? `${c} ಮುಗಿದಿದೆ. <a href="${DONE[c]}">ಉಪಗ್ರಹ ಚಿತ್ರ ನೋಡಿ →</a>` : `${c} is done. <a href="${DONE[c]}">See ${c} from space →</a>`;
+    if (DONE[base]) r.innerHTML = k ? `${c} ಮುಗಿದಿದೆ. <a href="${DONE[base]}">ಉಪಗ್ರಹ ಚಿತ್ರ ನೋಡಿ →</a>` : `${c} is done. <a href="${DONE[base]}">See ${c} from space →</a>`;
     else { const m = msg('space'); r.innerHTML = k ? `${c} ಇನ್ನೂ ಆಗಿಲ್ಲ. <a href="${url(m)}" target="_blank" rel="noopener">${c} ಮಾಡಲು ಕೇಳಿ →</a> <span class="fine">(ಚಿಕ್ಕ ಫಾರ್ಮ್, ಖಾತೆ ಬೇಕಿಲ್ಲ)</span>`
       : `${c} is not done yet. <a href="${url(m)}" target="_blank" rel="noopener">Ask for ${c} →</a> <span class="fine">(opens a short form, no account needed)</span>`; } });
   const SH = [['Find your MLA', 'See what your MLA swore about their wealth and criminal cases', SITE],

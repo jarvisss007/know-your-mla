@@ -147,7 +147,7 @@ def page(d):
     paid = rd.get(("claims_paid_cr", "2020-21 to 2024-25 (cumulative)"))
     if rep and paid:
         ctx.append(f'<li><b>Crop insurance, 2020-21 to 2024-25:</b> claims of ₹{float(rep["value"]):,.2f} crore were reported for farmers in {E(dist)} and ₹{float(paid["value"]):,.2f} crore paid, by 31 Dec 2025. <a href="{E(paid["source_url"])}" target="_blank" rel="noopener">Lok Sabha answer, 3 Feb 2026</a></li>')
-    sat = SAT.get(c)
+    sat = SAT.get(re.sub(r"\s*\((SC|ST)\)$", "", c))
     sat_html = (f'<p><b>From space:</b> {E(c)} has been compared in satellite pictures from 2019 and 2026. <a href="../reports/satellite/{sat}/">See {E(c)} from space →</a></p>' if sat else
                 f'<p><b>From space:</b> {E(c)} has not been checked in satellite pictures yet. <a href="{E(form("Check my constituency from space", dist, c, "Please compare " + c + " from space next."))}" target="_blank" rel="noopener">Ask for {E(c)} →</a> <span class="fine">(short form, no account needed)</span></p>')
     nn = norm(n)
