@@ -1,6 +1,6 @@
 # DRAFT share posts: RTI letters and Follow the rupee (17 Nov 2026)
 
-Not posted. The owner approves each post before it goes anywhere (CHANNEL_OPS rule). Every number below is on the linked page with its source. X posts are under 280 characters counting each link as 23.
+POSTED on X (@anupam00720), 17 Nov 2026, on the owner's instruction: section 1 "X (English)" and section 2 "X (English)" (64 / 55 rechecked against the tracker that day). Everything else here is not posted. The owner approves each post before it goes anywhere (CHANNEL_OPS rule). Every number below is on the linked page with its source. X posts are under 280 characters counting each link as 23.
 
 Links:
 - RTI letters: https://jarvisss007.github.io/know-your-mla/rti.html (Kannada: https://jarvisss007.github.io/know-your-mla/rti.html#kn)
