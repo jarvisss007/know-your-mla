@@ -102,3 +102,10 @@ From SFAR 2024-25 (page images checked: PDF pages 177-180):
 - KRIDL: Rs 238.89 cr interest on scheme funds in flexi deposits 2018-21 not credited (KRIDL PA para 2.3, checked); funds available Rs 17,320.30 cr end 2020-21 (receipts less adjustments, not a bank balance).
 - State response: Oct 2024 circular, 30% of bank savings at 31 Mar 2024 as "Special Dividend"; Rs 970.02 cr collected 2024-25 vs Rs 284.88 cr (SFAR 2024-25, checked). Which companies paid: not stated. SFAR 2024-25 has no unremitted-interest paragraph.
 - KNNL balances: no public figure found (websites unreachable; AOC-4 via MCA not seen). KNNL off-budget loans outstanding Rs 2,128.28 cr at 31 Mar 2025 (SFAR 2024-25 Table 3.1, per agent; not rechecked).
+
+## Books that do not match (SFAR 2024-25 pp. 98-100, page images checked 17 Nov 2026)
+
+- PD balances over Rs 100 cr (Table 3.8): SLAO SCR Project 1,035.80; SLAO Kabini 602.37; SLAO Chitradurga 283.06; SLAO Mandya 166.04 (four SLAOs 2,087.27); AC under Revenue 332.73; DCs 8,390.66; KMERC 22,115.31; ACS Urban Development 1,641.20; KKRDB 755.21.
+- Adverse PD balances Rs 1,911.92 cr (para 3.5(b), App. 3.2); state reply Jan 2026: inoperative accounts not closed due to non-reconciliation AG(A&E) vs Treasury.
+- Minor Head 800: Rs 7,588.39 cr (2.25%) under 31 major heads; Rs 2,532.53 cr misclassified (Table 3.9: 2210 1,729.18; 2216 266.99; 2217 4.40; 4701 531.96).
+- Suspense (Table 3.11): Public Works Remittances Dr 82.61 (2023-24) to Dr 964.68 (2024-25); TDS suspense Cr 793.95.
