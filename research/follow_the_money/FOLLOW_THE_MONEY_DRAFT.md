@@ -86,3 +86,11 @@ From SFAR 2024-25 (page images checked: PDF pages 177-180):
 - Mismatch: Table 2.23 says the Rs 412 cr is "in the bank accounts of the Corporations"; Appendix 2.16 lists Rs 5.24 cr for three of the four (Vokkaliga 1.72, Veerashaiva-Lingayath 1.68, Maratha 1.84) and no account for Kadugolla.
 - Appendix 2.15: Q4 releases 2024-25: Social Welfare corporations 425 of 425 (incl. Bhovi 55, Ambedkar 200); Backward Classes 252.75 of 337; Tribal Welfare 82.50 of 110 (Valmiki 63 of 84).
 - RTI letter 5 (rti.html) asks each corporation for its accounts, board resolutions, escrow/recovery sources, interest remitted and latest audited accounts.
+
+## Nijasharana Ambigara Chowdaiah corporation: traced (17 Nov 2026)
+
+- CIN U93090KA2017SGC107814, incorporated 10 Nov 2017; authorised capital Rs 15 cr, paid-up Rs 12 cr; no charges registered (instafinancials, tofler, falconebiz). Balance-sheet figures are behind MCA/paywalls; not seen.
+- CAG SPSE report 1/2025: Appendix 1 (Finance sector, "NACDCL"); Appendix 4 row 59: working, net worth not eroded, last audited 2021-22; Appendix 5 row 10: no change to 2021-22 accounts after CAG supplementary audit. No balance figures in that report.
+- Funding: about Rs 32 cr spent 2017-21; Rs 10.75 cr allocated 2021-22 (Vijayavani, 21 Jan 2022); "Rs 25 crore to Rs 5 crore" (Opposition leader R. Ashok, The Week, 7 Jan 2025, allegation); Rs 5 cr in 2024-25 (CAG App. 2.15); Rs 500 cr requested for 2026-27 (Vartha Bharati, 13 Feb 2026).
+- No order, legislature answer, news or investigation explains Rs 350 cr. The CAG's Rs 410.43 cr total includes it. Round-to-lakh balances and peer escrow/recovery balances of Rs 0.3-1.2 cr point to a possible unit error (unverified).
+- To settle: AOC-4 balance sheet 2023-24/2024-25 from MCA (owner: needs MCA login and fee), or RTI letter 5 to the corporation, or a query to AG (A&E) Karnataka.
