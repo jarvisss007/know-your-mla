@@ -47,7 +47,7 @@ https://jarvisss007.github.io/know-your-mla/. Push to `main` to publish; it is l
 ## Still needs people (not code)
 
 1. A native Kannada reader: farmers.html, cards, Shorts scripts, Kannada reports, the `data-kn` strings, and report-card labels.
-2. Someone in India: Karnataka portals (raitamitra, Samrakshane, Parihara, KFCSC, Lokayukta link), missing district figures.
+2. Someone in India: the Davanagere South MLA's 2026 by-election affidavit (affidavit.eci.gov.in returns 403 and ceo.karnataka.gov.in times out from abroad; not on myneta), the Nijasharana corporation's MCA balance sheets (CIN U93090KA2017SGC107814; owner has the steps), Karnataka portals (raitamitra, Samrakshane, Parihara, KFCSC, Lokayukta link), missing district figures.
 3. Field visits to the satellite patches (the lists are on the satellite pages and in each `field_checks.csv`).
 4. Right-of-reply deadline for the Ruling Family videos: 20 Nov 2026 (the video session holds those uploads).
 
