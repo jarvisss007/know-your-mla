@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="How a rupee of Karnataka's budget travels to a road, a farmer or a worker, where the state's auditor found money stuck or lost on the way, and how you can trace it yourself.">
+<title>Follow the money · Gandaberunda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8;
+  --red: #c21f30; --redbg: #fbe9eb; --yellow: #f2b705; --chip: #eef0f4; --ok: #1a8f4c; --amber: #b45309;
+  --display: "Space Grotesk", "Noto Sans Kannada", system-ui, sans-serif;
+  --body: "Noto Sans Kannada", system-ui, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --redbg: #3a1d22; --yellow: #f5c93a; --chip: #232835; --ok: #4fcf86; --amber: #f0a04b; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --redbg: #3a1d22; --yellow: #f5c93a; --chip: #232835; --ok: #4fcf86; --amber: #f0a04b; color-scheme: dark }
+* { box-sizing: border-box }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.6 }
+.wrap { max-width: 960px; margin: 0 auto; padding: 20px 16px 60px }
+header.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 28px }
+header.top a.home { color: var(--fg); text-decoration: none; font-family: var(--display); font-weight: 700 }
+.lang { display: flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden }
+.lang button { font: inherit; font-size: .9rem; padding: 6px 14px; border: 0; background: var(--surface); color: var(--fg); cursor: pointer }
+.lang button[aria-pressed="true"] { background: var(--fg); color: var(--bg) }
+h1, h2, h3 { font-family: var(--display); line-height: 1.25; margin: 0; text-wrap: balance }
+h1 { font-size: clamp(30px, 6vw, 44px) }
+h2 { font-size: 24px; margin: 44px 0 12px }
+.lede { color: var(--muted); max-width: 64ch; margin: 12px 0 0 }
+.keyfig { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin: 24px 0 0 }
+.keyfig div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px }
+.keyfig b { display: block; font-family: var(--display); font-size: 26px }
+.keyfig span { color: var(--muted); font-size: 14px }
+/* The pipeline */
+.pipe { position: relative; margin: 8px 0 0; padding-left: 34px }
+.pipe::before { content: ""; position: absolute; left: 13px; top: 8px; bottom: 8px; width: 4px; border-radius: 2px; background: linear-gradient(var(--yellow), var(--red)) }
+.step { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 16px }
+.step::before { content: attr(data-n); position: absolute; left: -34px; top: 10px; width: 30px; height: 30px; border-radius: 50%; background: var(--fg); color: var(--bg); font: 700 14px/30px var(--display); text-align: center }
+.box { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px }
+.box h3 { font-size: 17px; margin-bottom: 4px }
+.box p { margin: 0; color: var(--muted); font-size: 15px }
+.leaks { display: grid; gap: 8px; align-content: start }
+.leak { background: var(--redbg); border: 1px solid var(--line); border-left: 4px solid var(--red); border-radius: 10px; padding: 10px 12px; font-size: 14px }
+.leak b { font-family: var(--display); font-size: 17px; color: var(--red); display: block }
+.leak q { quotes: "\201C" "\201D"; font-style: italic }
+.leak .src { display: block; color: var(--muted); font-size: 12.5px; margin-top: 4px }
+.leak.none { background: var(--surface); border-left-color: var(--ok); color: var(--muted) }
+a { color: var(--red) }
+table { border-collapse: collapse; width: 100%; font-size: 15px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden }
+th { text-align: left; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding: 10px 14px; border-bottom: 1px solid var(--line) }
+td { padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top }
+tr:last-child td { border-bottom: 0 }
+.tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px; white-space: nowrap }
+.t-on { background: #e3f4ea; color: #146c3a } .t-rti { background: #fff4cc; color: #7a5b00 } .t-no { background: var(--redbg); color: var(--red) }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .t-on { background: #173726; color: #7fe0a6 } :root:not([data-theme="light"]) .t-rti { background: #3a3214; color: #f5c93a } }
+.note { color: var(--muted); font-size: 14px; max-width: 70ch }
+footer { margin-top: 48px; color: var(--muted); font-size: 14px }
+.kn { font-family: "Noto Sans Kannada", var(--body) }
+.tabs { display: flex; gap: 8px; margin: 32px 0 0; border-bottom: 1px solid var(--line) }
+.tabs button { font: 600 15px var(--display); padding: 10px 16px; border: 1px solid var(--line); border-bottom: 0; border-radius: 10px 10px 0 0; background: var(--chip); color: var(--muted); cursor: pointer }
+.tabs button[aria-selected="true"] { background: var(--surface); color: var(--fg); box-shadow: inset 0 3px 0 var(--yellow) }
+.simgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 10px; align-content: start }
+.panel h3 { font-size: 17px; display: flex; align-items: center; gap: 8px }
+.panel .num { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--yellow); color: #161a22; font-size: 14px }
+.panel label { font-size: 14px }
+.panel input[type=range] { width: 100%; accent-color: var(--red) }
+.pot { display: grid; grid-template-columns: auto 1fr; gap: 2px 8px; font-size: 14px; padding: 6px 0; border-bottom: 1px dashed var(--line) }
+.pot input { margin-top: 4px }
+.pot .amt { font-family: var(--display); font-weight: 700 }
+.pot .why { grid-column: 2; color: var(--muted); font-size: 12.5px }
+.ty { font-size: 11px; font-weight: 600; padding: 1px 7px; border-radius: 999px; margin-left: 4px; white-space: nowrap }
+.ty.stuck { background: #fff4cc; color: #7a5b00 } .ty.unrec { background: var(--redbg); color: var(--red) } .ty.unacc { background: var(--chip); color: var(--muted) }
+.policy { border-top: 1px solid var(--line); padding-top: 10px }
+.hint { color: var(--muted); font-size: 12.5px; margin: 0 }
+.total { display: flex; justify-content: space-between; align-items: baseline; border-top: 2px solid var(--fg); padding-top: 10px }
+.total b { font-family: var(--display); font-size: 22px }
+.sec { display: grid; grid-template-columns: 1fr auto; gap: 0 8px; font-size: 14px }
+.sec input { grid-column: 1 / -1 }
+.sec output { font-family: var(--display); font-weight: 700 }
+.outh { margin: 28px 0 10px; font-size: 20px }
+.built { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px }
+.built div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px }
+.built b { display: block; font-family: var(--display); font-size: 24px; color: var(--ok) }
+.built span { font-size: 13.5px; color: var(--muted) }
+.tw { overflow-x: auto; margin-top: 14px }
+#dtab td:nth-child(3), #dtab td:nth-child(4) { white-space: nowrap }
+.growth .big { font-family: var(--display); font-size: 22px; margin: 6px 0 0 }
+@media (max-width: 900px) { .simgrid { grid-template-columns: 1fr } }
+@media (max-width: 700px) {
+  .step { grid-template-columns: 1fr }
+  table, tbody, tr, td { display: block } thead { display: none }
+  tr { border-bottom: 1px solid var(--line); padding: 8px 0 } td { border: 0; padding: 4px 14px }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="home" href="./">← Gandaberunda</a>
+  <div class="lang" role="group" aria-label="Language"><button type="button" data-l="en" aria-pressed="true">English</button><button type="button" data-l="kn" aria-pressed="false">ಕನ್ನಡ</button></div>
+</header>
+
+<h1 data-kn="ಹಣ ಎಲ್ಲಿಗೆ ಹೋಗುತ್ತದೆ?">Follow the money</h1>
+<p class="lede" data-kn="ರಾಜ್ಯದ ಬಜೆಟ್‌ನ ಒಂದು ರೂಪಾಯಿ ರಸ್ತೆಗೆ, ರೈತನಿಗೆ ಅಥವಾ ಕೂಲಿಕಾರನಿಗೆ ಹೇಗೆ ತಲುಪುತ್ತದೆ, ದಾರಿಯಲ್ಲಿ ಎಲ್ಲಿ ಸಿಕ್ಕಿಹಾಕಿಕೊಳ್ಳುತ್ತದೆ ಅಥವಾ ಕಳೆದುಹೋಗುತ್ತದೆ ಎಂದು ರಾಜ್ಯದ ಲೆಕ್ಕಪರಿಶೋಧಕರು (ಸಿಎಜಿ) ಕಂಡುಕೊಂಡದ್ದು ಇಲ್ಲಿದೆ. ಪ್ರತಿ ಅಂಕಿಯೂ ಸಿಎಜಿ ವರದಿಯಿಂದ ಬಂದದ್ದು.">How a rupee of Karnataka's budget travels to a road, a farmer or a worker, and where the state's auditor, the Comptroller and Auditor General (CAG), found money stuck or lost on the way. Every figure on this page is from a CAG report, linked beside it.</p>
+
+<div class="keyfig">
+  <div><b>Rs 10,093 cr</b><span data-kn="2025ರ ಮಾರ್ಚ್ 31, ವರ್ಷದ ಕೊನೆಯ ದಿನ ಒಂದೇ ದಿನ ಖರ್ಚು">spent on a single day, 31 March 2025, the last day of the year</span></div>
+  <div><b>Rs 29,770 cr</b><span data-kn="ಖರ್ಚಾಗಿದೆ ಎಂದು ತೋರಿಸಿ ಠೇವಣಿ ಖಾತೆಗಳಲ್ಲಿ ಇಟ್ಟ ಹಣ">sitting in deposit accounts after leaving the budget</span></div>
+  <div><b>Rs 187 cr</b><span data-kn="ಉದ್ಯೋಗ ಖಾತ್ರಿಯಲ್ಲಿ ಸಾಮಾಜಿಕ ಲೆಕ್ಕಪರಿಶೋಧನೆ ಗುರುತಿಸಿದ ದುರುಪಯೋಗ; ಅರ್ಧಕ್ಕಿಂತ ಹೆಚ್ಚು ವಸೂಲಿ ಇಲ್ಲದೆ ಮುಚ್ಚಲಾಗಿದೆ">of misappropriation found in the rural jobs scheme; most closed without recovery</span></div>
+  <div><b>44,174</b><span data-kn="ಸಿಎಜಿ ಆಕ್ಷೇಪಣೆಗಳಿಗೆ ಇಲಾಖೆಗಳು ಇನ್ನೂ ಉತ್ತರಿಸಿಲ್ಲ (ಮಾರ್ಚ್ 2023)">audit objections departments had not settled (March 2023)</span></div>
+</div>
+
+<div class="tabs" role="tablist">
+  <button type="button" role="tab" data-tab="sim" aria-selected="true" data-kn="ಹೀಗಾಗಿದ್ದರೆ?">What if?</button>
+  <button type="button" role="tab" data-tab="leaks" aria-selected="false" data-kn="ಹಣ ಎಲ್ಲಿ ಸೋರಿತು">Where it leaked</button>
+</div>
+
+<section id="sim" class="tabpane">
+  <h2 data-kn="ಈ ಹಣವನ್ನು ಸರಿಯಾಗಿ ಬಳಸಿದ್ದರೆ?">What if this money had been used well?</h2>
+  <p class="note" data-kn="ಸಿಎಜಿ ಕಂಡ ಹಣವನ್ನು ಆರಿಸಿ, ಏನು ಕಟ್ಟಬೇಕು ಎಂದು ನಿರ್ಧರಿಸಿ, 31 ಜಿಲ್ಲೆಗಳಿಗೆ ಹಂಚಿ. ಪ್ರತಿ ವೆಚ್ಚವೂ ಸರ್ಕಾರಿ ಅಥವಾ ಲೆಕ್ಕಪರಿಶೋಧನಾ ಮೂಲದಿಂದ.">Pick the money the auditor found stuck, unrecovered or unaccounted for, decide what to build, and share it across all 31 districts. Every cost below comes from a government or audit source. This is an illustration of scale, not a budget.</p>
+
+  <div class="simgrid">
+    <div class="panel">
+      <h3><span class="num">1</span> <span data-kn="ಹಣವನ್ನು ಹುಡುಕಿ">Find the money</span></h3>
+      <div id="pots"></div>
+      <div class="policy">
+        <label for="gshare"><b data-kn="ನೀತಿ ಆಯ್ಕೆ">A policy choice</b>: <span data-kn="ಐದು ಗ್ಯಾರಂಟಿಗಳ ಒಂದು ವರ್ಷದ ವೆಚ್ಚದ (ರೂ 52,526 ಕೋಟಿ, 2024-25) ಈ ಪಾಲನ್ನು ನಿರ್ಮಾಣಕ್ಕೆ ತಿರುಗಿಸಿ">move this share of one year's spending on the five guarantees (Rs 52,526 crore in 2024-25) into building</span>: <output id="gout">0%</output></label>
+        <input type="range" id="gshare" min="0" max="50" step="5" value="0">
+        <p class="hint" data-kn="ಇದು ಸೋರಿಕೆ ಅಲ್ಲ. ಇದನ್ನು ಆರಿಸಿದರೆ ಕುಟುಂಬಗಳು ಅಷ್ಟು ಕಡಿಮೆ ಹಣ ಪಡೆಯುತ್ತವೆ.">This is not a leak: it is money families receive today. Moving it means they get that much less.</p>
+      </div>
+      <div class="total"><span data-kn="ಒಟ್ಟು">Total to spend</span><b id="total">Rs 0 crore</b></div>
+    </div>
+
+    <div class="panel">
+      <h3><span class="num">2</span> <span data-kn="ಏನು ಕಟ್ಟಬೇಕು">Choose what to build</span></h3>
+      <p class="hint" data-kn="ಪ್ರತಿ ವಿಭಾಗಕ್ಕೆ ತೂಕ ಕೊಡಿ; ಹಂಚಿಕೆ ಶೇಕಡಾವಾರು ತೋರಿಸಲಾಗುತ್ತದೆ.">Move the sliders to weight each kind of work; the share is shown beside it.</p>
+      <div id="sectors"></div>
+    </div>
+
+    <div class="panel">
+      <h3><span class="num">3</span> <span data-kn="ಜಿಲ್ಲೆಗಳಿಗೆ ಹಂಚಿ">Share it across Karnataka</span></h3>
+      <label for="kk"><span data-kn="ಕಲ್ಯಾಣ ಕರ್ನಾಟಕಕ್ಕೆ ಪ್ರತಿ ವ್ಯಕ್ತಿಗೆ ಹೆಚ್ಚುವರಿ">Extra per person for Kalyana Karnataka's 7 districts</span>: <output id="kkout">×1.0</output></label>
+      <input type="range" id="kk" min="1" max="3" step="0.25" value="1.5">
+      <label for="blr"><span data-kn="ಬೆಂಗಳೂರು ನಗರಕ್ಕೆ ಪ್ರತಿ ವ್ಯಕ್ತಿಗೆ">Bengaluru Urban, per person</span>: <output id="blrout">×1.0</output></label>
+      <input type="range" id="blr" min="0" max="1" step="0.25" value="0.5">
+      <p class="hint" data-kn="ಉಳಿದ ಜಿಲ್ಲೆಗಳು ಜನಸಂಖ್ಯೆಯ ಪ್ರಕಾರ (ಜನಗಣತಿ 2011).">Every other district gets the same amount per person (Census 2011 population). These weights are your choice, not a finding.</p>
+    </div>
+  </div>
+
+  <h3 class="outh" data-kn="ಇದರಿಂದ ಏನು ಕಟ್ಟಬಹುದಿತ್ತು">What it would build</h3>
+  <div id="built" class="built"></div>
+
+  <div class="tw"><table id="dtab">
+    <thead><tr><th data-kn="ಜಿಲ್ಲೆ">District</th><th data-kn="ಪ್ರದೇಶ">Region</th><th data-kn="ರೂ ಕೋಟಿ">Rs crore</th><th data-kn="ಪ್ರತಿ ವ್ಯಕ್ತಿಗೆ">Per person</th><th data-kn="ಉದಾಹರಣೆಗೆ">For example</th></tr></thead>
+    <tbody></tbody>
+  </table></div>
+
+  <h2 data-kn="ಕ್ಯಾಲಿಫೋರ್ನಿಯಾ ಮಟ್ಟ ತಲುಪಲು ಎಷ್ಟು ವರ್ಷ?">How far is California?</h2>
+  <p class="note">California's economy was about USD 4.30 trillion in 2025; Karnataka's about USD 371 billion in 2025-26, so California is about 11.6 times larger, and about 20 times richer per person. The gap closes only if Karnataka grows faster than California for a long time.</p>
+  <div class="panel growth">
+    <label for="gk"><span data-kn="ಕರ್ನಾಟಕದ ವಾರ್ಷಿಕ ನೈಜ ಬೆಳವಣಿಗೆ (ಪ್ರತಿ ವ್ಯಕ್ತಿಗೆ)">Karnataka's real growth per person, per year</span>: <output id="gkout">7%</output></label>
+    <input type="range" id="gk" min="3" max="12" step="0.5" value="7">
+    <label for="gc"><span data-kn="ಕ್ಯಾಲಿಫೋರ್ನಿಯಾದ ಬೆಳವಣಿಗೆ">California's real growth per person, per year</span>: <output id="gcout">2%</output></label>
+    <input type="range" id="gc" min="0" max="4" step="0.5" value="2">
+    <p class="big" id="years"></p>
+    <p class="hint">Per-person income: Karnataka about USD 5,400 (2025-26), California about USD 109,200 (2025), at the 2025-26 average exchange rate of Rs 88.37 to the dollar. Real growth, fixed exchange rate; an illustration, not a forecast. Karnataka's economy grew 8.1% in real terms in 2025-26 (whole economy, not per person).</p>
+  </div>
+  <p class="note" id="srcnote">Sources for the costs: <span id="srcs"></span>. Audit findings: CAG Reports No. 2 of 2026, No. 13 of 2025 and No. 10 (Yettinahole). Economy: Karnataka Economic Survey 2025-26; US Bureau of Economic Analysis; Federal Reserve exchange rates.</p>
+</section>
+
+<section id="leaks" class="tabpane" hidden>
+<h2 data-kn="ಒಂದು ರೂಪಾಯಿಯ ದಾರಿ">The path of a rupee</h2>
+<p class="note" data-kn="ಎಡಭಾಗದಲ್ಲಿ ಹಣ ಸಾಗುವ ಹಂತ; ಬಲಭಾಗದಲ್ಲಿ ಆ ಹಂತದಲ್ಲಿ ಸಿಎಜಿ ಕಂಡ ಸಮಸ್ಯೆ.">Left: what happens at each step. Right: what the auditor found there. Amounts are in rupees crore (1 crore = 1,00,00,000).</p>
+
+<div class="pipe">
+  <div class="step" data-n="1">
+    <div class="box"><h3 data-kn="ವಿಧಾನಸಭೆ ಬಜೆಟ್ ಅಂಗೀಕರಿಸುತ್ತದೆ">The Legislature votes the budget</h3><p>Every rupee the government spends must first be approved by the Assembly, grant by grant.</p></div>
+    <div class="leaks">
+      <div class="leak"><b>Rs 10,035 cr</b>released through 118 executive orders before the Legislature approved it, across 21 grants (2024-25). The CAG says this list is "only illustrative".<span class="src"><a href="https://cag.gov.in/en/audit-report/details/124514" target="_blank" rel="noopener">CAG Report No. 2 of 2026</a>, para 2.5.1.1</span></div>
+    </div>
+  </div>
+
+  <div class="step" data-n="2">
+    <div class="box"><h3 data-kn="ಹಣಕಾಸು ಇಲಾಖೆ ಹಣ ಬಿಡುಗಡೆ, ಖಜಾನೆ ಪಾವತಿ">Finance releases, the treasury pays</h3><p>The Finance Department releases each grant in instalments. Departments' paying officers draw bills on the state's online treasury, Khajane-II, which pays by bank transfer.</p></div>
+    <div class="leaks">
+      <div class="leak"><b>Rs 10,093 cr</b>spent on 31 March 2025 alone; Rs 72,959 cr, almost a fifth of the year's spending, in March. On the same last day, orders moving Rs 33,106 cr between budget lines were issued under all 28 grants.<span class="src"><a href="https://cag.gov.in/en/audit-report/details/124514" target="_blank" rel="noopener">CAG Report No. 2 of 2026</a>, paras 2.5.8 and 2.8</span></div>
+      <div class="leak"><b>Rs 7,588 cr</b>booked under the catch-all head "Other Expenditure", which hides what the money was for; Rs 2,533 cr of it had a proper head available.<span class="src"><a href="https://cag.gov.in/en/audit-report/details/124514" target="_blank" rel="noopener">CAG Report No. 2 of 2026</a>, para 3.6</span></div>
+    </div>
+  </div>
+
+  <div class="step" data-n="3">
+    <div class="box"><h3 data-kn="'ಖರ್ಚಾಗಿದೆ' ಎಂದು ತೋರಿಸಿ ಇಟ್ಟ ಹಣ">"Spent" on paper, parked in practice</h3><p>Money moved into deposit accounts or a corporation's bank account counts as spent in the budget, even if nothing has been bought yet.</p></div>
+    <div class="leaks">
+      <div class="leak"><b>Rs 29,770 cr</b>sitting in Personal Deposit accounts at March 2025, of which Rs 22,115 cr is a mining restoration fund held under a Supreme Court order. Rs 6,026 cr was moved in during March 2025. The CAG: <q>Retention of such large sums of money was against principle of Legislative financial control.</q><span class="src"><a href="https://cag.gov.in/en/audit-report/details/124514" target="_blank" rel="noopener">CAG Report No. 2 of 2026</a>, para 3.5</span></div>
+      <div class="leak"><b>Rs 760 cr</b>released to 20 welfare corporations in the last quarter of 2024-25, and Rs 412 cr <q>remained in the bank accounts of the Corporations outside the Government Account in-spite of being shown as expended</q>.<span class="src"><a href="https://cag.gov.in/en/audit-report/details/124514" target="_blank" rel="noopener">CAG Report No. 2 of 2026</a>, paras 2.5.8.1 and 2.7.1.2</span></div>
+    </div>
+  </div>
+
+  <div class="step" data-n="4">
+    <div class="box"><h3 data-kn="ಬಜೆಟ್‌ನ ಹೊರಗೆ ಹರಿಯುವ ಹಣ">Money that goes around the budget</h3><p>Some money never passes through the state's main account: central funds sent straight to agencies, and loans taken by state-owned bodies that the state repays.</p></div>
+    <div class="leaks">
+      <div class="leak"><b>Rs 22,309 cr</b>sent by the Centre directly to implementing agencies in 2023-24, <q>bypassing the Consolidated Fund of the State</q>, so it does not appear in the state's own accounts.<span class="src"><a href="https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf" target="_blank" rel="noopener">CAG Report No. 4 of 2025</a>, para 4.4</span></div>
+      <div class="leak"><b>Rs 14,155 cr</b>of borrowing outside the budget outstanding at March 2025, plus Rs 45,889 cr of state guarantees on others' loans.<span class="src"><a href="https://cag.gov.in/en/audit-report/details/124514" target="_blank" rel="noopener">CAG Report No. 2 of 2026</a>, paras 3.1 and 1.5.6</span></div>
+    </div>
+  </div>
+
+  <div class="step" data-n="5">
+    <div class="box"><h3 data-kn="ಕಾಮಗಾರಿ: ಟೆಂಡರ್, ಅಳತೆ, ಬಿಲ್">Works: tender, measure, bill</h3><p>An engineer estimates the work, it is approved and tendered on the state's procurement portal, the contractor builds, an engineer records the work in a measurement book, and the bill is paid. Small works below a set limit need no open tender.</p></div>
+    <div class="leaks">
+      <div class="leak"><b>Rs 28 cr</b>in the rural jobs scheme: 13 panchayats split 65 works into 463 smaller ones to stay under approval limits, spending Rs 28.17 cr without the required sanction.<span class="src"><a href="https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf" target="_blank" rel="noopener">CAG Report No. 13 of 2025</a>, para 5.6</span></div>
+      <div class="leak"><b>Rs 181 cr</b>of <q>excess benefit to the contractors</q> on the Yettinahole water project, where dues were not recovered in four packages.<span class="src"><a href="https://cag.gov.in/en/audit-report/details/123863" target="_blank" rel="noopener">CAG Report No. 10 (Yettinahole)</a>, para 3.2.2.2</span></div>
+      <div class="leak"><b>Rs 5,066 cr</b>of capital locked in 4,328 projects that were never finished.<span class="src"><a href="https://cag.gov.in/en/audit-report/details/124514" target="_blank" rel="noopener">CAG Report No. 2 of 2026</a>, para 1.6.2</span></div>
+    </div>
+  </div>
+
+  <div class="step" data-n="6">
+    <div class="box"><h3 data-kn="ಲೆಕ್ಕಗಳ ಹೊಂದಾಣಿಕೆ">The books are matched</h3><p>Treasury, division offices, banks and the Accountant General should agree to the rupee. Advances drawn in a hurry must be followed by detailed bills with receipts.</p></div>
+    <div class="leaks">
+      <div class="leak"><b>Rs 965 cr</b>of public works payments not matched between division offices and the treasury. The CAG warns these differences <q>could lead to non-detection of cases of defalcation</q>.<span class="src"><a href="https://cag.gov.in/en/audit-report/details/124514" target="_blank" rel="noopener">CAG Report No. 2 of 2026</a>, para 3.7</span></div>
+      <div class="leak"><b>Rs 64 cr</b>drawn on 1,111 advance bills still without detailed bills and receipts; the CAG calls this <q>fraught with the risk of misappropriation</q>.<span class="src"><a href="https://cag.gov.in/en/audit-report/details/124514" target="_blank" rel="noopener">CAG Report No. 2 of 2026</a>, para 3.4</span></div>
+    </div>
+  </div>
+
+  <div class="step" data-n="7">
+    <div class="box"><h3 data-kn="ನೆಲದ ಮೇಲೆ: ಕೂಲಿಕಾರ, ರೈತ, ಫಲಾನುಭವಿ">On the ground: the worker, the farmer</h3><p>In the rural jobs scheme (MGNREGA), villagers check the work in public meetings called social audits, and wrongly paid money must be recovered.</p></div>
+    <div class="leaks">
+      <div class="leak"><b>Rs 187 cr</b>of misappropriation found by social audits from 2019-20 to 2023-24 (79,284 cases). Rs 90 cr of it was <q>settled without any recovery</q>, and the claimed 94% recovery rate was <q>incorrect and misleading</q>.<span class="src"><a href="https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf" target="_blank" rel="noopener">CAG Report No. 13 of 2025</a>, para 6.4.8</span></div>
+      <div class="leak"><b>Rs 8,264 cr</b>, nearly half of the scheme's spending in those years, could not be checked by social audit <q>for want of records</q>.<span class="src"><a href="https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf" target="_blank" rel="noopener">CAG Report No. 13 of 2025</a>, para 6.4.7</span></div>
+    </div>
+  </div>
+
+  <div class="step" data-n="8">
+    <div class="box"><h3 data-kn="ಲೆಕ್ಕಪರಿಶೋಧನೆಯ ನಂತರ">After the audit</h3><p>Departments must answer the CAG's objections, and the Legislature's Public Accounts Committee examines the worst cases.</p></div>
+    <div class="leaks">
+      <div class="leak"><b>44,174</b>audit objections in 8,522 inspection reports were outstanding against 47 departments at March 2023. The state's replies to the last two State Finances reports are still "awaited".<span class="src"><a href="https://cag.gov.in/uploads/download_audit_report/2025/Preface-and-Overview-068a700e008a068.58099381.pdf" target="_blank" rel="noopener">CAG Report No. 6 of 2025</a>, para 1.10.1; <a href="https://cag.gov.in/en/audit-report/details/124514" target="_blank" rel="noopener">Report No. 2 of 2026</a>, para 3.13</span></div>
+    </div>
+  </div>
+</div>
+
+<p class="note">These are findings about how the system works and about departments, not proof that any person stole money. Several cover years under governments of both parties: the jobs-scheme audit covers 2019-20 to 2023-24, and the Yettinahole project began in 2012.</p>
+
+<h2 data-kn="ನೀವೇ ಹಣವನ್ನು ಹಿಂಬಾಲಿಸಿ">Trace a rupee yourself</h2>
+<p class="note" data-kn="ನಿಮ್ಮ ಊರಿನ ರಸ್ತೆ ಅಥವಾ ಕಾಮಗಾರಿಯಿಂದ ಬಜೆಟ್‌ವರೆಗೆ ಹಿಂದಕ್ಕೆ ಹೋಗಲು ಈ ದಾಖಲೆಗಳನ್ನು ಬಳಸಿ.">Start from something you can see, a road, a borewell, a payment that never came, and walk it back to the budget with these records.</p>
+<table>
+  <thead><tr><th>Record</th><th>What it shows</th><th>How to get it</th></tr></thead>
+  <tbody>
+    <tr><td>Rural jobs scheme (MGNREGA) records</td><td>Every work, muster roll, wage payment and social audit report, down to the worker</td><td><span class="tag t-on">Online</span> <a href="https://nrega.nic.in" target="_blank" rel="noopener">nrega.nic.in</a></td></tr>
+    <tr><td>Panchayat grant payments</td><td>Finance Commission money paid by each gram panchayat, voucher by voucher</td><td><span class="tag t-on">Online</span> <a href="https://egramswaraj.gov.in" target="_blank" rel="noopener">egramswaraj.gov.in</a></td></tr>
+    <tr><td>Tenders</td><td>Works and supplies put out to tender by state departments</td><td><span class="tag t-on">Online</span> <a href="https://kppp.karnataka.gov.in" target="_blank" rel="noopener">kppp.karnataka.gov.in</a> (small works may not appear)</td></tr>
+    <tr><td>Budget and accounts</td><td>What was voted, and what the Accountant General says was spent, line by line</td><td><span class="tag t-on">Online</span> <a href="https://finance.karnataka.gov.in" target="_blank" rel="noopener">finance.karnataka.gov.in</a>, <a href="https://cag.gov.in" target="_blank" rel="noopener">cag.gov.in</a></td></tr>
+    <tr><td>Central scheme releases</td><td>Money the Centre released to the state, scheme by scheme</td><td><span class="tag t-on">Online</span> <a href="https://pfms.nic.in" target="_blank" rel="noopener">pfms.nic.in</a></td></tr>
+    <tr><td>Estimate, sanction, agreement, measurement book, bills</td><td>What a work was supposed to cost, what was measured and what was paid</td><td><span class="tag t-rti">RTI</span> <a href="./#eyes">use our ready-made requests</a></td></tr>
+    <tr><td>Beneficiary lists, corporation bank statements</td><td>Who was paid, and how much money a corporation is holding</td><td><span class="tag t-rti">RTI</span> personal details may be withheld</td></tr>
+    <tr><td>CAG inspection reports; scheme bank accounts</td><td>The auditor's field notes and the agencies' transaction records</td><td><span class="tag t-no">Not public</span></td></tr>
+  </tbody>
+</table>
+
+</section>
+
+<footer>
+  <p>Sources: CAG State Finances Audit Reports for 2023-24 (Report No. 4 of 2025) and 2024-25 (Report No. 2 of 2026); CAG Performance Audits of MGNREGS (Report No. 13 of 2025) and the Yettinahole project (Report No. 10); CAG Compliance Audit Report No. 6 of 2025. Every figure was checked against the report text. Seen something wrong? <a href="https://github.com/jarvisss007/know-your-mla/issues/new" target="_blank" rel="noopener">Tell us</a>.</p>
+  <p><a href="./">Gandaberunda · Know your MLA</a></p>
+</footer>
+</div>
+<script>
+(function () {
+  const els = [...document.querySelectorAll('[data-kn]')];
+  els.forEach(el => { el.dataset.en = el.innerHTML });
+  function set(l) {
+    document.documentElement.lang = l;
+    els.forEach(el => { el.innerHTML = l === 'kn' ? el.dataset.kn : el.dataset.en; el.classList.toggle('kn', l === 'kn') });
+    document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.l === l)));
+    try { localStorage.setItem('lang', l) } catch (e) {}
+  }
+  document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => set(b.dataset.l)));
+  let saved = 'en'; try { saved = localStorage.getItem('lang') || 'en' } catch (e) {}
+  if (saved === 'kn') set('kn');
+})();
+</script>
+<script>
+const SIM = {"pots": [{"k": "pd", "amt": 7655.14, "ty": "stuck", "label": "Parked in deposit accounts at March 2025 (leaving out Rs 22,115 crore held under a Supreme Court order)", "src": "CAG Report No. 2 of 2026, para 3.5"}, {"k": "unm", "amt": 964.68, "ty": "unacc", "label": "Public works payments not matched between division offices and the treasury", "src": "CAG Report No. 2 of 2026, para 3.7"}, {"k": "corp", "amt": 412, "ty": "stuck", "label": "Shown as spent, but still in welfare corporations' bank accounts", "src": "CAG Report No. 2 of 2026, para 2.7.1.2"}, {"k": "yet", "amt": 181.21, "ty": "unrec", "label": "Excess benefit to Yettinahole contractors, not recovered", "src": "CAG Report No. 10, para 3.2.2.2"}, {"k": "mg", "amt": 90.14, "ty": "unrec", "label": "Rural jobs scheme misappropriation closed without recovery", "src": "CAG Report No. 13 of 2025, para 6.4.8"}, {"k": "adv", "amt": 63.9, "ty": "unacc", "label": "Advance bills still without receipts", "src": "CAG Report No. 2 of 2026, para 3.4"}], "sec": [{"k": "classroom", "label": "classrooms", "kn": "ತರಗತಿ ಕೊಠಡಿಗಳು", "w": 3, "cost": 1450000, "src": "https://www.deccanherald.com/india/karnataka/falling-apart-the-dire-state-of-public-schools-in-karnataka-3125301"}, {"k": "phc", "label": "primary health centres", "kn": "ಪ್ರಾಥಮಿಕ ಆರೋಗ್ಯ ಕೇಂದ್ರಗಳು", "w": 2, "cost": 48000000, "src": "https://www.deccanherald.com/amp/story/india%2Fkarnataka%2Fkarnataka-budget-emphasis-on-rural-taluk-level-health-infrastructure-in-2024-25-budget-2897618"}, {"k": "hosp", "label": "100-bed taluk hospitals", "kn": "100 ಹಾಸಿಗೆ ಆಸ್ಪತ್ರೆಗಳು", "w": 1, "cost": 365700000, "src": "https://projectxindia.com/2024/09/14/karnataka-plans-seven-100-bed-taluk-hospitals-for-rs-256-crore"}, {"k": "road", "label": "km of village road rebuilt", "kn": "ಕಿ.ಮೀ ಗ್ರಾಮೀಣ ರಸ್ತೆ", "w": 2, "cost": 7285500, "src": "https://theprint.in/india/7110-km-rural-roads-to-be-rebuilt-will-be-completed-in-1-5-years-minister-priyank-kharge/2876351"}, {"k": "tap", "label": "homes given a tap", "kn": "ನಲ್ಲಿ ಸಂಪರ್ಕಗಳು", "w": 1, "cost": 96323, "src": "https://www.deccanherald.com/india/karnataka/karnataka-minister-urges-centre-to-fund-retrofitting-costs-under-jal-jeevan-mission-4057747"}, {"k": "aw", "label": "anganwadi buildings", "kn": "ಅಂಗನವಾಡಿ ಕಟ್ಟಡಗಳು", "w": 1, "cost": 1200000, "src": "https://wcd.nic.in/sites/default/files/Guidelines%20for%20construction%20of%20AWC%20under%20MGNREGA%20in%20Convergence%20with%20ICDS_0.pdf"}, {"k": "house", "label": "rural homes", "kn": "ಗ್ರಾಮೀಣ ಮನೆಗಳು", "w": 1, "cost": 120000, "src": "https://eparlib.sansad.in/bitstream/123456789/3016571/1/AU3917_X7J2Lq.pdf"}, {"k": "bus", "label": "buses", "kn": "ಬಸ್‌ಗಳು", "w": 1, "cost": 3790300, "src": "https://theprint.in/india/cm-shivakumar-announces-one-more-karnataka-bhavan-in-delhi-for-civil-services-aspirants/2965527/"}, {"k": "dam", "label": "check dams", "kn": "ಚೆಕ್ ಡ್ಯಾಮ್‌ಗಳು", "w": 1, "cost": 5650000, "src": "https://tenders.infralens.in/tender/construction-of-check-dam-across-halla-near-sulla-village-304628"}], "dist": [["Bagalkote", "Kittur Karnataka", 1889752], ["Ballari", "Kalyana Karnataka", 1400970], ["Belagavi", "Kittur Karnataka", 4779661], ["Bengaluru Urban", "Bengaluru", 9621551], ["Bengaluru North (formerly Bengaluru Rural)", "Bengaluru", 990923], ["Bengaluru South (formerly Ramanagara)", "Bengaluru", 1082636], ["Bidar", "Kalyana Karnataka", 1703300], ["Chamarajanagara", "Old Mysore-South", 1020791], ["Chikkaballapura", "Old Mysore-South", 1255104], ["Chikkamagaluru", "Malnad", 1137961], ["Chitradurga", "Old Mysore-South", 1659456], ["Dakshina Kannada", "Coastal", 2089649], ["Davanagere", "Old Mysore-South", 1643494], ["Dharwad", "Kittur Karnataka", 1847023], ["Gadag", "Kittur Karnataka", 1064570], ["Hassan", "Malnad", 1776421], ["Haveri", "Kittur Karnataka", 1597668], ["Kalaburagi", "Kalyana Karnataka", 2566326], ["Kodagu", "Malnad", 554519], ["Kolar", "Old Mysore-South", 1536401], ["Koppal", "Kalyana Karnataka", 1389920], ["Mandya", "Old Mysore-South", 1805769], ["Mysuru", "Old Mysore-South", 3001127], ["Raichur", "Kalyana Karnataka", 1928812], ["Shivamogga", "Malnad", 1752753], ["Tumakuru", "Old Mysore-South", 2678980], ["Udupi", "Coastal", 1177361], ["Uttara Kannada", "Coastal", 1437169], ["Vijayanagara", "Kalyana Karnataka", 1353628], ["Vijayapura", "Kittur Karnataka", 2177331], ["Yadgir", "Kalyana Karnataka", 1174271]]};
+(function () {
+  const $ = id => document.getElementById(id);
+  const TY = { stuck: ['Stuck', 'ಸಿಕ್ಕಿಹಾಕಿಕೊಂಡಿದೆ'], unrec: ['Not recovered', 'ವಸೂಲಿಯಾಗಿಲ್ಲ'], unacc: ['Unaccounted', 'ಲೆಕ್ಕ ಹೊಂದಿಲ್ಲ'] };
+  const GUAR = 52525.60;
+  const fmt = n => Math.round(n).toLocaleString('en-IN');
+  const kn = () => document.documentElement.lang === 'kn';
+  $('pots').innerHTML = SIM.pots.map(p => `<label class="pot"><input type="checkbox" data-k="${p.k}" checked><span><span class="amt">Rs ${fmt(p.amt)} cr</span><span class="ty ${p.ty}" data-ty="${p.ty}"></span><br>${p.label}</span><span class="why">${p.src}</span></label>`).join('');
+  $('sectors').innerHTML = SIM.sec.map(s => `<div class="sec"><label for="s_${s.k}" data-en="${s.label}" data-knl="${s.kn}">${s.label}</label><output id="o_${s.k}"></output><input type="range" id="s_${s.k}" min="0" max="5" step="1" value="${s.w}"></div>`).join('');
+  $('srcs').innerHTML = SIM.sec.map(s => `<a href="${s.src}" target="_blank" rel="noopener">${s.label}</a>`).join(', ');
+  function run() {
+    const potTotal = SIM.pots.filter(p => document.querySelector(`#pots input[data-k="${p.k}"]`).checked).reduce((a, p) => a + p.amt, 0);
+    const g = +$('gshare').value; $('gout').textContent = g + '%';
+    const total = potTotal + GUAR * g / 100;
+    $('total').textContent = 'Rs ' + fmt(total) + ' crore';
+    const ws = SIM.sec.map(s => +$('s_' + s.k).value), wsum = ws.reduce((a, b) => a + b, 0) || 1;
+    SIM.sec.forEach((s, i) => { $('o_' + s.k).textContent = Math.round(100 * ws[i] / wsum) + '%' });
+    const units = SIM.sec.map((s, i) => total * 1e7 * ws[i] / wsum / s.cost);
+    $('built').innerHTML = SIM.sec.map((s, i) => ws[i] ? `<div><b>${fmt(units[i])}</b><span>${kn() ? s.kn : s.label}</span></div>` : '').join('');
+    const kk = +$('kk').value, blr = +$('blr').value;
+    $('kkout').textContent = '×' + kk; $('blrout').textContent = '×' + blr;
+    const w = SIM.dist.map(d => d[2] * (d[1] === 'Kalyana Karnataka' ? kk : d[0] === 'Bengaluru Urban' ? blr : 1)), W = w.reduce((a, b) => a + b, 0) || 1;
+    const top = SIM.sec.map((s, i) => [s, ws[i]]).filter(x => x[1]).slice(0, 3);
+    const rows = SIM.dist.map((d, i) => [d, total * w[i] / W]).sort((a, b) => b[1] / b[0][2] - a[1] / a[0][2]);
+    $('dtab').querySelector('tbody').innerHTML = rows.map(([d, cr]) => {
+      const ex = top.map(([s, wt]) => fmt(cr * 1e7 * wt / wsum / s.cost) + ' ' + (kn() ? s.kn : s.label)).join(' · ');
+      return `<tr><td>${d[0]}</td><td>${d[1]}</td><td>${fmt(cr)}</td><td>Rs ${fmt(cr * 1e7 / d[2])}</td><td>${ex}</td></tr>`;
+    }).join('');
+    const gk = +$('gk').value / 100, gc = +$('gc').value / 100;
+    $('gkout').textContent = (gk * 100) + '%'; $('gcout').textContent = (gc * 100) + '%';
+    const R = 109196 / 5398;
+    if (gk <= gc) { $('years').textContent = kn() ? 'ಈ ವೇಗದಲ್ಲಿ ಅಂತರ ಎಂದಿಗೂ ಮುಚ್ಚುವುದಿಲ್ಲ.' : 'At these rates the gap never closes.' }
+    else {
+      const y = Math.round(Math.log(R) / Math.log((1 + gk) / (1 + gc)));
+      $('years').textContent = kn() ? `ಸುಮಾರು ${y} ವರ್ಷಗಳು (ಸುಮಾರು ${2026 + y}).` : `About ${y} years (around ${2026 + y}) for the average person in Karnataka to earn as much as the average Californian.`;
+    }
+    document.querySelectorAll('.ty').forEach(t => t.textContent = TY[t.dataset.ty][kn() ? 1 : 0]);
+    document.querySelectorAll('.sec label').forEach(l => l.textContent = kn() ? l.dataset.knl : l.dataset.en);
+  }
+  document.querySelectorAll('#sim input').forEach(i => i.addEventListener('input', run));
+  document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => setTimeout(run, 0)));
+  document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
+    document.querySelectorAll('.tabpane').forEach(p => { p.hidden = p.id !== b.dataset.tab });
+  }));
+  if (location.hash === '#leaks') document.querySelector('.tabs button[data-tab="leaks"]').click();
+  run();
+})();
+
+</script>
+</body>
+</html>
