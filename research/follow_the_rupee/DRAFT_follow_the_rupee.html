@@ -1,0 +1,177 @@
+<title>Follow the Rupee</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: one column; the rupee's route is a vertical track of five stations, each with its record, its leak and its proof. */
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8;
+  --red: #c21f30; --yellow: #f2b705; --track: #e3e6ec; --ok: #1a8f4c; --warn: #b45309; --dark: #9aa3b2;
+  --display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --body: Inter, "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --track: #2b313d; --ok: #4fcf86; --warn: #f0a04b; --dark: #5b6474; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --track: #2b313d; --ok: #4fcf86; --warn: #f0a04b; --dark: #5b6474; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font: 16px/1.55 var(--body);
+  padding-block: 28px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 44px; }
+a { color: inherit; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1; letter-spacing: -0.02em; }
+h1 span { color: var(--red); }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.1rem; }
+p { margin: 0; max-width: 66ch; }
+.eyebrow { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.draft { display: inline-block; background: var(--yellow); color: #161a22; font-weight: 600; font-size: .8rem; padding: 3px 10px; border-radius: 3px; letter-spacing: .04em; }
+header { display: flex; flex-direction: column; gap: 14px; }
+.lede { font-size: 1.1rem; }
+.muted { color: var(--muted); font-size: .9rem; }
+section { display: flex; flex-direction: column; gap: 14px; }
+
+/* route */
+.route { display: flex; flex-direction: column; gap: 0; }
+.stn { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 0 14px; }
+.rail { display: flex; flex-direction: column; align-items: center; }
+.dot { width: 34px; height: 34px; border-radius: 50%; border: 3px solid var(--fg); display: grid; place-items: center; font: 700 .95rem var(--display); background: var(--bg); flex: none; }
+.line { flex: 1; width: 3px; background: var(--fg); min-height: 20px; }
+.stn:last-child .line { background: transparent; }
+.body { padding-bottom: 30px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.who { font-size: .9rem; color: var(--muted); }
+.rec { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: .85rem; }
+.chip { border: 1px solid var(--line); border-radius: 999px; padding: 1px 9px; background: var(--surface); white-space: nowrap; }
+.chip.pub { border-color: var(--ok); color: var(--ok); }
+.chip.rti { border-color: var(--warn); color: var(--warn); }
+.leak { border-left: 3px solid var(--red); padding: 2px 0 2px 12px; display: flex; flex-direction: column; gap: 6px; }
+.leak b { color: var(--red); font-family: var(--display); }
+.leak ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; max-width: 70ch; font-size: .95rem; }
+.src { font-size: .8rem; color: var(--muted); }
+
+/* funnel */
+.funnel { display: flex; flex-direction: column; gap: 10px; }
+.fr { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 4px 16px; align-items: center; }
+.fr .lab { font-size: .9rem; }
+.fr .lab b { font: 700 1.2rem var(--display); display: block; font-variant-numeric: tabular-nums; }
+.bar { height: 22px; background: var(--track); border-radius: 2px; position: relative; overflow: hidden; }
+.bar i { position: absolute; inset: 0 auto 0 0; background: var(--fg); }
+.bar i.r { background: var(--red); }
+.bar i.u { background: repeating-linear-gradient(45deg, var(--dark) 0 6px, transparent 6px 12px); }
+@media (max-width: 560px) { .fr { grid-template-columns: minmax(0, 1fr); } }
+
+.big { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); border-block: 2px solid var(--fg); }
+.big div { padding: 16px 14px 16px 0; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.big b { font: 700 2.3rem/1 var(--display); color: var(--red); font-variant-numeric: tabular-nums; }
+.big span { font-size: .88rem; }
+
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; min-width: 600px; }
+th, td { text-align: left; padding: 9px 12px 9px 0; border-top: 1px solid var(--line); vertical-align: top; }
+th { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border-top: 2px solid var(--fg); }
+td.n { font-variant-numeric: tabular-nums; white-space: nowrap; }
+ul.plain { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; max-width: 70ch; }
+footer { border-top: 2px solid var(--fg); padding-top: 14px; }
+</style>
+
+<div class="wrap">
+<header>
+  <div><span class="draft">DRAFT · NOT PUBLISHED</span></div>
+  <div class="eyebrow">Gandaberunda · Karnataka · as read on 17 Nov 2026</div>
+  <h1>Follow the <span>Rupee</span></h1>
+  <p class="lede">How public money travels from Delhi and Vidhana Soudha to a road in your ward, what paper it leaves at each stop, and where auditors have caught it leaking. Then we follow one real trail backwards: Bengaluru's ₹1,700 crore white-topping programme.</p>
+  <p class="muted">Amounts in rupees crore (1 crore = 10 million). "CAG" is the Comptroller and Auditor General of India. Every leak listed comes from an audit report, a court or commission record, or a named official statement, and says which.</p>
+</header>
+
+<div class="big">
+  <div><b>87%</b><span>of ₹11,693 crore the Bengaluru corporation paid out in 2024-26 names no funding source on its public payment record</span></div>
+  <div><b>₹161 cr</b><span>paid to March 2026 on the 2024 white-topping packages, against ₹1,600-1,700 crore awarded and announced</span></div>
+  <div><b>₹14,089 cr</b><span>of the state budget surrendered on the last two working days of 2023-24 (CAG)</span></div>
+  <div><b>₹32,835 cr</b><span>parked in Personal Deposit accounts outside the budget at March 2024 (CAG)</span></div>
+</div>
+
+<section>
+  <h2>The route</h2>
+  <p class="muted">Green records you can download today. Amber records exist but come only through RTI.</p>
+  <div class="route" id="route"></div>
+</section>
+
+<section>
+  <h2>Backtracking one trail: Bengaluru white-topping</h2>
+  <p>White-topping lays concrete over a tar road. The state has announced this programme several times since 2023. We followed it from the announcement down to the payments the corporation itself publishes.</p>
+  <div class="funnel" id="funnel"></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Stop</th><th>What the record says</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>Announced</td><td>120 km at ₹1,000 cr (state budget, Feb 2023); then ₹1,700 cr for 97 roads, 150 km (Deputy CM, Feb 2025); 158 km at ₹1,700 cr (state budget, Mar 2026)</td><td class="src">South First 17 Feb 2023; NBM&amp;CW 18 Feb 2025; TNM 6 Mar 2026</td></tr>
+      <tr><td>Sanctioned</td><td>Government order number, date and the state/corporation split <b>not found</b>. Reports conflict: state ₹800 cr or ₹900 cr, corporation the rest.</td><td class="src">Urban Development portal unreachable; press snippets only</td></tr>
+      <tr><td>Awarded</td><td>About ₹1,600 cr, about 150 km, 15 packages; 13 had work orders by July 2024</td><td class="src">Indian Infrastructure 16 Apr 2024; TNM 3 Jul 2024</td></tr>
+      <tr><td>Paid (public record)</td><td>₹160.7 cr gross across 10 work codes, bills April 2024 to March 2026, each bill counted once. Largest: 8 major roads, RR Nagar and West Zone, Package 08 (₹51.8 cr)</td><td class="src">Corporation payment records via OpenCity; our parse</td></tr>
+      <tr><td>Built</td><td>Kilometres finished <b>not confirmed</b> at any source we could open. Street photos show concrete at two spots on two roads; four roads have no recent photos.</td><td class="src">Mapillary check, 17 Nov 2026</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>What the gap could mean.</b> Three readings fit, and the records we have cannot choose between them: the work is far behind; the work is done but contractors are unpaid (the Deputy CM put pending contractor bills across the state at about ₹37,000 crore in March 2026); or large packages are paid through accounts OpenCity's files do not cover (OpenCity has said its data leaves out some large projects). Each has a document that settles it, listed at the end.</p>
+</section>
+
+<section>
+  <h2>Where the trail goes dark</h2>
+  <ul class="plain">
+    <li><b>At the corporation's cash desk.</b> Of ₹11,693 crore in bills (2024-25 and 2025-26), 87% does not say which grant paid for it. About 10% says only "GoK grants"; under 3% names a scheme (Amrut Nagarothana ₹191 cr, Nava Nagarotthana ₹93 cr). From the public record, most rupees cannot be tied back to the budget line they came from.</li>
+    <li><b>Inside the treasury.</b> Khajane-2 records every bill and payee, but has no public bill-level view.</li>
+    <li><b>Between the order and the payment.</b> Measurement books, running bills and quality reports are where "paid but not done" shows up. None is published.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Two things found while digging (leads, not findings)</h2>
+  <ul class="plain">
+    <li><b>Consultancy bills pile up just under ₹5 lakh.</b> 231 bills sit between ₹4.75 and ₹5 lakh, 16 just above. Some single projects were billed in same-day pieces, such as a road survey for one ₹50 crore package paid as two bills of exactly ₹4,95,000. The procurement law's no-tender limit for services, as written in 2001, is ₹1 lakh. An RTI for the award records is drafted.</li>
+    <li><b>2,972 bills appear twice with new payment numbers.</b> Almost all cluster around a restart of payment numbering in November 2024, which points to a records change rather than double payment. The ₹2,919 crore total must not be quoted. Questions to OpenCity and the accounts department are drafted.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Documents that would close the white-topping trail</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Document</th><th>Who holds it</th><th>How to get it</th></tr></thead>
+    <tbody>
+      <tr><td>Government order sanctioning the ₹1,700 cr, with head of account and state share</td><td>Urban Development Department</td><td>Department website from an Indian connection, else RTI</td></tr>
+      <tr><td>Finance Department release orders under that head</td><td>Finance Department</td><td>RTI</td></tr>
+      <tr><td>Monthly accounts showing money leaving that head</td><td>Accountant General (A&amp;E)</td><td>Download: cag.gov.in/ae/karnataka</td></tr>
+      <tr><td>The 15 package work orders and tender results</td><td>Corporation; KPPP portal</td><td>KPPP from India; else RTI</td></tr>
+      <tr><td>Measurement books, running bills, quality-test reports per package</td><td>Executive engineers</td><td>RTI</td></tr>
+      <tr><td>Payment register for the packages, all accounts</td><td>Corporation accounts</td><td>RTI</td></tr>
+      <tr><td>Kilometres completed per package, with dates</td><td>Road Infrastructure division</td><td>RTI; reader photos; field visits</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<footer class="muted">Sources: CAG State Finances Audit Report 2023-24 (Report No. 4 of 2025), CAG MGNREGS performance audit (2025), CAG DBT performance audit (Report No. 2 of 2022), CAG combined ATIR on local bodies 2020-22, Karnataka Transparency in Public Procurements Act 1999 as amended in 2001, the corporation's payment records via OpenCity, and the news reports named in each row. Figures from news reports are marked as such; no row states wrongdoing by a named person.</footer>
+</div>
+
+<script>
+const R = [
+ {n:"1", t:"Delhi to Karnataka", who:"Union Finance Ministry; central ministries", recs:[["Tax share (3.647% under the 15th Finance Commission)","pub"],["Centrally sponsored scheme releases via PFMS","pub"]],
+  leaks:["Scheme money counted as 'spent' when it is only moved to an agency account: CAG says such booking \"does not represent the actual expenditure\".","Karnataka lost central higher-education (RUSA) funds for 2021-24 and must return ₹25.41 cr unspent."], src:"CAG State Finances 2023-24, ch. 2-3"},
+ {n:"2", t:"Budget to department", who:"Legislature; Finance Department; Khajane-2 treasury", recs:[["Budget and Appropriation Act","pub"],["Release orders","rti"],["Khajane-2 bill and payee records","rti"],["AG monthly accounts (by head)","pub"]],
+  leaks:["₹14,089 cr surrendered on the last two working days of 2023-24, in 25 grants; ₹3,630 cr unspent and never surrendered.","142 executive orders spent money ahead of legislative approval; ₹3,312 cr of it was routine, not urgent."], src:"CAG State Finances 2023-24, para 3.7"},
+ {n:"3", t:"Department to local body or agency", who:"Urban Development / Rural Development; corporations, boards, KRIDL", recs:[["Government orders (some)","pub"],["Personal Deposit ledgers","rti"],["Utilisation certificates","rti"]],
+  leaks:["₹32,835 cr sitting in Personal Deposit accounts at March 2024, up from ₹4,106 cr two years earlier; ₹8,242 cr of it with Deputy Commissioners. The rule says close them each year.","934 abstract contingent bills (cash drawn without vouchers) worth ₹45.58 cr not settled; 209 of them drawn in March alone.","92 utilisation certificates worth ₹118.64 cr outstanding; CAG says about 90% of grant-receiving bodies are out of monitoring."], src:"CAG State Finances 2023-24, paras 4.5-4.7"},
+ {n:"4", t:"Agency to contractor or citizen", who:"Engineers, tender committees, accounts; DBT for welfare", recs:[["Tenders on KPPP (tendered works only)","pub"],["Corporation payment view (via OpenCity)","pub"],["Measurement books, running bills, quality reports","rti"]],
+  leaks:["Bills paid for works not done: a Lokayukta report on RR Nagar found ₹118.25 cr loss and at least 57 works with nothing on the ground (as reported, 2022).","Works routed without tender: ₹4,721 cr of ₹10,018 cr in ward works went to KRIDL without tender since 2015 (Bengaluru NavaNirmana Party analysis, 2021).","Welfare: ₹2,829 cr paid outside the core DBT system; 6.67 lakh beneficiaries denied ₹153.30 cr (CAG 2022). Gruha Lakshmi: ₹115 cr credited to 1.08 lakh women who had died (department, 2026)."], src:"Lokayukta via TNM 2022; TNM 2021; CAG Report 2 of 2022; PTI 2026"},
+ {n:"5", t:"Checks after the money is spent", who:"Accountant General; CAG; State Audit and Accounts Department; social audit; Lokayukta; Public Accounts Committee", recs:[["CAG reports","pub"],["MGNREGA social audits","pub"],["Local fund audit of the corporation","rti"],["Lokayukta reports","rti"]],
+  leaks:["MGNREGA: ₹187.38 cr found misappropriated in social audits; ₹90.14 cr (80%) closed with no recovery.","Corporation audit objections pending since 1964-65: ₹13,962 cr, with ₹4,116 cr to recover (as reported, 2025).","625 local-body inspection reports with 10,873 paragraphs unanswered for over three years."], src:"CAG MGNREGS audit ch. VI; Hans India 27 Feb 2025; CAG ATIR 2020-22"}
+];
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+document.getElementById("route").innerHTML = R.map(s => `
+ <div class="stn"><div class="rail"><div class="dot">${s.n}</div><div class="line"></div></div>
+  <div class="body"><h3>${esc(s.t)}</h3><div class="who">${esc(s.who)}</div>
+   <div class="rec">${s.recs.map(r=>`<span class="chip ${r[1]}">${esc(r[0])}</span>`).join("")}</div>
+   <div class="leak"><b>Where it leaks</b><ul>${s.leaks.map(l=>`<li>${esc(l)}</li>`).join("")}</ul><span class="src">${esc(s.src)}</span></div>
+  </div></div>`).join("");
+const F = [["Announced","₹1,700 cr",100,""],["Awarded","~₹1,600 cr",94.1,""],["Paid, public record","₹160.7 cr",9.45,"r"],["Kilometres built","not confirmed",100,"u"]];
+document.getElementById("funnel").innerHTML = F.map(f => `<div class="fr"><div class="lab">${f[0]}<b>${f[1]}</b></div><div class="bar" role="img" aria-label="${f[0]} ${f[1]}"><i class="${f[3]}" style="width:${f[2]}%"></i></div></div>`).join("");
+</script>
