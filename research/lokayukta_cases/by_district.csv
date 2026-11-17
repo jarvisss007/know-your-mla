@@ -1,0 +1,34 @@
+﻿unit_as_printed_kn,unit_en,revenue_district,annex1_serial_from,annex1_serial_to,cases,share_pct,pdf_pages,stage_breakdown
+ಬೆಂಗಳೂರು ನಗರ-1,Bengaluru City-1 (Lokayukta PS),Bengaluru Urban,1,114,114,9.1,3-14,not_in_annexure
+ಬೆಂಗಳೂರು ನಗರ-2,Bengaluru City-2 (Lokayukta PS),Bengaluru Urban,115,214,100,8.0,15-26,not_in_annexure
+ಬೆಂಗಳೂರು ಗ್ರಾಮಾಂತರ,Bengaluru Rural,Bengaluru Rural,215,265,51,4.1,26-31,not_in_annexure
+ಬಾಗಲಕೋಟೆ,Bagalkote,Bagalkote,266,291,26,2.1,31-33,not_in_annexure
+ಬೆಳಗಾವಿ,Belagavi,Belagavi,292,336,45,3.6,34-37,not_in_annexure
+ಬಳ್ಳಾರಿ,Ballari,Ballari,337,363,27,2.2,37-40,not_in_annexure
+ಬೀದರ,Bidar,Bidar,364,393,30,2.4,40-44,not_in_annexure
+ವಿಜಯಪುರ,Vijayapura,Vijayapura,394,421,28,2.2,44-48,not_in_annexure
+ಚಾಮರಾಜ ನಗರ,Chamarajanagara,Chamarajanagara,422,439,18,1.4,48-50,not_in_annexure
+ಚಿಕ್ಕಬಳ್ಳಾಪುರ,Chikkaballapura,Chikkaballapura,440,463,24,1.9,51-52,not_in_annexure
+ಚಿಕ್ಕಮಗಳೂರು,Chikkamagaluru,Chikkamagaluru,464,503,40,3.2,53-57,not_in_annexure
+ಚಿತ್ರದುರ್ಗ,Chitradurga,Chitradurga,504,544,41,3.3,57-61,not_in_annexure
+ದಾವಣಗೆರೆ,Davanagere,Davanagere,545,605,61,4.9,61-65,not_in_annexure
+ಧಾರವಾಡ,Dharwad,Dharwad,606,635,30,2.4,65-68,not_in_annexure
+ಗದಗ,Gadag,Gadag,636,665,30,2.4,68-71,not_in_annexure
+ಕಲಬುರಗಿ,Kalaburagi,Kalaburagi,666,726,61,4.9,71-78,not_in_annexure
+ಹಾಸನ,Hassan,Hassan,727,756,30,2.4,78-81,not_in_annexure
+ಹಾವೇರಿ,Haveri,Haveri,757,810,54,4.3,82-85,not_in_annexure
+ಹೊಸಪೇಟೆ (ವಿಜಯನಗರ),Hosapete (Vijayanagara),Vijayanagara,811,831,21,1.7,85-87,not_in_annexure
+ಕಾರವಾರ (ಉತ್ತರ ಕನ್ನಡ),Karwar (Uttara Kannada),Uttara Kannada,832,851,20,1.6,87-88,not_in_annexure
+ಕೋಲಾರ,Kolar,Kolar,852,886,35,2.8,88-94,not_in_annexure
+ಕೊಪ್ಪಳ,Koppal,Koppal,887,914,28,2.2,94-97,not_in_annexure
+ಮಡಿಕೇರಿ (ಕೊಡಗು),Madikeri (Kodagu),Kodagu,915,940,26,2.1,97-100,not_in_annexure
+ಮಂಡ್ಯ,Mandya,Mandya,941,988,48,3.8,100-104,not_in_annexure
+ಮಂಗಳೂರು,Mangaluru (Dakshina Kannada),Dakshina Kannada,989,1019,31,2.5,104-108,not_in_annexure
+ಮೈಸೂರು,Mysuru,Mysuru,1020,1071,52,4.2,109-116,not_in_annexure
+ರಾಯಚೂರು,Raichur,Raichur,1072,1092,21,1.7,116-118,not_in_annexure
+ರಾಮನಗರ (ಬೆಂಗಳೂರು ದಕ್ಷಿಣ),Ramanagara (Bengaluru Dakshina),Ramanagara,1093,1111,19,1.5,118-120,not_in_annexure
+ಶಿವಮೊಗ್ಗ,Shivamogga,Shivamogga,1112,1159,48,3.8,120-123,not_in_annexure
+ತುಮಕೂರು,Tumakuru,Tumakuru,1160,1205,46,3.7,123-128,not_in_annexure
+ಉಡುಪಿ,Udupi,Udupi,1206,1226,21,1.7,128-130,not_in_annexure
+ಯಾದಗಿರಿ,Yadgir,Yadgir,1227,1248,22,1.8,130-134,not_in_annexure
+TOTAL,,,1,1248,1248,100.0,3-134,cover: 648 investigation / 364 chargesheet / 218 stayed / 18 B-report (state total only)

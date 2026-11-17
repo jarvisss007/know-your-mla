@@ -1,0 +1,35 @@
+﻿department_as_printed,cases_by_last_serial,rows_present_in_pdf,share_pct_of_serial_total,pdf_pages,stage_breakdown,note
+Revenue Department,288,288,21.4,141-162,not_in_annexure,
+Rural Development and Panchayath Raj Department,200,200,14.8,163-178,not_in_annexure,
+Urban Development Department,159,104,11.8,216-224,not_in_annexure,"serials jump 82 -> 138 between p222 and p223 (55 serials, districts Dharwad..Mangaluru, absent from the PDF)"
+Home Department,121,121,9.0,178-186,not_in_annexure,
+Energy Department,106,106,7.9,135-141,not_in_annexure,
+Finance Department,55,55,4.1,196-199,not_in_annexure,
+Department of Health and Family Welfare,42,42,3.1,203-206,not_in_annexure,
+Education Department,37,37,2.7,193-196,not_in_annexure,
+"Department of Forest, Ecology and Environment",37,37,2.7,201-203,not_in_annexure,
+Water Resource Department,33,33,2.4,226-229,not_in_annexure,
+Public Works Department,31,31,2.3,210-212,not_in_annexure,
+Transport Department,30,30,2.2,213-216,not_in_annexure,
+Agriculture Department,21,21,1.6,186-187,not_in_annexure,
+Department of Co-operation,17,17,1.3,191-192,not_in_annexure,p191 scanned upside down
+Social Welfare Department,16,16,1.2,212-213,not_in_annexure,
+Elected Members,16,16,1.2,230-231,not_in_annexure,"elected representatives (mostly gram panchayat), not a department"
+Labour Department,15,15,1.1,207-208,not_in_annexure,
+"Department of Food, Civil Supplies and Consumer Affairs",14,14,1.0,200-201,not_in_annexure,
+Department of Animal Husbandry and Fisheries,13,13,1.0,187-188,not_in_annexure,
+Backward Classes Welfare Department,13,13,1.0,189-190,not_in_annexure,
+Department of Women and Child Development and Empowerment of Differently Abled and Senior Citizens,13,13,1.0,229-230,not_in_annexure,
+Department of Commerce and Industries,12,12,0.9,190-191,not_in_annexure,p191 scanned upside down
+Department of Horticulture and Sericulture,12,12,0.9,206-207,not_in_annexure,
+Department of Personnel and Administrative Reforms,11,11,0.8,192-193,not_in_annexure,
+"Department of Law, Justice and Women Rights (as printed)",10,10,0.7,208-209,not_in_annexure,
+Out Source,6,6,0.4,224-225,not_in_annexure,"outsourced staff, not a department"
+Minority Department,5,5,0.4,209,not_in_annexure,
+Department of Higher Education,5,5,0.4,225,not_in_annexure,
+Minor Irrigation Department,3,3,0.2,226,not_in_annexure,
+"Planning, Programme Monitoring and Statistic Department",2,2,0.1,209-210,not_in_annexure,
+Housing Department,2,2,0.1,225,not_in_annexure,
+Tourism Department,1,1,0.1,213,not_in_annexure,
+Information Department,1,1,0.1,225,not_in_annexure,
+TOTAL,1347,1292,100.0,135-231,cover: 648/364/218/18 state total only,"Annexure-2 = all case types (trap, DA, other); not reconcilable to 1,248 - see notes"
