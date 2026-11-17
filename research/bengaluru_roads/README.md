@@ -77,3 +77,7 @@ OSM tags are volunteer edits and can be years old, so the table is a list of pla
 | Patalamma Temple Road | 211 | night photos (Aug 2022); surface type cannot be told | none | Open |
 
 Nothing seen contradicts a payment. Two roads look consistent with concrete where photographed, three have no after-photos, and one has no photos at all. Picks were automatic and several "before" frames point away from the road; a person choosing frames road by road would do better, and the 2016-18 photos on Indiranagar and CMH Road can show which stretches were already concrete from the earlier phase.
+
+## Photo re-check, 17 Nov 2026 (evening)
+
+Re-ran `street_photos.py`: no new uploads on any of the six roads (the reader request is not live yet). Counts on Indiranagar and CMH Road moved by several hundred between runs because Mapillary returns at most 2,000 photos per search box and those boxes are full; none of the changed photos are recent. Before relying on counts there, split the search boxes smaller.
