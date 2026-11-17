@@ -118,6 +118,20 @@ Under the Karnataka Civil Services (Conduct) Rules, 2021 (declaration of assets 
 3. The action taken against officers who did not file (notices, increments withheld, vigilance clearance refused, disciplinary proceedings), with numbers for each year.
 4. Copies of any circular issued in 2024, 2025 or 2026 on filing property returns, including any instruction to publish them online.
 """},
+    {"id": "l5", "title": "5. A corporation's bank accounts",
+     "to": "[Name of the corporation, and its head-office address]",
+     "why": "In 2024-25 the state auditor found development corporations keeping government money in bank accounts outside the treasury, against a 2023 order, while the books showed it as spent: ₹410 crore in 32 accounts, and ₹412 crore of unused grants in four corporations. Pick a corporation; the letter asks where its money is.",
+     "annex": "corp",
+     "body": """Information sought
+
+For this corporation, as on 31 March 2025 and as on the date of reply:
+1. A list of every bank account held in the corporation's name (bank, branch, type of account such as savings, current, escrow, recovery or fixed deposit, and purpose) with the balance in each. Account numbers may be masked.
+2. Copies of the board resolutions or government orders under which each of these accounts was opened, and of any order allowing an account to remain open after the Finance Department's order of 28 February 2023 directing corporations to close their bank accounts and use Personal Deposit accounts.
+3. For any escrow or recovery account: what money it holds, where that money came from, and on whose instructions it is held.
+4. The grants received from the Government in 2022-23, 2023-24 and 2024-25, the amount spent each year, and the unspent balance, with where the unspent balance is held (bank account, fixed deposit or Personal Deposit account).
+5. Interest earned on government grants in 2020-21 to 2024-25, and the amount remitted to the Government (head of account 0049), with dates.
+6. The year of the latest audited annual accounts of the corporation, and a copy of those accounts and of the auditor's report on them.
+"""},
 ]
 
 # ---- Kannada (needs a native reader's review, like the rest of the site's Kannada) ----
@@ -202,6 +216,19 @@ KN = {
 3. ವಿವರ ಸಲ್ಲಿಸದ ಅಧಿಕಾರಿಗಳ ವಿರುದ್ಧ ಕೈಗೊಂಡ ಕ್ರಮ (ನೋಟಿಸ್‌ಗಳು, ವೇತನ ಬಡ್ತಿ ತಡೆ, ಜಾಗೃತ ದಳದ ಅನುಮತಿ ನಿರಾಕರಣೆ, ಶಿಸ್ತು ಕ್ರಮ), ಪ್ರತಿ ವರ್ಷದ ಸಂಖ್ಯೆಗಳೊಂದಿಗೆ.
 4. ಆಸ್ತಿ ವಿವರ ಸಲ್ಲಿಕೆ ಕುರಿತು 2024, 2025 ಅಥವಾ 2026ರಲ್ಲಿ ಹೊರಡಿಸಿದ ಯಾವುದೇ ಸುತ್ತೋಲೆಯ ಪ್ರತಿಗಳು, ಅವುಗಳನ್ನು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಪ್ರಕಟಿಸುವ ಸೂಚನೆ ಇದ್ದರೆ ಅದೂ ಸೇರಿದಂತೆ.
 """},
+    "l5": {"title": "5. ಒಂದು ನಿಗಮದ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳು",
+           "to": "[ನಿಗಮದ ಹೆಸರು, ಮತ್ತು ಕೇಂದ್ರ ಕಚೇರಿಯ ವಿಳಾಸ]",
+           "why": "2024-25ರಲ್ಲಿ ಅಭಿವೃದ್ಧಿ ನಿಗಮಗಳು 2023ರ ಆದೇಶಕ್ಕೆ ವಿರುದ್ಧವಾಗಿ ಸರ್ಕಾರದ ಹಣವನ್ನು ಖಜಾನೆಯ ಹೊರಗಿನ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳಲ್ಲಿ ಇಟ್ಟಿವೆ, ಲೆಕ್ಕದಲ್ಲಿ ಅದನ್ನು ಖರ್ಚಾಗಿದೆ ಎಂದು ತೋರಿಸಲಾಗಿದೆ ಎಂದು ರಾಜ್ಯದ ಲೆಕ್ಕಪರಿಶೋಧಕರು ಕಂಡುಕೊಂಡರು: 32 ಖಾತೆಗಳಲ್ಲಿ ₹410 ಕೋಟಿ, ಮತ್ತು ನಾಲ್ಕು ನಿಗಮಗಳಲ್ಲಿ ₹412 ಕೋಟಿ ಬಳಸದ ಅನುದಾನ. ಒಂದು ನಿಗಮವನ್ನು ಆಯ್ಕೆಮಾಡಿ; ಅದರ ಹಣ ಎಲ್ಲಿದೆ ಎಂದು ಪತ್ರ ಕೇಳುತ್ತದೆ.",
+           "body": """ಕೋರಿರುವ ಮಾಹಿತಿ
+
+ಈ ನಿಗಮದ ಬಗ್ಗೆ, 31 ಮಾರ್ಚ್ 2025ರಂದು ಮತ್ತು ಉತ್ತರದ ದಿನಾಂಕದಂದು ಇದ್ದಂತೆ:
+1. ನಿಗಮದ ಹೆಸರಿನಲ್ಲಿರುವ ಎಲ್ಲ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳ ಪಟ್ಟಿ (ಬ್ಯಾಂಕ್, ಶಾಖೆ, ಖಾತೆಯ ಪ್ರಕಾರ: ಉಳಿತಾಯ, ಚಾಲ್ತಿ, ಎಸ್ಕ್ರೋ, ವಸೂಲಾತಿ ಅಥವಾ ನಿಶ್ಚಿತ ಠೇವಣಿ, ಮತ್ತು ಉದ್ದೇಶ) ಪ್ರತಿ ಖಾತೆಯ ಶಿಲ್ಕಿನೊಂದಿಗೆ. ಖಾತೆ ಸಂಖ್ಯೆಗಳನ್ನು ಭಾಗಶಃ ಮರೆಮಾಡಬಹುದು.
+2. ಈ ಪ್ರತಿ ಖಾತೆಯನ್ನು ತೆರೆಯಲು ಅನುಮತಿಸಿದ ಆಡಳಿತ ಮಂಡಳಿ ನಿರ್ಣಯಗಳು ಅಥವಾ ಸರ್ಕಾರಿ ಆದೇಶಗಳ ಪ್ರತಿಗಳು, ಮತ್ತು ಬ್ಯಾಂಕ್ ಖಾತೆಗಳನ್ನು ಮುಚ್ಚಿ ವೈಯಕ್ತಿಕ ಠೇವಣಿ (ಪಿಡಿ) ಖಾತೆ ಬಳಸುವಂತೆ ಆರ್ಥಿಕ ಇಲಾಖೆ 28 ಫೆಬ್ರವರಿ 2023ರಂದು ನೀಡಿದ ಆದೇಶದ ನಂತರವೂ ಯಾವುದೇ ಖಾತೆ ಮುಂದುವರಿಯಲು ಅನುಮತಿಸಿದ ಆದೇಶದ ಪ್ರತಿ.
+3. ಯಾವುದೇ ಎಸ್ಕ್ರೋ ಅಥವಾ ವಸೂಲಾತಿ ಖಾತೆಯಲ್ಲಿ ಯಾವ ಹಣವಿದೆ, ಆ ಹಣ ಎಲ್ಲಿಂದ ಬಂತು, ಮತ್ತು ಯಾರ ಸೂಚನೆಯ ಮೇರೆಗೆ ಅದನ್ನು ಇಡಲಾಗಿದೆ.
+4. 2022-23, 2023-24 ಮತ್ತು 2024-25ರಲ್ಲಿ ಸರ್ಕಾರದಿಂದ ಪಡೆದ ಅನುದಾನ, ಪ್ರತಿ ವರ್ಷ ಖರ್ಚು ಮಾಡಿದ ಮೊತ್ತ, ಮತ್ತು ಖರ್ಚಾಗದ ಶಿಲ್ಕು, ಹಾಗೂ ಆ ಶಿಲ್ಕನ್ನು ಎಲ್ಲಿ ಇಡಲಾಗಿದೆ (ಬ್ಯಾಂಕ್ ಖಾತೆ, ನಿಶ್ಚಿತ ಠೇವಣಿ ಅಥವಾ ವೈಯಕ್ತಿಕ ಠೇವಣಿ ಖಾತೆ).
+5. 2020-21ರಿಂದ 2024-25ರವರೆಗೆ ಸರ್ಕಾರಿ ಅನುದಾನದ ಮೇಲೆ ಗಳಿಸಿದ ಬಡ್ಡಿ, ಮತ್ತು ಸರ್ಕಾರಕ್ಕೆ (ಲೆಕ್ಕ ಶೀರ್ಷಿಕೆ 0049) ಜಮೆ ಮಾಡಿದ ಮೊತ್ತ, ದಿನಾಂಕಗಳೊಂದಿಗೆ.
+6. ನಿಗಮದ ಇತ್ತೀಚಿನ ಲೆಕ್ಕಪರಿಶೋಧಿತ ವಾರ್ಷಿಕ ಲೆಕ್ಕಪತ್ರಗಳ ವರ್ಷ, ಮತ್ತು ಆ ಲೆಕ್ಕಪತ್ರಗಳು ಹಾಗೂ ಅವುಗಳ ಮೇಲಿನ ಲೆಕ್ಕಪರಿಶೋಧಕರ ವರದಿಯ ಪ್ರತಿ.
+"""},
 }
 for _l in LETTERS:
     _k = KN[_l["id"]]
@@ -269,6 +296,7 @@ function build(l) {
   const name = $('nm').value.trim() || '______', addr = $('ad').value.trim().replace(/\\n+/g, ', ') || '______';
   let to = k ? l.to_kn : l.to, rows = [];
   if (l.annex === 'all') rows = DATA;
+  if (l.annex === 'corp') { const cp = $('corp').value; to = cp + (k ? ', ಕೇಂದ್ರ ಕಚೇರಿ, ಬೆಂಗಳೂರು [ವಿಳಾಸ]' : ', Head Office, Bengaluru [address]'); }
   if (l.annex === 'dept') { const dp = $('dept').value; rows = DATA.filter(r => r.dept === dp); to = T[lang].dept(dp); }
   return (k ? L.head_kn : L.head).replace('{to}', to).replace('{name}', name).replace('{addr}', addr) + '\\n' + (k ? l.body_kn : l.body) + annex(rows) + (k ? L.foot_kn : L.foot);
 }
@@ -286,7 +314,7 @@ function setLang(x) {
   render();
 }
 $('lang').addEventListener('click', () => setLang(lang === 'kn' ? 'en' : 'kn'));
-['nm', 'ad', 'dept'].forEach(id => $(id).addEventListener('input', render));
+['nm', 'ad', 'dept', 'corp'].forEach(id => $(id).addEventListener('input', render));
 document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', async () => {
   const t = $(b.dataset.copy); let ok = false;
   try { await navigator.clipboard.writeText(t.value); ok = true } catch (e) { t.select(); try { ok = document.execCommand('copy') } catch (e2) {} }
@@ -301,6 +329,7 @@ setLang(lang);
 """
 
 esc = html.escape
+CORPS = ['Nijasharana Ambigara Chowdaiah Development Corporation Ltd', 'Karnataka Veerashaiva-Lingayath Development Corporation Ltd', 'Karnataka Vokkaliga Community Development Corporation Ltd', 'Karnataka State Kadugolla Development Corporation Ltd', 'Karnataka Maratha Communities Development Corporation Ltd', 'Karnataka SC/ST Nomadic Development Corporation Ltd', 'Karnataka State Safai Karmachari Development Corporation Ltd', 'Dr Babu Jagjivan Ram Leather Industries Development Corporation Ltd', 'Karnataka Bhovi Development Corporation Ltd', 'Karnataka Vishwakarma Communities Development Corporation Ltd', 'Karnataka Uppara Development Corporation Ltd', 'Karnataka Maharshi Valmiki Scheduled Tribes Development Corporation Ltd', 'Dr B R Ambedkar Development Corporation Ltd', 'D Devaraj Urs Backward Classes Development Corporation Ltd', 'Karnataka Thanda Development Corporation', 'Karnataka Adi Jambava Development Corporation']
 
 
 def K(s):
@@ -314,10 +343,12 @@ for l in LETTERS:
     extra = ""
     if l["annex"] == "dept":
         extra = f'<label for="dept"{K("ಇಲಾಖೆ")}>Department</label><select id="dept">{opts}</select>'
+    if l["annex"] == "corp":
+        extra = f'<label for="corp"{K("ನಿಗಮ")}>Corporation</label><select id="corp">' + "".join(f"<option>{esc(c)}</option>" for c in CORPS) + "</select>"
     if l["annex"] == "all":
         extra = (f'<p class="note"{K(f"ಟ್ರ್ಯಾಕರ್‌ನಲ್ಲಿ ಲೋಕಾಯುಕ್ತ ಕ್ರಮ ಕೈಗೊಂಡ ಎಲ್ಲ {len(DATA)} ಅಧಿಕಾರಿಗಳನ್ನು ಹುದ್ದೆ, ಸ್ಥಳ ಮತ್ತು ದಿನಾಂಕದೊಂದಿಗೆ ಅನುಬಂಧದಲ್ಲಿ ಪಟ್ಟಿ ಮಾಡಲಾಗಿದೆ.")}>'
                  f'The annex lists all {len(DATA)} officers the Lokayukta acted against in the tracker, by post, place and date.</p>')
-    cards.append(f"""<section class="card"><h3{K(esc(l['title_kn']))}>{esc(l['title'])}</h3><p{K(esc(l['why_kn']))}>{esc(l['why'])}</p>{extra}
+    cards.append(f"""<section class="card" id="letter-{l['id']}"><h3{K(esc(l['title_kn']))}>{esc(l['title'])}</h3><p{K(esc(l['why_kn']))}>{esc(l['why'])}</p>{extra}
 <textarea class="letter" id="{l['id']}" aria-label="{esc(l['title'])}" spellcheck="false"></textarea>
 <div class="row"><button class="primary" data-copy="{l['id']}"{K("ಪತ್ರ ನಕಲು ಮಾಡಿ")}>Copy letter</button><button data-dl="{l['id']}"{K(".txt ಡೌನ್‌ಲೋಡ್")}>Download .txt</button><span class="ok" aria-live="polite"></span></div></section>""")
 
@@ -345,7 +376,7 @@ page = f"""<!doctype html>
 <main>
 <div class="kick"{K("Gandaberunda · ಮಾಹಿತಿ ಹಕ್ಕು · ಭಾರತದ ಯಾವುದೇ ನಾಗರಿಕರಿಗಾಗಿ")}>Gandaberunda · Right to Information · for any citizen of India</div>
 <h1{K("ಉತ್ತರವನ್ನು <em>ನೀವೇ</em> ಕೇಳಿ")}>Ask for the answer <em>yourself</em></h1>
-<p class="lede"{K(f"ನಾವು ಹಿಂಬಾಲಿಸುತ್ತಿರುವ ವರದಿಗಳ ಪ್ರಕಾರ, 2026ರಲ್ಲಿ ಕರ್ನಾಟಕದ {len(rows)} ಅಧಿಕಾರಿಗಳ ಮೇಲೆ ದಾಳಿ, ಟ್ರ್ಯಾಪ್ ಅಥವಾ ಆರೋಪ ದಾಖಲಾಗಿದೆ. ಅವರಲ್ಲಿ {stuck} ಮಂದಿಯ ವಿಷಯದಲ್ಲಿ ಮುಂದಿನ ಯಾವುದೇ ಹಂತ ವರದಿಯಾಗಿಲ್ಲ: ದೋಷಾರೋಪಣ ಪಟ್ಟಿ ಇಲ್ಲ, ಮಂಜೂರಾತಿ ಇಲ್ಲ, ತೀರ್ಪು ಇಲ್ಲ. ಉತ್ತರ ಗೊತ್ತಿರುವ ಕಚೇರಿಗಳು ಯಾವುದೇ ನಾಗರಿಕರಿಗೆ 30 ದಿನಗಳೊಳಗೆ ಉತ್ತರಿಸಬೇಕು. ಇಲ್ಲಿ ನಾಲ್ಕು ಪತ್ರಗಳಿವೆ: ಮುದ್ರಿಸಿ, ಸಹಿ ಮಾಡಿ, ಅಂಚೆಯಲ್ಲಿ ಕಳುಹಿಸಿ.")}>{len(rows)} Karnataka officials were raided, trapped or charged in 2026, according to the reports we track. For {stuck} of them, no later step has been reported: no chargesheet, no sanction, no verdict. The offices that know the answer must reply to any citizen within 30 days. Here are four letters, ready to print, sign and post.</p>
+<p class="lede"{K(f"ನಾವು ಹಿಂಬಾಲಿಸುತ್ತಿರುವ ವರದಿಗಳ ಪ್ರಕಾರ, 2026ರಲ್ಲಿ ಕರ್ನಾಟಕದ {len(rows)} ಅಧಿಕಾರಿಗಳ ಮೇಲೆ ದಾಳಿ, ಟ್ರ್ಯಾಪ್ ಅಥವಾ ಆರೋಪ ದಾಖಲಾಗಿದೆ. ಅವರಲ್ಲಿ {stuck} ಮಂದಿಯ ವಿಷಯದಲ್ಲಿ ಮುಂದಿನ ಯಾವುದೇ ಹಂತ ವರದಿಯಾಗಿಲ್ಲ: ದೋಷಾರೋಪಣ ಪಟ್ಟಿ ಇಲ್ಲ, ಮಂಜೂರಾತಿ ಇಲ್ಲ, ತೀರ್ಪು ಇಲ್ಲ. ಉತ್ತರ ಗೊತ್ತಿರುವ ಕಚೇರಿಗಳು ಯಾವುದೇ ನಾಗರಿಕರಿಗೆ 30 ದಿನಗಳೊಳಗೆ ಉತ್ತರಿಸಬೇಕು. ಇಲ್ಲಿ ಐದು ಪತ್ರಗಳಿವೆ: ಮುದ್ರಿಸಿ, ಸಹಿ ಮಾಡಿ, ಅಂಚೆಯಲ್ಲಿ ಕಳುಹಿಸಿ.")}>{len(rows)} Karnataka officials were raided, trapped or charged in 2026, according to the reports we track. For {stuck} of them, no later step has been reported: no chargesheet, no sanction, no verdict. The offices that know the answer must reply to any citizen within 30 days. Here are five letters, ready to print, sign and post.</p>
 <p class="note"{K(f"ಪ್ರತಿ ಪ್ರಕರಣವನ್ನು {A_TR_KN} ಪುಟದಲ್ಲಿ ನೋಡಿ. ಟ್ರ್ಯಾಕರ್‌ನಂತೆಯೇ ಪತ್ರಗಳಲ್ಲಿ ಹೆಸರುಗಳಿಲ್ಲ, ಹುದ್ದೆ ಮತ್ತು ಸ್ಥಳಗಳು ಮಾತ್ರ; ಹುದ್ದೆ, ಸ್ಥಳ, ದಿನಾಂಕ ಮತ್ತು ಲಿಂಕ್ ಮಾಡಿದ ಪತ್ರಿಕಾ ವರದಿಯಿಂದ ಮಾಹಿತಿ ಅಧಿಕಾರಿ ಪ್ರತಿಯೊಬ್ಬ ಅಧಿಕಾರಿಯನ್ನು ಗುರುತಿಸಬಹುದು. ಪ್ರತಿ ಪತ್ರ ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಕನ್ನಡದಲ್ಲಿದೆ; ಮೇಲಿನ ಬಟನ್‌ನಿಂದ ಭಾಷೆ ಬದಲಿಸಿ.")}>See every case on {A_TR}. Letters carry posts and places, not names, the same as the tracker; the PIO can identify each officer from the post, place, date and the linked press report. Every letter is in English and Kannada; switch with the button at the top.</p>
 
 <h2{K("ನಿಮ್ಮ ವಿವರಗಳು")}>Your details</h2>

@@ -58,6 +58,11 @@ ol.pipe > li { position: relative; padding: 0 0 34px 56px; }
 .box { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
 .box ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
 footer ol { padding-left: 20px; font-size: .85rem; color: var(--muted); display: flex; flex-direction: column; gap: 6px; word-break: break-word; }
+table.led { width: 100%; border-collapse: collapse; font-size: .92rem; font-variant-numeric: tabular-nums; }
+table.led th, table.led td { text-align: left; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+table.led th { font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+table.led td:not(:first-child), table.led th:not(:first-child) { text-align: right; white-space: nowrap; }
+table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
 </style>
 <div class="wrap">
 <header>
@@ -70,7 +75,7 @@ footer ol { padding-left: 20px; font-size: .85rem; color: var(--muted); display:
 
 <section class="stats" aria-label="Headline audited figures">
   <div class="stat"><b>₹29,770 cr</b><span>sitting in deposit accounts outside the voted budget, 31 March 2025; ₹6,026 cr of it moved there in March alone</span></div>
-  <div class="stat"><b>₹14,550 cr</b><span>interest earned on government money by 64 corporations and bodies, 2020-24, never paid back to the state</span></div>
+  <div class="stat"><b>₹410 cr</b><span>in 32 bank accounts that ten corporations kept open despite a 2023 order to close them; ₹352 cr of it in one corporation</span></div>
   <div class="stat"><b>18.9%</b><span>of the whole year's spending done in March 2025; 35.6% in the last three months</span></div>
   <div class="stat"><b>~90%</b><span>of bodies receiving grants are outside the check that asks how the money was used</span></div>
 </section>
@@ -97,12 +102,12 @@ footer ol { padding-left: 20px; font-size: .85rem; color: var(--muted); display:
     <li><b>₹12,927 crore</b> moved into deposit accounts in 2024-25, including <b>₹6,026 crore in March 2025</b>. Balance ₹29,770 crore in 97 accounts (₹22,115 crore of it is the court-ordered mining-restoration fund); 25 accounts unused for over three years.</li>
     <li>On 30 March 2025 Social Welfare moved <b>₹145 crore</b> meant for vacant posts into two bodies' deposit accounts. The auditor: "mere parking of funds to avoid lapse of grants."</li>
     <li>Four corporations held <b>₹412 crore</b> of grants "in the bank accounts of the Corporations outside the Government Account" while the books showed it spent. Backward Classes corporations kept 32 bank accounts holding <b>₹410 crore</b> open despite a 2023 order to close them.</li>
-    <li><b>₹14,550 crore</b> of interest earned on government money by 64 bodies in 2020-24 was never paid back.</li>
-  </ul><p class="src">CAG SFAR 2024-25, paras 3.5, 2.7.1.2, 2.7.1.5; SFAR 2023-24, para 4.2</p></div>
+    <li>Interest earned on government money and not paid back: the auditor lists 64 bodies and a total of ₹14,550 crore for 2020-24. But ₹11,850 crore of that total is put against the Karnataka Biodiversity Board, which cannot be right as printed: the board received about ₹2.5 crore in all up to 2023 (Deccan Herald). Leaving that line out, about <b>₹2,700 crore</b>, led by Karnataka Neeravari Nigam (₹1,265 crore), KRIDL (₹834 crore), Vishweshwaraya Jala Nigam (₹144 crore) and the Valmiki corporation (₹108 crore).</li>
+  </ul><p class="src">CAG SFAR 2024-25, paras 3.5, 2.7.1.2, 2.7.1.5; SFAR 2023-24, para 4.2 and Appendix 4.1; <a href="https://www.deccanherald.com/india/karnataka/20-years-zero-progress-karnataka-s-potent-biodiversity-act-remains-unutilised-3455886" rel="noopener">Deccan Herald on the Biodiversity Board</a></p></div>
   <div class="case"><div class="head"><span class="tag t-charged">Charged</span> Valmiki ST Development Corporation, 2024</div>
     <p>This is the stage where the money left. According to the Enforcement Directorate, the corporation's account was moved to a new bank branch in February 2024; ₹187 crore was pooled there between March and May; about ₹90 crore went on to 18 accounts in Hyderabad and through an overdraft taken against the corporation's own fixed deposit. It came out when an accounts official died in May 2024 and left a note. Investigators rebuilt the trail from account-opening papers and bank transfer records. Chargesheets have been filed; there is no verdict.</p>
     <p class="src"><a href="https://thesouthfirst.com/news/money-trail-in-valmiki-scam-how-nearly-rs-90-crore-was-siphoned-off/" rel="noopener">South First, Oct 2024</a> · <a href="https://thesouthfirst.com/karnataka/valmiki-corporation-case-cbi-files-chargesheets-against-ex-minister-nagendra/" rel="noopener">South First, Jun 2026</a></p></div>
-  <p class="back"><b>Trace it back:</b> board resolutions approving each bank account, and the bank statements of the corporation. The state told a CAG conference in 2025 it has no central register of such accounts (reported; not read in full).</p>
+  <p class="back"><b>Trace it back:</b> board resolutions approving each bank account, and the bank statements of the corporation. The state told a CAG conference in 2025 it has no central register of such accounts (reported; not read in full). The corporations are traced one by one <a href="#corporations">below</a>.</p>
 </div></li>
 
 <li><div class="node">3</div><div class="stage">
@@ -166,6 +171,55 @@ footer ol { padding-left: 20px; font-size: .85rem; color: var(--muted); display:
 </div></li>
 
 </ol>
+</section>
+
+<section id="corporations" style="display:flex;flex-direction:column;gap:16px">
+  <h2>Backtracking the corporations</h2>
+  <p>Development corporations for castes and communities get grants from the budget for loans, subsidies and land for the poor. Once the grant leaves the treasury, the books say it is spent. These are the auditor's own tables for the corporations it checked in 2024-25, followed back to their bank accounts.</p>
+
+  <h3>Grants booked as spent, still unused <span class="tag t-audit">Audited</span></h3>
+  <div style="overflow-x:auto"><table class="led">
+    <thead><tr><th>Corporation</th><th>Grants 2022-25</th><th>Spent</th><th>Unused, 31 Mar 2025</th></tr></thead>
+    <tbody>
+      <tr><td>Karnataka Veerashaiva-Lingayath Development Corporation</td><td>₹260.00 cr</td><td>₹73.30 cr</td><td><b>₹191.80 cr</b></td></tr>
+      <tr><td>Karnataka Vokkaliga Community Development Corporation</td><td>₹225.00 cr</td><td>₹33.40 cr</td><td><b>₹141.00 cr</b></td></tr>
+      <tr><td>Karnataka State Kadugolla Development Corporation</td><td>₹49.80 cr</td><td>₹0.20 cr</td><td><b>₹49.00 cr</b></td></tr>
+      <tr><td>Karnataka Maratha Communities Development Corporation</td><td>₹170.00 cr</td><td>₹64.50 cr</td><td><b>₹30.20 cr</b></td></tr>
+      <tr class="tot"><td>Four corporations</td><td>₹704.80 cr</td><td>₹171.40 cr</td><td><b>₹412.00 cr</b></td></tr>
+    </tbody></table></div>
+  <p class="src">CAG SFAR 2024-25, Table 2.23. The auditor: "the un-utilised grant of ₹412 crore remained in the bank accounts of the Corporations outside the Government Account in-spite of being shown as expended". The unused column is the auditor's own; grants minus spending would give ₹533.40 crore, and the report does not explain the difference.</p>
+
+  <h3>Bank accounts kept open after the order to close them <span class="tag t-audit">Audited</span></h3>
+  <p>In February 2023 the Finance Department told the corporations to close their bank accounts and keep the money in treasury deposit accounts, where it can be seen. On 31 March 2025 ten corporations still ran 32 bank accounts.</p>
+  <div style="overflow-x:auto"><table class="led">
+    <thead><tr><th>Corporation</th><th>Accounts</th><th>Balance, 31 Mar 2025</th></tr></thead>
+    <tbody>
+      <tr><td>Nijasharana Ambigara Chowdaiah Development Corporation</td><td>3</td><td><b>₹352.54 cr</b></td></tr>
+      <tr><td>Karnataka SC/ST Nomadic Development Corporation</td><td>2</td><td>₹34.89 cr</td></tr>
+      <tr><td>Karnataka State Safai Karmachari Development Corporation</td><td>1</td><td>₹7.02 cr</td></tr>
+      <tr><td>Dr Babu Jagjivan Ram Leather Industries Development Corporation</td><td>1</td><td>₹5.17 cr</td></tr>
+      <tr><td>Karnataka Bhovi Development Corporation</td><td>4</td><td>₹2.86 cr</td></tr>
+      <tr><td>Karnataka Maratha Communities Development Corporation</td><td>3</td><td>₹1.84 cr</td></tr>
+      <tr><td>Karnataka Vokkaliga Community Development Corporation</td><td>4</td><td>₹1.72 cr</td></tr>
+      <tr><td>Karnataka Veerashaiva-Lingayath Development Corporation</td><td>3</td><td>₹1.68 cr</td></tr>
+      <tr><td>Karnataka Vishwakarma Communities Development Corporation</td><td>8</td><td>₹1.37 cr</td></tr>
+      <tr><td>Karnataka Uppara Development Corporation</td><td>3</td><td>₹1.35 cr</td></tr>
+      <tr class="tot"><td>Ten corporations</td><td>32</td><td><b>₹410.43 cr</b></td></tr>
+    </tbody></table></div>
+  <p class="src">CAG SFAR 2024-25, para 2.7.1.5 and Appendix 2.16, which lists every account. Our totals add up to the auditor's ₹410,43,25,294.</p>
+
+  <h3>Questions the records raise</h3>
+  <div class="case"><div class="head">1. ₹352 crore in one small corporation's accounts</div>
+    <p>The Nijasharana Ambigara Chowdaiah Development Corporation, set up for the Ambiga and related communities, was given ₹5 crore in 2024-25. The auditor's table shows ₹190.52 crore in an "escrow" account and ₹159.40 crore in a "recovery" account at Bank of Baroda. Either the corporation holds money far beyond its own grants, or the figures are misprinted. The report does not say which.</p></div>
+  <div class="case"><div class="head">2. ₹412 crore "in the bank", but not in the bank accounts listed</div>
+    <p>The auditor says the four corporations' ₹412 crore of unused grants sits in their bank accounts. Its own list of their bank accounts shows ₹5.24 crore for three of them, and no account at all for the Kadugolla corporation. The report does not say where the rest is held: fixed deposits, treasury deposit accounts, or other accounts.</p></div>
+  <div class="case"><div class="head">3. New money while old money is under investigation</div>
+    <p>The Bhovi corporation, where the Enforcement Directorate alleges about ₹97 crore went to fake beneficiaries (prosecution complaint June 2025), received all of its ₹55 crore for 2024-25 in the last quarter of the year and still ran four bank accounts. The Valmiki corporation, where about ₹90 crore was diverted in 2024 (chargesheets filed), received ₹63 crore of its ₹84 crore for 2024-25 in the last quarter, and had earned ₹108 crore of interest on government money in 2020-23 that it had not paid back.</p>
+    <p class="src">CAG SFAR 2024-25, Appendix 2.15; SFAR 2023-24, Appendix 4.1. Cases: stages 2 and 6 above.</p></div>
+  <div class="case"><div class="head">4. Money released in the last quarter, to be parked</div>
+    <p>In the last quarter of 2024-25 three welfare departments released ₹760.25 crore to 20 corporations with instructions to "draw the grants within 10 days and deposit the amount into their PD accounts". The Social Welfare corporations received all of their year's grants, ₹425 crore, in that quarter.</p>
+    <p class="src">CAG SFAR 2024-25, para 2.5.8.1 and Appendix 2.15</p></div>
+  <p class="back"><b>Ask for it:</b> the <a href="../rti.html#letter-l5">RTI letter for a corporation's bank accounts</a> asks for every account with its balance, the board resolutions that opened them, what the escrow and recovery accounts hold and where the money came from, interest earned and paid back, and the latest audited accounts.</p>
 </section>
 
 <section class="box">

@@ -32,6 +32,7 @@ Audited:
 - Four test-checked corporations held Rs 412 cr of grants "in the bank accounts of the Corporations outside the Government Account" though shown as spent (para 2.7.1.2B).
 - Backward Classes corporations kept 32 bank accounts (Rs 410.43 cr) open despite a February 2023 order to close them (para 2.7.1.5).
 - Interest of Rs 14,549.91 cr earned on government funds in 2020-21 to 2023-24 by 64 institutions, companies and corporations was not remitted to government (SFAR 2023-24, para 4.2).
+  - CORRECTION 17 Nov 2026: Appendix 4.1 puts Rs 11,850.15 cr (11,85,015 lakh: 4,58,636 in 2021-22 and 7,26,379 in 2022-23) against the Karnataka Biodiversity Board. Not credible as printed (Deccan Herald: the board received about Rs 2.48 cr in all up to Sep 2023); likely a unit error. Without it: about Rs 2,699.76 cr. Largest: KNNL 1,26,478 lakh (Rs 1,264.78 cr), KRIDL 83,405 lakh (Rs 834.05 cr), VJNL 14,351 lakh (Rs 143.51 cr), Valmiki corporation 10,820.04 lakh (Rs 108.20 cr). Page images checked: SFAR 2023-24 PDF pages 197-199.
 Case at this stage: **Valmiki ST Development Corporation (CHARGED)**. ED: corporation's account moved to a new branch account (Feb 2024); Rs 187.33 cr pooled there Mar-May 2024; about Rs 89.63 cr sent on to 18 accounts in Hyderabad and through an overdraft against the corporation's FD. Exposed after an accounts official's death (May 2024) left a note; trail rebuilt from bank KYC and RTGS records. ED prosecution complaint Oct 2024; CBI chargesheets June 2026 name a former minister; no trial verdict. Sources: https://thesouthfirst.com/news/money-trail-in-valmiki-scam-how-nearly-rs-90-crore-was-siphoned-off/ ; https://thesouthfirst.com/karnataka/valmiki-corporation-case-cbi-files-chargesheets-against-ex-minister-nagendra/
 Gap the state itself flagged (Sep 2025 presentation to CAG, search snippet only): no central register of bank accounts held by departments, boards and companies.
 
@@ -76,3 +77,12 @@ MGNREGA wages go directly to workers' accounts (NeFMS); materials and works go t
 - Which Karnataka schemes are on SNA-SPARSH.
 - RR Nagar Rs 118 cr suspensions: date and primary.
 - MGNREGA figures: primary parliamentary answer not read.
+
+## Corporations traced (17 Nov 2026)
+
+From SFAR 2024-25 (page images checked: PDF pages 177-180):
+- Table 2.23 (Backward Classes corporations): unused grants at 31 Mar 2025 Veerashaiva-Lingayath 191.80, Vokkaliga 141.00, Kadugolla 49.00, Maratha 30.20; total 412.00 (Rs cr). The CAG balance column does not equal grants minus expenditure (that gives 533.40); unexplained.
+- Appendix 2.16: 32 bank accounts of 10 corporations kept open against the FD order of 28 Feb 2023; total Rs 410,43,25,294 (our sum of the 32 rows matches). Nijasharana Ambigara Chowdaiah Development Corporation: escrow 1,90,52,00,000; recovery 1,59,40,00,000; SBI DBT 2,62,00,000 = Rs 352.54 cr, against a 2024-25 grant of Rs 5 cr (Appendix 2.15). Not explained in the report; possibly a misprint. Account numbers are in the CAG report; we do not republish them.
+- Mismatch: Table 2.23 says the Rs 412 cr is "in the bank accounts of the Corporations"; Appendix 2.16 lists Rs 5.24 cr for three of the four (Vokkaliga 1.72, Veerashaiva-Lingayath 1.68, Maratha 1.84) and no account for Kadugolla.
+- Appendix 2.15: Q4 releases 2024-25: Social Welfare corporations 425 of 425 (incl. Bhovi 55, Ambedkar 200); Backward Classes 252.75 of 337; Tribal Welfare 82.50 of 110 (Valmiki 63 of 84).
+- RTI letter 5 (rti.html) asks each corporation for its accounts, board resolutions, escrow/recovery sources, interest remitted and latest audited accounts.
