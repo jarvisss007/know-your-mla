@@ -37,3 +37,31 @@ In a small sample, auditors found hundreds of photo failures. Across the whole s
 
 1. Spot-check a sample of "after" photos in one block on the public map (Yelburga, where the CAG found suspect works): does each photo show a finished asset, and does the satellite image at that point show it? Done by hand in a browser, a few panchayats at a time.
 2. RTI to the state MGNREGA cell (Rural Development and Panchayat Raj): the moderation guidelines, who moderates "after" photos in Karnataka, and how many were reviewed per moderator per day.
+
+## Spot check on the public map: Benakal panchayat, Yelburga block (17 Nov 2026)
+
+Bhuvan-BHUGRAM public map, filters Karnataka > Koppal > Yelburga > Benakal, stage "Phase II (BDA): Assets": 22 points. Two opened in full (the map's own detail panel, read in a normal browser session):
+
+| | Asset 1 | Asset 2 |
+|---|---|---|
+| Work | Desilting of Benakal village's big public tank, phase 2 | House construction for an individual beneficiary (PMAY-G convergence) |
+| Work code | 1520004029/WH/93393042892194910 | 1520004029/IF/93393042892252060 |
+| Work dates | started 7 Jun 2019, completed 1 Jan 2020 | started 28 May 2018, completed 1 May 2019 |
+| Wages recorded | Rs 1,61,150, 706 person-days | Rs 17,168 |
+| Work type field | "Individual Beneficiary" (for a public tank) | "Individual Beneficiary" |
+| Photo record created | 13 Feb 2020, 15:10:51 | 13 Feb 2020, 15:32:54 |
+| **Accepted by** | **GAS_YELBURGA** | **GAS_YELBURGA** |
+| **Validated** | **13 Feb 2020, 16:03:12** | **13 Feb 2020, 16:02:18** |
+
+What this shows:
+- The photos were checked by the account "GAS_YELBURGA", by its name the block-level geotagging account, so the block that carries out the works also approves the proof that they were done. That reading of the account name needs confirming (RTI item below).
+- Two unrelated works, a tank and a house, were approved 54 seconds apart, under an hour after upload. That pace fits clicking through a batch, not comparing three stages of photos with the record.
+- The tank record calls a public tank "Individual Beneficiary" and gives its area as 0.00, both fields a reviewer would be expected to catch.
+
+Two records are an illustration, not a sample. The map's own photo-point service did not respond to direct requests, and the detail panel can only be opened one point at a time, so a proper sample (say 50 works across 5 panchayats) needs either patient manual work or the data from the state.
+
+## RTI to add (Rural Development and Panchayat Raj Department, MGNREGA cell; owner files)
+
+1. Who operates the Bhuvan moderation accounts for Karnataka blocks (for example "GAS_YELBURGA"): designation and office, and whether they are the same officers who sanction and measure the works.
+2. The moderation guidelines in force since 2019: what a moderator must check before accepting a stage-3 photo.
+3. For Yelburga block, 2019-20 to 2024-25: the number of stage-3 photos accepted and rejected per moderator per day.
