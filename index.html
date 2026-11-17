@@ -270,7 +270,6 @@ section.block > p a { color: var(--accent) }
   <section class="block page" id="join">
     <h2>Have your say</h2>
     <p>Gandaberunda is run by citizens, and what we look at next comes from you. Choose below, add a line if you like, and send it. Every suggestion is read. <span class="kn">ನಿಮ್ಮ ಸಲಹೆಯಂತೆ ನಮ್ಮ ಮುಂದಿನ ಸಂಶೋಧನೆ.</span></p>
-    <p class="counter" id="jcount" hidden></p>
     <div class="join">
 
       <div class="card" id="jnext">
@@ -278,7 +277,7 @@ section.block > p a { color: var(--accent) }
         <div><span class="lbl">Tap one or more</span><div class="chips" id="jtopics"></div></div>
         <div><label for="jdist">Your district</label><select id="jdist"><option value="">Choose (optional)</option></select></div>
         <div><label for="jtext">Anything specific? A project, a scheme, a place</label><textarea id="jtext" maxlength="1200" placeholder="For example: the new bus stand in our taluk was paid for in 2023 and is still not built."></textarea></div>
-        <div class="row2"><button class="btn" type="button" data-send="next" disabled>Send suggestion</button><button class="btn ghost" type="button" data-copy="next" disabled>Copy text</button></div>
+        <div class="row2"><button class="btn" type="button" data-send="next" disabled>Send suggestion</button><button class="btn ghost" type="button" data-gh="next" disabled>Or post it publicly on GitHub</button></div>
       </div>
 
       <div class="card" id="jspace">
@@ -298,7 +297,7 @@ section.block > p a { color: var(--accent) }
         <p class="fine" id="jfmap"></p>
         <div><span class="lbl">What is there now?</span><div class="chips" id="jfwhat"></div></div>
         <div><label for="jftext">Details: what you saw, and when</label><textarea id="jftext" maxlength="1200" placeholder="For example: new layout with roads and stone posts, seen 10 Nov 2026."></textarea></div>
-        <div class="row2"><button class="btn" type="button" data-send="field" disabled>Send report</button><button class="btn ghost" type="button" data-copy="field" disabled>Copy text</button></div>
+        <div class="row2"><button class="btn" type="button" data-send="field" disabled>Send report</button><button class="btn ghost" type="button" data-gh="field" disabled>Or post it publicly on GitHub</button></div>
       </div>
 
       <div class="card" id="jshare">
@@ -307,7 +306,7 @@ section.block > p a { color: var(--accent) }
         <div class="row2" id="jsharebtns"></div>
       </div>
     </div>
-    <p class="fine" style="margin-top:14px">Sending opens a form on GitHub, which needs a free account; what you send there is public. Don't include your phone number, and don't accuse a named person: send records, not rumours. No account? Use "Copy text" and pass it to someone who has one. If an official asked you for a bribe, complain to the <a href="https://lokayukta.karnataka.gov.in/" target="_blank" rel="noopener" style="color:var(--accent)">Karnataka Lokayukta</a>, which can act on it.</p>
+    <p class="fine" style="margin-top:14px">Sending opens a short Google Form with your choices already filled in: check it and press Submit. No account or sign-in is needed, and answers are read only by the Gandaberunda team. Don't include your phone number, and don't accuse a named person: send records, not rumours. Prefer to post in public, with photos? Use the GitHub button (needs a free account). If an official asked you for a bribe, complain to the <a href="https://lokayukta.karnataka.gov.in/" target="_blank" rel="noopener" style="color:var(--accent)">Karnataka Lokayukta</a>, which can act on it.</p>
   </section>
 
   <section class="block page" id="latest">
@@ -886,6 +885,8 @@ document.querySelectorAll('.rticp').forEach(b => b.addEventListener('click', () 
 // Have your say: builds a prefilled GitHub issue (or copyable text) from the choices; nothing is stored on this site.
 (function () {
   const REPO = 'https://github.com/jarvisss007/know-your-mla';
+  const GFORM = 'https://docs.google.com/forms/d/e/1FAIpQLSdGCs8oRCLplhyq3VxHH_olo9GzMJk9I7kv5q54yxgUFp2C3A/viewform';
+  const GKIND = { next: 'A suggestion: what to dig into next', space: 'Check my constituency from space', field: 'A report on a satellite patch' };
   const SITE = 'https://jarvisss007.github.io/know-your-mla/';
   const DONE = { Kanakapura: 'reports/satellite/kanakapura/', Holenarasipur: 'reports/satellite/holenarasipur/', Mahadevapura: 'reports/satellite/mahadevapura/' };
   const PATCH = {"Kanakapura":[[1,40.2,12.3973,77.3217],[2,34.5,12.41145,77.34674],[3,26.3,12.40554,77.3294],[4,17.5,12.41784,77.31793],[5,17.1,12.40667,77.32417],[6,15.7,12.455,77.35798],[7,13.7,12.40876,77.35471],[8,11.5,12.42671,77.31699],[9,10.8,12.49486,77.34574],[10,10.5,12.38232,77.37111],[11,10.3,12.44691,77.42374],[12,9.9,12.39777,77.35066],[13,9.8,12.47281,77.62065],[14,9.5,12.37912,77.38579],[15,8.4,12.42168,77.33341]],"Holenarasipur":[[1,40.0,12.80142,76.30874],[2,34.0,12.93456,76.35045],[3,29.1,12.97213,76.13042],[4,24.6,12.95928,76.13156],[5,15.0,12.90812,76.19013],[6,11.6,13.09903,76.21687],[7,11.0,12.99849,76.29317],[8,7.5,12.75237,76.20386],[9,7.2,13.06184,76.16679],[10,6.9,12.78784,76.31254],[11,6.6,12.87489,76.14012],[12,6.2,12.97401,76.2145],[13,5.8,12.76735,76.26905],[14,5.7,12.91518,76.18924],[15,5.7,12.7642,76.28488]]};
@@ -910,34 +911,34 @@ document.querySelectorAll('.rticp').forEach(b => b.addEventListener('click', () 
   function msg(kind) {
     if (kind === 'next') { const tp = picked($j('jtopics')), d = $j('jdist').value, x = $j('jtext').value.trim();
       if (!tp.length && !x) return null;
-      return { title: 'Suggestion: ' + (tp[0] || 'idea') + (d ? ' (' + d + ')' : ''),
+      return { kind: 'next', district: d, ac: '', text: (tp.length ? 'Topics: ' + tp.join('; ') + '\n' : '') + x,
+               title: 'Suggestion: ' + (tp[0] || 'idea') + (d ? ' (' + d + ')' : ''),
                body: `**Topics:** ${tp.join('; ') || 'not chosen'}\n**District:** ${d || 'not given'}\n\n${x}\n\n_Sent from the Have your say page._` }; }
     if (kind === 'field') { const s = $j('jfseat').value, n = $j('jfnum').value, w = picked($j('jfwhat'))[0], x = $j('jftext').value.trim();
       if (!w && !x) return null; const p = PATCH[s].find(q => String(q[0]) === n);
-      return { title: `Field report: ${s} patch #${n}` + (w ? ' (' + w + ')' : ''),
+      return { kind: 'field', district: s === 'Kanakapura' ? 'Ramanagara (Bengaluru South)' : 'Hassan', ac: s,
+               text: `Patch #${n} (${p[1]} ha, ${p[2]}, ${p[3]})\nWhat is there now: ${w || 'not chosen'}\n${x}`,
+               title: `Field report: ${s} patch #${n}` + (w ? ' (' + w + ')' : ''),
                body: `**Constituency:** ${s}\n**Patch:** #${n}, ${p[1]} ha, ${p[2]}, ${p[3]}\n**What is there now:** ${w || 'not chosen'}\n\n${x}\n\n_Sent from the Have your say page. Photos can be attached here._` }; }
     if (kind === 'space') { const c = $j('jac').value;
-      return { title: `Satellite check request: ${c}`, body: `Please compare ${c} from space next.\n\n_Sent from the Have your say page. Add a line on why, if you like._` }; }
+      return { kind: 'space', district: DIST[c] || '', ac: c, text: `Please compare ${c} from space next.`,
+               title: `Satellite check request: ${c}`, body: `Please compare ${c} from space next.\n\n_Sent from the Have your say page. Add a line on why, if you like._` }; }
   }
-  const url = m => `${REPO}/issues/new?title=${encodeURIComponent(m.title)}&body=${encodeURIComponent(m.body)}`;
-  function update() { ['next', 'field'].forEach(k => { const ok = !!msg(k); document.querySelectorAll(`[data-send=${k}],[data-copy=${k}]`).forEach(b => b.disabled = !ok) }) }
+  const gh = m => `${REPO}/issues/new?title=${encodeURIComponent(m.title)}&body=${encodeURIComponent(m.body)}`;
+  const url = m => GFORM + '?usp=pp_url&entry.503187352=' + encodeURIComponent(GKIND[m.kind]) + '&entry.1517758372=' + encodeURIComponent(m.district)
+    + '&entry.604747719=' + encodeURIComponent(m.ac) + '&entry.878251699=' + encodeURIComponent(m.text);
+  function update() { ['next', 'field'].forEach(k => { const ok = !!msg(k); document.querySelectorAll(`[data-send=${k}],[data-gh=${k}]`).forEach(b => b.disabled = !ok) }) }
   ['jtext', 'jftext'].forEach(id => $j(id).addEventListener('input', update)); $j('jdist').addEventListener('change', update);
   document.querySelectorAll('[data-send]').forEach(b => b.addEventListener('click', () => { const m = msg(b.dataset.send); if (m) window.open(url(m), '_blank', 'noopener') }));
-  document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', async () => { const m = msg(b.dataset.copy); if (!m) return;
-    const txt = m.title + '\n\n' + m.body.replace(/\*\*/g, '').replace(/_/g, '');
-    try { await navigator.clipboard.writeText(txt); b.textContent = 'Copied' } catch (e) { b.textContent = 'Copy failed' } setTimeout(() => b.textContent = 'Copy text', 2000) }));
+  document.querySelectorAll('[data-gh]').forEach(b => b.addEventListener('click', () => { const m = msg(b.dataset.gh); if (m) window.open(gh(m), '_blank', 'noopener') }));
   $j('jac').addEventListener('change', () => { const c = $j('jac').value, r = $j('jacres'); if (!c) { r.hidden = true; return }
     r.hidden = false;
     if (DONE[c]) r.innerHTML = `${c} is done. <a href="${DONE[c]}">See ${c} from space →</a>`;
-    else { const m = msg('space'); r.innerHTML = `${c} is not done yet. <a href="${url(m)}" target="_blank" rel="noopener">Ask for ${c} →</a> <span class="fine">(opens GitHub)</span>`; } });
+    else { const m = msg('space'); r.innerHTML = `${c} is not done yet. <a href="${url(m)}" target="_blank" rel="noopener">Ask for ${c} →</a> <span class="fine">(opens a short form, no account needed)</span>`; } });
   const SH = [['Find your MLA', 'See what your MLA swore about their wealth and criminal cases', SITE],
               ['Farmers', 'ರೈತರೇ, ನಿಮಗೆ ಸಿಗಬೇಕಾದ ಯೋಜನೆಗಳು ಯಾವುವು? 8 ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರಿಸಿ', SITE + 'farmers.html'],
               ['Research', 'What Karnataka paid for, and what actually happened', SITE + '#research']];
   $j('jsharebtns').innerHTML = SH.map(s => `<a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(s[1] + ': ' + s[2])}">WhatsApp: ${s[0]}</a>`).join('');
-  // how many people have written in so far (public count from GitHub; stays hidden if it can't be read)
-  fetch('https://api.github.com/repos/jarvisss007/know-your-mla').then(r => r.ok ? r.json() : null).then(j => {
-    if (j && j.open_issues_count > 0) { const c = $j('jcount'); c.hidden = false;
-      c.innerHTML = `<b>${j.open_issues_count}</b> suggestions and reports so far. <a href="${REPO}/issues" target="_blank" rel="noopener" style="color:var(--accent)">Read them</a>`; } }).catch(() => {});
 })();
 
 // Pages: each tab shows one page; the URL hash names it (#press, #research ...), so every page has its own link.
