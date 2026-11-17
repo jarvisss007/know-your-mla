@@ -58,8 +58,11 @@ https://jarvisss007.github.io/know-your-mla/. Push to `main` to publish; it is l
 - Gandaberunda's mark is original artwork; never use the state emblem.
 - Keep this project out of any company repository or mailbox.
 
-## Open issue (16 Nov 2026, late): debts figures
+## Debts figures: resolved 17 Nov 2026
 
-- `data/liabilities_myneta.csv` (from `py tools/fetch_liabilities.py`) holds myneta's two liability figures for 199 MLAs. Report cards now show myneta's headline beside our figure where they differ (36 MLAs). The "How to read this" page explains why.
-- TO CHECK: for 13 MLAs our `l` in index.html differs from the affidavit grand total myneta shows (e.g. Gokak 43.48 vs 37.09, Kalaghatgi 24.17 vs 22.42, Hanur 61.23 vs 61.16). Compare `data/liabilities_myneta.csv` against `D` and read the affidavit before changing `D`, because money depends on it.
-- 25 MLAs got no row from the fetch (no id, or the page didn't parse); find out why.
+- `l` in `D` (index.html) = affidavit loans (part i) + dues to government (part ii); amounts listed as in dispute (part iv) are excluded. All 222 MLAs with a myneta id match this, checked against `data/liabilities_myneta.csv` on 17 Nov 2026.
+- `py tools/fetch_liabilities.py` now records loans, government dues and disputed amounts separately; `py tools/fetch_liabilities.py <constituency> ...` refreshes only those rows. When myneta prints the part i grand total as Nil/0 although rows are filled (Hadagali, Muddebihal, Jagalur, Doddaballapur), it adds the rows. myneta's headline "Liabilities" is kept for reference only: it is wrong for some MLAs (Gauribidanur shows Nil against Rs 5.10 crore of loans).
+- Report cards (`tools/make_mla_pages.py`, `debts_note`) say what each figure contains and show any disputed amount not included (largest: Kanakapura Rs 238 crore of income-tax appeals, items checked to add up).
+- Changed: Arabhavi 0.17 and Belgaum Dakshin 0.30 to 0 (both were disputed amounts); 23 MLAs given ids and debts. Logged in the site's corrections list.
+- Still without a myneta affidavit: Sarvagnanagar (K.J. George; figures from a scan of his affidavit) and Davanagere South (2026 by-election winner not in myneta's by-election list). 10 of the newly linked MLAs still show "Not in archive" for assets; the same pages can fill them (not done).
+- Details: `research/DEBTS_CHECK_2026-11-16.md`.

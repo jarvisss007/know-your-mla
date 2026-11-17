@@ -38,12 +38,31 @@ def norm(s):
 ALSO = {sid: norm(section_text(sid)) for sid in ("record", "tested", "cabinet", "latest")}
 ALSO_LABEL = {"record": "On the record", "tested": "Five MLAs tested", "cabinet": "Nine ministers tested", "latest": "Latest"}
 
-LIAB = {}  # constituency -> myneta headline liabilities (crore), from tools/fetch_liabilities.py
+LIAB = {}  # constituency -> {"loans", "dues", "disputed"} (crore) from the affidavit, via tools/fetch_liabilities.py
 _lp = ROOT / "data/liabilities_myneta.csv"
 if _lp.exists():
     for r in csv.DictReader(open(_lp, encoding="utf-8")):
-        if r["myneta_total_cr"] != "":
-            LIAB[r["constituency"]] = float(r["myneta_total_cr"])
+        if r.get("affidavit_total_cr", "") != "" and r.get("govt_dues_cr", "") != "":
+            LIAB[r["constituency"]] = {"loans": float(r["affidavit_total_cr"]), "dues": float(r["govt_dues_cr"]),
+                                       "disputed": float(r["disputed_cr"] or 0)}
+
+
+def debts_note(c, l):
+    """What the debts figure contains, for one MLA."""
+    x = LIAB.get(c)
+    if l is None or not x:
+        return "Loans and dues to government declared in the affidavit"
+    if x["loans"] and x["dues"]:
+        parts = f"Loans {money(x['loans'])} and dues to government {money(x['dues'])}, as declared in the affidavit"
+    elif x["dues"]:
+        parts = "Dues to government declared in the affidavit; no loans"
+    elif x["loans"]:
+        parts = "Loans declared in the affidavit; no dues to government"
+    else:
+        parts = "No loans or dues to government declared in the affidavit"
+    if x["disputed"]:
+        parts += f". Not included: {money(x['disputed'])} the MLA lists as disputed"
+    return parts
 dd = {}
 for r in csv.DictReader(open(ROOT / "research/farmer_schemes/district/district_data.csv", encoding="utf-8-sig")):
     if r["value"] and r["confidence"] == "HIGH":
@@ -139,8 +158,7 @@ def page(d):
         tile("Since 2018", "2018ರಿಂದ", (("+" if g >= 0 else "") + f"{g}%") if g is not None else "—",
              f"{money(d['a18'])} in 2018" if g is not None else "Only for re-elected MLAs matched across both elections"),
         tile("Declared debts", "ಘೋಷಿತ ಸಾಲ", (money(d["l"]) if d["l"] else "0") if d["l"] is not None else "Not in archive",
-             (f"The affidavit's own total. myneta.info's headline is {money(LIAB[c])}: it also adds dues to government departments and liabilities listed as disputed"
-              if d["l"] is not None and c in LIAB and abs(LIAB[c] - d["l"]) >= 0.01 else "The affidavit's own total of liabilities")),
+             debts_note(c, d["l"])),
         tile("Declared criminal cases", "ಘೋಷಿತ ಕ್ರಿಮಿನಲ್ ಪ್ರಕರಣಗಳು", str(d["k"]) if d["k"] is not None else "Not in archive",
              "A declared case is not a conviction"),
     ]
