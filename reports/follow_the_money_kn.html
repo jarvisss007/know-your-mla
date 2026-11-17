@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="kn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ರೂಪಾಯಿಯನ್ನು ಹಿಂಬಾಲಿಸಿ · Gandaberunda</title>
+<meta name="description" content="Follow the rupee in Kannada (test version).">
+<link rel="icon" type="image/svg+xml" href="../brand/mark.svg">
+<style>:root{padding-top:env(safe-area-inset-top,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Kannada:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: one reading column. The page is a pipe: each stage of the money's journey is a node on a vertical line; leaks hang off the node in red. */
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8;
+  --red: #c21f30; --red-soft: #fbe9eb; --yellow: #f2b705; --pipe: #1d4ed8; --ok: #1a8f4c;
+  --display: "Noto Sans Kannada", "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --body: "Noto Sans Kannada", Inter, "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --red-soft: #2a1a1e; --yellow: #f5c93a; --pipe: #7aa7ff; --ok: #4fcf86; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --red-soft: #2a1a1e; --yellow: #f5c93a; --pipe: #7aa7ff; --ok: #4fcf86; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font: 16px/1.55 var(--body);
+  padding-block: 28px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+a { color: inherit; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1; letter-spacing: -0.02em; }
+h1 span { color: var(--red); }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.15rem; }
+p { margin: 0; max-width: 66ch; }
+.eyebrow { font-size: .8rem; letter-spacing: 0; color: var(--muted); font-weight: 600; }
+.draft { display: inline-block; background: var(--yellow); color: #161a22; font-weight: 600; font-size: .8rem; padding: 3px 10px; border-radius: 3px; letter-spacing: .04em; }
+header { display: flex; flex-direction: column; gap: 14px; }
+.lede { font-size: 1.1rem; }
+.muted { color: var(--muted); font-size: .9rem; }
+.tag { font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 2px 7px; border-radius: 3px; border: 1px solid currentColor; white-space: nowrap; }
+.t-proven { color: var(--red); } .t-charged { color: var(--pipe); } .t-alleged { color: var(--muted); } .t-audit { color: var(--ok); }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); border-block: 2px solid var(--fg); }
+.stat { padding: 16px 14px 16px 0; display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid var(--line); }
+.stat b { font: 700 1.9rem/1 var(--display); font-variant-numeric: tabular-nums; }
+.stat span { font-size: .9rem; color: var(--muted); }
+
+/* the pipe */
+ol.pipe { list-style: none; margin: 0; padding: 0; position: relative; }
+ol.pipe::before { content: ""; position: absolute; left: 17px; top: 18px; bottom: 18px; width: 4px; background: var(--pipe); border-radius: 2px; opacity: .5; }
+ol.pipe > li { position: relative; padding: 0 0 34px 56px; }
+.node { position: absolute; left: 0; top: 0; width: 38px; height: 38px; border-radius: 50%; background: var(--pipe); color: #fff; display: grid; place-items: center; font: 700 1rem var(--display); }
+.stage { display: flex; flex-direction: column; gap: 10px; }
+.stage .who { font-size: .92rem; color: var(--muted); }
+.leak { background: var(--red-soft); border-left: 4px solid var(--red); border-radius: 0 8px 8px 0; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+.leak h4 { margin: 0; font: 700 .8rem/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--red); }
+.leak ul, .case ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+.leak li b { font-variant-numeric: tabular-nums; }
+.case { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.case .head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-weight: 600; }
+.back { font-size: .92rem; }
+.back b { color: var(--pipe); }
+.src { font-size: .8rem; color: var(--muted); }
+.box { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+.box ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+footer ol { padding-left: 20px; font-size: .85rem; color: var(--muted); display: flex; flex-direction: column; gap: 6px; word-break: break-word; }
+table.led { width: 100%; border-collapse: collapse; font-size: .92rem; font-variant-numeric: tabular-nums; }
+table.led th, table.led td { text-align: left; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+table.led th { font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+table.led td:not(:first-child), table.led th:not(:first-child) { text-align: right; white-space: nowrap; }
+table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
+</style>
+</head>
+<body>
+<div style="position:sticky;top:0;z-index:20;background:#11141a;color:#eceef2;font:600 14px/1.4 Inter,system-ui,sans-serif;padding:10px max(16px,env(safe-area-inset-left,0px));display:flex;gap:8px 16px;flex-wrap:wrap;align-items:center;border-bottom:3px solid #f2b705"><a href="../index.html#research" style="color:#f5c93a;text-decoration:none">← Gandaberunda · Research</a><span style="color:#9aa3b2;font-weight:400">Test version: still being checked · <a href="follow_the_money.html" style="color:#eceef2">English</a></span></div>
+<div class="wrap">
+<header>
+  <span class="draft">ಪರೀಕ್ಷಾ ಆವೃತ್ತಿ · ಪರಿಶೀಲನೆಯಲ್ಲಿದೆ</span>
+  <div class="eyebrow">Gandaberunda · ಕರ್ನಾಟಕದ ಹಣ ಹೇಗೆ ಸಾಗುತ್ತದೆ · ಮಾರ್ಚ್ 2025ರವರೆಗಿನ ಲೆಕ್ಕಪರಿಶೋಧನಾ ಅಂಕಿಗಳು</div>
+  <h1>ರೂಪಾಯಿಯನ್ನು <span>ಹಿಂಬಾಲಿಸಿ</span></h1>
+  <p class="lede">ಕರ್ನಾಟಕದ ಬಜೆಟ್‌ನ ಒಂದು ರೂಪಾಯಿ ರಸ್ತೆ, ಕಾರ್ಮಿಕ ಅಥವಾ ವಿಧವೆಯ ಪಿಂಚಣಿಯನ್ನು ತಲುಪುವ ಮೊದಲು ಆರೇಳು ಕೈಗಳನ್ನು ದಾಟುತ್ತದೆ. ಪ್ರತಿ ಹಸ್ತಾಂತರದಲ್ಲಿ ಒಂದು ದಾಖಲೆ ಸೃಷ್ಟಿಯಾಗುತ್ತದೆ, ಮತ್ತು ದುರುಪಯೋಗ ತಡೆಯಲು ಒಂದು ತಪಾಸಣೆ ಇರಬೇಕು. ಈ ಪುಟ ರೂಪಾಯಿಯನ್ನು ಹಂತ ಹಂತವಾಗಿ ಹಿಂಬಾಲಿಸುತ್ತದೆ: ರಾಜ್ಯದ ಲೆಕ್ಕಪರಿಶೋಧಕರು ಅದು ಎಲ್ಲಿ ನಿಲ್ಲಿಸಲ್ಪಟ್ಟಿದೆ, ಎಲ್ಲಿ ಲೆಕ್ಕವಿಲ್ಲದೆ ಉಳಿದಿದೆ, ಎಲ್ಲಿ ಆಗದ ಕೆಲಸಕ್ಕೆ ಹಣ ಪಾವತಿಯಾಗಿದೆ ಎಂದು ಕಂಡರು, ಮತ್ತು ಯಾರಾದರೂ ಅದನ್ನು ಹಿಂದಕ್ಕೆ ಹುಡುಕಲು ಬೇಕಾದ ದಾಖಲೆ ಯಾವುದು ಎಂದು ತೋರಿಸುತ್ತದೆ.</p>
+  <p class="muted"><span class="tag t-audit">ಲೆಕ್ಕಪರಿಶೋಧಿತ</span> ಎಂದು ಗುರುತಿಸಿದ ಅಂಕಿಗಳು ಭಾರತದ ಮಹಾಲೇಖಪಾಲರ (ಸಿಎಜಿ) ವರದಿಗಳಿಂದಲೇ ತೆಗೆದವು. ಪ್ರಕರಣಗಳನ್ನು <span class="tag t-proven">ಪತ್ತೆ</span> (ನ್ಯಾಯಾಲಯ, ಲೆಕ್ಕಪರಿಶೋಧನೆ ಅಥವಾ ಸಾಮಾಜಿಕ ಲೆಕ್ಕಪರಿಶೋಧನೆಯ ತೀರ್ಮಾನ), <span class="tag t-charged">ಆರೋಪಪಟ್ಟಿ</span> (ದೋಷಾರೋಪಣ ಪಟ್ಟಿ ಸಲ್ಲಿಕೆ, ತೀರ್ಪು ಇಲ್ಲ) ಅಥವಾ <span class="tag t-alleged">ಆರೋಪ</span> ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ. ಹೆಚ್ಚಿನ ಲೆಕ್ಕಪರಿಶೋಧನಾ ತೀರ್ಮಾನಗಳು ನಿಯಂತ್ರಣದ ವೈಫಲ್ಯಗಳು, ಯಾರೋ ಕದ್ದಿದ್ದಾರೆ ಎಂಬುದಕ್ಕೆ ಪುರಾವೆಯಲ್ಲ: ಲೆಕ್ಕಪರಿಶೋಧಕರ ಮಾತುಗಳನ್ನೇ ಬಳಸಲಾಗಿದೆ. ಉಲ್ಲೇಖಗಳು ಮೂಲ ಇಂಗ್ಲಿಷ್ ವರದಿಗಳಿಂದ; <a href="follow_the_money.html">ಇಂಗ್ಲಿಷ್ ಆವೃತ್ತಿ</a>.</p>
+</header>
+
+<section class="stats" aria-label="ಮುಖ್ಯ ಲೆಕ್ಕಪರಿಶೋಧಿತ ಅಂಕಿಗಳು">
+  <div class="stat"><b>₹29,770 ಕೋಟಿ</b><span>ಮತ ಪಡೆದ ಬಜೆಟ್‌ನ ಹೊರಗೆ ಠೇವಣಿ ಖಾತೆಗಳಲ್ಲಿ, 31 ಮಾರ್ಚ್ 2025; ಅದರಲ್ಲಿ ₹6,026 ಕೋಟಿ ಮಾರ್ಚ್ ತಿಂಗಳಲ್ಲೇ ವರ್ಗಾವಣೆ</span></div>
+  <div class="stat"><b>₹410 ಕೋಟಿ</b><span>ಮುಚ್ಚಲು 2023ರಲ್ಲಿ ಆದೇಶವಿದ್ದರೂ ಹತ್ತು ನಿಗಮಗಳು ತೆರೆದಿಟ್ಟ 32 ಬ್ಯಾಂಕ್ ಖಾತೆಗಳಲ್ಲಿ; ಅದರಲ್ಲಿ ₹352 ಕೋಟಿ ಒಂದೇ ನಿಗಮದಲ್ಲಿ</span></div>
+  <div class="stat"><b>18.9%</b><span>ಇಡೀ ವರ್ಷದ ಖರ್ಚು ಮಾರ್ಚ್ 2025ರಲ್ಲೇ; ಕೊನೆಯ ಮೂರು ತಿಂಗಳಲ್ಲಿ 35.6%</span></div>
+  <div class="stat"><b>~90%</b><span>ಅನುದಾನ ಪಡೆಯುವ ಸಂಸ್ಥೆಗಳು, ಹಣ ಹೇಗೆ ಬಳಕೆಯಾಯಿತು ಎಂದು ಕೇಳುವ ತಪಾಸಣೆಯ ವ್ಯಾಪ್ತಿಯ ಹೊರಗಿವೆ</span></div>
+</section>
+
+<section>
+<h2 style="margin-bottom:20px">ಹಣದ ಪ್ರಯಾಣ</h2>
+<ol class="pipe">
+
+<li><div class="node">1</div><div class="stage">
+  <h3>ವಿಧಾನಮಂಡಲ ಮಂಜೂರು ಮಾಡುತ್ತದೆ; ಆರ್ಥಿಕ ಇಲಾಖೆ ಬಿಡುಗಡೆ ಮಾಡುತ್ತದೆ</h3>
+  <p class="who">ಹಣ ರಾಜ್ಯದ ಸಂಚಿತ ನಿಧಿಯಲ್ಲಿರುತ್ತದೆ. ಆರ್ಥಿಕ ಇಲಾಖೆ ರಾಜ್ಯದ ಖಜಾನೆ ವ್ಯವಸ್ಥೆ ಖಜಾನೆ-2ರ ಮೂಲಕ ಇಲಾಖೆಗಳಿಗೆ ಬಿಡುಗಡೆ ಮಾಡುತ್ತದೆ. ದಾಖಲೆ: ಬಜೆಟ್ ಮತ್ತು ವಿನಿಯೋಗ ಲೆಕ್ಕಗಳು (ಸಾರ್ವಜನಿಕ); ಬಿಡುಗಡೆ ಆದೇಶಗಳು (ಖಜಾನೆಯ ಒಳಗೆ).</p>
+  <div class="leak"><h4>ನಿಯಂತ್ರಣ ತಪ್ಪುವ ಕಡೆ <span class="tag t-audit">ಲೆಕ್ಕಪರಿಶೋಧಿತ</span></h4><ul>
+    <li>2024-25ರಲ್ಲಿ ವಿಧಾನಮಂಡಲ ಮಂಜೂರು ಮಾಡಿದ್ದಕ್ಕಿಂತ <b>₹4,389 ಕೋಟಿ</b> ಹೆಚ್ಚು ಖರ್ಚು, ಗೃಹಲಕ್ಷ್ಮಿ ಮತ್ತು ಕೃಷಿ ಪಂಪ್‌ಸೆಟ್‌ಗಳಿಗೆ ಉಚಿತ ವಿದ್ಯುತ್ ಸೇರಿದಂತೆ ಮೂರು ಅನುದಾನಗಳಲ್ಲಿ; ಹಿಂದಿನ ವರ್ಷಗಳ <b>₹5,175 ಕೋಟಿ</b> ಇನ್ನೂ ಕ್ರಮಬದ್ಧಗೊಂಡಿಲ್ಲ.</li>
+    <li>ವಿಧಾನಮಂಡಲ ಅನುಮೋದಿಸುವ ಮೊದಲೇ ಕಾರ್ಯಕಾರಿ ಆದೇಶಗಳ ಮೂಲಕ <b>₹10,035 ಕೋಟಿ</b> ಖರ್ಚು.</li>
+    <li>ಖರ್ಚಾಗದೆ ಹಿಂದಿರುಗಿಸಿದ ₹16,547 ಕೋಟಿಯಲ್ಲಿ <b>₹10,448 ಕೋಟಿ (63%)</b> ವರ್ಷದ ಕೊನೆಯ ದಿನ, 31 ಮಾರ್ಚ್ 2025ರಂದು ಹಿಂದಿರುಗಿಸಲಾಗಿದೆ.</li>
+  </ul><p class="src">ಸಿಎಜಿ ರಾಜ್ಯ ಹಣಕಾಸು ಲೆಕ್ಕಪರಿಶೋಧನಾ ವರದಿ 2024-25, ಕಂಡಿಕೆ 2.5.2, 2.5.5</p></div>
+  <p class="back"><b>ಹಿಂದಕ್ಕೆ ಹುಡುಕಿ:</b> ಅನುದಾನವಾರು ವಿನಿಯೋಗ ಲೆಕ್ಕಗಳನ್ನು ಸಿಎಜಿ ಪ್ರತಿ ವರ್ಷ ಪ್ರಕಟಿಸುತ್ತದೆ.</p>
+</div></li>
+
+<li><div class="node">2</div><div class="stage">
+  <h3>ವರ್ಷಾಂತ್ಯದ ನಿಲುಗಡೆ: ಠೇವಣಿ ಖಾತೆಗಳು ಮತ್ತು ನಿಗಮಗಳ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳು</h3>
+  <p class="who">ಬಜೆಟ್‌ನಿಂದ ವೈಯಕ್ತಿಕ ಠೇವಣಿ (ಪಿಡಿ) ಖಾತೆಗೆ ಅಥವಾ ನಿಗಮದ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ವರ್ಗಾಯಿಸಿದ ಹಣವನ್ನು "ಖರ್ಚಾಗಿದೆ" ಎಂದು ದಾಖಲಿಸಲಾಗುತ್ತದೆ. ಅದು ಖರ್ಚಾಗಿಲ್ಲ: ವಿಧಾನಮಂಡಲದ ವಾರ್ಷಿಕ ನಿಯಂತ್ರಣದ ಹೊರಗೆ ಕಾಯುತ್ತಿದೆ. ದಾಖಲೆ: ಖಜಾನೆಯ ವರ್ಗಾವಣೆ ನಮೂದುಗಳು; ನಿಗಮದ ಬ್ಯಾಂಕ್ ಸ್ಟೇಟ್‌ಮೆಂಟ್‌ಗಳು (ಸಾರ್ವಜನಿಕವಲ್ಲ).</p>
+  <div class="leak"><h4>ಹಣವನ್ನು ನಿಲ್ಲಿಸಿಟ್ಟ ಕಡೆ <span class="tag t-audit">ಲೆಕ್ಕಪರಿಶೋಧಿತ</span></h4><ul>
+    <li>2024-25ರಲ್ಲಿ <b>₹12,927 ಕೋಟಿ</b> ಠೇವಣಿ ಖಾತೆಗಳಿಗೆ ವರ್ಗಾವಣೆ, ಅದರಲ್ಲಿ <b>₹6,026 ಕೋಟಿ ಮಾರ್ಚ್ 2025ರಲ್ಲಿ</b>. 97 ಖಾತೆಗಳಲ್ಲಿ ₹29,770 ಕೋಟಿ ಶಿಲ್ಕು (ಅದರಲ್ಲಿ ₹22,115 ಕೋಟಿ ನ್ಯಾಯಾಲಯದ ಆದೇಶದ ಗಣಿ ಪುನಶ್ಚೇತನ ನಿಧಿ); 25 ಖಾತೆಗಳು ಮೂರು ವರ್ಷಕ್ಕೂ ಹೆಚ್ಚು ಕಾಲ ಬಳಕೆಯಾಗಿಲ್ಲ.</li>
+    <li>30 ಮಾರ್ಚ್ 2025ರಂದು ಸಮಾಜ ಕಲ್ಯಾಣ ಇಲಾಖೆ ಖಾಲಿ ಹುದ್ದೆಗಳಿಗೆ ಮೀಸಲಿಟ್ಟ <b>₹145 ಕೋಟಿ</b>ಯನ್ನು ಎರಡು ಸಂಸ್ಥೆಗಳ ಠೇವಣಿ ಖಾತೆಗಳಿಗೆ ವರ್ಗಾಯಿಸಿತು. ಲೆಕ್ಕಪರಿಶೋಧಕರ ಮಾತು: ಅನುದಾನ ರದ್ದಾಗುವುದನ್ನು ತಪ್ಪಿಸಲು ಹಣವನ್ನು ಕೇವಲ ನಿಲ್ಲಿಸಿಡುವುದು.</li>
+    <li>ನಾಲ್ಕು ನಿಗಮಗಳ ಬಳಿ <b>₹412 ಕೋಟಿ</b> ಅನುದಾನ "ಸರ್ಕಾರಿ ಲೆಕ್ಕದ ಹೊರಗೆ ನಿಗಮಗಳ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳಲ್ಲಿ" ಉಳಿದಿತ್ತು, ಲೆಕ್ಕದಲ್ಲಿ ಅದು ಖರ್ಚಾಗಿದೆ ಎಂದು ತೋರಿಸಲಾಗಿತ್ತು. ಹಿಂದುಳಿದ ವರ್ಗಗಳ ನಿಗಮಗಳು 2023ರ ಮುಚ್ಚುವ ಆದೇಶದ ನಂತರವೂ <b>₹410 ಕೋಟಿ</b> ಇರುವ 32 ಬ್ಯಾಂಕ್ ಖಾತೆಗಳನ್ನು ತೆರೆದಿಟ್ಟಿವೆ.</li>
+    <li>ಸರ್ಕಾರದ ಹಣದ ಮೇಲೆ ಗಳಿಸಿ ಸರ್ಕಾರಕ್ಕೆ ಮರಳಿಸದ ಬಡ್ಡಿ: ಲೆಕ್ಕಪರಿಶೋಧಕರು 64 ಸಂಸ್ಥೆಗಳು ಮತ್ತು 2020-24ಕ್ಕೆ ಒಟ್ಟು ₹14,550 ಕೋಟಿ ತೋರಿಸುತ್ತಾರೆ. ಆದರೆ ಅದರಲ್ಲಿ ₹11,850 ಕೋಟಿಯನ್ನು ಕರ್ನಾಟಕ ಜೀವವೈವಿಧ್ಯ ಮಂಡಳಿಯ ಹೆಸರಿಗೆ ಹಾಕಲಾಗಿದೆ; ಮುದ್ರಿತ ರೂಪದಲ್ಲಿ ಅದು ಸರಿಯಿರಲು ಸಾಧ್ಯವಿಲ್ಲ: 2023ರವರೆಗೆ ಮಂಡಳಿಗೆ ಒಟ್ಟು ಸುಮಾರು ₹2.5 ಕೋಟಿ ಮಾತ್ರ ಬಂದಿದೆ (ಡೆಕ್ಕನ್ ಹೆರಾಲ್ಡ್). ಆ ಸಾಲನ್ನು ಬಿಟ್ಟರೆ ಸುಮಾರು <b>₹2,700 ಕೋಟಿ</b>: ಕರ್ನಾಟಕ ನೀರಾವರಿ ನಿಗಮ (₹1,265 ಕೋಟಿ), ಕೆಆರ್‌ಐಡಿಎಲ್ (₹834 ಕೋಟಿ), ವಿಶ್ವೇಶ್ವರಯ್ಯ ಜಲ ನಿಗಮ (₹144 ಕೋಟಿ) ಮತ್ತು ವಾಲ್ಮೀಕಿ ನಿಗಮ (₹108 ಕೋಟಿ) ಮುಂಚೂಣಿಯಲ್ಲಿ.</li>
+  </ul><p class="src">ಸಿಎಜಿ ವರದಿ 2024-25, ಕಂಡಿಕೆ 3.5, 2.7.1.2, 2.7.1.5; ವರದಿ 2023-24, ಕಂಡಿಕೆ 4.2 ಮತ್ತು ಅನುಬಂಧ 4.1; <a href="https://www.deccanherald.com/india/karnataka/20-years-zero-progress-karnataka-s-potent-biodiversity-act-remains-unutilised-3455886" rel="noopener">ಜೀವವೈವಿಧ್ಯ ಮಂಡಳಿ ಕುರಿತು ಡೆಕ್ಕನ್ ಹೆರಾಲ್ಡ್</a></p></div>
+  <div class="case"><div class="head"><span class="tag t-charged">ಆರೋಪಪಟ್ಟಿ</span> ವಾಲ್ಮೀಕಿ ಪರಿಶಿಷ್ಟ ಪಂಗಡ ಅಭಿವೃದ್ಧಿ ನಿಗಮ, 2024</div>
+    <p>ಹಣ ದಾರಿ ತಪ್ಪಿದ್ದು ಇದೇ ಹಂತದಲ್ಲಿ. ಜಾರಿ ನಿರ್ದೇಶನಾಲಯದ ಪ್ರಕಾರ ಫೆಬ್ರವರಿ 2024ರಲ್ಲಿ ನಿಗಮದ ಖಾತೆಯನ್ನು ಹೊಸ ಬ್ಯಾಂಕ್ ಶಾಖೆಗೆ ಬದಲಾಯಿಸಲಾಯಿತು; ಮಾರ್ಚ್‌ನಿಂದ ಮೇವರೆಗೆ ₹187 ಕೋಟಿ ಅಲ್ಲಿ ಸೇರಿಸಲಾಯಿತು; ಸುಮಾರು ₹90 ಕೋಟಿ ಹೈದರಾಬಾದ್‌ನ 18 ಖಾತೆಗಳಿಗೆ ಮತ್ತು ನಿಗಮದ ಸ್ವಂತ ನಿಶ್ಚಿತ ಠೇವಣಿಯ ಮೇಲೆ ಪಡೆದ ಓವರ್‌ಡ್ರಾಫ್ಟ್ ಮೂಲಕ ಹೋಯಿತು. ಮೇ 2024ರಲ್ಲಿ ಲೆಕ್ಕಪತ್ರ ಅಧಿಕಾರಿಯೊಬ್ಬರು ಮೃತಪಟ್ಟು ಪತ್ರ ಬಿಟ್ಟುಹೋದಾಗ ಇದು ಬೆಳಕಿಗೆ ಬಂತು. ಖಾತೆ ತೆರೆಯುವ ದಾಖಲೆಗಳು ಮತ್ತು ಬ್ಯಾಂಕ್ ವರ್ಗಾವಣೆ ದಾಖಲೆಗಳಿಂದ ತನಿಖಾಧಿಕಾರಿಗಳು ಹಾದಿಯನ್ನು ಮರುರಚಿಸಿದರು. ದೋಷಾರೋಪಣ ಪಟ್ಟಿಗಳು ಸಲ್ಲಿಕೆಯಾಗಿವೆ; ತೀರ್ಪು ಬಂದಿಲ್ಲ.</p>
+    <p class="src"><a href="https://thesouthfirst.com/news/money-trail-in-valmiki-scam-how-nearly-rs-90-crore-was-siphoned-off/" rel="noopener">South First, ಅಕ್ಟೋಬರ್ 2024</a> · <a href="https://thesouthfirst.com/karnataka/valmiki-corporation-case-cbi-files-chargesheets-against-ex-minister-nagendra/" rel="noopener">South First, ಜೂನ್ 2026</a></p></div>
+  <p class="back"><b>ಹಿಂದಕ್ಕೆ ಹುಡುಕಿ:</b> ಪ್ರತಿ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಅನುಮೋದನೆ ನೀಡಿದ ಆಡಳಿತ ಮಂಡಳಿ ನಿರ್ಣಯಗಳು, ಮತ್ತು ನಿಗಮದ ಬ್ಯಾಂಕ್ ಸ್ಟೇಟ್‌ಮೆಂಟ್‌ಗಳು. ಇಂತಹ ಖಾತೆಗಳ ಕೇಂದ್ರೀಕೃತ ರಿಜಿಸ್ಟರ್ ಇಲ್ಲ ಎಂದು ರಾಜ್ಯ 2025ರಲ್ಲಿ ಸಿಎಜಿ ಸಮ್ಮೇಳನಕ್ಕೆ ತಿಳಿಸಿದೆ (ವರದಿಯಾದದ್ದು; ಪೂರ್ಣವಾಗಿ ಓದಿಲ್ಲ). ನಿಗಮಗಳನ್ನು ಒಂದೊಂದಾಗಿ <a href="#corporations">ಕೆಳಗೆ</a> ಹಿಂಬಾಲಿಸಲಾಗಿದೆ.</p>
+</div></li>
+
+<li><div class="node">3</div><div class="stage">
+  <h3>ಬಿಲ್ಲುಗಳು ಬರುವ ಮೊದಲೇ ನಗದು ಡ್ರಾ</h3>
+  <p class="who">ತುರ್ತು ಪಾವತಿಗಳಿಗೆ ಅಧಿಕಾರಿಯೊಬ್ಬರು "ಅಬ್‌ಸ್ಟ್ರಾಕ್ಟ್ ಕಂಟಿಂಜೆಂಟ್" (ಎಸಿ) ಬಿಲ್ಲಿನ ಮೇಲೆ ಹಣ ಡ್ರಾ ಮಾಡಬಹುದು, ಮತ್ತು ಮುಂದಿನ ತಿಂಗಳ 15ರೊಳಗೆ ರಸೀದಿಗಳೊಂದಿಗೆ ವಿವರವಾದ ಬಿಲ್ಲು ಸಲ್ಲಿಸಬೇಕು. ದಾಖಲೆ: ವಿವರವಾದ ಬಿಲ್ಲು (ಆಂತರಿಕ).</p>
+  <div class="leak"><h4>ರಸೀದಿಗಳು ಬಾರದ ಕಡೆ <span class="tag t-audit">ಲೆಕ್ಕಪರಿಶೋಧಿತ</span></h4><ul>
+    <li>31 ಮಾರ್ಚ್ 2025ರಂದು <b>₹63.90 ಕೋಟಿ ಮೊತ್ತದ 1,111 ಮುಂಗಡ ಬಿಲ್ಲುಗಳಿಗೆ</b> ವಿವರವಾದ ಬಿಲ್ಲು ಇರಲಿಲ್ಲ; ಅವುಗಳಲ್ಲಿ 638 ಹಿಂದಿನ ವರ್ಷಗಳವು. ದೊಡ್ಡವು: ಚುನಾವಣೆ ₹32.10 ಕೋಟಿ, ಪೊಲೀಸ್ ₹18.37 ಕೋಟಿ.</li>
+  </ul><p class="src">ಸಿಎಜಿ ವರದಿ 2024-25, ಕಂಡಿಕೆ 3.4</p></div>
+  <p class="back"><b>ಹಿಂದಕ್ಕೆ ಹುಡುಕಿ:</b> ಪ್ರತಿ ಮುಂಗಡಕ್ಕೆ ಎದುರಾಗಿ ವಿವರವಾದ ಬಿಲ್ಲುಗಳು ಮತ್ತು ರಸೀದಿಗಳನ್ನು ಇಲಾಖೆಯಿಂದ ಕೇಳಿ.</p>
+</div></li>
+
+<li><div class="node">4</div><div class="stage">
+  <h3>ಕಾಮಗಾರಿಗಳು: ಅಂದಾಜು, ಟೆಂಡರ್, ಅಳತೆ, ಬಿಲ್ಲು</h3>
+  <p class="who">ರಸ್ತೆ ಅಥವಾ ಕಟ್ಟಡಕ್ಕೆ ಅಂದಾಜು ತಯಾರಾಗಿ, ಮಂಜೂರಾಗಿ, ಮುಕ್ತ ಟೆಂಡರ್‌ಗೆ ಹೋಗುತ್ತದೆ (ಕರ್ನಾಟಕ ಸಾರ್ವಜನಿಕ ಖರೀದಿಗಳಲ್ಲಿ ಪಾರದರ್ಶಕತೆ ಅಧಿನಿಯಮ, 1999); ಎಂಜಿನಿಯರ್ ಅಳತೆ ಪುಸ್ತಕದಲ್ಲಿ ಅಳತೆ ದಾಖಲಿಸುತ್ತಾರೆ; ಬಿಲ್ಲಿನಂತೆ ಪಾವತಿ. ಅಧಿನಿಯಮದ ಸೆಕ್ಷನ್ 4(ಜಿ) ಕೆಆರ್‌ಐಡಿಎಲ್‌ನಂತಹ ಆಯ್ದ ಸಂಸ್ಥೆಗಳಿಗೆ ಟೆಂಡರ್‌ನಿಂದ ವಿನಾಯಿತಿ ನೀಡಲು ಸರ್ಕಾರಕ್ಕೆ ಅವಕಾಶ ನೀಡುತ್ತದೆ. ದಾಖಲೆ: ಟೆಂಡರ್ ಮತ್ತು ಕಾರ್ಯಾದೇಶ (ಸಾರ್ವಜನಿಕ ಪೋರ್ಟಲ್); ಅಳತೆ ಪುಸ್ತಕ ಮತ್ತು ಬಿಲ್ಲುಗಳು (ಆರ್‌ಟಿಐ).</p>
+  <div class="leak"><h4>ತಪಾಸಣೆ ಬಿಟ್ಟುಹೋದ ಕಡೆ <span class="tag t-audit">ಲೆಕ್ಕಪರಿಶೋಧಿತ</span></h4><ul>
+    <li>ಕೆಆರ್‌ಐಡಿಎಲ್, 2016-21: ₹2 ಕೋಟಿ ವಿನಾಯಿತಿ ಮಿತಿಗಿಂತ ಮೇಲ್ಪಟ್ಟು <b>₹594 ಕೋಟಿಯ 99 ಕಾಮಗಾರಿಗಳು</b> ವಹಿಸಲ್ಪಟ್ಟವು; <b>₹92 ಕೋಟಿಯ 12 ಕಾಮಗಾರಿಗಳನ್ನು 85 ಆಗಿ ವಿಭಜಿಸಲಾಯಿತು</b>, ಟೆಂಡರ್ ಪ್ರಕ್ರಿಯೆ ತಪ್ಪಿಸಲು ಇಲಾಖೆಗಳು ಕೆಆರ್‌ಐಡಿಎಲ್ ಅನ್ನು ಆದ್ಯತೆ ನೀಡಿದವು ಎಂದು ಲೆಕ್ಕಪರಿಶೋಧಕರು ಕಂಡರು; ಕಾರ್ಯಕ್ರಮದ ವೇದಿಕೆಗಳು ಮತ್ತು ಧ್ವನಿವರ್ಧಕ ವ್ಯವಸ್ಥೆಗಳನ್ನು "ಕಾಮಗಾರಿ" ಎಂದು ಪಾವತಿಸಲಾಯಿತು.</li>
+    <li>ಪಾವತಿ ರಸೀದಿಗಳಿಗೆ ಮಾನ್ಯ ಅಳತೆ ಪುಸ್ತಕದ ನಮೂದುಗಳ ಬೆಂಬಲವಿರಲಿಲ್ಲ: ಎಂಜಿನಿಯರ್ ಅಳತೆ ಇಲ್ಲದೆ ಹಣ ಪಾವತಿ.</li>
+    <li>ಕೆಆರ್‌ಐಡಿಎಲ್ ಬಳಿ ಹಣ ಸಂಗ್ರಹ: 2020-21ರ ವೇಳೆಗೆ <b>₹17,320 ಕೋಟಿ</b>, ಅದರಲ್ಲಿ ₹304 ಕೋಟಿ ಯಾವುದೇ ಕಾಮಗಾರಿ ನಿಗದಿಯಾಗದೆ ಬಂದದ್ದು.</li>
+    <li>ಹಜ್ ಘರ್, ಬೆಂಗಳೂರು: <b>₹2.46 ಕೋಟಿ</b>ಯ ಅಂಶಗಳು "ನಿರ್ವಹಿಸಲಾಗಿದೆ" ಎಂದು ಪ್ರಮಾಣೀಕರಿಸಲ್ಪಟ್ಟಿದ್ದರೂ ಲೆಕ್ಕಪರಿಶೋಧಕರ ಭೇಟಿಯಲ್ಲಿ ನಿರ್ವಹಿಸಿರಲಿಲ್ಲ.</li>
+  </ul><p class="src">ಕೆಆರ್‌ಐಡಿಎಲ್ ಕಾರ್ಯನಿರ್ವಹಣಾ ಲೆಕ್ಕಪರಿಶೋಧನೆ (ವರದಿ 9/2022); ಅನುಸರಣಾ ಲೆಕ್ಕಪರಿಶೋಧನೆ, ವರದಿ 7/2024, ಕಂಡಿಕೆ 2.5.2</p></div>
+  <div class="case"><div class="head"><span class="tag t-proven">ಪತ್ತೆ</span> ಬೆಂಗಳೂರಿನ ನಕಲಿ ಬಿಲ್ಲುಗಳು</div>
+    <p>2008-11ರಲ್ಲಿ ಸುಮಾರು ₹1,500 ಕೋಟಿಯ ನಗರ ಕಾಮಗಾರಿಗಳಿಗೆ ಆಗದ ಅಥವಾ ಕಳಪೆ ಕೆಲಸದ ಬಿಲ್ಲುಗಳ ಮೇಲೆ ಪಾವತಿಯಾಗಿದೆ ಎಂದು ಪಾಲಿಕೆಯ ತಾಂತ್ರಿಕ ಜಾಗೃತ ಕೋಶ ಮತ್ತು ಸಿಐಡಿ ಕಂಡುಕೊಂಡವು. ಏಪ್ರಿಲ್ 2026ರಲ್ಲಿ ವಿಶೇಷ ನ್ಯಾಯಾಲಯ ಹಾಲಿ ಶಾಸಕರೊಬ್ಬರು ಸೇರಿ ಮೂವರು ಆರೋಪಿಗಳನ್ನು ಖುಲಾಸೆಗೊಳಿಸಿತು. ಪ್ರತ್ಯೇಕವಾಗಿ, ಕೆಆರ್‌ಐಡಿಎಲ್ ಮೂಲಕ ನಡೆದ ರಾಜರಾಜೇಶ್ವರಿನಗರದ ಆಗದ ಅಥವಾ 30%ಕ್ಕಿಂತ ಕಡಿಮೆ ಪೂರ್ಣಗೊಂಡ ಕಾಮಗಾರಿಗಳಿಗೆ ₹118 ಕೋಟಿ ಪಾವತಿಯಾಗಿದೆ ಎಂದು ಲೋಕಾಯುಕ್ತ ವಿಚಾರಣೆ ಕಂಡಿತು (ವರದಿಯಾದಂತೆ).</p>
+    <p class="src"><a href="https://udayavani.com/karnataka/politics-bengaluru-fake-bill-scam-mla-munirathna-acquitted-169769?lang=en" rel="noopener">ಉದಯವಾಣಿ, ಏಪ್ರಿಲ್ 2026</a></p></div>
+  <div class="case"><div class="head"><span class="tag t-alleged">ಆರೋಪ</span> ಗುತ್ತಿಗೆದಾರರ ಬಿಲ್ಲುಗಳಲ್ಲಿ "40% ಕಮಿಷನ್"</div>
+    <p>2019-23ರಲ್ಲಿ ಪಾವತಿಯಾದ ಬಿಲ್ಲುಗಳಲ್ಲಿ 40% ಕಡಿತವಾಗಿದೆ ಎಂದು ಗುತ್ತಿಗೆದಾರರ ಸಂಘ ಆರೋಪಿಸಿತು. ನ್ಯಾಯಮೂರ್ತಿ ನಾಗಮೋಹನ್ ದಾಸ್ ವಿಚಾರಣೆ (ಮಾರ್ಚ್ 2025) 40% ದರಕ್ಕೆ ಸ್ಪಷ್ಟ ಪುರಾವೆ ಕಾಣಲಿಲ್ಲ, ಆದರೆ ಕಮಿಷನ್ ಆರೋಪಗಳಲ್ಲಿ "ಸ್ವಲ್ಪ ಸತ್ಯ" ಮತ್ತು ವ್ಯಾಪಕ ಟೆಂಡರ್ ಅಕ್ರಮಗಳನ್ನು ಕಂಡಿತು.</p>
+    <p class="src"><a href="https://thesouthfirst.com/karnataka/40-percent-commission-no-clear-evidence-says-report-but-names-ex-bjp-mlas/" rel="noopener">South First, ಏಪ್ರಿಲ್ 2025</a></p></div>
+  <p class="back"><b>ಹಿಂದಕ್ಕೆ ಹುಡುಕಿ:</b> ಅಳತೆ ಪುಸ್ತಕವನ್ನು ರಸ್ತೆಯೊಂದಿಗೇ ಹೋಲಿಸಿ. ಪುಟಗಳು, ದಿನಾಂಕಗಳು ಮತ್ತು ಅಳತೆಗಳನ್ನು ನೆಲದ ಮೇಲೆ ಪರಿಶೀಲಿಸಬಹುದು, ಮತ್ತು ದಿನಾಂಕವಿರುವ ಫೋಟೋ ತೆಗೆಯಬಹುದು.</p>
+</div></li>
+
+<li><div class="node">5</div><div class="stage">
+  <h3>ಕೇಂದ್ರ ಯೋಜನೆಗಳು: ನೋಡಲ್ ಬ್ಯಾಂಕ್ ಖಾತೆಯಲ್ಲಿ ಹಣ</h3>
+  <p class="who">2021ರಿಂದ ಕೇಂದ್ರ ಪ್ರಾಯೋಜಿತ ಯೋಜನೆಗಳ ಹಣ ಏಕ ನೋಡಲ್ ಸಂಸ್ಥೆಯ (ಎಸ್‌ಎನ್‌ಎ) ಬ್ಯಾಂಕ್ ಖಾತೆಯಲ್ಲಿರುತ್ತದೆ; 2023ರಿಂದ ಎಸ್‌ಎನ್‌ಎ-ಸ್ಪರ್ಶ್ ವ್ಯವಸ್ಥೆ ರಿಸರ್ವ್ ಬ್ಯಾಂಕ್‌ನಿಂದ ಪೂರೈಕೆದಾರರಿಗೆ "ಸರಿಯಾದ ಸಮಯಕ್ಕೆ" ಪಾವತಿಸುತ್ತದೆ. ದಾಖಲೆ: ಪಿಎಫ್‌ಎಂಎಸ್ ವರದಿಗಳು; ಬಳಕೆ ಪ್ರಮಾಣಪತ್ರಗಳು.</p>
+  <div class="leak"><h4>ಖರ್ಚು ಕಾಗದದ ಮೇಲೆ ಮಾತ್ರ ಇರುವ ಕಡೆ <span class="tag t-audit">ಲೆಕ್ಕಪರಿಶೋಧಿತ</span></h4><ul>
+    <li>ನೋಡಲ್ ಖಾತೆಗಳಿಗೆ ವರ್ಗಾವಣೆಯನ್ನು ಹಣ ಬ್ಯಾಂಕ್‌ನಲ್ಲೇ ಇದ್ದರೂ ಖರ್ಚು ಎಂದು ದಾಖಲಿಸಲಾಗುತ್ತದೆ; 2024-25ರಲ್ಲಿ ರಾಜ್ಯ <b>₹1,333 ಕೋಟಿ</b> ಖರ್ಚಾಗದ ಶಿಲ್ಕನ್ನು ಹಿಂಪಡೆಯಿತು.</li>
+    <li>2023-24ರಲ್ಲಿ ಕೇಂದ್ರದಿಂದ ನೇರವಾಗಿ ಅನುಷ್ಠಾನ ಸಂಸ್ಥೆಗಳಿಗೆ ₹22,309 ಕೋಟಿ ಹೋಯಿತು, ರಾಜ್ಯ ಬಜೆಟ್‌ನ ಹೊರಗೆ.</li>
+    <li>ಬಳಕೆ ಪ್ರಮಾಣಪತ್ರಗಳು: ಮಾರ್ಚ್ 2025ರಲ್ಲಿ ₹239 ಕೋಟಿಯ 142 ಬಾಕಿ, ಆದರೆ ಈ ವ್ಯವಸ್ಥೆ ಒಟ್ಟು ಅನುದಾನದ 8.9% ಪಡೆಯುವ ಸಂಸ್ಥೆಗಳನ್ನು ಮಾತ್ರ ಒಳಗೊಳ್ಳುತ್ತದೆ: ಸುಮಾರು 90% ಅನುದಾನ ಪಡೆಯುವ ಸಂಸ್ಥೆಗಳು ಮೇಲ್ವಿಚಾರಣೆಯ ವ್ಯಾಪ್ತಿಯ ಹೊರಗಿವೆ.</li>
+  </ul><p class="src">ಸಿಎಜಿ ವರದಿ 2023-24, ಕಂಡಿಕೆ 4.4, 4.5; ವರದಿ 2024-25, ಕಂಡಿಕೆ 3.3</p></div>
+  <p class="back"><b>ಹಿಂದಕ್ಕೆ ಹುಡುಕಿ:</b> ಯೋಜನೆಯ ಬಳಕೆ ಪ್ರಮಾಣಪತ್ರ ಮತ್ತು ನೋಡಲ್ ಖಾತೆಯ ಸ್ಟೇಟ್‌ಮೆಂಟ್.</p>
+</div></li>
+
+<li><div class="node">6</div><div class="stage">
+  <h3>ಫಲಾನುಭವಿಗಳು: ಪಿಂಚಣಿ, ಪಡಿತರ, ಸಹಾಯಧನ</h3>
+  <p class="who">ಸೌಲಭ್ಯಗಳನ್ನು ರಾಜ್ಯದ ನೇರ ನಗದು ವರ್ಗಾವಣೆ ವೇದಿಕೆಯ ಮೂಲಕ ಆಧಾರ್ ಜೋಡಿತ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳಿಗೆ ಪಾವತಿಸಲಾಗುತ್ತದೆ. ದುರ್ಬಲ ಕೊಂಡಿ ಎಂದರೆ ಹಣ ಪಡೆಯುವವರ ಪಟ್ಟಿ. ದಾಖಲೆ: ಫಲಾನುಭವಿ ಪಟ್ಟಿಗಳು (ಭಾಗಶಃ ಸಾರ್ವಜನಿಕ; ಪಂಚಾಯಿತಿ ಸೂಚನಾ ಫಲಕ, ಯೋಜನೆ ಪೋರ್ಟಲ್‌ಗಳು).</p>
+  <div class="leak"><h4>ಪಟ್ಟಿಯಲ್ಲಿ ಇರಬಾರದವರು</h4><ul>
+    <li>3.58 ಲಕ್ಷ ನಕಲಿ ಪಿಂಚಣಿ ಫಲಾನುಭವಿಗಳನ್ನು ತೆಗೆದುಹಾಕಲಾಯಿತು, ವರ್ಷಕ್ಕೆ ₹430 ಕೋಟಿ ಉಳಿತಾಯ (ಕಂದಾಯ ಸಚಿವರು, ಮೇ 2022). ಜುಲೈ 2025ರಲ್ಲಿ 13,702 ಆದಾಯ ತೆರಿಗೆ ಪಾವತಿದಾರರು ಸೇರಿ 11.8 ಲಕ್ಷ ಪಿಂಚಣಿಗಳನ್ನು ವಂಚನೆಯ ಸಾಧ್ಯತೆಯೆಂದು ಗುರುತಿಸಲಾಯಿತು (ಸಚಿವರ ಪ್ರಾಥಮಿಕ ಅಂಕಿ).</li>
+  </ul></div>
+  <div class="case"><div class="head"><span class="tag t-charged">ಆರೋಪಪಟ್ಟಿ</span> ಭೋವಿ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</div>
+    <p>ನಿಜವಾದ ಫಲಾನುಭವಿಗಳಲ್ಲದವರ ಖಾತೆಗಳಿಗೆ ಸುಮಾರು ₹97 ಕೋಟಿ ಸಾಲ ಮತ್ತು ಸಹಾಯಧನ ಪಾವತಿಯಾಗಿದೆ ಎಂದು ಜಾರಿ ನಿರ್ದೇಶನಾಲಯ ಹೇಳುತ್ತದೆ; ಜೂನ್ 2025ರಲ್ಲಿ ಅಭಿಯೋಜನಾ ದೂರು ಸಲ್ಲಿಸಿದೆ.</p></div>
+  <div class="case"><div class="head"><span class="tag t-charged">ಆರೋಪಪಟ್ಟಿ</span> ಕೆಐಎಡಿಬಿ, ಧಾರವಾಡ: ಒಂದೇ ಭೂಮಿಗೆ ಎರಡು ಬಾರಿ ಪರಿಹಾರ</div>
+    <p>ಒಂದೇ ಭೂಮಿಗೆ ಸುಳ್ಳು ಹಕ್ಕುದಾರರಿಗೆ ಎರಡು ಬಾರಿ ಪರಿಹಾರ: ₹64.5 ಕೋಟಿಯ 29 ಪಾವತಿಗಳು, ಜಾರಿ ನಿರ್ದೇಶನಾಲಯದ ಪ್ರಕಾರ.</p></div>
+  <p class="back"><b>ಹಿಂದಕ್ಕೆ ಹುಡುಕಿ:</b> ಫಲಾನುಭವಿ ಪಟ್ಟಿಯನ್ನು ಮರಣ, ಆದಾಯ ತೆರಿಗೆ ಮತ್ತು ಭೂ ದಾಖಲೆಗಳೊಂದಿಗೆ ಹೋಲಿಸಿ; ಸರ್ಕಾರವೇ ನಕಲಿ ಪಿಂಚಣಿಗಳನ್ನು ಹಾಗೆ ಕಂಡುಕೊಂಡಿತು.</p>
+</div></li>
+
+<li><div class="node">7</div><div class="stage">
+  <h3>ಹಳ್ಳಿ: ಪಂಚಾಯಿತಿಗಳು ಮತ್ತು ಉದ್ಯೋಗ ಖಾತರಿ ಕೆಲಸ</h3>
+  <p class="who">ಉದ್ಯೋಗ ಖಾತರಿ ಕೂಲಿ ನೇರವಾಗಿ ಕಾರ್ಮಿಕರ ಖಾತೆಗಳಿಗೆ ಹೋಗುತ್ತದೆ; ಸಾಮಗ್ರಿ ಮತ್ತು ಕಾಮಗಾರಿಗಳು ಗ್ರಾಮ ಪಂಚಾಯಿತಿ ಮೂಲಕ. ದಾಖಲೆ: ಉದ್ಯೋಗ ಚೀಟಿಗಳು, ಹಾಜರಾತಿ ಪಟ್ಟಿಗಳು, ಕಾಮಗಾರಿ ಕಡತಗಳು, ಸಾಮಾಜಿಕ ಲೆಕ್ಕಪರಿಶೋಧನಾ ವರದಿಗಳು (ಗ್ರಾಮಸಭೆಯಲ್ಲಿ ಸಾರ್ವಜನಿಕ).</p>
+  <div class="case"><div class="head"><span class="tag t-proven">ಪತ್ತೆ</span> ದೇವದುರ್ಗ ತಾಲ್ಲೂಕು, ರಾಯಚೂರು</div>
+    <p>33 ಗ್ರಾಮ ಪಂಚಾಯಿತಿಗಳ ಸಾಮಾಜಿಕ ಲೆಕ್ಕಪರಿಶೋಧನೆ (2020-23) ಸುಮಾರು ₹200.87 ಕೋಟಿಯ ಅಕ್ರಮಗಳನ್ನು ಕಂಡಿತು, ಒಂದೇ ಸಂಸ್ಥೆಗೆ 6,700 ಪ್ರಕರಣಗಳಲ್ಲಿ ₹102 ಕೋಟಿ ಪಾವತಿ ಮತ್ತು ಅಲ್ಲಿ ವಾಸಿಸದವರಿಗೆ ಮಾಡಿದ ಉದ್ಯೋಗ ಚೀಟಿಗಳು ಸೇರಿದಂತೆ (ಮಧ್ಯಂತರ ವರದಿ; ನವೆಂಬರ್ 2023ರಲ್ಲಿ ಎಫ್‌ಐಆರ್). ರಾಜ್ಯದಾದ್ಯಂತ 2024-25ರಲ್ಲಿ ₹41.58 ಕೋಟಿ ದುರುಪಯೋಗ ಪತ್ತೆಯಾಯಿತು, ₹3.38 ಕೋಟಿ (8%) ವಸೂಲಾಯಿತು.</p>
+    <p class="src"><a href="https://thesouthfirst.com/karnataka/karnataka-social-audit-report-exposes-%e2%82%b9200-crore-irregularities-in-raichur-mgnrega-projects-2-booked/" rel="noopener">South First, ಡಿಸೆಂಬರ್ 2023</a> · ಗ್ರಾಮೀಣಾಭಿವೃದ್ಧಿ ಸಚಿವಾಲಯದ ದತ್ತಾಂಶ, ವರದಿಯಾದಂತೆ, ಮಾರ್ಚ್ 2025</p></div>
+  <p class="back"><b>ಹಿಂದಕ್ಕೆ ಹುಡುಕಿ:</b> ಹಾಜರಾತಿ ಪಟ್ಟಿಯನ್ನು ಅದರಲ್ಲಿ ಹೆಸರಿಸಿದ ವ್ಯಕ್ತಿಗಳೊಂದಿಗೆ, ಮತ್ತು ಕಾಮಗಾರಿಯನ್ನು ಸ್ಥಳದೊಂದಿಗೆ ಹೋಲಿಸಿ. ಯಾವುದೇ ಗ್ರಾಮಸ್ಥರು ಸಾಮಾಜಿಕ ಲೆಕ್ಕಪರಿಶೋಧನೆಗೆ ಹಾಜರಾಗಬಹುದು.</p>
+</div></li>
+
+</ol>
+</section>
+
+<section id="corporations" style="display:flex;flex-direction:column;gap:16px">
+  <h2>ನಿಗಮಗಳನ್ನು ಹಿಂದಕ್ಕೆ ಹುಡುಕುವುದು</h2>
+  <p>ಜಾತಿ ಮತ್ತು ಸಮುದಾಯಗಳ ಅಭಿವೃದ್ಧಿ ನಿಗಮಗಳು ಬಡವರಿಗೆ ಸಾಲ, ಸಹಾಯಧನ ಮತ್ತು ಭೂಮಿಗಾಗಿ ಬಜೆಟ್‌ನಿಂದ ಅನುದಾನ ಪಡೆಯುತ್ತವೆ. ಅನುದಾನ ಖಜಾನೆಯಿಂದ ಹೊರಟ ಕೂಡಲೇ ಲೆಕ್ಕದಲ್ಲಿ ಅದು ಖರ್ಚಾಗಿದೆ. 2024-25ರಲ್ಲಿ ಲೆಕ್ಕಪರಿಶೋಧಕರು ಪರಿಶೀಲಿಸಿದ ನಿಗಮಗಳ ಅವರದೇ ಕೋಷ್ಟಕಗಳು ಇಲ್ಲಿವೆ, ಅವುಗಳ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳವರೆಗೆ ಹಿಂಬಾಲಿಸಿ.</p>
+
+  <h3>ಖರ್ಚಾಗಿದೆ ಎಂದು ದಾಖಲಾದ, ಇನ್ನೂ ಬಳಸದ ಅನುದಾನ <span class="tag t-audit">ಲೆಕ್ಕಪರಿಶೋಧಿತ</span></h3>
+  <div style="overflow-x:auto"><table class="led">
+    <thead><tr><th>ನಿಗಮ</th><th>ಅನುದಾನ 2022-25</th><th>ಖರ್ಚು</th><th>ಬಳಸದ್ದು, 31 ಮಾರ್ಚ್ 2025</th></tr></thead>
+    <tbody>
+      <tr><td>ಕರ್ನಾಟಕ ವೀರಶೈವ-ಲಿಂಗಾಯತ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</td><td>₹260.00 ಕೋಟಿ</td><td>₹73.30 ಕೋಟಿ</td><td><b>₹191.80 ಕೋಟಿ</b></td></tr>
+      <tr><td>ಕರ್ನಾಟಕ ಒಕ್ಕಲಿಗ ಸಮುದಾಯ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</td><td>₹225.00 ಕೋಟಿ</td><td>₹33.40 ಕೋಟಿ</td><td><b>₹141.00 ಕೋಟಿ</b></td></tr>
+      <tr><td>ಕರ್ನಾಟಕ ರಾಜ್ಯ ಕಾಡುಗೊಲ್ಲ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</td><td>₹49.80 ಕೋಟಿ</td><td>₹0.20 ಕೋಟಿ</td><td><b>₹49.00 ಕೋಟಿ</b></td></tr>
+      <tr><td>ಕರ್ನಾಟಕ ಮರಾಠ ಸಮುದಾಯಗಳ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</td><td>₹170.00 ಕೋಟಿ</td><td>₹64.50 ಕೋಟಿ</td><td><b>₹30.20 ಕೋಟಿ</b></td></tr>
+      <tr class="tot"><td>ನಾಲ್ಕು ನಿಗಮಗಳು</td><td>₹704.80 ಕೋಟಿ</td><td>₹171.40 ಕೋಟಿ</td><td><b>₹412.00 ಕೋಟಿ</b></td></tr>
+    </tbody></table></div>
+  <p class="src">ಸಿಎಜಿ ವರದಿ 2024-25, ಕೋಷ್ಟಕ 2.23. ಲೆಕ್ಕಪರಿಶೋಧಕರ ಪ್ರಕಾರ ₹412 ಕೋಟಿ ಬಳಸದ ಅನುದಾನ, ಖರ್ಚಾಗಿದೆ ಎಂದು ತೋರಿಸಿದ್ದರೂ, ಸರ್ಕಾರಿ ಲೆಕ್ಕದ ಹೊರಗೆ ನಿಗಮಗಳ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳಲ್ಲಿ ಉಳಿದಿದೆ. "ಬಳಸದ್ದು" ಅಂಕಣ ಲೆಕ್ಕಪರಿಶೋಧಕರದೇ; ಅನುದಾನದಿಂದ ಖರ್ಚು ಕಳೆದರೆ ₹533.40 ಕೋಟಿ ಬರುತ್ತದೆ, ಮತ್ತು ವರದಿ ವ್ಯತ್ಯಾಸವನ್ನು ವಿವರಿಸುವುದಿಲ್ಲ.</p>
+
+  <h3>ಮುಚ್ಚುವ ಆದೇಶದ ನಂತರವೂ ತೆರೆದಿಟ್ಟ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳು <span class="tag t-audit">ಲೆಕ್ಕಪರಿಶೋಧಿತ</span></h3>
+  <p>ಫೆಬ್ರವರಿ 2023ರಲ್ಲಿ ಆರ್ಥಿಕ ಇಲಾಖೆ ನಿಗಮಗಳಿಗೆ ತಮ್ಮ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳನ್ನು ಮುಚ್ಚಿ, ಹಣವನ್ನು ಕಾಣುವಂತೆ ಖಜಾನೆಯ ಠೇವಣಿ ಖಾತೆಗಳಲ್ಲಿ ಇಡಲು ಹೇಳಿತು. 31 ಮಾರ್ಚ್ 2025ರಂದು ಹತ್ತು ನಿಗಮಗಳು ಇನ್ನೂ 32 ಬ್ಯಾಂಕ್ ಖಾತೆಗಳನ್ನು ನಡೆಸುತ್ತಿದ್ದವು.</p>
+  <div style="overflow-x:auto"><table class="led">
+    <thead><tr><th>ನಿಗಮ</th><th>ಖಾತೆಗಳು</th><th>ಶಿಲ್ಕು, 31 ಮಾರ್ಚ್ 2025</th></tr></thead>
+    <tbody>
+      <tr><td>ನಿಜಶರಣ ಅಂಬಿಗರ ಚೌಡಯ್ಯ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</td><td>3</td><td><b>₹352.54 ಕೋಟಿ</b></td></tr>
+      <tr><td>ಕರ್ನಾಟಕ ಪರಿಶಿಷ್ಟ ಜಾತಿ/ಪಂಗಡ ಅಲೆಮಾರಿ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</td><td>2</td><td>₹34.89 ಕೋಟಿ</td></tr>
+      <tr><td>ಕರ್ನಾಟಕ ರಾಜ್ಯ ಸಫಾಯಿ ಕರ್ಮಚಾರಿ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</td><td>1</td><td>₹7.02 ಕೋಟಿ</td></tr>
+      <tr><td>ಡಾ. ಬಾಬು ಜಗಜೀವನ್ ರಾಮ್ ಚರ್ಮ ಕೈಗಾರಿಕೆ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</td><td>1</td><td>₹5.17 ಕೋಟಿ</td></tr>
+      <tr><td>ಕರ್ನಾಟಕ ಭೋವಿ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</td><td>4</td><td>₹2.86 ಕೋಟಿ</td></tr>
+      <tr><td>ಕರ್ನಾಟಕ ಮರಾಠ ಸಮುದಾಯಗಳ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</td><td>3</td><td>₹1.84 ಕೋಟಿ</td></tr>
+      <tr><td>ಕರ್ನಾಟಕ ಒಕ್ಕಲಿಗ ಸಮುದಾಯ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</td><td>4</td><td>₹1.72 ಕೋಟಿ</td></tr>
+      <tr><td>ಕರ್ನಾಟಕ ವೀರಶೈವ-ಲಿಂಗಾಯತ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</td><td>3</td><td>₹1.68 ಕೋಟಿ</td></tr>
+      <tr><td>ಕರ್ನಾಟಕ ವಿಶ್ವಕರ್ಮ ಸಮುದಾಯಗಳ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</td><td>8</td><td>₹1.37 ಕೋಟಿ</td></tr>
+      <tr><td>ಕರ್ನಾಟಕ ಉಪ್ಪಾರ ಅಭಿವೃದ್ಧಿ ನಿಗಮ</td><td>3</td><td>₹1.35 ಕೋಟಿ</td></tr>
+      <tr class="tot"><td>ಹತ್ತು ನಿಗಮಗಳು</td><td>32</td><td><b>₹410.43 ಕೋಟಿ</b></td></tr>
+    </tbody></table></div>
+  <p class="src">ಸಿಎಜಿ ವರದಿ 2024-25, ಕಂಡಿಕೆ 2.7.1.5 ಮತ್ತು ಅನುಬಂಧ 2.16 (ಪ್ರತಿ ಖಾತೆಯ ಪಟ್ಟಿ). ನಮ್ಮ ಒಟ್ಟು ಲೆಕ್ಕಪರಿಶೋಧಕರ ₹410,43,25,294ಕ್ಕೆ ಸರಿಹೊಂದುತ್ತದೆ.</p>
+
+  <h3>ದಾಖಲೆಗಳು ಎತ್ತುವ ಪ್ರಶ್ನೆಗಳು</h3>
+  <div class="case"><div class="head">1. ಒಂದು ಸಣ್ಣ ನಿಗಮದ ಖಾತೆಗಳಲ್ಲಿ ₹352 ಕೋಟಿ</div>
+    <p>ಅಂಬಿಗ ಮತ್ತು ಸಂಬಂಧಿತ ಸಮುದಾಯಗಳಿಗಾಗಿ ಸ್ಥಾಪಿಸಲಾದ ನಿಜಶರಣ ಅಂಬಿಗರ ಚೌಡಯ್ಯ ಅಭಿವೃದ್ಧಿ ನಿಗಮಕ್ಕೆ 2024-25ರಲ್ಲಿ ₹5 ಕೋಟಿ ನೀಡಲಾಗಿತ್ತು. ಲೆಕ್ಕಪರಿಶೋಧಕರ ಕೋಷ್ಟಕ ಬ್ಯಾಂಕ್ ಆಫ್ ಬರೋಡಾದ "ಎಸ್ಕ್ರೋ" ಖಾತೆಯಲ್ಲಿ ₹190.52 ಕೋಟಿ ಮತ್ತು "ವಸೂಲಾತಿ" ಖಾತೆಯಲ್ಲಿ ₹159.40 ಕೋಟಿ ತೋರಿಸುತ್ತದೆ. ನಿಗಮದ ಬಳಿ ತನ್ನ ಅನುದಾನಕ್ಕಿಂತ ಬಹಳ ಹೆಚ್ಚು ಹಣವಿದೆ, ಅಥವಾ ಅಂಕಿಗಳು ತಪ್ಪಾಗಿ ಮುದ್ರಿತವಾಗಿವೆ. ಯಾವುದು ಎಂದು ವರದಿ ಹೇಳುವುದಿಲ್ಲ.</p></div>
+  <div class="case"><div class="head">2. ₹412 ಕೋಟಿ "ಬ್ಯಾಂಕ್‌ನಲ್ಲಿದೆ", ಆದರೆ ಪಟ್ಟಿ ಮಾಡಿದ ಖಾತೆಗಳಲ್ಲಿಲ್ಲ</div>
+    <p>ನಾಲ್ಕು ನಿಗಮಗಳ ₹412 ಕೋಟಿ ಬಳಸದ ಅನುದಾನ ಅವುಗಳ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳಲ್ಲಿದೆ ಎಂದು ಲೆಕ್ಕಪರಿಶೋಧಕರು ಹೇಳುತ್ತಾರೆ. ಅವರದೇ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳ ಪಟ್ಟಿಯಲ್ಲಿ ಮೂರಕ್ಕೆ ಒಟ್ಟು ₹5.24 ಕೋಟಿ ಮಾತ್ರ, ಮತ್ತು ಕಾಡುಗೊಲ್ಲ ನಿಗಮಕ್ಕೆ ಒಂದು ಖಾತೆಯೂ ಇಲ್ಲ. ಉಳಿದದ್ದು ಎಲ್ಲಿದೆ ಎಂದು ವರದಿ ಹೇಳುವುದಿಲ್ಲ: ನಿಶ್ಚಿತ ಠೇವಣಿಗಳಲ್ಲೋ, ಖಜಾನೆ ಠೇವಣಿ ಖಾತೆಗಳಲ್ಲೋ, ಬೇರೆ ಖಾತೆಗಳಲ್ಲೋ.</p></div>
+  <div class="case"><div class="head">3. ಹಳೆಯ ಹಣದ ತನಿಖೆ ನಡೆಯುತ್ತಿರುವಾಗ ಹೊಸ ಹಣ</div>
+    <p>ಸುಮಾರು ₹97 ಕೋಟಿ ನಕಲಿ ಫಲಾನುಭವಿಗಳಿಗೆ ಹೋಗಿದೆ ಎಂದು ಜಾರಿ ನಿರ್ದೇಶನಾಲಯ ಆರೋಪಿಸಿರುವ (ಅಭಿಯೋಜನಾ ದೂರು ಜೂನ್ 2025) ಭೋವಿ ನಿಗಮಕ್ಕೆ 2024-25ರ ತನ್ನ ಸಂಪೂರ್ಣ ₹55 ಕೋಟಿ ವರ್ಷದ ಕೊನೆಯ ತ್ರೈಮಾಸಿಕದಲ್ಲಿ ಬಂತು, ಮತ್ತು ಅದು ನಾಲ್ಕು ಬ್ಯಾಂಕ್ ಖಾತೆಗಳನ್ನು ನಡೆಸುತ್ತಿತ್ತು. 2024ರಲ್ಲಿ ಸುಮಾರು ₹90 ಕೋಟಿ ದಾರಿತಪ್ಪಿದ (ದೋಷಾರೋಪಣ ಪಟ್ಟಿ ಸಲ್ಲಿಕೆ) ವಾಲ್ಮೀಕಿ ನಿಗಮಕ್ಕೆ 2024-25ರ ₹84 ಕೋಟಿಯಲ್ಲಿ ₹63 ಕೋಟಿ ಕೊನೆಯ ತ್ರೈಮಾಸಿಕದಲ್ಲಿ ಬಂತು, ಮತ್ತು 2020-23ರಲ್ಲಿ ಸರ್ಕಾರದ ಹಣದ ಮೇಲೆ ಗಳಿಸಿದ ₹108 ಕೋಟಿ ಬಡ್ಡಿಯನ್ನು ಅದು ಮರಳಿಸಿರಲಿಲ್ಲ.</p>
+    <p class="src">ಸಿಎಜಿ ವರದಿ 2024-25, ಅನುಬಂಧ 2.15; ವರದಿ 2023-24, ಅನುಬಂಧ 4.1. ಪ್ರಕರಣಗಳು: ಮೇಲಿನ ಹಂತ 2 ಮತ್ತು 6.</p></div>
+  <div class="case"><div class="head">4. ಕೊನೆಯ ತ್ರೈಮಾಸಿಕದಲ್ಲಿ ಬಿಡುಗಡೆ, ನಿಲ್ಲಿಸಿಡಲು</div>
+    <p>2024-25ರ ಕೊನೆಯ ತ್ರೈಮಾಸಿಕದಲ್ಲಿ ಮೂರು ಕಲ್ಯಾಣ ಇಲಾಖೆಗಳು 20 ನಿಗಮಗಳಿಗೆ ₹760.25 ಕೋಟಿ ಬಿಡುಗಡೆ ಮಾಡಿ, ಹತ್ತು ದಿನಗಳೊಳಗೆ ಅನುದಾನ ಡ್ರಾ ಮಾಡಿ ಠೇವಣಿ (ಪಿಡಿ) ಖಾತೆಗಳಲ್ಲಿ ಇಡುವಂತೆ ಸೂಚಿಸಿದವು. ಸಮಾಜ ಕಲ್ಯಾಣ ನಿಗಮಗಳಿಗೆ ವರ್ಷದ ಸಂಪೂರ್ಣ ಅನುದಾನ, ₹425 ಕೋಟಿ, ಆ ತ್ರೈಮಾಸಿಕದಲ್ಲೇ ಬಂತು.</p>
+    <p class="src">ಸಿಎಜಿ ವರದಿ 2024-25, ಕಂಡಿಕೆ 2.5.8.1 ಮತ್ತು ಅನುಬಂಧ 2.15</p></div>
+  <p class="back"><b>ಕೇಳಿ:</b> <a href="../rti.html#letter-l5">ನಿಗಮದ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳಿಗಾಗಿ ಆರ್‌ಟಿಐ ಪತ್ರ</a> ಪ್ರತಿ ಖಾತೆ ಮತ್ತು ಶಿಲ್ಕು, ಅವುಗಳನ್ನು ತೆರೆದ ಆಡಳಿತ ಮಂಡಳಿ ನಿರ್ಣಯಗಳು, ಎಸ್ಕ್ರೋ ಮತ್ತು ವಸೂಲಾತಿ ಖಾತೆಗಳಲ್ಲಿ ಏನಿದೆ ಮತ್ತು ಆ ಹಣ ಎಲ್ಲಿಂದ ಬಂತು, ಗಳಿಸಿದ ಮತ್ತು ಮರಳಿಸಿದ ಬಡ್ಡಿ, ಮತ್ತು ಇತ್ತೀಚಿನ ಲೆಕ್ಕಪರಿಶೋಧಿತ ಲೆಕ್ಕಪತ್ರಗಳನ್ನು ಕೇಳುತ್ತದೆ.</p>
+</section>
+
+<section class="box">
+  <h2>ಸೋರಿಕೆಯ ನಂತರ: ಯಾರು ಹಿಡಿಯುತ್ತಾರೆ, ಏನಾಗುತ್ತದೆ</h2>
+  <ul>
+    <li>ಮಾರ್ಚ್ 2025ರಲ್ಲಿ <b>₹149.83 ಕೋಟಿಯ 41 ದುರುಪಯೋಗ, ನಷ್ಟ ಮತ್ತು ಕಳ್ಳತನ ಪ್ರಕರಣಗಳು</b> ಬಾಕಿ ಇದ್ದವು; ಅವುಗಳಲ್ಲಿ 14 ಹತ್ತು ವರ್ಷಕ್ಕೂ ಹಳೆಯವು (ಸಿಎಜಿ ವರದಿ 2024-25, ಕಂಡಿಕೆ 3.12).</li>
+    <li>ಮಾರ್ಚ್ 2022ರಲ್ಲಿ 48 ಇಲಾಖೆಗಳು <b>41,193 ಪ್ರಶ್ನೆಗಳಿರುವ 7,680 ಲೆಕ್ಕಪರಿಶೋಧನಾ ತಪಾಸಣಾ ವರದಿಗಳಿಗೆ</b> ಉತ್ತರಿಸಿರಲಿಲ್ಲ; ಅವುಗಳಲ್ಲಿ 3,142 ವರದಿಗಳು ಹತ್ತು ವರ್ಷಕ್ಕೂ ಹಳೆಯವು (ಸಿಎಜಿ ವರದಿ 7/2024).</li>
+    <li>2022-23 ಮತ್ತು 2023-24ರ ರಾಜ್ಯ ಹಣಕಾಸು ವರದಿಗಳಿಗೆ ಸರ್ಕಾರ ಸಿಎಜಿಗೆ ಉತ್ತರಿಸಿರಲಿಲ್ಲ (ವರದಿ 2024-25, ಕಂಡಿಕೆ 3.13).</li>
+    <li>ವಸೂಲಾತಿ ಅತ್ಯಂತ ದುರ್ಬಲ ಕೊಂಡಿ: 2024-25ರಲ್ಲಿ ಉದ್ಯೋಗ ಖಾತರಿ ದುರುಪಯೋಗದ 8% ಮಾತ್ರ ವಸೂಲಾಯಿತು; ಈ ಪುಟದ ಪ್ರಕರಣಗಳಲ್ಲಿ ಸಿಕ್ಕ ಒಂದೇ ತೀರ್ಪು ಖುಲಾಸೆ. <a href="officials_tracker_kn.html">ದಾಳಿಯ ನಂತರ</a> ಪುಟವನ್ನೂ ನೋಡಿ.</li>
+  </ul>
+</section>
+
+<section class="box">
+  <h2>ನೀವು ಏನನ್ನು ಕೇಳಬಹುದು</h2>
+  <p>ಮೇಲಿನ ಪ್ರತಿ ಹಂತವೂ ದಾಖಲೆಯನ್ನು ಬಿಟ್ಟುಹೋಗುತ್ತದೆ. ಯಾವುದೇ ನಾಗರಿಕರು ಮಾಹಿತಿ ಹಕ್ಕು ಅಧಿನಿಯಮದಡಿ ಅದನ್ನು ಕೇಳಬಹುದು: ಇಲಾಖೆಯ ಠೇವಣಿ ಖಾತೆಯ ಶಿಲ್ಕು, ನಿಗಮದ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳು, ಮುಂಗಡಕ್ಕೆ ಎದುರಾದ ವಿವರವಾದ ಬಿಲ್ಲುಗಳು, ನಿಮ್ಮ ವಾರ್ಡಿನ ರಸ್ತೆಯ ಅಳತೆ ಪುಸ್ತಕ, ನಿಮ್ಮ ಪಂಚಾಯಿತಿಯ ಫಲಾನುಭವಿ ಪಟ್ಟಿ. ಸಿದ್ಧ ಪತ್ರಗಳು <a href="../rti.html">ಆರ್‌ಟಿಐ ಪುಟದಲ್ಲಿ</a> ಇವೆ.</p>
+</section>
+
+<section class="box">
+  <h2>ನ್ಯಾಯಯುತವಾಗಿ ಓದಿ</h2>
+  <ul>
+    <li>ಹಣವನ್ನು ನಿಲ್ಲಿಸಿಡುವುದು, ಅನುಮೋದನೆಗೆ ಮೊದಲೇ ಖರ್ಚು ಮಾಡುವುದು ಮತ್ತು ದಾಖಲೆಗಳ ಕೊರತೆ ನಿಯಂತ್ರಣದ ವೈಫಲ್ಯಗಳು. ಅವು ಕಳ್ಳತನವನ್ನು ಮುಚ್ಚಿಡಲು ಸುಲಭ ಮಾಡುತ್ತವೆ; ಕಳ್ಳತನಕ್ಕೆ ಪುರಾವೆಯಲ್ಲ. ಈ ಪುಟ ಲೆಕ್ಕಪರಿಶೋಧಕರ ಮಾತುಗಳನ್ನೇ ಬಳಸುತ್ತದೆ.</li>
+    <li>ಆರೋಪಪಟ್ಟಿ ಅಥವಾ ಆರೋಪ ಎಂದು ಗುರುತಿಸಿದ ಪ್ರಕರಣಗಳು ಸಾಬೀತಾಗಿಲ್ಲ. ಅವುಗಳಲ್ಲಿ ಹೆಚ್ಚಿನವುಗಳ ಬಗ್ಗೆ ನ್ಯಾಯಾಲಯಗಳು ತೀರ್ಪು ನೀಡಿಲ್ಲ.</li>
+    <li>ತೀರ್ಮಾನಗಳು ಎರಡೂ ಪ್ರಮುಖ ಪಕ್ಷಗಳ ಸರ್ಕಾರಗಳನ್ನು ಒಳಗೊಳ್ಳುತ್ತವೆ: ಕೆಆರ್‌ಐಡಿಎಲ್ ಲೆಕ್ಕಪರಿಶೋಧನೆ 2016-21, ಆಯೋಗದ ವಿಚಾರಣೆ 2019-23, ರಾಜ್ಯ ಹಣಕಾಸು ಲೆಕ್ಕಪರಿಶೋಧನೆ 2024-25.</li>
+    <li>ಕೊರತೆಗಳು: ಇಂದು ಖಜಾನೆ ವ್ಯವಸ್ಥೆಯೊಳಗೆ ಸಾಲಪತ್ರ (ಲೆಟರ್ ಆಫ್ ಕ್ರೆಡಿಟ್) ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ, ಮತ್ತು ಯಾವ ಯೋಜನೆಗಳು ಹೊಸ "ಸರಿಯಾದ ಸಮಯಕ್ಕೆ" ಪಾವತಿಯನ್ನು ಬಳಸುತ್ತವೆ ಎಂಬುದನ್ನು ಮೂಲ ದಾಖಲೆಗಳಿಂದ ದೃಢಪಡಿಸಿಲ್ಲ.</li>
+    <li>ಈ ಕನ್ನಡ ಅನುವಾದವನ್ನು ಇನ್ನೂ ಕನ್ನಡ ಭಾಷಾ ತಜ್ಞರು ಪರಿಶೀಲಿಸಬೇಕಿದೆ. ಸಂದೇಹವಿದ್ದರೆ <a href="follow_the_money.html">ಇಂಗ್ಲಿಷ್ ಆವೃತ್ತಿ</a> ನೋಡಿ.</li>
+  </ul>
+</section>
+
+<footer>
+  <h2 style="font-size:1.1rem;margin-bottom:8px">ಮೂಲಗಳು</h2>
+  <ol>
+    <li>ಸಿಎಜಿ, ರಾಜ್ಯ ಹಣಕಾಸು ಲೆಕ್ಕಪರಿಶೋಧನಾ ವರದಿ, ಕರ್ನಾಟಕ ಸರ್ಕಾರ, ಮಾರ್ಚ್ 2025ಕ್ಕೆ ಕೊನೆಗೊಂಡ ವರ್ಷ (ವರದಿ 2/2026): <a href="https://cag.gov.in/webroot/uploads/download_audit_report/2026/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2024-25---English-(1)-069c4e127015905.57315868.pdf" rel="noopener">PDF</a></li>
+    <li>ಸಿಎಜಿ, ರಾಜ್ಯ ಹಣಕಾಸು ಲೆಕ್ಕಪರಿಶೋಧನಾ ವರದಿ, ಮಾರ್ಚ್ 2024 (ವರದಿ 4/2025): <a href="https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf" rel="noopener">PDF</a></li>
+    <li>ಸಿಎಜಿ, ಕರ್ನಾಟಕ ಗ್ರಾಮೀಣ ಮೂಲಸೌಕರ್ಯ ಅಭಿವೃದ್ಧಿ ನಿಯಮಿತದ ಕಾರ್ಯನಿರ್ವಹಣಾ ಲೆಕ್ಕಪರಿಶೋಧನೆ, 2016-21 (ವರದಿ 9/2022): <a href="https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2022/CAG-Report-on-Performance-Audit-on-Karnataka-Rural-Infrastructure-Development-Limited-063f87d42028da6.60340196.pdf" rel="noopener">PDF</a></li>
+    <li>ಸಿಎಜಿ, ಅನುಸರಣಾ ಲೆಕ್ಕಪರಿಶೋಧನೆ (ಸಿವಿಲ್), ಕರ್ನಾಟಕ, ವರದಿ 7/2024: <a href="https://cag.gov.in/webroot/uploads/download_audit_report/2024/Report-No.-7,-2024,-Karnataka-06a2bcfd9b20f02.46981841.pdf" rel="noopener">PDF</a></li>
+    <li>ಭಾರತ ಸರ್ಕಾರದ ವೆಚ್ಚ ಇಲಾಖೆ, ಎಸ್‌ಎನ್‌ಎ-ಸ್ಪರ್ಶ್ ಆದೇಶ, 13 ಜುಲೈ 2023: <a href="https://doe.gov.in/files/public-finance-state-cna-sna-document/Letter_Dated_13_07_202_To_ALL_Chief_Secretaries_Principal_Secretaries.pdf" rel="noopener">PDF</a></li>
+    <li>ಕರ್ನಾಟಕ ಸಾರ್ವಜನಿಕ ಖರೀದಿಗಳಲ್ಲಿ ಪಾರದರ್ಶಕತೆ ಅಧಿನಿಯಮ, 1999: <a href="https://prsindia.org/files/bills_acts/acts_states/karnataka/2000/Act29of2000Karnataka.pdf" rel="noopener">PRS ಪ್ರತಿ</a></li>
+    <li>ಪಿಂಚಣಿಗಳು: <a href="https://www.udayavani.com/english-news/karnataka-identifies-3-58-lakh-bogus-pension-beneficiaries-saves-rs-430-crore" rel="noopener">ಉದಯವಾಣಿ, ಮೇ 2022</a>; <a href="https://www.theweek.in/wire-updates/national/2025/07/23/mds7-ka-minister-pension-fraud.html" rel="noopener">The Week (PTI), ಜುಲೈ 2025</a></li>
+    <li>ಭೋವಿ ನಿಗಮ: <a href="https://deccanchronicle.com/southern-states/karnataka/ex-karnataka-bhovi-board-gm-held-in-rs-97-crore-money-laundering-case-1871280" rel="noopener">ಡೆಕ್ಕನ್ ಕ್ರಾನಿಕಲ್</a>. ಕೆಐಎಡಿಬಿ ಎರಡು ಬಾರಿ ಪರಿಹಾರ: <a href="https://www.lokmattimes.com/national/ktaka-double-compensation-scam-ed-files-supplementary-prosecution-complaint-against-17" rel="noopener">ಲೋಕಮತ್ ಟೈಮ್ಸ್</a></li>
+  </ol>
+</footer>
+</div>
+
+</body>
+</html>

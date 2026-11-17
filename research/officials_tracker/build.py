@@ -1,4 +1,5 @@
-"""Build DRAFT_officials_tracker.html from tracker.csv.
+"""Build DRAFT_officials_tracker.html and its Kannada twin
+DRAFT_officials_tracker_kn.html from tracker.csv.
 
 Run from the repo root:  py research/officials_tracker/build.py
 The page is a DRAFT for the owner's review. It carries designations only, no names.
@@ -97,6 +98,10 @@ def lakh(v):
     return f"Rs {v / 100:.2f} crore" if v >= 100 else f"Rs {v:.0f} lakh"
 
 
+def lakh_kn(v):
+    return f"₹{v / 100:.2f} ಕೋಟಿ" if v >= 100 else f"₹{v:.0f} ಲಕ್ಷ"
+
+
 money_rows = [
     ("Farmland", len(present("farmland_acres")), f"at least {colsum('farmland_acres'):.0f} acres where the area was given"),
     ("Houses or flats", len(present("houses")), f"at least {colsum('houses'):.0f} where counted"),
@@ -107,94 +112,149 @@ money_rows = [
     ("A business or commercial property", len(present("business")), "; ".join(sorted({a['business'] for a in present('business')}))),
     ("Assets reported in relatives' or associates' hands", len(present("others_names")), "as stated in the report; never attributed to a named person here"),
 ]
-money_html = "".join(f"<tr><td>{e(k)}</td><td class=\"n\">{c} of {na}</td><td>{e(d)}</td></tr>" for k, c, d in money_rows)
+# Kannada version of the same rows. The business list is CSV data and stays in English.
+money_rows_kn = [
+    ("ಕೃಷಿ ಭೂಮಿ", money_rows[0][1], f"ವಿಸ್ತೀರ್ಣ ನೀಡಿರುವಲ್ಲಿ ಕನಿಷ್ಠ {colsum('farmland_acres'):.0f} ಎಕರೆ"),
+    ("ಮನೆಗಳು ಅಥವಾ ಫ್ಲ್ಯಾಟ್‌ಗಳು", money_rows[1][1], f"ಎಣಿಕೆ ನೀಡಿರುವಲ್ಲಿ ಕನಿಷ್ಠ {colsum('houses'):.0f}"),
+    ("ನಿವೇಶನಗಳು ಮತ್ತು ಪ್ಲಾಟ್‌ಗಳು", money_rows[2][1], f"ಎಣಿಕೆ ನೀಡಿರುವಲ್ಲಿ ಕನಿಷ್ಠ {colsum('sites'):.0f}"),
+    ("ಚಿನ್ನ, ಬೆಳ್ಳಿ ಅಥವಾ ಆಭರಣ", money_rows[3][1], f"ಮೌಲ್ಯ ನೀಡಿರುವಲ್ಲಿ ಕನಿಷ್ಠ {lakh_kn(colsum('gold_silver_lakh'))}"),
+    ("ಶೋಧದಲ್ಲಿ ಸಿಕ್ಕ ನಗದು", money_rows[4][1], f"ಮೌಲ್ಯ ನೀಡಿರುವಲ್ಲಿ ಕನಿಷ್ಠ {lakh_kn(colsum('cash_lakh'))}"),
+    ("ಬ್ಯಾಂಕ್ ಠೇವಣಿಗಳು ಮತ್ತು ಹೂಡಿಕೆಗಳು", money_rows[5][1], f"ಮೌಲ್ಯ ನೀಡಿರುವಲ್ಲಿ ಕನಿಷ್ಠ {lakh_kn(colsum('deposits_lakh'))}"),
+    ("ವ್ಯಾಪಾರ ಅಥವಾ ವಾಣಿಜ್ಯ ಆಸ್ತಿ", money_rows[6][1], money_rows[6][2]),
+    ("ಸಂಬಂಧಿಕರು ಅಥವಾ ಸಹವರ್ತಿಗಳ ಕೈಯಲ್ಲಿ ಇರುವುದಾಗಿ ವರದಿಯಾದ ಆಸ್ತಿ", money_rows[7][1], "ವರದಿಯಲ್ಲಿ ಹೇಳಿದಂತೆ; ಇಲ್ಲಿ ಯಾವುದೇ ಹೆಸರಿಸಿದ ವ್ಯಕ್ತಿಗೆ ಆರೋಪಿಸಿಲ್ಲ"),
+]
 
-ladder_html = "".join(
-    f'<li class="{"zero" if c == 0 else ""}"><b>{c}</b><span>{e(name)}</span></li>'
-    for name, c in zip(LADDER, reached))
+# Kannada labels for the fixed vocabularies the page computes or the CSV draws from a short list.
+# Anything not in these maps falls back to the English text.
+MONTHS_KN = ["ಜನವರಿ", "ಫೆಬ್ರವರಿ", "ಮಾರ್ಚ್", "ಏಪ್ರಿಲ್", "ಮೇ", "ಜೂನ್",
+             "ಜುಲೈ", "ಆಗಸ್ಟ್", "ಸೆಪ್ಟೆಂಬರ್", "ಅಕ್ಟೋಬರ್", "ನವೆಂಬರ್", "ಡಿಸೆಂಬರ್"]
+LADDER_KN = ["ಕ್ರಮ ಕೈಗೊಳ್ಳಲಾಗಿದೆ", "ಅಮಾನತು ಅಥವಾ ಅದರಾಚೆ", "ದೋಷಾರೋಪಣ ಪಟ್ಟಿ ಸಲ್ಲಿಕೆ",
+             "ಅಭಿಯೋಜನಾ ಮಂಜೂರಾತಿ", "ವಿಚಾರಣೆ ನಡೆಯುತ್ತಿದೆ", "ತೀರ್ಪು"]
+GROUP_KN = {"Engineers": "ಎಂಜಿನಿಯರ್‌ಗಳು", "Excise": "ಅಬಕಾರಿ", "Forest": "ಅರಣ್ಯ", "Police": "ಪೊಲೀಸ್",
+            "Revenue and registration": "ಕಂದಾಯ ಮತ್ತು ನೋಂದಣಿ",
+            "Local bodies and planning": "ಸ್ಥಳೀಯ ಸಂಸ್ಥೆಗಳು ಮತ್ತು ನಗರ ಯೋಜನೆ",
+            "Other departments": "ಇತರ ಇಲಾಖೆಗಳು"}
+STAGE_KN = {"Raided": "ದಾಳಿ", "Searched": "ಶೋಧ", "Arrested": "ಬಂಧನ", "Suspended": "ಅಮಾನತು",
+            "Chargesheet filed": "ದೋಷಾರೋಪಣ ಪಟ್ಟಿ ಸಲ್ಲಿಕೆ", "Sanction to prosecute": "ಅಭಿಯೋಜನಾ ಮಂಜೂರಾತಿ",
+            "Trial under way": "ವಿಚಾರಣೆ ನಡೆಯುತ್ತಿದೆ", "Verdict": "ತೀರ್ಪು"}
+ACTION_KN = {"DA raid": "ಆದಾಯ ಮೀರಿದ ಆಸ್ತಿ ದಾಳಿ", "Trap (bribe)": "ಟ್ರ್ಯಾಪ್ (ಲಂಚ)",
+             "Departmental (posting audio)": "ಇಲಾಖಾ ಕ್ರಮ (ವರ್ಗಾವಣೆ ಕುರಿತ ಆಡಿಯೊ)",
+             "ED search (money laundering)": "ಇಡಿ ಶೋಧ (ಅಕ್ರಮ ಹಣ ವರ್ಗಾವಣೆ)",
+             "Arrest (CID)": "ಬಂಧನ (ಸಿಐಡಿ)", "Arrest (ED)": "ಬಂಧನ (ಇಡಿ)",
+             "Named in ED prosecution complaint": "ಇಡಿ ಅಭಿಯೋಜನಾ ದೂರಿನಲ್ಲಿ ಹೆಸರಿದೆ"}
+AGENCY_KN = {"Lokayukta": "ಲೋಕಾಯುಕ್ತ", "ED": "ಇಡಿ", "Police (internal)": "ಪೊಲೀಸ್ (ಆಂತರಿಕ)", "CID; ED": "ಸಿಐಡಿ; ಇಡಿ"}
 
-bars_html = "".join(
-    f'<div class="brow"><span>{e(g)}</span><div class="bar"><i style="width:{c / gmax * 100:.0f}%"></i></div><b>{c}</b></div>'
-    for g, c in groups)
 
-body = []
-for r in rows:
-    a, tag = claimed(r)
-    fu = e(r["followup"])
-    if r["followup_url"]:
-        fu = f'{fu} <a href="{e(r["followup_url"])}">source</a> · {d(r["followup_date"])}'
-    host = urlparse(r["source_url"]).netloc.replace("www.", "")
-    note = f'<div class="nt">{e(r["notes"])}</div>' if r["notes"] else ""
-    body.append(
-        f'<tr><td class="dt">{d(r["action_date"])}</td>'
-        f'<td><strong>{e(r["post"])}</strong><div class="sub">{e(r["department"])} · {e(r["district"])}</div>{note}<div class="fu"><b>Since then:</b> {fu}</div></td>'
-        f'<td>{e(r["action"])}<div class="sub">{e(r["agency"])}</div></td>'
-        f'<td class="n">{f"{a:.2f}{tag}" if a is not None else "not stated"}</td>'
-        f'<td><span class="st s{STAGE_RANK[r["stage"]]}">{e(r["stage"])}</span><div class="sub">{d(r["stage_date"])}</div></td>'
-        f'<td><a href="{e(r["source_url"])}">{e(host)}</a><div class="sub">{d(r["source_published"])}</div></td></tr>')
+def d_kn(iso):
+    y, m, dd = iso.split("-")
+    return f"{int(dd)} {MONTHS_KN[int(m) - 1]} {y}"
+
+
+def fragments(kn):
+    """The data-driven parts of the page, in English or Kannada. CSV text stays as it is."""
+    dt = d_kn if kn else d
+    money_html = "".join(
+        f"<tr><td>{e(k)}</td><td class=\"n\">{f'{na}ರಲ್ಲಿ {c}' if kn else f'{c} of {na}'}</td><td>{e(dd)}</td></tr>"
+        for k, c, dd in (money_rows_kn if kn else money_rows))
+    ladder_html = "".join(
+        f'<li class="{"zero" if c == 0 else ""}"><b>{c}</b><span>{e(name)}</span></li>'
+        for name, c in zip(LADDER_KN if kn else LADDER, reached))
+    bars_html = "".join(
+        f'<div class="brow"><span>{e(GROUP_KN[g] if kn else g)}</span><div class="bar"><i style="width:{c / gmax * 100:.0f}%"></i></div><b>{c}</b></div>'
+        for g, c in groups)
+    since, src_word, not_stated = ("ಅಂದಿನಿಂದ:", "ಮೂಲ", "ಹೇಳಿಲ್ಲ") if kn else ("Since then:", "source", "not stated")
+    tr = (lambda m, k: m.get(k, k)) if kn else (lambda m, k: k)
+    body = []
+    for r in rows:
+        a, tag = claimed(r)
+        fu = e(r["followup"])
+        if r["followup_url"]:
+            fu = f'{fu} <a href="{e(r["followup_url"])}">{src_word}</a> · {dt(r["followup_date"])}'
+        host = urlparse(r["source_url"]).netloc.replace("www.", "")
+        note = f'<div class="nt">{e(r["notes"])}</div>' if r["notes"] else ""
+        body.append(
+            f'<tr><td class="dt">{dt(r["action_date"])}</td>'
+            f'<td><strong>{e(r["post"])}</strong><div class="sub">{e(r["department"])} · {e(r["district"])}</div>{note}<div class="fu"><b>{since}</b> {fu}</div></td>'
+            f'<td>{e(tr(ACTION_KN, r["action"]))}<div class="sub">{e(tr(AGENCY_KN, r["agency"]))}</div></td>'
+            f'<td class="n">{f"{a:.2f}{tag}" if a is not None else not_stated}</td>'
+            f'<td><span class="st s{STAGE_RANK[r["stage"]]}">{e(tr(STAGE_KN, r["stage"]))}</span><div class="sub">{dt(r["stage_date"])}</div></td>'
+            f'<td><a href="{e(r["source_url"])}">{e(host)}</a><div class="sub">{dt(r["source_published"])}</div></td></tr>')
+    return money_html, ladder_html, bars_html, "".join(body)
+
 
 src_html = "".join(f'<li><a href="{e(u)}">{e(u)}</a></li>' for u in sources)
 
+FONTS_EN = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+FONTS_KN = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Kannada:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+STYLE = """<style>
+/* One reading column. The ladder is the page: how far each case has got since the raid. */
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8;
+  --red: #c21f30; --yellow: #f2b705; --track: #e3e6ec; --ok: #1a8f4c; --warn: #b45309;
+  --display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --body: Inter, "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --track: #2b313d; --ok: #4fcf86; --warn: #f0a04b; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --track: #2b313d; --ok: #4fcf86; --warn: #f0a04b; color-scheme: dark }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 var(--body); padding: 28px 16px 64px; }
+.wrap { max-width: 920px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+a { color: inherit; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+h1, h2 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1; letter-spacing: -0.02em; }
+h1 span { color: var(--red); }
+h2 { font-size: 1.5rem; }
+p { margin: 0; max-width: 66ch; }
+.eyebrow { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.draft { display: inline-block; background: var(--yellow); color: #161a22; font-weight: 600; font-size: .8rem; padding: 3px 10px; border-radius: 3px; letter-spacing: .04em; }
+header, section { display: flex; flex-direction: column; gap: 14px; }
+.lede { font-size: 1.1rem; }
+.muted { color: var(--muted); font-size: .9rem; }
+.ladder { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); border-block: 2px solid var(--fg); }
+.ladder li { padding: 16px 12px 16px 0; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.ladder b { font: 700 2.6rem/1 var(--display); font-variant-numeric: tabular-nums; }
+.ladder li.zero b { color: var(--red); }
+.ladder span { font-size: .88rem; }
+.brow { display: grid; grid-template-columns: minmax(0, 190px) minmax(0, 1fr) 2.5ch; gap: 12px; align-items: center; font-size: .92rem; }
+.brow b { font-variant-numeric: tabular-nums; text-align: right; }
+.bar { height: 12px; background: var(--track); border-radius: 2px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--red); }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; min-width: 760px; }
+th, td { text-align: left; padding: 10px 14px 10px 0; border-top: 1px solid var(--line); vertical-align: top; }
+th { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border-top: 2px solid var(--fg); }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.dt { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.fu { font-size: .82rem; margin-top: 6px; }
+.nt { overflow-wrap: anywhere; }
+.sub, .nt { color: var(--muted); font-size: .8rem; }
+.st { font-weight: 600; white-space: nowrap; }
+.st.s1 { color: var(--warn); }
+.st.s2, .st.s3, .st.s4, .st.s5 { color: var(--ok); }
+ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; max-width: 74ch; }
+.src { font-size: .82rem; word-break: break-all; }
+footer { border-top: 2px solid var(--fg); padding-top: 14px; }
+</style>"""
+# The Kannada page puts Noto Sans Kannada (then the Windows Kannada fonts) behind the Latin faces.
+STYLE_KN = (STYLE
+            .replace('--display: "Space Grotesk", "Segoe UI"', '--display: "Space Grotesk", "Noto Sans Kannada", "Nirmala UI", "Tunga", "Segoe UI"')
+            .replace('--body: Inter, "Segoe UI"', '--body: Inter, "Noto Sans Kannada", "Nirmala UI", "Tunga", "Segoe UI"'))
+assert STYLE_KN != STYLE
+
+# ---------------------------------------------------------------- English page
+money_html, ladder_html, bars_html, body_html = fragments(kn=False)
 page = f"""<!doctype html>
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>After the Raid</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
-<style>
-/* One reading column. The ladder is the page: how far each case has got since the raid. */
-:root {{
-  --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8;
-  --red: #c21f30; --yellow: #f2b705; --track: #e3e6ec; --ok: #1a8f4c; --warn: #b45309;
-  --display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
-  --body: Inter, "Segoe UI", system-ui, sans-serif;
-}}
-@media (prefers-color-scheme: dark) {{ :root:not([data-theme="light"]) {{
-  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
-  --red: #ef5261; --yellow: #f5c93a; --track: #2b313d; --ok: #4fcf86; --warn: #f0a04b; color-scheme: dark }} }}
-:root[data-theme="dark"] {{
-  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
-  --red: #ef5261; --yellow: #f5c93a; --track: #2b313d; --ok: #4fcf86; --warn: #f0a04b; color-scheme: dark }}
-* {{ box-sizing: border-box; }}
-body {{ margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 var(--body); padding: 28px 16px 64px; }}
-.wrap {{ max-width: 920px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }}
-a {{ color: inherit; text-underline-offset: 3px; }}
-a:focus-visible {{ outline: 2px solid var(--red); outline-offset: 2px; }}
-h1, h2 {{ font-family: var(--display); text-wrap: balance; margin: 0; }}
-h1 {{ font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1; letter-spacing: -0.02em; }}
-h1 span {{ color: var(--red); }}
-h2 {{ font-size: 1.5rem; }}
-p {{ margin: 0; max-width: 66ch; }}
-.eyebrow {{ font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }}
-.draft {{ display: inline-block; background: var(--yellow); color: #161a22; font-weight: 600; font-size: .8rem; padding: 3px 10px; border-radius: 3px; letter-spacing: .04em; }}
-header, section {{ display: flex; flex-direction: column; gap: 14px; }}
-.lede {{ font-size: 1.1rem; }}
-.muted {{ color: var(--muted); font-size: .9rem; }}
-.ladder {{ list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); border-block: 2px solid var(--fg); }}
-.ladder li {{ padding: 16px 12px 16px 0; display: flex; flex-direction: column; gap: 4px; min-width: 0; }}
-.ladder b {{ font: 700 2.6rem/1 var(--display); font-variant-numeric: tabular-nums; }}
-.ladder li.zero b {{ color: var(--red); }}
-.ladder span {{ font-size: .88rem; }}
-.brow {{ display: grid; grid-template-columns: minmax(0, 190px) minmax(0, 1fr) 2.5ch; gap: 12px; align-items: center; font-size: .92rem; }}
-.brow b {{ font-variant-numeric: tabular-nums; text-align: right; }}
-.bar {{ height: 12px; background: var(--track); border-radius: 2px; overflow: hidden; }}
-.bar i {{ display: block; height: 100%; background: var(--red); }}
-.tbl {{ overflow-x: auto; }}
-table {{ border-collapse: collapse; width: 100%; font-size: .9rem; min-width: 760px; }}
-th, td {{ text-align: left; padding: 10px 14px 10px 0; border-top: 1px solid var(--line); vertical-align: top; }}
-th {{ font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); border-top: 2px solid var(--fg); }}
-td.n, th.n {{ text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }}
-td.dt {{ white-space: nowrap; font-variant-numeric: tabular-nums; }}
-.fu {{ font-size: .82rem; margin-top: 6px; }}
-.nt {{ overflow-wrap: anywhere; }}
-.sub, .nt {{ color: var(--muted); font-size: .8rem; }}
-.st {{ font-weight: 600; white-space: nowrap; }}
-.st.s1 {{ color: var(--warn); }}
-.st.s2, .st.s3, .st.s4, .st.s5 {{ color: var(--ok); }}
-ul {{ margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; max-width: 74ch; }}
-.src {{ font-size: .82rem; word-break: break-all; }}
-footer {{ border-top: 2px solid var(--fg); padding-top: 14px; }}
-</style>
+<link rel="stylesheet" href="{FONTS_EN}">
+{STYLE}
 
 <div class="wrap">
 <header>
@@ -243,7 +303,7 @@ footer {{ border-top: 2px solid var(--fg); padding-top: 14px; }}
   <h2>Every official, by date</h2>
   <div class="tbl"><table>
     <thead><tr><th>Date</th><th>Post</th><th>Action</th><th class="n">Assets claimed (Rs crore)</th><th>Last step reported</th><th>Source</th></tr></thead>
-    <tbody>{''.join(body)}</tbody>
+    <tbody>{body_html}</tbody>
   </table></div>
 </section>
 
@@ -266,5 +326,91 @@ footer {{ border-top: 2px solid var(--fg); padding-top: 14px; }}
 """
 out = HERE / "DRAFT_officials_tracker.html"
 out.write_text(page, encoding="utf-8")
-print(f"{out.name}: {n} officials, {days} days, ladder {reached}, Rs {total:.2f} crore over {len(valued)} valued rows")
+
+# ---------------------------------------------------------------- Kannada page
+# Same figures and sources. Table data from the CSV (posts, departments, places, notes,
+# follow-up text) stays in English; the page says so. The badge text is fixed: the publisher swaps it.
+unchecked_note_kn = (f" ತಡವಾಗಿ ಸೇರಿಸಿದ {unchecked} ಅಧಿಕಾರಿಗಳನ್ನು ಇನ್ನೂ ಪರಿಶೀಲಿಸಿಲ್ಲ." if unchecked
+                     else " ಕೋಷ್ಟಕದಲ್ಲಿರುವ ಪ್ರತಿಯೊಬ್ಬ ಅಧಿಕಾರಿಯನ್ನೂ ಕನಿಷ್ಠ ಒಮ್ಮೆ ಪರಿಶೀಲಿಸಲಾಗಿದೆ.")
+money_html, ladder_html, bars_html, body_html = fragments(kn=True)
+page_kn = f"""<!doctype html>
+<html lang="kn">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ದಾಳಿಯ ನಂತರ</title>
+<link rel="stylesheet" href="{FONTS_KN}">
+{STYLE_KN}
+
+<div class="wrap">
+<header>
+  <div><span class="draft">ಕರಡು · ಪ್ರಕಟಿಸಿಲ್ಲ</span></div>
+  <div class="eyebrow">ಗಂಡಭೇರುಂಡ · ಕರ್ನಾಟಕದ ಅಧಿಕಾರಿಗಳು · {d_kn(checked)}ರವರೆಗಿನ ವರದಿಗಳನ್ನು ಓದಲಾಗಿದೆ</div>
+  <h1><span>ದಾಳಿಯ</span> ನಂತರ</h1>
+  <p class="lede">ಇದುವರೆಗೆ ಓದಿದ ವರದಿಗಳ ಪ್ರಕಾರ, {d_kn(first)} ಮತ್ತು {d_kn(last)} ನಡುವಿನ {days} ದಿನಗಳಲ್ಲಿ ಕರ್ನಾಟಕದ {n} ಅಧಿಕಾರಿಗಳ ಮೇಲೆ ದಾಳಿ, ಟ್ರ್ಯಾಪ್, ಶೋಧ, ಬಂಧನ, ಅಮಾನತು ಅಥವಾ ಆರೋಪ ದಾಖಲಾಗಿದೆ. ಆ ಮೊದಲ ದಿನದಿಂದ ತೀರ್ಪಿನತ್ತ ಪ್ರತಿಯೊಂದು ಪ್ರಕರಣವನ್ನೂ ಈ ಪುಟ ಹಿಂಬಾಲಿಸುತ್ತದೆ.</p>
+  <p class="muted">ದಾಳಿ ಅಥವಾ ಬಂಧನ ಒಂದು ಆರೋಪ ಮಾತ್ರ, ತಪ್ಪಿತಸ್ಥರೆಂಬ ತೀರ್ಮಾನವಲ್ಲ. ಆಸ್ತಿಯ ಅಂಕಿಗಳು ತನಿಖಾ ಸಂಸ್ಥೆಯ ಮೊದಲ ದಿನದ ಅಂದಾಜುಗಳು. ಈ ಪುಟ ವ್ಯಕ್ತಿಯ ಹೆಸರನ್ನಲ್ಲ, ಹುದ್ದೆಯನ್ನು ನೀಡುತ್ತದೆ: ಹೆಸರುಗಳು ಲಿಂಕ್ ಮಾಡಿದ ವರದಿಗಳಲ್ಲಿವೆ; ಎಫ್‌ಐಆರ್ ಮತ್ತು ಆ ವ್ಯಕ್ತಿಯ ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಪರಿಶೀಲಿಸಿದ ನಂತರವೇ ಅವನ್ನು ಇಲ್ಲಿ ಸೇರಿಸಲಾಗುತ್ತದೆ.</p>
+  <p class="muted">ಪ್ರಕರಣಗಳ ವಿವರಗಳು (ಹುದ್ದೆ, ಇಲಾಖೆ, ಸ್ಥಳ, ಟಿಪ್ಪಣಿಗಳು ಮತ್ತು ನಂತರದ ಬೆಳವಣಿಗೆಗಳು) ಕೋಷ್ಟಕದಲ್ಲಿ ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿವೆ.</p>
+</header>
+
+<section>
+  <h2>ಸರ್ಕಾರದ ಸ್ವಂತ ಲೆಕ್ಕ</h2>
+  <ol class="ladder">
+    <li><b>1,248</b><span>ಅಧಿಕಾರಿಗಳ ವಿರುದ್ಧ ಲೋಕಾಯುಕ್ತ ಪ್ರಕರಣಗಳು, 10 ಸೆಪ್ಟೆಂಬರ್ 2022ರಿಂದ 13 ಆಗಸ್ಟ್ 2026ರವರೆಗೆ</span></li>
+    <li><b>364</b><span>ದೋಷಾರೋಪಣ ಪಟ್ಟಿ ಸಲ್ಲಿಕೆ</span></li>
+    <li><b>648</b><span>ಇನ್ನೂ ತನಿಖೆಯಲ್ಲಿವೆ</span></li>
+    <li><b>218</b><span>ನ್ಯಾಯಾಲಯಗಳ ತಡೆಯಾಜ್ಞೆ</span></li>
+    <li class="zero"><b>0</b><span>ಇದುವರೆಗೆ ತಪ್ಪಿತಸ್ಥರೆಂದು ತೀರ್ಮಾನವಾದ ಸರ್ಕಾರಿ ನೌಕರರು</span></li>
+  </ol>
+  <p class="muted">ವಿಧಾನ ಪರಿಷತ್ತಿನ ಚುಕ್ಕೆ ಗುರುತಿಲ್ಲದ ಪ್ರಶ್ನೆ 452 (628)ಕ್ಕೆ ಮುಖ್ಯಮಂತ್ರಿಗಳು 20 ಆಗಸ್ಟ್ 2026ರಂದು ನೀಡಿದ ಲಿಖಿತ ಉತ್ತರದಿಂದ (ಮೂಲ ದಾಖಲೆಯನ್ನೇ ಓದಲಾಗಿದೆ): 939 ಲಂಚದ ಟ್ರ್ಯಾಪ್ ಪ್ರಕರಣಗಳು ಮತ್ತು 309 ಆದಾಯ ಮೀರಿದ ಆಸ್ತಿ ಪ್ರಕರಣಗಳು, ಒಟ್ಟು 1,451 ಅಧಿಕಾರಿಗಳು ಮತ್ತು ನೌಕರರು; ಇನ್ನೂ 18 ಪ್ರಕರಣಗಳನ್ನು ಮುಕ್ತಾಯಗೊಳಿಸಲಾಗಿದೆ. <a href="https://kla.kar.nic.in/council/Replies/unstarred/20082026/usq628(20082026).pdf">ಉತ್ತರ (PDF, ಕನ್ನಡ)</a>. ಈ ಉತ್ತರದ ಬಗ್ಗೆ ಪತ್ರಿಕಾ ವರದಿಗಳು 939 ಟ್ರ್ಯಾಪ್ ಪ್ರಕರಣಗಳನ್ನು ಆಸ್ತಿ ಪ್ರಕರಣಗಳೆಂದು ತಪ್ಪಾಗಿ ಹೆಸರಿಸಿದ್ದವು.</p>
+</section>
+
+<section>
+  <h2>2026ರ ಪ್ರಕರಣಗಳು ಎಲ್ಲಿಯವರೆಗೆ ತಲುಪಿವೆ</h2>
+  <ol class="ladder">{ladder_html}</ol>
+  <p class="muted">ಓದಿದ ವರದಿಗಳು ತೋರಿಸುವ ಮಟ್ಟಿಗೆ, ಆ ಹಂತವನ್ನು ಅಥವಾ ಅದರ ನಂತರದ ಹಂತವನ್ನು ತಲುಪಿದ ಪ್ರಕರಣಗಳ ಅಧಿಕಾರಿಗಳನ್ನು ಪ್ರತಿ ಸಂಖ್ಯೆ ಎಣಿಸುತ್ತದೆ. ಸೊನ್ನೆ ಎಂದರೆ ಆ ಹಂತದ ಯಾವುದೇ ವರದಿ ಸಿಕ್ಕಿಲ್ಲ ಎಂದರ್ಥ. ಆ ಹಂತ ನಡೆದೇ ಇಲ್ಲ ಎಂದಲ್ಲ: {d_kn(checked)}ರ ಅನುಸರಣಾ ಪರಿಶೀಲನೆ ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಕನ್ನಡದಲ್ಲಿ ಹೆಸರಿನ ಮೂಲಕ ಮಾಡಿದ ವೆಬ್ ಹುಡುಕಾಟವಾಗಿತ್ತು. ಅದು ಪ್ರಜಾವಾಣಿ, ಡೆಕ್ಕನ್ ಹೆರಾಲ್ಡ್ ಅಥವಾ ಲೋಕಾಯುಕ್ತದ ಸ್ವಂತ ಜಾಲತಾಣವನ್ನು ತಲುಪಲಾಗಲಿಲ್ಲ, ಮತ್ತು ನ್ಯಾಯಾಲಯದ ಪ್ರಕರಣ-ಸ್ಥಿತಿ ಜಾಲತಾಣಗಳನ್ನು ಒಳಗೊಂಡಿರಲಿಲ್ಲ.{unchecked_note_kn} {len(moved)} ಸಾಲುಗಳಲ್ಲಿ ಬೇರೆ ಬಗೆಯ ನಂತರದ ಬೆಳವಣಿಗೆ ಇದೆ (ನ್ಯಾಯಾಲಯದ ಆದೇಶ, ಮತ್ತಷ್ಟು ಶೋಧ, ಹೊಸ ಹುದ್ದೆಗೆ ನಿಯೋಜನೆ, ಪ್ರತ್ಯೇಕ ಪ್ರಕರಣ); ಪ್ರತಿಯೊಂದನ್ನೂ ಅದರ ಮೂಲದೊಂದಿಗೆ ಕೋಷ್ಟಕದಲ್ಲಿ ತೋರಿಸಲಾಗಿದೆ.</p>
+</section>
+
+<section>
+  <h2>ಹಣ ಎಲ್ಲಿ ಸಿಕ್ಕಿತು</h2>
+  <p class="muted">{n} ಅಧಿಕಾರಿಗಳಲ್ಲಿ {na} ಮಂದಿಯ ವಿಷಯದಲ್ಲಿ, ತನಿಖಾ ಸಂಸ್ಥೆ ಯಾವ ಬಗೆಯ ಆಸ್ತಿಗಳನ್ನು ಪತ್ತೆಹಚ್ಚಿತು ಎಂಬ ಪಟ್ಟಿ ವರದಿಯೊಂದರಲ್ಲಿತ್ತು. ಆ ಪಟ್ಟಿಗಳಲ್ಲಿ ಇರುವುದು ಇದು. ಸಂಪತ್ತನ್ನು ಎಲ್ಲಿ ಇಡಲಾಗಿದೆ ಎಂಬುದನ್ನು ಇದು ತೋರಿಸುತ್ತದೆ, ಅದರಲ್ಲಿ ಯಾವುದೂ ಅಕ್ರಮ ಎಂದಲ್ಲ: ಪ್ರತಿ ಅಂಕಿಯೂ ಮೊದಲ ದಿನದ ಹೇಳಿಕೆ, ಪ್ರಕರಣದಲ್ಲಿ ಅದನ್ನು ಇನ್ನೂ ಸಾಬೀತುಪಡಿಸಬೇಕಿದೆ.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>ಆಸ್ತಿಯ ಬಗೆ</th><th class="n">ಅಧಿಕಾರಿಗಳು</th><th>ವರದಿಯಾದ ಪ್ರಮಾಣ</th></tr></thead>
+    <tbody>{money_html}</tbody>
+  </table></div>
+  <p class="muted">ಎಣಿಕೆಗಳು ಕನಿಷ್ಠ ಮಟ್ಟದವು: ಅನೇಕ ವರದಿಗಳು ಸಂಖ್ಯೆ ಅಥವಾ ಮೌಲ್ಯವಿಲ್ಲದೆ ಆಸ್ತಿಯನ್ನು ಉಲ್ಲೇಖಿಸುತ್ತವೆ. ಪ್ರತಿ ಅಧಿಕಾರಿಯ ವಿವರ ಮತ್ತು ಮೂಲಗಳು ಈ ಪುಟದ ಜೊತೆಗಿರುವ assets.csv ಕಡತದಲ್ಲಿವೆ (ಇಂಗ್ಲಿಷ್‌ನಲ್ಲಿ).</p>
+</section>
+
+<section>
+  <h2>ಯಾವ ಹುದ್ದೆಗಳು ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ</h2>
+  {bars_html}
+  <p class="muted">ಅಂಕಿ ವರದಿಯಾದ {len(valued)} ಅಧಿಕಾರಿಗಳ ಮೊದಲ ಅಂದಾಜುಗಳ ಒಟ್ಟು ₹{total:.2f} ಕೋಟಿ (ನೀಡಿರುವಲ್ಲಿ ಒಟ್ಟು ಆಸ್ತಿ, ಇಲ್ಲದಿದ್ದರೆ ಆದಾಯ ಮೀರಿದ ಆಸ್ತಿಯ ಅಂಕಿ, ಅದನ್ನು DA ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ); ಉಳಿದ {n - len(valued)} ಮಂದಿಯ ವರದಿಯಲ್ಲಿ ಯಾವುದೇ ಅಂಕಿ ಇರಲಿಲ್ಲ.</p>
+</section>
+
+<section>
+  <h2>ಪ್ರತಿಯೊಬ್ಬ ಅಧಿಕಾರಿ, ದಿನಾಂಕವಾರು</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>ದಿನಾಂಕ</th><th>ಹುದ್ದೆ</th><th>ಕ್ರಮ</th><th class="n">ಹೇಳಲಾದ ಆಸ್ತಿ (₹ ಕೋಟಿ)</th><th>ವರದಿಯಾದ ಕೊನೆಯ ಹಂತ</th><th>ಮೂಲ</th></tr></thead>
+    <tbody>{body_html}</tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>ಇಲ್ಲಿ ಏನು ಇಲ್ಲ</h2>
+  <ul>
+    <li>ಇದು 2026ರ ಎಲ್ಲ ಪ್ರಕರಣಗಳಲ್ಲ. ಮೇ ಅಥವಾ ನವೆಂಬರ್ 2026ರಲ್ಲಿ ಯಾವುದೇ ಆಸ್ತಿ ದಾಳಿ ಕಂಡುಬಂದಿಲ್ಲ. 5 ಫೆಬ್ರವರಿ 2026ರಂದು ವರದಿಯಾದ ಮೈಸೂರಿನ ದಾಳಿ ಕೇವಲ ಒಂದು ಸುಳಿವು. ಲಂಚದ ಟ್ರ್ಯಾಪ್ ಪ್ರಕರಣಗಳನ್ನು ವ್ಯವಸ್ಥಿತವಾಗಿ ದಾಖಲಿಸುತ್ತಿಲ್ಲ: 2026ರಲ್ಲಿ ಅವು ಇಲ್ಲಿ ತೋರಿಸಿರುವ ಕೆಲವಕ್ಕಿಂತ ಎಷ್ಟೋ ಹೆಚ್ಚು ಇದ್ದವು.</li>
+    <li>ಅನುಸರಣಾ ಪರಿಶೀಲನೆ ಪತ್ರಿಕಾ ವರದಿಗಳ ಹುಡುಕಾಟವಾಗಿತ್ತು. ದೋಷಾರೋಪಣ ಪಟ್ಟಿಗಳು, ಮಂಜೂರಾತಿ ಕೋರಿಕೆಗಳು, ನ್ಯಾಯಾಲಯದ ತಡೆಯಾಜ್ಞೆಗಳು ಮತ್ತು ತೀರ್ಪುಗಳು ವಿರಳವಾಗಿ ವರದಿಯಾಗುತ್ತವೆ; ಅವು ಲೋಕಾಯುಕ್ತದ ಉತ್ತರಗಳು, ಮಾಹಿತಿ ಹಕ್ಕು ಉತ್ತರಗಳು ಮತ್ತು ನ್ಯಾಯಾಲಯದ ದಾಖಲೆಗಳಿಂದಲೇ ಬರಬೇಕು. ಅಬಕಾರಿ ಪ್ರಕರಣದಲ್ಲಿ 22 ಜುಲೈ 2026ರಂದು ನಡೆದ ಉಚ್ಚ ನ್ಯಾಯಾಲಯದ ವಿಚಾರಣೆಯ ಫಲಿತಾಂಶ ಸಿಗಲಿಲ್ಲ.</li>
+    <li>UNVERIFIED (ದೃಢಪಡಿಸಿಲ್ಲ) ಎಂದು ಗುರುತಿಸಿದ ಅನುಸರಣಾ ನಮೂದುಗಳು ಒಂದೇ ಮಾಧ್ಯಮವನ್ನು ಆಧರಿಸಿವೆ. ಪ್ರತ್ಯೇಕ ಪ್ರಕರಣದಲ್ಲಿನ ಬಂಧನವನ್ನು ಹೆಸರು ಮತ್ತು ಹಿಂದಿನ ಹುದ್ದೆಯ ಆಧಾರದ ಮೇಲೆ ಹೊಂದಿಸಲಾಗಿದೆ.</li>
+    <li>ಹಲವು ಆಸ್ತಿ ಅಂಕಿಗಳು ಒಂದು ಸಣ್ಣ ಮಾಧ್ಯಮದಿಂದ ಬಂದಿವೆ, ಮತ್ತು ಒಂದೇ ದಾಳಿಯ ವರದಿಗಳು ಹುದ್ದೆ, ಇಲಾಖೆ ಅಥವಾ ಮೊತ್ತದ ಬಗ್ಗೆ ಆಗಾಗ ಭಿನ್ನವಾಗಿರುತ್ತವೆ; ಎಲ್ಲಿ ಎಂಬುದನ್ನು ಟಿಪ್ಪಣಿಗಳು ಹೇಳುತ್ತವೆ.</li>
+  </ul>
+</section>
+
+<footer>
+  <p class="muted">ಮೂಲಗಳು</p>
+  <ul class="src">{src_html}</ul>
+</footer>
+</div>
+</html>
+"""
+out_kn = HERE / "DRAFT_officials_tracker_kn.html"
+out_kn.write_text(page_kn, encoding="utf-8")
+print(f"{out.name} and {out_kn.name}: {n} officials, {days} days, ladder {reached}, Rs {total:.2f} crore over {len(valued)} valued rows")
 print(groups)

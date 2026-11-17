@@ -47,10 +47,14 @@ PAGES = [
      ["truecolor_2019_2026.png", "change_map_2019_2026.png"], None),
     ("research/follow_the_money/DRAFT_follow_the_money.html", "follow_the_money.html", "Follow the Rupee · Gandaberunda",
      "How Karnataka's public money travels from the budget to the recipient, where the state's auditor found it parked or unaccounted for, and the record that traces it back.",
-     None, [], None),
+     ("follow_the_money_kn.html", "ಕನ್ನಡ"), [], None),
+    ("research/follow_the_money/DRAFT_follow_the_money_kn.html", "follow_the_money_kn.html", "ರೂಪಾಯಿಯನ್ನು ಹಿಂಬಾಲಿಸಿ · Gandaberunda",
+     "Follow the rupee in Kannada (test version).", ("follow_the_money.html", "English"), [], None),
     ("research/officials_tracker/DRAFT_officials_tracker.html", "officials_tracker.html", "After the Raid · Gandaberunda",
      "Karnataka officials raided, trapped or charged in 2026, followed from the first day towards a verdict. Posts, not names.",
-     None, [], None),
+     ("officials_tracker_kn.html", "ಕನ್ನಡ"), [], None),
+    ("research/officials_tracker/DRAFT_officials_tracker_kn.html", "officials_tracker_kn.html", "ದಾಳಿಯ ನಂತರ · Gandaberunda",
+     "After the raid in Kannada (test version).", ("officials_tracker.html", "English"), [], None),
 ]
 
 
