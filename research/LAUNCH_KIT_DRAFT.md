@@ -35,7 +35,7 @@ Rules for every post: facts from the record only; "declared" not "has"; no accus
 4. What should we look at next? Anyone can tell us, in Kannada or English, with no account: a project paid for but never built, a scheme that isn't reaching people, your constituency from space. https://jarvisss007.github.io/know-your-mla/#join
 5. Gandaberunda is independent, citizen-run, and takes no money from any party. Found an error? Tell us and we correct it in public, with the date.
 
-(Attach `cards/join/you-decide-en.png` to post 4. The account is not X Premium, so posts must stay under 280 characters each. Post 1 is 279; check before posting.)
+(Attach `cards/join/you-decide-en.png` to post 4. The account is not X Premium, so posts must stay under 280 characters each. Counted as X counts them, with each link as 23 characters: 266, 246, 247, 215 and 144. Recount after any edit.)
 
 ## 3. Note to Kannada journalists and local reporters
 

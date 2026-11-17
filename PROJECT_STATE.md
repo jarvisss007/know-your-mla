@@ -57,3 +57,9 @@ https://jarvisss007.github.io/know-your-mla/. Push to `main` to publish; it is l
 - New public text is shown to the owner before it is posted anywhere outside this site.
 - Gandaberunda's mark is original artwork; never use the state emblem.
 - Keep this project out of any company repository or mailbox.
+
+## Open issue (16 Nov 2026, late): debts figures
+
+- `data/liabilities_myneta.csv` (from `py tools/fetch_liabilities.py`) holds myneta's two liability figures for 199 MLAs. Report cards now show myneta's headline beside our figure where they differ (36 MLAs). The "How to read this" page explains why.
+- TO CHECK: for 13 MLAs our `l` in index.html differs from the affidavit grand total myneta shows (e.g. Gokak 43.48 vs 37.09, Kalaghatgi 24.17 vs 22.42, Hanur 61.23 vs 61.16). Compare `data/liabilities_myneta.csv` against `D` and read the affidavit before changing `D`, because money depends on it.
+- 25 MLAs got no row from the fetch (no id, or the page didn't parse); find out why.
