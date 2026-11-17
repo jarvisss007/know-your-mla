@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Follow the Rupee · Gandaberunda</title>
+<meta name="description" content="How Karnataka's public money travels from the budget to the recipient, where the state's auditor found it parked or unaccounted for, and the record that traces it back.">
+<link rel="icon" type="image/svg+xml" href="../brand/mark.svg">
+<style>:root{padding-top:env(safe-area-inset-top,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: one reading column. The page is a pipe: each stage of the money's journey is a node on a vertical line; leaks hang off the node in red. */
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8;
+  --red: #c21f30; --red-soft: #fbe9eb; --yellow: #f2b705; --pipe: #1d4ed8; --ok: #1a8f4c;
+  --display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --body: Inter, "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --red-soft: #2a1a1e; --yellow: #f5c93a; --pipe: #7aa7ff; --ok: #4fcf86; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --red-soft: #2a1a1e; --yellow: #f5c93a; --pipe: #7aa7ff; --ok: #4fcf86; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font: 16px/1.55 var(--body);
+  padding-block: 28px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+a { color: inherit; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1; letter-spacing: -0.02em; }
+h1 span { color: var(--red); }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.15rem; }
+p { margin: 0; max-width: 66ch; }
+.eyebrow { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.draft { display: inline-block; background: var(--yellow); color: #161a22; font-weight: 600; font-size: .8rem; padding: 3px 10px; border-radius: 3px; letter-spacing: .04em; }
+header { display: flex; flex-direction: column; gap: 14px; }
+.lede { font-size: 1.1rem; }
+.muted { color: var(--muted); font-size: .9rem; }
+.tag { font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 2px 7px; border-radius: 3px; border: 1px solid currentColor; white-space: nowrap; }
+.t-proven { color: var(--red); } .t-charged { color: var(--pipe); } .t-alleged { color: var(--muted); } .t-audit { color: var(--ok); }
+
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); border-block: 2px solid var(--fg); }
+.stat { padding: 16px 14px 16px 0; display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid var(--line); }
+.stat b { font: 700 1.9rem/1 var(--display); font-variant-numeric: tabular-nums; }
+.stat span { font-size: .9rem; color: var(--muted); }
+
+/* the pipe */
+ol.pipe { list-style: none; margin: 0; padding: 0; position: relative; }
+ol.pipe::before { content: ""; position: absolute; left: 17px; top: 18px; bottom: 18px; width: 4px; background: var(--pipe); border-radius: 2px; opacity: .5; }
+ol.pipe > li { position: relative; padding: 0 0 34px 56px; }
+.node { position: absolute; left: 0; top: 0; width: 38px; height: 38px; border-radius: 50%; background: var(--pipe); color: #fff; display: grid; place-items: center; font: 700 1rem var(--display); }
+.stage { display: flex; flex-direction: column; gap: 10px; }
+.stage .who { font-size: .92rem; color: var(--muted); }
+.leak { background: var(--red-soft); border-left: 4px solid var(--red); border-radius: 0 8px 8px 0; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+.leak h4 { margin: 0; font: 700 .8rem/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--red); }
+.leak ul, .case ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+.leak li b { font-variant-numeric: tabular-nums; }
+.case { border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.case .head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-weight: 600; }
+.back { font-size: .92rem; }
+.back b { color: var(--pipe); }
+.src { font-size: .8rem; color: var(--muted); }
+.box { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+.box ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+footer ol { padding-left: 20px; font-size: .85rem; color: var(--muted); display: flex; flex-direction: column; gap: 6px; word-break: break-word; }
+</style>
+</head>
+<body>
+<div style="position:sticky;top:0;z-index:20;background:#11141a;color:#eceef2;font:600 14px/1.4 Inter,system-ui,sans-serif;padding:10px max(16px,env(safe-area-inset-left,0px));display:flex;gap:8px 16px;flex-wrap:wrap;align-items:center;border-bottom:3px solid #f2b705"><a href="../index.html#research" style="color:#f5c93a;text-decoration:none">← Gandaberunda · Research</a><span style="color:#9aa3b2;font-weight:400">Test version: still being checked</span></div>
+<div class="wrap">
+<header>
+  <span class="draft">TEST VERSION · UNDER REVIEW</span>
+  <div class="eyebrow">Gandaberunda · How Karnataka's money travels · audit figures to March 2025</div>
+  <h1>Follow the <span>rupee</span></h1>
+  <p class="lede">A rupee in Karnataka's budget passes through six or seven hands before it reaches a road, a worker or a widow's pension. At each hand-over a record is made, and a check is supposed to stop misuse. This page follows the rupee stage by stage, shows where the state's own auditor found it parked, unaccounted for or paid for work not done, and names the record that lets anyone trace it back.</p>
+  <p class="muted">Figures marked <span class="tag t-audit">Audited</span> are from the Comptroller and Auditor General (CAG), quoted from the report itself. Cases are marked <span class="tag t-proven">Finding</span> (court, audit or social-audit finding), <span class="tag t-charged">Charged</span> (chargesheet filed, no verdict) or <span class="tag t-alleged">Alleged</span>. Most audit findings are failures of control, not proof that anyone stole: the auditor's words are used as written.</p>
+</header>
+
+<section class="stats" aria-label="Headline audited figures">
+  <div class="stat"><b>₹29,770 cr</b><span>sitting in deposit accounts outside the voted budget, 31 March 2025; ₹6,026 cr of it moved there in March alone</span></div>
+  <div class="stat"><b>₹14,550 cr</b><span>interest earned on government money by 64 corporations and bodies, 2020-24, never paid back to the state</span></div>
+  <div class="stat"><b>18.9%</b><span>of the whole year's spending done in March 2025; 35.6% in the last three months</span></div>
+  <div class="stat"><b>~90%</b><span>of bodies receiving grants are outside the check that asks how the money was used</span></div>
+</section>
+
+<section>
+<h2 style="margin-bottom:20px">The journey</h2>
+<ol class="pipe">
+
+<li><div class="node">1</div><div class="stage">
+  <h3>The legislature votes it; the Finance Department releases it</h3>
+  <p class="who">Money sits in the state's Consolidated Fund. The Finance Department releases it to departments through Khajane-II, the state treasury system. Record: budget and Appropriation Accounts (public); release orders (inside the treasury).</p>
+  <div class="leak"><h4>Where control slips <span class="tag t-audit">Audited</span></h4><ul>
+    <li><b>₹4,389 crore</b> spent in 2024-25 above what the legislature approved, under three grants including Gruha Lakshmi and free farm power; <b>₹5,175 crore</b> from earlier years still not regularised.</li>
+    <li><b>₹10,035 crore</b> spent through executive orders before the legislature approved it.</li>
+    <li>Of ₹16,547 crore given back unspent, <b>₹10,448 crore (63%)</b> was surrendered on the last day of the year, 31 March 2025.</li>
+  </ul><p class="src">CAG State Finances Audit Report 2024-25, paras 2.5.2, 2.5.5</p></div>
+  <p class="back"><b>Trace it back:</b> the Appropriation Accounts, grant by grant, are published every year by the CAG.</p>
+</div></li>
+
+<li><div class="node">2</div><div class="stage">
+  <h3>Year-end parking: deposit accounts and corporation bank accounts</h3>
+  <p class="who">Money moved out of the budget into a Personal Deposit account, or into a corporation's bank account, is booked as "spent". It is not spent: it is waiting, outside the legislature's yearly control. Record: transfer entries in the treasury; the corporation's own bank statements (not public).</p>
+  <div class="leak"><h4>Where it was parked <span class="tag t-audit">Audited</span></h4><ul>
+    <li><b>₹12,927 crore</b> moved into deposit accounts in 2024-25, including <b>₹6,026 crore in March 2025</b>. Balance ₹29,770 crore in 97 accounts (₹22,115 crore of it is the court-ordered mining-restoration fund); 25 accounts unused for over three years.</li>
+    <li>On 30 March 2025 Social Welfare moved <b>₹145 crore</b> meant for vacant posts into two bodies' deposit accounts. The auditor: "mere parking of funds to avoid lapse of grants."</li>
+    <li>Four corporations held <b>₹412 crore</b> of grants "in the bank accounts of the Corporations outside the Government Account" while the books showed it spent. Backward Classes corporations kept 32 bank accounts holding <b>₹410 crore</b> open despite a 2023 order to close them.</li>
+    <li><b>₹14,550 crore</b> of interest earned on government money by 64 bodies in 2020-24 was never paid back.</li>
+  </ul><p class="src">CAG SFAR 2024-25, paras 3.5, 2.7.1.2, 2.7.1.5; SFAR 2023-24, para 4.2</p></div>
+  <div class="case"><div class="head"><span class="tag t-charged">Charged</span> Valmiki ST Development Corporation, 2024</div>
+    <p>This is the stage where the money left. According to the Enforcement Directorate, the corporation's account was moved to a new bank branch in February 2024; ₹187 crore was pooled there between March and May; about ₹90 crore went on to 18 accounts in Hyderabad and through an overdraft taken against the corporation's own fixed deposit. It came out when an accounts official died in May 2024 and left a note. Investigators rebuilt the trail from account-opening papers and bank transfer records. Chargesheets have been filed; there is no verdict.</p>
+    <p class="src"><a href="https://thesouthfirst.com/news/money-trail-in-valmiki-scam-how-nearly-rs-90-crore-was-siphoned-off/" rel="noopener">South First, Oct 2024</a> · <a href="https://thesouthfirst.com/karnataka/valmiki-corporation-case-cbi-files-chargesheets-against-ex-minister-nagendra/" rel="noopener">South First, Jun 2026</a></p></div>
+  <p class="back"><b>Trace it back:</b> board resolutions approving each bank account, and the bank statements of the corporation. The state told a CAG conference in 2025 it has no central register of such accounts (reported; not read in full).</p>
+</div></li>
+
+<li><div class="node">3</div><div class="stage">
+  <h3>Cash drawn before the bills exist</h3>
+  <p class="who">An officer may draw money on an "abstract contingent" bill for urgent payments, and must file the detailed bill with vouchers by the 15th of the next month. Record: the detailed bill (internal).</p>
+  <div class="leak"><h4>Where the vouchers never came <span class="tag t-audit">Audited</span></h4><ul>
+    <li><b>1,111 advance bills worth ₹63.90 crore</b> had no detailed bill on 31 March 2025; 638 of them date from earlier years. Largest: Elections ₹32.10 crore, Police ₹18.37 crore.</li>
+  </ul><p class="src">CAG SFAR 2024-25, para 3.4</p></div>
+  <p class="back"><b>Trace it back:</b> ask the department for the detailed bills and vouchers against each advance.</p>
+</div></li>
+
+<li><div class="node">4</div><div class="stage">
+  <h3>Works: estimate, tender, measurement, bill</h3>
+  <p class="who">A road or building is estimated, sanctioned, put to open tender (Karnataka Transparency in Public Procurement Act, 1999), measured by the engineer in a measurement book, and paid bill by bill. Section 4(g) of the Act lets the government exempt chosen bodies, such as KRIDL, from tendering. Record: tender and award (public portal); measurement book and bills (RTI).</p>
+  <div class="leak"><h4>Where the checks were skipped <span class="tag t-audit">Audited</span></h4><ul>
+    <li>KRIDL, 2016-21: <b>99 works worth ₹594 crore</b> handed over above the ₹2 crore exemption limit; <b>12 works worth ₹92 crore split into 85</b>, the auditor finding departments "preferred KRIDL to bypass the tender process"; event stages and sound systems paid as "works".</li>
+    <li>"Payment vouchers were not supported by valid MB recordings/check measurement": money paid without the engineer's measurement.</li>
+    <li>Money piled up with KRIDL: <b>₹17,320 crore</b> by 2020-21, ₹304 crore of it received with no work assigned.</li>
+    <li>Haj Ghar, Bengaluru: items worth <b>₹2.46 crore</b> "certified as executed were found not executed" when auditors visited.</li>
+  </ul><p class="src">CAG Performance Audit of KRIDL (Report 9 of 2022); CAG Compliance Audit, Report 7 of 2024, para 2.5.2</p></div>
+  <div class="case"><div class="head"><span class="tag t-proven">Finding</span> Bengaluru fake bills</div>
+    <p>About ₹1,500 crore of city works in 2008-11 were paid on bills for work not done or done poorly, found by the corporation's technical vigilance cell and the CID. In April 2026 a special court acquitted three accused, including a sitting MLA. Separately a Lokayukta inquiry found ₹118 crore paid for Rajarajeshwari Nagar works routed through KRIDL that were not done or less than 30% complete (as reported).</p>
+    <p class="src"><a href="https://udayavani.com/karnataka/politics-bengaluru-fake-bill-scam-mla-munirathna-acquitted-169769?lang=en" rel="noopener">Udayavani, Apr 2026</a></p></div>
+  <div class="case"><div class="head"><span class="tag t-alleged">Alleged</span> "40% commission" on contractors' bills</div>
+    <p>The contractors' association alleged a 40% cut on bills paid in 2019-23. The Justice Nagamohan Das inquiry (March 2025) found no clear evidence of a 40% rate, but "some truth" to commission claims and widespread tender irregularities.</p>
+    <p class="src"><a href="https://thesouthfirst.com/karnataka/40-percent-commission-no-clear-evidence-says-report-but-names-ex-bjp-mlas/" rel="noopener">South First, Apr 2025</a></p></div>
+  <p class="back"><b>Trace it back:</b> the measurement book against the road itself. Pages, dates and measurements can be checked on the ground, and photographs dated.</p>
+</div></li>
+
+<li><div class="node">5</div><div class="stage">
+  <h3>Central schemes: money in a nodal bank account</h3>
+  <p class="who">Since 2021, money for centrally sponsored schemes sits in a Single Nodal Agency bank account; since 2023 the SNA-SPARSH system pays suppliers "just in time" from the Reserve Bank. Record: PFMS reports; utilisation certificates.</p>
+  <div class="leak"><h4>Where spending is only on paper <span class="tag t-audit">Audited</span></h4><ul>
+    <li>Transfers into nodal accounts are booked as spending even though the money is still in the bank; in 2024-25 the state took back <b>₹1,333 crore</b> of unspent balances.</li>
+    <li>₹22,309 crore went from the Centre straight to implementing agencies in 2023-24, outside the state budget.</li>
+    <li>Utilisation certificates: 142 worth ₹239 crore outstanding in March 2025, but the system covers bodies getting only 8.9% of grants: "around 90 per cent of the grants-in-aid organisations are out of ambit of monitoring."</li>
+  </ul><p class="src">CAG SFAR 2023-24, paras 4.4, 4.5; SFAR 2024-25, para 3.3</p></div>
+  <p class="back"><b>Trace it back:</b> the utilisation certificate and the nodal account statement for the scheme.</p>
+</div></li>
+
+<li><div class="node">6</div><div class="stage">
+  <h3>Beneficiaries: pensions, rations, subsidies</h3>
+  <p class="who">Benefits are paid through the state's direct-transfer platform into Aadhaar-linked bank accounts. The weak point is the list of who gets paid. Record: beneficiary lists (partly public; panchayat notice boards, scheme portals).</p>
+  <div class="leak"><h4>Who should not have been on the list</h4><ul>
+    <li>3.58 lakh bogus pension beneficiaries removed, ₹430 crore a year saved (Revenue Minister, May 2022). In July 2025, 11.8 lakh pensions were flagged as possibly fraudulent, including 13,702 income-tax payers (minister's preliminary count).</li>
+  </ul></div>
+  <div class="case"><div class="head"><span class="tag t-charged">Charged</span> Bhovi Development Corporation</div>
+    <p>About ₹97 crore of loans and subsidies paid into accounts of people who were not real beneficiaries, according to the Enforcement Directorate, which filed a prosecution complaint in June 2025.</p></div>
+  <div class="case"><div class="head"><span class="tag t-charged">Charged</span> KIADB, Dharwad: land paid for twice</div>
+    <p>The same land compensated twice to false claimants: 29 payments worth ₹64.5 crore, according to the Enforcement Directorate.</p></div>
+  <p class="back"><b>Trace it back:</b> the beneficiary list against death, income-tax and land records; that is how the government itself found the bogus pensions.</p>
+</div></li>
+
+<li><div class="node">7</div><div class="stage">
+  <h3>The village: panchayats and job-guarantee work</h3>
+  <p class="who">Job-guarantee wages go straight to workers' accounts; materials and works go through the gram panchayat. Record: job cards, muster rolls, work files, social-audit reports (public at the gram sabha).</p>
+  <div class="case"><div class="head"><span class="tag t-proven">Finding</span> Devadurga taluk, Raichur</div>
+    <p>A social audit of 33 gram panchayats (2020-23) found about ₹200.87 crore of irregularities, including ₹102 crore paid to one firm in 6,700 cases and job cards made for people who did not live there (interim report; FIR filed November 2023). Statewide in 2024-25, ₹41.58 crore of misappropriation was found and ₹3.38 crore (8%) recovered.</p>
+    <p class="src"><a href="https://thesouthfirst.com/karnataka/karnataka-social-audit-report-exposes-%e2%82%b9200-crore-irregularities-in-raichur-mgnrega-projects-2-booked/" rel="noopener">South First, Dec 2023</a> · Ministry of Rural Development data as reported, Mar 2025</p></div>
+  <p class="back"><b>Trace it back:</b> the muster roll against the people named on it, and the work against the site. Any villager can attend the social audit.</p>
+</div></li>
+
+</ol>
+</section>
+
+<section class="box">
+  <h2>After the leak: who catches it, and what happens</h2>
+  <ul>
+    <li><b>41 cases of misappropriation, losses and theft worth ₹149.83 crore</b> were pending in March 2025; 14 of them are more than ten years old (CAG SFAR 2024-25, para 3.12).</li>
+    <li><b>7,680 audit inspection reports with 41,193 questions</b> were unanswered by 48 departments in March 2022; 3,142 of the reports were more than ten years old (CAG Report 7 of 2024).</li>
+    <li>The government had not replied to the CAG's state finance reports for 2022-23 and 2023-24 (SFAR 2024-25, para 3.13).</li>
+    <li>Recovery is the weakest link: 8% of job-guarantee misappropriation recovered in 2024-25; in the cases on this page, the one verdict found is an acquittal. See also <a href="officials_tracker.html">After the raid</a>.</li>
+  </ul>
+</section>
+
+<section class="box">
+  <h2>What you can ask for</h2>
+  <p>Every stage above leaves a record. Any citizen can ask for it under the Right to Information Act: the deposit-account balance of a department, the bank accounts of a corporation, the detailed bills against an advance, the measurement book of a road in your ward, the beneficiary list of your panchayat. Ready-made letters for raid follow-ups are on the <a href="../rti.html">RTI page</a>.</p>
+</section>
+
+<section class="box">
+  <h2>Read this fairly</h2>
+  <ul>
+    <li>Parking money, spending ahead of approval and missing paperwork are failures of control. They make theft easier to hide; they are not proof of theft. This page uses the auditor's own words.</li>
+    <li>Cases marked Charged or Alleged are not proven. Courts have not ruled on most of them.</li>
+    <li>The findings span governments of both main parties: the KRIDL audit covers 2016-21, the commission inquiry 2019-23, and the state finance audit 2024-25.</li>
+    <li>Gaps: how Letters of Credit work today inside the treasury system, and which schemes use the new "just in time" payments, were not confirmed from primary documents.</li>
+  </ul>
+</section>
+
+<footer>
+  <h2 style="font-size:1.1rem;margin-bottom:8px">Sources</h2>
+  <ol>
+    <li>CAG, State Finances Audit Report, Government of Karnataka, year ended March 2025 (Report No. 2 of 2026): <a href="https://cag.gov.in/webroot/uploads/download_audit_report/2026/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2024-25---English-(1)-069c4e127015905.57315868.pdf" rel="noopener">PDF</a></li>
+    <li>CAG, State Finances Audit Report, year ended March 2024 (Report No. 4 of 2025): <a href="https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf" rel="noopener">PDF</a></li>
+    <li>CAG, Performance Audit of Karnataka Rural Infrastructure Development Limited, 2016-21 (Report No. 9 of 2022): <a href="https://d1jmc0u14z2tmp.cloudfront.net/uploads/download_audit_report/2022/CAG-Report-on-Performance-Audit-on-Karnataka-Rural-Infrastructure-Development-Limited-063f87d42028da6.60340196.pdf" rel="noopener">PDF</a></li>
+    <li>CAG, Compliance Audit (Civil), Karnataka, Report No. 7 of 2024: <a href="https://cag.gov.in/webroot/uploads/download_audit_report/2024/Report-No.-7,-2024,-Karnataka-06a2bcfd9b20f02.46981841.pdf" rel="noopener">PDF</a></li>
+    <li>Department of Expenditure, Government of India, SNA-SPARSH order, 13 July 2023: <a href="https://doe.gov.in/files/public-finance-state-cna-sna-document/Letter_Dated_13_07_202_To_ALL_Chief_Secretaries_Principal_Secretaries.pdf" rel="noopener">PDF</a></li>
+    <li>Karnataka Transparency in Public Procurement Act, 1999: <a href="https://prsindia.org/files/bills_acts/acts_states/karnataka/2000/Act29of2000Karnataka.pdf" rel="noopener">PRS copy</a></li>
+    <li>Pensions: <a href="https://www.udayavani.com/english-news/karnataka-identifies-3-58-lakh-bogus-pension-beneficiaries-saves-rs-430-crore" rel="noopener">Udayavani, May 2022</a>; <a href="https://www.theweek.in/wire-updates/national/2025/07/23/mds7-ka-minister-pension-fraud.html" rel="noopener">The Week (PTI), Jul 2025</a></li>
+    <li>Bhovi corporation: <a href="https://deccanchronicle.com/southern-states/karnataka/ex-karnataka-bhovi-board-gm-held-in-rs-97-crore-money-laundering-case-1871280" rel="noopener">Deccan Chronicle</a>. KIADB double compensation: <a href="https://www.lokmattimes.com/national/ktaka-double-compensation-scam-ed-files-supplementary-prosecution-complaint-against-17" rel="noopener">Lokmat Times</a></li>
+    <li>Other case sources are linked in each case box. Research notes: <code>research/follow_the_money/FOLLOW_THE_MONEY_DRAFT.md</code>.</li>
+  </ol>
+</footer>
+</div>
+
+</body>
+</html>
