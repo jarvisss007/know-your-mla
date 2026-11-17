@@ -1,0 +1,1000 @@
+{
+ "generated": "2026-11-17",
+ "note": "Audit findings about systems and departments; not proof of theft. Amounts in Rs crore as stated by CAG.",
+ "accountability": [
+  {
+   "quote": "A total of 8,522 Inspection Reports containing 44,174 Paragraphs were outstanding against 47 departments as at the end of March 2023.",
+   "report": "CAG Compliance Audit Report (year ended March 2023), Report No. 6 of 2025",
+   "year": "2025",
+   "para": "1.10.1",
+   "amount_rs_crore": null,
+   "url": "https://cag.gov.in/uploads/download_audit_report/2025/Preface-and-Overview-068a700e008a068.58099381.pdf"
+  },
+  {
+   "quote": "204 paragraphs (including Performance Audits and Reviews) were yet to be discussed [by PAC as of 31 March 2025]; three departments did not submit ATNs for four paragraphs for the period 2020-21 and 2021-22",
+   "report": "CAG Compliance Audit Report No. 1 of 2026",
+   "year": "2026",
+   "para": "Chapter I",
+   "amount_rs_crore": null,
+   "url": "https://cag.gov.in/uploads/download_audit_report/2026/Chapter-II-Subject-Specific-Compliance-Audit-and-other-Compliance-Audit-Paragraphs-069c51cb19faa70.21082389.pdf"
+  },
+  {
+   "quote": "While replies with respect to the SFAR for the years 2020-21 and 2021-22 have been furnished by the Finance Department, replies with respect to 2022-23 and 2023-24 is awaited.",
+   "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+   "year": "2026",
+   "para": "3.13",
+   "amount_rs_crore": null,
+   "url": "https://cag.gov.in/en/audit-report/details/124514"
+  }
+ ],
+ "leak_points": [
+  {
+   "id": "A-1",
+   "route": "A",
+   "step": "Budget release (A2-A3)",
+   "leak_point": "Money released before the Legislature approves it",
+   "how_it_works": "Finance Department issues 'additionality' executive orders during the year; supplementary grants regularise them later.",
+   "control": "Article 266(3) of the Constitution; PAC (2015) advice to restrict to emergent cases",
+   "evidence": [
+    {
+     "quote": "10,035.13 crore covering 21 grants under Capital/Revenue section (this is only illustrative), (Appendix 2.4) was released through 118 executive orders.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "2.5.1.1",
+     "amount_rs_crore": 10035.13,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "an expenditure of 261.75 crore (Appendix 2.3), was incurred in 15 cases under various components of six grants during the year 2024-25 without having any provision in the original budget estimates/ supplementary demands and without issuing any re-appropriation orders to this effect.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "2.5.1",
+     "amount_rs_crore": 261.75,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    }
+   ],
+   "status_today": "Continuing: 2024-25 amount rose again from 4,850.73 crore (2023-24). State replied (Jan 2026) that SNA 21-day rule forced additionality.",
+   "confidence": "high"
+  },
+  {
+   "id": "A-2",
+   "route": "A",
+   "step": "Appropriation (A2)",
+   "leak_point": "Spending more than the Legislature voted",
+   "how_it_works": "Grants overspent; excess regularised by the Legislature only after PAC discussion, often years later.",
+   "control": "Article 205; PAC scrutiny of Appropriation Accounts",
+   "evidence": [
+    {
+     "quote": "There was an excess disbursement of 4,388.75 crore over the authorisation made by the State Legislature under three grants during 2024-25",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "2.5.2",
+     "amount_rs_crore": 4388.75,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "An amount of 5,175.21 crore for the years 2020-21, 2022-23 and 2023-24 are yet to be regularised.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "2.8",
+     "amount_rs_crore": 5175.21,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    }
+   ],
+   "status_today": "Unregularised excess accumulating (Energy grant 4,198.69 crore in 2024-25).",
+   "confidence": "high"
+  },
+  {
+   "id": "A-3",
+   "route": "A",
+   "step": "Release to payment (A3-A9)",
+   "leak_point": "March rush and last-day re-appropriation",
+   "how_it_works": "Money is pushed out in the last weeks or on 31 March so that it does not lapse; heads are re-shuffled on the last day.",
+   "control": "GFR Rule 62(3); Finance Department instructions of 9 Sept 2004; quarterly expenditure limits",
+   "evidence": [
+    {
+     "quote": "Last day of the year 10,093.17 (31st March 2025); Last month of the year 72,958.85 (Mar-25), 18.94 per cent of total expenditure",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "2.5.8 (Table 2.15)",
+     "amount_rs_crore": 10093.17,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "Under all 28 grants, re-appropriation orders amounting to 33,106.23 crore were issued on last day of the year i.e., 31 March 2025.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "2.8",
+     "amount_rs_crore": 33106.23,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    }
+   ],
+   "status_today": "Continuing every year.",
+   "confidence": "high"
+  },
+  {
+   "id": "A-4",
+   "route": "A",
+   "step": "Bill (A8)",
+   "leak_point": "Advances drawn without vouchers (AC bills not followed by DC bills)",
+   "how_it_works": "DDO draws money on an Abstract Contingent bill without supporting documents; the Detailed Contingent bill with vouchers is not submitted.",
+   "control": "Manual of Contingent Expenditure 1958 Rule 37(b)(3): NDC bill by 15th of following month",
+   "evidence": [
+    {
+     "quote": "Non-adjustment of advances for long periods is fraught with the risk of misappropriation ... to the extent of non-receipt of N DC bills, the expenditure shown in the Finance Accounts cannot be asserted as correct or final. [1,111 AC bills, 63.90 crore pending at 31 March 2025]",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "3.4 (Table 3.5)",
+     "amount_rs_crore": 63.9,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "Detailed bills aggregating to 45.58 crore, drawn on 934 AC bills, were pending at the end of March 2024",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "4.6",
+     "amount_rs_crore": 45.58,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    }
+   ],
+   "status_today": "Pending NDC bills rose 18.95% in 2024-25; Elections (32.1 crore) and Police (18.37 crore) largest.",
+   "confidence": "high"
+  },
+  {
+   "id": "A-5",
+   "route": "A/E",
+   "step": "Release to agency (A3, E2)",
+   "leak_point": "'Spent' money is really an advance sitting with a construction agency",
+   "how_it_works": "Department draws the full amount on payee-receipt bills and transfers it to KHB, KRIDL, RITES or PWD; accounts show final expenditure.",
+   "control": "KFC utilisation rules; Budget Manual monthly statements (B.M. 15A/15B)",
+   "evidence": [
+    {
+     "quote": "While the entire amount was drawn and transferred to the agencies, there was no mechanism in place to ascertain the progress of expenditure on a periodic basis ... the expenditure amount in the budget refers only to the transfer of funds to the implementing agencies and not the actual expenditure.",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "3.8.1.6(d)",
+     "amount_rs_crore": 445.9,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    }
+   ],
+   "status_today": "Example from Grant 17 (Education), 2021-24; no evidence of a fix.",
+   "confidence": "high"
+  },
+  {
+   "id": "A-6",
+   "route": "A",
+   "step": "Tender (A5)",
+   "leak_point": "Tendering rules bent: short bidding time, direct award beyond exemption",
+   "how_it_works": "Short-term tenders reduce competition; Section 4(g) KTPP exemptions used for works above the exempted value.",
+   "control": "KTPP Act and Rules (Rule 17 minimum bidding time; Section 4(g) notified exemptions); standard tender documents",
+   "evidence": [
+    {
+     "quote": "KNNL/VJNL invited short term tenders for 52 out of 55 works which allowed bidding time of 9 to 33 days only ... This included 14 turn-key contracts valuing 8,989.09 crore",
+     "report": "CAG Performance Audit of Yettinahole Integrated Drinking Water Project, Report No. 10 (tabled 29 Jan 2026)",
+     "year": "2026",
+     "para": "3.2.1, Table 3.4",
+     "amount_rs_crore": 8989.09,
+     "url": "https://cag.gov.in/en/audit-report/details/123863"
+    },
+    {
+     "quote": "Thus, the Board had released the funds to KRIDL in violation of the provisions of the KTPP act.",
+     "report": "CAG Performance Audit of Kalyana Karnataka Region Development Board (report number not confirmed)",
+     "year": "2022",
+     "para": "5.2.11",
+     "amount_rs_crore": null,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-5-Financial-Management-063f74dd8781799.85859702.pdf"
+    }
+   ],
+   "status_today": "Government defended short tenders as 'public interest' (March 2024); CAG did not accept.",
+   "confidence": "high"
+  },
+  {
+   "id": "A-7",
+   "route": "A/D",
+   "step": "Estimate and sanction (A4-A5)",
+   "leak_point": "Splitting works to stay under sanction or tender limits",
+   "how_it_works": "One job is split into many small works so a lower authority can sanction it or it avoids tender.",
+   "control": "Delegation of financial powers; KTPP Sec 4(e) (works up to Rs 5 lakh exempt) and 4(ee)",
+   "evidence": [
+    {
+     "quote": "13 GPs had split 65 works (estimated cost of 42.15 crore) into 463 works with cost ranging from 2.41 lakh to 10 lakh ... This resulted in irregular expenditure of 28.17 crore incurred (October 2024) on these works without obtaining the sanction of competent authority.",
+     "report": "CAG Performance Audit of MGNREGS, Government of Karnataka, Report No. 13 of 2025",
+     "year": "2025 (tabled c. March 2026)",
+     "para": "5.6",
+     "amount_rs_crore": 28.17,
+     "url": "https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf"
+    }
+   ],
+   "status_today": "Bengaluru bill-splitting under Rs 5 lakh is analysed by a separate session (not repeated here).",
+   "confidence": "high"
+  },
+  {
+   "id": "A-8",
+   "route": "A",
+   "step": "Measurement to payment (A7-A9)",
+   "leak_point": "Overpaying contractors / not recovering dues / releasing security early",
+   "how_it_works": "Excess materials not recovered, wrong price-adjustment indices, extra items paid, retention and security released before completion.",
+   "control": "Contract clauses; check measurement; divisional accounts scrutiny",
+   "evidence": [
+    {
+     "quote": "the recovery was not carried out in other four packages resulting in excess benefit to the contractors amounting to 181.21 crore",
+     "report": "CAG Performance Audit of Yettinahole Integrated Drinking Water Project, Report No. 10 (tabled 29 Jan 2026)",
+     "year": "2026",
+     "para": "3.2.2.2",
+     "amount_rs_crore": 181.21,
+     "url": "https://cag.gov.in/en/audit-report/details/123863"
+    },
+    {
+     "quote": "price adjustment resulted in excess payment of 27.73 crore in two packages",
+     "report": "CAG Performance Audit of Yettinahole Integrated Drinking Water Project, Report No. 10 (tabled 29 Jan 2026)",
+     "year": "2026",
+     "para": "3.2.2.4",
+     "amount_rs_crore": 27.73,
+     "url": "https://cag.gov.in/en/audit-report/details/123863"
+    },
+    {
+     "quote": "excess expenditure amounting to 21.02 crore",
+     "report": "CAG Performance Audit of Yettinahole Integrated Drinking Water Project, Report No. 10 (tabled 29 Jan 2026)",
+     "year": "2026",
+     "para": "3.2.2.5",
+     "amount_rs_crore": 21.02,
+     "url": "https://cag.gov.in/en/audit-report/details/123863"
+    },
+    {
+     "quote": "VJNL released (November 2019) the retention money of 35.36 crore against a BG despite of the fact that work is yet not fully completed ... This amounted to undue financial favour to the Contractor",
+     "report": "CAG Performance Audit of Yettinahole Integrated Drinking Water Project, Report No. 10 (tabled 29 Jan 2026)",
+     "year": "2026",
+     "para": "3.2.2.6, Table 3.7",
+     "amount_rs_crore": 35.36,
+     "url": "https://cag.gov.in/en/audit-report/details/123863"
+    }
+   ],
+   "status_today": "Audit says recovery 'needs to be effected'; status of recovery not known.",
+   "confidence": "high"
+  },
+  {
+   "id": "A-9",
+   "route": "A/D",
+   "step": "Measurement (A7)",
+   "leak_point": "Paying without proper measurement or on fabricated records",
+   "how_it_works": "Measurement Book not written or not check-measured; photos recycled; muster rolls generated outside NREGASoft.",
+   "control": "KPWD Code; MGNREGA Operational Guidelines para 7.13.2 (weekly measurement within three days)",
+   "evidence": [
+    {
+     "quote": "weekly measurements of works were not undertaken by technical officers in 150 works (38 per cent) ... check measurements by the competent authority were not done in 163 (41 per cent) out of 400 test-checked works.",
+     "report": "CAG Performance Audit of MGNREGS, Government of Karnataka, Report No. 13 of 2025",
+     "year": "2025 (tabled c. March 2026)",
+     "para": "5.14.3",
+     "amount_rs_crore": null,
+     "url": "https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf"
+    },
+    {
+     "quote": "payment of wages under MGNREGS amounting to 4.21 crore was made using these unauthentic muster rolls in 39 GPs ... was not only questionable but was also doubtful.",
+     "report": "CAG Performance Audit of MGNREGS, Government of Karnataka, Report No. 13 of 2025",
+     "year": "2025 (tabled c. March 2026)",
+     "para": "5.14.7",
+     "amount_rs_crore": 4.21,
+     "url": "https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf"
+    },
+    {
+     "quote": "Fraudulent payment for housing works ... payment aggregating 1.19 crore (62 per cent of 1.91 crore) in 653 cases ... was irregular",
+     "report": "CAG Performance Audit of MGNREGS, Government of Karnataka, Report No. 13 of 2025",
+     "year": "2025 (tabled c. March 2026)",
+     "para": "5.2.2",
+     "amount_rs_crore": 1.19,
+     "url": "https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf"
+    }
+   ],
+   "status_today": "Test-check findings; scale across state unknown.",
+   "confidence": "high"
+  },
+  {
+   "id": "A-10",
+   "route": "A/F",
+   "step": "Treasury and reconciliation (A9-A12)",
+   "leak_point": "Treasury, division, bank and AG books do not match",
+   "how_it_works": "Remittances by works divisions not acknowledged; bank scrolls missing; Controlling Officers do not reconcile.",
+   "control": "Monthly reconciliation by Controlling Officers; treasury-RBI-AG cash reconciliation",
+   "evidence": [
+    {
+     "quote": "The debit balance of 964.68 crore at the end of year 2024-25 is due to non-reconciliation by the Division Offices with the Treasury and these differences could lead to non-detection of cases of defalcation, which may result in loss to Government.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "3.7",
+     "amount_rs_crore": 964.68,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "there was an unreconciled difference of 1,443.23 crore (Debit) mainly due to non-receipt of bank scrolls and pending reconciliation between treasury, RBI, Agency Banks and AG Office.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "3.9",
+     "amount_rs_crore": 1443.23,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "As of March 2024, there was a difference of {4,636.81 crore (Dr.)} ... mainly due to non-reporting and non-reconciliation of figures by the Agency Banks as well as non-accounting of cheques issued by State Huzur Treasury for secret services, etc.",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "4.11",
+     "amount_rs_crore": 4636.81,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    }
+   ],
+   "status_today": "PW remittance suspense jumped from 82.61 crore (2023-24) to 964.68 crore (2024-25); 82 Controlling Officers had not reconciled expenditure in 2024-25.",
+   "confidence": "high"
+  },
+  {
+   "id": "A-11",
+   "route": "A",
+   "step": "Execution (A4-A7)",
+   "leak_point": "Projects left incomplete, assets idle, cost overruns",
+   "how_it_works": "Works started without land or assured funds; delays escalate cost; finished parts sit idle.",
+   "control": "KPWD Code bar on tendering before land acquisition; FMRC advice to prioritise near-complete works",
+   "evidence": [
+    {
+     "quote": "due to non-completion of these 4,328 projects, Capital Expenditure of 5,066 crore remained blocked",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "1.6.2 (B), Table 1.36",
+     "amount_rs_crore": 5066,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "The assets created under Phase-I at the cost of 2,965.77 crore could not be put to use due to non-completion of the Gravity Canal",
+     "report": "CAG Performance Audit of Yettinahole Integrated Drinking Water Project, Report No. 10 (tabled 29 Jan 2026)",
+     "year": "2026",
+     "para": "3.1.2",
+     "amount_rs_crore": 2965.77,
+     "url": "https://cag.gov.in/en/audit-report/details/123863"
+    },
+    {
+     "quote": "three-fold escalation in project cost from 8,323.50 crore to 23,251.66 crore i.e., an increase of 14,928.19 crore.",
+     "report": "CAG Performance Audit of Yettinahole Integrated Drinking Water Project, Report No. 10 (tabled 29 Jan 2026)",
+     "year": "2026",
+     "para": "2.1",
+     "amount_rs_crore": 14928.19,
+     "url": "https://cag.gov.in/en/audit-report/details/123863"
+    }
+   ],
+   "status_today": "Incomplete projects rose from 3,140 (Mar 2024) to 4,328 (Mar 2025).",
+   "confidence": "high"
+  },
+  {
+   "id": "A-12",
+   "route": "All",
+   "step": "Follow-up",
+   "leak_point": "Known misappropriation and loss cases left open for years",
+   "how_it_works": "Departmental and criminal action not finalised; recoveries pending.",
+   "control": "KFC para 349 (personal liability)",
+   "evidence": [
+    {
+     "quote": "As on 31 March 2025, 41 cases of misappropriation, losses, theft, etc., involving 149.83 crore were pending.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "3.12",
+     "amount_rs_crore": 149.83,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "There were 47 cases of misappropriation, losses etc., involving Government money amounting to 43.19 crore as at the end of 2023-24 on which final action is pending.",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "4.17",
+     "amount_rs_crore": 43.19,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    }
+   ],
+   "status_today": "14 of 41 cases older than 10 years; HESCOM 115.47 crore is the largest block.",
+   "confidence": "high"
+  },
+  {
+   "id": "B-1",
+   "route": "B/F",
+   "step": "Release to corporation (B7)",
+   "leak_point": "Year-end welfare grants parked in corporation PD accounts to avoid lapse",
+   "how_it_works": "Last-quarter releases with instructions to draw within 10 days and deposit in PD accounts.",
+   "control": "KFC Article 286; Finance Department instructions of 9 Sept 2004",
+   "evidence": [
+    {
+     "quote": "GoK in three departments ... has released 760.25 crore to 20 corporations during the last quarter of the financial year 2024-25 ... releasing the funds at the fag end of the financial year clearly envisages a rush of expenditure, and depositing them in the PD Account to avoid the lapse of funds.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "2.5.8.1",
+     "amount_rs_crore": 760.25,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "The practice of transferring large sums to PD Accounts at year-end amounted to mere parking of funds to avoid lapse of grants.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "2.7.1.2 (A)",
+     "amount_rs_crore": 145.0,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    }
+   ],
+   "status_today": "2024-25 finding; funds unused till August 2025.",
+   "confidence": "high"
+  },
+  {
+   "id": "B-2",
+   "route": "B/E",
+   "step": "Corporation level (B7)",
+   "leak_point": "Grants shown as spent but held in corporation bank accounts",
+   "how_it_works": "Corporations do not spend the grants and keep bank accounts the FD ordered closed.",
+   "control": "FD order 28 Feb 2023 to close bank accounts and use PD accounts; grants-in-aid register (KFC Art. 162(c)); UCs",
+   "evidence": [
+    {
+     "quote": "the un-utilised grant of 412 crore remained in the bank accounts of the Corporations outside the Government Account in-spite of being shown as expended in the Consolidated Fund of the State.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "2.7.1.2 (B)",
+     "amount_rs_crore": 412.0,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "continued to operate 32 bank accounts even though Personal Deposit Accounts were opened. The balances in these bank accounts as on 31 March 2025 amounted to 410.43 crore",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "2.7.1.5",
+     "amount_rs_crore": 410.43,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    }
+   ],
+   "status_today": "Continuing as of March 2025.",
+   "confidence": "high"
+  },
+  {
+   "id": "B-3",
+   "route": "B/D",
+   "step": "Beneficiary verification (B2-B3)",
+   "leak_point": "Ineligible or ghost beneficiaries",
+   "how_it_works": "Weak eligibility and identity checks; job cards not updated.",
+   "control": "Aadhaar-based checks; eligibility rules; annual job-card updating",
+   "evidence": [
+    {
+     "quote": "out of the trained candidates, 3,487 were ineligible as they exceeded the age limits specified in the guidelines.",
+     "report": "CAG Compliance Audit Report (year ended March 2023), Report No. 6 of 2025",
+     "year": "2025",
+     "para": "2.1 (Overview)",
+     "amount_rs_crore": null,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2025/Preface-and-Overview-068a700e008a068.58099381.pdf"
+    },
+    {
+     "quote": "Non-payment of dues to workers/suppliers over unduly long periods not only indicated ineffective oversight mechanism but also raised the possibility of ghost workers and fake bills.",
+     "report": "CAG Performance Audit of MGNREGS, Government of Karnataka, Report No. 13 of 2025",
+     "year": "2025 (tabled c. March 2026)",
+     "para": "Chapter IV (pending liabilities)",
+     "amount_rs_crore": 723.44,
+     "url": "https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf"
+    }
+   ],
+   "status_today": "No CAG test of duplicate beneficiaries in the five guarantee schemes was found.",
+   "confidence": "medium"
+  },
+  {
+   "id": "C-1",
+   "route": "C",
+   "step": "Transfer to SNA (C3)",
+   "leak_point": "SNA share transfers that do not match and balances parked in SNA banks",
+   "how_it_works": "State short- or over-releases Central/State shares; SNA balances count as expenditure.",
+   "control": "Ministry of Finance SNA guidelines (March 2021): transfer within 21 days",
+   "evidence": [
+    {
+     "quote": "Saksham Anganwadi and Poshan 2.0: short release of State share to SNA 415.91 (VLC) vs 5.92 (PFMS), difference 409.99 ... Reply is awaited.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "2.6.2 (Table 2.18)",
+     "amount_rs_crore": 409.99,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "Excess amount of 263.55 crore has been transferred as State share to SNA. The reasons have been called for and the reply is awaited.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "2.6.2 (D)",
+     "amount_rs_crore": 263.55,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "Amounts outstanding in the SNA accounts on 31 March 2025: 73.84 + 172.04 + 370.01 + 14.48 + 612.04 crore (five schemes).",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "2.6.2 (A-E)",
+     "amount_rs_crore": 1242.41,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    }
+   ],
+   "status_today": "Migration to SNA-SPARSH under way (29 of 140 CSS fully onboarded).",
+   "confidence": "high"
+  },
+  {
+   "id": "C-2",
+   "route": "C",
+   "step": "Booking and refund (C3-C6)",
+   "leak_point": "'Expenditure' that later returns as refunds",
+   "how_it_works": "Transfers to SNA booked as spending; unspent money comes back in later years.",
+   "control": "SNA-SPARSH just-in-time release; reconciliation",
+   "evidence": [
+    {
+     "quote": "the expenditure reported in the previous years was merely a transfer of funds from Government account to the SNA account and not the actual expenditure under the Scheme. However, as per the Accounts, the amount refunded under the Samagra Shikshana Abhiyan was 1,393.28 crore. As there is a variation between the figures, this needs reconciliation.",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "3.8.1.6(g)",
+     "amount_rs_crore": 2171.03,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    },
+    {
+     "quote": "this was understated by 2,256.06 crore on account of refunds of unutilized amounts from SNA Accounts.",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "Chapter 2 (expenditure composition)",
+     "amount_rs_crore": 2256.06,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    }
+   ],
+   "status_today": "Unreconciled difference of 777.75 crore between Avalokana and accounts.",
+   "confidence": "high"
+  },
+  {
+   "id": "C-3",
+   "route": "C",
+   "step": "Central release (C1)",
+   "leak_point": "Central money bypassing the state budget",
+   "how_it_works": "GoI pays state implementing agencies directly.",
+   "control": "GoI policy since 2014-15 to route through state budget",
+   "evidence": [
+    {
+     "quote": "during the year 2023-24, GoI transferred 22,308.76 crore directly to the implementing agencies. Out of this, 8,873.10 crore were directly transferred to Centrally Sponsored Schemes ... bypassing the Consolidated Fund of the State.",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "4.4",
+     "amount_rs_crore": 22308.76,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    }
+   ],
+   "status_today": "Not traceable in state accounts; traceable only via PFMS.",
+   "confidence": "high"
+  },
+  {
+   "id": "C-4",
+   "route": "C/E",
+   "step": "Utilisation certificate (C6)",
+   "leak_point": "Utilisation certificates not furnished",
+   "how_it_works": "Grantees do not prove use of money; most grantees are outside UC monitoring.",
+   "control": "KFC Rule 161(b)(5): UC within 18 months",
+   "evidence": [
+    {
+     "quote": "leaving 142 outstanding UCs amounting to 239.45 crore as on 31 March 2025",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "3.3",
+     "amount_rs_crore": 239.45,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "Hence, around 90 per cent of the grants-in-aid organisations are out of ambit of monitoring.",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "4.5",
+     "amount_rs_crore": null,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    },
+    {
+     "quote": "the Mission could not obtain UCs for the balance amount of 136.54 crore released to the agencies.",
+     "report": "CAG Compliance Audit Report (year ended March 2023), Report No. 6 of 2025",
+     "year": "2025",
+     "para": "2.1 (Overview)",
+     "amount_rs_crore": 136.54,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2025/Preface-and-Overview-068a700e008a068.58099381.pdf"
+    },
+    {
+     "quote": "Non-submission of Utilisation Certificates - 94.40 crore",
+     "report": "CAG Compliance Audit Report No. 1 of 2026",
+     "year": "2026",
+     "para": "2.1.2.5",
+     "amount_rs_crore": 94.4,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2026/Chapter-II-Subject-Specific-Compliance-Audit-and-other-Compliance-Audit-Paragraphs-069c51cb19faa70.21082389.pdf"
+    },
+    {
+     "quote": "utilisation certificates for 64.07 crore was pending submission to the State Government, as at the end of March 2022.",
+     "report": "CAG Performance Audit of Kalyana Karnataka Region Development Board (report number not confirmed)",
+     "year": "2022",
+     "para": "5.2.5",
+     "amount_rs_crore": 64.07,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-5-Financial-Management-063f74dd8781799.85859702.pdf"
+    }
+   ],
+   "status_today": "Pendency moderated in 2024-25 per CAG, but coverage gap remains.",
+   "confidence": "high"
+  },
+  {
+   "id": "C-5",
+   "route": "C/E",
+   "step": "Interest on parked funds (C7)",
+   "leak_point": "Interest earned on government grants kept by agencies",
+   "how_it_works": "Agencies keep interest earned on unspent grants instead of remitting to head 0049.",
+   "control": "FD Government Order July 2003, circular Aug 2019; CSS interest remittance rules",
+   "evidence": [
+    {
+     "quote": "the Companies/Corporations in contravention to the above instructions had not remitted the interest earned amounting to 14,549.91 crore to Government.",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "4.2",
+     "amount_rs_crore": 14549.91,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    },
+    {
+     "quote": "In the absence of an appropriate clause for refund of interest, the implementing agencies subsumed the interest earned in their books of accounts.",
+     "report": "CAG Performance Audit of Kalyana Karnataka Region Development Board (report number not confirmed)",
+     "year": "2022",
+     "para": "5.2.6",
+     "amount_rs_crore": null,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-5-Financial-Management-063f74dd8781799.85859702.pdf"
+    },
+    {
+     "quote": "Non-remittance of interest of 2.69 crore earned on Centrally Sponsored scheme funds",
+     "report": "CAG Performance Audit of Smart City Mission, Karnataka, Report No. 11 of 2025 (tabled 29 Jan 2026)",
+     "year": "2026",
+     "para": "3.3",
+     "amount_rs_crore": 2.69,
+     "url": "https://cag.gov.in/ag2/karnataka/en/audit-report/details/123892"
+    }
+   ],
+   "status_today": "CAUTION: Appendix 4.1 of Report 4/2025 attributes 11,85,015 lakh (about 11,850 crore) to Karnataka Biodiversity Board alone; the total looks implausible and is unverified.",
+   "confidence": "low"
+  },
+  {
+   "id": "D-1",
+   "route": "D",
+   "step": "Social audit and recovery (D5)",
+   "leak_point": "MGNREGA misappropriation identified by social audit but not recovered",
+   "how_it_works": "Cases closed as 'not recoverable', ATRs pending, records not produced to social audit.",
+   "control": "MGNREGA Schedule I para 25(c)(ix) (recover within six months); Karnataka Social Audit Rules VIII(3)(c)",
+   "evidence": [
+    {
+     "quote": "out of misappropriated amount of 187.38 crore (79,284 cases) pointed out in Social Audit during 2019-20 to 2023-24, ATRs were pending (November 2024) in respect of 27,115 cases worth 75.30 crore (40 per cent) ... an amount of 90.14 crore (80 per cent) was settled without any recovery",
+     "report": "CAG Performance Audit of MGNREGS, Government of Karnataka, Report No. 13 of 2025",
+     "year": "2025 (tabled c. March 2026)",
+     "para": "6.4.8 (ii)",
+     "amount_rs_crore": 187.38,
+     "url": "https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf"
+    },
+    {
+     "quote": "the percentage of recovery was claimed to be 94 per cent, which was incorrect and misleading as a significant number of cases were closed without recovery",
+     "report": "CAG Performance Audit of MGNREGS, Government of Karnataka, Report No. 13 of 2025",
+     "year": "2025 (tabled c. March 2026)",
+     "para": "6.4.8 (ii)",
+     "amount_rs_crore": null,
+     "url": "https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf"
+    },
+    {
+     "quote": "out of 17,064.53 crore to be verified during the period from 2019-20 to 2023-24, SAU did not verify expenditure aggregating 8,264.39 crore (48 per cent) for want of records",
+     "report": "CAG Performance Audit of MGNREGS, Government of Karnataka, Report No. 13 of 2025",
+     "year": "2025 (tabled c. March 2026)",
+     "para": "6.4.7",
+     "amount_rs_crore": 8264.39,
+     "url": "https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf"
+    }
+   ],
+   "status_today": "91% of 3,55,393 social audit observations still outstanding (October 2024); shortfall in conducting social audit 57% in 2023-24.",
+   "confidence": "high"
+  },
+  {
+   "id": "D-2",
+   "route": "D",
+   "step": "State share release (D4)",
+   "leak_point": "Late state releases to MGNREGA fund",
+   "how_it_works": "State delays release of central and state shares to the State Employment Guarantee Fund.",
+   "control": "Release timelines; interest liability for delay",
+   "evidence": [
+    {
+     "quote": "The delay by State Government in release of central and state share to the State Employment Guarantee Fund entailed a penal interest of 36.26 crore.",
+     "report": "CAG Performance Audit of MGNREGS, Government of Karnataka, Report No. 13 of 2025",
+     "year": "2025 (tabled c. March 2026)",
+     "para": "Chapter III summary / 3.7",
+     "amount_rs_crore": 36.26,
+     "url": "https://cag.gov.in/webroot/uploads/download_audit_report/2025/English-final-pdf-MGNREGS-with-signature-069c27a99698a17.10858290.pdf"
+    }
+   ],
+   "status_today": "As at audit (2024-25).",
+   "confidence": "high"
+  },
+  {
+   "id": "D-3",
+   "route": "D",
+   "step": "Local body funds (D1-D2)",
+   "leak_point": "Local-body balances written back or unspent",
+   "how_it_works": "Unspent balances in Zilla/Taluk Panchayat Fund II written back to meet the fiscal-deficit target; XV-FC grants unspent and paid outside eGramSwaraj.",
+   "control": "Finance Commission grant conditions; eGramSwaraj-PFMS interface",
+   "evidence": [
+    {
+     "quote": "the State was able to arrest the fiscal deficit within the target levels ... by writing back the unspent balances of 5,000 crore in the PRIs Fund II account and refund of unspent balances in the State Nodal Agency (SNA) account (1,333 crore).",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "Executive Summary",
+     "amount_rs_crore": 5000,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "XV-FC grants of Rs 1,764.83 crore reported unused as of March 2024; diversion in 261 GPs of Rs 4.25 crore (news summary, original audit not read)",
+     "report": "News report (Organiser, Aug 2026) on a 2026 Local Bodies audit; original not read",
+     "year": "2026",
+     "para": "n/a (news)",
+     "amount_rs_crore": 1764.83,
+     "url": "https://organiser.org/2026/08/374076/bharat/karnataka-congress-govt-under-fire-as-audit-flags-diversion-of-nregs-finance-commission-funds-in-261-gram-panchayats/"
+    }
+   ],
+   "status_today": "News figure unverified.",
+   "confidence": "medium"
+  },
+  {
+   "id": "D-4",
+   "route": "D",
+   "step": "City SPV (D-2)",
+   "leak_point": "Smart City SPVs passing money to departments; consultant overpayment",
+   "how_it_works": "SPV releases money to departments instead of paying contractors against milestones.",
+   "control": "MoHUA instruction of January 2019; tripartite agreements",
+   "evidence": [
+    {
+     "quote": "an amount of 153.38 crore was transferred to the departments/agencies in contravention of MoHUA instructions",
+     "report": "CAG Performance Audit of Smart City Mission, Karnataka, Report No. 11 of 2025 (tabled 29 Jan 2026)",
+     "year": "2026",
+     "para": "3.5.2",
+     "amount_rs_crore": 153.38,
+     "url": "https://cag.gov.in/ag2/karnataka/en/audit-report/details/123892"
+    },
+    {
+     "quote": "Inadequate verification in respect of payments made to the PMC resulted in excess payment of 2.56 crore.",
+     "report": "CAG Performance Audit of Smart City Mission, Karnataka, Report No. 11 of 2025 (tabled 29 Jan 2026)",
+     "year": "2026",
+     "para": "Chapter III summary",
+     "amount_rs_crore": 2.56,
+     "url": "https://cag.gov.in/ag2/karnataka/en/audit-report/details/123892"
+    }
+   ],
+   "status_today": "As of June 2024.",
+   "confidence": "high"
+  },
+  {
+   "id": "E-1",
+   "route": "E",
+   "step": "Off-budget borrowing (E4)",
+   "leak_point": "Borrowing through corporations outside the state debt",
+   "how_it_works": "Corporations borrow; state repays from budget; liabilities outside the accounts.",
+   "control": "KFRA 2002 (amended 2014); Article 293(3)",
+   "evidence": [
+    {
+     "quote": "the outstanding off budget borrowing as on 31 March 2025 was 14,154.91 crore which included borrowings of 5,437.78 crore borrowed during 2024-25",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "3.1",
+     "amount_rs_crore": 14154.91,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "All the seven entities mentioned in the above table do not have their own source of revenue and are incurring losses.",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "2.7.1.1",
+     "amount_rs_crore": 13478,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    },
+    {
+     "quote": "the accounts of the State Government is therefore not complete to that extent.",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "4.1",
+     "amount_rs_crore": null,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    }
+   ],
+   "status_today": "OBB resumed in 2024-25 (5,437.78 crore incl. 5,257.70 crore via PCKL for GP dues).",
+   "confidence": "high"
+  },
+  {
+   "id": "E-2",
+   "route": "E",
+   "step": "Guarantees (E5)",
+   "leak_point": "State guarantees on entity borrowing",
+   "how_it_works": "Contingent liability that can devolve on the budget; commission not collected.",
+   "control": "Karnataka Ceiling on Government Guarantees Act 1999; Guarantee Redemption Fund",
+   "evidence": [
+    {
+     "quote": "The outstanding guarantees of 45,889 crore as on 31 March 2025",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "1.5.6",
+     "amount_rs_crore": 45889,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "Against the total estimated guarantee commission of 647.70 crore receivable as reported by the State Government, only 306.69 crore was received during 2023-24.",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "2.8.2",
+     "amount_rs_crore": 341.01,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    }
+   ],
+   "status_today": "Within statutory ceiling per CAG; risk not loss.",
+   "confidence": "high"
+  },
+  {
+   "id": "E-3",
+   "route": "E",
+   "step": "Board accounts (E1)",
+   "leak_point": "Boards and bodies without audited accounts or grant reporting",
+   "how_it_works": "No statutory auditor appointed; accounts in arrears; departments do not report grantees.",
+   "control": "Board orders; CAG (DPC) Act sections 14-15",
+   "evidence": [
+    {
+     "quote": "the State Government has not appointed auditor for audit of the accounts of the Board since the constitution of the Board.",
+     "report": "CAG Performance Audit of Kalyana Karnataka Region Development Board (report number not confirmed)",
+     "year": "2022",
+     "para": "5.3.1",
+     "amount_rs_crore": null,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-5-Financial-Management-063f74dd8781799.85859702.pdf"
+    },
+    {
+     "quote": "Thirteen Departments did not furnish the information pertaining to 1,065 institutions receiving grants aggregating 25 lakh or more",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "4.16",
+     "amount_rs_crore": null,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    },
+    {
+     "quote": "16 accounts in respect of nine Autonomous Bodies were pending",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "3.11",
+     "amount_rs_crore": null,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    }
+   ],
+   "status_today": "Continuing.",
+   "confidence": "high"
+  },
+  {
+   "id": "E-4",
+   "route": "E",
+   "step": "Board fund use (E1)",
+   "leak_point": "Board retains unspent funds beyond its limit; advances not reconciled",
+   "how_it_works": "Unspent carry-forward above 20%; advances to agencies booked as spend.",
+   "control": "KKRDB Board Order 2013 clause 16(c)",
+   "evidence": [
+    {
+     "quote": "The Board treated the advances made to the implementing agencies also as final expenditure ... In the absence of reconciliation, actual unspent balances with the implementing agencies could not be assessed in Audit.",
+     "report": "CAG Performance Audit of Kalyana Karnataka Region Development Board (report number not confirmed)",
+     "year": "2022",
+     "para": "5.1",
+     "amount_rs_crore": null,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-5-Financial-Management-063f74dd8781799.85859702.pdf"
+    },
+    {
+     "quote": "resulting in loss of assistance of 387.52 crore.",
+     "report": "CAG Performance Audit of Kalyana Karnataka Region Development Board (report number not confirmed)",
+     "year": "2022",
+     "para": "5.2.2",
+     "amount_rs_crore": 387.52,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2022/Chapter-5-Financial-Management-063f74dd8781799.85859702.pdf"
+    }
+   ],
+   "status_today": "Audit period 2016-22; KKRDB PD balance appears in SFAR 2024-25 Table 3.8.",
+   "confidence": "medium"
+  },
+  {
+   "id": "F-1",
+   "route": "F",
+   "step": "PD accounts (F1)",
+   "leak_point": "Money parked in Personal Deposit accounts",
+   "how_it_works": "Year-end transfers from Consolidated Fund to PD accounts; balances carried over; inoperative and negative accounts.",
+   "control": "KFC Articles 286 and 286A",
+   "evidence": [
+    {
+     "quote": "During the year 2024-25, an amount of 12,926.77 crore was transferred from the Consolidated Fund of the State to PD Accounts under head 8443-106. This includes 6,026.22 crore transferred to PD Accounts in March 2025.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "3.5.1",
+     "amount_rs_crore": 6026.22,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "Closing balance 29,770.45 crore (KMERC 22,115.31 crore). Retention of such large sums of money was against principle of Legislative financial control.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "3.5 / 3.14",
+     "amount_rs_crore": 29770.45,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "there were PD Accounts as per books of AG (A&E) with negative balances amounting to 1,911.92 crore.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "3.5.2(b)",
+     "amount_rs_crore": 1911.92,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    }
+   ],
+   "status_today": "Inoperative PD accounts not closed due to AG-Treasury non-reconciliation (State reply Jan 2026).",
+   "confidence": "high"
+  },
+  {
+   "id": "F-2",
+   "route": "F",
+   "step": "Classification (F5)",
+   "leak_point": "Spending hidden under Minor Head 800 'Other Expenditure'",
+   "how_it_works": "Booking to omnibus head even when a specific minor head exists.",
+   "control": "List of Major and Minor Heads; accounting classification rules",
+   "evidence": [
+    {
+     "quote": "7,588.39 crore under 31 Major Heads ... Of these, 2,532.53 crore under four Major Heads was classified under Minor Head-800-Other Expenditure despite availability of appropriate Minor Heads",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "3.6",
+     "amount_rs_crore": 7588.39,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "10,836.47 crore under 32 Major Heads of account, constituting 3.68 per cent of the total Revenue and Capital Expenditure",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "4.8",
+     "amount_rs_crore": 10836.47,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    }
+   ],
+   "status_today": "Decreased in 2024-25 but still large.",
+   "confidence": "high"
+  },
+  {
+   "id": "F-3",
+   "route": "F",
+   "step": "Deposit heads and bank accounts (F2/F4)",
+   "leak_point": "Deductions and balances held back outside their destination",
+   "how_it_works": "Construction cess not passed to the Welfare Board; departmental bank accounts left open.",
+   "control": "BOCW Cess Act 1996; FD directives on bank accounts (Jan 2017)",
+   "evidence": [
+    {
+     "quote": "The fund had 640.44 crore as closing balance required to be transferred to the Building and Other Construction Workers' Welfare Board.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "3.2.3",
+     "amount_rs_crore": 640.44,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    },
+    {
+     "quote": "there were 22 Inoperative bank accounts with a balance of 59.95 crore, which were not closed.",
+     "report": "CAG State Finances Audit Report 2023-24, Report No. 4 of 2025",
+     "year": "2025",
+     "para": "3.8.2.6",
+     "amount_rs_crore": 59.95,
+     "url": "https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf"
+    }
+   ],
+   "status_today": "As at March 2025 / March 2024.",
+   "confidence": "high"
+  },
+  {
+   "id": "F-4",
+   "route": "F/A",
+   "step": "Classification",
+   "leak_point": "Revenue spending booked as capital",
+   "how_it_works": "Misclassification understates revenue deficit.",
+   "control": "IGAS-2; classification rules",
+   "evidence": [
+    {
+     "quote": "Misclassification of 2,020.87 crore Revenue Expenditure as Capital Expenditure and 72.46 crore of Capital Expenditure as Revenue Expenditure resulted in understatement of Revenue Expenditure and Revenue Deficit to the tune of 1,948.41 crore.",
+     "report": "CAG State Finances Audit Report 2024-25, Report No. 2 of 2026",
+     "year": "2026",
+     "para": "2.8",
+     "amount_rs_crore": 2020.87,
+     "url": "https://cag.gov.in/en/audit-report/details/124514"
+    }
+   ],
+   "status_today": "Rose from 504.29 crore (2023-24).",
+   "confidence": "high"
+  }
+ ]
+}
