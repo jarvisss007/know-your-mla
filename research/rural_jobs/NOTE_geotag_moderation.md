@@ -65,3 +65,10 @@ Two records are an illustration, not a sample. The map's own photo-point service
 1. Who operates the Bhuvan moderation accounts for Karnataka blocks (for example "GAS_YELBURGA"): designation and office, and whether they are the same officers who sanction and measure the works.
 2. The moderation guidelines in force since 2019: what a moderator must check before accepting a stage-3 photo.
 3. For Yelburga block, 2019-20 to 2024-25: the number of stage-3 photos accepted and rejected per moderator per day.
+
+## Public dashboard (bhuvan-app2.nrsc.gov.in/bhugram/bhugram_dashboard), checked 17 Nov 2026
+
+- Without logging in, one report is open: "Accepted Geotags", filterable by stage, year, state, district, block, panchayat, category, date range and GPS accuracy. Each row gives the asset, work code, GPS accuracy, the field worker ("MSE") who took the photo, the time, and both photos; it can be exported to Excel or KML.
+- Yelburga, stage 3 (after), 18 Oct to 17 Nov 2026: 2 photos accepted, both with GPS accuracy of 3 m, taken by panchayat-level field workers.
+- Karnataka, stage 3, same period, GPS accuracy worse than 100 m: **no records**. The phone app probably refuses a poor GPS fix, so accuracy is not a useful test. Dead end; do not repeat.
+- The open question this report can answer: **was the same photo uploaded for different works?** That needs one block's accepted photos for a year exported, and the images compared for near-duplicates (a perceptual hash). It is a download, and a few thousand image requests to a government server, so it waits for the owner's go-ahead and should run slowly.
