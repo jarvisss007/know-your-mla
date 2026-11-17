@@ -1,0 +1,312 @@
+{
+ "jn_road_rrnagar": [
+  {
+   "id": "726869005087172",
+   "date": "2022-08-02",
+   "lon": 77.520831,
+   "lat": 12.912045,
+   "dist_m": 3.1,
+   "angle": 165.97882080078,
+   "seq": "AX1pRj7TDSBQgcZkK4vl6L",
+   "period": "before",
+   "file": "jn_road_rrnagar_before_2022-08-02_726869005087172.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=726869005087172"
+  },
+  {
+   "id": "1227131114741563",
+   "date": "2022-08-02",
+   "lon": 77.521024321478,
+   "lat": 12.906331632531,
+   "dist_m": 6.0,
+   "angle": 171.74578857422,
+   "seq": "AX1pRj7TDSBQgcZkK4vl6L",
+   "period": "before",
+   "file": "jn_road_rrnagar_before_2022-08-02_1227131114741563.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=1227131114741563"
+  },
+  {
+   "id": "577147593993111",
+   "date": "2022-08-02",
+   "lon": 77.521075214182,
+   "lat": 12.903776429388,
+   "dist_m": 5.3,
+   "angle": 167.40270996094,
+   "seq": "AX1pRj7TDSBQgcZkK4vl6L",
+   "period": "before",
+   "file": "jn_road_rrnagar_before_2022-08-02_577147593993111.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=577147593993111"
+  },
+  {
+   "id": "3806329029495852",
+   "date": "2021-01-09",
+   "lon": 77.521326929665,
+   "lat": 12.902845300419,
+   "dist_m": 1.0,
+   "angle": 256.07135009766,
+   "seq": "8jm7131m3upaa5iz08g2uf",
+   "period": "before",
+   "file": "jn_road_rrnagar_before_2021-01-09_3806329029495852.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=3806329029495852"
+  }
+ ],
+ "taralabalu_road": [
+  {
+   "id": "949076742301763",
+   "date": "2018-02-14",
+   "lon": 77.583923544807,
+   "lat": 13.017290965666,
+   "dist_m": 7.7,
+   "angle": 354.869140625,
+   "seq": "qehjthbrapxpv5b36tbz8g",
+   "period": "before",
+   "file": "taralabalu_road_before_2018-02-14_949076742301763.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=949076742301763"
+  },
+  {
+   "id": "960740454691746",
+   "date": "2021-03-05",
+   "lon": 77.583993162165,
+   "lat": 13.017279303873,
+   "dist_m": 1.4,
+   "angle": 175.14984130859,
+   "seq": "kfxxj0wfeksmyqkbx4u3yy",
+   "period": "before",
+   "file": "taralabalu_road_before_2021-03-05_960740454691746.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=960740454691746"
+  }
+ ],
+ "indiranagar_100ft": [
+  {
+   "id": "821505775885275",
+   "date": "2022-07-27",
+   "lon": 77.640756326616,
+   "lat": 12.978313744406,
+   "dist_m": 6.7,
+   "angle": 278.47869873047,
+   "seq": "5j4HevVwBTqJU2KEhtG7No",
+   "period": "before",
+   "file": "indiranagar_100ft_before_2022-07-27_821505775885275.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=821505775885275"
+  },
+  {
+   "id": "1462021450890038",
+   "date": "2022-07-27",
+   "lon": 77.641115414448,
+   "lat": 12.9715479118,
+   "dist_m": 5.3,
+   "angle": 177.72984313965,
+   "seq": "aw7U1irCkjzIqvBsb9TnSD",
+   "period": "before",
+   "file": "indiranagar_100ft_before_2022-07-27_1462021450890038.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=1462021450890038"
+  },
+  {
+   "id": "424625546255848",
+   "date": "2022-07-09",
+   "lon": 77.641277307639,
+   "lat": 12.969081978434,
+   "dist_m": 3.4,
+   "angle": 183.33989715576,
+   "seq": "mRNJLMVI7dAsWvZe8nzgaF",
+   "period": "before",
+   "file": "indiranagar_100ft_before_2022-07-09_424625546255848.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=424625546255848"
+  },
+  {
+   "id": "558004542496397",
+   "date": "2022-07-09",
+   "lon": 77.641580950586,
+   "lat": 12.966701417885,
+   "dist_m": 7.9,
+   "angle": 187.77617645264,
+   "seq": "4PnFgYejVkvCcO8uita2pM",
+   "period": "before",
+   "file": "indiranagar_100ft_before_2022-07-09_558004542496397.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=558004542496397"
+  },
+  {
+   "id": "1602645854937257",
+   "date": "2026-09-27",
+   "lon": 77.640520712444,
+   "lat": 12.983969181111,
+   "dist_m": 1.4,
+   "angle": 176,
+   "seq": "SK4qIcX2FkHupBLiz3h9oZ",
+   "period": "after",
+   "file": "indiranagar_100ft_after_2026-09-27_1602645854937257.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=1602645854937257"
+  },
+  {
+   "id": "1052260807652200",
+   "date": "2026-09-27",
+   "lon": 77.640605806472,
+   "lat": 12.984006700306,
+   "dist_m": 1.7,
+   "angle": 175,
+   "seq": "SK4qIcX2FkHupBLiz3h9oZ",
+   "period": "after",
+   "file": "indiranagar_100ft_after_2026-09-27_1052260807652200.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=1052260807652200"
+  },
+  {
+   "id": "1419041736223194",
+   "date": "2026-09-27",
+   "lon": 77.640684234444,
+   "lat": 12.984040300361,
+   "dist_m": 6.9,
+   "angle": 178,
+   "seq": "SK4qIcX2FkHupBLiz3h9oZ",
+   "period": "after",
+   "file": "indiranagar_100ft_after_2026-09-27_1419041736223194.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=1419041736223194"
+  }
+ ],
+ "cmh_road": [
+  {
+   "id": "416232077195740",
+   "date": "2022-07-27",
+   "lon": 77.639375048682,
+   "lat": 12.978298240163,
+   "dist_m": 1.4,
+   "angle": 145.89155197144,
+   "seq": "RJtMvOi43szfP5qkoXcIN9",
+   "period": "before",
+   "file": "cmh_road_before_2022-07-27_416232077195740.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=416232077195740"
+  },
+  {
+   "id": "1053741718597364",
+   "date": "2022-07-27",
+   "lon": 77.639414625395,
+   "lat": 12.978307248575,
+   "dist_m": 2.3,
+   "angle": 337.38447570801,
+   "seq": "RJtMvOi43szfP5qkoXcIN9",
+   "period": "before",
+   "file": "cmh_road_before_2022-07-27_1053741718597364.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=1053741718597364"
+  },
+  {
+   "id": "1210625993055301",
+   "date": "2022-07-27",
+   "lon": 77.64064509224,
+   "lat": 12.978292407446,
+   "dist_m": 4.1,
+   "angle": 265.93782043457,
+   "seq": "5j4HevVwBTqJU2KEhtG7No",
+   "period": "before",
+   "file": "cmh_road_before_2022-07-27_1210625993055301.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=1210625993055301"
+  },
+  {
+   "id": "177839028029093",
+   "date": "2022-07-27",
+   "lon": 77.640788103276,
+   "lat": 12.978262794872,
+   "dist_m": 8.0,
+   "angle": 3.6525268554688,
+   "seq": "5j4HevVwBTqJU2KEhtG7No",
+   "period": "before",
+   "file": "cmh_road_before_2022-07-27_177839028029093.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=177839028029093"
+  },
+  {
+   "id": "1047973676922720",
+   "date": "2024-09-03",
+   "lon": 77.6293752,
+   "lat": 12.9784044,
+   "dist_m": 0.3,
+   "angle": 185.81645166874,
+   "seq": "s5q1jkLKQfn3SAy2UgC7wM",
+   "period": "after",
+   "file": "cmh_road_after_2024-09-03_1047973676922720.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=1047973676922720"
+  },
+  {
+   "id": "1599239488148923",
+   "date": "2025-08-18",
+   "lon": 77.634865882267,
+   "lat": 12.978226959596,
+   "dist_m": 1.8,
+   "angle": 88.65923729938,
+   "seq": "o84Ag5NYWwlaReDBXrkpUG",
+   "period": "after",
+   "file": "cmh_road_after_2025-08-18_1599239488148923.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=1599239488148923"
+  },
+  {
+   "id": "751281500950139",
+   "date": "2025-08-18",
+   "lon": 77.637079816959,
+   "lat": 12.978320319413,
+   "dist_m": 1.9,
+   "angle": 87.356792031246,
+   "seq": "lqALESaJV32dHxitQ85uMe",
+   "period": "after",
+   "file": "cmh_road_after_2025-08-18_751281500950139.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=751281500950139"
+  },
+  {
+   "id": "755083570577587",
+   "date": "2025-08-18",
+   "lon": 77.64015079987,
+   "lat": 12.9784504983,
+   "dist_m": 5.7,
+   "angle": 4.2616398676252,
+   "seq": "fVQMc0SCyx3jmgNbD6hpUt",
+   "period": "after",
+   "file": "cmh_road_after_2025-08-18_755083570577587.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=755083570577587"
+  }
+ ],
+ "patalamma_temple_road": [
+  {
+   "id": "785794552625482",
+   "date": "2022-08-28",
+   "lon": 77.570272099998,
+   "lat": 12.937617799998,
+   "dist_m": 1.2,
+   "angle": 350.90307104588,
+   "seq": "aGcsZ7BnP0KQ1FpRl594hu",
+   "period": "before",
+   "file": "patalamma_temple_road_before_2022-08-28_785794552625482.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=785794552625482"
+  },
+  {
+   "id": "3128999330686511",
+   "date": "2022-08-28",
+   "lon": 77.570297299999,
+   "lat": 12.937481099999,
+   "dist_m": 1.5,
+   "angle": 355.7997777462,
+   "seq": "aGcsZ7BnP0KQ1FpRl594hu",
+   "period": "before",
+   "file": "patalamma_temple_road_before_2022-08-28_3128999330686511.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=3128999330686511"
+  },
+  {
+   "id": "5415580611828389",
+   "date": "2022-08-28",
+   "lon": 77.570321099999,
+   "lat": 12.937199900002,
+   "dist_m": 5.5,
+   "angle": 2.7753220796585,
+   "seq": "aGcsZ7BnP0KQ1FpRl594hu",
+   "period": "before",
+   "file": "patalamma_temple_road_before_2022-08-28_5415580611828389.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=5415580611828389"
+  },
+  {
+   "id": "750764182865260",
+   "date": "2022-08-28",
+   "lon": 77.570339099998,
+   "lat": 12.936975700001,
+   "dist_m": 8.0,
+   "angle": 343.39189612865,
+   "seq": "aGcsZ7BnP0KQ1FpRl594hu",
+   "period": "before",
+   "file": "patalamma_temple_road_before_2022-08-28_750764182865260.jpg",
+   "url": "https://www.mapillary.com/app/?pKey=750764182865260"
+  }
+ ]
+}

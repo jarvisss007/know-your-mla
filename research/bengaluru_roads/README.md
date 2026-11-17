@@ -50,3 +50,18 @@ OSM tags are volunteer edits and can be years old, so the table is a list of pla
 1. **Dated street-level photos.** Mapillary or KartaView pictures taken before and after the bill dates show concrete plainly. Both need a free account and API key (the owner's decision); or readers send dated photos through Have your say.
 2. **Field visits** to the roads in the table, photographing the surface at each end and the middle with the date.
 3. **Sub-metre imagery** (commercial) or Google Earth's historical imagery, viewed by a person. Google's terms do not allow automated extraction.
+
+## Street photos (Mapillary, checked 17 Nov 2026)
+
+`street_photos.py` lists every Mapillary photo within 20 m of each road (`data/street_photos.json`); `pick_photos.py` picks up to four per period, spread along the road, within 8 m (`data/photo_picks.json`, with a Mapillary link for each). Photos are judged by eye; images are not stored in this repo (Mapillary licence CC BY-SA; open them from the links). The access token lives only in the owner's home folder.
+
+| Road | Photos within 20 m | Before the bills | After the bills | Reading |
+|---|---|---|---|---|
+| Nagarabhavi 80 Feet Road | 0 | none | none | **No coverage. First road for a field visit.** |
+| JN Road, RR Nagar | 144 (2021-22 only) | dark asphalt in all 4 picked (Jan 2021, Aug 2022) | none | Before state is asphalt; after is unknown |
+| Taralabalu Road | 58 | asphalt (Feb 2018, Mar 2021; the 2021 frame may be Bellary Road) | none within 8 m | Open |
+| 100 Feet Road, Indiranagar | 6,542 (mostly 2016-18) | asphalt with patches (Jul 2022, one usable frame) | pale grey, concrete-looking surface at one junction under the metro (Sep 2026, 3 frames from one spot) | Consistent with white-topping at that spot only |
+| CMH Road | 2,918 | none of the 4 picked shows the carriageway (metro platform, footpaths, rooftop) | pale grey, concrete-looking surface with yellow box markings (dashcam, Jul 2025 by its own overlay; Mapillary dates it 18 Aug 2025) | Consistent with white-topping on the stretch shown |
+| Patalamma Temple Road | 211 | night photos (Aug 2022); surface type cannot be told | none | Open |
+
+Nothing seen contradicts a payment. Two roads look consistent with concrete where photographed, three have no after-photos, and one has no photos at all. Picks were automatic and several "before" frames point away from the road; a person choosing frames road by road would do better, and the 2016-18 photos on Indiranagar and CMH Road can show which stretches were already concrete from the earlier phase.
