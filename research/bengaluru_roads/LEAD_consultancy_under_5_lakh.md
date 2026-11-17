@@ -50,3 +50,7 @@ Consultancy is a service. On that text, the no-tender limit for these bills woul
 3. **Ask the Finance Department (or check the gazette)** for the current text of KTPP Act section 4(e) and any order on the limit for consultancy services by urban local bodies.
 
 If the awards were tendered, this closes. If they were nominated or quoted under a Rs 5 lakh limit, the pattern of one package paid in pieces is the story, with the corporation's answer alongside.
+
+## Related private lead (17 Nov 2026)
+
+The payee field in the payment view carries a phone number. Some consultants active in this Rs 5 lakh band share a number with another consultant, and in a few works one name wrote the design report while the other was paid to supervise the same work. Details, names and numbers are kept in the private leads repo until ownership is checked; nothing about them goes public before that.
