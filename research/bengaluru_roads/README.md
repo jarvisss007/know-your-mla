@@ -29,6 +29,18 @@ Limits: a 10 m pixel on a 15-30 m road also sees trees, parked vehicles and foot
 
 2,972 bill IDs appear two or more times with a different payment (RTGS) number and date; 2,872 of them match in every other field, including the net amount. 2,274 span the 2024-25 and 2025-26 files; the second listing is typically 7 to 12 months after the first. Summed, the repeats would be Rs 2,918.67 crore if each were a real payment. That size points to how the public view lists bills (re-listing, a new payment register, or the OpenCity compilation) rather than double payment, but this data cannot tell which. `data/repeated_bills.json` holds every case. Ask OpenCity how the files were compiled, and the corporation's accounts department what a second RTGS reference on the same bill means, before using it.
 
+### Follow-up on the repeated bills (17 Nov 2026): almost certainly a one-time records event
+
+- The payment (RTGS) numbering restarts in November 2024: April-October 2024 numbers run up to about 5,600, and from November 2024 they start again at 1. (It restarts again in October 2025.)
+- Bills first listed between April and November 2024 are listed a second time 37-75% of the time, depending on the month. Bills first listed from December 2024 onwards are almost never listed again (0-2% a month, and 0% from August 2025).
+- The second restart, in October 2025, produced no relisting.
+
+So the repeats cluster around one change in November 2024, not a steady habit of paying bills twice. The likeliest readings: payments recorded in the old series were re-recorded in the new one, or payment advices issued in the old series were not credited and were issued again. Either way, most of these bills were probably paid once. Which listing reflects the money actually leaving the account cannot be told from this data, so **the Rs 2,918.67 crore figure must not be used**.
+
+Questions to put (the owner sends them):
+1. To OpenCity (data.opencity.in): were the 2024-25 and 2025-26 files scraped at different times, and does the public view show a bill again when its payment is re-issued?
+2. To the accounts department of the Greater Bengaluru Authority (or by RTI): what changed in the payment register in November 2024, and for a sample of bill IDs listed twice (for example 604582, 613688, 632144 from `data/repeated_bills.json`), on which date was the money credited to the contractor?
+
 ## Result of the satellite pilot (16 Nov 2026): the method does not work at 10 m
 
 Six roads with white-topping payments were tested (`data/road_brightness.json`). None got brighter in any year 2019-2026: no 200 m stretch rose by more than 0.03 in visible reflectance, and every road stayed between about 0.05 and 0.12.
