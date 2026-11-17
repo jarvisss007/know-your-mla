@@ -30,7 +30,7 @@ def d(s):
 
 DATA = [{"dept": short_dept(r["department"]), "post": r["post"], "place": r["district"],
          "date": d(r["action_date"]), "action": r["action"], "src": r["source_url"]} for r in lok]
-DEPTS = sorted({x["dept"] for x in DATA}, key=lambda k: (-sum(1 for x in DATA if x["dept"] == k), k))
+DEPTS = sorted({x["dept"] for x in DATA if x["dept"] != "not stated"}, key=lambda k: (-sum(1 for x in DATA if x["dept"] == k), k))
 
 HEAD = """To
 The Public Information Officer
