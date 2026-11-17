@@ -45,6 +45,9 @@ PAGES = [
     ("research/satellite/DRAFT_mahadevapura_scorecard.html", "satellite/mahadevapura/index.html", "Mahadevapura From Space · Gandaberunda",
      "Sentinel-2 land-cover comparison of Mahadevapura constituency, February 2019 and February 2026.", None,
      ["truecolor_2019_2026.png", "change_map_2019_2026.png"], None),
+    ("research/officials_tracker/DRAFT_officials_tracker.html", "officials_tracker.html", "After the Raid · Gandaberunda",
+     "Karnataka officials raided, trapped or charged in 2026, followed from the first day towards a verdict. Posts, not names.",
+     None, [], None),
 ]
 
 
@@ -53,8 +56,12 @@ def build(src, dst, title, desc, alt, extra, note):
     body = s.read_text(encoding="utf-8")
     # drop the artifact-style title line; the page gets a real head below
     lines = body.split("\n")
-    if lines[0].startswith("<title>"):
+    # also drop a standalone page's own doctype/html/meta/title lines (the officials tracker is one)
+    standalone = lines[0].lstrip().lower().startswith("<!doctype")
+    while lines and lines[0].lstrip().lower().startswith(("<!doctype", "<html", "<meta charset", '<meta name="viewport"', "<title>")):
         lines = lines[1:]
+    while standalone and lines and lines[-1].strip().lower() in ("", "</html>", "</body>"):
+        lines = lines[:-1]
     body = "\n".join(lines)
     for a, b in BADGES.items():
         body = body.replace(f'class="draft">{a}<', f'class="draft">{b}<')
