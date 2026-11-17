@@ -58,6 +58,7 @@ valued = [claimed(r)[0] for r in rows if claimed(r)[0] is not None]
 total = sum(valued)
 moved = [r for r in rows if r["followup_url"]]
 unchecked = sum(1 for r in rows if r["followup"].startswith("Follow-up not yet checked"))
+unchecked_note = f" {unchecked} officials added late have not been checked yet." if unchecked else " Every official in the table has been checked at least once."
 reached = [sum(1 for r in rows if STAGE_RANK[r["stage"]] >= i) for i in range(len(LADDER))]
 groups = Counter(group(r) for r in rows).most_common()
 gmax = groups[0][1]
@@ -219,7 +220,7 @@ footer {{ border-top: 2px solid var(--fg); padding-top: 14px; }}
 <section>
   <h2>How far the 2026 cases have got</h2>
   <ol class="ladder">{ladder_html}</ol>
-  <p class="muted">Each number counts officials whose case reached that step or a later one, as far as the reports read show. A zero means no report of that step was found. It does not mean the step has not happened: the follow-up check on {d(checked)} was a web search by name in English and Kannada. It could not reach Vijaya Karnataka, Kannada Prabha or Prajavani, and did not cover court case-status sites or Lokayukta records. {unchecked} officials added late have not been checked yet. {len(moved)} rows carry a later development of another kind (a court order, further searches, a posting, a separate case); each is shown in the table with its source.</p>
+  <p class="muted">Each number counts officials whose case reached that step or a later one, as far as the reports read show. A zero means no report of that step was found. It does not mean the step has not happened: the follow-up check on {d(checked)} was a web search by name in English and Kannada. It could not reach Prajavani, Deccan Herald or the Lokayukta's own website, and did not cover court case-status sites.{unchecked_note} {len(moved)} rows carry a later development of another kind (a court order, further searches, a posting, a separate case); each is shown in the table with its source.</p>
 </section>
 
 <section>
