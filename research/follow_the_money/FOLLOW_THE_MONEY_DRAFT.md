@@ -94,3 +94,11 @@ From SFAR 2024-25 (page images checked: PDF pages 177-180):
 - Funding: about Rs 32 cr spent 2017-21; Rs 10.75 cr allocated 2021-22 (Vijayavani, 21 Jan 2022); "Rs 25 crore to Rs 5 crore" (Opposition leader R. Ashok, The Week, 7 Jan 2025, allegation); Rs 5 cr in 2024-25 (CAG App. 2.15); Rs 500 cr requested for 2026-27 (Vartha Bharati, 13 Feb 2026).
 - No order, legislature answer, news or investigation explains Rs 350 cr. The CAG's Rs 410.43 cr total includes it. Round-to-lakh balances and peer escrow/recovery balances of Rs 0.3-1.2 cr point to a possible unit error (unverified).
 - To settle: AOC-4 balance sheet 2023-24/2024-25 from MCA (owner: needs MCA login and fee), or RTI letter 5 to the corporation, or a query to AG (A&E) Karnataka.
+
+## Interest money traced (17 Nov 2026)
+
+- Rule: FD GO July 2003 (reiterated Aug 2019): remit interest to 0049; "shall not be used for any expenditure by the institutions" (SFAR 2023-24 para 4.2, checked). Another FD circular 01.03.2018: remit at year end (KRIDL PA para 2.3).
+- Unremitted interest by report: SFAR 2021-22 Rs 12.82 cr (p109, checked); SFAR 2022-23 Rs 198.99 cr, 13 bodies (p16, checked); SFAR 2023-24 Rs 14,549.91 cr incl. implausible Biodiversity Board line (about Rs 2,700 cr without it). KNNL and KRIDL first appear in 2023-24.
+- KRIDL: Rs 238.89 cr interest on scheme funds in flexi deposits 2018-21 not credited (KRIDL PA para 2.3, checked); funds available Rs 17,320.30 cr end 2020-21 (receipts less adjustments, not a bank balance).
+- State response: Oct 2024 circular, 30% of bank savings at 31 Mar 2024 as "Special Dividend"; Rs 970.02 cr collected 2024-25 vs Rs 284.88 cr (SFAR 2024-25, checked). Which companies paid: not stated. SFAR 2024-25 has no unremitted-interest paragraph.
+- KNNL balances: no public figure found (websites unreachable; AOC-4 via MCA not seen). KNNL off-budget loans outstanding Rs 2,128.28 cr at 31 Mar 2025 (SFAR 2024-25 Table 3.1, per agent; not rechecked).
