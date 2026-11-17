@@ -1,6 +1,6 @@
 # DRAFT reader request: photos of three Bengaluru roads
 
-Status: draft for the owner's approval. Not posted anywhere. The Kannada needs a native reader's check before use.
+Status: wording APPROVED by the owner on 17 Nov 2026 (English and X post). The Kannada still needs a native reader before use.
 Where it would go: the Have your say page (owned by the research and site session), X and WhatsApp (the owner posts).
 
 ## Why photos, and why Mapillary
