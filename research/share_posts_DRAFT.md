@@ -85,3 +85,15 @@ Scheduled on 18 Nov 2026 on the owner's instruction ("Yes, schedule it"), the fi
 To do after it goes live: reply to it with the link (X cannot schedule replies):
 https://jarvisss007.github.io/know-your-mla/reports/officials_tracker.html
 Then record its views 24 hours later in `ops/x_metrics.csv` to compare with the 1-view posts of 18 Nov.
+
+## 6. SCHEDULED on X: one card a day, 19-23 Nov 2026, 8:30 PM IST (7:00 AM PST)
+
+Scheduled 18 Nov 2026 on the owner's instruction ("DO WHAT ALL CAN FROM YPUR SIDE"). Each uses wording the owner approved and that was already posted (links removed, "Rs"/"ರೂ." for the rupee sign), with a card from `cards/money/`. Each needs one reply with its link after it goes live.
+
+| Date (IST 8:30 PM) | Lang | Card | Text from | Link for the reply |
+|---|---|---|---|---|
+| Thu 19 Nov | en | courts-en.png | section 4 (English) | https://jarvisss007.github.io/know-your-mla/reports/officials_tracker.html |
+| Fri 20 Nov | kn | corporations-kn.png | x_week_DRAFT Fri 20 Nov | https://jarvisss007.github.io/know-your-mla/reports/follow_the_money_kn.html#corporations |
+| Sat 21 Nov | en | mining-en.png | section 3 (English, mining) | https://jarvisss007.github.io/know-your-mla/reports/follow_the_money.html#mining |
+| Sun 22 Nov | en | parking-en.png | section 1 (English) | https://jarvisss007.github.io/know-your-mla/reports/follow_the_money.html |
+| Mon 23 Nov | kn | courts-kn.png | section 4 (Kannada) | https://jarvisss007.github.io/know-your-mla/reports/officials_tracker_kn.html |
