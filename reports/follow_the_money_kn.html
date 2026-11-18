@@ -71,6 +71,9 @@ table.led th, table.led td { text-align: left; padding: 8px 10px 8px 0; border-b
 table.led th { font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
 table.led td:not(:first-child), table.led th:not(:first-child) { text-align: right; white-space: nowrap; }
 table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
+nav.toc { display: flex; flex-wrap: wrap; gap: 8px; font-size: .88rem; }
+nav.toc a { text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; background: var(--surface); }
+nav.toc a:hover { border-color: var(--red); }
 </style>
 </head>
 <body>
@@ -84,6 +87,10 @@ table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
   <p class="muted"><span class="tag t-audit">ಲೆಕ್ಕಪರಿಶೋಧಿತ</span> ಎಂದು ಗುರುತಿಸಿದ ಅಂಕಿಗಳು ಭಾರತದ ಮಹಾಲೇಖಪಾಲರ (ಸಿಎಜಿ) ವರದಿಗಳಿಂದಲೇ ತೆಗೆದವು. ಪ್ರಕರಣಗಳನ್ನು <span class="tag t-proven">ಪತ್ತೆ</span> (ನ್ಯಾಯಾಲಯ, ಲೆಕ್ಕಪರಿಶೋಧನೆ ಅಥವಾ ಸಾಮಾಜಿಕ ಲೆಕ್ಕಪರಿಶೋಧನೆಯ ತೀರ್ಮಾನ), <span class="tag t-charged">ಆರೋಪಪಟ್ಟಿ</span> (ದೋಷಾರೋಪಣ ಪಟ್ಟಿ ಸಲ್ಲಿಕೆ, ತೀರ್ಪು ಇಲ್ಲ) ಅಥವಾ <span class="tag t-alleged">ಆರೋಪ</span> ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ. ಹೆಚ್ಚಿನ ಲೆಕ್ಕಪರಿಶೋಧನಾ ತೀರ್ಮಾನಗಳು ನಿಯಂತ್ರಣದ ವೈಫಲ್ಯಗಳು, ಯಾರೋ ಕದ್ದಿದ್ದಾರೆ ಎಂಬುದಕ್ಕೆ ಪುರಾವೆಯಲ್ಲ: ಲೆಕ್ಕಪರಿಶೋಧಕರ ಮಾತುಗಳನ್ನೇ ಬಳಸಲಾಗಿದೆ. ಉಲ್ಲೇಖಗಳು ಮೂಲ ಇಂಗ್ಲಿಷ್ ವರದಿಗಳಿಂದ; <a href="follow_the_money.html">ಇಂಗ್ಲಿಷ್ ಆವೃತ್ತಿ</a>.</p>
 </header>
 
+<nav class="toc" aria-label="ಈ ಪುಟದಲ್ಲಿ">
+  <a href="#journey">ಏಳು ಹಂತಗಳು</a><a href="#corporations">ನಿಗಮಗಳು</a><a href="#mining">ಗಣಿ ಹಣ</a><a href="#books">ಹೊಂದಿಕೆಯಾಗದ ಲೆಕ್ಕಗಳು</a><a href="#after">ಸೋರಿಕೆಯ ನಂತರ</a><a href="#ask">ದಾಖಲೆಗಳನ್ನು ಕೇಳಿ</a>
+</nav>
+
 <section class="stats" aria-label="ಮುಖ್ಯ ಲೆಕ್ಕಪರಿಶೋಧಿತ ಅಂಕಿಗಳು">
   <div class="stat"><b>₹29,770 ಕೋಟಿ</b><span>ಮತ ಪಡೆದ ಬಜೆಟ್‌ನ ಹೊರಗೆ ಠೇವಣಿ ಖಾತೆಗಳಲ್ಲಿ, 31 ಮಾರ್ಚ್ 2025; ಅದರಲ್ಲಿ ₹6,026 ಕೋಟಿ ಮಾರ್ಚ್ ತಿಂಗಳಲ್ಲೇ ವರ್ಗಾವಣೆ</span></div>
   <div class="stat"><b>₹410 ಕೋಟಿ</b><span>ಮುಚ್ಚಲು 2023ರಲ್ಲಿ ಆದೇಶವಿದ್ದರೂ ಹತ್ತು ನಿಗಮಗಳು ತೆರೆದಿಟ್ಟ 32 ಬ್ಯಾಂಕ್ ಖಾತೆಗಳಲ್ಲಿ; ಅದರಲ್ಲಿ ₹352 ಕೋಟಿ ಒಂದೇ ನಿಗಮದಲ್ಲಿ</span></div>
@@ -91,7 +98,7 @@ table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
   <div class="stat"><b>~90%</b><span>ಅನುದಾನ ಪಡೆಯುವ ಸಂಸ್ಥೆಗಳು, ಹಣ ಹೇಗೆ ಬಳಕೆಯಾಯಿತು ಎಂದು ಕೇಳುವ ತಪಾಸಣೆಯ ವ್ಯಾಪ್ತಿಯ ಹೊರಗಿವೆ</span></div>
 </section>
 
-<section>
+<section id="journey">
 <h2 style="margin-bottom:20px">ಹಣದ ಪ್ರಯಾಣ</h2>
 <ol class="pipe">
 
@@ -283,7 +290,7 @@ table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
   <p class="back"><b>ಕೇಳಿ:</b> <a href="../rti.html#letter-l5">ನಿಗಮದ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳಿಗಾಗಿ ಆರ್‌ಟಿಐ ಪತ್ರ</a> ಪ್ರತಿ ಖಾತೆ ಮತ್ತು ಶಿಲ್ಕು, ಅವುಗಳನ್ನು ತೆರೆದ ಆಡಳಿತ ಮಂಡಳಿ ನಿರ್ಣಯಗಳು, ಎಸ್ಕ್ರೋ ಮತ್ತು ವಸೂಲಾತಿ ಖಾತೆಗಳಲ್ಲಿ ಏನಿದೆ ಮತ್ತು ಆ ಹಣ ಎಲ್ಲಿಂದ ಬಂತು, ಗಳಿಸಿದ ಮತ್ತು ಮರಳಿಸಿದ ಬಡ್ಡಿ, ಮತ್ತು ಇತ್ತೀಚಿನ ಲೆಕ್ಕಪರಿಶೋಧಿತ ಲೆಕ್ಕಪತ್ರಗಳನ್ನು ಕೇಳುತ್ತದೆ.</p>
 </section>
 
-<section class="box">
+<section class="box" id="mining">
   <h2>ಗಣಿ ಹಣ</h2>
   <p>ಗಣಿಗಾರಿಕೆಯಿಂದಾದ ಹಾನಿಯನ್ನು ಸರಿಪಡಿಸಲು ಗಣಿ ಜಿಲ್ಲೆಗಳಿಗೆ ಎರಡು ನಿಧಿಗಳಿವೆ: ಸುಪ್ರೀಂ ಕೋರ್ಟ್ ಆದೇಶದ ಮೇರೆಗೆ ಕರ್ನಾಟಕ ಗಣಿ ಪರಿಸರ ಪುನಶ್ಚೇತನ ನಿಗಮ (ಕೆಎಂಇಆರ್‌ಸಿ) ನಡೆಸುವ ಪುನಶ್ಚೇತನ ನಿಧಿ, ಮತ್ತು ಗಣಿಗಾರಿಕೆಯ ಮೇಲಿನ ಶುಲ್ಕದಿಂದ ಬರುವ ಪ್ರತಿ ಜಿಲ್ಲೆಯ ಜಿಲ್ಲಾ ಖನಿಜ ಪ್ರತಿಷ್ಠಾನ.</p>
   <ul>
@@ -296,7 +303,7 @@ table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
   <p class="src">ಸಿಎಜಿ ವರದಿ 2023-24, ಕೋಷ್ಟಕ 4.8 (ಪುಟ 117); ವರದಿ 2024-25, ಕೋಷ್ಟಕ 3.8 (ಪುಟ 98); ಹಣಕಾಸು ಲೆಕ್ಕಗಳು 2024-25 ಸಂಪುಟ 1, ಟಿಪ್ಪಣಿಗಳು, ಪುಟ 72; ಜಿಲ್ಲಾ ಖನಿಜ ಪ್ರತಿಷ್ಠಾನ ಸೇರಿದಂತೆ ಪಿಎಂಕೆಕೆಕೆವೈ ಕಾರ್ಯನಿರ್ವಹಣಾ ಲೆಕ್ಕಪರಿಶೋಧನೆ, ವರದಿ 7/2025 (17 ಡಿಸೆಂಬರ್ 2025ರಂದು ಮಂಡನೆ), ಚಾರ್ಟ್ 3.2 ಮತ್ತು ಕೋಷ್ಟಕ 3.2 (ಪುಟ 14-15), ಕಂಡಿಕೆ 4.1 (ಪುಟ 19), 4.6.1 (ಪುಟ 22), 5.1, ಕೋಷ್ಟಕ 5.2 (ಪುಟ 30), 5.11 (ಪುಟ 49); ಸುದ್ದಿ: ಡೆಕ್ಕನ್ ಹೆರಾಲ್ಡ್, 26 ಜೂನ್ 2024</p>
 </section>
 
-<section class="box">
+<section class="box" id="books">
   <h2>ಲೆಕ್ಕಗಳೇ ಹೊಂದಿಕೆಯಾಗದ ಕಡೆ <span class="tag t-audit">ಲೆಕ್ಕಪರಿಶೋಧಿತ</span></h2>
   <p>ಹಣ ಸೋರಿಕೆಯಾಗಿದೆ ಎಂದು ಹೇಳುವ ಮೊದಲು ಲೆಕ್ಕಗಳು ಹೊಂದಿಕೆಯಾಗಬೇಕು. 2024-25ರಲ್ಲಿ ಇವು ಹೊಂದಿಕೆಯಾಗಲಿಲ್ಲ.</p>
   <ul>
@@ -309,7 +316,7 @@ table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
   <p class="src">ಸಿಎಜಿ ವರದಿ 2024-25, ಕೋಷ್ಟಕ 3.8, ಕಂಡಿಕೆ 3.5 (ಬಿ), ಕಂಡಿಕೆ 3.6 ಮತ್ತು ಕೋಷ್ಟಕ 3.9, ಕಂಡಿಕೆ 3.7 ಮತ್ತು ಕೋಷ್ಟಕ 3.11 (ಪುಟ 98-100); ಅನುಬಂಧ 3.1 ಮತ್ತು 3.2 (ಪುಟ 157-158)</p>
 </section>
 
-<section class="box">
+<section class="box" id="after">
   <h2>ಸೋರಿಕೆಯ ನಂತರ: ಯಾರು ಹಿಡಿಯುತ್ತಾರೆ, ಏನಾಗುತ್ತದೆ</h2>
   <ul>
     <li>ಮಾರ್ಚ್ 2025ರಲ್ಲಿ <b>₹149.83 ಕೋಟಿಯ 41 ದುರುಪಯೋಗ, ನಷ್ಟ ಮತ್ತು ಕಳ್ಳತನ ಪ್ರಕರಣಗಳು</b> ಬಾಕಿ ಇದ್ದವು; ಅವುಗಳಲ್ಲಿ 14 ಹತ್ತು ವರ್ಷಕ್ಕೂ ಹಳೆಯವು (ಸಿಎಜಿ ವರದಿ 2024-25, ಕಂಡಿಕೆ 3.12).</li>
@@ -319,7 +326,7 @@ table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
   </ul>
 </section>
 
-<section class="box">
+<section class="box" id="ask">
   <h2>ನೀವು ಏನನ್ನು ಕೇಳಬಹುದು</h2>
   <p>ಮೇಲಿನ ಪ್ರತಿ ಹಂತವೂ ದಾಖಲೆಯನ್ನು ಬಿಟ್ಟುಹೋಗುತ್ತದೆ. ಯಾವುದೇ ನಾಗರಿಕರು ಮಾಹಿತಿ ಹಕ್ಕು ಅಧಿನಿಯಮದಡಿ ಅದನ್ನು ಕೇಳಬಹುದು: ಇಲಾಖೆಯ ಠೇವಣಿ ಖಾತೆಯ ಶಿಲ್ಕು, ನಿಗಮದ ಬ್ಯಾಂಕ್ ಖಾತೆಗಳು, ಮುಂಗಡಕ್ಕೆ ಎದುರಾದ ವಿವರವಾದ ಬಿಲ್ಲುಗಳು, ನಿಮ್ಮ ವಾರ್ಡಿನ ರಸ್ತೆಯ ಅಳತೆ ಪುಸ್ತಕ, ನಿಮ್ಮ ಪಂಚಾಯಿತಿಯ ಫಲಾನುಭವಿ ಪಟ್ಟಿ. ಸಿದ್ಧ ಪತ್ರಗಳು <a href="../rti.html">ಆರ್‌ಟಿಐ ಪುಟದಲ್ಲಿ</a> ಇವೆ.</p>
 </section>

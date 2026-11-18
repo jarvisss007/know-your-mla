@@ -71,6 +71,9 @@ table.led th, table.led td { text-align: left; padding: 8px 10px 8px 0; border-b
 table.led th { font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
 table.led td:not(:first-child), table.led th:not(:first-child) { text-align: right; white-space: nowrap; }
 table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
+nav.toc { display: flex; flex-wrap: wrap; gap: 8px; font-size: .88rem; }
+nav.toc a { text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; background: var(--surface); }
+nav.toc a:hover { border-color: var(--red); }
 </style>
 </head>
 <body>
@@ -84,6 +87,10 @@ table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
   <p class="muted">Figures marked <span class="tag t-audit">Audited</span> are from the Comptroller and Auditor General (CAG), quoted from the report itself. Cases are marked <span class="tag t-proven">Finding</span> (court, audit or social-audit finding), <span class="tag t-charged">Charged</span> (chargesheet filed, no verdict) or <span class="tag t-alleged">Alleged</span>. Most audit findings are failures of control, not proof that anyone stole: the auditor's words are used as written.</p>
 </header>
 
+<nav class="toc" aria-label="On this page">
+  <a href="#journey">The seven stages</a><a href="#corporations">Corporations</a><a href="#mining">Mining money</a><a href="#books">Books that don't match</a><a href="#after">After the leak</a><a href="#ask">Ask for the records</a>
+</nav>
+
 <section class="stats" aria-label="Headline audited figures">
   <div class="stat"><b>₹29,770 cr</b><span>sitting in deposit accounts outside the voted budget, 31 March 2025; ₹6,026 cr of it moved there in March alone</span></div>
   <div class="stat"><b>₹410 cr</b><span>in 32 bank accounts that ten corporations kept open despite a 2023 order to close them; ₹352 cr of it in one corporation</span></div>
@@ -91,7 +98,7 @@ table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
   <div class="stat"><b>~90%</b><span>of bodies receiving grants are outside the check that asks how the money was used</span></div>
 </section>
 
-<section>
+<section id="journey">
 <h2 style="margin-bottom:20px">The journey</h2>
 <ol class="pipe">
 
@@ -283,7 +290,7 @@ table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
   <p class="back"><b>Ask for it:</b> the <a href="../rti.html#letter-l5">RTI letter for a corporation's bank accounts</a> asks for every account with its balance, the board resolutions that opened them, what the escrow and recovery accounts hold and where the money came from, interest earned and paid back, and the latest audited accounts.</p>
 </section>
 
-<section class="box">
+<section class="box" id="mining">
   <h2>The mining money</h2>
   <p>Mining districts have two funds meant to repair the damage mining does: the Supreme Court-ordered restoration fund run by the Karnataka Mining Environment Restoration Corporation (KMERC), and each district's District Mineral Foundation, paid for by a levy on mining.</p>
   <ul>
@@ -296,7 +303,7 @@ table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
   <p class="src">CAG SFAR 2023-24, Table 4.8 (p. 117); SFAR 2024-25, Table 3.8 (p. 98); Finance Accounts 2024-25 Vol. I, Notes, p. 72; CAG Performance Audit of PMKKKY including District Mineral Foundation Trusts, Report No. 7 of 2025 (tabled 17 December 2025), Chart 3.2 and Table 3.2 (pp. 14-15), para 4.1 (p. 19), para 4.6.1 (p. 22), para 5.1, Table 5.2 (p. 30), para 5.11 (p. 49); news: Deccan Herald, 26 June 2024</p>
 </section>
 
-<section class="box">
+<section class="box" id="books">
   <h2>Where the books themselves stop matching <span class="tag t-audit">Audited</span></h2>
   <p>Before anyone can say money leaked, the accounts have to add up. In 2024-25 these did not.</p>
   <ul>
@@ -309,7 +316,7 @@ table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
   <p class="src">CAG SFAR 2024-25, Table 3.8, para 3.5 (b), para 3.6 and Table 3.9, para 3.7 and Table 3.11 (pp. 98-100); Appendices 3.1 and 3.2 (pp. 157-158)</p>
 </section>
 
-<section class="box">
+<section class="box" id="after">
   <h2>After the leak: who catches it, and what happens</h2>
   <ul>
     <li><b>41 cases of misappropriation, losses and theft worth ₹149.83 crore</b> were pending in March 2025; 14 of them are more than ten years old (CAG SFAR 2024-25, para 3.12).</li>
@@ -319,7 +326,7 @@ table.led tr.tot td { border-top: 2px solid var(--fg); font-weight: 600; }
   </ul>
 </section>
 
-<section class="box">
+<section class="box" id="ask">
   <h2>What you can ask for</h2>
   <p>Every stage above leaves a record. Any citizen can ask for it under the Right to Information Act: the deposit-account balance of a department, the bank accounts of a corporation, the detailed bills against an advance, the measurement book of a road in your ward, the beneficiary list of your panchayat. Ready-made letters for raid follow-ups are on the <a href="../rti.html">RTI page</a>.</p>
 </section>

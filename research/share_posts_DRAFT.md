@@ -49,3 +49,19 @@ https://jarvisss007.github.io/know-your-mla/rti.html
 - Numbers: ₹6,026 cr (SFAR 2024-25, para 3.5.1); "mere parking of funds" (para 2.7.1.2A); ₹410 cr / 32 accounts / ₹352 cr (Appendix 2.16); ₹5 cr grant (Appendix 2.15); 64 officials / 55 with no later step (tracker, 17 Nov 2026; recheck the count on the day of posting).
 - The ₹352 crore post must not suggest wrongdoing: the page says it may be a misprint. Keep "the auditor's tables, traced", no adjectives.
 - Kannada lines need the native reviewer's eye like the rest of the site.
+
+## 3. New drafts, 18 Nov 2026 (not posted)
+
+**X (English), mining money** (271 chars)
+Karnataka's district mineral funds collected Rs 4,004 crore by March 2023 and spent Rs 1,826 crore. 2,190 projects never started. The steering committee headed by the Chief Minister did not meet once from 2018 to June 2023 (CAG, Report 7 of 2025).
+https://jarvisss007.github.io/know-your-mla/reports/follow_the_money.html#mining
+
+**X (Kannada), mining money**
+ಜಿಲ್ಲಾ ಖನಿಜ ಪ್ರತಿಷ್ಠಾನಗಳು ಮಾರ್ಚ್ 2023ರವರೆಗೆ ₹4,004 ಕೋಟಿ ಸಂಗ್ರಹಿಸಿ ₹1,826 ಕೋಟಿ ಖರ್ಚು ಮಾಡಿದವು. 2,190 ಯೋಜನೆಗಳು ಆರಂಭವೇ ಆಗಲಿಲ್ಲ. ಮುಖ್ಯಮಂತ್ರಿಗಳ ಅಧ್ಯಕ್ಷತೆಯ ಸಮಿತಿ 2018ರಿಂದ ಜೂನ್ 2023ರವರೆಗೆ ಒಮ್ಮೆಯೂ ಸಭೆ ಸೇರಲಿಲ್ಲ (ಸಿಎಜಿ):
+https://jarvisss007.github.io/know-your-mla/reports/follow_the_money_kn.html#mining
+
+**X (English), central schemes** (274 chars)
+Rs 1,242 crore of five central schemes sat unspent in bank accounts on 31 March 2025. For Anganwadi and nutrition, the state's treasury and the Centre's payment system differ by Rs 410 crore on what was passed on. The auditor asked why; no reply yet.
+https://jarvisss007.github.io/know-your-mla/reports/follow_the_money.html#journey
+
+Checks before posting: mining figures from CAG Report 7 of 2025 (Chart 3.2, para 4.6.1); central-scheme figures from SFAR 2024-25 Tables 2.16-2.20. Both are audited; neither post alleges theft.
