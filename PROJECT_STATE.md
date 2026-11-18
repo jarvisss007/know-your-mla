@@ -15,6 +15,9 @@ https://jarvisss007.github.io/know-your-mla/. Push to `main` to publish; it is l
 | MLA report cards (224 pages + list + `sitemap.xml`) | `mla/<constituency-slug>.html`, `mla/index.html` | `py tools/make_mla_pages.py` (re-run after `D` changes) |
 | Farmer scheme finder | `farmers.html` | hand-edited |
 | Research reports (test versions) | `reports/` | `py tools/publish_reports.py` (copies drafts from `research/`) |
+| RTI letters (5 letters, EN/KN switch) | `rti.html` | `py tools/make_rti_page.py` (reads the officials tracker; re-run after it changes) |
+| After the raid (officials tracker, EN/KN) | `reports/officials_tracker.html`, `_kn.html` | `py research/officials_tracker/build.py` then `py tools/publish_reports.py`; names only in the private repo |
+| Follow the rupee (EN/KN) | `reports/follow_the_money.html`, `_kn.html` | hand-edited drafts in `research/follow_the_money/` (notes: FOLLOW_THE_MONEY_DRAFT.md), then `py tools/publish_reports.py`; edit both languages together |
 | Satellite pages | `reports/satellite/{kanakapura,holenarasipur,mahadevapura}/` | `research/satellite/make_rural_page.py <folder>` and `make_page.py` (Mahadevapura), then `publish_reports.py` |
 | Cards | `cards/farmers/`, `cards/join/` | `tools/make_farmer_cards.py`, `tools/make_join_cards.py` |
 
