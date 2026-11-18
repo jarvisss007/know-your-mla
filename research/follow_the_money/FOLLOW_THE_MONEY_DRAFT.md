@@ -109,3 +109,8 @@ From SFAR 2024-25 (page images checked: PDF pages 177-180):
 - Adverse PD balances Rs 1,911.92 cr (para 3.5(b), App. 3.2); state reply Jan 2026: inoperative accounts not closed due to non-reconciliation AG(A&E) vs Treasury.
 - Minor Head 800: Rs 7,588.39 cr (2.25%) under 31 major heads; Rs 2,532.53 cr misclassified (Table 3.9: 2210 1,729.18; 2216 266.99; 2217 4.40; 4701 531.96).
 - Suspense (Table 3.11): Public Works Remittances Dr 82.61 (2023-24) to Dr 964.68 (2024-25); TDS suspense Cr 793.95.
+
+## Deposit accounts in detail (SFAR 2024-25 Appendices 3.1, 3.2; page images checked 18 Nov 2026)
+
+- App. 3.2 negative balances, 25 accounts, total Rs 19,11,91,86,101.96 (our sum matches): Secondary Karnataka Consumer Protection Board 14,32,80,71,370 (74.9%, likely a booking error); Private Estate under Government Management 2,62,40,44,910.47; land acquisition (SLAO Ramanagara, Hemavathy Canal Zone Tumakuru 34.68 cr, Hemavathy Reservoir Hassan 43.18 cr, Sakaleshpura 24.07 cr, Tumakuru 24.18 cr, AC & SLAO Tarikere 5.08 cr, UKP land acquisition Bagalkote 4.26 cr) = Rs 138.82 cr; Bagalkot TDA 47.74 cr; KPSC Secretary 0.67 cr.
+- App. 3.1 inoperative: 16 credit balances Rs 339.85 cr (Collegiate Education 197.41 cr since 2018-19; CAO Rural Road Development Agency 59.98 cr since 2019-20; Special DC 50.63 cr since 2018-19; Money Lenders and Pawn Brokers 14.22 cr; Sugar price equalisation fund 11.66 cr since 2010-11); 8 debit balances Rs 5,774.84 cr, of which "Receipts awaiting transfers" Dr 5,759.92 cr since 2020-21.
