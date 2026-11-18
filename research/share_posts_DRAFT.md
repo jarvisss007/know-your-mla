@@ -77,3 +77,11 @@ https://jarvisss007.github.io/know-your-mla/reports/officials_tracker.html
 https://jarvisss007.github.io/know-your-mla/reports/officials_tracker_kn.html
 
 Checks: NCRB Crime in India 2023 Vol. II, Table 8C.4 (pp. 782-783): Karnataka trials completed 120, convicted 35, conviction rate 29.2% (All India 46.2%), pending trial at year end 1,529. "About 13 years" is our arithmetic (1,529 / 120 = 12.7), labelled as such on the page. 72 officials and no verdict: tracker, 18 Nov 2026 (recheck on the day of posting). When posting, type "Rs" not the rupee sign; none is needed here.
+
+## 5. SCHEDULED on X (@anupam00720): courts card, 19 Nov 2026, 8:30 PM IST (7:00 AM PST)
+
+Scheduled on 18 Nov 2026 on the owner's instruction ("Yes, schedule it"), the first post under the new X rules in CHANNEL_OPS.md: text of section 4 (English) without the link, with `cards/money/courts-en.png` attached.
+
+To do after it goes live: reply to it with the link (X cannot schedule replies):
+https://jarvisss007.github.io/know-your-mla/reports/officials_tracker.html
+Then record its views 24 hours later in `ops/x_metrics.csv` to compare with the 1-view posts of 18 Nov.
