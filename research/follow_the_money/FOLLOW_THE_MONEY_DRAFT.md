@@ -133,3 +133,9 @@ From SFAR 2024-25 (page images checked: PDF pages 177-180):
 - Not traceable in public records. Finance Accounts 2024-25 Vol I Notes p.72 (checked): PD withdrawals Rs 15,991.01 cr, "Number of Administrators ... withdrawn ... Nil" (footnote 3), no account-wise breakdown; KMERC PD Rs 22,115.30 cr "not required to be written back". Vol II Statement 21: head 8443-106 totals only. Inflows to KMERC in 2024-25 not published (SC 14 Mar 2024: contributions to continue), so gross outflow unknown.
 - News only: Oversight Authority approvals (358 projects Rs 7,928.78 cr; 47 work orders, Jun 2024); Rs 266.12 cr Ballari hospital projects (Jan 2025); RITES Rs 453.99 cr rail terminals contract (Oct 2024). NMDC refund Rs 24.52 cr (29 Apr 2024).
 - RTI letter 6 added (AG A&E: KMERC PD ledger 2024-25; administrator-wise PD withdrawals).
+
+## Central schemes in nodal accounts (SFAR 2024-25 paras 2.6.2-2.6.3, Tables 2.16-2.20, pp. 80-82; images checked 18 Nov 2026)
+
+- Outstanding in SNA accounts 31 Mar 2025: MGNREGA 73.84; Samagra Shiksha 172.04; Saksham Anganwadi & Poshan 2.0 370.01; NHM flexible pool 14.48; Urban Rejuvenation Mission (AMRUT) 612.04; total 1,242.41 (our sum).
+- VLC vs PFMS: Poshan central share transferred 465.85 vs 875.84 (diff 409.74); AMRUT central share received 723.11 vs 311.23 (diff 411.88), transferred 144.35 vs 311.23; NHM excess state share 263.55, central commodity 144.59 not released to SNA; MGNREGA central share 433.27 short-transferred (reply awaited).
+- SNA-SPARSH: 140 CSS; 29 fully onboarded; 111 not yet; MGNREGA and AMRUT onboarded March 2025.
