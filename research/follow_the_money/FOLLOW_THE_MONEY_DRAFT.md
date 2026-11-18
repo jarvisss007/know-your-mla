@@ -114,3 +114,11 @@ From SFAR 2024-25 (page images checked: PDF pages 177-180):
 
 - App. 3.2 negative balances, 25 accounts, total Rs 19,11,91,86,101.96 (our sum matches): Secondary Karnataka Consumer Protection Board 14,32,80,71,370 (74.9%, likely a booking error); Private Estate under Government Management 2,62,40,44,910.47; land acquisition (SLAO Ramanagara, Hemavathy Canal Zone Tumakuru 34.68 cr, Hemavathy Reservoir Hassan 43.18 cr, Sakaleshpura 24.07 cr, Tumakuru 24.18 cr, AC & SLAO Tarikere 5.08 cr, UKP land acquisition Bagalkote 4.26 cr) = Rs 138.82 cr; Bagalkot TDA 47.74 cr; KPSC Secretary 0.67 cr.
 - App. 3.1 inoperative: 16 credit balances Rs 339.85 cr (Collegiate Education 197.41 cr since 2018-19; CAO Rural Road Development Agency 59.98 cr since 2019-20; Special DC 50.63 cr since 2018-19; Money Lenders and Pawn Brokers 14.22 cr; Sugar price equalisation fund 11.66 cr since 2010-11); 8 debit balances Rs 5,774.84 cr, of which "Receipts awaiting transfers" Dr 5,759.92 cr since 2020-21.
+
+## CAG Compliance Audit Report No. 1 of 2026 (tabled 26 Mar 2026) and Gruha Lakshmi (18 Nov 2026)
+
+- Sports (DYES): para 2.1.2.8 (p. 24, checked): 62 beneficiaries' money credited to three accounts of a non-beneficiary, Rs 0.44 cr "suspected fraudulent"; Table 2.6 other discrepancies Rs 0.49 cr (40 cases); inquiry committee (Sep 2025). Para 2.1.2.7: Rs 4.54 cr to 316 ineligible. Para 2.1.2.6: vouchers for Rs 8.46 cr of Rs 11.47 cr not produced (per agent, not rechecked).
+- ESIS Bagalkote dispensary: para 2.3 (p. 57, checked): 902 fake claims on 57 forged sanction orders, 65 inserted claims Rs 36.08 lakh, forged hospital bills; suspected misappropriation Rs 4.03 cr (3.67 + 0.36); recovery Rs 2.15 cr decided (April 2024).
+- Higher Education para 2.4 (p. 57, checked): Rs 146.23 cr GIA to BVBCET Hubballi and SJCE Mysuru after they joined KLE Tech and JSS S&T universities.
+- Para 1.10.1: 44,526 paragraphs outstanding, 30,476 over five years (per agent).
+- Gruha Lakshmi: no CAG text; press reports of preliminary observations (19,020 beneficiaries on common accounts etc.); AG (Audit-I) letter of 2 Sep 2026 said not final. Government's own figure (ThePrint): Rs 115 cr to 1,08,755 deceased, Rs 15.24 cr recovered. Only the government figure is on the page.
