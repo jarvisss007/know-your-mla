@@ -1,6 +1,6 @@
 # DRAFT: one week on X (@anupam00720), 19-25 Nov 2026
 
-Not posted, not scheduled. The owner approves first; then each post is queued with X's free "Schedule post" button (no Premium needed). One or two posts a day, Kannada and English alternating, one thread. Every figure is on a linked page with its source; nothing alleges theft that a court or auditor has not found.
+POSTED: all 13 published on X (@anupam00720) on 18 Nov 2026, 21:15-21:19 UTC, on the owner's instruction ("post all now only"), instead of the planned schedule. As posted, the Rs sign was written "Rs" (English) and "ರೂ." (Kannada), and the thread emoji was dropped, because typing them scrambled the text. Note: the central-schemes post repeats the opening of the one posted at 21:04 UTC the same day. The owner approves first; then each post is queued with X's free "Schedule post" button (no Premium needed). One or two posts a day, Kannada and English alternating, one thread. Every figure is on a linked page with its source; nothing alleges theft that a court or auditor has not found.
 
 Links (counted as 23 characters each by X):
 - FTR = https://jarvisss007.github.io/know-your-mla/reports/follow_the_money.html
