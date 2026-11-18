@@ -86,7 +86,7 @@ To do after it goes live: reply to it with the link (X cannot schedule replies):
 https://jarvisss007.github.io/know-your-mla/reports/officials_tracker.html
 Then record its views 24 hours later in `ops/x_metrics.csv` to compare with the 1-view posts of 18 Nov.
 
-## 6. SCHEDULED on X: one card a day, 19-23 Nov 2026, 8:30 PM IST (7:00 AM PST)
+## 6. POSTED on X: five card posts, 18 Nov 2026, 23:01-23:04 UTC (were scheduled one a day, 19-23 Nov)
 
 Scheduled 18 Nov 2026 on the owner's instruction ("DO WHAT ALL CAN FROM YPUR SIDE"). Each uses wording the owner approved and that was already posted (links removed, "Rs"/"ರೂ." for the rupee sign), with a card from `cards/money/`. Each needs one reply with its link after it goes live.
 
@@ -97,3 +97,11 @@ Scheduled 18 Nov 2026 on the owner's instruction ("DO WHAT ALL CAN FROM YPUR SID
 | Sat 21 Nov | en | mining-en.png | section 3 (English, mining) | https://jarvisss007.github.io/know-your-mla/reports/follow_the_money.html#mining |
 | Sun 22 Nov | en | parking-en.png | section 1 (English) | https://jarvisss007.github.io/know-your-mla/reports/follow_the_money.html |
 | Mon 23 Nov | kn | courts-kn.png | section 4 (Kannada) | https://jarvisss007.github.io/know-your-mla/reports/officials_tracker_kn.html |
+
+On the owner's instruction ("ALL", after being told it repeats the burst) all five were taken off the schedule and posted at once on 18 Nov 2026, each followed by its link reply (23:04-23:06 UTC):
+- courts (en): https://x.com/anupam00720/status/2123189849578676655, reply .../2123190666813649311
+- corporations (kn): https://x.com/anupam00720/status/2123189997344051560, reply .../2123190754306928981
+- mining (en): https://x.com/anupam00720/status/2123190123215102434, reply .../2123190838985658614
+- parking (en): https://x.com/anupam00720/status/2123190276533678484, reply .../2123190926512427325
+- courts (kn): https://x.com/anupam00720/status/2123190413427343373, reply .../2123191024235450370
+Note: the English courts card post repeats the text of the NCRB post of 22:30 UTC the same evening. Nothing is scheduled on X now.
