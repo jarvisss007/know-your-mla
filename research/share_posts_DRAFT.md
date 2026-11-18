@@ -66,7 +66,7 @@ https://jarvisss007.github.io/know-your-mla/reports/follow_the_money.html#journe
 
 Checks before posting: mining figures from CAG Report 7 of 2025 (Chart 3.2, para 4.6.1); central-scheme figures from SFAR 2024-25 Tables 2.16-2.20. Both are audited; neither post alleges theft.
 
-## 4. New drafts, 18 Nov 2026: NOT POSTED, waiting for the owner's approval
+## 4. New drafts, 18 Nov 2026: both POSTED on X (@anupam00720) on 18 Nov 2026, 22:30 UTC, on the owner's instruction ("Post both now"): https://x.com/anupam00720/status/2123181984440836586 (English), https://x.com/anupam00720/status/2123182136920547699 (Kannada)
 
 **X (English), how cases end** (256 chars)
 In 2023, Karnataka courts finished 120 corruption trials: 35 convictions (29%; India 46%). 1,529 cases still waited for trial, about 13 years at that pace. Of the 72 officials on our 2026 tracker, none has a verdict yet. (NCRB 2023)
