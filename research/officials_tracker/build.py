@@ -284,6 +284,18 @@ page = f"""<!doctype html>
 </section>
 
 <section>
+  <h2>How such cases usually end</h2>
+  <p class="muted">The state's own figures for corruption cases, all agencies, as reported to the National Crime Records Bureau for 2023 (the latest year published). They show what the cases above are up against.</p>
+  <ol class="ladder">
+    <li><b>362</b><span>new corruption cases registered in Karnataka in 2023 (245 bribery traps, 84 assets cases)</span></li>
+    <li><b>195</b><span>cases charge-sheeted in 2023; 1,448 were still under investigation at the year's end</span></li>
+    <li><b>120</b><span>trials finished in 2023, out of 1,690 cases waiting for trial</span></li>
+    <li class="zero"><b>35</b><span>ended in conviction: 29.2%, against 46.2% for India. 74 ended in acquittal</span></li>
+  </ol>
+  <p class="muted">At the end of 2023, 1,529 Karnataka corruption cases were pending trial, 90.5% of all cases due for trial that year. At the 2023 pace of 120 finished trials a year, that is about 13 years of work (our arithmetic). That year courts also quashed 28 cases and stayed 70. Of the people involved, 43 were convicted and 4 were dismissed or removed from service. Source: <a href="https://www.ncrb.mha.gov.in/uploads/files/2CrimeinIndia2023PartII.pdf">NCRB, Crime in India 2023, Vol. II, Tables 8C.2 to 8C.5 (pp. 779-784)</a>; Karnataka rows checked against the page images on 18 Nov 2026. These are all corruption cases in the state, not only the officials on this page.</p>
+</section>
+
+<section>
   <h2>Where the money was found</h2>
   <p class="muted">For {na} of the {n} officials, a report listed what kind of assets the agency found. This is what those lists contain. It shows where wealth is kept, not that any of it is illegal: each figure is a first-day claim that the case still has to prove.</p>
   <div class="tbl"><table>
@@ -310,7 +322,7 @@ page = f"""<!doctype html>
 <section>
   <h2>What is missing</h2>
   <ul>
-    <li>This is not every case of 2026. No assets raid was found for May or November 2026. A Mysuru raid reported on 5 Feb 2026 is a lead only. Bribery-trap cases are not tracked systematically: there were many more in 2026 than the few shown here.</li>
+    <li>This is not every case of 2026. No assets raid was found for May 2026. A Mysuru raid reported on 5 Feb 2026 is a lead only. Bribery-trap cases are not tracked systematically: there were many more in 2026 than the few shown here.</li>
     <li>The follow-up check was a press search. Chargesheets, sanction requests, court stays and verdicts are rarely reported and must come from Lokayukta replies, RTI answers and court records. The outcome of the High Court hearing of 22 Jul 2026 in the excise matter was not found.</li>
     <li>Follow-up entries marked UNVERIFIED rest on a single outlet. The arrest in a separate case is matched by name and former post.</li>
     <li>Several asset figures come from one small outlet, and reports of the same raid often differ on the post, the department or the amount; the notes say where.</li>
@@ -370,6 +382,18 @@ page_kn = f"""<!doctype html>
 </section>
 
 <section>
+  <h2>ಇಂತಹ ಪ್ರಕರಣಗಳು ಸಾಮಾನ್ಯವಾಗಿ ಹೇಗೆ ಮುಗಿಯುತ್ತವೆ</h2>
+  <p class="muted">ಎಲ್ಲ ತನಿಖಾ ಸಂಸ್ಥೆಗಳ ಭ್ರಷ್ಟಾಚಾರ ಪ್ರಕರಣಗಳ ಬಗ್ಗೆ ರಾಜ್ಯವೇ ರಾಷ್ಟ್ರೀಯ ಅಪರಾಧ ದಾಖಲೆಗಳ ಬ್ಯೂರೋಗೆ (ಎನ್‌ಸಿಆರ್‌ಬಿ) 2023ಕ್ಕೆ ನೀಡಿದ ಅಂಕಿಗಳು (ಪ್ರಕಟವಾಗಿರುವ ಇತ್ತೀಚಿನ ವರ್ಷ). ಮೇಲಿನ ಪ್ರಕರಣಗಳ ಮುಂದಿರುವ ದಾರಿ ಇದು.</p>
+  <ol class="ladder">
+    <li><b>362</b><span>2023ರಲ್ಲಿ ಕರ್ನಾಟಕದಲ್ಲಿ ದಾಖಲಾದ ಹೊಸ ಭ್ರಷ್ಟಾಚಾರ ಪ್ರಕರಣಗಳು (245 ಲಂಚದ ಟ್ರ್ಯಾಪ್, 84 ಆಸ್ತಿ ಪ್ರಕರಣಗಳು)</span></li>
+    <li><b>195</b><span>2023ರಲ್ಲಿ ದೋಷಾರೋಪಣ ಪಟ್ಟಿ ಸಲ್ಲಿಸಿದ ಪ್ರಕರಣಗಳು; ವರ್ಷಾಂತ್ಯದಲ್ಲಿ 1,448 ಇನ್ನೂ ತನಿಖೆಯಲ್ಲಿದ್ದವು</span></li>
+    <li><b>120</b><span>2023ರಲ್ಲಿ ಮುಗಿದ ವಿಚಾರಣೆಗಳು, ವಿಚಾರಣೆಗೆ ಕಾಯುತ್ತಿದ್ದ 1,690 ಪ್ರಕರಣಗಳಲ್ಲಿ</span></li>
+    <li class="zero"><b>35</b><span>ಶಿಕ್ಷೆಯಲ್ಲಿ ಕೊನೆಗೊಂಡವು: 29.2%, ಭಾರತದಲ್ಲಿ 46.2%. 74 ಖುಲಾಸೆಯಲ್ಲಿ ಕೊನೆಗೊಂಡವು</span></li>
+  </ol>
+  <p class="muted">2023ರ ಅಂತ್ಯದಲ್ಲಿ ಕರ್ನಾಟಕದ 1,529 ಭ್ರಷ್ಟಾಚಾರ ಪ್ರಕರಣಗಳು ವಿಚಾರಣೆಗೆ ಬಾಕಿ ಇದ್ದವು, ಆ ವರ್ಷ ವಿಚಾರಣೆಗೆ ಬರಬೇಕಿದ್ದ ಎಲ್ಲ ಪ್ರಕರಣಗಳ 90.5%. 2023ರ ವೇಗದಲ್ಲಿ, ಅಂದರೆ ವರ್ಷಕ್ಕೆ 120 ವಿಚಾರಣೆಗಳು, ಇದು ಸುಮಾರು 13 ವರ್ಷಗಳ ಕೆಲಸ (ನಮ್ಮ ಲೆಕ್ಕ). ಅದೇ ವರ್ಷ ನ್ಯಾಯಾಲಯಗಳು 28 ಪ್ರಕರಣಗಳನ್ನು ರದ್ದುಪಡಿಸಿದವು ಮತ್ತು 70ಕ್ಕೆ ತಡೆ ನೀಡಿದವು. ಆರೋಪಿಗಳಲ್ಲಿ 43 ಮಂದಿಗೆ ಶಿಕ್ಷೆಯಾಯಿತು, 4 ಮಂದಿಯನ್ನು ಸೇವೆಯಿಂದ ವಜಾ ಮಾಡಲಾಯಿತು. ಮೂಲ: <a href="https://www.ncrb.mha.gov.in/uploads/files/2CrimeinIndia2023PartII.pdf">ಎನ್‌ಸಿಆರ್‌ಬಿ, ಕ್ರೈಮ್ ಇನ್ ಇಂಡಿಯಾ 2023, ಸಂಪುಟ 2, ಕೋಷ್ಟಕ 8C.2-8C.5 (ಪುಟ 779-784)</a>; ಕರ್ನಾಟಕದ ಸಾಲುಗಳನ್ನು 18 ನವೆಂಬರ್ 2026ರಂದು ಪುಟದ ಚಿತ್ರಗಳೊಂದಿಗೆ ಹೋಲಿಸಲಾಗಿದೆ. ಇವು ರಾಜ್ಯದ ಎಲ್ಲ ಭ್ರಷ್ಟಾಚಾರ ಪ್ರಕರಣಗಳು, ಈ ಪುಟದ ಅಧಿಕಾರಿಗಳದ್ದು ಮಾತ್ರವಲ್ಲ.</p>
+</section>
+
+<section>
   <h2>ಹಣ ಎಲ್ಲಿ ಸಿಕ್ಕಿತು</h2>
   <p class="muted">{n} ಅಧಿಕಾರಿಗಳಲ್ಲಿ {na} ಮಂದಿಯ ವಿಷಯದಲ್ಲಿ, ತನಿಖಾ ಸಂಸ್ಥೆ ಯಾವ ಬಗೆಯ ಆಸ್ತಿಗಳನ್ನು ಪತ್ತೆಹಚ್ಚಿತು ಎಂಬ ಪಟ್ಟಿ ವರದಿಯೊಂದರಲ್ಲಿತ್ತು. ಆ ಪಟ್ಟಿಗಳಲ್ಲಿ ಇರುವುದು ಇದು. ಸಂಪತ್ತನ್ನು ಎಲ್ಲಿ ಇಡಲಾಗಿದೆ ಎಂಬುದನ್ನು ಇದು ತೋರಿಸುತ್ತದೆ, ಅದರಲ್ಲಿ ಯಾವುದೂ ಅಕ್ರಮ ಎಂದಲ್ಲ: ಪ್ರತಿ ಅಂಕಿಯೂ ಮೊದಲ ದಿನದ ಹೇಳಿಕೆ, ಪ್ರಕರಣದಲ್ಲಿ ಅದನ್ನು ಇನ್ನೂ ಸಾಬೀತುಪಡಿಸಬೇಕಿದೆ.</p>
   <div class="tbl"><table>
@@ -396,7 +420,7 @@ page_kn = f"""<!doctype html>
 <section>
   <h2>ಇಲ್ಲಿ ಏನು ಇಲ್ಲ</h2>
   <ul>
-    <li>ಇದು 2026ರ ಎಲ್ಲ ಪ್ರಕರಣಗಳಲ್ಲ. ಮೇ ಅಥವಾ ನವೆಂಬರ್ 2026ರಲ್ಲಿ ಯಾವುದೇ ಆಸ್ತಿ ದಾಳಿ ಕಂಡುಬಂದಿಲ್ಲ. 5 ಫೆಬ್ರವರಿ 2026ರಂದು ವರದಿಯಾದ ಮೈಸೂರಿನ ದಾಳಿ ಕೇವಲ ಒಂದು ಸುಳಿವು. ಲಂಚದ ಟ್ರ್ಯಾಪ್ ಪ್ರಕರಣಗಳನ್ನು ವ್ಯವಸ್ಥಿತವಾಗಿ ದಾಖಲಿಸುತ್ತಿಲ್ಲ: 2026ರಲ್ಲಿ ಅವು ಇಲ್ಲಿ ತೋರಿಸಿರುವ ಕೆಲವಕ್ಕಿಂತ ಎಷ್ಟೋ ಹೆಚ್ಚು ಇದ್ದವು.</li>
+    <li>ಇದು 2026ರ ಎಲ್ಲ ಪ್ರಕರಣಗಳಲ್ಲ. ಮೇ 2026ರಲ್ಲಿ ಯಾವುದೇ ಆಸ್ತಿ ದಾಳಿ ಕಂಡುಬಂದಿಲ್ಲ. 5 ಫೆಬ್ರವರಿ 2026ರಂದು ವರದಿಯಾದ ಮೈಸೂರಿನ ದಾಳಿ ಕೇವಲ ಒಂದು ಸುಳಿವು. ಲಂಚದ ಟ್ರ್ಯಾಪ್ ಪ್ರಕರಣಗಳನ್ನು ವ್ಯವಸ್ಥಿತವಾಗಿ ದಾಖಲಿಸುತ್ತಿಲ್ಲ: 2026ರಲ್ಲಿ ಅವು ಇಲ್ಲಿ ತೋರಿಸಿರುವ ಕೆಲವಕ್ಕಿಂತ ಎಷ್ಟೋ ಹೆಚ್ಚು ಇದ್ದವು.</li>
     <li>ಅನುಸರಣಾ ಪರಿಶೀಲನೆ ಪತ್ರಿಕಾ ವರದಿಗಳ ಹುಡುಕಾಟವಾಗಿತ್ತು. ದೋಷಾರೋಪಣ ಪಟ್ಟಿಗಳು, ಮಂಜೂರಾತಿ ಕೋರಿಕೆಗಳು, ನ್ಯಾಯಾಲಯದ ತಡೆಯಾಜ್ಞೆಗಳು ಮತ್ತು ತೀರ್ಪುಗಳು ವಿರಳವಾಗಿ ವರದಿಯಾಗುತ್ತವೆ; ಅವು ಲೋಕಾಯುಕ್ತದ ಉತ್ತರಗಳು, ಮಾಹಿತಿ ಹಕ್ಕು ಉತ್ತರಗಳು ಮತ್ತು ನ್ಯಾಯಾಲಯದ ದಾಖಲೆಗಳಿಂದಲೇ ಬರಬೇಕು. ಅಬಕಾರಿ ಪ್ರಕರಣದಲ್ಲಿ 22 ಜುಲೈ 2026ರಂದು ನಡೆದ ಉಚ್ಚ ನ್ಯಾಯಾಲಯದ ವಿಚಾರಣೆಯ ಫಲಿತಾಂಶ ಸಿಗಲಿಲ್ಲ.</li>
     <li>UNVERIFIED (ದೃಢಪಡಿಸಿಲ್ಲ) ಎಂದು ಗುರುತಿಸಿದ ಅನುಸರಣಾ ನಮೂದುಗಳು ಒಂದೇ ಮಾಧ್ಯಮವನ್ನು ಆಧರಿಸಿವೆ. ಪ್ರತ್ಯೇಕ ಪ್ರಕರಣದಲ್ಲಿನ ಬಂಧನವನ್ನು ಹೆಸರು ಮತ್ತು ಹಿಂದಿನ ಹುದ್ದೆಯ ಆಧಾರದ ಮೇಲೆ ಹೊಂದಿಸಲಾಗಿದೆ.</li>
     <li>ಹಲವು ಆಸ್ತಿ ಅಂಕಿಗಳು ಒಂದು ಸಣ್ಣ ಮಾಧ್ಯಮದಿಂದ ಬಂದಿವೆ, ಮತ್ತು ಒಂದೇ ದಾಳಿಯ ವರದಿಗಳು ಹುದ್ದೆ, ಇಲಾಖೆ ಅಥವಾ ಮೊತ್ತದ ಬಗ್ಗೆ ಆಗಾಗ ಭಿನ್ನವಾಗಿರುತ್ತವೆ; ಎಲ್ಲಿ ಎಂಬುದನ್ನು ಟಿಪ್ಪಣಿಗಳು ಹೇಳುತ್ತವೆ.</li>
