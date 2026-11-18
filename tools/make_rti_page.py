@@ -132,6 +132,16 @@ For this corporation, as on 31 March 2025 and as on the date of reply:
 5. Interest earned on government grants in 2020-21 to 2024-25, and the amount remitted to the Government (head of account 0049), with dates.
 6. The year of the latest audited annual accounts of the corporation, and a copy of those accounts and of the auditor's report on them.
 """},
+    {"id": "l6", "title": "6. A deposit account's ledger (for example, the mining restoration fund)",
+     "to": "Office of the Accountant General (Accounts and Entitlements), Karnataka\nPark House Road, Bengaluru 560 001",
+     "why": "₹4,077 crore left the mining restoration fund's treasury deposit account in 2024-25, and ₹15,991 crore left all deposit accounts, but the published accounts give no account-by-account withdrawals. The office that keeps the accounts holds the ledger.",
+     "annex": None,
+     "body": """Information sought
+
+1. The ledger, or a statement of transactions, for 2024-25 of the Personal Deposit account in the name of the Managing Director, Karnataka Mining Environment Restoration Corporation (KMERC), under head 8443-106 Personal Deposits: opening balance, each receipt and each withdrawal with date, amount and the voucher or transfer reference, and closing balance.
+2. For 2024-25, a statement of receipts and withdrawals for every Personal Deposit account under head 8443-106, administrator by administrator, as compiled for the Finance Accounts (the Finance Accounts show total withdrawals of ₹15,991.01 crore but no breakdown).
+3. Any correspondence in 2024-25 between your office and the Treasury or KMERC on reconciliation of the KMERC Personal Deposit account.
+"""},
 ]
 
 # ---- Kannada (needs a native reader's review, like the rest of the site's Kannada) ----
@@ -228,6 +238,15 @@ KN = {
 4. 2022-23, 2023-24 ಮತ್ತು 2024-25ರಲ್ಲಿ ಸರ್ಕಾರದಿಂದ ಪಡೆದ ಅನುದಾನ, ಪ್ರತಿ ವರ್ಷ ಖರ್ಚು ಮಾಡಿದ ಮೊತ್ತ, ಮತ್ತು ಖರ್ಚಾಗದ ಶಿಲ್ಕು, ಹಾಗೂ ಆ ಶಿಲ್ಕನ್ನು ಎಲ್ಲಿ ಇಡಲಾಗಿದೆ (ಬ್ಯಾಂಕ್ ಖಾತೆ, ನಿಶ್ಚಿತ ಠೇವಣಿ ಅಥವಾ ವೈಯಕ್ತಿಕ ಠೇವಣಿ ಖಾತೆ).
 5. 2020-21ರಿಂದ 2024-25ರವರೆಗೆ ಸರ್ಕಾರಿ ಅನುದಾನದ ಮೇಲೆ ಗಳಿಸಿದ ಬಡ್ಡಿ, ಮತ್ತು ಸರ್ಕಾರಕ್ಕೆ (ಲೆಕ್ಕ ಶೀರ್ಷಿಕೆ 0049) ಜಮೆ ಮಾಡಿದ ಮೊತ್ತ, ದಿನಾಂಕಗಳೊಂದಿಗೆ.
 6. ನಿಗಮದ ಇತ್ತೀಚಿನ ಲೆಕ್ಕಪರಿಶೋಧಿತ ವಾರ್ಷಿಕ ಲೆಕ್ಕಪತ್ರಗಳ ವರ್ಷ, ಮತ್ತು ಆ ಲೆಕ್ಕಪತ್ರಗಳು ಹಾಗೂ ಅವುಗಳ ಮೇಲಿನ ಲೆಕ್ಕಪರಿಶೋಧಕರ ವರದಿಯ ಪ್ರತಿ.
+"""},
+    "l6": {"title": "6. ಒಂದು ಠೇವಣಿ ಖಾತೆಯ ಲೆಡ್ಜರ್ (ಉದಾಹರಣೆಗೆ, ಗಣಿ ಪುನಶ್ಚೇತನ ನಿಧಿ)",
+           "to": "ಮಹಾಲೇಖಪಾಲರ (ಲೆಕ್ಕ ಮತ್ತು ಹಕ್ಕುಗಳು) ಕಚೇರಿ, ಕರ್ನಾಟಕ\nಪಾರ್ಕ್ ಹೌಸ್ ರಸ್ತೆ, ಬೆಂಗಳೂರು 560 001",
+           "why": "2024-25ರಲ್ಲಿ ಗಣಿ ಪುನಶ್ಚೇತನ ನಿಧಿಯ ಖಜಾನೆ ಠೇವಣಿ ಖಾತೆಯಿಂದ ₹4,077 ಕೋಟಿ ಮತ್ತು ಎಲ್ಲ ಠೇವಣಿ ಖಾತೆಗಳಿಂದ ₹15,991 ಕೋಟಿ ಹೊರಹೋಯಿತು, ಆದರೆ ಪ್ರಕಟಿತ ಲೆಕ್ಕಗಳಲ್ಲಿ ಖಾತೆವಾರು ಹಿಂಪಡೆತಗಳಿಲ್ಲ. ಲೆಕ್ಕ ಇಡುವ ಕಚೇರಿಯ ಬಳಿ ಲೆಡ್ಜರ್ ಇದೆ.",
+           "body": """ಕೋರಿರುವ ಮಾಹಿತಿ
+
+1. ಲೆಕ್ಕ ಶೀರ್ಷಿಕೆ 8443-106 ವೈಯಕ್ತಿಕ ಠೇವಣಿಗಳ ಅಡಿ, ವ್ಯವಸ್ಥಾಪಕ ನಿರ್ದೇಶಕರು, ಕರ್ನಾಟಕ ಗಣಿ ಪರಿಸರ ಪುನಶ್ಚೇತನ ನಿಗಮ (ಕೆಎಂಇಆರ್‌ಸಿ) ಇವರ ಹೆಸರಿನಲ್ಲಿರುವ ವೈಯಕ್ತಿಕ ಠೇವಣಿ ಖಾತೆಯ 2024-25ರ ಲೆಡ್ಜರ್ ಅಥವಾ ವ್ಯವಹಾರಗಳ ವಿವರ ಪಟ್ಟಿ: ಆರಂಭಿಕ ಶಿಲ್ಕು, ಪ್ರತಿ ಜಮೆ ಮತ್ತು ಪ್ರತಿ ಹಿಂಪಡೆತ ದಿನಾಂಕ, ಮೊತ್ತ ಮತ್ತು ರಸೀದಿ ಅಥವಾ ವರ್ಗಾವಣೆ ಉಲ್ಲೇಖದೊಂದಿಗೆ, ಮತ್ತು ಅಂತಿಮ ಶಿಲ್ಕು.
+2. 2024-25ಕ್ಕೆ, ಶೀರ್ಷಿಕೆ 8443-106ರ ಅಡಿಯ ಪ್ರತಿ ವೈಯಕ್ತಿಕ ಠೇವಣಿ ಖಾತೆಯ ಜಮೆ ಮತ್ತು ಹಿಂಪಡೆತಗಳ ವಿವರ, ನಿರ್ವಾಹಕರವಾರು, ಹಣಕಾಸು ಲೆಕ್ಕಗಳಿಗಾಗಿ ಸಂಕಲಿಸಿದಂತೆ (ಹಣಕಾಸು ಲೆಕ್ಕಗಳು ಒಟ್ಟು ₹15,991.01 ಕೋಟಿ ಹಿಂಪಡೆತ ತೋರಿಸುತ್ತವೆ, ಆದರೆ ವಿವರ ನೀಡುವುದಿಲ್ಲ).
+3. ಕೆಎಂಇಆರ್‌ಸಿ ವೈಯಕ್ತಿಕ ಠೇವಣಿ ಖಾತೆಯ ಹೊಂದಾಣಿಕೆ ಕುರಿತು 2024-25ರಲ್ಲಿ ನಿಮ್ಮ ಕಚೇರಿ ಮತ್ತು ಖಜಾನೆ ಅಥವಾ ಕೆಎಂಇಆರ್‌ಸಿ ನಡುವಿನ ಯಾವುದೇ ಪತ್ರ ವ್ಯವಹಾರ.
 """},
 }
 for _l in LETTERS:
@@ -376,7 +395,7 @@ page = f"""<!doctype html>
 <main>
 <div class="kick"{K("Gandaberunda · ಮಾಹಿತಿ ಹಕ್ಕು · ಭಾರತದ ಯಾವುದೇ ನಾಗರಿಕರಿಗಾಗಿ")}>Gandaberunda · Right to Information · for any citizen of India</div>
 <h1{K("ಉತ್ತರವನ್ನು <em>ನೀವೇ</em> ಕೇಳಿ")}>Ask for the answer <em>yourself</em></h1>
-<p class="lede"{K(f"ನಾವು ಹಿಂಬಾಲಿಸುತ್ತಿರುವ ವರದಿಗಳ ಪ್ರಕಾರ, 2026ರಲ್ಲಿ ಕರ್ನಾಟಕದ {len(rows)} ಅಧಿಕಾರಿಗಳ ಮೇಲೆ ದಾಳಿ, ಟ್ರ್ಯಾಪ್ ಅಥವಾ ಆರೋಪ ದಾಖಲಾಗಿದೆ. ಅವರಲ್ಲಿ {stuck} ಮಂದಿಯ ವಿಷಯದಲ್ಲಿ ಮುಂದಿನ ಯಾವುದೇ ಹಂತ ವರದಿಯಾಗಿಲ್ಲ: ದೋಷಾರೋಪಣ ಪಟ್ಟಿ ಇಲ್ಲ, ಮಂಜೂರಾತಿ ಇಲ್ಲ, ತೀರ್ಪು ಇಲ್ಲ. ಉತ್ತರ ಗೊತ್ತಿರುವ ಕಚೇರಿಗಳು ಯಾವುದೇ ನಾಗರಿಕರಿಗೆ 30 ದಿನಗಳೊಳಗೆ ಉತ್ತರಿಸಬೇಕು. ಇಲ್ಲಿ ಐದು ಪತ್ರಗಳಿವೆ: ಮುದ್ರಿಸಿ, ಸಹಿ ಮಾಡಿ, ಅಂಚೆಯಲ್ಲಿ ಕಳುಹಿಸಿ.")}>{len(rows)} Karnataka officials were raided, trapped or charged in 2026, according to the reports we track. For {stuck} of them, no later step has been reported: no chargesheet, no sanction, no verdict. The offices that know the answer must reply to any citizen within 30 days. Here are five letters, ready to print, sign and post.</p>
+<p class="lede"{K(f"ನಾವು ಹಿಂಬಾಲಿಸುತ್ತಿರುವ ವರದಿಗಳ ಪ್ರಕಾರ, 2026ರಲ್ಲಿ ಕರ್ನಾಟಕದ {len(rows)} ಅಧಿಕಾರಿಗಳ ಮೇಲೆ ದಾಳಿ, ಟ್ರ್ಯಾಪ್ ಅಥವಾ ಆರೋಪ ದಾಖಲಾಗಿದೆ. ಅವರಲ್ಲಿ {stuck} ಮಂದಿಯ ವಿಷಯದಲ್ಲಿ ಮುಂದಿನ ಯಾವುದೇ ಹಂತ ವರದಿಯಾಗಿಲ್ಲ: ದೋಷಾರೋಪಣ ಪಟ್ಟಿ ಇಲ್ಲ, ಮಂಜೂರಾತಿ ಇಲ್ಲ, ತೀರ್ಪು ಇಲ್ಲ. ಉತ್ತರ ಗೊತ್ತಿರುವ ಕಚೇರಿಗಳು ಯಾವುದೇ ನಾಗರಿಕರಿಗೆ 30 ದಿನಗಳೊಳಗೆ ಉತ್ತರಿಸಬೇಕು. ಇಲ್ಲಿ ಆರು ಪತ್ರಗಳಿವೆ: ಮುದ್ರಿಸಿ, ಸಹಿ ಮಾಡಿ, ಅಂಚೆಯಲ್ಲಿ ಕಳುಹಿಸಿ.")}>{len(rows)} Karnataka officials were raided, trapped or charged in 2026, according to the reports we track. For {stuck} of them, no later step has been reported: no chargesheet, no sanction, no verdict. The offices that know the answer must reply to any citizen within 30 days. Here are six letters, ready to print, sign and post.</p>
 <p class="note"{K(f"ಪ್ರತಿ ಪ್ರಕರಣವನ್ನು {A_TR_KN} ಪುಟದಲ್ಲಿ ನೋಡಿ. ಟ್ರ್ಯಾಕರ್‌ನಂತೆಯೇ ಪತ್ರಗಳಲ್ಲಿ ಹೆಸರುಗಳಿಲ್ಲ, ಹುದ್ದೆ ಮತ್ತು ಸ್ಥಳಗಳು ಮಾತ್ರ; ಹುದ್ದೆ, ಸ್ಥಳ, ದಿನಾಂಕ ಮತ್ತು ಲಿಂಕ್ ಮಾಡಿದ ಪತ್ರಿಕಾ ವರದಿಯಿಂದ ಮಾಹಿತಿ ಅಧಿಕಾರಿ ಪ್ರತಿಯೊಬ್ಬ ಅಧಿಕಾರಿಯನ್ನು ಗುರುತಿಸಬಹುದು. ಪ್ರತಿ ಪತ್ರ ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಕನ್ನಡದಲ್ಲಿದೆ; ಮೇಲಿನ ಬಟನ್‌ನಿಂದ ಭಾಷೆ ಬದಲಿಸಿ.")}>See every case on {A_TR}. Letters carry posts and places, not names, the same as the tracker; the PIO can identify each officer from the post, place, date and the linked press report. Every letter is in English and Kannada; switch with the button at the top.</p>
 
 <h2{K("ನಿಮ್ಮ ವಿವರಗಳು")}>Your details</h2>
