@@ -65,3 +65,15 @@ Rs 1,242 crore of five central schemes sat unspent in bank accounts on 31 March 
 https://jarvisss007.github.io/know-your-mla/reports/follow_the_money.html#journey
 
 Checks before posting: mining figures from CAG Report 7 of 2025 (Chart 3.2, para 4.6.1); central-scheme figures from SFAR 2024-25 Tables 2.16-2.20. Both are audited; neither post alleges theft.
+
+## 4. New drafts, 18 Nov 2026: NOT POSTED, waiting for the owner's approval
+
+**X (English), how cases end** (256 chars)
+In 2023, Karnataka courts finished 120 corruption trials: 35 convictions (29%; India 46%). 1,529 cases still waited for trial, about 13 years at that pace. Of the 72 officials on our 2026 tracker, none has a verdict yet. (NCRB 2023)
+https://jarvisss007.github.io/know-your-mla/reports/officials_tracker.html
+
+**X (Kannada), how cases end** (264 chars)
+2023ರಲ್ಲಿ ಕರ್ನಾಟಕದ ನ್ಯಾಯಾಲಯಗಳು 120 ಭ್ರಷ್ಟಾಚಾರ ವಿಚಾರಣೆಗಳನ್ನು ಮುಗಿಸಿದವು: 35ರಲ್ಲಿ ಶಿಕ್ಷೆ (29%; ಭಾರತ 46%). 1,529 ಪ್ರಕರಣಗಳು ಬಾಕಿ ಇದ್ದವು. 2026ರಲ್ಲಿ ದಾಳಿ, ಟ್ರ್ಯಾಪ್ ಅಥವಾ ಆರೋಪ ಎದುರಿಸಿದ 72 ಅಧಿಕಾರಿಗಳಲ್ಲಿ ಯಾರಿಗೂ ಇನ್ನೂ ತೀರ್ಪು ಬಂದಿಲ್ಲ (ಎನ್‌ಸಿಆರ್‌ಬಿ 2023)
+https://jarvisss007.github.io/know-your-mla/reports/officials_tracker_kn.html
+
+Checks: NCRB Crime in India 2023 Vol. II, Table 8C.4 (pp. 782-783): Karnataka trials completed 120, convicted 35, conviction rate 29.2% (All India 46.2%), pending trial at year end 1,529. "About 13 years" is our arithmetic (1,529 / 120 = 12.7), labelled as such on the page. 72 officials and no verdict: tracker, 18 Nov 2026 (recheck on the day of posting). When posting, type "Rs" not the rupee sign; none is needed here.
