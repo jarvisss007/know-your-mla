@@ -50,7 +50,7 @@ https://jarvisss007.github.io/know-your-mla/rti.html
 - The ₹352 crore post must not suggest wrongdoing: the page says it may be a misprint. Keep "the auditor's tables, traced", no adjectives.
 - Kannada lines need the native reviewer's eye like the rest of the site.
 
-## 3. New drafts, 18 Nov 2026 (not posted)
+## 3. New drafts, 18 Nov 2026: all three POSTED on X (@anupam00720) on 18 Nov 2026 on the owner's instruction ("post all")
 
 **X (English), mining money** (271 chars)
 Karnataka's district mineral funds collected Rs 4,004 crore by March 2023 and spent Rs 1,826 crore. 2,190 projects never started. The steering committee headed by the Chief Minister did not meet once from 2018 to June 2023 (CAG, Report 7 of 2025).
