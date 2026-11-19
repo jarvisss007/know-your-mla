@@ -159,3 +159,9 @@ Check against the record:
 - MCA21 master data (official director list, past directors, shareholding via MGT-7): paid or manual.
 
 Files: `docs\dhc_LPA189_2025.pdf` (Delhi HC judgment, LPA 189/2025).
+
+## Update, 19 Nov 2026: payments in the city's own ledger
+BBMP payment records (open dataset github.com/Vonter/blr-municipal-accounts, scraped from accounts.bbmp.gov.in; job 317-25-000013, work order dated 24 Oct 2024, budget head "P3914 Brand Bengaluru - Sugama Sanchara"), contractor "040799 RODIC CONSULTANTS PRIVATE LIMITED":
+- Bill 690836, paid 21 Dec 2024: gross Rs 5,67,00,000; net Rs 5,10,30,000 (running bill).
+- Bill 718264, paid 22 May 2025: gross Rs 1,89,00,000; net Rs 1,70,10,000 (running bill).
+Total gross Rs 7.56 crore (80% of Rs 9.45 crore). No later payment to 9 Nov 2026. The second payment came 17 days after the expert committee's report of 5 May 2025. The press figure "Rs 95 million received" (ConstructionWorld, 21 May 2025) is not borne out by the ledger. The site was corrected the same day.
