@@ -58,6 +58,8 @@ PAGES = [
      ["kampli_photos.jpg", "kampli_satellite.jpg", "jeerala_photos.jpg", "one_tank_three_works.jpg", "one_pit_two_works.jpg", "kampli_tank_152_works.csv", "jeerala_tank_works.csv"], None),
     ("research/rural_jobs/findings/DRAFT_letters.html", "mgnrega_letters.html", "The Paper Trail · Gandaberunda",
      "The full text of the RTI applications and Ombudsperson requests behind 'One tank, many works', for anyone to read or file again.", None, [], None),
+    ("research/rural_jobs/findings/DRAFT_what_if.html", "what_if_mgnrega.html", "What If It Had All Been Built · Gandaberunda",
+     "What Rs 13.05 crore of rural job scheme works promised 18 panchayats, why the checks did not catch it, and six fixes using data the government already has.", None, [], None),
     ("research/officials_tracker/DRAFT_officials_tracker.html", "officials_tracker.html", "After the Raid · Gandaberunda",
      "Karnataka officials raided, trapped or charged in 2026, followed from the first day towards a verdict. Posts, not names.",
      ("officials_tracker_kn.html", "ಕನ್ನಡ"), [], None),
