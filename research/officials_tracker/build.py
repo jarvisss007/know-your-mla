@@ -15,7 +15,7 @@ rows = list(csv.DictReader(open(HERE / "tracker.csv", encoding="utf-8")))
 rows.sort(key=lambda r: (r["id"][:10], int(r["id"][11:])))
 
 LADDER = ["Action taken", "Suspended or beyond", "Chargesheet filed", "Sanction to prosecute", "Trial under way", "Verdict"]
-STAGE_RANK = {"Raided": 0, "Searched": 0, "Arrested": 0, "Suspended": 1, "Chargesheet filed": 2,
+STAGE_RANK = {"Raided": 0, "Searched": 0, "Arrested": 0, "Trap laid": 0, "Suspended": 1, "Chargesheet filed": 2,
               "Sanction to prosecute": 3, "Trial under way": 4, "Verdict": 5}
 
 
@@ -134,7 +134,7 @@ GROUP_KN = {"Engineers": "ಎಂಜಿನಿಯರ್‌ಗಳು", "Excise": "�
             "Revenue and registration": "ಕಂದಾಯ ಮತ್ತು ನೋಂದಣಿ",
             "Local bodies and planning": "ಸ್ಥಳೀಯ ಸಂಸ್ಥೆಗಳು ಮತ್ತು ನಗರ ಯೋಜನೆ",
             "Other departments": "ಇತರ ಇಲಾಖೆಗಳು"}
-STAGE_KN = {"Raided": "ದಾಳಿ", "Searched": "ಶೋಧ", "Arrested": "ಬಂಧನ", "Suspended": "ಅಮಾನತು",
+STAGE_KN = {"Raided": "ದಾಳಿ", "Trap laid": "ಟ್ರ್ಯಾಪ್", "Searched": "ಶೋಧ", "Arrested": "ಬಂಧನ", "Suspended": "ಅಮಾನತು",
             "Chargesheet filed": "ದೋಷಾರೋಪಣ ಪಟ್ಟಿ ಸಲ್ಲಿಕೆ", "Sanction to prosecute": "ಅಭಿಯೋಜನಾ ಮಂಜೂರಾತಿ",
             "Trial under way": "ವಿಚಾರಣೆ ನಡೆಯುತ್ತಿದೆ", "Verdict": "ತೀರ್ಪು"}
 ACTION_KN = {"DA raid": "ಆದಾಯ ಮೀರಿದ ಆಸ್ತಿ ದಾಳಿ", "Trap (bribe)": "ಟ್ರ್ಯಾಪ್ (ಲಂಚ)",
