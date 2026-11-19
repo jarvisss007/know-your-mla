@@ -1,0 +1,153 @@
+<title>Where the Work Photos Are Taken</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+:root { --bg:#f5f6f8; --surface:#fff; --fg:#161a22; --muted:#5b6474; --line:#dde1e8; --red:#c21f30; --yellow:#f2b705; --track:#e3e6ec;
+  --display:"Space Grotesk","Segoe UI",system-ui,sans-serif; --body:Inter,"Segoe UI",system-ui,sans-serif; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#11141a; --surface:#1a1e27; --fg:#eceef2; --muted:#9aa3b2; --line:#2b313d; --red:#ef5261; --yellow:#f5c93a; --track:#2b313d; color-scheme:dark } }
+:root[data-theme="dark"] { --bg:#11141a; --surface:#1a1e27; --fg:#eceef2; --muted:#9aa3b2; --line:#2b313d; --red:#ef5261; --yellow:#f5c93a; --track:#2b313d; color-scheme:dark }
+body { background:var(--bg); color:var(--fg); font:16px/1.55 var(--body); padding-block:28px 64px; padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); }
+.wrap { max-width:860px; margin:0 auto; display:flex; flex-direction:column; gap:40px; }
+a { color:inherit; text-underline-offset:3px; }
+h1,h2,h3 { font-family:var(--display); text-wrap:balance; margin:0; }
+h1 { font-size:clamp(2.1rem,7vw,3.4rem); line-height:1.02; letter-spacing:-.02em; } h1 span { color:var(--red); }
+h2 { font-size:1.45rem; } p { margin:0; max-width:66ch; }
+section { display:flex; flex-direction:column; gap:14px; }
+.eyebrow { font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+.draft { display:inline-block; background:var(--yellow); color:#161a22; font-weight:600; font-size:.8rem; padding:3px 10px; border-radius:3px; letter-spacing:.04em; align-self:flex-start; }
+header { display:flex; flex-direction:column; gap:14px; } .lede { font-size:1.1rem; } .muted { color:var(--muted); font-size:.9rem; }
+.tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); border-block:2px solid var(--fg); }
+.tile { padding:16px 14px 16px 0; display:flex; flex-direction:column; gap:4px; }
+.tile b { font-family:var(--display); font-size:2rem; line-height:1; } .tile.hot b { color:var(--red); }
+ol.bars { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:6px; }
+ol.bars li { display:grid; grid-template-columns:2ch minmax(9ch,15ch) 1fr 6ch; gap:10px; align-items:center; font-size:.95rem; }
+.rk { color:var(--muted); text-align:right; font-variant-numeric:tabular-nums; } .nm small { color:var(--muted); display:block; font-size:.75rem; }
+.bar { background:var(--track); height:12px; border-radius:2px; overflow:hidden; } .bar span { display:block; height:100%; background:var(--red); }
+.v { text-align:right; font-variant-numeric:tabular-nums; font-weight:600; }
+.note { background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--yellow); border-radius:10px; padding:14px 16px; display:flex; flex-direction:column; gap:8px; }
+.note ul { margin:0; padding-left:1.2em; }
+input[type=search] { font:inherit; padding:10px 12px; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--fg); max-width:420px; width:100%; box-sizing:border-box; }
+.tablewrap { overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--surface); max-height:70vh; }
+table { border-collapse:collapse; width:100%; font-size:.9rem; font-variant-numeric:tabular-nums; }
+th, td { padding:7px 10px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; }
+th:nth-child(-n+2), td:nth-child(-n+2) { text-align:left; }
+th { position:sticky; top:0; background:var(--surface); cursor:pointer; font-weight:600; } th[aria-sort] { color:var(--red); }
+td.hi { color:var(--red); font-weight:600; }
+ol.steps { margin:0; padding-left:1.3em; display:flex; flex-direction:column; gap:6px; max-width:66ch; }
+</style>
+<div class="wrap">
+<header>
+  <span class="draft">DRAFT · NOT PUBLISHED</span>
+  <span class="eyebrow">Rural job scheme (MGNREGA) · all 236 blocks of Karnataka · 2024-25</span>
+  <h1>Where the work photos <span>are taken</span></h1>
+  <p class="lede">Every finished MGNREGA work needs a geotagged photo as proof. We read the location of all 824,146 completion photos the government accepted in Karnataka for 2024-25 and asked one question: was the photo taken near the panchayat the work belongs to?</p>
+  <p class="muted">Source: Bhuvan-BHUGRAM public dashboard (NRSC/ISRO for the Ministry of Rural Development), "Accepted Geotags", Phase II after-photos geotagged 1 April 2024 to 31 March 2025, read on 18 November 2026. Block-level figures only: no names, no individual works.</p>
+</header>
+
+<div class="tiles">
+  <div class="tile"><b>8.24 lakh</b><span class="muted">completion photos read, 236 blocks</span></div>
+  <div class="tile"><b>0.19%</b><span class="muted">typical block: photos taken more than 10 km from the work's own panchayat</span></div>
+  <div class="tile hot"><b>11.0%</b><span class="muted">Gangavathi (Koppal), 1st of 227 blocks</span></div>
+  <div class="tile hot"><b>7.2%</b><span class="muted">Karatagi (Koppal), 2nd of 227 blocks</span></div>
+</div>
+
+<section>
+  <h2>Photos taken more than 10 km from the work's own panchayat</h2>
+  <p>For each panchayat we take the middle point of all its completion photos, then count the photos taken more than 10 km from it. In a typical block that is 0.19% of photos, and nine blocks in ten are under 1.41%. These are the 15 highest (blocks with at least 200 works):</p>
+  <ol class="bars">
+<li><span class="rk">1</span><span class="nm">Gangavathi <small>Koppal</small></span><span class="bar"><span style="width:100.0%"></span></span><span class="v">11.04%</span></li>
+<li><span class="rk">2</span><span class="nm">Karatagi <small>Koppal</small></span><span class="bar"><span style="width:65.6%"></span></span><span class="v">7.24%</span></li>
+<li><span class="rk">3</span><span class="nm">Jevargi <small>Kalaburagi</small></span><span class="bar"><span style="width:40.6%"></span></span><span class="v">4.48%</span></li>
+<li><span class="rk">4</span><span class="nm">Shabad <small>Kalaburagi</small></span><span class="bar"><span style="width:38.5%"></span></span><span class="v">4.25%</span></li>
+<li><span class="rk">5</span><span class="nm">Annigeri <small>Dharwar</small></span><span class="bar"><span style="width:37.6%"></span></span><span class="v">4.15%</span></li>
+<li><span class="rk">6</span><span class="nm">Hungund <small>Bagalkote</small></span><span class="bar"><span style="width:33.6%"></span></span><span class="v">3.71%</span></li>
+<li><span class="rk">7</span><span class="nm">Sindgi <small>Vijaypura</small></span><span class="bar"><span style="width:32.5%"></span></span><span class="v">3.59%</span></li>
+<li><span class="rk">8</span><span class="nm">Ilkal <small>Bagalkote</small></span><span class="bar"><span style="width:31.6%"></span></span><span class="v">3.49%</span></li>
+<li><span class="rk">9</span><span class="nm">Raichur <small>Raichur</small></span><span class="bar"><span style="width:27.4%"></span></span><span class="v">3.02%</span></li>
+<li><span class="rk">10</span><span class="nm">Afzalpur <small>Kalaburagi</small></span><span class="bar"><span style="width:24.1%"></span></span><span class="v">2.66%</span></li>
+<li><span class="rk">11</span><span class="nm">Sirawara <small>Raichur</small></span><span class="bar"><span style="width:23.8%"></span></span><span class="v">2.63%</span></li>
+<li><span class="rk">12</span><span class="nm">Karwar <small>Uttara Kannada</small></span><span class="bar"><span style="width:23.5%"></span></span><span class="v">2.59%</span></li>
+<li><span class="rk">13</span><span class="nm">Bilagi <small>Bagalkote</small></span><span class="bar"><span style="width:21.7%"></span></span><span class="v">2.40%</span></li>
+<li><span class="rk">14</span><span class="nm">Jamkhandi <small>Bagalkote</small></span><span class="bar"><span style="width:18.3%"></span></span><span class="v">2.02%</span></li>
+<li><span class="rk">15</span><span class="nm">Koppal <small>Koppal</small></span><span class="bar"><span style="width:17.7%"></span></span><span class="v">1.95%</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Five or more works from different panchayats photographed at one spot</h2>
+  <p>The share of a block's works whose photo was taken at a spot of about 50 metres shared by at least five different works from two or more panchayats. In most blocks this is zero, and nine in ten are under 1.00%.</p>
+  <ol class="bars">
+<li><span class="rk">1</span><span class="nm">Kampli <small>Ballari</small></span><span class="bar"><span style="width:100.0%"></span></span><span class="v">8.98%</span></li>
+<li><span class="rk">2</span><span class="nm">Hubli <small>Dharwar</small></span><span class="bar"><span style="width:86.5%"></span></span><span class="v">7.77%</span></li>
+<li><span class="rk">3</span><span class="nm">Karatagi <small>Koppal</small></span><span class="bar"><span style="width:65.0%"></span></span><span class="v">5.84%</span></li>
+<li><span class="rk">4</span><span class="nm">Mudigere <small>Chikkamagaluru</small></span><span class="bar"><span style="width:49.2%"></span></span><span class="v">4.42%</span></li>
+<li><span class="rk">5</span><span class="nm">Gangavathi <small>Koppal</small></span><span class="bar"><span style="width:45.2%"></span></span><span class="v">4.06%</span></li>
+<li><span class="rk">6</span><span class="nm">Rabakavi Banahatti <small>Bagalkote</small></span><span class="bar"><span style="width:37.3%"></span></span><span class="v">3.35%</span></li>
+<li><span class="rk">7</span><span class="nm">Sirawara <small>Raichur</small></span><span class="bar"><span style="width:35.3%"></span></span><span class="v">3.17%</span></li>
+<li><span class="rk">8</span><span class="nm">Ilkal <small>Bagalkote</small></span><span class="bar"><span style="width:30.8%"></span></span><span class="v">2.77%</span></li>
+<li><span class="rk">9</span><span class="nm">Beltangadi <small>Dakshina Kannada</small></span><span class="bar"><span style="width:26.2%"></span></span><span class="v">2.35%</span></li>
+<li><span class="rk">10</span><span class="nm">Hospet <small>Vijayanagara</small></span><span class="bar"><span style="width:24.8%"></span></span><span class="v">2.23%</span></li>
+  </ol>
+</section>
+
+<div class="note">
+  <strong>What these numbers mean, and what they do not</strong>
+  <ul>
+    <li>They do <b>not</b> show that any work is fake. They show where the government's own location check tells us little, or where something unusual is happening and the records are worth asking for.</li>
+    <li>There are innocent explanations. Labourers from several panchayats can be sent to one big tank, so many works get photographed there. A panchayat with two villages far apart can look "far" from its own middle point. A phone without a GPS fix can report an old location.</li>
+    <li>The check meant to catch problems almost never says no: Karnataka's moderators rejected 419 of 42.5 lakh after-photos (0.010%), a quarter of the national rate (<a href="https://bhuvan-app2.nrsc.gov.in/bhugram/usrtasks/nrega_phase2/get/stats.php">Bhuvan statistics report</a>).</li>
+    <li>Right to Information requests for the estimates and measurement books behind the highest-ranked blocks are being prepared. We will publish what comes back, including any explanation from the officials concerned.</li>
+  </ul>
+</div>
+
+<section>
+  <h2>Find your block</h2>
+  <p class="muted">All 236 blocks. Tap a column to sort. Red marks the top tenth of blocks on that measure. The last two columns are less reliable (see below).</p>
+  <input type="search" id="q" placeholder="Type a district or block" aria-label="Filter blocks">
+  <div class="tablewrap"><table id="t"><thead><tr>
+    <th data-k="0">District</th><th data-k="1">Block</th><th data-k="2">Works</th><th data-k="3">Far from panchayat %</th>
+    <th data-k="4">Shared spot, 2+ panchayats %</th><th data-k="5">Same exact GPS point %</th><th data-k="6">Phone "moved" over 60 km/h %</th>
+  </tr></thead><tbody></tbody></table></div>
+  <p class="muted"><a href="photo_check_blocks_2024-25.csv">Download the table (CSV)</a>. Four newly created taluks returned no rows: Harohalli, Hubballi Nagara, Kushalnagar and Arakera.</p>
+</section>
+
+<section>
+  <h2>Two measures to treat with care</h2>
+  <p><b>Same exact GPS point.</b> In some blocks many different works carry the identical location, to about a metre. Where we looked, the photos showed different places: the phone's location had stuck or been set by hand, rather than photos being reused. That still matters, because for those works the geotag proves nothing, and the system accepted it.</p>
+  <p><b>Phone "moving" faster than 60 km/h between photos.</b> This is high across the whole north-east of the state (Yadgir, Raichur, Vijayapura). A pattern that broad is more likely wrong phone clocks or photos uploaded in batches than anything in one block.</p>
+</section>
+
+<section>
+  <h2>How to check this yourself</h2>
+  <ol class="steps">
+    <li>Open the <a href="https://bhuvan-app2.nrsc.gov.in/bhugram/bhugram_dashboard/">Bhuvan-BHUGRAM dashboard</a>. Choose the report "Accepted Geotags", stage "PHASE II: AFTER", state Karnataka, your district and block, and dates 01-04-2024 to 31-03-2025.</li>
+    <li>Each row gives the work code, panchayat, location and two photo links. The photo's file name contains the phone's ID and the time it was taken.</li>
+    <li>Group the photos by panchayat, take the middle location, and measure each photo's distance from it.</li>
+  </ol>
+  <p class="muted">Method notes: blocks with fewer than 200 works are left out of the rankings but kept in the table. A "spot" is a cell of about 50 m. Coordinates outside Karnataka's bounding box are dropped. The calculation reproduces figures first computed from the dashboard's own Excel export for Koppal district.</p>
+</section>
+
+<p class="muted">Corrections and replies: if you are an official or a resident with an explanation or a correction, use <a href="../index.html#join">Have your say</a>. We publish replies in full.</p>
+<p class="muted">Related: <a href="tank_findings.html">One tank, many works</a>, the cases behind the top of this ranking.</p>
+<footer style="border-top:2px solid var(--fg);padding-top:16px"><p class="muted"><b>© 2026 Gandaberunda (Know Your MLA).</b> The analysis, rankings, text and charts are original work by Gandaberunda. News organisations may quote and reproduce them with the credit "Gandaberunda / Know Your MLA" and a link to this page. The underlying records are public (NRSC/ISRO, Ministry of Rural Development).</p></footer>
+</div>
+<script>
+const D = [["Bagalkote", "Badami", 2687, 1.83, 2.16, 1.12, 0.0], ["Bagalkote", "Bagalkot", 1879, 1.7, 1.28, 2.87, 2.27], ["Bagalkote", "Bilagi", 1623, 2.4, 1.91, 7.15, 6.4], ["Bagalkote", "Guledagudda", 867, 1.61, 2.08, 0.23, 0.0], ["Bagalkote", "Hungund", 996, 3.71, 0.5, 0.9, 10.42], ["Bagalkote", "Ilkal", 1406, 3.49, 2.77, 0.71, 2.16], ["Bagalkote", "Jamkhandi", 1784, 2.02, 1.51, 1.23, 8.7], ["Bagalkote", "Mudhol", 2205, 0.91, 0.45, 0.09, 0.32], ["Bagalkote", "Rabakavi Banahatti", 1493, 0.94, 3.35, 0.67, 0.21], ["Ballari", "Ballari", 3372, 0.03, 0.0, 0.83, 2.61], ["Ballari", "Kampli", 1749, 1.77, 8.98, 3.09, 3.78], ["Ballari", "Kurugodu", 1218, 0.41, 0.0, 0.66, 7.28], ["Ballari", "Sandur", 2430, 0.12, 0.25, 0.41, 1.29], ["Ballari", "Siruguppa", 2600, 1.08, 0.42, 1.35, 3.96], ["Belagavi", "Athni", 5567, 0.18, 0.0, 0.56, 8.99], ["Belagavi", "Belagavi", 3030, 0.69, 0.0, 0.26, 0.0], ["Belagavi", "Bilahongal", 1913, 0.05, 0.31, 0.0, 0.0], ["Belagavi", "Chikodi", 3515, 0.0, 0.0, 0.34, 0.0], ["Belagavi", "Gokak", 4846, 0.17, 0.1, 1.55, 0.08], ["Belagavi", "Hukeri", 5508, 1.36, 0.22, 0.2, 0.02], ["Belagavi", "Kagawad", 1131, 0.0, 0.0, 0.53, 0.54], ["Belagavi", "Khanapur", 2335, 0.51, 0.77, 0.09, 0.0], ["Belagavi", "Kittur", 1503, 0.0, 0.0, 0.27, 0.07], ["Belagavi", "Mudalagi", 3044, 0.03, 0.0, 0.46, 0.0], ["Belagavi", "Nippani", 1806, 0.06, 0.0, 0.33, 0.0], ["Belagavi", "Ramdurg", 2521, 0.0, 0.0, 0.71, 0.0], ["Belagavi", "Raybag", 6355, 0.0, 0.25, 1.04, 0.0], ["Belagavi", "Savadathi", 3311, 0.72, 0.91, 0.48, 0.03], ["Bengaluru", "Anekal", 393, 0.0, 0.0, 0.51, 0.0], ["Bengaluru", "Bengaluru East", 170, 0.0, 0.0, 0.0, 0.0], ["Bengaluru", "Bengaluru North", 169, 0.0, 0.0, 0.0, 2.55], ["Bengaluru", "Bengaluru South", 433, 0.0, 0.0, 0.92, 0.0], ["Bengaluru", "Yelahanka", 225, 0.0, 0.0, 0.0, 0.0], ["Bengaluru Rural", "Devanhalli", 1967, 0.31, 0.61, 0.36, 0.47], ["Bengaluru Rural", "Dodballapur", 2635, 0.04, 0.0, 0.15, 2.72], ["Bengaluru Rural", "Hoskote", 2402, 0.37, 0.0, 0.25, 0.51], ["Bengaluru Rural", "Nelamangala", 1822, 0.82, 0.71, 1.87, 3.18], ["Bengaluru South", "Channapatna", 6667, 0.28, 0.09, 0.24, 0.62], ["Bengaluru South", "Harohalli", 0, null, null, null, null], ["Bengaluru South", "Kanakapura", 25771, 0.12, 0.09, 0.59, 2.08], ["Bengaluru South", "Magadi", 7085, 0.44, 0.66, 0.38, 3.71], ["Bengaluru South", "Ramanagaram", 7538, 0.12, 0.12, 0.29, 0.2], ["Bidar", "Aurad", 4910, 0.0, 0.0, 0.55, 2.74], ["Bidar", "Basavakalyan", 8591, 0.01, 0.0, 0.65, 0.01], ["Bidar", "Bhalki", 8520, 0.06, 0.0, 0.58, 3.72], ["Bidar", "Bidar", 3864, 0.0, 0.0, 0.36, 0.0], ["Bidar", "Chittaguppa", 2871, 0.0, 0.0, 0.35, 0.0], ["Bidar", "Hulasuru", 2414, 0.0, 0.21, 0.58, 0.0], ["Bidar", "Humnabad", 4079, 0.0, 0.0, 0.59, 0.0], ["Bidar", "Kamalanagara", 2736, 0.0, 0.0, 0.58, 0.0], ["Chamaraja Nagara", "Chamarajanagar", 7301, 0.33, 0.0, 0.19, 0.0], ["Chamaraja Nagara", "Gundlupet", 4069, 0.2, 0.0, 0.2, 0.0], ["Chamaraja Nagara", "Hanuru", 3960, 1.01, 0.0, 2.53, 0.15], ["Chamaraja Nagara", "Kollegala", 2372, 0.17, 0.0, 0.25, 0.09], ["Chamaraja Nagara", "Yelandur", 3022, 0.13, 0.0, 0.56, 0.0], ["Chikkaballapura", "Bagepalli", 2579, 0.19, 0.0, 0.08, 0.0], ["Chikkaballapura", "Chelur", 129, 0.0, 0.0, 0.0, 0.0], ["Chikkaballapura", "Chikballapur", 3543, 0.14, 0.0, 0.17, 0.0], ["Chikkaballapura", "Chintamani", 6396, 0.02, 0.08, 0.09, 0.77], ["Chikkaballapura", "Gauribidanur", 4618, 0.02, 0.0, 0.13, 0.0], ["Chikkaballapura", "Gudibanda", 1495, 0.27, 0.0, 0.27, 0.0], ["Chikkaballapura", "Manchenahalli", 95, 0.0, 0.0, 0.0, 0.0], ["Chikkaballapura", "Sidlaghatta", 4240, 0.07, 0.0, 0.09, 0.0], ["Chikkamagaluru", "Ajjampura", 1741, 0.23, 0.0, 0.11, 1.28], ["Chikkamagaluru", "Chikkamagaluru", 4406, 1.18, 0.89, 0.25, 0.69], ["Chikkamagaluru", "Kadur", 10295, 0.19, 0.05, 0.16, 0.02], ["Chikkamagaluru", "Koppa", 1859, 0.0, 0.0, 0.11, 0.0], ["Chikkamagaluru", "Mudigere", 2240, 1.79, 4.42, 1.56, 0.0], ["Chikkamagaluru", "Narasimharajapura", 884, 1.13, 0.0, 0.0, 0.92], ["Chikkamagaluru", "Sringeri", 1095, 0.09, 0.0, 0.37, 0.0], ["Chikkamagaluru", "Tarikere", 2563, 0.51, 0.0, 0.23, 3.45], ["Chitradurga", "Challakere", 11201, 0.01, 0.0, 0.09, 0.1], ["Chitradurga", "Chitradurga", 5261, 0.11, 0.0, 0.19, 2.09], ["Chitradurga", "Hiriyur", 9084, 0.03, 0.0, 0.4, 0.0], ["Chitradurga", "Holalkere", 4912, 0.02, 0.0, 0.29, 1.68], ["Chitradurga", "Hosdurga", 8168, 0.0, 0.0, 0.27, 9.81], ["Chitradurga", "Molakalmuru", 10948, 0.05, 0.55, 1.51, 1.44], ["Dakshina Kannada", "Bantval", 3838, 0.08, 0.18, 0.08, 0.0], ["Dakshina Kannada", "Beltangadi", 4562, 1.29, 2.35, 3.05, 0.0], ["Dakshina Kannada", "Kadaba", 2696, 0.0, 0.0, 0.07, 0.0], ["Dakshina Kannada", "Mangalore", 699, 0.0, 0.0, 0.0, 0.0], ["Dakshina Kannada", "Mudubidare", 787, 0.0, 0.0, 0.25, 0.0], ["Dakshina Kannada", "Mulki", 224, 0.0, 0.0, 0.0, 0.0], ["Dakshina Kannada", "Puttur", 2259, 0.04, 0.0, 0.0, 0.0], ["Dakshina Kannada", "Sulya", 1656, 0.06, 0.0, 0.36, 0.19], ["Dakshina Kannada", "Ullala", 451, 0.0, 0.0, 0.0, 0.0], ["Davanagere", "Channagiri", 6729, 0.22, 0.0, 0.15, 0.0], ["Davanagere", "Davanagere", 2081, 0.0, 0.0, 0.29, 0.0], ["Davanagere", "Harihara", 1593, 0.25, 0.0, 0.13, 0.0], ["Davanagere", "Honnali", 3417, 0.15, 0.0, 0.06, 0.0], ["Davanagere", "Jagalur", 3330, 0.54, 0.33, 0.24, 1.27], ["Davanagere", "Nyamathi", 1768, 0.17, 0.0, 0.0, 0.0], ["Dharwar", "Alnavar", 282, 0.35, 0.0, 0.0, 0.0], ["Dharwar", "Annigeri", 2287, 4.15, 0.0, 2.01, 0.0], ["Dharwar", "Dharwad", 5341, 0.86, 1.37, 2.64, 0.0], ["Dharwar", "Hubbalinagara", 0, null, null, null, null], ["Dharwar", "Hubli", 3293, 0.12, 7.77, 19.65, 0.15], ["Dharwar", "Kalghatgi", 5977, 0.0, 0.2, 5.92, 2.62], ["Dharwar", "Kundgol", 5752, 0.1, 0.1, 14.33, 1.29], ["Dharwar", "Navalgund", 1770, 0.17, 0.34, 3.39, 0.35], ["Gadag", "Gadag", 3139, 0.0, 0.0, 0.25, 0.0], ["Gadag", "Gajendragada", 4004, 0.0, 0.0, 0.4, 0.0], ["Gadag", "Lakshmeshwara", 3142, 0.6, 0.32, 5.19, 2.61], ["Gadag", "Mundaragi", 5747, 0.09, 0.0, 0.45, 0.0], ["Gadag", "Naragund", 2398, 0.04, 0.0, 0.92, 0.0], ["Gadag", "Ron", 4847, 0.06, 0.0, 3.09, 0.06], ["Gadag", "Shirahatt", 2788, 0.04, 0.0, 0.97, 0.25], ["Hassan", "Alur", 2034, 0.0, 0.54, 0.29, 0.0], ["Hassan", "Arkalgud", 4182, 0.24, 0.0, 0.14, 0.0], ["Hassan", "Arsikere", 4264, 0.12, 0.0, 0.09, 0.0], ["Hassan", "Belur", 2979, 0.07, 0.0, 0.13, 0.0], ["Hassan", "Channarayapatna", 6574, 0.26, 0.65, 0.41, 10.36], ["Hassan", "Hassan", 2542, 0.04, 0.0, 0.08, 0.41], ["Hassan", "Holenarsipur", 2448, 0.86, 1.14, 0.16, 0.0], ["Hassan", "Sakaleshpur", 3069, 0.23, 0.0, 0.13, 2.54], ["Haveri", "Byadgi", 2528, 0.12, 0.0, 0.16, 5.13], ["Haveri", "Hanagal", 6295, 0.43, 1.02, 1.35, 5.82], ["Haveri", "Haveri", 3799, 0.08, 0.0, 0.47, 0.78], ["Haveri", "Hirekerur", 4193, 0.38, 0.0, 0.52, 7.15], ["Haveri", "Ranebennur", 3423, 0.99, 0.58, 2.86, 4.53], ["Haveri", "Rattihalli", 3469, 0.49, 0.32, 0.63, 7.2], ["Haveri", "Savanur", 2591, 0.04, 0.0, 0.35, 0.0], ["Haveri", "Shiggaon", 3210, 0.16, 0.0, 1.34, 0.41], ["Kalaburagi", "Afzalpur", 4665, 2.66, 1.56, 0.9, 8.53], ["Kalaburagi", "Aland", 6739, 0.56, 0.45, 0.56, 7.78], ["Kalaburagi", "Chincholi", 5033, 0.84, 0.74, 1.03, 1.26], ["Kalaburagi", "Chitapur", 3930, 0.48, 0.59, 2.01, 5.8], ["Kalaburagi", "Jevargi", 3841, 4.48, 0.21, 2.58, 7.41], ["Kalaburagi", "Kalaburagi", 2626, 0.99, 0.42, 0.46, 13.89], ["Kalaburagi", "Kalagi", 2494, 0.92, 0.0, 0.64, 1.9], ["Kalaburagi", "Kamalapur", 2781, 0.36, 0.0, 0.79, 0.55], ["Kalaburagi", "Sedam", 2737, 1.64, 0.91, 0.44, 0.04], ["Kalaburagi", "Shabad", 730, 4.25, 0.0, 0.55, 2.52], ["Kalaburagi", "Yadrami", 2414, 0.42, 0.0, 4.89, 14.66], ["Kodagu", "Kushalnagar", 0, null, null, null, null], ["Kodagu", "Madikeri", 1053, 0.28, 0.0, 1.8, 0.0], ["Kodagu", "Somvarpet", 2105, 0.0, 0.0, 0.29, 0.69], ["Kodagu", "Virajpet", 1471, 0.41, 0.0, 0.0, 0.0], ["Kolar", "Bangarapet", 2749, 0.0, 0.0, 0.22, 0.37], ["Kolar", "K G F", 3144, 0.41, 0.16, 0.95, 3.26], ["Kolar", "Kolar", 5315, 0.13, 0.15, 0.45, 5.46], ["Kolar", "Malur", 3754, 0.29, 0.32, 0.21, 0.48], ["Kolar", "Mulbagal", 5111, 0.12, 0.0, 0.04, 4.42], ["Kolar", "Srinivaspur", 6048, 0.61, 0.73, 0.78, 8.64], ["Koppal", "Gangavathi", 2635, 11.04, 4.06, 0.87, 0.0], ["Koppal", "Kanakagiri", 3033, 0.33, 0.36, 0.2, 0.0], ["Koppal", "Karatagi", 2294, 7.24, 5.84, 1.74, 0.22], ["Koppal", "Koppal", 4215, 1.95, 0.81, 0.19, 0.0], ["Koppal", "Kuknoor", 2049, 0.05, 0.0, 0.39, 0.0], ["Koppal", "Kushtagi", 9891, 0.58, 0.22, 0.47, 4.1], ["Koppal", "Yelburga", 2538, 0.83, 0.2, 0.08, 0.2], ["Mandya", "Krishnarajpet", 5421, 0.24, 0.0, 0.07, 0.0], ["Mandya", "Maddur", 3568, 0.06, 0.0, 0.0, 0.0], ["Mandya", "Malvalli", 3795, 0.18, 0.0, 0.0, 0.0], ["Mandya", "Mandya", 2986, 0.1, 0.0, 0.0, 0.24], ["Mandya", "Nagamangala", 3166, 0.09, 0.0, 0.06, 1.02], ["Mandya", "Pandavapura", 2032, 0.05, 0.0, 0.2, 0.0], ["Mandya", "Shrirangapattana", 1474, 0.0, 0.0, 0.27, 0.0], ["Mysuru", "Heggadadevankote", 4003, 0.3, 0.0, 0.85, 0.48], ["Mysuru", "Hunsur", 3411, 0.12, 0.73, 3.25, 0.97], ["Mysuru", "Krishnarajanagara", 1133, 0.09, 0.0, 0.0, 0.0], ["Mysuru", "Mysuru", 4058, 0.2, 0.15, 0.3, 0.1], ["Mysuru", "Nanjangud", 4154, 0.19, 0.0, 5.25, 2.08], ["Mysuru", "Piriyapatna", 6210, 0.08, 0.0, 0.31, 0.68], ["Mysuru", "Saligrama", 1614, 0.0, 0.0, 0.25, 0.0], ["Mysuru", "Saraguru", 3647, 0.93, 0.49, 4.0, 1.16], ["Mysuru", "Tirumakudal-Narsipur", 3569, 0.34, 0.39, 0.22, 0.0], ["Raichur", "Arakera", 0, null, null, null, null], ["Raichur", "Devadurga", 5425, 0.31, 0.0, 3.37, 16.65], ["Raichur", "Lingsugur", 8671, 0.59, 1.0, 2.09, 15.82], ["Raichur", "Manvi", 3384, 0.56, 0.0, 2.07, 12.78], ["Raichur", "Maski", 5602, 1.04, 0.98, 1.84, 19.77], ["Raichur", "Raichur", 5633, 3.02, 2.13, 4.62, 14.16], ["Raichur", "Sindhnur", 3416, 1.41, 0.15, 0.76, 11.49], ["Raichur", "Sirawara", 3348, 2.63, 3.17, 4.36, 15.23], ["Shivamogga", "Bhadravati", 2864, 0.07, 0.0, 0.38, 0.32], ["Shivamogga", "Hosanagara", 2097, 0.14, 0.0, 0.86, 0.1], ["Shivamogga", "Sagar", 3039, 0.1, 0.69, 0.13, 0.07], ["Shivamogga", "Shikarpur", 4251, 0.09, 0.0, 0.05, 0.0], ["Shivamogga", "Shivamogga", 1714, 0.23, 0.0, 0.0, 0.0], ["Shivamogga", "Sorab", 2903, 0.03, 0.0, 0.07, 0.0], ["Shivamogga", "Tirthahalli", 1689, 0.0, 0.53, 0.12, 0.0], ["Tumakuru", "Chiknayakanhalli", 5538, 0.58, 0.61, 0.29, 0.0], ["Tumakuru", "Gubbi", 6632, 0.44, 0.0, 1.34, 8.23], ["Tumakuru", "Koratagere", 5092, 0.24, 0.0, 0.27, 0.0], ["Tumakuru", "Kunigal", 13688, 0.48, 0.95, 1.09, 0.62], ["Tumakuru", "Madhugiri", 7395, 0.12, 0.0, 0.16, 0.46], ["Tumakuru", "Pavagada", 7583, 0.41, 1.11, 0.84, 0.0], ["Tumakuru", "Sira", 8026, 0.14, 0.0, 0.22, 0.0], ["Tumakuru", "Tiptur", 4819, 0.08, 0.0, 0.08, 0.02], ["Tumakuru", "Tumakuru", 7337, 0.27, 0.14, 0.4, 0.03], ["Tumakuru", "Turuvekere", 3909, 0.03, 0.0, 0.05, 0.0], ["Udupi", "Brahmavara", 1625, 0.12, 0.0, 0.0, 0.0], ["Udupi", "Byndoor", 2219, 0.14, 0.0, 0.5, 0.0], ["Udupi", "Hebri", 892, 0.78, 0.0, 0.22, 0.0], ["Udupi", "Kapu", 802, 0.0, 0.0, 3.24, 0.0], ["Udupi", "Karkal", 2746, 0.22, 0.0, 0.22, 0.0], ["Udupi", "Kundapura", 4218, 0.07, 0.0, 0.09, 0.0], ["Udupi", "Udupi", 964, 0.21, 0.0, 0.21, 0.0], ["Uttara Kannada", "Ankola", 1120, 0.98, 0.0, 0.0, 0.0], ["Uttara Kannada", "Bhatkal", 807, 0.12, 0.0, 0.0, 0.13], ["Uttara Kannada", "Dandeli", 199, 0.5, 0.0, 0.0, 0.0], ["Uttara Kannada", "Haliyal", 1666, 0.06, 0.0, 0.12, 0.0], ["Uttara Kannada", "Honavar", 1681, 0.71, 0.0, 0.0, 0.0], ["Uttara Kannada", "Karwar", 505, 2.59, 0.0, 0.0, 0.0], ["Uttara Kannada", "Kumta", 1101, 0.0, 0.0, 0.0, 0.0], ["Uttara Kannada", "Mundgod", 2017, 0.3, 0.0, 0.3, 4.61], ["Uttara Kannada", "Siddapur", 2089, 0.0, 0.0, 0.0, 0.0], ["Uttara Kannada", "Sirsi", 3671, 0.03, 0.0, 0.11, 0.11], ["Uttara Kannada", "Supa", 1754, 1.14, 0.63, 1.94, 0.17], ["Uttara Kannada", "Yellapur", 2005, 0.3, 0.0, 0.95, 0.61], ["Vijayanagara", "Hadagalli", 3872, 0.57, 0.13, 0.31, 0.03], ["Vijayanagara", "Hagaribommanahalli", 2897, 0.48, 0.0, 0.48, 0.0], ["Vijayanagara", "Harappanahalli", 5174, 0.21, 0.21, 0.15, 0.31], ["Vijayanagara", "Hospet", 1527, 1.57, 2.23, 0.13, 0.0], ["Vijayanagara", "Kottur", 1415, 0.14, 0.0, 0.0, 0.0], ["Vijayanagara", "Kudligi", 2947, 0.17, 0.0, 0.2, 0.0], ["Vijaypura", "Almel", 1781, 1.4, 0.0, 23.98, 6.32], ["Vijaypura", "Babaleshwar", 974, 0.1, 0.0, 1.23, 17.43], ["Vijaypura", "Basavana Bagevadi", 1486, 0.0, 0.0, 0.54, 15.87], ["Vijaypura", "Chadachana", 3567, 0.03, 0.0, 0.25, 2.82], ["Vijaypura", "Devara Hipparagi", 2804, 0.53, 0.0, 1.78, 15.4], ["Vijaypura", "Indi", 5012, 0.08, 0.0, 4.61, 13.24], ["Vijaypura", "Kolhar", 789, 0.0, 0.0, 0.0, 2.05], ["Vijaypura", "Muddebihal", 1558, 0.26, 0.0, 0.26, 0.46], ["Vijaypura", "Nidagundi", 1049, 0.57, 0.0, 1.05, 3.76], ["Vijaypura", "Sindgi", 3371, 3.59, 0.18, 16.08, 4.63], ["Vijaypura", "Thalikoti", 772, 1.17, 0.0, 0.91, 3.6], ["Vijaypura", "Thikota", 1847, 0.27, 0.0, 0.54, 1.8], ["Vijaypura", "Vijaypura", 1808, 0.11, 0.0, 0.33, 3.15], ["Yadgir", "Gurumitkal", 1728, 0.41, 0.0, 0.12, 14.03], ["Yadgir", "Hunasagi", 10834, 0.14, 0.13, 1.79, 31.09], ["Yadgir", "Shahpur", 14314, 0.89, 1.38, 3.62, 11.59], ["Yadgir", "Shorapur", 8998, 0.12, 0.28, 0.82, 20.49], ["Yadgir", "Wadegera", 4377, 1.07, 0.0, 1.87, 6.08], ["Yadgir", "Yadgir", 2584, 0.43, 0.23, 0.5, 25.58]];
+
+const tb = document.querySelector('#t tbody'), q = document.getElementById('q');
+const cut = {};
+[3,4,5,6].forEach(i => { const v = D.filter(r => r[2] >= 200).map(r => r[i] || 0).sort((a,b) => a-b); cut[i] = v[Math.floor(v.length*.9)]; });
+let key = 3, dir = -1;
+function draw() {
+  const s = q.value.trim().toLowerCase();
+  const rows = D.filter(r => !s || (r[0]+' '+r[1]).toLowerCase().includes(s)).sort((a,b) => {
+    const x = a[key], y = b[key];
+    return (typeof x === 'string' ? x.localeCompare(y) : ((x ?? -1) - (y ?? -1))) * dir; });
+  tb.innerHTML = rows.map(r => '<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2].toLocaleString('en-IN')+'</td>' +
+    [3,4,5,6].map(i => '<td'+(r[2] >= 200 && r[i] != null && r[i] > cut[i] ? ' class="hi"' : '')+'>'+(r[i] == null ? '–' : r[i].toFixed(2))+'</td>').join('') + '</tr>').join('');
+  document.querySelectorAll('#t th').forEach(th => th.toggleAttribute('aria-sort', +th.dataset.k === key));
+}
+document.querySelectorAll('#t th').forEach(th => th.addEventListener('click', () => {
+  const k = +th.dataset.k; dir = (k === key) ? -dir : (k < 2 ? 1 : -1); key = k; draw(); }));
+q.addEventListener('input', draw); draw();
+
+</script>

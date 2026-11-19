@@ -1,0 +1,139 @@
+<title>One Tank, Many Works</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+:root { --bg:#f5f6f8; --surface:#fff; --fg:#161a22; --muted:#5b6474; --line:#dde1e8; --red:#c21f30; --yellow:#f2b705; --track:#e3e6ec;
+  --display:"Space Grotesk","Segoe UI",system-ui,sans-serif; --body:Inter,"Segoe UI",system-ui,sans-serif; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#11141a; --surface:#1a1e27; --fg:#eceef2; --muted:#9aa3b2; --line:#2b313d; --red:#ef5261; --yellow:#f5c93a; --track:#2b313d; color-scheme:dark } }
+:root[data-theme="dark"] { --bg:#11141a; --surface:#1a1e27; --fg:#eceef2; --muted:#9aa3b2; --line:#2b313d; --red:#ef5261; --yellow:#f5c93a; --track:#2b313d; color-scheme:dark }
+body { background:var(--bg); color:var(--fg); font:16px/1.55 var(--body); padding-block:28px 64px; padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); }
+.wrap { max-width:860px; margin:0 auto; display:flex; flex-direction:column; gap:44px; }
+a { color:inherit; text-underline-offset:3px; }
+h1,h2,h3 { font-family:var(--display); text-wrap:balance; margin:0; }
+h1 { font-size:clamp(2.1rem,7vw,3.4rem); line-height:1.02; letter-spacing:-.02em; } h1 span { color:var(--red); }
+h2 { font-size:1.5rem; } h3 { font-size:1.1rem; } p { margin:0; max-width:68ch; }
+section { display:flex; flex-direction:column; gap:14px; }
+.eyebrow { font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+.draft { display:inline-block; background:var(--yellow); color:#161a22; font-weight:600; font-size:.8rem; padding:3px 10px; border-radius:3px; letter-spacing:.04em; align-self:flex-start; }
+header { display:flex; flex-direction:column; gap:14px; } .lede { font-size:1.12rem; } .muted { color:var(--muted); font-size:.9rem; }
+.tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); border-block:2px solid var(--fg); }
+.tile { padding:16px 14px 16px 0; display:flex; flex-direction:column; gap:4px; }
+.tile b { font-family:var(--display); font-size:2rem; line-height:1; color:var(--red); }
+figure { margin:0; display:flex; flex-direction:column; gap:6px; } figure img { width:100%; border-radius:6px; border:1px solid var(--line); }
+figcaption { color:var(--muted); font-size:.85rem; max-width:68ch; }
+.facts { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; }
+.fact { background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 16px; display:flex; flex-direction:column; gap:6px; }
+.fact.ok { border-left:4px solid #1a8f4c; } .fact.q { border-left:4px solid var(--red); }
+.fact h3 { font-size:1rem; }
+.note { background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--yellow); border-radius:10px; padding:14px 16px; display:flex; flex-direction:column; gap:8px; }
+ul, ol { margin:0; padding-left:1.25em; display:flex; flex-direction:column; gap:6px; max-width:68ch; }
+table { border-collapse:collapse; width:100%; font-size:.92rem; font-variant-numeric:tabular-nums; }
+.tw { overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+th, td { padding:8px 10px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; }
+th:first-child, td:first-child { text-align:left; white-space:normal; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:8px; }
+.step { background:var(--surface); border:1px solid var(--line); border-top:3px solid var(--red); border-radius:8px; padding:10px 12px; font-size:.9rem; display:flex; flex-direction:column; gap:4px; }
+.step b { font-family:var(--display); }
+footer { border-top:2px solid var(--fg); padding-top:16px; display:flex; flex-direction:column; gap:8px; }
+</style>
+<div class="wrap">
+<header>
+  <span class="draft">DRAFT · NOT PUBLISHED</span>
+  <span class="eyebrow">Rural job scheme (MGNREGA) · Koppal and Ballari districts · records of 2024-25</span>
+  <h1>One tank, <span>many works</span></h1>
+  <p class="lede">At two village tanks on either side of the Tungabhadra, the government's own records show 246 separate "completed" works from 18 panchayats, with ₹13.05 crore booked against them. Every completion photo was taken at the same tank. Here is what the records show, what satellite images show, and the questions officials have not yet answered.</p>
+  <p class="muted">Sources: Bhuvan-BHUGRAM public dashboard and asset records (NRSC/ISRO for the Ministry of Rural Development), read 17 to 19 November 2026; Sentinel-2 imagery (Copernicus/ESA); Maxar imagery viewable in Esri World Imagery Wayback. This is reporting on public records. It does not say any person did anything wrong.</p>
+</header>
+
+<div class="tiles">
+  <div class="tile"><b>₹13.05 cr</b><span class="muted">booked on 246 works photographed at two tanks</span></div>
+  <div class="tile"><b>4.19 lakh</b><span class="muted">person-days of wages recorded on them</span></div>
+  <div class="tile"><b>66</b><span class="muted">works "completed" in one 4-hour photo session, 9 Nov 2024</span></div>
+  <div class="tile"><b>1st and 2nd</b><span class="muted">Gangavathi and Karatagi, of 227 blocks, for photos taken far from the work's panchayat</span></div>
+</div>
+
+<section>
+  <span class="eyebrow">Case 1 · Kampli taluk, Ballari district</span>
+  <h2>152 works, 7 panchayats, ₹5.91 crore, one tank near Kanavi Timmalapura</h2>
+  <p>The completion photos of 152 community works from No. 10 Muddapura, Devasamudra, Ramasagara, Devalapura, Metri, Nelludi and Suggenahalli panchayats were all taken within about 400 metres of one point (15.3425 N, 76.5825 E). On record they are distributary and feeder canals, flood and diversion channels, earthen bunds and water-harvesting ponds, from work years 2018-19 to 2023-24. Together they carry ₹5.18 crore in wages, ₹0.72 crore in material and 2.09 lakh person-days.</p>
+  <figure><img src="kampli_photos.jpg" alt="Twelve completion photos: six of a dry sandy tank bed under a rocky hill taken on 6 April 2024, six of the same tank full of water taken on 9 November 2024" loading="lazy">
+    <figcaption>Top row: six of the 25 works photographed on 6 April 2024, in about 80 minutes. Bottom row: six of the 66 works photographed on 9 November 2024 between 10:27 and 14:13, some from a coracle. Every photo shows the tank itself; none shows a separate canal, channel, bund or pond.</figcaption></figure>
+  <figure><img src="kampli_satellite.jpg" alt="Two satellite images of the area: the tank dry in March 2024 and holding water in November 2024" loading="lazy">
+    <figcaption>Sentinel-2: dry on 31 March 2024; 12.6 hectares of water on 6 November 2024, with the photo point inside it.</figcaption></figure>
+  <div class="facts">
+    <div class="fact ok"><h3>What the satellite supports</h3><p>Sharper Maxar images (open them in <a href="https://livingatlas.arcgis.com/wayback/">Esri Wayback</a> at 15.3425, 76.5825) show a farmed and wooded bed behind an old bund in April 2019, a cleared bed by March 2022, and a holding tank from 2023. Real work was done here.</p></div>
+    <div class="fact q"><h3>What it does not show</h3><p>No new canals, feeder or diversion channels, or separate ponds appear around the tank between 2019 and 2026, though about 70 of the 152 works are recorded as such. At a common rate of about 2.5 cubic metres a person-day, the wages recorded would dig the whole 12.6-hectare bed about 4 metres deep.</p></div>
+  </div>
+  <p class="muted"><a href="kampli_tank_152_works.csv">All 152 works (CSV)</a>: panchayat, work code, Bhuvan asset ID, work type, year, photo time, person-days, wages, material, photo link.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Case 2 · Karatagi and Gangavathi taluks, Koppal district</span>
+  <h2>94 works, 11 panchayats, ₹7.14 crore, Jeerala village tank</h2>
+  <p>The completion photos for 94 community works from 11 panchayats in two taluks were taken from one roadside point by the Jeerala tank, near Adapura (15.5834 N, 76.5209 E). The work names say labourers of several panchayats were sent to desilt this one tank. On record are earthen check dams, pond renovations, absorption trenches, fisheries ponds and embankments, carrying about ₹5.92 crore in wages, ₹1.22 crore in material and 2.10 lakh person-days.</p>
+  <figure><img src="jeerala_photos.jpg" alt="Six completion photos of the Jeerala tank bed showing dug trenches in April 2024 and water in June 2024" loading="lazy">
+    <figcaption>Six of the completion photos. The trenches are real: Maxar images show the bed was scrub in 2016 and covered in a grid of dug pits and trenches by March 2022, with ponds by 2026.</figcaption></figure>
+  <div class="facts">
+    <div class="fact ok"><h3>What the records and images support</h3><p>Substantial digging took place in the tank bed. Labourers from many panchayats working on one big tank is allowed and is a common way to run the scheme.</p></div>
+    <div class="fact q"><h3>The open questions</h3><p>Does ₹7.14 crore of earthwork match the volume actually dug? Why is one tank split into 94 work codes? Do the recorded check dams, fisheries ponds and embankments exist as separate structures? Only the measurement books can answer this.</p></div>
+  </div>
+  <p class="muted"><a href="jeerala_tank_works.csv">All 94 works (CSV)</a>.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Case 3 · Koppal district</span>
+  <h2>One structure, accepted as two or three different works</h2>
+  <p>We compared every 2024-25 completion photo in Koppal district (23,580 works) with every other one, then checked the closest matches by eye. In each case below, the same physical object is the accepted completion photo for more than one work.</p>
+  <figure><img src="one_tank_three_works.jpg" alt="Three completion photos of the same small cement tank with the same pipe, rag and stones" loading="lazy">
+    <figcaption>One cement tank, three works, two panchayats (Antarathana and Nilogal, Kushtagi taluk). Same pipe elbow, same rag, same stones, same phone. One work is recorded as an earthen bund. The official locations of the three works are about 20 km apart. One photo shows the fine grid pattern of a picture taken off a screen.</figcaption></figure>
+  <figure><img src="one_pit_two_works.jpg" alt="Two completion photos of the same pit" loading="lazy">
+    <figcaption>One pit, two "brushwood check dams" (Kesur, Kushtagi taluk), photographed 3.5 minutes apart, each recorded with 128 person-days and ₹31,872 in wages.</figcaption></figure>
+  <ul>
+    <li><b>An old shed recorded as two new houses</b> (Tumarikoppa, Kushtagi): two "state scheme house" works marked complete in December 2024 both show one small shed with "2017-18" painted on it, and one photo carries a 2019 camera date. ₹43,326 in wages.</li>
+    <li><b>One pit, two works</b> (Budur, Yelburga) and <b>one plant, two works</b> (Talakere, Yelburga), each photographed minutes apart on one phone.</li>
+    <li><b>Wrong structure, identical bills</b> (Bevinahal, Karatagi): 15 works recorded as bio-gas plants, compost pits, a recharge pit and a farm pond all show cattle sheds. Several carry the same material figure to the paisa, ₹42,025.27 or ₹35,560.45, across different work types. ₹5.92 lakh in material in all.</li>
+    <li><b>One house, two house works</b> in three villages (Rajoor, Bennur, Budugumpa).</li>
+  </ul>
+  <p class="muted">These are works on families' own land and homes, so we do not publish their work codes or photos of homes. The families are not the subject; the question is how two records were approved for one structure. The codes are in our Right to Information requests.</p>
+</section>
+
+<section>
+  <h2>Where this money goes, and how anyone can trace it</h2>
+  <p>We do not know who, if anyone, gained. The scheme leaves a paper trail for every rupee, and these are the records that would show it:</p>
+  <div class="flow">
+    <div class="step"><b>1. Estimate</b>Technical sanction: what is to be built, where, and the quantities.</div>
+    <div class="step"><b>2. Muster roll</b>Who worked, on which days. Wages go to each worker's bank account.</div>
+    <div class="step"><b>3. Measurement book</b>An engineer records the quantity done. Payment follows this.</div>
+    <div class="step"><b>4. Material bills</b>Vendors are paid through fund transfer orders.</div>
+    <div class="step"><b>5. Geotag</b>A photo proves completion. Moderators accept or reject it.</div>
+  </div>
+  <ul>
+    <li><b>Muster rolls and payments</b> for any work code are public on the scheme's own site, <a href="https://nrega.nic.in/">nrega.nic.in</a>. Search by work code, as listed in our CSV files, to see the muster rolls and fund transfer orders.</li>
+    <li>If one tank is booked as many works, the measurement books will show whether the same earthwork was measured more than once.</li>
+    <li>In its 2025 audit of the scheme in Karnataka (Report No. 13 of 2025), the Comptroller and Auditor General found completed work files with no photo of the asset, photos that could not be matched across stages, and social forestry works in Yelburga it called "suspect" after comparing photos with satellite images.</li>
+    <li>Karnataka's moderators rejected 419 of 42.5 lakh completion photos in all (0.010%), a quarter of the national rate. See the <a href="photo_check.html">block ranking</a>.</li>
+  </ul>
+</section>
+
+<div class="note">
+  <strong>What we are doing next</strong>
+  <ul>
+    <li>Right to Information requests for the estimates, measurement books, muster rolls and material bills of every work above are prepared, addressed to the Taluk Panchayats of Kampli, Karatagi, Gangavathi and Kushtagi and the Zilla Panchayat, Koppal.</li>
+    <li>Requests for inquiry are prepared for the MGNREGA Ombudsperson of Koppal and Ballari districts, asking for site inspection and a social audit.</li>
+    <li>We will publish every reply in full, including any explanation that shows a work is genuine.</li>
+  </ul>
+</div>
+
+<section>
+  <h2>For journalists and officials</h2>
+  <ul>
+    <li>Every figure here comes from a public government record you can open yourself. The CSV files list each work code, the official photo link and the money recorded.</li>
+    <li>The strongest single check is the measurement books of the 152 Kampli works and the 94 Jeerala works, set against the tanks as they are today.</li>
+    <li>Officials, panchayat members or residents with an explanation or correction: write through <a href="../index.html#join">Have your say</a>. We publish replies in full and correct errors openly.</li>
+  </ul>
+</section>
+
+<footer>
+  <p class="muted"><b>© 2026 Gandaberunda (Know Your MLA).</b> The analysis, text, charts and image compilations on this page are original work by Gandaberunda. News organisations may quote and reproduce them with the credit "Gandaberunda / Know Your MLA" and a link to this page. The underlying government records and photographs belong to the public record (NRSC/ISRO, Ministry of Rural Development). Sentinel-2 imagery: contains modified Copernicus Sentinel data 2024.</p>
+  <p class="muted">First published November 2026. This is a test version and is still being checked.</p>
+</footer>
+</div>

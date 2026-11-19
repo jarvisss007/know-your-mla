@@ -18,6 +18,7 @@ https://jarvisss007.github.io/know-your-mla/. Push to `main` to publish; it is l
 | RTI letters (5 letters, EN/KN switch) | `rti.html` | `py tools/make_rti_page.py` (reads the officials tracker; re-run after it changes) |
 | After the raid (officials tracker, EN/KN) | `reports/officials_tracker.html`, `_kn.html` | `py research/officials_tracker/build.py` then `py tools/publish_reports.py`; names only in the private repo |
 | Follow the rupee (EN/KN) | `reports/follow_the_money.html`, `_kn.html` | hand-edited drafts in `research/follow_the_money/` (notes: FOLLOW_THE_MONEY_DRAFT.md), then `py tools/publish_reports.py`; edit both languages together |
+| Rural jobs photo check (ranking + tank findings) | `reports/photo_check.html`, `reports/tank_findings.html` | `py research/rural_jobs/make_ranking_page.py` (CSV: `research/rural_jobs/photo_check_blocks_2024-25.csv`); findings page hand-edited in `research/rural_jobs/findings/` (images and CSVs made from the private repo by `leads/make_public_assets.py`: community works only, no names, camera stamps cropped); then `py tools/publish_reports.py` |
 | Satellite pages | `reports/satellite/{kanakapura,holenarasipur,mahadevapura}/` | `research/satellite/make_rural_page.py <folder>` and `make_page.py` (Mahadevapura), then `publish_reports.py` |
 | Cards | `cards/farmers/`, `cards/join/` | `tools/make_farmer_cards.py`, `tools/make_join_cards.py` |
 
