@@ -22,6 +22,16 @@ https://jarvisss007.github.io/know-your-mla/. Push to `main` to publish; it is l
 | Satellite pages | `reports/satellite/{kanakapura,holenarasipur,mahadevapura}/` | `research/satellite/make_rural_page.py <folder>` and `make_page.py` (Mahadevapura), then `publish_reports.py` |
 | Cards | `cards/farmers/`, `cards/join/` | `tools/make_farmer_cards.py`, `tools/make_join_cards.py` |
 
+## Who owns what (agreed between sessions, 20 Nov 2026)
+
+| Session | Owns (edit only these) |
+|---|---|
+| Research and site | `index.html` header/menus/tiles/footer, `#promised` `#power` `#loans` `#tunnel`, report cards; `money.html`; `cards/`; `mla/`; `research/fundflow/`, `research/tunnel/`, `research/handoff_*`; private repo `cases/`, `drafts/`, `vault/`, its own `leads/` folders |
+| Urban analysis with maps (rural jobs) | `research/rural_jobs/`, `research/bengaluru_roads/`, `research/follow_the_rupee/`, `research/treasury/` (new, handed to fundflow); `reports/` photo_check, tank_findings, mgnrega_letters, what_if_mgnrega, statewide_check; its PAGES entries in `tools/publish_reports.py`; three Rural jobs cards and two bullets in `index.html#research`; private repo `leads/` nrega_*, redflags, kmw (autosaved every 30 min), complaints, EVIDENCE_PACK, bbmp_payments |
+| Video session (Mac) | videos; reads `research/handoff_*` |
+
+Always `git pull --ff-only` before editing; MGNREGA problems are never attributed to MLAs.
+
 ## Added 16-20 Nov 2026 (research and site session)
 
 | What | Where | Notes |
