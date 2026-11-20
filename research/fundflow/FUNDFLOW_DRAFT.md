@@ -299,6 +299,16 @@ Source: research/treasury/CAG_FINDINGS_DRAFT.md (about 150 findings, read once b
 - L39. **Money collected for a purpose, never passed on.** BBMP health cess not remitted, Rs 1,275.18 cr, plus library and beggary cess (ATIR 2020-22 para 2.10.5).
 Before any of these is quoted: open the CAG page cited, copy the sentence, and include the Government's reply where the report prints one.
 
+### 4.7 Irrigation: the biggest single pool of owed money (added 20 Nov 2026)
+
+Source: research/treasury/IRRIGATION_MONEY_DRAFT.md (113 items, "Urban analysis with maps" session; Assembly answers read once from scans, not second-read; not page-checked by this session).
+- Pending bills in the four irrigation Nigams on 24 Mar 2026 (LAQ 3223): KNNL 6,164.50; VJNL 4,993.16; KBJNL 3,760.12; CNNL 3,629.38; total 18,547.16.
+- The four Nigams hold Rs 7,278 cr (51%) of the Rs 14,155 cr off-budget borrowing; Power Company of Karnataka holds Rs 5,258 cr. (Say "half", not "most".)
+- Upper Bhadra: Rs 5,300 cr provided in the Union Budget 2023-24, nothing released to Dec 2025 (Lok Sabha USQ 3200); the State had spent 11,375 by Feb 2026.
+- UKP Stage III: 1,04,301 of 1,33,867 acres still to be acquired (LAQ 419).
+- Yettinahole (CAG): seven contractors hold 67% of 43 works by number (by value, about 66.7% of all 55 contracts, derived); Rs 181.21 cr not recovered for pipeline not laid.
+- Leak point L40: lump-sum or advance payments not reduced when the scope shrinks (Yettinahole pipeline; see also KBJNL and MI Koppal in 4.6).
+
 ## What could not be confirmed
 
 1. **Rule numbers in the Karnataka Treasury Code, Financial Code and Budget Manual** were not checked against the current texts. Only rules quoted inside CAG reports are cited with confidence: KFC para 14, Rule 161, Arts. 162(c), 286, 286A and 349; Manual of Contingent Expenditure Rule 37(b)(3); KPWD Code Rule 202; KBM para 110 and Rule 264.
