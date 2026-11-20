@@ -1,6 +1,6 @@
 # Project state: start here (any Claude session, any account)
 
-Last updated 16 Nov 2026 by the research and site session. Read this, then `CHANNEL_OPS.md` (who owns what) and `research/METHOD.md` (standards).
+Last updated 20 Nov 2026 by the research and site session. Read this, then `CHANNEL_OPS.md` (who owns what) and `research/METHOD.md` (standards).
 Before any edit: `git pull --ff-only`. Another session commits often. Commit and push new work as you make it; never leave it only on one machine.
 
 ## The live site (GitHub Pages from `main`, repo root)
@@ -21,6 +21,21 @@ https://jarvisss007.github.io/know-your-mla/. Push to `main` to publish; it is l
 | Rural jobs photo check (ranking + tank findings) | `reports/photo_check.html`, `reports/tank_findings.html` | `py research/rural_jobs/make_ranking_page.py` (CSV: `research/rural_jobs/photo_check_blocks_2024-25.csv`); findings page hand-edited in `research/rural_jobs/findings/` (images and CSVs made from the private repo by `leads/make_public_assets.py`: community works only, no names, camera stamps cropped); then `py tools/publish_reports.py` |
 | Satellite pages | `reports/satellite/{kanakapura,holenarasipur,mahadevapura}/` | `research/satellite/make_rural_page.py <folder>` and `make_page.py` (Mahadevapura), then `publish_reports.py` |
 | Cards | `cards/farmers/`, `cards/join/` | `tools/make_farmer_cards.py`, `tools/make_join_cards.py` |
+
+## Added 16-20 Nov 2026 (research and site session)
+
+| What | Where | Notes |
+|---|---|---|
+| Site look: dark header with grouped menus (MLAs, Money, Take part, About), home hero with six tiles, footer | `index.html` (`.topnav`, `.hero`, `.sitefoot`; old `.nav` kept hidden because the page router reads it) | Add new pages to BOTH `.nav` and the right `.topnav` group |
+| Promised vs delivered (both governments) | `index.html#promised` | CAG State Finances figures |
+| MLAs and power plants | `index.html#power` | two records per row (affidavit + KREDL/KERC) |
+| Money between politicians | `index.html#loans` | 16 loans declared on both sides; open-case loans held back |
+| Tunnel road | `index.html#tunnel` | DPR payments from the BBMP ledger (Rs 7.56 cr gross); research in `research/tunnel/` |
+| What if? simulator + where it leaked | `money.html` | unit costs from official sources |
+| Report cards: ministers' departments; text colour fix | `index.html` (`MIN`, `.rcin`) | |
+| Constituency share cards (222 x KN/EN) | `cards/mla/` | `py tools/make_mla_cards.py` after `D` changes |
+| Video handoffs | `research/handoff_promised_whatif_FACTS.md`, `handoff_whatif_leaks_SCRIPTS.md`, `handoff_tunnel_SCRIPT.md`, `handoff_ruling_family_GO.md` | Ruling Family part 1: no reply by 20 Nov (owner); publish with the no-reply line |
+| Held for right of reply (private repo) | MLA-ARE-BADDDDD `cases/`, `drafts/HELD_PAGES_DRAFT.md` | 11 letters await the owner |
 
 ## Visitor input (Have your say)
 
@@ -53,7 +68,7 @@ https://jarvisss007.github.io/know-your-mla/. Push to `main` to publish; it is l
 1. A native Kannada reader: farmers.html, cards, Shorts scripts, Kannada reports, the `data-kn` strings, and report-card labels.
 2. Someone in India: the Davanagere South MLA's 2026 by-election affidavit (affidavit.eci.gov.in returns 403 and ceo.karnataka.gov.in times out from abroad; not on myneta), the Nijasharana corporation's MCA balance sheets (CIN U93090KA2017SGC107814; owner has the steps), Karnataka portals (raitamitra, Samrakshane, Parihara, KFCSC, Lokayukta link), missing district figures.
 3. Field visits to the satellite patches (the lists are on the satellite pages and in each `field_checks.csv`).
-4. Right-of-reply deadline for the Ruling Family videos: 20 Nov 2026 (the video session holds those uploads).
+4. Ruling Family part 1: window closed 20 Nov 2026 with no reply (owner); see research/handoff_ruling_family_GO.md. Eleven more right-of-reply letters (private repo) await the owner.
 
 ## Standing rules (from the owner)
 
