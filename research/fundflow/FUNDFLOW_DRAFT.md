@@ -309,6 +309,14 @@ Source: research/treasury/IRRIGATION_MONEY_DRAFT.md (113 items, "Urban analysis 
 - Yettinahole (CAG): seven contractors hold 67% of 43 works by number (by value, about 66.7% of all 55 contracts, derived); Rs 181.21 cr not recovered for pipeline not laid.
 - Leak point L40: lump-sum or advance payments not reduced when the scope shrinks (Yettinahole pipeline; see also KBJNL and MI Koppal in 4.6).
 
+### 4.8 Money meant for panchayats, disasters and mining districts (added 20 Nov 2026)
+
+Source: research/treasury/CAG_FINDINGS_2_DRAFT.md (158 findings from CAG reports 8/2025, 7/2025, 6/2025, 10/2024, 4/2024, 13/2025; one read; Report 10/2024 by OCR; not page-checked by this session).
+- L41. **Devolution held back:** Rs 43,782 cr less to panchayats than the State Finance Commission recommendations the government accepted (Report 10/2024, OCR-read: check the page first).
+- L42. **Central money lost to a delayed election:** Rs 369.45 cr of 15th Finance Commission grants lost because Zilla and Taluk Panchayat elections were not held.
+- L43. **Disaster money without accounts or unused:** Rs 5,791 cr of drought spending with no district-wise details or utilisation certificates; Rs 421.60 cr of the disaster mitigation fund unused (Report 8/2025).
+- L44. **Mining-district fund off its rules:** District Mineral Foundation Rs 300.44 cr spent on works "not envisaged in the guidelines" (Ballari, 169 works); Rs 433.20 cr of sanctioned works never started (Report 7/2025).
+
 ## What could not be confirmed
 
 1. **Rule numbers in the Karnataka Treasury Code, Financial Code and Budget Manual** were not checked against the current texts. Only rules quoted inside CAG reports are cited with confidence: KFC para 14, Rule 161, Arts. 162(c), 286, 286A and 349; Manual of Contingent Expenditure Rule 37(b)(3); KPWD Code Rule 202; KBM para 110 and Rule 264.
