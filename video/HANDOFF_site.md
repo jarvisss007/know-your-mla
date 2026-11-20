@@ -15,7 +15,8 @@ These are the changes that sit in your files. Nothing in `research/`, `index.htm
 
 ## Asked of the site session
 
-1. **Count visitors.** The site has no analytics, so nobody can say how many people visit. GitHub's traffic numbers cover the repository page only (2 visitors in 14 days), not the site. Suggested: GoatCounter (free, no cookies, no consent banner). The owner has to create the account; then one line goes before `</body>` on every page:
+1. **Count visitors: DONE 20 Nov 2026 by the video session, on the owner's go-ahead.** The owner created `gandaberunda.goatcounter.com`. The counter line is now before `</body>` on all 245 served pages (root pages, `mla/`, `reports/`, `video/`) and in three generators (`tools/make_mla_pages.py`, `tools/publish_reports.py`, `tools/make_rti_page.py`) so a rebuild keeps it. If you add a new page or generator, add the same line. Original note follows.
+   **Count visitors.** The site has no analytics, so nobody can say how many people visit. GitHub's traffic numbers cover the repository page only (2 visitors in 14 days), not the site. Suggested: GoatCounter (free, no cookies, no consent banner). The owner has to create the account; then one line goes before `</body>` on every page:
    `<script data-goatcounter="https://CODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>`
 2. **Share previews on report pages.** `reports/*.html` have no `og:` or `twitter:` tags, so a link pasted into WhatsApp or X shows no picture. In `tools/publish_reports.py`, add to the head: `og:title`, `og:description` (the existing description), `og:image`, `twitter:card=summary_large_image`. For the rural jobs pages `video/films-card.jpg` can serve as the image.
 3. **Put the film on the findings page.** Under the headline tiles of `tank_findings.html`:

@@ -203,7 +203,7 @@ def page(d):
 <a class="btn wa" href="https://wa.me/?text={quote(wa)}" target="_blank" rel="noopener">Share on WhatsApp</a></div></div>
 <p class="fine">Figures are what the MLA declared in a sworn affidavit to the Election Commission{', archived by ADR at <a href="' + E(aff) + '" target="_blank" rel="noopener">myneta.info</a>' if aff and 'myneta' in aff else (', <a href="' + E(aff) + '" target="_blank" rel="noopener">affidavit</a>' if aff else '')}. Nobody audits them. Declared wealth is not evidence of wrongdoing: growth often reflects land being revalued. A declared case is not a conviction. District figures are about the district, not about the MLA. Errors: <a href="../index.html#join">tell us</a>. Gandaberunda is independent and takes no money from any party.</p>
 """
-    return HEAD.format(title=E(title), desc=E(desc), site=SITE, canon=url, css=CSS) + body + "</div></body></html>\n"
+    return HEAD.format(title=E(title), desc=E(desc), site=SITE, canon=url, css=CSS) + body + '</div><script data-goatcounter="https://gandaberunda.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>\n</body></html>\n'
 
 
 def main():

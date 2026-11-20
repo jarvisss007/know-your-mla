@@ -437,6 +437,7 @@ page = f"""<!doctype html>
 <p class="note"{K(f"ಮೂಲಗಳು: ಮಾಹಿತಿ ಹಕ್ಕು ಅಧಿನಿಯಮ, 2005 (ಸೆಕ್ಷನ್ 6, 7, 8, 10, 19, 24); ಕರ್ನಾಟಕ ಮಾಹಿತಿ ಹಕ್ಕು ನಿಯಮಗಳು (ಶುಲ್ಕ); Special Police Establishment v. Kamta Prasad Mishra, 2026 INSC 644; ಪ್ರಕರಣಗಳ ಪಟ್ಟಿ {A_TR_KN} ಪುಟದಿಂದ, ಅಲ್ಲಿ ಲಿಂಕ್ ಮಾಡಿದ ಪತ್ರಿಕಾ ವರದಿಗಳ ಆಧಾರದ ಮೇಲೆ. ಟ್ರ್ಯಾಕರ್ ಅನ್ನು {asof} ರಂದು ಓದಿದಂತೆ.")}>Sources: Right to Information Act, 2005 (Sections 6, 7, 8, 10, 19, 24); Karnataka RTI Rules (fee); Special Police Establishment v. Kamta Prasad Mishra, 2026 INSC 644; case list from {A_TR}, built from press reports linked there. Page built from the tracker as read on {asof}.</p>
 </main>
 <script>{js.replace('__DATA__', json.dumps(DATA, ensure_ascii=False)).replace('__LETTERS__', LJSON)}</script>
+<script data-goatcounter="https://gandaberunda.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
 """

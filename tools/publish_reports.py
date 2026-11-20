@@ -101,7 +101,7 @@ def build(src, dst, title, desc, alt, extra, note):
             "<style>:root{padding-top:env(safe-area-inset-top,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n")
     # split head-ish material (meta/link/style at the top of the body) from content: keep it all in <head> up to the first <div
     i = body.index("<div")
-    page = head + body[:i] + "</head>\n<body>\n" + bar + body[i:] + "\n</body>\n</html>\n"
+    page = head + body[:i] + "</head>\n<body>\n" + bar + body[i:] + '\n<script data-goatcounter="https://gandaberunda.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>\n</body>\n</html>\n'
     d.parent.mkdir(parents=True, exist_ok=True)
     d.write_text(page, encoding="utf-8", newline="\n")
     for x in extra:
