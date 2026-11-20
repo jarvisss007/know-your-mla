@@ -290,6 +290,15 @@ Source: research/treasury/FACTS_DRAFT.md (compiled by the "Urban analysis with m
 - L34. Sub-plan money counted for a general scheme: 14,263 of SCSP/TSP in the guarantees in 2024-25 (LAQ 1777). Lawful under Rule 7(C) as the answer states; the question is whether SC/ST households got that share, and the government says it does not have the data. Caution: the Finance answer (LAQ 1777) and the Social Welfare answer (LAQ 2550) give different SCSP/TSP guarantee figures for the same years; quote each with its source, never one as "the" figure.
 - L35. Capital-expenditure figures that change between the government's own answers (LAQ 422 vs 1658) and against the audit. Trace: the Finance Accounts capital heads against the answer.
 
+### 4.6 Where the auditor caught money leaving without the work (CAG compliance reports; added 20 Nov 2026)
+
+Source: research/treasury/CAG_FINDINGS_DRAFT.md (about 150 findings, read once by the "Urban analysis with maps" session; Report 1/2026 read by OCR; NOT page-checked by this session; several carry Government replies that dispute them). These are the ground-level proof for leak points already in table 2.1 (measurement, payment, supply):
+- L36. **Payment without the work.** Tank desilting, 137 works where the logbook "excavators" were two-wheelers and cars; CAG: "probable embezzlement" (Rs 3.22 cr; R4/2026 para 3.10). PWD Yadgir: the same 925 m paid under two works (Rs 1.33 cr; Government disputes). KBJNL Shorapur drain "not executed", measurement book manipulated (Rs 33.95 lakh). KRIDL stadium items paid in full but not built or supplied.
+- L37. **Advance or payment on paper.** KNNL 70% advance for pipes on "fraudulent invoices" (Rs 40.16 cr; PSE-R1/2025 para 6.12). KEONICS paid "without actual delivery" (Rs 9.36 cr) and on fake challans and forged reports (Rs 85.98 cr). ESIS Bagalkote: 902 fake reimbursement claims (Rs 4.03 cr).
+- L38. **Measured too fast to be real.** PWD Ballari and Koppal concrete works measured and paid within 1 to 21 days of the agreement (Rs 21.32 cr; R3/2025 para 3.2).
+- L39. **Money collected for a purpose, never passed on.** BBMP health cess not remitted, Rs 1,275.18 cr, plus library and beggary cess (ATIR 2020-22 para 2.10.5).
+Before any of these is quoted: open the CAG page cited, copy the sentence, and include the Government's reply where the report prints one.
+
 ## What could not be confirmed
 
 1. **Rule numbers in the Karnataka Treasury Code, Financial Code and Budget Manual** were not checked against the current texts. Only rules quoted inside CAG reports are cited with confidence: KFC para 14, Rule 161, Arts. 162(c), 286, 286A and 349; Manual of Contingent Expenditure Rule 37(b)(3); KPWD Code Rule 202; KBM para 110 and Rule 264.
