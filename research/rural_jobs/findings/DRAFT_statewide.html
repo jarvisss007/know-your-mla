@@ -1,0 +1,118 @@
+<title>The Whole State, Checked</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+:root { --bg:#f5f6f8; --surface:#fff; --fg:#161a22; --muted:#5b6474; --line:#dde1e8; --red:#c21f30; --yellow:#f2b705; --track:#e3e6ec;
+  --display:"Space Grotesk","Segoe UI",system-ui,sans-serif; --body:Inter,"Segoe UI",system-ui,sans-serif; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#11141a; --surface:#1a1e27; --fg:#eceef2; --muted:#9aa3b2; --line:#2b313d; --red:#ef5261; --yellow:#f5c93a; --track:#2b313d; color-scheme:dark } }
+:root[data-theme="dark"] { --bg:#11141a; --surface:#1a1e27; --fg:#eceef2; --muted:#9aa3b2; --line:#2b313d; --red:#ef5261; --yellow:#f5c93a; --track:#2b313d; color-scheme:dark }
+body { background:var(--bg); color:var(--fg); font:16px/1.55 var(--body); padding-block:28px 64px; padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px)); }
+.wrap { max-width:860px; margin:0 auto; display:flex; flex-direction:column; gap:44px; }
+a { color:inherit; text-underline-offset:3px; }
+h1,h2,h3 { font-family:var(--display); text-wrap:balance; margin:0; }
+h1 { font-size:clamp(2.1rem,7vw,3.4rem); line-height:1.02; letter-spacing:-.02em; } h1 span { color:var(--red); }
+h2 { font-size:1.5rem; } h3 { font-size:1.1rem; } p { margin:0; max-width:68ch; }
+section { display:flex; flex-direction:column; gap:14px; }
+.eyebrow { font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+.draft { display:inline-block; background:var(--yellow); color:#161a22; font-weight:600; font-size:.8rem; padding:3px 10px; border-radius:3px; letter-spacing:.04em; align-self:flex-start; }
+header { display:flex; flex-direction:column; gap:14px; } .lede { font-size:1.12rem; } .muted { color:var(--muted); font-size:.9rem; }
+.tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); border-block:2px solid var(--fg); }
+.tile { padding:16px 14px 16px 0; display:flex; flex-direction:column; gap:4px; }
+.tile b { font-family:var(--display); font-size:2rem; line-height:1; color:var(--red); }
+figure { margin:0; display:flex; flex-direction:column; gap:6px; } figure img { width:100%; border-radius:6px; border:1px solid var(--line); }
+figcaption { color:var(--muted); font-size:.85rem; max-width:68ch; }
+.facts { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; }
+.fact { background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 16px; display:flex; flex-direction:column; gap:6px; }
+.fact.ok { border-left:4px solid #1a8f4c; } .fact.q { border-left:4px solid var(--red); }
+.fact h3 { font-size:1rem; }
+.note { background:var(--surface); border:1px solid var(--line); border-left:4px solid var(--yellow); border-radius:10px; padding:14px 16px; display:flex; flex-direction:column; gap:8px; }
+ul, ol { margin:0; padding-left:1.25em; display:flex; flex-direction:column; gap:6px; max-width:68ch; }
+table { border-collapse:collapse; width:100%; font-size:.92rem; font-variant-numeric:tabular-nums; }
+.tw { overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+th, td { padding:8px 10px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; }
+th:first-child, td:first-child { text-align:left; white-space:normal; }
+.flow { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:8px; }
+.step { background:var(--surface); border:1px solid var(--line); border-top:3px solid var(--red); border-radius:8px; padding:10px 12px; font-size:.9rem; display:flex; flex-direction:column; gap:4px; }
+.step b { font-family:var(--display); }
+footer { border-top:2px solid var(--fg); padding-top:16px; display:flex; flex-direction:column; gap:8px; }
+</style>
+<div class="wrap">
+<header>
+  <span class="draft">DRAFT · NOT PUBLISHED</span>
+  <span class="eyebrow">Rural job scheme (MGNREGA) · all 232 blocks of Karnataka · works completed 2024-25</span>
+  <h1>The whole state, <span>checked</span></h1>
+  <p class="lede">We ran every completed MGNREGA work in Karnataka for 2024-25, 8.24 lakh of them, through the same checks that found the tanks in Koppal and Kampli. Here is what the government's own records show: where the proof of work breaks down, and three new places where the record and the photograph do not match.</p>
+  <p class="muted">Sources: Bhuvan-BHUGRAM public dashboard and asset records (NRSC/ISRO for the Ministry of Rural Development), read 18 to 20 November 2026. Every finding was checked by eye before it went on this page. This is reporting on public records. It does not say any person did anything wrong, and the questions below are open to the officials concerned.</p>
+</header>
+
+<div class="tiles">
+  <div class="tile"><b>8.24 lakh</b><span class="muted">completed works checked, 232 blocks</span></div>
+  <div class="tile"><b>6,353</b><span class="muted">works whose photo location breaks a basic rule</span></div>
+  <div class="tile"><b>₹2.08 cr</b><span class="muted">on the three new cases below</span></div>
+  <div class="tile"><b>8 of 10</b><span class="muted">of the biggest "many works, one spot" sites: location proof bypassed</span></div>
+</div>
+
+<section>
+  <h2>Where the proof of work breaks down</h2>
+  <p>Every finished work needs a photo taken at the site, with its location. We found that check bypassed in three different ways across the state:</p>
+  <div class="facts">
+    <div class="fact q"><h3>Many works, one spot</h3><p>3,320 works were photographed at spots shared by five or more works from different panchayats. Of the ten biggest we checked by eye, seven show different fields, houses or plantations, all stamped with one location. In Hubli, 159 works share one point.</p></div>
+    <div class="fact q"><h3>A frozen location</h3><p>235 works carry a GPS point identical, to the metre, to other works on the same phone on different days. In Kundgol, one phone reported one point for 153 works over eight months.</p></div>
+    <div class="fact q"><h3>A photo of a photo</h3><p>In Mudigere (77 works from 15 panchayats), Beltangadi (over 100 works) and Badami (42 works), the "site photos" are snapshots of printed photographs, taken at one place. We do not show them because they picture villagers.</p></div>
+  </div>
+  <p>In most of these cases the work itself may well exist. The point is that the system's main proof of where, and whether, work was done proves nothing here, and every one of these photos was accepted.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Case 5 · Yalihadalagi panchayat, Athni taluk, Belagavi</span>
+  <h2>"Fallow land" that is a paved courtyard</h2>
+  <p>Six community works carry ₹14.1 lakh in wages and ₹25.2 lakh in material, ₹39.4 lakh in all. This is what they are recorded as, and what their accepted completion photos show:</p>
+  <div class="tw"><table><thead><tr><th>Work code</th><th>Recorded as</th><th>Material (₹)</th><th>The photos show</th></tr></thead><tbody>
+    <tr><td>1504001003/LD/93393042892289935</td><td>Development of fallow land</td><td>6,76,880.77</td><td>paver-block school compound</td></tr>
+    <tr><td>1504001003/LD/93393042892289936</td><td>Development of fallow land</td><td>6,58,914.34</td><td>paver-block school compound</td></tr>
+    <tr><td>1504001003/LD/93393042892280559</td><td>Development of fallow land</td><td>5,02,747.36</td><td>paver-block forecourt of a building</td></tr>
+    <tr><td>1504001003/LD/93393042892273922</td><td>Development of chaur land</td><td>1,86,406.70</td><td>paved courtyard of what appears to be a temple</td></tr>
+    <tr><td>1504001003/RC/93393042892335371</td><td>Bitumen top road</td><td>4,98,643.43</td><td>a paver-block path, not bitumen</td></tr>
+    <tr><td>1504001003/IC/93393042892275599</td><td>Irrigation open well</td><td>0 (wages ₹4.61 lakh)</td><td>bare dug ground; no well visible</td></tr>
+  </tbody></table></div>
+  <figure><img src="yalihadalagi.jpg" alt="Four completion photos: a paved school compound, a paved forecourt, a paved temple courtyard and bare dug ground, each labelled with the work type on record" loading="lazy">
+    <figcaption>Each photo carries the work type recorded for it. "Development of fallow land" means bringing unused farmland into use. Paving a religious place is not among the scheme's permitted works.</figcaption></figure>
+  <p class="muted"><b>Questions for the Taluk Panchayat, Athni:</b> What was executed under each work code, and where? Why is paving recorded as land development, and as a bitumen road? Was any work done on the premises of a religious place? Where is the open well?</p>
+</section>
+
+<section>
+  <span class="eyebrow">Case 6 · Gudur-S.C panchayat, Ilkal taluk, Bagalkote</span>
+  <h2>Three plantations, one hillside, ₹1.48 crore</h2>
+  <p>Three community plantation works (1501004026/WC/93393042892536299, …538527 and …538531) each carry a material bill of exactly ₹5,89,688.28 and wages of about ₹43 lakh: ₹1.48 crore and about 41,000 person-days in all. Their completion photos were taken within a few metres of each other, two of them one minute apart, and all three show the same hillside.</p>
+  <figure><img src="gudur.jpg" alt="Three completion photos of the same scrubby hillside" loading="lazy">
+    <figcaption>One photo from each of the three works. Identical bills to the paisa can come from one standard estimate, but three separate plantation blocks should not look like the same view.</figcaption></figure>
+  <p class="muted"><b>Questions for the Taluk Panchayat, Ilkal:</b> Are these three separate plantation blocks? Where is each one? How many saplings were planted under each, and how many survive?</p>
+</section>
+
+<section>
+  <span class="eyebrow">Case 7 · Raichur taluk</span>
+  <h2>42 tree plantations, 12 panchayats, no trees in the photos</h2>
+  <p>Forty-two works recorded as "block plantation of horticulture trees" (work year 2019-20), from 12 panchayats, carry about ₹20.7 lakh and 6,459 person-days. All their completion photos carry one location (16.2017 N, 77.3429 E). The photos we sampled show close-ups of bare ground and litter, with no trees.</p>
+  <figure><img src="raichur_plantations.jpg" alt="Six completion photos of bare ground and litter, labelled with different panchayats" loading="lazy">
+    <figcaption>Six of the completion photos, from different panchayats' plantations, all taken at one spot. These are plantations on farmers' land, so we do not publish their work codes.</figcaption></figure>
+  <p class="muted"><b>Questions for the Taluk Panchayat, Raichur:</b> Where is each of the 42 plantations? How many trees were planted, and how many survive? Why do the photos of 12 panchayats' plantations carry one location?</p>
+</section>
+
+<div class="note">
+  <strong>What we checked and dropped</strong>
+  <p>Our scanner first flagged works recording thousands of person-days in a single day, in Kelavadi, Uppara Hosahalli and Gorabal among others. The photos showed real ponds, channels and plantations, and most of these records "start" on 1 April, the first day of the financial year: the system resets the start date of works carried over from the year before. We removed that pattern from the check rather than publish it. A finding that falls apart helps no one.</p>
+</div>
+
+<section>
+  <h2>What happens next</h2>
+  <ul>
+    <li>Officials of the Athni, Ilkal and Raichur Taluk Panchayats, and of every block named here, can reply through <a href="../index.html#join">Have your say</a>. We will publish every reply in full and correct any error.</li>
+    <li>Right to Information requests, in the same form as <a href="mgnrega_letters.html">The paper trail</a>, will ask for the estimates, measurement books, muster rolls and material bills of every work on this page.</li>
+    <li>The six fixes in <a href="what_if_mgnrega.html">What if it had all been built?</a> would have stopped every pattern on this page before payment.</li>
+  </ul>
+</section>
+
+<footer>
+  <p class="muted"><b>© 2026 Gandaberunda (Know Your MLA).</b> The analysis, text and image compilations on this page are original work by Gandaberunda. News organisations may quote and reproduce them with the credit "Gandaberunda / Know Your MLA" and a link to this page. The underlying records and photographs belong to the public record (NRSC/ISRO, Ministry of Rural Development).</p>
+  <p class="muted">First published November 2026. Test version, still being checked. See also <a href="tank_findings.html">One tank, many works</a> and the <a href="photo_check.html">block ranking</a>.</p>
+</footer>
+</div>
