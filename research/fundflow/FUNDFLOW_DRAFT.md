@@ -261,6 +261,34 @@ The CAG found that this corporation variant is where money stalls. See leak poin
 
 ---
 
+## Part 4. The treasury: what is locked in, what is owed, what the answers say (added 20 Nov 2026)
+
+Source: research/treasury/FACTS_DRAFT.md (compiled by the "Urban analysis with maps" session from CAG, PRS and Assembly answers; full citations there). Rs crore. **Checked at source** means this session re-read the figure on the original PDF on 20 Nov 2026.
+
+### 4.1 Money that is spoken for before the year starts
+- Salaries, pensions and interest: 1,16,479 in 2024-25, 45.1% of revenue receipts (CAG SFAR 2024-25, Table 1.18). With explicit subsidies: 64.5%.
+- CAG's own words: committed spending plus all subsidies is "nearly 77 per cent" of revenue receipts, and 82% once the State's share of central schemes is added (SFAR 2024-25, para 1.6(A); Executive Summary).
+- The five guarantee schemes: 52,525.60 in 2024-25, about 20% of revenue receipts (SFAR25 Table 1.20; page check of the budget column pending).
+
+### 4.2 Borrowing that is not in the budget, and promises the State has underwritten
+- Off-budget borrowing outstanding: 14,154.91 at 31 Mar 2025, through seven corporations including the irrigation nigams and Power Company of Karnataka (5,257.70, "securitization of Gram Panchayat dues"). CAG: these entities "do not have their own source of revenue and are incurring losses" (SFAR24, para 2.7.1.1).
+- Guarantees outstanding: 45,889 at 31 Mar 2025, 34,749 of it for power (SFAR25, Table 1.33).
+
+### 4.3 Bills the State owes contractors (official, replaces the press figures)
+- **Checked at source:** LAQ 401, answered 9 Dec 2025 by the Chief Minister (question by Basanagouda R. Patil Yatnal): pending bills Water Resources 17,533; Public Works 8,804; Minor Irrigation 3,762; RDPR 2,534; Urban Development 2,403; Health 200. Sum 35,236. On corruption in bill payment: no provable cases have come to notice.
+- LAQ 6 (9 Dec 2025): 3,612.44 pending across the Greater Bengaluru city corporations. LAQ 1355: 8,804.45 pending in PWD at end October 2025. (Not re-read by this session.)
+- CAG's only comparable figure is 2,298 behind 276 incomplete works (SFAR25, para 1.6(B)), a narrower scope.
+
+### 4.4 Where the government's answers and the auditor differ
+- **Capital expenditure. Checked at source:** LAQ 1658 (17 Mar 2026, Chief Minister; question by S. Suresh Kumar) gives 61,204 (2022-23), 56,852 (2023-24), 68,233 (2024-25), 83,200 (2025-26) and says capital expenditure has not decreased. CAG gives 57,349, 52,120, 57,906 and says 2023-24 capital expenditure "decreased by 5,229 crore". The gap for 2023-24 equals loans and advances (4,473) plus about 259; the answer does not define its figure. Frame as "two official figures, different definitions", not as a false statement.
+- **SC/ST sub-plan money in the guarantees. Checked at source:** LAQ 1777 (16 Dec 2025, Chief Minister; question by V. Sunil Kumar). Asked whether SCSP and TSP money was used for the five guarantees, the answer is "Yes". Annexure 1: 2023-24 SCSP 6,845 + TSP 3,081; 2024-25 SCSP 9,971 + TSP 4,292; 2025-26 budget 9,513 + 3,921; to end November 2025 3,299 + 1,388. The answer says the allocation follows population share under Rule 7(C) of the sub-plan Act, and that community-wise beneficiary data is not available.
+- Interest share and debt stock: the answers use budget-document figures, not CAG's; see the treasury file, section D2.
+
+### 4.5 New leak points for the table in 2.1 (spec sent to the Follow-the-rupee page owner)
+- L33. Pending bills: works done, bill unpaid. The queue is where "commission for release" is alleged. Official stock 35,236 (LAQ 401). Trace: the department's bill register by RTI; the order of payment against the order of submission.
+- L34. Sub-plan money counted for a general scheme: 14,263 of SCSP/TSP in the guarantees in 2024-25 (LAQ 1777). Lawful under Rule 7(C) as the answer states; the question is whether SC/ST households got that share, and the government says it does not have the data.
+- L35. Two capital-expenditure figures: the Assembly answer is higher than the audited figure every year. Trace: the Finance Accounts capital heads against the answer.
+
 ## What could not be confirmed
 
 1. **Rule numbers in the Karnataka Treasury Code, Financial Code and Budget Manual** were not checked against the current texts. Only rules quoted inside CAG reports are cited with confidence: KFC para 14, Rule 161, Arts. 162(c), 286, 286A and 349; Manual of Contingent Expenditure Rule 37(b)(3); KPWD Code Rule 202; KBM para 110 and Rule 264.
