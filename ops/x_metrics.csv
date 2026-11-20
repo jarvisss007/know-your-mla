@@ -39,3 +39,12 @@ checked_on,posted_utc,status_id_tail,lang,topic,views,likes,reposts,replies_from
 2026-11-18,2026-11-18T23:0x,102434,en,mining card,,,,,"posted with card, link in reply; burst of 5 in 3 minutes; views to be recorded after 24 h"
 2026-11-18,2026-11-18T23:0x,678484,en,parking card,,,,,"posted with card, link in reply; burst of 5 in 3 minutes; views to be recorded after 24 h"
 2026-11-18,2026-11-18T23:0x,343373,kn,courts card,,,,,"posted with card, link in reply; burst of 5 in 3 minutes; views to be recorded after 24 h"
+2026-11-20,2026-11-18T23:01,676655,en,courts card,5,0,0,0,"24h+; card, link in reply; burst of 5"
+2026-11-20,2026-11-18T23:01,051560,kn,corporations card,7,0,0,0,"24h+; card, link in reply; burst of 5"
+2026-11-20,2026-11-18T23:02,102434,en,mining card,5,0,0,0,"24h+; card, link in reply; burst of 5"
+2026-11-20,2026-11-18T23:03,678484,en,parking card,5,0,0,0,"24h+; card, link in reply; burst of 5"
+2026-11-20,2026-11-18T23:03,343373,kn,courts card,6,0,0,0,"24h+; card, link in reply; burst of 5"
+2026-11-20,2026-11-18T23:04-23:06,(5 replies),both,link replies under the cards,4-5,0,0,0,"24h+; each reply 4-5 views"
+2026-11-20,2026-11-18T22:30,836586,en,NCRB how cases end,5,0,0,0,24h+; plain text with link
+2026-11-20,2026-11-18T22:30,547699,kn,NCRB how cases end,5,0,0,0,24h+; plain text with link
+2026-11-20,2026-11-18T21:15-21:19,(burst of 13),both,18 Nov burst posts,3-10,0,0,0,"24h+; thread opener 10, others 3-4"

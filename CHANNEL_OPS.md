@@ -38,6 +38,7 @@ Rules from now on:
 - **Link in the first reply, not the post.** X shows posts with outside links to fewer people. Post the text and card; reply to it with the link.
 - **Lead with a person or a place.** A named public office-holder's own record, or a district people live in, before a state-wide total. Budget totals go in the card's lines, not the opening words.
 - **Reach comes from people, not the timeline.** The owner shares each card in WhatsApp groups (Kannada first) and, if the owner chooses, replies with a card under big accounts' posts on the same subject. Claude does not reply, tag or message anyone on X without the owner's say.
+- **First card result (20 Nov):** the five card posts of 18 Nov (posted as a burst, on the owner's instruction) got 5 to 7 views each after 24 hours, against 3 to 4 for the plain posts of the same evening. Still no likes, reposts or replies from anyone else. Cards help a little; the audience is the limit, and only sharing outside X (WhatsApp) or growing followers changes that.
 - **Measure.** Each week add rows to `ops/x_metrics.csv` (views, likes, reposts, replies from others, 24 hours or more after posting) and keep what works.
 
 ## Always ask the owner first
