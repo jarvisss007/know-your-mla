@@ -73,6 +73,7 @@ Always `git pull --ff-only` before editing; MGNREGA problems are never attribute
 ## Checks you can re-run
 
 - `py tools/tests/probe_join.py` and `py tools/tests/probe_kn.py` drive `index.html` in headless Chrome: Have your say form links, Kannada switch, no horizontal overflow. Each prints a JSON line; look for `err=none`.
+- `py tools/tests/check_links.py` checks every internal link and anchor; add `--web` to test external sources too (403s and timeouts are Karnataka sites refusing foreign visitors, not dead links). Last full run 20 Nov 2026: 0 broken internal links, 3 dead sources on the home page fixed.
 
 ## Still needs people (not code)
 
