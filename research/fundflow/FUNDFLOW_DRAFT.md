@@ -307,6 +307,9 @@ Source: research/treasury/IRRIGATION_MONEY_DRAFT.md (113 items, "Urban analysis 
 - Upper Bhadra: Rs 5,300 cr provided in the Union Budget 2023-24, nothing released to Dec 2025 (Lok Sabha USQ 3200); the State had spent 11,375 by Feb 2026.
 - UKP Stage III: 1,04,301 of 1,33,867 acres still to be acquired (LAQ 419).
 - Yettinahole (CAG): seven contractors hold 67% of 43 works by number (by value, about 66.7% of all 55 contracts, derived); Rs 181.21 cr not recovered for pipeline not laid.
+- Irrigation pending bills over time, four Nigams: 12,069.09 (16 Jul 2024, LAQ 482) → 14,574.27 (9 Dec 2025, LAQ 331; unit not printed) → 18,547.16 (24 Mar 2026, LAQ 3223; second-read, sums match). Up about 54% in 20 months. Works in progress 59,688.82 against a grant of 16,526.18 (LAQ 331). Grants not yet released for 2025-26 (LAQ 1347 Annexure-5): KNNL 1,201.15; VJNL 897.00; CNNL 505.50; KBJNL 232.50. Source: research/treasury/PENDING_BILLS_WORKWISE_DRAFT.md.
+- Yettinahole land cost moved from 4,008.07 to 4,482.10 between two Assembly answers seven weeks apart.
+- CAUTION: LAQ 482's 371 annexure pages are bills PAID (1 Apr 2023 to 30 Jun 2024, Rs 12,206.56 cr, 10,098 works), and LAQ 1347 lists works taken up since April 2023. Neither is a pending-bills list; never call a firm in them "owed".
 - Leak point L40: lump-sum or advance payments not reduced when the scope shrinks (Yettinahole pipeline; see also KBJNL and MI Koppal in 4.6).
 
 ### 4.8 Money meant for panchayats, disasters and mining districts (added 20 Nov 2026)
