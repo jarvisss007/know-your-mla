@@ -276,18 +276,19 @@ Source: research/treasury/FACTS_DRAFT.md (compiled by the "Urban analysis with m
 
 ### 4.3 Bills the State owes contractors (official, replaces the press figures)
 - **Checked at source:** LAQ 401, answered 9 Dec 2025 by the Chief Minister (question by Basanagouda R. Patil Yatnal): pending bills Water Resources 17,533; Public Works 8,804; Minor Irrigation 3,762; RDPR 2,534; Urban Development 2,403; Health 200. Sum 35,236. On corruption in bill payment: no provable cases have come to notice.
-- LAQ 6 (9 Dec 2025): 3,612.44 pending across the Greater Bengaluru city corporations. LAQ 1355: 8,804.45 pending in PWD at end October 2025. (Not re-read by this session.)
+- LAQ 6 (9 Dec 2025): 3,612.44 pending across the Greater Bengaluru city corporations; the paid figure 11,583.34 has no unit printed and the annexures are missing from the PDF. LAQ 1355: PWD pending 8,804.45 in the text, 8,804.41 in the head-wise annexure; the paid period ends on a printed "31-11-2025". (Second read: research/treasury/ASSEMBLY_ANSWERS_VERIFIED.md.)
 - CAG's only comparable figure is 2,298 behind 276 incomplete works (SFAR25, para 1.6(B)), a narrower scope.
 
 ### 4.4 Where the government's answers and the auditor differ
 - **Capital expenditure. Checked at source:** LAQ 1658 (17 Mar 2026, Chief Minister; question by S. Suresh Kumar) gives 61,204 (2022-23), 56,852 (2023-24), 68,233 (2024-25), 83,200 (2025-26) and says capital expenditure has not decreased. CAG gives 57,349, 52,120, 57,906 and says 2023-24 capital expenditure "decreased by 5,229 crore". The gap for 2023-24 equals loans and advances (4,473) plus about 259; the answer does not define its figure. Frame as "two official figures, different definitions", not as a false statement.
+- **Update (second read, ASSEMBLY_ANSWERS_VERIFIED.md):** the Chief Minister's own answers give capital expenditure three ways. LAQ 422 (9 Dec 2025): 57,953.20 / 52,378.86 / 60,601.15 / 81,554.38 for 2022-23 to 2025-26. LAQ 1658 (17 Mar 2026): 61,204 / 56,852 / 68,233 / 83,200. LAQ 907: 56,851 for 2023-24. LAQ 422 is close to CAG (52,120 for 2023-24). So the story is "the same government gave the Assembly two different capital-spending series three months apart", and only the later, higher one says spending has not decreased. The 17.5% interest share in LAQ 1658 is a budget estimate.
 - **SC/ST sub-plan money in the guarantees. Checked at source:** LAQ 1777 (16 Dec 2025, Chief Minister; question by V. Sunil Kumar). Asked whether SCSP and TSP money was used for the five guarantees, the answer is "Yes". Annexure 1: 2023-24 SCSP 6,845 + TSP 3,081; 2024-25 SCSP 9,971 + TSP 4,292; 2025-26 budget 9,513 + 3,921; to end November 2025 3,299 + 1,388. The answer says the allocation follows population share under Rule 7(C) of the sub-plan Act, and that community-wise beneficiary data is not available.
 - Interest share and debt stock: the answers use budget-document figures, not CAG's; see the treasury file, section D2.
 
 ### 4.5 New leak points for the table in 2.1 (spec sent to the Follow-the-rupee page owner)
 - L33. Pending bills: works done, bill unpaid. The queue is where "commission for release" is alleged. Official stock 35,236 (LAQ 401). Trace: the department's bill register by RTI; the order of payment against the order of submission.
-- L34. Sub-plan money counted for a general scheme: 14,263 of SCSP/TSP in the guarantees in 2024-25 (LAQ 1777). Lawful under Rule 7(C) as the answer states; the question is whether SC/ST households got that share, and the government says it does not have the data.
-- L35. Two capital-expenditure figures: the Assembly answer is higher than the audited figure every year. Trace: the Finance Accounts capital heads against the answer.
+- L34. Sub-plan money counted for a general scheme: 14,263 of SCSP/TSP in the guarantees in 2024-25 (LAQ 1777). Lawful under Rule 7(C) as the answer states; the question is whether SC/ST households got that share, and the government says it does not have the data. Caution: the Finance answer (LAQ 1777) and the Social Welfare answer (LAQ 2550) give different SCSP/TSP guarantee figures for the same years; quote each with its source, never one as "the" figure.
+- L35. Capital-expenditure figures that change between the government's own answers (LAQ 422 vs 1658) and against the audit. Trace: the Finance Accounts capital heads against the answer.
 
 ## What could not be confirmed
 
