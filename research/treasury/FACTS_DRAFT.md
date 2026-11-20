@@ -273,3 +273,157 @@ All figures are Rs crore unless stated. Everything in sections 1-4 and 6 was rea
 - **Not usable:** the CAG "Press Brief SFAR 2024-25" PDF that search engines return for Karnataka (cag.gov.in/uploads/PressRelease/PR-Press-Brief-English-2024-25-06a8821811f47a6-27605028.pdf) is actually the Rajasthan brief.
 
 **Three things to check before publishing:** the SFAR 2023-24 tabling date; Table 3.8 (PD balances by administrator) and Table 1.20's budget column against the PDF pages, since both are garbled or inconsistent in the source; and the CAG vs PRS difference on 2024-25 interest (37,552 vs 36,122) and salaries, which reflects different definitions.
+
+---
+
+<!-- ADDENDUM appended 20 Nov 2026. Section D's Assembly answers were read from scanned Kannada PDFs in one pass: re-check each figure on the PDF before quoting. D2 'unpaid contractor bills' (LAQ 401, 1355, 6) supersedes the press-only figures in section 5 above. -->
+
+# Addendum to the Karnataka fact file: four priority sections (20 Nov 2026)
+
+This supplements the fact file already handed back; same rules, Rs crore unless stated. One correction to that file: **kla.kar.nic.in is reachable**, and I read ten Assembly answers there. They are scanned Kannada PDFs, read as page images, so re-check each figure against the PDF before publishing. The earlier "no official contractor-bill figure" gap is now closed (section D).
+
+**Source keys**
+- **SFAR25** = CAG State Finances Audit Report 2024-25, Karnataka, Report No. 2 of 2026: https://cag.gov.in/uploads/download_audit_report/2026/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2024-25---English-(1)-069c4e127015905.57315868.pdf
+- **SFAR24** = CAG State Finances Audit Report 2023-24, Karnataka, Report No. 4 of 2025: https://cag.gov.in/uploads/download_audit_report/2024/Report-of-the-Comptroller-and-Auditor-General-of-India-on-State-Finances-for-the-year-2023-24,-Government-of-Karnataka-(Report-No.-4-of-2025)---English-version-068a5681816b4d4.80809774.pdf
+- **PRS26 / PRS25** = PRS Karnataka Budget Analysis 2026-27 / 2025-26: https://prsindia.org/files/budget/budget_state/karnataka/2026/Budget_Analysis_2026-27-KA.pdf ; https://prsindia.org/files/budget/budget_state/karnataka/2025/Karnataka_State_Budget_Analysis_2025-26.pdf
+- **LAQ n (date)** = Karnataka Legislative Assembly, 16th Assembly, unstarred question n, answer PDF at `https://kla.kar.nic.in/assembly/answers/16assembly/pdf/<DDMMYYYY>/<n>.pdf` (full URLs given per item).
+
+---
+
+## A. Committed vs uncommitted spending, as a share of revenue receipts
+
+**A1. CAG basis, five years.** Inputs are CAG's; the percentages are my arithmetic unless a CAG citation is given. Sources: revenue receipts from SFAR25 Appendix 1.1 (p.111); salaries, pensions, interest from Table 1.18 (p.26); explicit subsidies from Table 1.19 (p.28).
+
+| Year | Revenue receipts | Salaries + pensions + interest | Share of RR | Explicit subsidies | Share of RR | Combined share of RR |
+|---|---|---|---|---|---|---|
+| 2020-21 | 1,56,716 | 76,201 | 48.6% | 18,432 | 11.8% | 60.4% |
+| 2021-22 | 1,95,762 | 84,589 | 43.2% | 28,219 | 14.4% | 57.6% |
+| 2022-23 | 2,29,080 | 94,326 | 41.2% | 22,754 | 9.9% | 51.1% |
+| 2023-24 | 2,33,343 | 1,02,637 | 44.0% | 32,390 | 13.9% | 57.9% |
+| 2024-25 | 2,58,153 | 1,16,479 | 45.1% | 50,077 | 19.4% | 64.5% |
+
+- 2024-25 components: salaries and wages 48,276; pensions 30,651; interest 37,552 — SFAR25, Table 1.18, p.26
+- 19.40% — subsidies as a share of revenue receipts in 2024-25, CAG's own figure — SFAR25, Chart 1.22, p.28
+- "Nearly 77 per cent" of revenue receipts — committed expenditure plus subsidies including implicit ones (81,800) in 2024-25, CAG's own statement — SFAR25, para 1.6(A), p.57
+- 82% of revenue receipts — once the State's share of centrally sponsored schemes (12,670.22) is added — SFAR25, Executive Summary p.xx
+- About 71% of revenue expenditure — committed expenditure plus explicit and implicit subsidies, 2024-25 — SFAR25, para 1.7, p.58
+- 1,79,445 (about 74% of revenue expenditure) — committed plus "inflexible" expenditure in 2023-24 — SFAR24, Executive Summary p.xii
+- 41.75% — committed expenditure as a share of revenue expenditure in 2024-25 (26.57% in 2015-16) — SFAR25, Table 1.18, p.27
+
+**A2. Guarantee schemes as a share of revenue receipts**
+- 14.9% — 2023-24 (34,859.28 of 2,33,343; my arithmetic; part-year) — SFAR25, Table 1.20, p.29
+- 20.3% — 2024-25 (52,525.60 of 2,58,153; my arithmetic). PRS gives 20% on revised estimates — SFAR25 Table 1.20; PRS25 guarantee box
+- 17% — 2025-26 BE (51,034), PRS's own figure — PRS25, guarantee box
+- 16.3% — 2026-27 BE (51,286 of 3,15,050; my arithmetic) — PRS26
+- 15% and 19% — guarantees as a share of revenue *expenditure* in 2023-24 and 2024-25, CAG's own figures — SFAR24 Executive Summary p.xiii; SFAR25 Executive Summary p.xx
+
+**A3. PRS / budget-document basis.** Salaries here include grant-in-aid salaries, so these are not comparable with A1.
+- 2023-24 actuals: 1,17,184 (salaries 61,498; pension 24,859; interest 30,826) = 50% of revenue receipts — PRS25, committed expenditure table and text
+- 2024-25 actuals: 1,31,425 (64,652; 30,651; 36,122) = 50.9% (my arithmetic) — PRS26, Table 3
+- 2025-26 BE: 1,69,115 = 58% of revenue receipts (salaries 29%, pension 13%, interest 16%), PRS's own figure — PRS25
+- 2025-26 RE: 1,68,816 (85,531; 37,684; 45,600) = 60.9% of RE revenue receipts 2,77,402 (my arithmetic) — PRS26, Table 3
+- 2026-27 BE: 1,85,025 (90,557; 41,136; 53,332) = 58.7% (my arithmetic) — PRS26, Table 3
+
+**A4. Guarantee spending in 2025-26, official part-year figure** (not in the first file)
+- Budget 51,034; released 47,219; spent 40,769 up to 8 March 2026 — LAQ 1391 (10 Mar 2026), Chief Minister's reply, https://kla.kar.nic.in/assembly/answers/16assembly/pdf/10032026/1391.pdf
+- By scheme (budget / released / spent to 8 Mar 2026): Gruha Lakshmi 28,608 / 25,243 / 20,709; Gruha Jyothi 10,100 / 10,100 / 8,663; Anna Bhagya 6,426 / 5,951 / 5,951; Shakti 5,300 / 5,300 / 4,859; Yuva Nidhi 600 / 625 / 587 — same answer
+- The answer's footnote says the release figures include amounts released in advance in 2024-25: Gruha Lakshmi 3,922; Anna Bhagya 1,000; Shakti 600.
+
+## B. Guarantees outstanding and off-budget borrowings
+
+**Guarantees**
+- Outstanding at year end: 32,733 (2020-21); 33,193 (2021-22); 38,356 (2022-23); 44,247 (2023-24); 45,889 (2024-25) — SFAR25, para 1.5.6, Table 1.33, p.54
+- Maximum amount guaranteed during the year: 70,095 (2022-23); 78,147 (2023-24); 81,654 (2024-25) — same table
+- Statutory ceiling (80% of revenue receipts of the second preceding year): 1,83,264 for 2024-25; CAG says outstanding guarantees were "well within the limits" — SFAR25, para 1.5.6, p.54
+- By sector at 31 Mar 2025: Power 34,749; Irrigation 6,525; Co-operatives 1,643; Urban development and housing 1,274; Roads and transport 1,164; Others 414; State finance corporations 120 — SFAR25, para 1.5.6, p.54. CAG gives sectors, not individual corporations.
+- 306.69 received of 647.70 guarantee commission receivable in 2023-24 — SFAR24, Executive Summary p.xiii; para 2.8.2
+- 693.43 — Guarantee Redemption Fund balance at 31 Mar 2025 — SFAR25, Table 1.25, p.38
+- 45,889 = 1.6% of GSDP — PRS26, "Outstanding Government Guarantees"
+
+**Off-budget borrowings (OBB), by entity**
+
+| Entity | Outstanding 31 Mar 2024 (SFAR24 Table 2.34, para 2.7.1.1, p.61) | Borrowed in 2024-25 (SFAR25 Table 3.1, para 3.1, p.92) | Outstanding 31 Mar 2025 (same) |
+|---|---|---|---|
+| Krishna Bhagya Jala Nigam | 4,052 | 1,400.00 | 2,652.11 |
+| Karnataka Neeravari Nigam | 3,584 | 1,456.44 | 2,128.28 |
+| Rajiv Gandhi Rural Housing Corp | 2,250 | 224.52 | 477.02 |
+| Visvesvaraya Jala Nigam | 1,808 | 735.69 | 1,072.72 |
+| Karnataka Road Development Corp | 708 | 25.54 | 862.28 |
+| Cauvery Neeravari Nigam | 702 | 825.00 | 1,425.00 |
+| Karnataka Skill Development Corp | 374 | 93.88 | 279.80 |
+| Power Company of Karnataka | not listed | none disbursed (5,257.70 sanctioned) | 5,257.70 |
+| **Total** | **13,478** | **4,761.07 disbursed** | **14,154.91** |
+
+- The SFAR25 text says 14,154.91 "included borrowings of 5,437.78 crore borrowed during 2024-25"; in its Table 3.1 the 5,437.78 total sits under "Loan sanctioned" and 4,761.07 under "Loan disbursed". Quote the table columns as printed.
+- Power Company of Karnataka's 5,257.70 is described as "Securitization of Gram Panchayat dues from 2015 to 2023" — SFAR25, Table 3.1, p.92
+- New OBB by year: 4,435.49 (2019-20); 3,045.10 (2020-21); 2,350.00 (2021-22); 4,029.00 (2022-23); Nil (2023-24) — SFAR24, Table 2.33 p.61 and Table 4.1 p.111
+- 3,828 principal and 1,046 interest on OBB paid from the budget in 2023-24; the principal was counted inside capital expenditure of 52,120 — SFAR24, para 2.7.1.1, p.61
+- CAG on the seven entities: "do not have their own source of revenue and are incurring losses" — SFAR24, para 2.7.1.1, p.61
+- State's reply (Nov 2023): adding OBB to the fiscal deficit "is not a correct measure" because repayments are already in the deficit — SFAR24, p.62
+- 5,558 — budgeted in 2025-26 for repayment of borrowings by PSUs, inside medium irrigation capital outlay of 17,572 — PRS25, sector table
+
+## C. Central / centrally sponsored scheme funds unspent, parked or returned
+
+**Balances lying in Single Nodal Agency (SNA) accounts on 31 Mar 2025** (five schemes CAG test-checked) — SFAR25, para 2.6.2, Tables 2.16-2.20, p.79-81
+- Urban Rejuvenation Mission, 500 Cities (AMRUT 2.0) — 612.04
+- Saksham Anganwadi and Poshan 2.0 — 370.01
+- Samagra Shiksha — 172.04
+- MGNREGA — 73.84
+- Health flexible pool (RCH, NHM, NUHM) — 14.48
+- Total of the five: 1,242.41 (my arithmetic)
+
+**Central or State share not passed on to the SNA, 2024-25** — same paras; CAG notes replies were awaited
+- AMRUT 2.0: treasury (VLC) data shows 723.11 central share received and 144.35 transferred; PFMS shows 311.23 received and transferred; State share short by 144.35 (VLC) or 46.52 (PFMS)
+- Saksham Anganwadi/Poshan 2.0: central share 886.34 received, 465.85 transferred per VLC (875.84 per PFMS); State share short by 415.91 (VLC) or 5.92 (PFMS)
+- Health flexible pool: 144.59 released by GoI "as commodity" not released to the SNA; State share over-released by 263.55
+- Samagra Shiksha: State share short by 8.77 per VLC
+- MGNREGA: 1,733.08 central share received, 1,299.81 transferred. The paragraph's own text is inconsistent (it shows nil difference yet refers to a 433.27 central-share shortfall); quote the table.
+
+**Refunds and write-backs of unspent money**
+- 1,333 — unspent balances refunded from SNA accounts in 2024-25, which with a 5,000 write-back of 2014-2020 Zilla/Taluk Panchayat Fund II balances helped meet the deficit target — SFAR25, para 1.5.3, p.49-50
+- 2,256.06 — refunds of unutilised amounts from SNA accounts in 2023-24 — SFAR24, para 2.9, p.72
+- 2,171.03 refunded under Samagra Shikshana per the State's Avalokana system, against 1,393.28 per the accounts; CAG: earlier reported spending "was merely a transfer of funds from Government account to the SNA account and not the actual expenditure" — SFAR24, para 3.8.1.6, Table 3.21, p.105
+- 151.56 — unutilised PM Poshan balance in the SNA on 31 Mar 2024 against 970.73 booked as 2023-24 expenditure — SFAR24, para 3.8.1.6(b), Table 3.17, p.102-103 (other rows of that table are garbled in the PDF text; check the page)
+- Interest earned by SNAs remitted 14 to 536 days late, 2021-22 to 2023-24 — SFAR24, para 3.8.2.7, p.107-108
+
+**Central money lost or not drawn**
+- PM-AJAY: 398.95 allocated for 2022-25; first instalment 23.77 not utilised; no further release in 2022-23 or 2023-24; 6.01 released in 2024-25. CAG: "loss of Central Assistance" — SFAR25, para 2.7.1.3, p.85-86
+- Jal Jeevan Mission: 11,189 received of 24,819.48 allocated (45%), 2019-20 to 2023-24 — CAG Report No. 12 of 2025, Executive Summary p.vii, https://cag.gov.in/en/audit-report/details/124685
+- MGNREGS: 36.26 penal interest for delayed release of central and State share — CAG Report No. 13 of 2025, Executive Summary p.x, https://cag.gov.in/en/audit-report/details/123873
+- Eradication of Untouchability: State released 7.5 against GoI's 23.15 on a 50:50 scheme — SFAR25, para 2.7.1.4, p.86
+- 22,308.76 sent by GoI directly to implementing agencies in 2023-24, outside the State budget (8,873.10 of it for centrally sponsored schemes) — SFAR24, para 4.4, p.112
+- 111 of 140 centrally sponsored schemes not yet on SNA-SPARSH — SFAR25, para 2.6.3, p.82
+
+**Government's own release figures for 2025-26 (to 27 Jan 2026)** — LAQ 2571 (17 Mar 2026), Planning Minister's reply, annexure p.1, https://kla.kar.nic.in/assembly/answers/16assembly/pdf/17032026/2571.pdf
+- Jal Jeevan Mission (rural): State release 1,353.00; Centre release 0.00
+- Upper Bhadra National Project: State release 521.00; Centre release 0.00
+- MGNREGA: State 107.86; Centre 3,439.48
+- The annexure runs to at least two more pages that I did not read.
+
+## D. Legislative Assembly answers set against CAG / budget actuals
+
+**D1. Where the answer and CAG agree**
+- Borrowing: 90,280 (2023-24) and 1,03,342 (2024-25) — LAQ 1658 (17 Mar 2026) and LAQ 1791 (16 Dec 2025), Chief Minister. CAG: public debt receipts 1,03,342 in 2024-25 (SFAR25, Chart 1.6, p.6). Match.
+- 2024-25 borrowing by source: market 92,025; NABARD 3,126; NHB 126; external agencies 2,768; central special capital assistance 5,296 — LAQ 1791, https://kla.kar.nic.in/assembly/answers/16assembly/pdf/16122025/1791.pdf. CAG market borrowing 92,025 (SFAR25, para 1.7). Match.
+- Fiscal deficit 2023-24: 65,522 (2.55% of GSDP); revenue deficit 9,272 — LAQ 1793 (16 Dec 2025), https://kla.kar.nic.in/assembly/answers/16assembly/pdf/16122025/1793.pdf. CAG: 65,522 and 9,271 (SFAR24, Executive Summary). Match.
+
+**D2. Where the figures differ**
+- **Capital expenditure.** LAQ 1658 gives 61,204 (2022-23), 56,852 (2023-24), 68,233 (2024-25), 83,200 (2025-26), and states capital expenditure has not declined. CAG gives 57,349 (2022-23), 52,120 (2023-24), 57,906 (2024-25), and says 2023-24 capital expenditure "decreased by 5,229 crore" (SFAR24, para 2.5.3; SFAR25, Table 1.3, p.6). LAQ 1793 separately says 56,593 of 2023-24 borrowing went to capital expenditure, which equals CAG's 52,120 plus loans and advances of 4,473. The answer does not define its figure. https://kla.kar.nic.in/assembly/answers/16assembly/pdf/17032026/1658.pdf
+- **Interest burden.** LAQ 1658 says, citing the Accountant General's accounts, that interest took 15.1% (2023-24) and 16.1% (2024-25) of the State's revenue, and 17.5% is estimated for 2025-26. CAG gives interest payments to revenue receipts of 13.66% and 14.72% (SFAR25, para 1.7, p.59) on interest of 31,872 and 37,552. The question asked about share of total tax revenue; on CAG's tax revenue (2,04,698 and 2,24,380) the LAQ percentages correspond to interest of about 30,826 and 36,122, which are the budget-document figures PRS reports, not CAG's (my arithmetic).
+- **Debt stock.** LAQ 1791: total debt 5,11,414 at end November 2025. LAQ 1658: outstanding public debt 5,71,921 as of February 2026, 83,146 rupees per head. CAG: public debt 5,26,479 and total liabilities 6,92,115 at 31 March 2025 (SFAR25, Table 1.28, p.43). The November 2025 figure is below CAG's March 2025 public debt; neither answer says what is included.
+- **SCSP/TSP money used for guarantees.** LAQ 1777 (16 Dec 2025), Chief Minister: asked whether SCSP and TSP funds were used for the five guarantees, the answer is "Yes", with Annexure 1: 2023-24 SCSP 6,845 + TSP 3,081; 2024-25 SCSP 9,971 + TSP 4,292; 2025-26 budget SCSP 9,513 + TSP 3,921; to end November 2025 3,299 + 1,388. The answer says allocation is in proportion to SC/ST population under Rule 7(C) of the sub-plan Act, and that community-wise beneficiary data for the guarantees is not available. CAG: 9,292.23 of 2023-24 subsidies were booked under SCSP/TSP object heads (SFAR24, para 2.5.2.4). The Assembly figure for 2023-24 guarantees alone (9,926, my sum) is higher than CAG's figure for all SCSP/TSP subsidies; scopes are not stated to be the same. https://kla.kar.nic.in/assembly/answers/16assembly/pdf/16122025/1777.pdf
+  - 2024-25 by scheme (SCSP / TSP): Gruha Lakshmi 5,736 / 2,415; Gruha Jyothi 1,679 / 773; Anna Bhagya 1,394 / 587; Shakti 1,121 / 504; Yuva Nidhi 40 / 12 — same annexure
+- **Unpaid contractor bills.** This replaces the press-only figures in section 5 of the first file.
+  - LAQ 401 (9 Dec 2025), Chief Minister, pending bills by department per Finance Department information: Water Resources 17,533; Public Works 8,804; Minor Irrigation 3,762; RDPR 2,534; Urban Development 2,403; Health and Family Welfare 200. Sum 35,236 (my arithmetic; the answer gives no total or as-on date). On alleged corruption in bill payment the answer says no provable cases have come to notice. https://kla.kar.nic.in/assembly/answers/16assembly/pdf/09122025/401.pdf
+  - LAQ 1355 (15 Dec 2025), PWD Minister: 8,804.45 pending in PWD at end October 2025; 25,959.00 paid between 1 June 2023 and 30 November 2025. https://kla.kar.nic.in/assembly/answers/16assembly/pdf/15122025/1355.pdf
+  - LAQ 6 (9 Dec 2025), Deputy Chief Minister: 3,612.44 pending to contractors for completed works across the five city corporations under the Greater Bengaluru Authority (former BBMP); 11,583.34 paid between 1 June 2023 and 15 November 2025; on the commission allegation, "no specific cases have been reported". https://kla.kar.nic.in/assembly/answers/16assembly/pdf/09122025/6.pdf
+  - CAG's only comparable figure: 2,298 of pending bills behind 276 incomplete works in Appendix IX of the Finance Accounts 2024-25 (SFAR25, para 1.6(B), p.57). The Assembly figure is about fifteen times larger; the CAG figure covers only works the State listed as incomplete for that reason.
+  - Press figures for reference: 36,136 (Finance Department note of 17 Sep 2026, press only) and 37,980 (contractors' association, 30 Sep 2026, press only).
+- **PWD and irrigation budgets** (context from LAQ 1658): PWD 9,699.31 (2024-25), 9,840.45 (2025-26), 10,353.70 (2026-27); irrigation 19,179.25, 22,170.98, 22,415.30. Against these, the December 2025 pending bills were 8,804 (PWD) and 17,533 (Water Resources).
+
+## Not done / caveats for this addendum
+- Assembly answers were read from scanned Kannada images, one pass, no OCR cross-check. In LAQ 1777's annexure the last column header is printed "SCSP" twice (the second is evidently TSP), and the Gruha Lakshmi figure to November 2025 (880 / 320) looks low against the other rows; quote as printed.
+- I scanned question titles only for the December 2025, March 2026 and August 2026 sessions (30 sitting days). Answers I identified but did not open: LAQ 135 (16 Dec 2025, guarantee schemes), 907 (10 Mar 2026, fiscal position), 2550 (17 Mar 2026, SCSP/TSP), 1394 and 1495 (15 Dec 2025, PWD contractor dues), 1542 (16 Dec 2025, minor irrigation bills), 167 (17 Aug 2026, RDPR dues), 422 (9 Dec 2025, 2025-26 budget size). Their PDFs follow the same URL pattern.
+- Legislative Council answers were not searched; the Council irrigation-corporation reply (15,429.51) remains press-only.
+- No Assembly answer on guarantees outstanding or off-budget borrowing was found in the sessions scanned, so section B has no Assembly-vs-CAG comparison.
+- CAG lists guarantees by sector only; a corporation-wise guarantee list would be in Finance Accounts Vol. II (Statement 20), which I did not open.
