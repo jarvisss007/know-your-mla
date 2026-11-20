@@ -10,6 +10,9 @@ import pathlib, shutil
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "reports"
+SITE = "https://jarvisss007.github.io/know-your-mla/"
+# pages whose share picture is the wall of real work photos
+RURAL = {"photo_check.html", "tank_findings.html", "mgnrega_letters.html", "what_if_mgnrega.html"}
 
 BADGES = {
     "DRAFT · NOT PUBLISHED": "TEST VERSION · UNDER REVIEW",
@@ -97,6 +100,9 @@ def build(src, dst, title, desc, alt, extra, note):
     head = ("<!doctype html>\n<html lang=\"" + ("kn" if dst.endswith("_kn.html") else "en") + "\">\n<head>\n<meta charset=\"utf-8\">\n"
             "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n"
             f"<title>{title}</title>\n<meta name=\"description\" content=\"{desc}\">\n"
+            f"<meta property=\"og:type\" content=\"article\">\n<meta property=\"og:title\" content=\"{title}\">\n<meta property=\"og:description\" content=\"{desc}\">\n"
+            f"<meta property=\"og:url\" content=\"{SITE}reports/{dst}\">\n<meta property=\"og:image\" content=\"{SITE}{'video/films-card.jpg' if dst in RURAL else 'brand/gandaberunda-banner.png'}\">\n"
+            "<meta name=\"twitter:card\" content=\"summary_large_image\">\n"
             f"<link rel=\"icon\" type=\"image/svg+xml\" href=\"{up}brand/mark.svg\">\n"
             "<style>:root{padding-top:env(safe-area-inset-top,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n")
     # split head-ish material (meta/link/style at the top of the body) from content: keep it all in <head> up to the first <div
