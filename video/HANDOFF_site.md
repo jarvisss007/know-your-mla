@@ -54,4 +54,4 @@ From the video session. I downloaded the full set for Hiregunjal panchayat (Kund
 
 How to reproduce: `tools/fetch_kundgol.py` and `tools/make_kundgol.py` in the katha-studio repo (the second file asserts every figure above). The raw records and photos are on the owner's Mac in `~/katha-studio/work/kundgol/` and are not committed, because the works are on individuals' land and the records carry names. `hiregunjal_153.csv` there has one row per work; `clusters100.json` lists the 20 groups by row number.
 
-Film built on this: https://youtube.com/shorts/KaxPlu3gBLU (Private until the owner approves). It shows no names, no work codes and blurs photos with people or homes. Please give these figures a second check before the page is changed.
+Film built on this: https://youtube.com/shorts/KaxPlu3gBLU (owner approved 21 Nov; goes public 22 Nov, 06:30 Pacific). It shows no names, no work codes and blurs photos with people or homes. Please give these figures a second check before the page is changed.
