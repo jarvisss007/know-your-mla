@@ -106,7 +106,7 @@ On the owner's instruction ("ALL", after being told it repeats the burst) all fi
 - courts (kn): https://x.com/anupam00720/status/2123190413427343373, reply .../2123191024235450370
 Note: the English courts card post repeats the text of the NCRB post of 22:30 UTC the same evening. Nothing is scheduled on X now.
 
-## 7. New drafts, 22 Nov 2026: NOT POSTED, need the owner's OK
+## 7. New drafts, 22 Nov 2026: NOT POSTED, need the owner's OK (the #seats section went live 22 Nov)
 
 **7a. Bill age (English), page is live**
 > The PWD owes contractors ₹1,808 crore in its North zone alone (end of July 2026). ₹555 crore of it has waited more than a year; one bill dates from March 2018. From the department's own spreadsheets, given to the Assembly.

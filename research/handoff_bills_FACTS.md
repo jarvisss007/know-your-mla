@@ -13,9 +13,9 @@ Working notes: `research/follow_the_money/PENDING_BILLS_AGE_DRAFT.md`, `research
 | 1.4 | The lists show only unpaid bills, so they cannot show whether newer bills were paid first. The department says it pays by seniority as funds allow. Always say this. | ಪಟ್ಟಿಗಳಲ್ಲಿ ಬಾಕಿ ಬಿಲ್ಲುಗಳು ಮಾತ್ರ ಇವೆ; ಹೊಸ ಬಿಲ್ಲುಗಳಿಗೆ ಮೊದಲು ಪಾವತಿಯಾಯಿತೇ ಎಂಬುದನ್ನು ಅವು ತೋರಿಸುವುದಿಲ್ಲ. ಅನುದಾನ ಲಭ್ಯವಾದಂತೆ ಜ್ಯೇಷ್ಠತೆಯ ಪ್ರಕಾರ ಪಾವತಿಸುತ್ತೇವೆ ಎಂದು ಇಲಾಖೆ ಹೇಳುತ್ತದೆ. | HIGH |
 | 1.5 | Call to action: RTI letter 7 on rti.html asks a division for its paid list with dates. | ಕರೆ: rti.html ನಲ್ಲಿರುವ ಆರ್‌ಟಿಐ ಪತ್ರ 7 ಒಂದು ವಿಭಾಗದಿಂದ ಪಾವತಿಯಾದ ಬಿಲ್ಲುಗಳ ಪಟ್ಟಿಯನ್ನು ದಿನಾಂಕಗಳೊಂದಿಗೆ ಕೇಳುತ್ತದೆ. | n/a |
 
-## 2. Works by seat: HOLD until the owner approves the Follow the rupee #seats section
+## 2. Works by seat: LIVE on Follow the rupee (#seats) since 22 Nov 2026, cleared to use with the caveat below
 
-Do not script these until the section is live. Details and caveats: `PWD_WORKS_BY_SEAT_DRAFT.md`.
+Details and caveats: `PWD_WORKS_BY_SEAT_DRAFT.md`.
 - 2023-24 to 2025-26: 6,952 works, ₹11,035 crore of estimated work, mapped to 199 seats.
 - Median seat: Congress-held ₹56.1 crore, BJP-held ₹33.5 crore, JD(S)-held ₹19.7 crore. Same direction in all four zones.
 - Varuna (CM's seat) 2nd, ₹210 crore; Yemkanamardi (PWD Minister's seat) 9th, ₹141 crore; Kanakapura (DCM) 124th, ₹36 crore.
