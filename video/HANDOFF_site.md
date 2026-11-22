@@ -55,3 +55,12 @@ From the video session. I downloaded the full set for Hiregunjal panchayat (Kund
 How to reproduce: `tools/fetch_kundgol.py` and `tools/make_kundgol.py` in the katha-studio repo (the second file asserts every figure above). The raw records and photos are on the owner's Mac in `~/katha-studio/work/kundgol/` and are not committed, because the works are on individuals' land and the records carry names. `hiregunjal_153.csv` there has one row per work; `clusters100.json` lists the 20 groups by row number.
 
 Film built on this: https://youtube.com/shorts/KaxPlu3gBLU (owner approved 21 Nov; goes public 22 Nov, 06:30 Pacific). It shows no names, no work codes and blurs photos with people or homes. Please give these figures a second check before the page is changed.
+
+### Second check of the Kundgol reuse finding (21 Nov 2026, evening)
+
+A separate agent was given only the 153 photos and the record file, not my groups or count, and told to find repeats by its own method and reject anything without matching landmarks.
+
+- It confirmed all 20 of my groups (all 55 photos), with the same dates.
+- It found five more groups I had left out for being under my threshold: rows 31/32/53, 30/33, 47/56, 35/36 and 41/44 (the last is its weakest). Its total is 66 photos in 25 groups, or 64 in 24 without the weakest.
+- So "55 photos in 20 groups" is a floor. The film and its description use 55; "at least 55" is the accurate wording for the page.
+- It classes 23 groups as the identical picture re-shot or cropped and 2 (114/115 and 145/146) as the same scene from another angle.
