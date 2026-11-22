@@ -142,6 +142,17 @@ For this corporation, as on 31 March 2025 and as on the date of reply:
 2. For 2024-25, a statement of receipts and withdrawals for every Personal Deposit account under head 8443-106, administrator by administrator, as compiled for the Finance Accounts (the Finance Accounts show total withdrawals of ₹15,991.01 crore but no breakdown).
 3. Any correspondence in 2024-25 between your office and the Treasury or KMERC on reconciliation of the KMERC Personal Deposit account.
 """},
+    {"id": "l7", "title": "7. Pending bills: who is paid first, and how long the oldest bill has waited",
+     "to": "Executive Engineer, [division name] Division, [Public Works / Water Resources / Minor Irrigation / irrigation corporation]\n[address]",
+     "why": "The government told the Assembly that ₹35,236 crore of bills were pending in six departments (December 2025) and ₹18,547 crore with the four irrigation corporations (March 2026), but not in what order bills are paid or how old the oldest one is. Each works division keeps that register.",
+     "annex": None,
+     "body": """Information sought
+
+1. The list of contractors' bills pending payment in this division as on the date of this application, with, for each bill: the work name or number, the date the bill was received, the amount claimed, the amount passed, and the present stage (under check, passed awaiting funds, or returned).
+2. The rule, circular or order under which this division decides the order in which pending bills are paid (for example, seniority by date of receipt), with its date and issuing authority.
+3. The list of bills paid in this division from 1 April 2025 to the date of this application, with the date each was received and the date each was paid.
+4. Copies of any order in the same period approving payment of a bill out of its order of receipt, with the reason recorded.
+"""},
 ]
 
 # ---- Kannada (needs a native reader's review, like the rest of the site's Kannada) ----
@@ -247,6 +258,16 @@ KN = {
 1. ಲೆಕ್ಕ ಶೀರ್ಷಿಕೆ 8443-106 ವೈಯಕ್ತಿಕ ಠೇವಣಿಗಳ ಅಡಿ, ವ್ಯವಸ್ಥಾಪಕ ನಿರ್ದೇಶಕರು, ಕರ್ನಾಟಕ ಗಣಿ ಪರಿಸರ ಪುನಶ್ಚೇತನ ನಿಗಮ (ಕೆಎಂಇಆರ್‌ಸಿ) ಇವರ ಹೆಸರಿನಲ್ಲಿರುವ ವೈಯಕ್ತಿಕ ಠೇವಣಿ ಖಾತೆಯ 2024-25ರ ಲೆಡ್ಜರ್ ಅಥವಾ ವ್ಯವಹಾರಗಳ ವಿವರ ಪಟ್ಟಿ: ಆರಂಭಿಕ ಶಿಲ್ಕು, ಪ್ರತಿ ಜಮೆ ಮತ್ತು ಪ್ರತಿ ಹಿಂಪಡೆತ ದಿನಾಂಕ, ಮೊತ್ತ ಮತ್ತು ರಸೀದಿ ಅಥವಾ ವರ್ಗಾವಣೆ ಉಲ್ಲೇಖದೊಂದಿಗೆ, ಮತ್ತು ಅಂತಿಮ ಶಿಲ್ಕು.
 2. 2024-25ಕ್ಕೆ, ಶೀರ್ಷಿಕೆ 8443-106ರ ಅಡಿಯ ಪ್ರತಿ ವೈಯಕ್ತಿಕ ಠೇವಣಿ ಖಾತೆಯ ಜಮೆ ಮತ್ತು ಹಿಂಪಡೆತಗಳ ವಿವರ, ನಿರ್ವಾಹಕರವಾರು, ಹಣಕಾಸು ಲೆಕ್ಕಗಳಿಗಾಗಿ ಸಂಕಲಿಸಿದಂತೆ (ಹಣಕಾಸು ಲೆಕ್ಕಗಳು ಒಟ್ಟು ₹15,991.01 ಕೋಟಿ ಹಿಂಪಡೆತ ತೋರಿಸುತ್ತವೆ, ಆದರೆ ವಿವರ ನೀಡುವುದಿಲ್ಲ).
 3. ಕೆಎಂಇಆರ್‌ಸಿ ವೈಯಕ್ತಿಕ ಠೇವಣಿ ಖಾತೆಯ ಹೊಂದಾಣಿಕೆ ಕುರಿತು 2024-25ರಲ್ಲಿ ನಿಮ್ಮ ಕಚೇರಿ ಮತ್ತು ಖಜಾನೆ ಅಥವಾ ಕೆಎಂಇಆರ್‌ಸಿ ನಡುವಿನ ಯಾವುದೇ ಪತ್ರ ವ್ಯವಹಾರ.
+"""},
+    "l7": {"title": "7. ಬಾಕಿ ಬಿಲ್ಲುಗಳು: ಯಾರಿಗೆ ಮೊದಲು ಪಾವತಿ, ಅತ್ಯಂತ ಹಳೆಯ ಬಿಲ್ಲು ಎಷ್ಟು ದಿನದಿಂದ ಕಾಯುತ್ತಿದೆ",
+           "to": "ಕಾರ್ಯನಿರ್ವಾಹಕ ಅಭಿಯಂತರರು, [ವಿಭಾಗದ ಹೆಸರು] ವಿಭಾಗ, [ಲೋಕೋಪಯೋಗಿ / ಜಲಸಂಪನ್ಮೂಲ / ಸಣ್ಣ ನೀರಾವರಿ / ನೀರಾವರಿ ನಿಗಮ]\n[ವಿಳಾಸ]",
+           "why": "ಆರು ಇಲಾಖೆಗಳಲ್ಲಿ ₹35,236 ಕೋಟಿ (ಡಿಸೆಂಬರ್ 2025) ಮತ್ತು ನಾಲ್ಕು ನೀರಾವರಿ ನಿಗಮಗಳಲ್ಲಿ ₹18,547 ಕೋಟಿ (ಮಾರ್ಚ್ 2026) ಬಿಲ್ಲುಗಳು ಬಾಕಿ ಇವೆ ಎಂದು ಸರ್ಕಾರ ವಿಧಾನಸಭೆಗೆ ತಿಳಿಸಿದೆ; ಆದರೆ ಯಾವ ಕ್ರಮದಲ್ಲಿ ಪಾವತಿ, ಅತ್ಯಂತ ಹಳೆಯ ಬಿಲ್ಲು ಎಷ್ಟು ಹಳೆಯದು ಎಂಬುದನ್ನು ಹೇಳಿಲ್ಲ. ಪ್ರತಿ ಕಾಮಗಾರಿ ವಿಭಾಗದಲ್ಲಿ ಈ ದಾಖಲೆ ಇರುತ್ತದೆ.",
+           "body": """ಕೋರಿರುವ ಮಾಹಿತಿ
+
+1. ಈ ಅರ್ಜಿಯ ದಿನಾಂಕಕ್ಕೆ ಈ ವಿಭಾಗದಲ್ಲಿ ಪಾವತಿಗೆ ಬಾಕಿ ಇರುವ ಗುತ್ತಿಗೆದಾರರ ಬಿಲ್ಲುಗಳ ಪಟ್ಟಿ; ಪ್ರತಿ ಬಿಲ್ಲಿಗೆ: ಕಾಮಗಾರಿಯ ಹೆಸರು ಅಥವಾ ಸಂಖ್ಯೆ, ಬಿಲ್ಲು ಸ್ವೀಕರಿಸಿದ ದಿನಾಂಕ, ಕೋರಿದ ಮೊತ್ತ, ಮಂಜೂರಾದ ಮೊತ್ತ ಮತ್ತು ಈಗಿನ ಹಂತ (ಪರಿಶೀಲನೆಯಲ್ಲಿ, ಮಂಜೂರಾಗಿ ಅನುದಾನಕ್ಕಾಗಿ ಕಾಯುತ್ತಿದೆ, ಅಥವಾ ಹಿಂತಿರುಗಿಸಲಾಗಿದೆ).
+2. ಬಾಕಿ ಬಿಲ್ಲುಗಳನ್ನು ಯಾವ ಕ್ರಮದಲ್ಲಿ ಪಾವತಿಸಬೇಕು ಎಂದು ಈ ವಿಭಾಗ ನಿರ್ಧರಿಸುವ ನಿಯಮ, ಸುತ್ತೋಲೆ ಅಥವಾ ಆದೇಶ (ಉದಾಹರಣೆಗೆ, ಸ್ವೀಕರಿಸಿದ ದಿನಾಂಕದ ಜ್ಯೇಷ್ಠತೆ), ಅದರ ದಿನಾಂಕ ಮತ್ತು ಹೊರಡಿಸಿದ ಪ್ರಾಧಿಕಾರ.
+3. 1 ಏಪ್ರಿಲ್ 2025ರಿಂದ ಈ ಅರ್ಜಿಯ ದಿನಾಂಕದವರೆಗೆ ಈ ವಿಭಾಗದಲ್ಲಿ ಪಾವತಿಯಾದ ಬಿಲ್ಲುಗಳ ಪಟ್ಟಿ, ಪ್ರತಿ ಬಿಲ್ಲು ಸ್ವೀಕರಿಸಿದ ದಿನಾಂಕ ಮತ್ತು ಪಾವತಿಯಾದ ದಿನಾಂಕದೊಂದಿಗೆ.
+4. ಇದೇ ಅವಧಿಯಲ್ಲಿ, ಸ್ವೀಕೃತಿ ಕ್ರಮ ಮೀರಿ ಯಾವುದೇ ಬಿಲ್ಲಿನ ಪಾವತಿಗೆ ಅನುಮೋದನೆ ನೀಡಿದ ಆದೇಶಗಳ ಪ್ರತಿಗಳು, ದಾಖಲಿಸಿದ ಕಾರಣದೊಂದಿಗೆ.
 """},
 }
 for _l in LETTERS:
@@ -401,7 +422,7 @@ page = f"""<!doctype html>
 <main>
 <div class="kick"{K("Gandaberunda · ಮಾಹಿತಿ ಹಕ್ಕು · ಭಾರತದ ಯಾವುದೇ ನಾಗರಿಕರಿಗಾಗಿ")}>Gandaberunda · Right to Information · for any citizen of India</div>
 <h1{K("ಉತ್ತರವನ್ನು <em>ನೀವೇ</em> ಕೇಳಿ")}>Ask for the answer <em>yourself</em></h1>
-<p class="lede"{K(f"ನಾವು ಹಿಂಬಾಲಿಸುತ್ತಿರುವ ವರದಿಗಳ ಪ್ರಕಾರ, 2026ರಲ್ಲಿ ಕರ್ನಾಟಕದ {len(rows)} ಅಧಿಕಾರಿಗಳ ಮೇಲೆ ದಾಳಿ, ಟ್ರ್ಯಾಪ್ ಅಥವಾ ಆರೋಪ ದಾಖಲಾಗಿದೆ. ಅವರಲ್ಲಿ {stuck} ಮಂದಿಯ ವಿಷಯದಲ್ಲಿ ಮುಂದಿನ ಯಾವುದೇ ಹಂತ ವರದಿಯಾಗಿಲ್ಲ: ದೋಷಾರೋಪಣ ಪಟ್ಟಿ ಇಲ್ಲ, ಮಂಜೂರಾತಿ ಇಲ್ಲ, ತೀರ್ಪು ಇಲ್ಲ. ಉತ್ತರ ಗೊತ್ತಿರುವ ಕಚೇರಿಗಳು ಯಾವುದೇ ನಾಗರಿಕರಿಗೆ 30 ದಿನಗಳೊಳಗೆ ಉತ್ತರಿಸಬೇಕು. ಇಲ್ಲಿ ಆರು ಪತ್ರಗಳಿವೆ: ಮುದ್ರಿಸಿ, ಸಹಿ ಮಾಡಿ, ಅಂಚೆಯಲ್ಲಿ ಕಳುಹಿಸಿ.")}>{len(rows)} Karnataka officials were raided, trapped or charged in 2026, according to the reports we track. For {stuck} of them, no later step has been reported: no chargesheet, no sanction, no verdict. The offices that know the answer must reply to any citizen within 30 days. Here are six letters, ready to print, sign and post.</p>
+<p class="lede"{K(f"ನಾವು ಹಿಂಬಾಲಿಸುತ್ತಿರುವ ವರದಿಗಳ ಪ್ರಕಾರ, 2026ರಲ್ಲಿ ಕರ್ನಾಟಕದ {len(rows)} ಅಧಿಕಾರಿಗಳ ಮೇಲೆ ದಾಳಿ, ಟ್ರ್ಯಾಪ್ ಅಥವಾ ಆರೋಪ ದಾಖಲಾಗಿದೆ. ಅವರಲ್ಲಿ {stuck} ಮಂದಿಯ ವಿಷಯದಲ್ಲಿ ಮುಂದಿನ ಯಾವುದೇ ಹಂತ ವರದಿಯಾಗಿಲ್ಲ: ದೋಷಾರೋಪಣ ಪಟ್ಟಿ ಇಲ್ಲ, ಮಂಜೂರಾತಿ ಇಲ್ಲ, ತೀರ್ಪು ಇಲ್ಲ. ಉತ್ತರ ಗೊತ್ತಿರುವ ಕಚೇರಿಗಳು ಯಾವುದೇ ನಾಗರಿಕರಿಗೆ 30 ದಿನಗಳೊಳಗೆ ಉತ್ತರಿಸಬೇಕು. ಇಲ್ಲಿ {len(LETTERS)} ಪತ್ರಗಳಿವೆ: ಮುದ್ರಿಸಿ, ಸಹಿ ಮಾಡಿ, ಅಂಚೆಯಲ್ಲಿ ಕಳುಹಿಸಿ.")}>{len(rows)} Karnataka officials were raided, trapped or charged in 2026, according to the reports we track. For {stuck} of them, no later step has been reported: no chargesheet, no sanction, no verdict. The offices that know the answer must reply to any citizen within 30 days. Here are {len(LETTERS)} letters, ready to print, sign and post.</p>
 <p class="note"{K(f"ಪ್ರತಿ ಪ್ರಕರಣವನ್ನು {A_TR_KN} ಪುಟದಲ್ಲಿ ನೋಡಿ. ಟ್ರ್ಯಾಕರ್‌ನಂತೆಯೇ ಪತ್ರಗಳಲ್ಲಿ ಹೆಸರುಗಳಿಲ್ಲ, ಹುದ್ದೆ ಮತ್ತು ಸ್ಥಳಗಳು ಮಾತ್ರ; ಹುದ್ದೆ, ಸ್ಥಳ, ದಿನಾಂಕ ಮತ್ತು ಲಿಂಕ್ ಮಾಡಿದ ಪತ್ರಿಕಾ ವರದಿಯಿಂದ ಮಾಹಿತಿ ಅಧಿಕಾರಿ ಪ್ರತಿಯೊಬ್ಬ ಅಧಿಕಾರಿಯನ್ನು ಗುರುತಿಸಬಹುದು. ಪ್ರತಿ ಪತ್ರ ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಕನ್ನಡದಲ್ಲಿದೆ; ಮೇಲಿನ ಬಟನ್‌ನಿಂದ ಭಾಷೆ ಬದಲಿಸಿ.")}>See every case on {A_TR}. Letters carry posts and places, not names, the same as the tracker; the PIO can identify each officer from the post, place, date and the linked press report. Every letter is in English and Kannada; switch with the button at the top.</p>
 
 <h2{K("ನಿಮ್ಮ ವಿವರಗಳು")}>Your details</h2>

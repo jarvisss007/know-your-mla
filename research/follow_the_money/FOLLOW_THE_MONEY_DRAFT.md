@@ -139,3 +139,12 @@ From SFAR 2024-25 (page images checked: PDF pages 177-180):
 - Outstanding in SNA accounts 31 Mar 2025: MGNREGA 73.84; Samagra Shiksha 172.04; Saksham Anganwadi & Poshan 2.0 370.01; NHM flexible pool 14.48; Urban Rejuvenation Mission (AMRUT) 612.04; total 1,242.41 (our sum).
 - VLC vs PFMS: Poshan central share transferred 465.85 vs 875.84 (diff 409.74); AMRUT central share received 723.11 vs 311.23 (diff 411.88), transferred 144.35 vs 311.23; NHM excess state share 263.55, central commodity 144.59 not released to SNA; MGNREGA central share 433.27 short-transferred (reply awaited).
 - SNA-SPARSH: 140 CSS; 29 fully onboarded; 111 not yet; MGNREGA and AMRUT onboarded March 2025.
+
+
+## Bills waiting and Yettinahole (22 Nov 2026; added to the page)
+- Pending bills, Assembly Q.401 (answered 9 Dec 2025, CM): WR 17,533; PWD 8,804; MI 3,762; RDPR 2,534; UD 2,403; Health 200 (Rs crore); no total or as-on date printed; our sum 35,236. Part (b) of the same answer: no prima facie proven case of corruption in bill payment has come to notice. Page image read 22 Nov 2026.
+- Q.3223 (answered 24 Mar 2026, DCM): pending bills KBJNL 3,760.12, KNNL 6,164.50, CNNL 3,629.38, VJNL 4,993.16, total 18,547.16 (printed); capital head 2025-26 Rs 5,145 cr. Page image read 22 Nov 2026.
+- CAG SFAR 2024-25 para 1.6(B), PDF p.82: 276 of 4,328 incomplete works held up by pending bills of Rs 2,298 cr. Text checked 22 Nov 2026.
+- Yettinahole, CAG Report No. 10 of 2025: 55 packages Rs 22,194.02 cr; 67% of works (Rs 14,805.80 cr) to seven contractors, one with 11 contracts Rs 5,216.58 cr; fake certificate, EMD Rs 3.92 cr not forfeited; Phase II measurements in editable Excel sheets; irregular payment Rs 92.32 cr during IVRCL moratorium; Phase I assets Rs 2,965.77 cr idle. Each phrase found in the report text 22 Nov 2026. Contractor names not used on the page.
+- Not used: contractors' association totals (Rs 37,980 cr, 30 Sep 2026; interested party) and Organiser's irrigation dues figures (press only). The opening clause about "commission" allegations was removed because no dated, attributed source was on file.
+- RTI letter 7 (rti.html): a works division's pending-bill register and the rule for payment order.
