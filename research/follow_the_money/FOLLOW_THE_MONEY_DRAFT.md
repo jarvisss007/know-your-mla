@@ -148,3 +148,5 @@ From SFAR 2024-25 (page images checked: PDF pages 177-180):
 - Yettinahole, CAG Report No. 10 of 2025: 55 packages Rs 22,194.02 cr; 67% of works (Rs 14,805.80 cr) to seven contractors, one with 11 contracts Rs 5,216.58 cr; fake certificate, EMD Rs 3.92 cr not forfeited; Phase II measurements in editable Excel sheets; irregular payment Rs 92.32 cr during IVRCL moratorium; Phase I assets Rs 2,965.77 cr idle. Each phrase found in the report text 22 Nov 2026. Contractor names not used on the page.
 - Not used: contractors' association totals (Rs 37,980 cr, 30 Sep 2026; interested party) and Organiser's irrigation dues figures (press only). The opening clause about "commission" allegations was removed because no dated, attributed source was on file.
 - RTI letter 7 (rti.html): a works division's pending-bill register and the rule for payment order.
+
+- Bill ages (22 Nov 2026): PWD North zone and Chikkamagaluru pending bills with dates, from the Q.1485 annexure archive; details and checks in PENDING_BILLS_AGE_DRAFT.md; added to the bills section.
