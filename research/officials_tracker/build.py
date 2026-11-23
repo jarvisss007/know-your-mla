@@ -296,6 +296,17 @@ page = f"""<!doctype html>
 </section>
 
 <section>
+  <h2>Waiting for permission to prosecute</h2>
+  <p class="muted">Before a court can try a public servant for corruption, the government that employs them must approve the prosecution (Prevention of Corruption Act, 1988, Section 19). This is where cases stop. How many requests are waiting today is not published.</p>
+  <ul>
+    <li><b>Asked in the Assembly, no answer on the record.</b> On 25 August 2026 two MLAs asked how many prosecution sanctions were pending, for how long, and which officers retired while waiting (unstarred questions 1558 and 1652, Department of Personnel and Administrative Reforms). On 23 November 2026 neither answer was on the Assembly's website (<a href="https://kla.kar.nic.in/assembly/answers/16assembly/html/25082026.htm">question list of 25 Aug 2026</a>).</li>
+    <li><b>The last counts come from the Lokayukta, as reported in the press.</b> In January 2024 the Lokayukta's Registrar wrote to the Chief Secretary that 156 cases in 22 departments were awaiting sanction, the most in Rural Development and Panchayat Raj (36) and Revenue (26), one since February 2018 (Siasat, 3 Jan 2024). In September 2024 a Lokayukta official put it at 206 officials in 27 departments (PTI, Oct 2024).</li>
+    <li><b>Senior officers.</b> Of 195 Lokayukta cases against IAS, IPS, KAS and other senior officers from September 2022 to February 2026, none had ended in conviction or acquittal, and 89 were still under investigation (<a href="https://kla.kar.nic.in/assembly/answers/16assembly/pdf/10032026/1324.pdf">written reply of then Chief Minister Siddaramaiah, Assembly question 1324, 10 March 2026</a>, read in the original).</li>
+  </ul>
+  <p class="muted">Any citizen can ask the government for today's list, department by department: <a href="../rti.html#letter-l2">RTI letter 2</a>.</p>
+</section>
+
+<section>
   <h2>Where the money was found</h2>
   <p class="muted">For {na} of the {n} officials, a report listed what kind of assets the agency found. This is what those lists contain. It shows where wealth is kept, not that any of it is illegal: each figure is a first-day claim that the case still has to prove.</p>
   <div class="tbl"><table>
@@ -391,6 +402,17 @@ page_kn = f"""<!doctype html>
     <li class="zero"><b>35</b><span>ಶಿಕ್ಷೆಯಲ್ಲಿ ಕೊನೆಗೊಂಡವು: 29.2%, ಭಾರತದಲ್ಲಿ 46.2%. 74 ಖುಲಾಸೆಯಲ್ಲಿ ಕೊನೆಗೊಂಡವು</span></li>
   </ol>
   <p class="muted">2023ರ ಅಂತ್ಯದಲ್ಲಿ ಕರ್ನಾಟಕದ 1,529 ಭ್ರಷ್ಟಾಚಾರ ಪ್ರಕರಣಗಳು ವಿಚಾರಣೆಗೆ ಬಾಕಿ ಇದ್ದವು, ಆ ವರ್ಷ ವಿಚಾರಣೆಗೆ ಬರಬೇಕಿದ್ದ ಎಲ್ಲ ಪ್ರಕರಣಗಳ 90.5%. 2023ರ ವೇಗದಲ್ಲಿ, ಅಂದರೆ ವರ್ಷಕ್ಕೆ 120 ವಿಚಾರಣೆಗಳು, ಇದು ಸುಮಾರು 13 ವರ್ಷಗಳ ಕೆಲಸ (ನಮ್ಮ ಲೆಕ್ಕ). ಅದೇ ವರ್ಷ ನ್ಯಾಯಾಲಯಗಳು 28 ಪ್ರಕರಣಗಳನ್ನು ರದ್ದುಪಡಿಸಿದವು ಮತ್ತು 70ಕ್ಕೆ ತಡೆ ನೀಡಿದವು. ಆರೋಪಿಗಳಲ್ಲಿ 43 ಮಂದಿಗೆ ಶಿಕ್ಷೆಯಾಯಿತು, 4 ಮಂದಿಯನ್ನು ಸೇವೆಯಿಂದ ವಜಾ ಮಾಡಲಾಯಿತು. ಮೂಲ: <a href="https://www.ncrb.mha.gov.in/uploads/files/2CrimeinIndia2023PartII.pdf">ಎನ್‌ಸಿಆರ್‌ಬಿ, ಕ್ರೈಮ್ ಇನ್ ಇಂಡಿಯಾ 2023, ಸಂಪುಟ 2, ಕೋಷ್ಟಕ 8C.2-8C.5 (ಪುಟ 779-784)</a>; ಕರ್ನಾಟಕದ ಸಾಲುಗಳನ್ನು 18 ನವೆಂಬರ್ 2026ರಂದು ಪುಟದ ಚಿತ್ರಗಳೊಂದಿಗೆ ಹೋಲಿಸಲಾಗಿದೆ. ಇವು ರಾಜ್ಯದ ಎಲ್ಲ ಭ್ರಷ್ಟಾಚಾರ ಪ್ರಕರಣಗಳು, ಈ ಪುಟದ ಅಧಿಕಾರಿಗಳದ್ದು ಮಾತ್ರವಲ್ಲ.</p>
+</section>
+
+<section>
+  <h2>ವಿಚಾರಣೆಗೆ ಅನುಮತಿಗಾಗಿ ಕಾಯುತ್ತಿರುವ ಪ್ರಕರಣಗಳು</h2>
+  <p class="muted">ಭ್ರಷ್ಟಾಚಾರ ಆರೋಪದ ಮೇಲೆ ಸರ್ಕಾರಿ ನೌಕರನನ್ನು ನ್ಯಾಯಾಲಯ ವಿಚಾರಣೆಗೆ ಒಳಪಡಿಸುವ ಮೊದಲು, ಆತನನ್ನು ನೇಮಿಸಿದ ಸರ್ಕಾರ ಅಭಿಯೋಜನೆಗೆ ಮಂಜೂರಾತಿ ನೀಡಬೇಕು (ಭ್ರಷ್ಟಾಚಾರ ನಿಯಂತ್ರಣ ಕಾಯ್ದೆ, 1988, ಕಲಂ 19). ಪ್ರಕರಣಗಳು ನಿಲ್ಲುವುದು ಇಲ್ಲಿಯೇ. ಇಂದು ಎಷ್ಟು ಕೋರಿಕೆಗಳು ಕಾಯುತ್ತಿವೆ ಎಂಬುದು ಪ್ರಕಟವಾಗಿಲ್ಲ.</p>
+  <ul>
+    <li><b>ವಿಧಾನಸಭೆಯಲ್ಲಿ ಕೇಳಲಾಗಿದೆ, ಉತ್ತರ ದಾಖಲೆಯಲ್ಲಿಲ್ಲ.</b> 25 ಆಗಸ್ಟ್ 2026ರಂದು ಇಬ್ಬರು ಶಾಸಕರು ಎಷ್ಟು ಅಭಿಯೋಜನಾ ಮಂಜೂರಾತಿಗಳು ಬಾಕಿ ಇವೆ, ಎಷ್ಟು ಕಾಲದಿಂದ, ಮತ್ತು ಕಾಯುತ್ತಿರುವಾಗಲೇ ಯಾವ ಅಧಿಕಾರಿಗಳು ನಿವೃತ್ತರಾದರು ಎಂದು ಕೇಳಿದ್ದರು (ಚುಕ್ಕೆ ಗುರುತಿಲ್ಲದ ಪ್ರಶ್ನೆ 1558 ಮತ್ತು 1652, ಸಿಬ್ಬಂದಿ ಮತ್ತು ಆಡಳಿತ ಸುಧಾರಣೆ ಇಲಾಖೆ). 23 ನವೆಂಬರ್ 2026ರಂದು ಎರಡೂ ಉತ್ತರಗಳು ವಿಧಾನಸಭೆಯ ಜಾಲತಾಣದಲ್ಲಿ ಇರಲಿಲ್ಲ (<a href="https://kla.kar.nic.in/assembly/answers/16assembly/html/25082026.htm">25 ಆಗಸ್ಟ್ 2026ರ ಪ್ರಶ್ನೆಗಳ ಪಟ್ಟಿ</a>).</li>
+    <li><b>ಕೊನೆಯ ಎಣಿಕೆಗಳು ಲೋಕಾಯುಕ್ತದಿಂದ, ಪತ್ರಿಕಾ ವರದಿಗಳ ಪ್ರಕಾರ.</b> ಜನವರಿ 2024ರಲ್ಲಿ ಲೋಕಾಯುಕ್ತದ ನೋಂದಣಾಧಿಕಾರಿ ಮುಖ್ಯ ಕಾರ್ಯದರ್ಶಿಗೆ ಬರೆದ ಪತ್ರದ ಪ್ರಕಾರ 22 ಇಲಾಖೆಗಳಲ್ಲಿ 156 ಪ್ರಕರಣಗಳು ಮಂಜೂರಾತಿಗೆ ಕಾಯುತ್ತಿದ್ದವು; ಹೆಚ್ಚು ಗ್ರಾಮೀಣಾಭಿವೃದ್ಧಿ ಮತ್ತು ಪಂಚಾಯತ್ ರಾಜ್ (36) ಮತ್ತು ಕಂದಾಯ (26) ಇಲಾಖೆಗಳಲ್ಲಿ, ಒಂದು ಫೆಬ್ರವರಿ 2018ರಿಂದ (ಸಿಯಾಸತ್, 3 ಜನವರಿ 2024). ಸೆಪ್ಟೆಂಬರ್ 2024ರಲ್ಲಿ ಲೋಕಾಯುಕ್ತದ ಅಧಿಕಾರಿಯೊಬ್ಬರು 27 ಇಲಾಖೆಗಳ 206 ಅಧಿಕಾರಿಗಳು ಎಂದರು (ಪಿಟಿಐ, ಅಕ್ಟೋಬರ್ 2024).</li>
+    <li><b>ಹಿರಿಯ ಅಧಿಕಾರಿಗಳು.</b> ಸೆಪ್ಟೆಂಬರ್ 2022ರಿಂದ ಫೆಬ್ರವರಿ 2026ರವರೆಗೆ ಐಎಎಸ್, ಐಪಿಎಸ್, ಕೆಎಎಸ್ ಮತ್ತು ಇತರ ಹಿರಿಯ ಅಧಿಕಾರಿಗಳ ವಿರುದ್ಧದ 195 ಲೋಕಾಯುಕ್ತ ಪ್ರಕರಣಗಳಲ್ಲಿ ಒಂದೂ ಶಿಕ್ಷೆ ಅಥವಾ ಖುಲಾಸೆಯಲ್ಲಿ ಮುಗಿದಿರಲಿಲ್ಲ; 89 ಇನ್ನೂ ತನಿಖೆಯಲ್ಲಿದ್ದವು (<a href="https://kla.kar.nic.in/assembly/answers/16assembly/pdf/10032026/1324.pdf">ಅಂದಿನ ಮುಖ್ಯಮಂತ್ರಿ ಸಿದ್ದರಾಮಯ್ಯ ಅವರ ಲಿಖಿತ ಉತ್ತರ, ವಿಧಾನಸಭೆ ಪ್ರಶ್ನೆ 1324, 10 ಮಾರ್ಚ್ 2026</a>, ಮೂಲದಲ್ಲಿ ಓದಲಾಗಿದೆ).</li>
+  </ul>
+  <p class="muted">ಇಲಾಖಾವಾರು ಇಂದಿನ ಪಟ್ಟಿಯನ್ನು ಯಾವುದೇ ನಾಗರಿಕರು ಕೇಳಬಹುದು: <a href="../rti.html#letter-l2">ಆರ್‌ಟಿಐ ಪತ್ರ 2</a>.</p>
 </section>
 
 <section>
