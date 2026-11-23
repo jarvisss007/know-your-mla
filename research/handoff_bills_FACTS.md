@@ -18,5 +18,5 @@ Working notes: `research/follow_the_money/PENDING_BILLS_AGE_DRAFT.md`, `research
 Details and caveats: `PWD_WORKS_BY_SEAT_DRAFT.md`.
 - 2023-24 to 2025-26: 6,952 works, ₹11,035 crore of estimated work, mapped to 199 seats.
 - Median seat: Congress-held ₹56.1 crore, BJP-held ₹33.5 crore, JD(S)-held ₹19.7 crore. Same direction in all four zones.
-- Varuna (CM's seat) 2nd, ₹210 crore; Yemkanamardi (PWD Minister's seat) 9th, ₹141 crore; Kanakapura (DCM) 124th, ₹36 crore.
+- Varuna (Siddaramaiah's seat; CM until May 2026) 2nd, ₹210 crore; Yemkanamardi (PWD Minister's seat) 9th, ₹141 crore; Kanakapura (D.K. Shivakumar's seat; DCM until May 2026, CM since 3 Jun 2026) 124th, ₹36 crore.
 - Required caveat in any script: estimates of listed works, not money spent; seats differ in road length and need; a question for the department, not proof of favouritism.

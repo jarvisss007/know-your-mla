@@ -45,8 +45,8 @@ Same comparison inside each zone (median per seat, Rs crore):
 | South | 26.0 (44) | 13.2 (10) | 18.9 (12) |
 
 - In every zone the median Congress-held seat had more works listed than the median BJP-held or JD(S)-held seat. Leaving out works of Rs 50 crore or more does not change this (Congress 54.0, BJP 33.4, JD(S) 19.7).
-- Top seats: Bailahongal Rs 300 crore (Congress; Rs 210 crore of it one bypass), Varuna Rs 210 crore (Congress, the Chief Minister's seat), Sagar Rs 193 crore, Kampli Rs 192 crore, Shikaripura Rs 177 crore (BJP), Indi Rs 174 crore, Arabhavi Rs 160 crore (BJP), Baindur Rs 141 crore (BJP), Yemkanamardi Rs 141 crore (Congress, the PWD Minister's own seat, 9th of 199).
-- Kanakapura (Deputy Chief Minister) is 124th, Rs 36 crore.
+- Top seats: Bailahongal Rs 300 crore (Congress; Rs 210 crore of it one bypass), Varuna Rs 210 crore (Congress; Siddaramaiah's seat, Chief Minister until May 2026), Sagar Rs 193 crore, Kampli Rs 192 crore, Shikaripura Rs 177 crore (BJP), Indi Rs 174 crore, Arabhavi Rs 160 crore (BJP), Baindur Rs 141 crore (BJP), Yemkanamardi Rs 141 crore (Congress, the PWD Minister's own seat, 9th of 199).
+- Kanakapura (D.K. Shivakumar: Deputy Chief Minister until May 2026, Chief Minister since 3 June 2026) is 124th, Rs 36 crore.
 
 ## What this does and does not show
 
