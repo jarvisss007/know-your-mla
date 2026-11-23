@@ -38,8 +38,8 @@ def norm(s):
 ALSO = {sid: norm(section_text(sid)) for sid in ("record", "tested", "cabinet", "latest")}
 # Seats whose MLA appears in a section under a shorter name than the affidavit name in D
 ALSO_EXTRA = {"Athani": ("cabinet",), "Byatarayanapura": ("cabinet",), "Sedam": ("cabinet",), "Mangalore": ("cabinet",),
-              "Kanakagiri (SC)": ("cabinet",), "Haveri (SC)": ("cabinet",)}
-ALSO_LABEL = {"record": "On the record", "tested": "Five MLAs tested", "cabinet": "Twenty-two ministers tested", "latest": "Latest"}
+              "Kanakagiri (SC)": ("cabinet",), "Haveri (SC)": ("cabinet",), "Hungund": ("cabinet",)}
+ALSO_LABEL = {"record": "On the record", "tested": "Five MLAs tested", "cabinet": "Twenty-three ministers tested", "latest": "Latest"}
 
 LIAB = {}  # constituency -> {"loans", "dues", "disputed"} (crore) from the affidavit, via tools/fetch_liabilities.py
 _lp = ROOT / "data/liabilities_myneta.csv"
