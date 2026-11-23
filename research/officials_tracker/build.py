@@ -64,7 +64,7 @@ reached = [sum(1 for r in rows if STAGE_RANK[r["stage"]] >= i) for i in range(le
 groups = Counter(group(r) for r in rows).most_common()
 gmax = groups[0][1]
 first, last = rows[0]["action_date"], rows[-1]["action_date"]
-checked = max(r["checked_on"] for r in rows)
+checked = max(max(r["checked_on"] for r in rows), max(r["followup_checked"] for r in rows))
 # Reports used for figures or details in the notes, beyond each row's own source.
 OTHER_SOURCES = {
     "https://www.countryandpolitics.in/2026/04/08/lokayukta-officials-raids-several-officials-across-state-against-8-govt-officials-unearthed-disproportionate-assets-worth-rs-36-9-crores",
