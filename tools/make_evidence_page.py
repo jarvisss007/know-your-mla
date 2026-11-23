@@ -20,7 +20,7 @@ CHECKED_KN = "23 ನವೆಂಬರ್ 2026"
 
 # Kannada form of each big number (keyed by the English form used in FINDINGS)
 BIG_KN = {"No answer": "ಉತ್ತರವಿಲ್ಲ", "35 of 120": "120ರಲ್ಲಿ 35", "₹6,026 cr": "₹6,026 ಕೋಟಿ", "₹410 cr": "₹410 ಕೋಟಿ",
-          "₹4,004 cr": "₹4,004 ಕೋಟಿ", "₹35,236 cr": "₹35,236 ಕೋಟಿ", "521 works": "521 ಕಾಮಗಾರಿ", "8.24 lakh": "8.24 ಲಕ್ಷ"}
+          "₹4,004 cr": "₹4,004 ಕೋಟಿ", "₹35,236 cr": "₹35,236 ಕೋಟಿ", "₹43,782 cr": "₹43,782 ಕೋಟಿ", "₹369 cr": "₹369 ಕೋಟಿ", "₹1,275 cr": "₹1,275 ಕೋಟಿ", "521 works": "521 ಕಾಮಗಾರಿ", "8.24 lakh": "8.24 ಲಕ್ಷ"}
 
 
 def big_for(big, lang):
@@ -98,6 +98,26 @@ FINDINGS = [
      "MGNREGA public records (government's own), read by us",
      "ನರೇಗಾ ಸಾರ್ವಜನಿಕ ದಾಖಲೆಗಳು (ಸರ್ಕಾರದ್ದೇ), ನಾವು ಓದಿದಂತೆ",
      "statewide_check.html", "statewide_check.html"),
+    # added 23 Nov 2026 from money.html "Checked against the source" (money-sources session; each re-read at source)
+    ("money", "audit", "₹43,782 cr",
+     "Less given to village, taluk and district panchayats than the state itself had accepted from its own Finance Commissions, 2017-18 to 2021-22.",
+     "2017-18ರಿಂದ 2021-22ರವರೆಗೆ ರಾಜ್ಯ ತನ್ನದೇ ಹಣಕಾಸು ಆಯೋಗಗಳಿಂದ ಒಪ್ಪಿಕೊಂಡದ್ದಕ್ಕಿಂತ ಗ್ರಾಮ, ತಾಲ್ಲೂಕು ಮತ್ತು ಜಿಲ್ಲಾ ಪಂಚಾಯಿತಿಗಳಿಗೆ ಕಡಿಮೆ ನೀಡಿದ ಹಣ.",
+     "CAG, Report 10 of 2024, para 3.2.2.3",
+     "ಸಿಎಜಿ, ವರದಿ 10/2024, ಕಂಡಿಕೆ 3.2.2.3",
+     "../money.html#checked", "../money.html#checked"),
+    ("money", "audit", "₹369 cr",
+     "Of central Finance Commission grants lost because zilla and taluk panchayat elections have not been held since 2021. The state offered no comment to the auditor.",
+     "2021ರಿಂದ ಜಿಲ್ಲಾ ಮತ್ತು ತಾಲ್ಲೂಕು ಪಂಚಾಯಿತಿ ಚುನಾವಣೆಗಳು ನಡೆಯದ ಕಾರಣ ಕಳೆದುಹೋದ ಕೇಂದ್ರ ಹಣಕಾಸು ಆಯೋಗದ ಅನುದಾನ. ರಾಜ್ಯ ಲೆಕ್ಕಪರಿಶೋಧಕರಿಗೆ ಯಾವುದೇ ಪ್ರತಿಕ್ರಿಯೆ ನೀಡಲಿಲ್ಲ.",
+     "CAG, Report 10 of 2024, para 3.2.1",
+     "ಸಿಎಜಿ, ವರದಿ 10/2024, ಕಂಡಿಕೆ 3.2.1",
+     "../money.html#checked", "../money.html#checked"),
+    ("money", "audit", "₹1,275 cr",
+     "Health cess collected from Bengaluru property owners by the city corporation and never passed on, 2017-18 to 2021-22 (plus ₹256 crore of library cess).",
+     "2017-18ರಿಂದ 2021-22ರವರೆಗೆ ಬೆಂಗಳೂರಿನ ಆಸ್ತಿ ಮಾಲೀಕರಿಂದ ನಗರ ಪಾಲಿಕೆ ಸಂಗ್ರಹಿಸಿ ವರ್ಗಾಯಿಸದ ಆರೋಗ್ಯ ಸೆಸ್ (ಜೊತೆಗೆ ₹256 ಕೋಟಿ ಗ್ರಂಥಾಲಯ ಸೆಸ್).",
+     "CAG inspection report on local bodies 2020-22, para 2.10.5",
+     "ಸ್ಥಳೀಯ ಸಂಸ್ಥೆಗಳ ಮೇಲಿನ ಸಿಎಜಿ ತಪಾಸಣಾ ವರದಿ 2020-22, ಕಂಡಿಕೆ 2.10.5",
+     "../money.html#checked", "../money.html#checked"),
+
 ]
 
 GROUPS = {"en": {"cases": "After the raid: does anyone get punished?", "money": "Where the money goes", "ground": "On the ground"},
