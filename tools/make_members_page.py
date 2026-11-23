@@ -7,7 +7,8 @@ sworn election affidavit (as transcribed by ADR on myneta.info). Declared figure
 data/mlc_mp.json is the public subset: name, house, seat, party, term, and per affidavit the year, type, myneta link,
 assets, liabilities and declared criminal cases. Nothing else from the private sweep is copied.
 """
-import html, io, json, pathlib, sys
+import html, io, json, pathlib, re, sys
+from urllib.parse import quote
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "mlc_mp.json"
@@ -66,7 +67,8 @@ def money(v):
 
 def card(m):
     party = E(m["party"])
-    head = f'<h3>{E(m["name"])}</h3><div class="meta"><span class="pty">{party}</span> · {E(m["seat"])} · {E(m["term"])}</div>'
+    nm = f'<a class="nm" href="members/{mslug(m)}.html">{E(m["name"])}</a>' if m.get("latest") else E(m["name"])
+    head = f'<h3>{nm}</h3><div class="meta"><span class="pty">{party}</span> · {E(m["seat"])} · {E(m["term"])}</div>'
     if not m.get("latest"):
         return (f'<article class="mc none" data-p="{party}" data-q="{E((m["name"] + " " + m["seat"]).lower())}">{head}'
                 f'<p class="miss" data-kn="ಈ ಸ್ಥಾನಕ್ಕೆ ಪ್ರಮಾಣಪತ್ರ ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಸಿಗಲಿಲ್ಲ.">No affidavit for this member could be found online.</p></article>')
@@ -87,6 +89,104 @@ def card(m):
             f'{old}{hist}</article>')
 
 
+def nk(name):
+    """Name key for exact matching: letters only, single spaces, lower case."""
+    return re.sub(r'\s+', ' ', re.sub(r'[^a-z]+', ' ', name.lower())).strip()
+
+
+def mslug(m):
+    return re.sub(r'[^a-z0-9]+', '-', m["name"].lower()).strip('-')
+
+
+def loans_names():
+    """Names that appear in the public 'Money between politicians' table, to link from member pages."""
+    src = io.open(ROOT / "index.html", encoding="utf-8").read()
+    mm = re.search(r'<section class="block page" id="loans">(.*?)</section>', src, re.S)
+    return {nk(x) for x in re.findall(r'<b>([^<]+)</b>', mm.group(1))} if mm else set()
+
+
+def member_page(m, style, loans_txt):
+    la = m["latest"]
+    k = la.get("k") or 0
+    rows = "".join(
+        f'<tr><td><a href="{E(a["url"])}" target="_blank" rel="noopener">{E(a["type"])}</a></td><td>{money(a["a"])}</td>'
+        f'<td>{money(a["l"])}</td><td>{money(round(a["a"] - a["l"], 2)) if a["a"] is not None and a["l"] is not None else "not given"}</td></tr>'
+        for a in m["affs"])
+    first, last = m["affs"][0], m["affs"][-1]
+    growth = ""
+    if len(m["affs"]) > 1 and first["a"] and last["a"] is not None:
+        g = round(100 * (last["a"] - first["a"]) / first["a"])
+        growth = (f'<p>Declared assets went from {money(first["a"])} ({E(first["type"])}) to {money(last["a"])} '
+                  f'({E(last["type"])}), {"+" if g >= 0 else ""}{g}%. Values are mostly what the member paid, not market value, '
+                  f'and they include the family&#x27;s holdings.</p>')
+    old = "" if m.get("current") else '<p class="old">The latest affidavit online is from an earlier election; the one for the current seat is not online.</p>'
+    loans = ('<p>This member appears in <a href="../index.html#loans">Money between politicians</a>: loans declared on both sides.</p>'
+             if nk(m["name"]) in loans_txt else "")
+    sl = mslug(m)
+    url = SITE + "members/" + sl + ".html"
+    desc = (f'{m["name"]} ({m["party"]}), {m["house"]}, {m["seat"]}: declared assets {money(la["a"])}, debts {money(la["l"])}, '
+            f'{k} declared criminal cases. From sworn election affidavits.')
+    wa = f'{m["name"]} ({m["house"]}) declared assets of {money(la["a"])}. Every affidavit, side by side: {url}'
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{E(m["name"])}: declared assets · Gandaberunda</title>
+<meta name="description" content="{E(desc)}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{E(m["name"])}: declared assets · Gandaberunda">
+<meta property="og:description" content="{E(desc)}">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{SITE}brand/gandaberunda-banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="{url}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap">
+<style>{style}
+table {{ border-collapse: collapse; width: 100%; font-size: 15px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-top: 10px }}
+th {{ text-align: left; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding: 10px 12px; border-bottom: 1px solid var(--line) }}
+td {{ padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; overflow-wrap: anywhere }}
+tr:last-child td {{ border-bottom: 0 }}
+.tw {{ overflow-x: auto }}
+.share {{ display: inline-block; margin-top: 14px; padding: 10px 16px; border-radius: 10px; background: var(--fg); color: var(--bg); text-decoration: none; font-weight: 600 }}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="home" href="../members.html">← MLCs and MPs</a><a class="home" href="../">Gandaberunda</a></header>
+<h1>{E(m["name"])}</h1>
+<p class="lede">{E(m["party"])} · {E(m["house"])} · {E(m["seat"])} · {E(m["term"])}</p>
+<div class="big">{money(la["a"])}</div><div class="lbl">assets declared in the latest affidavit found ({E(la["type"])})</div>
+<ul class="facts"><li>Debts declared: {money(la["l"])}</li><li>Declared criminal cases: {k}{' <span class="hint">(a case is not a conviction)</span>' if k else ''}</li></ul>
+{old}
+<h2>Every affidavit we found</h2>
+<div class="tw"><table><thead><tr><th>Affidavit</th><th>Assets</th><th>Debts</th><th>Net</th></tr></thead><tbody>{rows}</tbody></table></div>
+{growth}
+{loans}
+<a class="share" href="https://wa.me/?text={quote(wa)}" target="_blank" rel="noopener">Share on WhatsApp</a>
+<div class="box">Declared figures only, as transcribed from the member&#x27;s sworn affidavits by the Association for Democratic Reforms on myneta.info. No allegation, grade or analysis. Seen a mistake? <a href="https://github.com/jarvisss007/know-your-mla/issues/new" target="_blank" rel="noopener">Tell us</a> and we will correct it.</div>
+<footer><p><a href="../members.html">← All MLCs and MPs</a> · <a href="../">Gandaberunda</a></p></footer>
+</div>
+<script data-goatcounter="https://gandaberunda.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+"""
+
+
+def build_member_pages(ms):
+    style = re.search(r'<style>(.*?)</style>', PAGE, re.S).group(1)
+    out = ROOT / "members"
+    out.mkdir(exist_ok=True)
+    lt = loans_names()
+    slugs = [mslug(m) for m in ms if m.get("latest")]
+    assert len(slugs) == len(set(slugs)), "duplicate member slugs"
+    for m in ms:
+        if m.get("latest"):
+            io.open(out / f"{mslug(m)}.html", "w", encoding="utf-8", newline="\n").write(member_page(m, style, lt))
+    print("member pages:", len(slugs))
+
+
 def build():
     ms = json.load(io.open(DATA, encoding="utf-8"))
     found = sum(1 for m in ms if m.get("latest"))
@@ -102,6 +202,7 @@ def build():
     page = PAGE.replace("{{DESC}}", E(desc)).replace("{{N}}", str(len(ms))).replace("{{F}}", str(found)).replace(
         "{{OPTS}}", "".join(f'<option>{E(p)}</option>' for p in parties)).replace("{{SECS}}", "\n".join(secs))
     io.open(OUT, "w", encoding="utf-8", newline="\n").write(page)
+    build_member_pages(ms)
     print("wrote", OUT.name, len(ms), "members,", found, "with affidavits")
 
 
@@ -153,7 +254,7 @@ h2 { font-size: 24px; margin: 40px 0 6px } h2 small { color: var(--muted); font-
 .tools select { min-width: 0; max-width: 100% }
 @media (max-width: 520px) { .tools input, .tools select { flex: 1 1 100% } }
 .mc { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; min-width: 0 }
-.mc h3 { font-size: 18px }
+.mc h3 { font-size: 18px } .mc h3 a.nm { color: var(--fg); text-decoration: none } .mc h3 a.nm:hover { text-decoration: underline }
 .meta { color: var(--muted); font-size: 13.5px } .pty { font-weight: 600; color: var(--fg) }
 .big { font-family: var(--display); font-weight: 700; font-size: 28px; margin-top: 8px; color: var(--fg) }
 .lbl { color: var(--muted); font-size: 13px; margin-top: -4px }

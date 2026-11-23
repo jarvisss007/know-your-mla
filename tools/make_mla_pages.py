@@ -240,7 +240,7 @@ def main():
     idx += f'<h1>Report cards: all 224 MLAs</h1><p class="fine">One page per constituency, from sworn affidavits and official district records. <span class="kn">ಎಲ್ಲ 224 ಶಾಸಕರ ವರದಿ ಕಾರ್ಡ್‌ಗಳು</span></p><ul class="list">{rows}</ul></div><script data-goatcounter="https://gandaberunda.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>\n</body></html>\n'
     (OUT / "index.html").write_text(idx, encoding="utf-8", newline="\n")
     # sitemap helps search engines find every page
-    urls = [SITE] + [SITE + "mla/" + s + ".html" for s in slugs] + [SITE + "farmers.html", SITE + "members.html"]
+    urls = [SITE] + [SITE + "mla/" + s + ".html" for s in slugs] + [SITE + "farmers.html", SITE + "members.html"] + [SITE + "members/" + q.name for q in sorted((ROOT / "members").glob("*.html"))]
     (ROOT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                       + "".join(f"<url><loc>{u}</loc></url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
     print("ok", len(slugs), "pages")
