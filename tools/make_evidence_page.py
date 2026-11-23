@@ -20,7 +20,7 @@ CHECKED_KN = "23 ನವೆಂಬರ್ 2026"
 
 # Kannada form of each big number (keyed by the English form used in FINDINGS)
 BIG_KN = {"No answer": "ಉತ್ತರವಿಲ್ಲ", "35 of 120": "120ರಲ್ಲಿ 35", "₹6,026 cr": "₹6,026 ಕೋಟಿ", "₹410 cr": "₹410 ಕೋಟಿ",
-          "₹4,004 cr": "₹4,004 ಕೋಟಿ", "₹35,236 cr": "₹35,236 ಕೋಟಿ", "246 works": "246 ಕಾಮಗಾರಿ", "8.24 lakh": "8.24 ಲಕ್ಷ"}
+          "₹4,004 cr": "₹4,004 ಕೋಟಿ", "₹35,236 cr": "₹35,236 ಕೋಟಿ", "521 works": "521 ಕಾಮಗಾರಿ", "8.24 lakh": "8.24 ಲಕ್ಷ"}
 
 
 def big_for(big, lang):
@@ -86,9 +86,9 @@ FINDINGS = [
      "CAG, Performance Audit of the Yettinahole project, Report 10 of 2025",
      "ಸಿಎಜಿ, ಎತ್ತಿನಹೊಳೆ ಯೋಜನೆಯ ಕಾರ್ಯನಿರ್ವಹಣಾ ಲೆಕ್ಕಪರಿಶೋಧನೆ, ವರದಿ 10/2025",
      "follow_the_money.html", "follow_the_money_kn.html"),
-    ("ground", "count", "246 works",
-     "Booked as completed at two village tanks on the Tungabhadra, ₹13.05 crore, from 18 panchayats. Every completion photo was taken at the same two tanks.",
-     "ತುಂಗಭದ್ರೆಯ ಎರಡು ಹಳ್ಳಿ ಕೆರೆಗಳಲ್ಲಿ ಪೂರ್ಣಗೊಂಡಿವೆ ಎಂದು ದಾಖಲಾದ ಕಾಮಗಾರಿಗಳು, ₹13.05 ಕೋಟಿ, 18 ಪಂಚಾಯಿತಿಗಳಿಂದ. ಪ್ರತಿ ಪೂರ್ಣಗೊಂಡ ಫೋಟೋ ಅದೇ ಎರಡು ಕೆರೆಗಳಲ್ಲಿ ತೆಗೆದದ್ದು.",
+    ("ground", "count", "521 works",
+     "Booked as completed at two village tanks on the Tungabhadra, ₹29.24 crore, from 28 panchayats. Every completion photo was taken at the tanks. (Revised 23 Nov 2026 from 246 works, ₹13.05 crore, once the exact location of every work was obtained.)",
+     "ತುಂಗಭದ್ರೆಯ ಎರಡು ಹಳ್ಳಿ ಕೆರೆಗಳಲ್ಲಿ ಪೂರ್ಣಗೊಂಡಿವೆ ಎಂದು ದಾಖಲಾದ ಕಾಮಗಾರಿಗಳು, ₹29.24 ಕೋಟಿ, 28 ಪಂಚಾಯಿತಿಗಳಿಂದ. ಪ್ರತಿ ಪೂರ್ಣಗೊಂಡ ಫೋಟೋ ಆ ಕೆರೆಗಳಲ್ಲೇ ತೆಗೆದದ್ದು. (ಪ್ರತಿ ಕಾಮಗಾರಿಯ ನಿಖರ ಸ್ಥಳ ಸಿಕ್ಕ ನಂತರ 23 ನವೆಂಬರ್ 2026ರಂದು 246 ಕಾಮಗಾರಿ, ₹13.05 ಕೋಟಿಯಿಂದ ಪರಿಷ್ಕರಿಸಲಾಗಿದೆ.)",
      "MGNREGA public records (government's own), read by us",
      "ನರೇಗಾ ಸಾರ್ವಜನಿಕ ದಾಖಲೆಗಳು (ಸರ್ಕಾರದ್ದೇ), ನಾವು ಓದಿದಂತೆ",
      "tank_findings.html", "tank_findings.html"),
