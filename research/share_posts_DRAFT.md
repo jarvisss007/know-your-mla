@@ -121,8 +121,8 @@ Link reply: https://jarvisss007.github.io/know-your-mla/reports/follow_the_money
 
 ## 7. New drafts, 23 Nov 2026: NOT POSTED, waiting for the owner's approval
 
-**X (English)** (284 chars; post with no link, then reply with the link)
-Karnataka's Lokayukta registered 1,248 corruption cases against officials from Sep 2022 to Aug 2026. In those cases, government servants held guilty so far: 0. That is the government's own answer to the Legislative Council (20 Aug 2026). We track every 2026 case from raid to verdict.
+**X (English)** (276 chars; post with no link, then reply with the link)
+Karnataka's Lokayukta registered 1,248 corruption cases against officials from Sep 2022 to Aug 2026. In those cases, government servants held guilty so far: 0. That is the government's own answer to the Legislative Council (20 Aug 2026). We follow each 2026 case to a verdict.
 Reply: https://jarvisss007.github.io/know-your-mla/reports/officials_tracker.html
 
 **X (Kannada)** (275 chars)
