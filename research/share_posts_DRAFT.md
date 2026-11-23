@@ -131,7 +131,7 @@ Reply: https://jarvisss007.github.io/know-your-mla/reports/officials_tracker_kn.
 
 Checks: 1,248 cases and 0 held guilty are from the Chief Minister's written reply to Council USQ 452 (628), 20 Aug 2026, read in the original (tracker page, "The government's own count"). "0 held guilty" is the reply's own figure for that period; NCRB counts courts differently. Kannada at 279 is at the limit: trim if X counts it over.
 
-## 8. Evidence page announcement, 23 Nov 2026: NOT POSTED, waiting for the owner's approval
+## 8. Evidence page announcement: both POSTED on X on 23 Nov 2026, 23:12-23:14 UTC, on the owner's instruction ("Post both now"), each with its card and one link reply. Sanction answers rechecked first: USQ 1558/1652 still 404. EN https://x.com/anupam00720/status/2125004601204375853 (reply .../2125004716103135286); KN https://x.com/anupam00720/status/2125004885787836447 (reply .../2125005072522519033)
 
 Per the X rules in CHANNEL_OPS.md: post the text with the card, then reply with the link. One post a day; do not post with the 24 Nov works-by-seat post in the same hour.
 
