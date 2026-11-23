@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Evidence · Gandaberunda</title>
+<meta name="description" content="What Karnataka's own records, auditors and courts show about public money and corruption cases, each with its document, and six things any citizen can do.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Evidence · Gandaberunda">
+<meta property="og:description" content="What Karnataka's own records, auditors and courts show about public money and corruption cases, each with its document, and six things any citizen can do.">
+<meta property="og:url" content="https://jarvisss007.github.io/know-your-mla/reports/evidence.html">
+<meta property="og:image" content="https://jarvisss007.github.io/know-your-mla/brand/gandaberunda-banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../brand/mark.svg">
+<style>:root{padding-top:env(safe-area-inset-top,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+Kannada:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* One reading column. The page is a stack of evidence cards (number, what it means, what kind of record, link to the source page), then actions. */
+:root {
+  --bg: #f5f6f8; --surface: #ffffff; --fg: #161a22; --muted: #5b6474; --line: #dde1e8;
+  --red: #c21f30; --yellow: #f2b705; --blue: #1d4ed8; --green: #1a8f4c;
+  --display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --body: Inter, "Noto Sans Kannada", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --blue: #7aa7ff; --green: #4fcf86; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11141a; --surface: #1a1e27; --fg: #eceef2; --muted: #9aa3b2; --line: #2b313d;
+  --red: #ef5261; --yellow: #f5c93a; --blue: #7aa7ff; --green: #4fcf86; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 16px/1.55 var(--body); margin: 0;
+  padding-block: 28px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+a { color: inherit; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); line-height: 1.05; letter-spacing: -0.02em; }
+h1 span { color: var(--red); }
+h2 { font-size: 1.45rem; }
+p { margin: 0; max-width: 66ch; }
+header { display: flex; flex-direction: column; gap: 14px; }
+.eyebrow { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.draft { display: inline-block; align-self: flex-start; background: var(--yellow); color: #161a22; font-weight: 600; font-size: .8rem; padding: 3px 10px; border-radius: 3px; letter-spacing: .04em; }
+.lede { font-size: 1.12rem; }
+.muted { color: var(--muted); font-size: .92rem; }
+section { display: flex; flex-direction: column; gap: 14px; }
+.cards { display: grid; gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--red); border-radius: 10px; padding: 16px 18px; display: grid; grid-template-columns: minmax(120px, 190px) 1fr; gap: 6px 18px; align-items: start; }
+.card.k-audit { border-left-color: var(--green); } .card.k-govt { border-left-color: var(--blue); } .card.k-count { border-left-color: var(--yellow); }
+.card b.n { font: 700 1.7rem/1.1 var(--display); font-variant-numeric: tabular-nums; grid-row: span 3; }
+.card .src { font-size: .82rem; color: var(--muted); }
+.card .tag { font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.card a.go { font-size: .85rem; font-weight: 600; }
+@media (max-width: 560px) { .card { grid-template-columns: 1fr; } .card b.n { grid-row: auto; } }
+ol.act { margin: 0; padding: 0; list-style: none; counter-reset: a; display: grid; gap: 12px; }
+ol.act li { counter-increment: a; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px 14px 56px; position: relative; display: flex; flex-direction: column; gap: 6px; }
+ol.act li::before { content: counter(a); position: absolute; left: 16px; top: 13px; width: 28px; height: 28px; border-radius: 50%; background: var(--fg); color: var(--bg); font: 700 .95rem/28px var(--display); text-align: center; }
+ol.act h3 { font-size: 1.05rem; }
+.share { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 8px 14px; font-weight: 600; font-size: .9rem; text-decoration: none; cursor: pointer; color: var(--fg); font-family: inherit; }
+.btn:hover { border-color: var(--red); }
+ul.more { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+footer { border-top: 1px solid var(--line); padding-top: 16px; }
+@media print { body { background: #fff; color: #000; } .share, .draft { display: none; } .card, ol.act li { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div style="position:sticky;top:0;z-index:20;background:#11141a;color:#eceef2;font:600 14px/1.4 Inter,system-ui,sans-serif;padding:10px max(16px,env(safe-area-inset-left,0px));display:flex;gap:8px 16px;flex-wrap:wrap;align-items:center;border-bottom:3px solid #f2b705"><a href="../index.html#research" style="color:#f5c93a;text-decoration:none">← Gandaberunda · Research</a><span style="color:#9aa3b2;font-weight:400">Test version: still being checked · <a href="evidence_kn.html" style="color:#eceef2">ಕನ್ನಡ</a></span></div>
+<div class="wrap">
+<header>
+  <span class="draft">TEST VERSION · UNDER REVIEW</span>
+  <div class="eyebrow">Gandaberunda · Karnataka · checked 23 Nov 2026</div>
+  <h1>The <span>evidence</span>, in one place</h1>
+  <p class="lede">What Karnataka&#x27;s own records, auditors and courts show about where public money goes and what happens to those who misuse it, and what you can do about it. Every figure below has a document behind it; open the linked page for the source, the exact table and the government&#x27;s side.</p>
+  <p class="muted">Read it fairly: an audit finding is the auditor&#x27;s conclusion, not a court&#x27;s; a raid or a chargesheet is an accusation, not guilt. We name offices, not officials, until a court rules. Both parties have governed in the years these records cover.</p>
+</header>
+
+<section>
+  <h2>After the raid: does anyone get punished?</h2>
+  <div class="cards">
+    <div class="card k-govt"><b class="n">1,248 → 0</b><span class="tag">Government&#x27;s own answer</span><p>Lokayukta corruption cases against officials, September 2022 to August 2026. Government servants held guilty in those cases so far: none.</p><p class="src">Source: Chief Minister&#x27;s written reply, Legislative Council question 452 (628), 20 Aug 2026 · <a class="go" href="officials_tracker.html">Open the source page</a></p></div>
+    <div class="card k-govt"><b class="n">195 → 0</b><span class="tag">Government&#x27;s own answer</span><p>Lokayukta cases against IAS, IPS, KAS and other senior officers, September 2022 to February 2026. Ended in conviction or acquittal: none. 89 were still under investigation.</p><p class="src">Source: Written reply of then Chief Minister Siddaramaiah, Assembly question 1324, 10 Mar 2026 · <a class="go" href="officials_tracker.html">Open the source page</a></p></div>
+    <div class="card k-govt"><b class="n">No answer</b><span class="tag">Government&#x27;s own answer</span><p>On 25 August 2026 MLAs asked how many requests to prosecute corrupt officials are waiting for the government&#x27;s permission, and for how long. Three months later, no answer is on the Assembly&#x27;s website.</p><p class="src">Source: Assembly unstarred questions 1558 and 1652, 25 Aug 2026; website checked 23 Nov 2026 · <a class="go" href="officials_tracker.html">Open the source page</a></p></div>
+    <div class="card k-count"><b class="n">35 of 120</b><span class="tag">Our count of official records</span><p>Corruption trials that Karnataka&#x27;s courts finished in 2023 ended in conviction (29%; all India 46%). 1,529 cases were still waiting for trial at the year&#x27;s end.</p><p class="src">Source: National Crime Records Bureau, Crime in India 2023, Vol. II, Table 8C.4 · <a class="go" href="officials_tracker.html">Open the source page</a></p></div>
+  </div>
+</section>
+<section>
+  <h2>Where the money goes</h2>
+  <div class="cards">
+    <div class="card k-audit"><b class="n">₹6,026 cr</b><span class="tag">Audit finding</span><p>Moved into deposit accounts in March 2025 alone, at the year&#x27;s end. The auditor&#x27;s words for one such transfer: “mere parking of funds to avoid lapse of grants”.</p><p class="src">Source: CAG, State Finances Audit Report 2024-25, paras 3.5.1 and 2.7.1.2A · <a class="go" href="follow_the_money.html#journey">Open the source page</a></p></div>
+    <div class="card k-audit"><b class="n">₹410 cr</b><span class="tag">Audit finding</span><p>Kept in 32 bank accounts that ten development corporations had been ordered in 2023 to close (31 March 2025).</p><p class="src">Source: CAG, State Finances Audit Report 2024-25, Appendix 2.16 · <a class="go" href="follow_the_money.html#corporations">Open the source page</a></p></div>
+    <div class="card k-audit"><b class="n">₹4,004 cr</b><span class="tag">Audit finding</span><p>Collected by district mineral funds for mining-hit villages up to March 2023; ₹1,826 crore spent and 2,190 projects never started. The steering committee headed by the Chief Minister did not meet once from 2018 to June 2023.</p><p class="src">Source: CAG, Report 7 of 2025 · <a class="go" href="follow_the_money.html#mining">Open the source page</a></p></div>
+    <div class="card k-govt"><b class="n">₹35,236 cr</b><span class="tag">Government&#x27;s own answer</span><p>Owed to contractors for work already done, in six departments (our sum of the figures in the government&#x27;s answer). In the Public Works department&#x27;s North zone, 31% of the money owed was more than a year old.</p><p class="src">Source: Chief Minister&#x27;s written reply to the Assembly, 9 Dec 2025; Assembly question 1485, 24 Aug 2026 · <a class="go" href="follow_the_money.html">Open the source page</a></p></div>
+    <div class="card k-audit"><b class="n">67%</b><span class="tag">Audit finding</span><p>Of the Yettinahole drinking-water project&#x27;s ₹22,194 crore of works, the share that went to seven contractors. ₹2,966 crore of finished assets could not be used because the canal was not complete.</p><p class="src">Source: CAG, Performance Audit of the Yettinahole project, Report 10 of 2025 · <a class="go" href="follow_the_money.html">Open the source page</a></p></div>
+  </div>
+</section>
+<section>
+  <h2>On the ground</h2>
+  <div class="cards">
+    <div class="card k-count"><b class="n">246 works</b><span class="tag">Our count of official records</span><p>Booked as completed at two village tanks on the Tungabhadra, ₹13.05 crore, from 18 panchayats. Every completion photo was taken at the same two tanks.</p><p class="src">Source: MGNREGA public records (government&#x27;s own), read by us · <a class="go" href="tank_findings.html">Open the source page</a></p></div>
+    <div class="card k-count"><b class="n">8.24 lakh</b><span class="tag">Our count of official records</span><p>Completion photos of Karnataka&#x27;s 2024-25 rural job works, every one checked for where it was taken. The ranking shows which blocks&#x27; proof of work breaks down.</p><p class="src">Source: MGNREGA public records (government&#x27;s own), read by us · <a class="go" href="statewide_check.html">Open the source page</a></p></div>
+  </div>
+</section>
+
+<section id="act">
+  <h2>What you can do</h2>
+  <p class="muted">Six things any citizen can do, starting this week. None needs a lawyer.</p>
+  <ol class="act"><li><h3>Ask for the record (RTI)</h3><p>Any citizen can ask any government office for its records. A Karnataka application costs ₹10; the office must reply within 30 days. If it does not, or refuses, appeal to the officer&#x27;s senior within 30 days, then to the Karnataka Information Commission within 90 days. Seven ready letters, in Kannada and English, are on our RTI page.</p><a href="../rti.html">RTI letters</a></li><li><h3>Complain to the Lokayukta</h3><p>If you have evidence that a public servant took a bribe or misused office, the Lokayukta takes written complaints. If someone demands a bribe, the Lokayukta police can lay a trap, as they did in most cases on our tracker.</p><a href="officials_tracker.html">See the cases</a></li><li><h3>Ask why permission to prosecute is stuck</h3><p>A department must decide a request to prosecute within three months, extendable by one (Prevention of Corruption Act, Section 19). Ask your department, by RTI, which requests are waiting and since when.</p><a href="../rti.html#letter-l2">RTI letter 2</a></li><li><h3>Make your MLA or MLC ask</h3><p>Any legislator can put a written question to the government, and the answer is published on the Assembly or Council website. Ask yours to ask: how many sanction requests are pending, which bills are oldest, what happened after a raid in your district.</p><a href="https://kla.kar.nic.in/">Assembly and Council answers</a></li><li><h3>Go to the Gram Sabha and the social audit</h3><p>Rural job works must be read out at a social audit in the village. Ask to see the work, the photo and the payment. If a work on the list does not exist, say so on the record.</p><a href="tank_findings.html">One tank, many works</a></li><li><h3>Share the evidence, not the anger</h3><p>Every figure here has a document behind it. Send the page or the leaflet, not a rumour: a fact with a source is harder to dismiss.</p><a href="#share">Share</a></li></ol>
+</section>
+
+<section id="share">
+  <h2>Share it</h2>
+  <p class="muted">Send the page, or print the one-page leaflet for a notice board, a Gram Sabha or a WhatsApp group.</p>
+  <div class="share">
+    <a class="btn" href="evidence_leaflet.pdf">Leaflet (English, PDF)</a>
+    <a class="btn" href="evidence_leaflet_kn.pdf">Leaflet (Kannada, PDF)</a>
+    <a class="btn" id="wa" href="#" data-text="Karnataka&#x27;s own records, in one place: 1,248 Lokayukta cases against officials since 2022, none held guilty yet; ₹6,026 crore parked at the year&#x27;s end; ₹35,236 crore owed to contractors. Every figure with its document:">WhatsApp</a>
+  </div>
+</section>
+
+<section>
+  <h2>More on the site</h2>
+  <ul class="more"><li><a href="../index.html#tunnel">The tunnel road: cost, findings and court position</a></li><li><a href="../index.html#loans">Money between politicians, declared on both sides</a></li><li><a href="../index.html#find">Your MLA&#x27;s declared assets and cases</a></li><li><a href="farm_money_ledger.html">Farm money: promised vs what reached the field</a></li></ul>
+</section>
+
+<footer><p class="muted">Gandaberunda is an independent citizen publication. Official records, not allegations. Seen an error? Corrections are published openly on the home page.</p></footer>
+</div>
+<script>
+(function(){var a=document.getElementById('wa');if(!a)return;var u=location.href.split('#')[0];
+a.href='https://wa.me/?text='+encodeURIComponent(a.getAttribute('data-text')+' '+u);a.target='_blank';a.rel='noopener';})();
+</script>
+<script data-goatcounter="https://gandaberunda.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

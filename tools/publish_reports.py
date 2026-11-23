@@ -71,6 +71,11 @@ PAGES = [
      ("officials_tracker_kn.html", "ಕನ್ನಡ"), [], None),
     ("research/officials_tracker/DRAFT_officials_tracker_kn.html", "officials_tracker_kn.html", "ದಾಳಿಯ ನಂತರ · Gandaberunda",
      "After the raid in Kannada (test version).", ("officials_tracker.html", "English"), [], None),
+    ("research/evidence/DRAFT_evidence.html", "evidence.html", "The Evidence · Gandaberunda",
+     "What Karnataka's own records, auditors and courts show about public money and corruption cases, each with its document, and six things any citizen can do.",
+     ("evidence_kn.html", "ಕನ್ನಡ"), [], None),
+    ("research/evidence/DRAFT_evidence_kn.html", "evidence_kn.html", "ಸಾಕ್ಷ್ಯ · Gandaberunda",
+     "ಕರ್ನಾಟಕದ ಸ್ವಂತ ದಾಖಲೆಗಳು ಏನು ತೋರಿಸುತ್ತವೆ, ಪ್ರತಿ ಅಂಕಿ ದಾಖಲೆಯೊಂದಿಗೆ, ಮತ್ತು ನಾಗರಿಕರು ಮಾಡಬಹುದಾದ ಆರು ಕೆಲಸಗಳು.", ("evidence.html", "English"), [], None),
 ]
 
 
