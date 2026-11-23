@@ -47,6 +47,24 @@ if _lp.exists():
                                        "disputed": float(r["disputed_cr"] or 0)}
 
 
+ITEMISED = {}  # constituency -> (stated total, itemised sum, note): affidavits whose own rows do not add up to their stated total
+_ip = ROOT / "data/liab_itemised_check.csv"
+if _ip.exists():
+    for r in csv.DictReader(open(_ip, encoding="utf-8")):
+        ITEMISED[r["constituency"]] = (float(r["stated_total_cr"]), float(r["itemised_sum_cr"]), r["note"])
+
+
+def itemised_note(c):
+    if c not in ITEMISED:
+        return ""
+    st, it, note = ITEMISED[c]
+    extra = f" ({note})" if note else ""
+    if it == 0:
+        return f". The affidavit states a total of {money(st)} but itemises no debts{'' if not note else ''}; we show its stated total"
+    return (f". The affidavit's itemised debts add up to {money(it)}{extra}, but its stated total is {money(st)}; "
+            f"we show the stated total")
+
+
 def debts_note(c, l):
     """What the debts figure contains, for one MLA."""
     x = LIAB.get(c)
@@ -62,7 +80,7 @@ def debts_note(c, l):
         parts = "No loans or dues to government declared in the affidavit"
     if x["disputed"]:
         parts += f". Not included: {money(x['disputed'])} the MLA lists as disputed"
-    return parts
+    return parts + itemised_note(c)
 dd = {}
 for r in csv.DictReader(open(ROOT / "research/farmer_schemes/district/district_data.csv", encoding="utf-8-sig")):
     if r["value"] and r["confidence"] == "HIGH":
@@ -216,10 +234,10 @@ def main():
                    for d in sorted(D, key=lambda d: d["c"]))
     idx = HEAD.format(title="All 224 MLAs: report cards · Gandaberunda", desc="One page per Karnataka MLA: declared assets, debts, criminal cases, growth since 2018, and district records.",
                       site=SITE, canon=SITE + "mla/", css=CSS)
-    idx += f'<h1>Report cards: all 224 MLAs</h1><p class="fine">One page per constituency, from sworn affidavits and official district records. <span class="kn">ಎಲ್ಲ 224 ಶಾಸಕರ ವರದಿ ಕಾರ್ಡ್‌ಗಳು</span></p><ul class="list">{rows}</ul></div></body></html>\n'
+    idx += f'<h1>Report cards: all 224 MLAs</h1><p class="fine">One page per constituency, from sworn affidavits and official district records. <span class="kn">ಎಲ್ಲ 224 ಶಾಸಕರ ವರದಿ ಕಾರ್ಡ್‌ಗಳು</span></p><ul class="list">{rows}</ul></div><script data-goatcounter="https://gandaberunda.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>\n</body></html>\n'
     (OUT / "index.html").write_text(idx, encoding="utf-8", newline="\n")
     # sitemap helps search engines find every page
-    urls = [SITE] + [SITE + "mla/" + s + ".html" for s in slugs] + [SITE + "farmers.html"]
+    urls = [SITE] + [SITE + "mla/" + s + ".html" for s in slugs] + [SITE + "farmers.html", SITE + "members.html"]
     (ROOT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                       + "".join(f"<url><loc>{u}</loc></url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
     print("ok", len(slugs), "pages")
