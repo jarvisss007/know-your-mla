@@ -40,7 +40,7 @@ Always `git pull --ff-only` before editing; MGNREGA problems are never attribute
 | Site look: dark header with grouped menus (MLAs, Money, Take part, About), home hero with six tiles, footer | `index.html` (`.topnav`, `.hero`, `.sitefoot`; old `.nav` kept hidden because the page router reads it) | Add new pages to BOTH `.nav` and the right `.topnav` group |
 | Promised vs delivered (both governments) | `index.html#promised` | CAG State Finances figures |
 | MLAs and power plants | `index.html#power` | two records per row (affidavit + KREDL/KERC) |
-| Money between politicians | `index.html#loans` | 17 loans declared on both sides; open-case loans held back |
+| Money between politicians | `index.html#loans` | 19 loans declared on both sides; open-case loans held back |
 | Tunnel road | `index.html#tunnel` | DPR payments from the BBMP ledger (Rs 7.56 cr gross); research in `research/tunnel/` |
 | What if? simulator + where it leaked | `money.html` | unit costs from official sources |
 | Report cards: ministers' departments; text colour fix | `index.html` (`MIN`, `.rcin`) | |
