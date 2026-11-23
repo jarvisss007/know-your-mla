@@ -121,12 +121,12 @@ Link reply: https://jarvisss007.github.io/know-your-mla/reports/follow_the_money
 
 ## 7. New drafts, 23 Nov 2026: NOT POSTED, waiting for the owner's approval
 
-**X (English)** (268 chars; post with no link, then reply with the link)
-Karnataka's Lokayukta registered 1,248 corruption cases against officials from Sep 2022 to Aug 2026. Government servants held guilty so far: 0. That is the government's own answer to the Legislative Council (20 Aug 2026). We track every 2026 case from raid to verdict.
+**X (English)** (284 chars; post with no link, then reply with the link)
+Karnataka's Lokayukta registered 1,248 corruption cases against officials from Sep 2022 to Aug 2026. In those cases, government servants held guilty so far: 0. That is the government's own answer to the Legislative Council (20 Aug 2026). We track every 2026 case from raid to verdict.
 Reply: https://jarvisss007.github.io/know-your-mla/reports/officials_tracker.html
 
-**X (Kannada)** (279 chars)
-ಸೆಪ್ಟೆಂಬರ್ 2022ರಿಂದ ಆಗಸ್ಟ್ 2026ರವರೆಗೆ ಲೋಕಾಯುಕ್ತ ಅಧಿಕಾರಿಗಳ ವಿರುದ್ಧ 1,248 ಭ್ರಷ್ಟಾಚಾರ ಪ್ರಕರಣ ದಾಖಲಿಸಿದೆ. ಇದುವರೆಗೆ ತಪ್ಪಿತಸ್ಥರೆಂದು ಸಾಬೀತಾದ ಸರ್ಕಾರಿ ನೌಕರರು: 0. ಇದು ವಿಧಾನ ಪರಿಷತ್ತಿಗೆ ಸರ್ಕಾರವೇ ನೀಡಿದ ಉತ್ತರ (20 ಆಗಸ್ಟ್ 2026). 2026ರ ಪ್ರತಿ ಪ್ರಕರಣವನ್ನು ದಾಳಿಯಿಂದ ತೀರ್ಪಿನವರೆಗೆ ನಾವು ಹಿಂಬಾಲಿಸುತ್ತೇವೆ.
+**X (Kannada)** (275 chars)
+ಸೆಪ್ಟೆಂಬರ್ 2022ರಿಂದ ಆಗಸ್ಟ್ 2026ರವರೆಗೆ ಲೋಕಾಯುಕ್ತ ಅಧಿಕಾರಿಗಳ ವಿರುದ್ಧ 1,248 ಭ್ರಷ್ಟಾಚಾರ ಪ್ರಕರಣ ದಾಖಲಿಸಿದೆ. ಆ ಪ್ರಕರಣಗಳಲ್ಲಿ ತಪ್ಪಿತಸ್ಥರೆಂದು ಸಾಬೀತಾದ ಸರ್ಕಾರಿ ನೌಕರರು: 0. ಇದು ವಿಧಾನ ಪರಿಷತ್ತಿಗೆ ಸರ್ಕಾರವೇ ನೀಡಿದ ಉತ್ತರ (20 ಆಗಸ್ಟ್ 2026). 2026ರ ಪ್ರಕರಣಗಳನ್ನು ದಾಳಿಯಿಂದ ತೀರ್ಪಿನವರೆಗೆ ಹಿಂಬಾಲಿಸುತ್ತೇವೆ.
 Reply: https://jarvisss007.github.io/know-your-mla/reports/officials_tracker_kn.html
 
 Checks: 1,248 cases and 0 held guilty are from the Chief Minister's written reply to Council USQ 452 (628), 20 Aug 2026, read in the original (tracker page, "The government's own count"). "0 held guilty" is the reply's own figure for that period; NCRB counts courts differently. Kannada at 279 is at the limit: trim if X counts it over.
