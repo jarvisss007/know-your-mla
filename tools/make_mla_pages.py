@@ -36,7 +36,10 @@ def norm(s):
 
 
 ALSO = {sid: norm(section_text(sid)) for sid in ("record", "tested", "cabinet", "latest")}
-ALSO_LABEL = {"record": "On the record", "tested": "Five MLAs tested", "cabinet": "Nine ministers tested", "latest": "Latest"}
+# Seats whose MLA appears in a section under a shorter name than the affidavit name in D
+ALSO_EXTRA = {"Athani": ("cabinet",), "Byatarayanapura": ("cabinet",), "Sedam": ("cabinet",), "Mangalore": ("cabinet",),
+              "Kanakagiri (SC)": ("cabinet",), "Haveri (SC)": ("cabinet",)}
+ALSO_LABEL = {"record": "On the record", "tested": "Five MLAs tested", "cabinet": "Twenty-two ministers tested", "latest": "Latest"}
 
 LIAB = {}  # constituency -> {"loans", "dues", "disputed"} (crore) from the affidavit, via tools/fetch_liabilities.py
 _lp = ROOT / "data/liabilities_myneta.csv"
@@ -195,7 +198,7 @@ def page(d):
     sat_html = (f'<p><b>From space:</b> {E(c)} has been compared in satellite pictures from 2019 and 2026. <a href="../reports/satellite/{sat}/">See {E(c)} from space →</a></p>' if sat else
                 f'<p><b>From space:</b> {E(c)} has not been checked in satellite pictures yet. <a href="{E(form("Check my constituency from space", dist, c, "Please compare " + c + " from space next."))}" target="_blank" rel="noopener">Ask for {E(c)} →</a> <span class="fine">(short form, no account needed)</span></p>')
     nn = norm(n)
-    also = [f'<a href="../index.html#{sid}">{ALSO_LABEL[sid]}</a>' for sid, txt in ALSO.items() if len(nn) > 6 and nn in txt]
+    also = [f'<a href="../index.html#{sid}">{ALSO_LABEL[sid]}</a>' for sid, txt in ALSO.items() if (len(nn) > 6 and nn in txt) or sid in ALSO_EXTRA.get(c, ())]
     by = f' · elected in a by-election, {E(d["by"])}' if d.get("by") else ""
     url = SITE + "mla/" + slug(c) + ".html"
     wa = (f"{n} ({c}) report card: declared assets {money(d['a']) or 'not in archive'}"
