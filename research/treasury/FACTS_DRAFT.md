@@ -1,6 +1,12 @@
 <!-- DRAFT. Owner of this file: "Urban analysis with maps" session. Compiled 20 Nov 2026 from CAG and PRS documents read at source.
 Handoff to the research-and-site session for fundflow / follow_the_money. Section 5 is press-only and must not be published as fact.
 Check before publishing: SFAR 2023-24 tabling date; SFAR25 Table 3.8 and Table 1.20 budget column against the PDF pages; CAG vs PRS definitions for interest and salaries. -->
+<!-- CORRECTIONS, 23 Nov 2026 (from the full source re-read in research/fundflow/VERIFY_PART4.md; that table is authoritative where it differs from the text below):
+- Off-budget borrowing of 14,154.91 (31 Mar 2025) is held by EIGHT entities (SFAR25 Table 3.1). The SFAR24 line "do not have their own source of revenue and are incurring losses" is about the seven entities at 31 Mar 2024 and must not be attached to the 2024-25 total.
+- "approximately 45 per cent" is the CAG's own wording for committed expenditure; 45.1% is our arithmetic. The paragraphs are 1.6.2(A)/(B), not 1.6(A)/(B).
+- LAQ 422 (9 Dec 2025) also says capital expenditure "has not decreased".
+- Upper Bhadra: the Rs 5,300 crore provision is sourced to Lok Sabha Starred Q 257 (8 Aug 2024), not USQ 3200; the 11,375.02 spend is from Assembly LAQ 2019.
+- Rs 43,782.04 crore (devolution shortfall, Report 10 of 2024) has now been verified from the page image. -->
 
 # Karnataka public money: sourced fact file (compiled 20 Nov 2026)
 

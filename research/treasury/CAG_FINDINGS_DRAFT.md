@@ -1,4 +1,9 @@
 <!-- DRAFT. Owner: "Urban analysis with maps" session. Compiled 20 Nov 2026 from CAG PDFs read at source by a research pass (one read; R1/2026 via OCR). Company names appear only where the CAG prints them. Check each figure on the cited page before publishing; several findings are disputed by the Government. -->
+<!-- CORRECTIONS, 23 Nov 2026 (from research/fundflow/VERIFY_PART4.md, a full source re-read):
+- KEONICS 85.98 is payment WITHOUT THIRD-PARTY VERIFICATION. The fake delivery challans and forged reports are separate paragraphs (6.1.10-6.1.11) and must not be attached to that amount.
+- ESIS Bagalkote: the 902 fake claims come to 3.67; the 4.03 total adds 65 claims inserted by the Insurance Medical Officer.
+- KRIDL stadium works: the Indi compound wall was PART-BUILT (287.8 m of 501.8 m), not unbuilt.
+- DISPUTED, with the Government's reply printed in the report; quote the reply alongside: tank desilting 3.22; PWD Yadgir 1.33; KBJNL Shorapur 33.95 lakh; KNNL 40.16; PWD Ballari/Koppal 21.32. -->
 
 # Karnataka CAG findings — sourced list (read at source from cag.gov.in PDFs, 20 Nov 2026)
 

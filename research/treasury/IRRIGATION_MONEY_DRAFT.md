@@ -1,4 +1,9 @@
 <!-- DRAFT. Owner: "Urban analysis with maps" session. Compiled 20 Nov 2026 by a research pass: CAG and Lok Sabha text PDFs read at source; Assembly answers read once from scanned Kannada pages (re-check before quoting). Company names appear only where an official document prints them; one contractor listed under an individual name is withheld. Items marked UNVERIFIED are press-only. -->
+<!-- CORRECTIONS, 23 Nov 2026 (from research/fundflow/VERIFY_PART4.md):
+- Item 12: the "no own source of revenue" quote covers the seven off-budget entities at 31 Mar 2024 (SFAR24); the 31 Mar 2025 total of 14,154.91 is held by eight entities.
+- Item 82 (Yettinahole, 181.21 not recovered for pipeline not laid) is DISPUTED; the Government's reply is printed in the report and must be quoted alongside.
+- Item 98 (KNNL advance of 40.16) is DISPUTED likewise.
+- Item 107: the Rs 5,300 crore is from Lok Sabha Starred Q 257 (8 Aug 2024). -->
 
 # Karnataka irrigation money trail — public-record findings (compiled 20 Nov 2026)
 

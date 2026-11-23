@@ -1,4 +1,7 @@
 <!-- DRAFT. Owner: "Urban analysis with maps" session. Compiled 20 Nov 2026 by a research pass from CAG PDFs. Report 10 of 2024 is OCR-only. Section 6 (MGNREGS, Report 13 of 2025) was read in full; para 5.6 and 5.14.7 were re-read at source by the owning session. Company names appear only where the CAG prints them. Page-check before quoting. -->
+<!-- CORRECTIONS, 23 Nov 2026 (from research/fundflow/VERIFY_PART4.md):
+- DMF item 26: Rs 300.44 crore was ALLOCATED to 212 works "not envisaged in the guidelines" across four districts, and Rs 133.77 crore was SPENT. Ballari: 169 works, 255.37 allocated, 107.70 spent. Do not describe 300.44 as spent.
+- Rs 43,782.04 crore (item 63) is now verified from the page image. -->
 
 # CAG audit reports on Karnataka (2024-2026): quantified findings
 
