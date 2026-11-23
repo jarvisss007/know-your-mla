@@ -130,3 +130,23 @@ Reply: https://jarvisss007.github.io/know-your-mla/reports/officials_tracker.htm
 Reply: https://jarvisss007.github.io/know-your-mla/reports/officials_tracker_kn.html
 
 Checks: 1,248 cases and 0 held guilty are from the Chief Minister's written reply to Council USQ 452 (628), 20 Aug 2026, read in the original (tracker page, "The government's own count"). "0 held guilty" is the reply's own figure for that period; NCRB counts courts differently. Kannada at 279 is at the limit: trim if X counts it over.
+
+## 8. Evidence page announcement, 23 Nov 2026: NOT POSTED, waiting for the owner's approval
+
+Per the X rules in CHANNEL_OPS.md: post the text with the card, then reply with the link. One post a day; do not post with the 24 Nov works-by-seat post in the same hour.
+
+**8a. English** (268 chars), card `cards/money/evidence-en.png`
+> Karnataka's own records, in one place. 1,248 Lokayukta cases against officials since Sept 2022: none held guilty yet. 195 against senior officers: none concluded. MLAs asked how many prosecutions await permission: no answer in 3 months. Every figure with its document.
+Link reply: https://jarvisss007.github.io/know-your-mla/reports/evidence.html
+
+**8b. Kannada** (276 chars), card `cards/money/evidence-kn.png`
+> ಕರ್ನಾಟಕದ ದಾಖಲೆಗಳು, ಒಂದೇ ಕಡೆ. ಸೆಪ್ಟೆಂಬರ್ 2022ರಿಂದ ಅಧಿಕಾರಿಗಳ ವಿರುದ್ಧ 1,248 ಲೋಕಾಯುಕ್ತ ಪ್ರಕರಣಗಳು: ಇನ್ನೂ ಯಾರೂ ತಪ್ಪಿತಸ್ಥರೆಂದು ಸಾಬೀತಾಗಿಲ್ಲ. ಹಿರಿಯ ಅಧಿಕಾರಿಗಳ ವಿರುದ್ಧ 195: ಒಂದೂ ಮುಗಿದಿಲ್ಲ. ಅಭಿಯೋಜನೆಗೆ ಅನುಮತಿ ಬಾಕಿ ಎಷ್ಟು ಎಂದು ಶಾಸಕರು ಕೇಳಿದರು: 3 ತಿಂಗಳಾದರೂ ಉತ್ತರವಿಲ್ಲ. ಪ್ರತಿ ಅಂಕಿ ದಾಖಲೆಯೊಂದಿಗೆ.
+Link reply: https://jarvisss007.github.io/know-your-mla/reports/evidence_kn.html
+
+Checks:
+- 1,248 cases and none held guilty: Council USQ 452 (628), 20 Aug 2026.
+- 195 senior-officer cases, all pending, no conviction or acquittal: Assembly USQ 1324, 10 Mar 2026; scan read by this session on 23 Nov.
+- Sanction questions: Assembly USQ 1558 and 1652 of 25 Aug 2026, with no reply PDF as of 23 Nov 2026. Recheck on the day of posting; if an answer has appeared, change the third sentence.
+- Section 7 above (the 1,248-cases-only drafts) is superseded by 8a/8b. Do not post both.
+
+Also 23 Nov: the scheduled 7c post (works by seat, 24 Nov 8:30 PM IST) had the card seats-en.png with "Varuna, the CM's seat". The card was corrected (Siddaramaiah, CM until May 2026) and replaced in the scheduled post on X; the text was unchanged. 7b (Kannada bills) went out on 23 Nov; it and 7c still need their link replies.
