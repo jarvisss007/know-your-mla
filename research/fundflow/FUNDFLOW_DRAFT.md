@@ -263,25 +263,25 @@ The CAG found that this corporation variant is where money stalls. See leak poin
 
 ## Part 4. The treasury: what is locked in, what is owed, what the answers say (added 20 Nov 2026)
 
-Source: research/treasury/FACTS_DRAFT.md (compiled by the "Urban analysis with maps" session from CAG, PRS and Assembly answers; full citations there). Rs crore. **Checked at source** means this session re-read the figure on the original PDF on 20 Nov 2026.
+Source: research/treasury/FACTS_DRAFT.md (compiled by the "Urban analysis with maps" session from CAG, PRS and Assembly answers; full citations there). Rs crore. **Every figure in Part 4 was re-read on the original PDF on 20-23 Nov 2026**; the item-by-item table, with para, page and status, is research/fundflow/VERIFY_PART4.md (45 verified, 9 corrected below, 6 disputed by the Government: quote the reply with them).
 
 ### 4.1 Money that is spoken for before the year starts
-- Salaries, pensions and interest: 1,16,479 in 2024-25, 45.1% of revenue receipts (CAG SFAR 2024-25, Table 1.18). With explicit subsidies: 64.5%.
-- CAG's own words: committed spending plus all subsidies is "nearly 77 per cent" of revenue receipts, and 82% once the State's share of central schemes is added (SFAR 2024-25, para 1.6(A); Executive Summary).
-- The five guarantee schemes: 52,525.60 in 2024-25, about 20% of revenue receipts (SFAR25 Table 1.20; page check of the budget column pending).
+- Salaries, pensions and interest: 1,16,479 in 2024-25 (CAG SFAR 2024-25, Table 1.18); CAG: "approximately 45 per cent of the Revenue Receipts" (para 1.6.2(A), p.57). With explicit subsidies: 64.5% (our arithmetic).
+- CAG's own words: committed spending plus all subsidies is "nearly 77 per cent" of revenue receipts, and 82% once the State's share of central schemes is added (SFAR 2024-25, para 1.6.2(A); Executive Summary p.xx).
+- The five guarantee schemes: 52,525.60 in 2024-25, about 20% of revenue receipts (SFAR25 Table 1.20, verified; its budget column prints 55,009.41 while the text on the same page says 51,646 was budgeted).
 
 ### 4.2 Borrowing that is not in the budget, and promises the State has underwritten
-- Off-budget borrowing outstanding: 14,154.91 at 31 Mar 2025, through seven corporations including the irrigation nigams and Power Company of Karnataka (5,257.70, "securitization of Gram Panchayat dues"). CAG: these entities "do not have their own source of revenue and are incurring losses" (SFAR24, para 2.7.1.1).
+- Off-budget borrowing outstanding: 14,154.91 at 31 Mar 2025, through eight entities: KBJNL, KNNL, KRDCL, CNNL, RGRHCL, VJNL, the Skill Development Corporation and Power Company of Karnataka (5,257.70, "Securitization of Gram Panchayat dues") (SFAR25 para 3.1, Table 3.1, p.92). A year earlier CAG said of the seven entities then borrowing (13,478, without Power Company) that they "do not have their own source of revenue and are incurring losses" (SFAR24, para 2.7.1.1, p.61); do not attach that quote to the 14,154.91 total.
 - Guarantees outstanding: 45,889 at 31 Mar 2025, 34,749 of it for power (SFAR25, Table 1.33).
 
 ### 4.3 Bills the State owes contractors (official, replaces the press figures)
 - **Checked at source:** LAQ 401, answered 9 Dec 2025 by the Chief Minister (question by Basanagouda R. Patil Yatnal): pending bills Water Resources 17,533; Public Works 8,804; Minor Irrigation 3,762; RDPR 2,534; Urban Development 2,403; Health 200. Sum 35,236. On corruption in bill payment: no provable cases have come to notice.
 - LAQ 6 (9 Dec 2025): 3,612.44 pending across the Greater Bengaluru city corporations; the paid figure 11,583.34 has no unit printed and the annexures are missing from the PDF. LAQ 1355: PWD pending 8,804.45 in the text, 8,804.41 in the head-wise annexure; the paid period ends on a printed "31-11-2025". (Second read: research/treasury/ASSEMBLY_ANSWERS_VERIFIED.md.)
-- CAG's only comparable figure is 2,298 behind 276 incomplete works (SFAR25, para 1.6(B)), a narrower scope.
+- CAG's only comparable figure is 2,298 behind 276 incomplete works (SFAR25, para 1.6.2(B)), a narrower scope.
 
 ### 4.4 Where the government's answers and the auditor differ
 - **Capital expenditure. Checked at source:** LAQ 1658 (17 Mar 2026, Chief Minister; question by S. Suresh Kumar) gives 61,204 (2022-23), 56,852 (2023-24), 68,233 (2024-25), 83,200 (2025-26) and says capital expenditure has not decreased. CAG gives 57,349, 52,120, 57,906 and says 2023-24 capital expenditure "decreased by 5,229 crore". The gap for 2023-24 equals loans and advances (4,473) plus about 259; the answer does not define its figure. Frame as "two official figures, different definitions", not as a false statement.
-- **Update (second read, ASSEMBLY_ANSWERS_VERIFIED.md):** the Chief Minister's own answers give capital expenditure three ways. LAQ 422 (9 Dec 2025): 57,953.20 / 52,378.86 / 60,601.15 / 81,554.38 for 2022-23 to 2025-26. LAQ 1658 (17 Mar 2026): 61,204 / 56,852 / 68,233 / 83,200. LAQ 907: 56,851 for 2023-24. LAQ 422 is close to CAG (52,120 for 2023-24). So the story is "the same government gave the Assembly two different capital-spending series three months apart", and only the later, higher one says spending has not decreased. The 17.5% interest share in LAQ 1658 is a budget estimate.
+- **Update (second read, ASSEMBLY_ANSWERS_VERIFIED.md):** the Chief Minister's own answers give capital expenditure three ways. LAQ 422 (9 Dec 2025): 57,953.20 / 52,378.86 / 60,601.15 / 81,554.38 for 2022-23 to 2025-26. LAQ 1658 (17 Mar 2026): 61,204 / 56,852 / 68,233 / 83,200. LAQ 907: 56,851 for 2023-24. LAQ 422 is close to CAG (52,120 for 2023-24). So the story is "the same government gave the Assembly two different capital-spending series three months apart". Both answers say capital expenditure has not decreased, including LAQ 422, whose own table shows 52,378.86 in 2023-24 below 57,953.20 in 2022-23 (verified on the page). The 17.5% interest share in LAQ 1658 is a budget estimate.
 - **SC/ST sub-plan money in the guarantees. Checked at source:** LAQ 1777 (16 Dec 2025, Chief Minister; question by V. Sunil Kumar). Asked whether SCSP and TSP money was used for the five guarantees, the answer is "Yes". Annexure 1: 2023-24 SCSP 6,845 + TSP 3,081; 2024-25 SCSP 9,971 + TSP 4,292; 2025-26 budget 9,513 + 3,921; to end November 2025 3,299 + 1,388. The answer says the allocation follows population share under Rule 7(C) of the sub-plan Act, and that community-wise beneficiary data is not available.
 - Interest share and debt stock: the answers use budget-document figures, not CAG's; see the treasury file, section D2.
 
@@ -292,21 +292,21 @@ Source: research/treasury/FACTS_DRAFT.md (compiled by the "Urban analysis with m
 
 ### 4.6 Where the auditor caught money leaving without the work (CAG compliance reports; added 20 Nov 2026)
 
-Source: research/treasury/CAG_FINDINGS_DRAFT.md (about 150 findings, read once by the "Urban analysis with maps" session; Report 1/2026 read by OCR; NOT page-checked by this session; several carry Government replies that dispute them). These are the ground-level proof for leak points already in table 2.1 (measurement, payment, supply):
-- L36. **Payment without the work.** Tank desilting, 137 works where the logbook "excavators" were two-wheelers and cars; CAG: "probable embezzlement" (Rs 3.22 cr; R4/2026 para 3.10). PWD Yadgir: the same 925 m paid under two works (Rs 1.33 cr; Government disputes). KBJNL Shorapur drain "not executed", measurement book manipulated (Rs 33.95 lakh). KRIDL stadium items paid in full but not built or supplied.
-- L37. **Advance or payment on paper.** KNNL 70% advance for pipes on "fraudulent invoices" (Rs 40.16 cr; PSE-R1/2025 para 6.12). KEONICS paid "without actual delivery" (Rs 9.36 cr) and on fake challans and forged reports (Rs 85.98 cr). ESIS Bagalkote: 902 fake reimbursement claims (Rs 4.03 cr).
-- L38. **Measured too fast to be real.** PWD Ballari and Koppal concrete works measured and paid within 1 to 21 days of the agreement (Rs 21.32 cr; R3/2025 para 3.2).
+Source: research/treasury/CAG_FINDINGS_DRAFT.md; every item below re-read at source (VERIFY_PART4.md). Items marked DISPUTED carry a Government reply in the report, which CAG rejected in each case; publish them only with the reply. These are the ground-level proof for leak points already in table 2.1 (measurement, payment, supply):
+- L36. **Payment without the work.** Tank desilting, 137 works where the logbook "excavators" were two-wheelers and cars; CAG: "probable embezzlement of public funds amounting to ₹3.22 crore" (R4/2026 para 3.10, pp.76-78). DISPUTED: the Government said (Nov 2024) the vehicle numbers were "clerical mistakes". PWD Yadgir: the same 925 m paid under two works (Rs 1.33 cr; R4/2026 para 3.2). DISPUTED: the Government says chainage realignment "gives an impression of overlap". KBJNL Shorapur drain "not executed", measurement book manipulated (Rs 33.95 lakh; PSE-R1/2025 para 6.5). DISPUTED: the Government calls it "only a procedural irregularity". KRIDL stadium works, Rs 0.36 cr (R1/2026 para 2.1.3.4): Indi compound wall part-built (287.8 of 501.8 m) but paid in full; Mysuru truss work "not executed" but paid; K.R. Pete machine "not supplied" but paid.
+- L37. **Advance or payment on paper.** KNNL 70% advance for pipes on "fraudulent invoices" (Rs 40.16 cr; PSE-R1/2025 para 6.12, pp.110-113). DISPUTED: the Government endorsed KNNL's reply that the invoices "did not form part of official documents". KEONICS paid "without actual delivery" (Rs 9.36 cr), and "In 155 out of 347 test checked POs, payments of ₹ 85.98 crore were made without conducting the TPV" (third-party verification; para 6.1.9, p.85). Fake challans and forged reports are separate cases (paras 6.1.10-6.1.11), not the 85.98. ESIS Bagalkote: 902 fake reimbursement claims on 57 fake sanction orders (Rs 3.67 cr), plus 65 claims inserted by the IMO (Rs 36.08 lakh); total Rs 4.03 cr (R1/2026 para 2.3, pp.55-57).
+- L38. **Measured too fast to be real.** PWD Ballari and Koppal concrete works measured and paid within 1 to 21 days of the agreement (Rs 21.32 cr; R3/2025 para 3.2). DISPUTED: the Government says bills were "prepared based on the actual progress".
 - L39. **Money collected for a purpose, never passed on.** BBMP health cess not remitted, Rs 1,275.18 cr, plus library and beggary cess (ATIR 2020-22 para 2.10.5).
-Before any of these is quoted: open the CAG page cited, copy the sentence, and include the Government's reply where the report prints one.
+When quoting: use the sentence and page in VERIFY_PART4.md, and include the Government's reply where the report prints one.
 
 ### 4.7 Irrigation: the biggest single pool of owed money (added 20 Nov 2026)
 
-Source: research/treasury/IRRIGATION_MONEY_DRAFT.md (113 items, "Urban analysis with maps" session; Assembly answers read once from scans, not second-read; not page-checked by this session).
+Source: research/treasury/IRRIGATION_MONEY_DRAFT.md; items below re-read at source (VERIFY_PART4.md).
 - Pending bills in the four irrigation Nigams on 24 Mar 2026 (LAQ 3223): KNNL 6,164.50; VJNL 4,993.16; KBJNL 3,760.12; CNNL 3,629.38; total 18,547.16.
 - The four Nigams hold Rs 7,278 cr (51%) of the Rs 14,155 cr off-budget borrowing; Power Company of Karnataka holds Rs 5,258 cr. (Say "half", not "most".)
-- Upper Bhadra: Rs 5,300 cr provided in the Union Budget 2023-24, nothing released to Dec 2025 (Lok Sabha USQ 3200); the State had spent 11,375 by Feb 2026.
+- Upper Bhadra: Rs 5,300 cr provided in the Union Budget 2023-24 (Lok Sabha SQ *257, 8 Aug 2024); nothing released to Dec 2025 (Lok Sabha USQ 3200); the State had spent 11,375.02 by end Feb 2026 (LAQ 2019).
 - UKP Stage III: 1,04,301 of 1,33,867 acres still to be acquired (LAQ 419).
-- Yettinahole (CAG): seven contractors hold 67% of 43 works by number (by value, about 66.7% of all 55 contracts, derived); Rs 181.21 cr not recovered for pipeline not laid.
+- Yettinahole (CAG): seven contractors hold 67% of 43 works by number (by value, about 66.7% of all 55 contracts, derived); Rs 181.21 cr not recovered for pipeline not laid. DISPUTED: the Government says these were turnkey contracts.
 - Irrigation pending bills over time, four Nigams: 12,069.09 (16 Jul 2024, LAQ 482) → 14,574.27 (9 Dec 2025, LAQ 331; unit not printed) → 18,547.16 (24 Mar 2026, LAQ 3223; second-read, sums match). Up about 54% in 20 months. Works in progress 59,688.82 against a grant of 16,526.18 (LAQ 331). Grants not yet released for 2025-26 (LAQ 1347 Annexure-5): KNNL 1,201.15; VJNL 897.00; CNNL 505.50; KBJNL 232.50. Source: research/treasury/PENDING_BILLS_WORKWISE_DRAFT.md.
 - Yettinahole land cost moved from 4,008.07 to 4,482.10 between two Assembly answers seven weeks apart.
 - CAUTION: LAQ 482's 371 annexure pages are bills PAID (1 Apr 2023 to 30 Jun 2024, Rs 12,206.56 cr, 10,098 works), and LAQ 1347 lists works taken up since April 2023. Neither is a pending-bills list; never call a firm in them "owed".
@@ -314,11 +314,11 @@ Source: research/treasury/IRRIGATION_MONEY_DRAFT.md (113 items, "Urban analysis 
 
 ### 4.8 Money meant for panchayats, disasters and mining districts (added 20 Nov 2026)
 
-Source: research/treasury/CAG_FINDINGS_2_DRAFT.md (158 findings from CAG reports 8/2025, 7/2025, 6/2025, 10/2024, 4/2024, 13/2025; one read; Report 10/2024 by OCR; not page-checked by this session).
-- L41. **Devolution held back:** Rs 43,782 cr less to panchayats than the State Finance Commission recommendations the government accepted (Report 10/2024, OCR-read: check the page first).
-- L42. **Central money lost to a delayed election:** Rs 369.45 cr of 15th Finance Commission grants lost because Zilla and Taluk Panchayat elections were not held.
+Source: research/treasury/CAG_FINDINGS_2_DRAFT.md; items below re-read at source (VERIFY_PART4.md).
+- L41. **Devolution held back:** "released only ₹1,82,450.91 crore with a shortfall of ₹43,782.04 crore" against the State Finance Commission recommendations the government accepted, 2017-18 to 2021-22 (Report 10/2024, para 3.2.2.3, p.36; verified from the page image).
+- L42. **Central money lost to a delayed election:** Rs 369.45 cr of 15th Finance Commission grants lost because Zilla and Taluk Panchayat elections were not held (the Government "did not offer any comments").
 - L43. **Disaster money without accounts or unused:** Rs 5,791 cr of drought spending with no district-wise details or utilisation certificates; Rs 421.60 cr of the disaster mitigation fund unused (Report 8/2025).
-- L44. **Mining-district fund off its rules:** District Mineral Foundation Rs 300.44 cr spent on works "not envisaged in the guidelines" (Ballari, 169 works); Rs 433.20 cr of sanctioned works never started (Report 7/2025).
+- L44. **Mining-district fund off its rules:** District Mineral Foundation Rs 300.44 cr allocated (Rs 133.77 cr spent) to 212 works in four districts that were "not envisaged in the guidelines"; Ballari alone 169 works, 255.37 allocated, 107.70 spent (Report 7/2025, para 5.2, Table 5.2, pp.30-31). Rs 433.20 cr of works approved in the 2017-20 action plans never started.
 
 ## What could not be confirmed
 
