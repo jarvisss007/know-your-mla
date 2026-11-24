@@ -165,6 +165,52 @@ def form(kind, district, ac, text):
             + "&entry.604747719=" + quote(ac) + "&entry.878251699=" + quote(text))
 
 
+CMG = json.loads((ROOT / "research/follow_the_money/cm_grants_by_seat.json").read_text(encoding="utf-8"))  # [cmidp_2025_26 or None, special_grant]
+PP = {r["seat"]: r for r in csv.DictReader(open(ROOT / "research/follow_the_money/pragathi_patha_allocation_by_seat.csv", encoding="utf-8-sig"))}
+EXPELLED = {"Yeshwanthapura": "S.T. Somashekar", "Yellapur": "Shivaram Hebbar"}  # BJP expulsion, 27 May 2025
+EXPELLED_SRC = "https://www.thenewsminute.com/karnataka/bjp-expels-rebel-mlas-st-somashekhar-and-shivaram-hebbar-for-six-years"
+
+
+def cm_box(c, dist):
+    """The CM's development grants and Pragathi Patha rural roads for one seat (sanctions/allocations, not spending)."""
+    cm, sg = CMG.get(c, [None, 0])
+    en, kn = [], []
+    if cm is not None:
+        en.append(f"CM's infrastructure programme, 2025-26: ₹{cm:g} crore sanctioned.")
+        kn.append(f"ಮುಖ್ಯಮಂತ್ರಿಗಳ ಮೂಲಸೌಕರ್ಯ ಯೋಜನೆ, 2025-26: ₹{cm:g} ಕೋಟಿ ಮಂಜೂರು.")
+    else:
+        en.append("Not in the CM's infrastructure programme list for 2025-26.")
+        kn.append("2025-26ರ ಮುಖ್ಯಮಂತ್ರಿಗಳ ಮೂಲಸೌಕರ್ಯ ಯೋಜನೆಯ ಪಟ್ಟಿಯಲ್ಲಿ ಈ ಕ್ಷೇತ್ರ ಇಲ್ಲ.")
+    if sg:
+        en.append(f"CM's special grant, two years to March 2025: ₹{sg:g} crore of works sanctioned.")
+        kn.append(f"ಮುಖ್ಯಮಂತ್ರಿಗಳ ವಿಶೇಷ ಅನುದಾನ, ಮಾರ್ಚ್ 2025ಕ್ಕೆ ಮುಂಚಿನ ಎರಡು ವರ್ಷ: ₹{sg:g} ಕೋಟಿ ಕಾಮಗಾರಿ ಮಂಜೂರು.")
+    else:
+        en.append("Not listed for the CM's special grant in the two years to March 2025 (two listed rows have their seat names blacked out).")
+        kn.append("ಮಾರ್ಚ್ 2025ಕ್ಕೆ ಮುಂಚಿನ ಎರಡು ವರ್ಷಗಳ ಮುಖ್ಯಮಂತ್ರಿಗಳ ವಿಶೇಷ ಅನುದಾನ ಪಟ್ಟಿಯಲ್ಲಿ ಇಲ್ಲ (ಎರಡು ಸಾಲುಗಳಲ್ಲಿ ಕ್ಷೇತ್ರದ ಹೆಸರು ಮರೆಮಾಡಲಾಗಿದೆ).")
+    pp = PP.get(c)
+    if pp and "misassigned" in pp["remark"]:
+        en.append("Pragathi Patha rural roads: not shown here; the printed entry for this seat is being re-checked.")
+        kn.append("ಪ್ರಗತಿ ಪಥ ಗ್ರಾಮೀಣ ರಸ್ತೆ: ಈ ಕ್ಷೇತ್ರದ ಮುದ್ರಿತ ಅಂಕಿಯನ್ನು ಮರುಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ.")
+    elif pp and "urban" in pp["remark"].lower():
+        en.append("Pragathi Patha rural roads: no allocation; the seat is fully urban.")
+        kn.append("ಪ್ರಗತಿ ಪಥ ಗ್ರಾಮೀಣ ರಸ್ತೆ: ಹಂಚಿಕೆ ಇಲ್ಲ; ಕ್ಷೇತ್ರ ಸಂಪೂರ್ಣ ನಗರ ಪ್ರದೇಶ.")
+    elif pp:
+        lim = " (limited to the rural road available)" if "limited" in pp["remark"] else ""
+        lim_kn = " (ಲಭ್ಯವಿರುವ ಗ್ರಾಮೀಣ ರಸ್ತೆಗೆ ಸೀಮಿತ)" if lim else ""
+        en.append(f"Pragathi Patha rural roads: {float(pp['km']):g} km (₹{float(pp['crore']):g} crore) allotted{lim}.")
+        kn.append(f"ಪ್ರಗತಿ ಪಥ ಗ್ರಾಮೀಣ ರಸ್ತೆ: {float(pp['km']):g} ಕಿ.ಮೀ. (₹{float(pp['crore']):g} ಕೋಟಿ) ಹಂಚಿಕೆ{lim_kn}.")
+    lis = "".join(f'<li>{E(a)} <span class="kn" lang="kn">{E(b)}</span></li>' for a, b in zip(en, kn))
+    return (f'<div class="box"><h2>The Chief Minister&#39;s development grants for this seat <span class="kn" style="font-size:15px;color:var(--muted);font-weight:400">ಈ ಕ್ಷೇತ್ರಕ್ಕೆ ಮುಖ್ಯಮಂತ್ರಿಗಳ ಅಭಿವೃದ್ಧಿ ಅನುದಾನ</span></h2>'
+            f'<ul>{lis}</ul>'
+            '<p>Most seats held by the ruling party got ₹50 crore from the CM&#39;s infrastructure programme and 30 km of rural road; most opposition seats got ₹25 crore and 22 km. '
+            '<span class="kn" lang="kn">ಆಡಳಿತ ಪಕ್ಷದ ಹೆಚ್ಚಿನ ಕ್ಷೇತ್ರಗಳಿಗೆ ₹50 ಕೋಟಿ ಮತ್ತು 30 ಕಿ.ಮೀ. ಗ್ರಾಮೀಣ ರಸ್ತೆ; ವಿರೋಧ ಪಕ್ಷದ ಹೆಚ್ಚಿನ ಕ್ಷೇತ್ರಗಳಿಗೆ ₹25 ಕೋಟಿ ಮತ್ತು 22 ಕಿ.ಮೀ.</span></p>'
+            '<p class="fine">Sanctions and allocations, not money spent or roads built, and nothing here shows personal gain. Sources: the Chief Minister&#39;s answers to Assembly questions '
+            '<a href="https://kla.kar.nic.in/assembly/answers/16assembly/pdf/16122025/1727.pdf" target="_blank" rel="noopener">1727</a> (16 Dec 2025) and 1119 (11 Mar 2025), and the answer to question '
+            '<a href="https://kla.kar.nic.in/assembly/answers/16assembly/pdf/10122025/654.pdf" target="_blank" rel="noopener">654</a> (10 Dec 2025). '
+            'How we read them: <a href="../reports/follow_the_money.html#cmgrants">Follow the rupee</a>. '
+            '<span class="kn" lang="kn">ಮಂಜೂರಾತಿ ಮತ್ತು ಹಂಚಿಕೆಗಳು, ಖರ್ಚಾದ ಹಣ ಅಥವಾ ನಿರ್ಮಿಸಿದ ರಸ್ತೆಗಳಲ್ಲ.</span></p></div>')
+
+
 KN_NAMES = {}  # constituency_en -> row of data/names_kn.csv (Karnataka Legislative Assembly member list)
 _kp = ROOT / "data" / "names_kn.csv"
 if _kp.exists():
@@ -227,13 +273,14 @@ def page(d):
                f'<p class="kn" lang="kn" style="margin:0">{E(d["note_kn"])}</p></div>') if d.get("st") else ""
     body = f"""<div><h1>{E(n)}</h1>{f'<p class="kn" lang="kn" style="font-size:22px;font-weight:600;margin:4px 0 0">{E(n_kn)} · {E(c_kn)}</p>' if n_kn else ''}
 <div class="sub"><span>MLA for <b>{E(c)}</b></span><span class="party {E(pcls)}">{E(p)}</span><span>{E(dist)} district{by}</span>
-<span class="kn">{E(PARTY_KN.get(p, p))} · {E(dist)} ಜಿಲ್ಲೆ</span></div></div>
+<span class="kn">{E(PARTY_KN.get(p, p))} · {E(dist)} ಜಿಲ್ಲೆ</span></div>{f'<p class="fine" style="margin-top:6px">{E(EXPELLED[c])} was expelled from the BJP on 27 May 2025 (<a href="{EXPELLED_SRC}" target="_blank" rel="noopener">The News Minute</a>); the party shown is the one he was elected for in 2023. <span class="kn" lang="kn">27 ಮೇ 2025ರಂದು ಬಿಜೆಪಿಯಿಂದ ಉಚ್ಚಾಟನೆ.</span></p>' if c in EXPELLED else ''}</div>
 {st_html}
 <div class="tiles">{''.join(tiles)}</div>
 <div class="box"><h2>What the record shows in {E(dist)} district <span class="kn" style="font-size:15px;color:var(--muted);font-weight:400">ಜಿಲ್ಲೆಯ ದಾಖಲೆ</span></h2>
 {'<ul>' + ''.join(ctx) + '</ul>' if ctx else '<p class="fine">No district figure has passed our checks yet.</p>'}
 {sat_html}
 {('<p>Also on this site: ' + ' · '.join(also) + '</p>') if also else ''}</div>
+{cm_box(c, dist)}
 <div class="box ask"><h2>Questions to ask <span class="kn" style="font-size:15px;color:var(--muted);font-weight:400">ಕೇಳಬೇಕಾದ ಪ್ರಶ್ನೆಗಳು</span></h2>
 <ul><li>What work have you done in this constituency since 2023? Show me. <span class="kn">2023ರಿಂದ ಈ ಕ್ಷೇತ್ರದಲ್ಲಿ ನೀವು ಮಾಡಿದ ಕೆಲಸ ಏನು? ತೋರಿಸಿ.</span></li>
 <li>Did you file this year's asset statement with the Lokayukta? <span class="kn">ಈ ವರ್ಷದ ಆಸ್ತಿ ಘೋಷಣೆಯನ್ನು ಲೋಕಾಯುಕ್ತಕ್ಕೆ ಸಲ್ಲಿಸಿದ್ದೀರಾ?</span></li>
