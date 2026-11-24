@@ -178,6 +178,10 @@ def cm_box(c, dist):
     if cm is not None:
         en.append(f"CM's infrastructure programme, 2025-26: ₹{cm:g} crore sanctioned.")
         kn.append(f"ಮುಖ್ಯಮಂತ್ರಿಗಳ ಮೂಲಸೌಕರ್ಯ ಯೋಜನೆ, 2025-26: ₹{cm:g} ಕೋಟಿ ಮಂಜೂರು.")
+    elif c == "Shirahatti (SC)" or c == "Shirahatti":
+        # Absent from the CM's list (USQ 1727) but in the RDPR release list for the same programme (GO RDPR/732/RRC/2025, in USQ 2844 p. 148)
+        en.append("Not in the CM's infrastructure programme list for 2025-26 (the Rural Development department's list for the same programme shows ₹5 crore approved).")
+        kn.append("2025-26ರ ಮುಖ್ಯಮಂತ್ರಿಗಳ ಮೂಲಸೌಕರ್ಯ ಯೋಜನೆಯ ಪಟ್ಟಿಯಲ್ಲಿ ಈ ಕ್ಷೇತ್ರ ಇಲ್ಲ (ಅದೇ ಯೋಜನೆಯ ಗ್ರಾಮೀಣಾಭಿವೃದ್ಧಿ ಇಲಾಖೆಯ ಪಟ್ಟಿಯಲ್ಲಿ ₹5 ಕೋಟಿ ಮಂಜೂರು ಎಂದಿದೆ).")
     else:
         en.append("Not in the CM's infrastructure programme list for 2025-26.")
         kn.append("2025-26ರ ಮುಖ್ಯಮಂತ್ರಿಗಳ ಮೂಲಸೌಕರ್ಯ ಯೋಜನೆಯ ಪಟ್ಟಿಯಲ್ಲಿ ಈ ಕ್ಷೇತ್ರ ಇಲ್ಲ.")
@@ -204,6 +208,14 @@ def cm_box(c, dist):
             f'<ul>{lis}</ul>'
             '<p>Most seats held by the ruling party got ₹50 crore from the CM&#39;s infrastructure programme and 30 km of rural road; most opposition seats got ₹25 crore and 22 km. '
             '<span class="kn" lang="kn">ಆಡಳಿತ ಪಕ್ಷದ ಹೆಚ್ಚಿನ ಕ್ಷೇತ್ರಗಳಿಗೆ ₹50 ಕೋಟಿ ಮತ್ತು 30 ಕಿ.ಮೀ. ಗ್ರಾಮೀಣ ರಸ್ತೆ; ವಿರೋಧ ಪಕ್ಷದ ಹೆಚ್ಚಿನ ಕ್ಷೇತ್ರಗಳಿಗೆ ₹25 ಕೋಟಿ ಮತ್ತು 22 ಕಿ.ಮೀ.</span></p>'
+            '<p>The previous BJP government did the same. In February 2022 Chief Minister Basavaraj Bommai told the Assembly that ₹3,322 crore of special grant had gone to 64 seats, 63 of them ₹52 crore each; '
+            '63 of the seats were held by the BJP and one by an Independent who backed the government, none by Congress or JD(S) '
+            '(<a href="https://kla.kar.nic.in/assembly/answers/pdf/15022022/114.pdf" target="_blank" rel="noopener">Assembly question 114</a>, 15 Feb 2022). '
+            'Opposition seats such as Yemkanamardi and Varuna got ₹25 crore each, from May 2022. '
+            '<span class="kn" lang="kn">ಹಿಂದಿನ ಬಿಜೆಪಿ ಸರ್ಕಾರವೂ ಇದನ್ನೇ ಮಾಡಿತ್ತು. ಫೆಬ್ರವರಿ 2022ರಲ್ಲಿ ಮುಖ್ಯಮಂತ್ರಿ ಬಸವರಾಜ ಬೊಮ್ಮಾಯಿ ಅವರು 64 ಕ್ಷೇತ್ರಗಳಿಗೆ ₹3,322 ಕೋಟಿ ವಿಶೇಷ ಅನುದಾನ ನೀಡಲಾಗಿದೆ ಎಂದು ವಿಧಾನಸಭೆಗೆ ತಿಳಿಸಿದ್ದರು, ಅವುಗಳಲ್ಲಿ 63ಕ್ಕೆ ತಲಾ ₹52 ಕೋಟಿ; 63 ಕ್ಷೇತ್ರಗಳು ಬಿಜೆಪಿ ವಶದಲ್ಲಿದ್ದವು, ಒಂದು ಸರ್ಕಾರವನ್ನು ಬೆಂಬಲಿಸಿದ ಪಕ್ಷೇತರರದ್ದು, ಕಾಂಗ್ರೆಸ್ ಅಥವಾ ಜೆಡಿ(ಎಸ್)ನದ್ದು ಒಂದೂ ಇರಲಿಲ್ಲ (ವಿಧಾನಸಭೆ ಪ್ರಶ್ನೆ 114, 15 ಫೆಬ್ರವರಿ 2022). ಯಮಕನಮರಡಿ, ವರುಣದಂತಹ ವಿರೋಧ ಪಕ್ಷದ ಕ್ಷೇತ್ರಗಳಿಗೆ ಮೇ 2022ರಿಂದ ತಲಾ ₹25 ಕೋಟಿ ಸಿಕ್ಕಿತು.</span></p>'
+            '<p>The current split is being challenged in the Karnataka High Court by the BJP MLA for Jamkhandi (WP 32024/2025); in October 2026 the court imposed costs of ₹2,000 on the State for repeatedly failing to respond '
+            '(<a href="https://www.barandbench.com/amp/story/news/litigation/karnataka-high-court-imposes-2k-costs-on-state-for-for-repeated-failure-to-respond-to-bjp-mlas-plea" target="_blank" rel="noopener">Bar &amp; Bench</a>). '
+            '<span class="kn" lang="kn">ಈಗಿನ ಹಂಚಿಕೆಯನ್ನು ಜಮಖಂಡಿಯ ಬಿಜೆಪಿ ಶಾಸಕರು ಕರ್ನಾಟಕ ಹೈಕೋರ್ಟ್‌ನಲ್ಲಿ ಪ್ರಶ್ನಿಸಿದ್ದಾರೆ (ರಿಟ್ ಅರ್ಜಿ 32024/2025); ಪದೇ ಪದೇ ಉತ್ತರ ನೀಡದ್ದಕ್ಕೆ ಅಕ್ಟೋಬರ್ 2026ರಲ್ಲಿ ನ್ಯಾಯಾಲಯ ರಾಜ್ಯಕ್ಕೆ ₹2,000 ದಂಡ ವಿಧಿಸಿದೆ.</span></p>'
             '<p class="fine">Sanctions and allocations, not money spent or roads built, and nothing here shows personal gain. Sources: the Chief Minister&#39;s answers to Assembly questions '
             '<a href="https://kla.kar.nic.in/assembly/answers/16assembly/pdf/16122025/1727.pdf" target="_blank" rel="noopener">1727</a> (16 Dec 2025) and 1119 (11 Mar 2025), and the answer to question '
             '<a href="https://kla.kar.nic.in/assembly/answers/16assembly/pdf/10122025/654.pdf" target="_blank" rel="noopener">654</a> (10 Dec 2025). '
