@@ -274,7 +274,7 @@ page = f"""<!doctype html>
     <li><b>218</b><span>Stayed by courts</span></li>
     <li class="zero"><b>0</b><span>Government servants held guilty so far</span></li>
   </ol>
-  <p class="muted">From the Chief Minister's written reply to Legislative Council unstarred question 452 (628), 20 Aug 2026, read in the original: 939 bribery-trap cases and 309 disproportionate-assets cases, 1,451 officers and employees in all; 18 more cases were closed. <a href="https://kla.kar.nic.in/council/Replies/unstarred/20082026/usq628(20082026).pdf">The reply (PDF, Kannada)</a>. Press reports of this reply mislabelled the 939 trap cases as assets cases.</p>
+  <p class="muted">From the Chief Minister's written reply to Legislative Council unstarred question 452 (628), 20 Aug 2026, read in the original: 939 bribery-trap cases and 309 disproportionate-assets cases, 1,451 officers and employees in all; 18 more cases were closed. <a href="https://kla.kar.nic.in/council/Replies/unstarred/20082026/usq628(20082026).pdf">The reply (PDF, Kannada)</a>. Press reports of this reply mislabelled the 939 trap cases as assets cases. The same reply counts 148 convictions since 2023 in older cases outside the 1,248; on 24 November 2026 the Lokayukta reported 697 cases concluded with 153 convictions over four years, without saying in which cases (<a href="https://theprint.in/india/karnataka-lokayukta-says-952-charge-sheets-filed-153-convictions-in-four-years/3107631/">PTI, via ThePrint</a>). <a href="../rti.html#letter-l8">RTI letter 8</a> asks.</p>
 </section>
 
 <section>
@@ -383,7 +383,7 @@ page_kn = f"""<!doctype html>
     <li><b>218</b><span>ನ್ಯಾಯಾಲಯಗಳ ತಡೆಯಾಜ್ಞೆ</span></li>
     <li class="zero"><b>0</b><span>ಇದುವರೆಗೆ ತಪ್ಪಿತಸ್ಥರೆಂದು ತೀರ್ಮಾನವಾದ ಸರ್ಕಾರಿ ನೌಕರರು</span></li>
   </ol>
-  <p class="muted">ವಿಧಾನ ಪರಿಷತ್ತಿನ ಚುಕ್ಕೆ ಗುರುತಿಲ್ಲದ ಪ್ರಶ್ನೆ 452 (628)ಕ್ಕೆ ಮುಖ್ಯಮಂತ್ರಿಗಳು 20 ಆಗಸ್ಟ್ 2026ರಂದು ನೀಡಿದ ಲಿಖಿತ ಉತ್ತರದಿಂದ (ಮೂಲ ದಾಖಲೆಯನ್ನೇ ಓದಲಾಗಿದೆ): 939 ಲಂಚದ ಟ್ರ್ಯಾಪ್ ಪ್ರಕರಣಗಳು ಮತ್ತು 309 ಆದಾಯ ಮೀರಿದ ಆಸ್ತಿ ಪ್ರಕರಣಗಳು, ಒಟ್ಟು 1,451 ಅಧಿಕಾರಿಗಳು ಮತ್ತು ನೌಕರರು; ಇನ್ನೂ 18 ಪ್ರಕರಣಗಳನ್ನು ಮುಕ್ತಾಯಗೊಳಿಸಲಾಗಿದೆ. <a href="https://kla.kar.nic.in/council/Replies/unstarred/20082026/usq628(20082026).pdf">ಉತ್ತರ (PDF, ಕನ್ನಡ)</a>. ಈ ಉತ್ತರದ ಬಗ್ಗೆ ಪತ್ರಿಕಾ ವರದಿಗಳು 939 ಟ್ರ್ಯಾಪ್ ಪ್ರಕರಣಗಳನ್ನು ಆಸ್ತಿ ಪ್ರಕರಣಗಳೆಂದು ತಪ್ಪಾಗಿ ಹೆಸರಿಸಿದ್ದವು.</p>
+  <p class="muted">ವಿಧಾನ ಪರಿಷತ್ತಿನ ಚುಕ್ಕೆ ಗುರುತಿಲ್ಲದ ಪ್ರಶ್ನೆ 452 (628)ಕ್ಕೆ ಮುಖ್ಯಮಂತ್ರಿಗಳು 20 ಆಗಸ್ಟ್ 2026ರಂದು ನೀಡಿದ ಲಿಖಿತ ಉತ್ತರದಿಂದ (ಮೂಲ ದಾಖಲೆಯನ್ನೇ ಓದಲಾಗಿದೆ): 939 ಲಂಚದ ಟ್ರ್ಯಾಪ್ ಪ್ರಕರಣಗಳು ಮತ್ತು 309 ಆದಾಯ ಮೀರಿದ ಆಸ್ತಿ ಪ್ರಕರಣಗಳು, ಒಟ್ಟು 1,451 ಅಧಿಕಾರಿಗಳು ಮತ್ತು ನೌಕರರು; ಇನ್ನೂ 18 ಪ್ರಕರಣಗಳನ್ನು ಮುಕ್ತಾಯಗೊಳಿಸಲಾಗಿದೆ. <a href="https://kla.kar.nic.in/council/Replies/unstarred/20082026/usq628(20082026).pdf">ಉತ್ತರ (PDF, ಕನ್ನಡ)</a>. ಈ ಉತ್ತರದ ಬಗ್ಗೆ ಪತ್ರಿಕಾ ವರದಿಗಳು 939 ಟ್ರ್ಯಾಪ್ ಪ್ರಕರಣಗಳನ್ನು ಆಸ್ತಿ ಪ್ರಕರಣಗಳೆಂದು ತಪ್ಪಾಗಿ ಹೆಸರಿಸಿದ್ದವು. ಅದೇ ಉತ್ತರ 1,248ರ ಹೊರಗಿನ ಹಳೆಯ ಪ್ರಕರಣಗಳಲ್ಲಿ 2023ರಿಂದ 148 ಶಿಕ್ಷೆಗಳನ್ನು ಎಣಿಸುತ್ತದೆ; 24 ನವೆಂಬರ್ 2026ರಂದು ಲೋಕಾಯುಕ್ತ ನಾಲ್ಕು ವರ್ಷಗಳಲ್ಲಿ 697 ಪ್ರಕರಣಗಳು ಮುಕ್ತಾಯವಾಗಿ 153 ಶಿಕ್ಷೆಗಳಾಗಿವೆ ಎಂದು ವರದಿ ಮಾಡಿದೆ, ಯಾವ ಪ್ರಕರಣಗಳಲ್ಲಿ ಎಂದು ಹೇಳದೆ (<a href="https://theprint.in/india/karnataka-lokayukta-says-952-charge-sheets-filed-153-convictions-in-four-years/3107631/">ಪಿಟಿಐ, ದಿ ಪ್ರಿಂಟ್ ಮೂಲಕ</a>). <a href="../rti.html#letter-l8">ಆರ್‌ಟಿಐ ಪತ್ರ 8</a> ಅದನ್ನು ಕೇಳುತ್ತದೆ.</p>
 </section>
 
 <section>

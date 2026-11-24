@@ -175,6 +175,17 @@ For this corporation, as on 31 March 2025 and as on the date of reply:
 3. The total amount released for payment of pending bills in this zone in each financial year from 2023-24 to date, by account head.
 4. Any circular or order fixing the order in which pending bills are paid in this zone.
 """},
+    {"id": "l10", "title": "10. Stalled works: who the contractor is, and what the cost became",
+     "to": "Public Information Officer, Office of the Chief Engineer, [Communication and Buildings, Public Works Department / Minor Irrigation / Water Resources], [zone]\n[address]",
+     "why": "The state's accounts list 4,328 public works still unfinished on 31 March 2025, some started in 2000 and 2009, with what was spent and sometimes a revised cost. They do not say who the contractor is, or whether a stalled work was re-tendered to someone else at a higher price. The department keeps both.",
+     "annex": None,
+     "body": """Information sought
+
+1. For every work of this office listed in Appendix IX (statement of commitments on incomplete public works contracts as on 31 March 2025) of the Finance Accounts 2024-25, Volume II: the work name, the agreement number and date, the name of the contractor or agency, the tendered (agreement) amount, and the stipulated date of completion.
+2. For each such work: every revised estimate approved, with the date, the revised amount, the approving authority and the reason recorded.
+3. For each such work where the agreement was terminated, rescinded or closed before completion: the date and reason, the amount paid to that contractor, the date of any re-tender, the name of the new contractor and the new agreement amount.
+4. The same list (item 1) for this office in electronic form (spreadsheet), if it is held in that form.
+"""},
 ]
 
 # ---- Kannada (needs a native reader's review, like the rest of the site's Kannada) ----
@@ -310,6 +321,16 @@ KN = {
 2. ವಿಧಾನಸಭೆಯ ಚುಕ್ಕೆ ಗುರುತಿಲ್ಲದ ಪ್ರಶ್ನೆ 1485ಕ್ಕೆ (ಉತ್ತರ 24 ಆಗಸ್ಟ್ 2026) ಸಿದ್ಧಪಡಿಸಿದ, 31 ಜುಲೈ 2026ರ ಅದೇ ಪಟ್ಟಿ, ದಿನಾಂಕಗಳೊಂದಿಗೆ ಇದ್ದರೆ.
 3. 2023-24ರಿಂದ ಇಲ್ಲಿಯವರೆಗೆ ಪ್ರತಿ ಆರ್ಥಿಕ ವರ್ಷದಲ್ಲಿ ಈ ವಲಯದಲ್ಲಿ ಬಾಕಿ ಬಿಲ್ಲುಗಳ ಪಾವತಿಗೆ ಬಿಡುಗಡೆಯಾದ ಒಟ್ಟು ಮೊತ್ತ, ಲೆಕ್ಕ ಶೀರ್ಷಿಕೆವಾರು.
 4. ಈ ವಲಯದಲ್ಲಿ ಬಾಕಿ ಬಿಲ್ಲುಗಳನ್ನು ಪಾವತಿಸುವ ಕ್ರಮವನ್ನು ನಿಗದಿಪಡಿಸುವ ಯಾವುದೇ ಸುತ್ತೋಲೆ ಅಥವಾ ಆದೇಶ.
+"""},
+    "l10": {"title": "10. ನಿಂತ ಕಾಮಗಾರಿಗಳು: ಗುತ್ತಿಗೆದಾರ ಯಾರು, ವೆಚ್ಚ ಎಷ್ಟಾಯಿತು",
+            "to": "ಸಾರ್ವಜನಿಕ ಮಾಹಿತಿ ಅಧಿಕಾರಿ, ಮುಖ್ಯ ಎಂಜಿನಿಯರ್ ಅವರ ಕಚೇರಿ, [ಸಂಪರ್ಕ ಮತ್ತು ಕಟ್ಟಡಗಳು, ಲೋಕೋಪಯೋಗಿ ಇಲಾಖೆ / ಸಣ್ಣ ನೀರಾವರಿ / ಜಲಸಂಪನ್ಮೂಲ], [ವಲಯ]\n[ವಿಳಾಸ]",
+            "why": "31 ಮಾರ್ಚ್ 2025ಕ್ಕೆ ಇನ್ನೂ ಮುಗಿಯದ 4,328 ಸಾರ್ವಜನಿಕ ಕಾಮಗಾರಿಗಳನ್ನು ರಾಜ್ಯದ ಲೆಕ್ಕಗಳು ಪಟ್ಟಿ ಮಾಡುತ್ತವೆ, ಕೆಲವು 2000 ಮತ್ತು 2009ರಲ್ಲಿ ಆರಂಭವಾದವು, ಖರ್ಚು ಮತ್ತು ಕೆಲವೊಮ್ಮೆ ಪರಿಷ್ಕೃತ ವೆಚ್ಚದೊಂದಿಗೆ. ಗುತ್ತಿಗೆದಾರ ಯಾರು, ನಿಂತ ಕಾಮಗಾರಿಯನ್ನು ಹೆಚ್ಚಿನ ಬೆಲೆಗೆ ಬೇರೆಯವರಿಗೆ ಮರು-ಟೆಂಡರ್ ಮಾಡಲಾಯಿತೇ ಎಂದು ಅವು ಹೇಳುವುದಿಲ್ಲ. ಇಲಾಖೆಯ ಬಳಿ ಎರಡೂ ಇವೆ.",
+            "body": """ಕೋರಿರುವ ಮಾಹಿತಿ
+
+1. ಹಣಕಾಸು ಲೆಕ್ಕಗಳು 2024-25, ಸಂಪುಟ 2ರ ಅನುಬಂಧ IX (31 ಮಾರ್ಚ್ 2025ಕ್ಕೆ ಅಪೂರ್ಣ ಸಾರ್ವಜನಿಕ ಕಾಮಗಾರಿ ಗುತ್ತಿಗೆಗಳ ಬದ್ಧತೆಗಳ ವಿವರ) ದಲ್ಲಿ ಪಟ್ಟಿಯಾದ ಈ ಕಚೇರಿಯ ಪ್ರತಿ ಕಾಮಗಾರಿಗೆ: ಕಾಮಗಾರಿಯ ಹೆಸರು, ಕರಾರು ಸಂಖ್ಯೆ ಮತ್ತು ದಿನಾಂಕ, ಗುತ್ತಿಗೆದಾರ ಅಥವಾ ಸಂಸ್ಥೆಯ ಹೆಸರು, ಟೆಂಡರ್ (ಕರಾರು) ಮೊತ್ತ, ಮತ್ತು ನಿಗದಿತ ಪೂರ್ಣಗೊಳಿಸುವ ದಿನಾಂಕ.
+2. ಅಂತಹ ಪ್ರತಿ ಕಾಮಗಾರಿಗೆ: ಅನುಮೋದಿಸಿದ ಪ್ರತಿ ಪರಿಷ್ಕೃತ ಅಂದಾಜು, ದಿನಾಂಕ, ಪರಿಷ್ಕೃತ ಮೊತ್ತ, ಅನುಮೋದಿಸಿದ ಅಧಿಕಾರಿ ಮತ್ತು ದಾಖಲಿಸಿದ ಕಾರಣದೊಂದಿಗೆ.
+3. ಪೂರ್ಣಗೊಳ್ಳುವ ಮೊದಲೇ ಕರಾರು ರದ್ದಾದ, ಕೊನೆಗೊಳಿಸಿದ ಅಥವಾ ಮುಕ್ತಾಯಗೊಳಿಸಿದ ಪ್ರತಿ ಕಾಮಗಾರಿಗೆ: ದಿನಾಂಕ ಮತ್ತು ಕಾರಣ, ಆ ಗುತ್ತಿಗೆದಾರನಿಗೆ ಪಾವತಿಸಿದ ಮೊತ್ತ, ಮರು-ಟೆಂಡರ್ ದಿನಾಂಕ, ಹೊಸ ಗುತ್ತಿಗೆದಾರನ ಹೆಸರು ಮತ್ತು ಹೊಸ ಕರಾರು ಮೊತ್ತ.
+4. ಮೇಲಿನ 1ನೇ ಅಂಶದ ಪಟ್ಟಿ ವಿದ್ಯುನ್ಮಾನ ರೂಪದಲ್ಲಿ (ಸ್ಪ್ರೆಡ್‌ಶೀಟ್) ಇದ್ದರೆ, ಆ ರೂಪದಲ್ಲಿ.
 """},
 }
 for _l in LETTERS:

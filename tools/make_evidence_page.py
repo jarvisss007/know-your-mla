@@ -33,8 +33,8 @@ KIND = {"en": {"audit": "Audit finding", "govt": "Government's own answer", "cou
 # Each finding: (group, kind, big number, EN line, KN line, EN source, KN source, page_en, page_kn)
 FINDINGS = [
     ("cases", "govt", "1,248 → 0",
-     "Lokayukta corruption cases against officials, September 2022 to August 2026. Government servants held guilty in those cases so far: none.",
-     "ಸೆಪ್ಟೆಂಬರ್ 2022ರಿಂದ ಆಗಸ್ಟ್ 2026ರವರೆಗೆ ಅಧಿಕಾರಿಗಳ ವಿರುದ್ಧ ಲೋಕಾಯುಕ್ತ ಭ್ರಷ್ಟಾಚಾರ ಪ್ರಕರಣಗಳು. ಆ ಪ್ರಕರಣಗಳಲ್ಲಿ ಇದುವರೆಗೆ ತಪ್ಪಿತಸ್ಥರೆಂದು ಸಾಬೀತಾದ ಸರ್ಕಾರಿ ನೌಕರರು: ಯಾರೂ ಇಲ್ಲ.",
+     "Lokayukta corruption cases against officials registered September 2022 to August 2026. Government servants held guilty in those cases so far: none. (The same reply counts 148 convictions since 2023 in older cases, and in November 2026 the Lokayukta reported 153 convictions in four years without saying in which cases.)",
+     "ಸೆಪ್ಟೆಂಬರ್ 2022ರಿಂದ ಆಗಸ್ಟ್ 2026ರವರೆಗೆ ಅಧಿಕಾರಿಗಳ ವಿರುದ್ಧ ದಾಖಲಾದ ಲೋಕಾಯುಕ್ತ ಭ್ರಷ್ಟಾಚಾರ ಪ್ರಕರಣಗಳು. ಆ ಪ್ರಕರಣಗಳಲ್ಲಿ ಇದುವರೆಗೆ ತಪ್ಪಿತಸ್ಥರೆಂದು ಸಾಬೀತಾದ ಸರ್ಕಾರಿ ನೌಕರರು: ಯಾರೂ ಇಲ್ಲ. (ಅದೇ ಉತ್ತರ 2023ರಿಂದ ಹಳೆಯ ಪ್ರಕರಣಗಳಲ್ಲಿ 148 ಶಿಕ್ಷೆಗಳನ್ನು ಎಣಿಸುತ್ತದೆ; ನವೆಂಬರ್ 2026ರಲ್ಲಿ ಲೋಕಾಯುಕ್ತ ನಾಲ್ಕು ವರ್ಷಗಳಲ್ಲಿ 153 ಶಿಕ್ಷೆಗಳನ್ನು ವರದಿ ಮಾಡಿದೆ, ಯಾವ ಪ್ರಕರಣಗಳಲ್ಲಿ ಎಂದು ಹೇಳದೆ.)",
      "Chief Minister's written reply, Legislative Council question 452 (628), 20 Aug 2026",
      "ಮುಖ್ಯಮಂತ್ರಿಗಳ ಲಿಖಿತ ಉತ್ತರ, ವಿಧಾನ ಪರಿಷತ್ ಪ್ರಶ್ನೆ 452 (628), 20 ಆಗಸ್ಟ್ 2026",
      "officials_tracker.html", "officials_tracker_kn.html"),
