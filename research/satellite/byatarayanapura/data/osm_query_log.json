@@ -1,0 +1,33 @@
+{
+ "osm_water_all.json": {
+  "endpoint": "https://overpass.kumi.systems/api/interpreter",
+  "queried_utc": "2026-11-24T21:31:40+00:00",
+  "elements": 440,
+  "query": "[out:json][timeout:180];(way[\"natural\"=\"water\"](poly:\"13.195968 77.585519 13.190714 77.601379 13.202354 77.606171 13.206036 77.619248 13.201885 77.652668 13.188894 77.653900 13.187334 77.657408 13.186029 77.667644 13.191970 77.675867 13.193231 77.688289 13.199031 77.689486 13.188016 77.700616 13.191798 77.714044 13.188982 77.728144 13.160559 77.728191 13.148546 77.730774 13.140646 77.738233 13.133...",
+  "earlier_failures": [
+   "https://overpass-api.de/api/interpreter HTTP 502 (attempt 1)"
+  ],
+  "remark": null
+ },
+ "osm_forest_protected.json": {
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "queried_utc": "2026-11-24T21:42:47+00:00",
+  "elements": 29,
+  "query": "[out:json][timeout:240];(way[\"boundary\"=\"protected_area\"](poly:\"13.195968 77.585519 13.190714 77.601379 13.202354 77.606171 13.206036 77.619248 13.201885 77.652668 13.188894 77.653900 13.187334 77.657408 13.186029 77.667644 13.191970 77.675867 13.193231 77.688289 13.199031 77.689486 13.188016 77.700616 13.191798 77.714044 13.188982 77.728144 13.160559 77.728191 13.148546 77.730774 13.140646 77.738...",
+  "earlier_failures": [
+   "https://overpass-api.de/api/interpreter HTTP 502 (attempt 1)",
+   "https://overpass.kumi.systems/api/interpreter HTTP 504 (attempt 1)",
+   "https://overpass-api.de/api/interpreter HTTP 502 (attempt 2)",
+   "https://overpass.kumi.systems/api/interpreter HTTP 502 (attempt 2)"
+  ],
+  "remark": null
+ },
+ "osm_water_labels.json": {
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "queried_utc": "2026-11-24T21:43:52+00:00",
+  "elements": 106,
+  "query": "[out:json][timeout:180];(node[\"name\"~\"lake|kere|tank|katte|kunte|pond\",i](poly:\"13.195968 77.585519 13.190714 77.601379 13.202354 77.606171 13.206036 77.619248 13.201885 77.652668 13.188894 77.653900 13.187334 77.657408 13.186029 77.667644 13.191970 77.675867 13.193231 77.688289 13.199031 77.689486 13.188016 77.700616 13.191798 77.714044 13.188982 77.728144 13.160559 77.728191 13.148546 77.730774 ...",
+  "earlier_failures": [],
+  "remark": null
+ }
+}

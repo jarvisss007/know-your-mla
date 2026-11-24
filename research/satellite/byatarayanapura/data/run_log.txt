@@ -1,0 +1,135 @@
+grid 2394 1894 polygon ha 21440.5 pixels inside 2143950
+loading 2019 ['S2A_MSIL2A_20190213T050921_R019_T43PGQ_20201007T162011']
+  tile S2A_MSIL2A_20190213T050921_R019_T43PGQ_20201007T162011 pixels inside 2143950
+loading 2026 ['S2B_MSIL2A_20260211T050839_R019_T43PGQ_20260211T085923']
+  tile S2B_MSIL2A_20260211T050839_R019_T43PGQ_20260211T085923 pixels inside 2143950
+{
+ "by_year": {
+  "2019": {
+   "vegetation_ndvi_gt_0.4": {
+    "ha": 4902.8,
+    "pct": 22.92
+   },
+   "open_water_mndwi_gt_0": {
+    "ha": 174.6,
+    "pct": 0.82
+   },
+   "open_water_ndwi_mcfeeters_gt_0_secondary": {
+    "ha": 152.2,
+    "pct": 0.71
+   },
+   "builtup_bare_proxy": {
+    "ha": 8258.6,
+    "pct": 38.61
+   }
+  },
+  "2026": {
+   "vegetation_ndvi_gt_0.4": {
+    "ha": 5975.6,
+    "pct": 27.94
+   },
+   "open_water_mndwi_gt_0": {
+    "ha": 511.6,
+    "pct": 2.39
+   },
+   "open_water_ndwi_mcfeeters_gt_0_secondary": {
+    "ha": 425.0,
+    "pct": 1.99
+   },
+   "builtup_bare_proxy": {
+    "ha": 5917.7,
+    "pct": 27.67
+   }
+  }
+ },
+ "net_change": {
+  "vegetation_ndvi_gt_0.4": {
+   "ha_change": 1072.8,
+   "pct_point_change": 5.02,
+   "relative_change_pct": 21.9
+  },
+  "open_water_mndwi_gt_0": {
+   "ha_change": 337.0,
+   "pct_point_change": 1.57,
+   "relative_change_pct": 193.0
+  },
+  "open_water_ndwi_mcfeeters_gt_0_secondary": {
+   "ha_change": 272.8,
+   "pct_point_change": 1.28,
+   "relative_change_pct": 179.2
+  },
+  "builtup_bare_proxy": {
+   "ha_change": -2340.9,
+   "pct_point_change": -10.94,
+   "relative_change_pct": -28.3
+  }
+ },
+ "gross_pixel_transitions": {
+  "vegetation_lost_ha": 1860.7,
+  "vegetation_gained_ha": 2933.5,
+  "water_lost_ha": 42.9,
+  "water_gained_ha": 379.9,
+  "builtup_proxy_new_ha": 2034.5,
+  "builtup_proxy_no_longer_ha": 4375.4,
+  "of_new_builtup_proxy_was_vegetation_2019_ha": 514.8
+ }
+}
+{
+ "2019": {
+  "datetime": "2019-02-13T05:09:21.024000Z",
+  "platform": "Sentinel-2A",
+  "relative_orbit": 19,
+  "tiles": [
+   {
+    "id": "S2A_MSIL2A_20190213T050921_R019_T43PGQ_20201007T162011",
+    "mgrs_tile": "43PGQ",
+    "processing_baseline": "02.12",
+    "tile_cloud_cover_pct": 0.066927,
+    "reflectance_offset_applied": 0,
+    "pixels_supplied_inside_boundary": 2143950,
+    "stac_item_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-2-l2a/items/S2A_MSIL2A_20190213T050921_R019_T43PGQ_20201007T162011"
+   }
+  ],
+  "scl_class_pct_inside_boundary": {
+   "dark area": 0.459,
+   "cloud shadow": 0.029,
+   "vegetation": 9.378,
+   "not vegetated": 88.52,
+   "water": 0.613,
+   "unclassified": 0.791,
+   "cloud medium prob": 0.131,
+   "cloud high prob": 0.079
+  },
+  "masked_pct_inside_boundary": 0.238,
+  "sanity_median_B08_on_SCL_water": 0.0569,
+  "sanity_median_B04_inside": 0.136
+ },
+ "2026": {
+  "datetime": "2026-02-11T05:08:39.024000Z",
+  "platform": "Sentinel-2B",
+  "relative_orbit": 19,
+  "tiles": [
+   {
+    "id": "S2B_MSIL2A_20260211T050839_R019_T43PGQ_20260211T085923",
+    "mgrs_tile": "43PGQ",
+    "processing_baseline": "05.12",
+    "tile_cloud_cover_pct": 0.001801,
+    "reflectance_offset_applied": -1000,
+    "pixels_supplied_inside_boundary": 2143950,
+    "stac_item_url": "https://planetarycomputer.microsoft.com/api/stac/v1/collections/sentinel-2-l2a/items/S2B_MSIL2A_20260211T050839_R019_T43PGQ_20260211T085923"
+   }
+  ],
+  "scl_class_pct_inside_boundary": {
+   "dark area": 0.176,
+   "vegetation": 11.543,
+   "not vegetated": 85.81,
+   "water": 1.905,
+   "unclassified": 0.566
+  },
+  "masked_pct_inside_boundary": 0.005,
+  "sanity_median_B08_on_SCL_water": 0.03,
+  "sanity_median_B04_inside": 0.1279
+ }
+}
+437 water bodies; {'n_regions': 38798, 'regions_ge_1ha': 276, 'regions_ge_5ha': 12, 'ha_in_regions_ge_1ha': 590.0, 'ha_in_regions_lt_1ha': 1444.5}
+exit 0

@@ -1,0 +1,75 @@
+{
+ "source": "Nominatim (OSM) search, 24 Nov 2026; used only to check whether lakes named in the brief are in OSM and inside the boundary",
+ "results": [
+  {
+   "query": "Allalasandra Lake, Bengaluru",
+   "osm": "relation/16048376",
+   "name": "Allalasandra Lake",
+   "category": "water",
+   "type": "lake",
+   "lat": 13.0910132,
+   "lon": 77.5863933,
+   "inside_boundary": false
+  },
+  {
+   "query": "Allalasandra Lake, Bengaluru",
+   "osm": "way/41206188",
+   "name": "Allalasandra Lake",
+   "category": "water",
+   "type": "lake",
+   "lat": 13.090997,
+   "lon": 77.5868301,
+   "inside_boundary": false
+  },
+  {
+   "query": "Yelahanka Lake, Bengaluru",
+   "osm": "relation/10179602",
+   "name": "Yelahanka Lake",
+   "category": "water",
+   "type": "lake",
+   "lat": 13.1120654,
+   "lon": 77.5954713,
+   "inside_boundary": false
+  },
+  {
+   "query": "Puttenahalli Lake Yelahanka",
+   "osm": "relation/15989750",
+   "name": "Puttenahalli Lake",
+   "category": "water",
+   "type": "lake",
+   "lat": 13.1119851,
+   "lon": 77.5770582,
+   "inside_boundary": false
+  },
+  {
+   "query": "Attur Lake, Bengaluru",
+   "osm": "relation/15989751",
+   "name": "Attur Lake",
+   "category": "water",
+   "type": "lake",
+   "lat": 13.1114817,
+   "lon": 77.5630556,
+   "inside_boundary": false
+  },
+  {
+   "query": "Jakkur Lake",
+   "osm": "relation/9321012",
+   "name": "Jakkur Lake",
+   "category": "water",
+   "type": "lake",
+   "lat": 13.0867157,
+   "lon": 77.6116686,
+   "inside_boundary": true
+  },
+  {
+   "query": "Rachenahalli Lake",
+   "osm": "relation/6041559",
+   "name": "Rachenahalli Lake",
+   "category": "water",
+   "type": "lake",
+   "lat": 13.0624602,
+   "lon": 77.6124088,
+   "inside_boundary": true
+  }
+ ]
+}

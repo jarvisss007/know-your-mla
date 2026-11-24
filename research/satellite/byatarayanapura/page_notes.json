@@ -1,0 +1,26 @@
+{
+  "_status": "DRAFT prose for make_rural_page.py, written from metrics.json and data/robustness_dates.json after looking at the three PNGs. Imagery and metrics only.",
+  "date_phrase": "February 2019 and February 2026",
+  "d19": "13 Feb 2019",
+  "d26": "11 Feb 2026",
+  "pick_dates": ["2019-02-13", "2026-02-11"],
+  "as_of": "24 Nov 2026",
+  "scene_credit": "Sentinel-2A scene of 13 Feb 2019 and Sentinel-2B scene of 11 Feb 2026, tile 43PGQ",
+  "lede": "Two cloud-free Sentinel-2 satellite pictures of Assembly constituency 152 in Bengaluru Urban district are compared pixel by pixel at 10 m. They were taken two days apart in the calendar, seven years apart: 13 February 2019 and 11 February 2026, the same dates used for Mahadevapura. The seat mixes city wards in the south with farmland, villages and many lakes in the north. Inside the outlines of the 51 lakes and tanks measured, open water covered 134 ha on the first date and 380 ha on the second; green growing on those lakes, mostly weeds, covered 200 ha and 246 ha. This page measures land cover only and says nothing about who caused any change.",
+  "warning_title": "Read this first: the change in green and bare ground is no bigger than the swing between dates.",
+  "warning": "On the 37 clean dates checked, green cover moved 6 to 7 points within a single February. Around 11 to 13 February it stood at 22% in 2019, 32% in 2025 and 27% in 2026, so 2025 to 2026 alone fell 5.5 points. The pair used below shows 5.0 points more green in 2026; other pairs of dates a few days apart give 3 to 24 points, always greener in 2026. The bare or built-up proxy fell 10.1 points in this pair, but only 1.5 to 1.9 points in the pairs around 21 February. Do not quote the tiles below as land-cover change. The lake figures are measured inside fixed outlines and are easier to check, but lakes also fill, dry and grow weeds from season to season.",
+  "chart_title": "Is the change real? Green cover on every clean date, January to March",
+  "chart_note": "Share of the constituency with NDVI above 0.4, computed at 20 m on every Sentinel-2 date with less than 1% cloud inside the boundary (tile 43PGQ). Large dots are the two dates used for the tiles and maps. 2025 was greener than 2026 through January and February.",
+  "change_caption": "Most of the green lost and new red is in small field-sized patches spread across the farmland in the north and the wards in the south.",
+  "forest_note": "OpenStreetMap maps about 601 ha of forest and protected land here. Green cover inside it was 40% on the first date and 82% on the second, a jump far larger than outside; a swing that size points to the season on these two dates, so check other dates before quoting it.",
+  "limits": [
+    "One picture per year, in the dry season. Green cover changes week by week; the date check above shows how much.",
+    "The bare or built-up figure is a proxy. Here it mixes roofs, roads and paved land with bare plots, dry fields and dry grass, and dense older built-up areas often fail the test, so its fall says nothing about buildings.",
+    "Lakes covered by weeds count as green, not water, and clearing weeds turns green into water. Read the water and green-on-lake columns together and look at the pictures before reading anything into one lake.",
+    "The lake table ranks by change in open water, so Jakkur and Rachenahalli lakes are not in it: their open water barely moved (31.1 to 31.1 ha and 29.8 to 31.8 ha), but green on Rachenahalli Lake fell from 30.2 to 2.9 ha and green on the part of Jakkur Lake inside the boundary rose from 22.9 to 26.9 ha. Every measured lake is in metrics.json.",
+    "Lake outlines are today's OpenStreetMap outlines. Water bodies under 2 ha are not measured. Allalasandra Lake is in OpenStreetMap but about 0.5 km outside this boundary, so it is not measured here; Jakkur and Nagawara lakes cross the boundary and only the part inside is counted.",
+    "The two years use different satellites (Sentinel-2A and 2B) and processing versions. The -1000 reflectance offset for products processed from 2022 was applied.",
+    "Thresholds are standard textbook values, not tuned for Bengaluru. Trust the direction of change more than the exact hectares.",
+    "The boundary is DataMeet's digitised map of the 2008 constituencies and may be shifted. Check edges against the official map before using any figure near them."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "_status": "DRAFT - parameters for the Byatarayanapura run of the Sentinel-2 land-cover pipeline (scripts copied from ../holenarasipur/, itself adapted from ../kanakapura/ and ../analyze.py, Mahadevapura AC 174)",
+  "state": "KARNATAKA",
+  "ac_name": "Byatarayanapura",
+  "ac_no": 152,
+  "display_name": "Byatarayanapura (AC 152)",
+  "district": "Bengaluru Urban",
+  "district_note": "Bengaluru Urban district; the DataMeet file (OBJECTID 2355) labels it DIST_NAME BANGALORE, PC_NO 24 BANGALORE NORTH",
+  "boundary_source": "../data/boundary/datameet_ac.geojson",
+  "boundary_objectid": 2355,
+  "boundary": "data/boundary/byatarayanapura_ac152.geojson",
+  "dst_crs": "EPSG:32643",
+  "res_m": 10,
+  "search_windows": {
+    "2019": "2019-01-01/2019-03-31",
+    "2026": "2026-01-01/2026-03-31",
+    "2025": "2025-01-01/2025-03-31"
+  },
+  "max_tile_cloud_pct": 30,
+  "scenes": {
+    "2019": [
+      "S2A_MSIL2A_20190213T050921_R019_T43PGQ_20201007T162011"
+    ],
+    "2026": [
+      "S2B_MSIL2A_20260211T050839_R019_T43PGQ_20260211T085923"
+    ]
+  },
+  "scene_choice_note": "All Jan-Mar acquisitions were grouped by date and relative orbit (every one over Byatarayanapura is orbit R019, and the single tile 43PGQ covers the whole boundary, so no mosaic is needed) and scored by the SCL cloud/shadow/no-data fraction inside the boundary on a 60 m grid (data/candidates.json). No February 2019 date is under 0.1% masked here (the lowest is 0.10% on 23 Feb, whose nearest 2026 date, 21 Feb, is 0.75% masked). Chose 13 Feb 2019 (Sentinel-2A; 0.237% masked at 60 m; tile cloud 0.07%) and 11 Feb 2026 (Sentinel-2B; 0.000% masked), two days apart in the calendar, same orbit and tile, and the same dates as the Mahadevapura run on the same tile. Marginally cleaner 2-day pairs exist: 3 Feb 2019/1 Feb 2026 (0.131%/0.000%, but the 2019 tile had 7.3% cloud nearby, raising the risk of unflagged haze) and 24 Jan 2019/22 Jan 2026 (0.154%/0.000%). The masked difference is about 0.1% of the area (~20 ha) and is covered by robustness_check.py. 2026 had clean dates, so no 2025 fallback was needed.",
+  "robustness_tile": "43PGQ",
+  "robustness_orbit": 19,
+  "n_clusters": 15,
+  "min_lake_ha": 2.0
+}
