@@ -165,6 +165,13 @@ def form(kind, district, ac, text):
             + "&entry.604747719=" + quote(ac) + "&entry.878251699=" + quote(text))
 
 
+KN_NAMES = {}  # constituency_en -> row of data/names_kn.csv (Karnataka Legislative Assembly member list)
+_kp = ROOT / "data" / "names_kn.csv"
+if _kp.exists():
+    for _r in csv.DictReader(open(_kp, encoding="utf-8")):
+        KN_NAMES[_r["constituency_en"]] = _r
+
+
 def page(d):
     c, n, p = d["c"], d["n"], d["p"]
     dist = DIST.get(c, "")
@@ -201,12 +208,20 @@ def page(d):
     also = [f'<a href="../index.html#{sid}">{ALSO_LABEL[sid]}</a>' for sid, txt in ALSO.items() if (len(nn) > 6 and nn in txt) or sid in ALSO_EXTRA.get(c, ())]
     by = f' · elected in a by-election, {E(d["by"])}' if d.get("by") else ""
     url = SITE + "mla/" + slug(c) + ".html"
+    kr = KN_NAMES.get(c, {})
+    n_kn, c_kn = kr.get("name_kn", ""), kr.get("constituency_kn", "")
+    card = ROOT / "cards" / "mla" / f"{slug(c)}-en.png"
+    og_img = f"{SITE}cards/mla/{slug(c)}-en.png" if card.exists() else f"{SITE}brand/gandaberunda-banner.png"
+    wa_kn = (f"{n_kn or n} ({c_kn or c}) ವರದಿ ಕಾರ್ಡ್: ಘೋಷಿತ ಆಸ್ತಿ " + (money(d['a']).replace('crore', 'ಕೋಟಿ').replace('lakh', 'ಲಕ್ಷ') if d['a'] is not None else "ಲಭ್ಯವಿಲ್ಲ")
+             + (f", 2018ರಿಂದ {'+' if g >= 0 else ''}{g}%" if g is not None else "")
+             + f", ಘೋಷಿತ ಕ್ರಿಮಿನಲ್ ಪ್ರಕರಣಗಳು {d['k'] if d['k'] is not None else '?'}. ಕೆಲಸ ತೋರಿಸಿ, ಆಮೇಲೆ ಮತ. {url}")
     wa = (f"{n} ({c}) report card: declared assets {money(d['a']) or 'not in archive'}"
           + (f", {'+' if g >= 0 else ''}{g}% since 2018" if g is not None else "") + f", {d['k'] if d['k'] is not None else '?'} declared criminal cases. Show me the work, then my vote. {url}")
-    title = f"{n}, {c} MLA: declared assets and cases · Gandaberunda"
+    title = (f"{n} ({n_kn}), {c} ({c_kn}) MLA: declared assets and cases · Gandaberunda" if n_kn and c_kn
+             else f"{n}, {c} MLA: declared assets and cases · Gandaberunda")
     desc = (f"{n} ({p}), MLA for {c}, {dist} district. Declared assets {money(d['a']) or 'not in archive'}"
             + (f", {'+' if g >= 0 else ''}{g}% since 2018" if g is not None else "") + f"; {d['k'] if d['k'] is not None else 'no'} declared criminal cases. From sworn affidavits.")
-    body = f"""<div><h1>{E(n)}</h1>
+    body = f"""<div><h1>{E(n)}</h1>{f'<p class="kn" lang="kn" style="font-size:22px;font-weight:600;margin:4px 0 0">{E(n_kn)} · {E(c_kn)}</p>' if n_kn else ''}
 <div class="sub"><span>MLA for <b>{E(c)}</b></span><span class="party {E(pcls)}">{E(p)}</span><span>{E(dist)} district{by}</span>
 <span class="kn">{E(PARTY_KN.get(p, p))} · {E(dist)} ಜಿಲ್ಲೆ</span></div></div>
 <div class="tiles">{''.join(tiles)}</div>
@@ -221,10 +236,12 @@ def page(d):
 <div class="box"><h2>Know something about {E(c)}? <span class="kn" style="font-size:15px;color:var(--muted);font-weight:400">ನಿಮ್ಮ ಅಭಿಪ್ರಾಯ ತಿಳಿಸಿ</span></h2>
 <p>A project paid for but not built, a scheme not reaching people, something we should check. It goes to the Gandaberunda team only; no account or name needed. Send records, not rumours.</p>
 <div class="btns"><a class="btn" href="{E(form("A suggestion: what to dig into next", dist, c, ""))}" target="_blank" rel="noopener">Tell us about {E(c)}</a>
-<a class="btn wa" href="https://wa.me/?text={quote(wa)}" target="_blank" rel="noopener">Share on WhatsApp</a></div></div>
+<a class="btn wa" href="https://wa.me/?text={quote(wa)}" target="_blank" rel="noopener">Share on WhatsApp</a>
+<a class="btn wa kn" lang="kn" href="https://wa.me/?text={quote(wa_kn)}" target="_blank" rel="noopener">ವಾಟ್ಸಾಪ್‌ನಲ್ಲಿ ಹಂಚಿ</a></div></div>
+<p style="margin:0"><a href="../index.html#join"><b>Have your say</b>: tell us what to check next in {E(c)} →</a> <span class="kn" lang="kn">ನಿಮ್ಮ ಅಭಿಪ್ರಾಯ ತಿಳಿಸಿ</span></p>
 <p class="fine">Figures are what the MLA declared in a sworn affidavit to the Election Commission{', archived by ADR at <a href="' + E(aff) + '" target="_blank" rel="noopener">myneta.info</a>' if aff and 'myneta' in aff else (', <a href="' + E(aff) + '" target="_blank" rel="noopener">affidavit</a>' if aff else '')}. Nobody audits them. Declared wealth is not evidence of wrongdoing: growth often reflects land being revalued. A declared case is not a conviction. District figures are about the district, not about the MLA. Errors: <a href="../index.html#join">tell us</a>. Gandaberunda is independent and takes no money from any party.</p>
 """
-    return HEAD.format(title=E(title), desc=E(desc), site=SITE, canon=url, css=CSS) + body + '</div><script data-goatcounter="https://gandaberunda.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>\n</body></html>\n'
+    return HEAD.format(title=E(title), desc=E(desc), site=SITE, canon=url, css=CSS).replace(f"{SITE}brand/gandaberunda-banner.png", og_img, 1) + body + '</div><script data-goatcounter="https://gandaberunda.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>\n</body></html>\n'
 
 
 def _codes(s):

@@ -1,4 +1,7 @@
-"""Google Search Console verification and the GoatCounter visitor counter, in one place.
+"""Google Search Console verification (and an optional second visitor counter), in one place.
+
+NOTE: GoatCounter is ALREADY live at https://gandaberunda.goatcounter.com (commit 10ae93b, hard-coded in the page
+generators and pages). Leave GOATCOUNTER_CODE empty, or visits are counted twice. Only Search Console needs a code.
 
 Both are switched OFF until a code is set. Every page this session owns carries a marked slot
 <!--gb-site-codes-->...<!--/gb-site-codes--> in its <head>; generators call head_block() to fill it.
@@ -6,11 +9,10 @@ Both are switched OFF until a code is set. Every page this session owns carries 
 Owner steps (one each):
   Search Console: https://search.google.com/search-console -> Add property -> "URL prefix" ->
                   https://jarvisss007.github.io/know-your-mla/ -> choose "HTML tag" -> copy only the content="..." value.
-  GoatCounter:    https://www.goatcounter.com/signup -> pick a code (e.g. gandaberunda) -> the code is the part
-                  before .goatcounter.com.
+  Visitor numbers: already counting at https://gandaberunda.goatcounter.com (sign in there to see them).
 
 Then:
-  py tools/site_codes.py --search-console <content value> --goatcounter <code>
+  py tools/site_codes.py --search-console <content value>
 fills every slot, rebuilds the report cards and member pages, and prints the next step (submit the sitemap).
   py tools/site_codes.py --off       switches both off again.
 """
