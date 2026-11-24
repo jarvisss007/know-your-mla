@@ -1,0 +1,225 @@
+sl,name_as_printed,seat,crore,mla,party,zone,in_list
+1,ಅಥಣಿ,Athani,50.0,Laxman Sangappa Savadi,Congress,North,yes
+2,ಕಾಗವಾಡ,Kagwad,50.0,Bharamgouda Alagouda Kage,Congress,North,yes
+3,ಕುಡಚಿ,Kudachi (SC),50.0,Mahendra Kallappa Tammannavar,Congress,North,yes
+4,ಯಮಕನಮರಡಿ,Yemkanamardi (ST),50.0,Satish Laxmanrao Jarkiholi,Congress,North,yes
+5,ಬೆಳಗಾವಿ ಉತ್ತರ,Belgaum Uttar,50.0,Asif (Raju) Sait,Congress,North,yes
+6,ಚನ್ನಮ್ಮನ ಕಿತ್ತೂರು,Kittur,50.0,Babasaheb Patil,Congress,North,yes
+7,ಬೈಲಹೊಂಗಲ,Bailahongal,50.0,Koujalagi Mahantesh Shivanand,Congress,North,yes
+8,ಸವದತ್ತಿ ಯಲ್ಲಮ್ಮ,Saundatti Yellamma,50.0,Vishwas Vasant Vaidya,Congress,North,yes
+9,ಬೆಳಗಾವಿ ಗ್ರಾಮೀಣ,Belgaum Rural,50.0,Laxmi R. Hebbalkar,Congress,North,yes
+10,ರಾಮದುರ್ಗ,Ramdurg,50.0,Ashok Pattan,Congress,North,yes
+11,ಚಿಕ್ಕೋಡಿ-ಸದಲಗಾ,Chikkodi-Sadalga,50.0,Ganesh Prakash Hukkeri,Congress,North,yes
+12,ರಾಯಭಾಗ,Raybag (SC),25.0,Aihole Duryodhan Mahalingappa,BJP,North,yes
+13,ಹುಕ್ಕೇರಿ,Hukkeri,25.0,Katti Nikhil Umesh,BJP,North,yes
+14,ಗೋಕಾಕ,Gokak,25.0,Jarkiholi Ramesh Laxmanrao,BJP,North,yes
+15,ಅರಬಾವಿ,Arabhavi,25.0,Balachandra Laxmanrao Jarkiholi,BJP,North,yes
+16,ನಿಪ್ಪಾಣಿ,Nippani,25.0,Jolle Shashikala Annasaheb,BJP,North,yes
+17,ಖಾನಾಪುರ,Khanapur,25.0,Vithal Somanna Halagekar,BJP,North,yes
+18,ಯಾದಗಿರಿ,Yadgir,50.0,Channareddy Patil Tunnur,Congress,North-East,yes
+19,ಶಹಾಪುರ,Shahapur,50.0,Sharanabasappa Darshanapur,Congress,North-East,yes
+20,ಶೋರಾಪುರ,Shorapur (ST),50.0,Raja Venkatappa Naik,Congress,North-East,yes
+21,ಗುರುಮಿಠಕಲ್,Gurmitkal,25.0,Sharana Gowda Kandakur,JD(S),North-East,yes
+22,ಬಸವನ ಬಾಗೇವಾಡಿ,Basavana Bagevadi,40.0,Shivanand Patil,Congress,North,yes
+23,ನಾಗಠಾಣ,Nagthan (SC),50.0,Katakadhond Vitthal Dondiba,Congress,North,yes
+24,ಇಂಡಿ,Indi,50.0,Yashavantaraygoud. Vittalagoud. Patil,Congress,North,yes
+25,ಸಿಂಧಗಿ,Sindgi,50.0,Ashok Mallappa Managuli,Congress,North,yes
+26,ಮುದ್ದೇಬಿಹಾಳ,Muddebihal,50.0,Appaji Aliyas Channabasavaraj S/O Shankarao Nadagouda,Congress,North,yes
+27,ಬಬಲೇಶ್ವರ,Babaleshwar,50.0,M B Patil,Congress,North,yes
+28,ವಿಜಯಪುರ ನಗರ,Bijapur City,25.0,Basanagouda R Patil (Yatnal),BJP,North,yes
+29,ದೇವರ ಹಿಪ್ಪರಗಿ,Devara Hippargi,25.0,Bhimanagouda (Rajugouda) Basanagouda Patil,JD(S),North,yes
+30,ನವಲಗುಂದ,Navalgund,50.0,Ningaraddi Hanamaraddi Konaraddi,Congress,North,yes
+31,ಧಾರವಾಡ,Dharwad,50.0,Vinay Kulkarni,Congress,North,yes
+32,ಹುಬ್ಬಳ್ಳಿ-ಧಾರವಾಡ-ಪೂರ್ವ,Hubli-Dharwad-East (SC),50.0,Abbayya Prasad,Congress,North,yes
+33,ಕಲಘಟಗಿ,Kalaghatgi,50.0,Santosh S Lad,Congress,North,yes
+34,ಹುಬ್ಬಳ್ಳಿ-ಧಾರವಾಡ-ಪಶ್ಚಿಮ,Hubli-Dharwad-West,25.0,Arvind Bellad,BJP,North,yes
+35,ಕುಂದಗೋಳ,Kundgol,25.0,M R Patil,BJP,North,yes
+36,ಜಗಳೂರು,Jagalur (ST),50.0,B.Devendrappa,Congress,Central,yes
+37,ಚನ್ನಗಿರಿ,Channagiri,50.0,Basavaraju V Shivaganga,Congress,Central,yes
+38,ಹೊನ್ನಾಳಿ,Honnali,50.0,Shanthana Gowda.D.G.,Congress,Central,yes
+39,ಮಾಯಕೊಂಡ,Mayakonda (SC),50.0,K. S. Basavanthappa,Congress,Central,yes
+40,ದಾವಣಗೆರೆ ಉತ್ತರ,Davanagere North,50.0,S.S.Mallikarjun,Congress,Central,yes
+41,ದಾವಣಗೆರೆ ದಕ್ಷಿಣ,Davanagere South,50.0,Samarth Shamanur Mallikarjuna,Congress,Central,yes
+42,ಹರಿಹರ,Harihar,25.0,B P Harish,BJP,Central,yes
+43,ಮುಧೋಳ,Mudhol (SC),50.0,Timmapur Ramappa Balappa,Congress,North,yes
+44,ಬೀಳಗಿ,Bilgi,50.0,J. T. Patil,Congress,North,yes
+45,ಬಾದಾಮಿ,Badami,50.0,B.B.Chimmanakatti,Congress,North,yes
+46,ಬಾಗಲಕೋಟೆ,Bagalkot,50.0,Umesh Hullappa Meti,Congress,North,yes
+47,ಹುನಗುಂದ,Hungund,50.0,Kashappanavara Vijayanand Shivashankrappa,Congress,North,yes
+48,ಜಮಖಂಡಿ,Jamkhandi,25.0,Jagadeesh Shivayya Gudagunti,BJP,North,yes
+49,ತೇರದಾಳ,Terdal,25.0,Siddu Savadi,BJP,North,yes
+50,ಹಾವೇರಿ,Haveri (SC),50.0,Rudrappa Manappa Lamani,Congress,North,yes
+51,ಬ್ಯಾಡಗಿ,Byadgi,50.0,Basavaraj Neelappa Shivannanavar,Congress,North,yes
+52,ಹಿರೇಕೆರೂರು,Hirekerur,50.0,Ujaneshwar Basavannappa Banakar,Congress,North,yes
+53,ರಾಣೇಬೆನ್ನೂರು,Ranebennur,39.0,Prakash Koliwad,Congress,North,yes
+54,ಹಾನಗಲ್ಲ,Hangal,50.0,Mane Srinivas,Congress,North,yes
+55,ಶಿಗ್ಗಾಂವ-ಸವಣೂರು,Shiggaon,50.0,Pathan Yasirahmedkhan,Congress,North,yes
+56,ಬಳ್ಳಾರಿ,Bellary (ST),50.0,B Nagendra,Congress,North-East,yes
+57,ಸಿರಗುಪ್ಪ,Siraguppa (ST),50.0,B. M. Nagaraja,Congress,North-East,yes
+58,ಸಂಡೂರು,Sandur (ST),50.0,E Annapoorna,Congress,North-East,yes
+59,ಕಂಪ್ಲಿ,Kampli (ST),50.0,J N Ganesh,Congress,North-East,yes
+60,ಬಳ್ಳಾರಿ ನಗರ,Bellary City,50.0,Nara Bharath Reddy,Congress,North-East,yes
+61,ಅಫಜಲಪೂರ,Afzalpur,50.0,M.Y.Patil,Congress,North-East,yes
+62,ಕಲಬುರ್ಗಿ (ಉತ್ತರ),Gulbarga Uttar,50.0,Kaneez Fatima,Congress,North-East,yes
+63,ಸೇಡಂ,Sedam,50.0,Dr. Sharanprakash Rudrappa Patil,Congress,North-East,yes
+64,ಕಲಬುರಗಿ (ದಕ್ಷಿಣ),Gulbarga Dakshin,50.0,Allamprabhu Patil,Congress,North-East,yes
+65,ಆಳಂದ,Aland,50.0,Bhojaraj,Congress,North-East,yes
+66,ಜೇವರ್ಗಿ,Jevargi,37.5,Ajay Dharam Singh,Congress,North-East,yes
+67,ಚಿತ್ತಾಪುರ,Chittapur (SC),50.0,Priyank Kharge,Congress,North-East,yes
+68,ಕಲಬುರಗಿ ಗ್ರಾಮೀಣ,Gulbarga Rural (SC),25.0,Basawaraj Mattimudu,BJP,North-East,yes
+69,ಬೀದರ್,Bidar,50.0,Rahim Khan,Congress,North-East,yes
+70,ಬಾಲ್ಕಿ,Bhalki,50.0,Eshwar Khandre,Congress,North-East,yes
+71,ಬೀದರ್ ದಕ್ಷಿಣ,Bidar South,25.0,Dr. Shailendra Beldale,BJP,North-East,yes
+72,ಔರದ್,Aurad (SC),25.0,Prabhu Chavan,BJP,North-East,yes
+73,"ಸಿದ್ದು ಪಾಟೀಲ್ (MLA name, = Humnabad)",Humnabad,25.0,Siddu Patil,BJP,North-East,yes
+74,ಮಾನ್ವಿ,Manvi (ST),50.0,G Hampayya Nayak,Congress,North-East,yes
+75,ರಾಯಚೂರು ಗ್ರಾಮೀಣ,Raichur Rural (ST),50.0,Basanagouda Daddal,Congress,North-East,yes
+76,ಮಸ್ಕಿ,Maski (ST),50.0,Basan Gouda Turvihal,Congress,North-East,yes
+77,ಸಿಂಧನೂರು,Sindhanur,50.0,Hampanagouda Badarli,Congress,North-East,yes
+78,ಲಿಂಗಸುಗೂರು,Lingsugur (SC),25.0,Manappa D Vajjal,BJP,North-East,yes
+79,ರಾಯಚೂರು ನಗರ,Raichur,25.0,Dr. Shivaraj Patil,BJP,North-East,yes
+80,ಶಿರಸಿ,Sirsi,50.0,Bhimanna T. Naik,Congress,North,yes
+81,ಕಾರವಾರ,Karwar,50.0,Satish Krishna Sail,Congress,North,yes
+82,ಹಳಿಯಾಳ,Haliyal,50.0,Deshpande Raghunath,Congress,North,yes
+83,ಭಟ್ಕಳ-ಹೊನ್ನಾವರ,Bhatkal,50.0,Mankal Vaidya,Congress,North,yes
+84,ಯಲ್ಲಾಪುರ-ಮುಂಡಗೋಡ-ಬನವಾಸಿ,Yellapur,50.5,Arabail Hebbar Shivaram,BJP,North,yes
+85,ಕುಮಟಾ-ಹೊನ್ನಾವರ,Kumta,25.0,Dinakar Keshav Shetty,BJP,North,yes
+86,ಗದಗ,Gadag,50.0,H. K. Patil,Congress,North,yes
+87,ರೋಣ,Ron,50.0,Gurupadagouda Sanganagouda Patil,Congress,North,yes
+88,ಮೂಡಿಗೆರೆ,Mudigere (SC),50.0,Nayana Motamma,Congress,Central,yes
+89,ಚಿಕ್ಕಮಗಳೂರು,Chickamagalur,50.0,H. D. Thammaiah,Congress,Central,yes
+90,ಕಡೂರು,Kadur,50.0,K S Anand,Congress,Central,yes
+91,ಶೃಂಗೇರಿ,Sringeri,50.0,T.D.Rajegowda,Congress,Central,yes
+92,ತರೀಕೆರೆ,Tarikere,50.0,G.H. Srinivasa,Congress,Central,yes
+93,ಗೌರಿಬಿದನೂರು,Gauribidanur,50.0,K H Puttaswamy Gowda,Independent,South,yes
+94,ಚಿಕ್ಕಬಳ್ಳಾಪುರ,Chikkaballapur,50.0,Pradeep Eshwar,Congress,South,yes
+95,ಬಾಗೇಪಲ್ಲಿ,Bagepalli,50.0,S.N. Subbareddy,Congress,South,yes
+96,ಚಿಂತಾಮಣಿ,Chintamani,50.0,Dr M C Sudhakar,Congress,South,yes
+97,ಶಿಡ್ಲಘಟ್ಟ,Sidlaghatta,25.0,B N Ravikumar,JD(S),South,yes
+98,ಚಾಮರಾಜ,Chamaraja,50.0,K. Harish Gowda,Congress,South,yes
+99,ಟಿ.ನರಸೀಪುರ,T. Narasipur (SC),50.0,Dr. H C Mahadevappa,Congress,South,yes
+100,ನರಸಿಂಹರಾಜ,Narasimharaja,50.0,Tanveer Sait,Congress,South,yes
+101,ನಂಜನಗೂಡು,Nanjangud (SC),50.0,Darshan Dhruvanarayana,Congress,South,yes
+102,ಕೃಷ್ಣರಾಜನಗರ,Krishnarajanagara,50.0,Ravishankar D,Congress,South,yes
+103,ಚಾಮರಾಜನಗರ,Chamarajanagar,50.0,C. Puttarangashetty,Congress,South,yes
+104,ಹೆಚ್.ಡಿ.ಕೋಟೆ,Heggadadevankote (ST),50.0,Anil Chikkamadhu,Congress,South,yes
+105,ಪಿರಿಯಾಪಟ್ಟಣ,Piriyapatna,50.0,K Venkatesh,Congress,South,yes
+106,ಕೃಷ್ಣರಾಜ,Krishnaraja,25.0,T.S. Srivathsa,BJP,South,yes
+107,ಹುಣಸೂರು,Hunsur,25.0,G.D. Harish Gowda,JD(S),South,yes
+108,ಚಾಮುಂಡೇಶ್ವರಿ,Chamundeshwari,25.0,G. T. Devegowda,JD(S),South,yes
+109,ಭದ್ರಾವತಿ,Bhadravathi,50.0,B.K. Sanagameshwara,Congress,Central,yes
+110,ಸೊರಬ,Sorab,50.0,Madhu Bangarappa,Congress,Central,yes
+111,ಸಾಗರ,Sagar,50.0,Gopala Krishna Beluru,Congress,Central,yes
+112,ಶಿವಮೊಗ್ಗ,Shimoga,25.0,Channabasappa (Chenni),BJP,Central,yes
+113,ಶಿಕಾರಿಪುರ,Shikaripura,25.0,Vijayendra Yediyurappa,BJP,Central,yes
+114,ಶಿವಮೊಗ್ಗ ಗ್ರಾಮಾಂತರ,Shimoga Rural (SC),25.0,Sharada Puryanaik,JD(S),Central,yes
+115,ಕೊಳ್ಳೇಗಾಲ,Kollegal (SC),50.0,A.R.Krishnamurthy,Congress,South,yes
+116,ಗುಂಡ್ಲುಪೇಟೆ,Gundlupet,50.0,H.M.Ganesh Prasad,Congress,South,yes
+117,ಹನೂರು,Hanur,25.0,M.R. Manjunath,JD(S),South,yes
+118,ಮೊಳಕಾಲ್ಮೂರು,Molakalmuru (ST),50.0,N.Y.Gopalakrishna,Congress,Central,yes
+119,ಚಳ್ಳಕೆರೆ,Challakere (ST),50.0,T. Raghumurthy,Congress,Central,yes
+120,ಚಿತ್ರದುರ್ಗ,Chitradurga,50.0,K.C.Veerendra Puppy,Congress,Central,yes
+121,ಹಿರಿಯೂರು,Hiriyur,50.0,D Sudakar,Congress,Central,yes
+122,ಹೊಸದುರ್ಗ,Hosadurga,50.0,B G Govindappa,Congress,Central,yes
+123,ವಿಜಯನಗರ,Vijayanagara,50.0,H.R.Gaviyappa,Congress,North-East,yes
+124,ಕೂಡ್ಲಿಗಿ,Kudligi (ST),50.0,Srinivas N T,Congress,North-East,yes
+125,ಹರಪನಹಳ್ಳಿ,Harapanahalli,50.0,Latha Mallikarjun,Independent,North-East,yes
+126,ಹೂವಿನ ಹಡಗಲಿ,Hadagali (SC),25.0,Krishna Nayaka,BJP,North-East,yes
+127,ಹಗರಿಬೊಮ್ಮನಹಳ್ಳಿ,Hagaribommanahalli (SC),25.0,Nemarajanaik.K,JD(S),North-East,yes
+128,ಕನಕಗಿರಿ,Kanakagiri (SC),50.0,Tangadagi Shivaraj Sangappa,Congress,North-East,yes
+129,ಕೊಪ್ಪಳ,Koppal,50.0,K. Raghavendra Basavaraj Hitnal,Congress,North-East,yes
+130,ಯಲಬುರ್ಗಾ,Yelburga,50.0,Basavaraj Rayareddi,Congress,North-East,yes
+131,ಕುಷ್ಟಗಿ,Kushtagi,25.0,Doddanagouda Hanamagouda Patil,BJP,North-East,yes
+132,ಗಂಗಾವತಿ,Gangavathi,25.0,G Janardhan Reddy,KRPP,North-East,yes
+133,ಕೋಲಾರ ಗೋಲ್ಡ್ ಫೀಲ್ಡ್,Kolar Gold Field (SC),50.0,Roopa Kala. M,Congress,South,yes
+134,ಬಂಗಾರಪೇಟೆ,Bangarapet (SC),50.0,S.N. Narayanaswamy. K.M,Congress,South,yes
+135,ಮಾಲೂರು,Malur,50.0,K.Y.Nanjegowda,Congress,South,yes
+136,ಕೋಲಾರ,Kolar,50.0,Kothur.G. Manjunatha,Congress,South,yes
+137,ಶ್ರೀನಿವಾಸಪುರ,Srinivasapur,25.0,G.K. Venkatashivareddy,JD(S),South,yes
+138,ಮುಳಬಾಗಿಲು,Mulbagal (SC),25.0,Samruddhi V. Manjunath,JD(S),South,yes
+139,ಆನೇಕಲ್,Anekal (SC),50.0,B. Shivanna,Congress,South,yes
+140,ಹೊಸಕೋಟೆ,Hosakote,50.0,Sharath Kumar Bachegowda,Congress,South,yes
+141,ದೇವನಹಳ್ಳಿ,Devanahalli (SC),50.0,K.H.Muniyappa,Congress,South,yes
+142,ನೆಲಮಂಗಲ,Nelamangala (SC),50.0,Shreenivasaiah N,Congress,South,yes
+143,ದೊಡ್ಡಬಳ್ಳಾಪುರ,Doddaballapur,25.0,Dheeraj Muniraj,BJP,South,yes
+144,ನಾಗಮಂಗಲ,Nagamangala,50.0,N. Chaluvarayaswamy,Congress,South,yes
+145,ಮದ್ದೂರು,Maddur,50.0,Udaya K M,Congress,South,yes
+146,ಮಂಡ್ಯ,Mandya,50.0,Ravikumar Gowda (Ganiga),Congress,South,yes
+147,ಶ್ರೀರಂಗಪಟ್ಟಣ,Shrirangapattana,50.0,A.B. Ramesha Bandisiddegowda,Congress,South,yes
+148,ಮಳವಳ್ಳಿ,Malavalli (SC),50.0,P.M.Narendraswamy,Congress,South,yes
+149,ಮೇಲುಕೋಟೆ,Melukote,50.0,Dharshan Puttannaiah,SKP,South,yes
+150,ಕೃಷ್ಣರಾಜಪೇಟೆ,Krishnarajpet,25.0,H T Manju,JD(S),South,yes
+151,ಮಾಗಡಿ,Magadi,50.0,H. C. Balakrishna,Congress,South,yes
+152,ರಾಮನಗರ,Ramanagaram,50.0,H. A. Iqbal Hussain,Congress,South,yes
+153,ಚನ್ನಪಟ್ಟಣ,Channapatna,50.0,C P Yogeeshwara,Congress,South,yes
+154,ಕನಕಪುರ,Kanakapura,50.0,D K Shivakumar,Congress,South,yes
+155,ಗುಬ್ಬಿ,Gubbi,50.0,S R Srinivas (Vasu),Congress,South,yes
+156,ಕುಣಿಗಲ್,Kunigal,50.0,Dr. H D Ranganath,Congress,South,yes
+157,ಮಧುಗಿರಿ,Madhugiri,50.0,Kyathasandra N. Rajanna,Congress,South,yes
+158,ಕೊರಟಗೆರೆ,Koratagere (SC),50.0,Dr. G. Parameshwara,Congress,South,yes
+159,ತಿಪಟೂರು,Tiptur,50.0,K Shadakshari,Congress,South,yes
+160,ಪಾವಗಡ,Pavagada (SC),50.0,H.V.Venkatesh,Congress,South,yes
+161,ಶಿರಾ,Sira,50.0,T B Jayachandra,Congress,South,yes
+162,ತುಮಕೂರು ನಗರ,Tumkur City,25.0,G B Jyothi Ganesh,BJP,South,yes
+163,ತುಮಕೂರು ಗ್ರಾಮಾಂತರ,Tumkur Rural,25.0,B.Suresh Gowda,BJP,South,yes
+164,ಚಿಕ್ಕನಾಯಕನಹಳ್ಳಿ,Chikknayakanhalli,25.0,C B Suresh Babu,JD(S),South,yes
+165,ತುರುವೇಕೆರೆ,Turuvekere,25.0,M.T.Krishnappa,JD(S),South,yes
+166,ಅರಸೀಕೆರೆ,Arsikere,50.0,K M Shivalingegowda,Congress,South,yes
+167,ಬೇಲೂರು,Belur,25.0,H K Suresh,BJP,South,yes
+168,ಶ್ರವಣಬೆಳಗೊಳ,Shravanabelagola,25.0,C N Balakrishna,JD(S),South,yes
+169,ಹಾಸನ,Hassan,25.0,H. P. Swaroop,JD(S),South,yes
+170,ಅರಕಲಗೂಡು,Arakalgud,25.0,A. Manju,JD(S),South,yes
+171,ಹೊಳೆನರಸೀಪುರ,Holenarasipur,25.0,H D Revanna,JD(S),South,yes
+172,ವಿರಾಜಪೇಟೆ,Virajpet,50.0,A.S.Ponnanna,Congress,South,yes
+173,ಮಡಿಕೇರಿ,Madikeri,50.0,Dr. Mantar Gowda,Congress,South,yes
+174,ಪುತ್ತೂರು,Puttur,50.0,Ashok Kumar Rai,Congress,Central,yes
+175,ಸುಳ್ಯ,Sullia (SC),25.0,Bhagirathi Murulya,BJP,Central,yes
+176,ಮಂಗಳೂರು ನಗರ ದಕ್ಷಿಣ,Mangalore City South,25.0,D.Vedavyasa Kamath,BJP,Central,yes
+177,ಶಾಂತಿನಗರ,Shantinagar,50.0,N. A. Haris,Congress,South (Bengaluru city),yes
+178,ಗಾಂಧೀನಗರ,Gandhinagar,50.0,Dinesh Gundu Rao,Congress,South,yes
+179,ಚಾಮರಾಜಪೇಟೆ,Chamrajapet,50.0,B.Z.Zameer Ahmed Khan,Congress,South (Bengaluru city),yes
+180,ಗೋವಿಂದರಾಜ ನಗರ,Govindarajanagar,50.0,Priyakrishna,Congress,South (Bengaluru city),yes
+181,ವಿಜಯನಗರ,Vijayanagar,50.0,M Krishnappa,Congress,South (Bengaluru city),yes
+182,ಬ್ಯಾಟರಾಯನಪುರ,Byatarayanapura,50.0,Krishna Byregowda,Congress,South,yes
+183,ಸರ್ವಜ್ಞನಗರ,Sarvagnanagar,50.0,K. J. George,Congress,South (Bengaluru city),yes
+184,ಪುಲಕೇಶಿನಗರ,Pulakeshinagar (SC),50.0,A C Srinivasa,Congress,South (Bengaluru city),yes
+185,ಹೆಬ್ಬಾಳ,Hebbal,50.0,Suresha B S,Congress,South (Bengaluru city),yes
+186,ಬಿ.ಟಿ.ಎಂ. ಬಡಾವಣೆ,B.T.M Layout,50.0,Ramalinga Reddy,Congress,South (Bengaluru city),yes
+187,ಚಿಕ್ಕಪೇಟೆ,Chickpet,25.0,Uday B. Garudachar,BJP,South (Bengaluru city),yes
+188,ಮಹದೇವಪುರ,Mahadevapura (SC),25.0,Manjula S,BJP,South,yes
+189,ಕೆ.ಆರ್. ಪುರ,K.R. Pura,25.0,B. A. Basavaraja,BJP,South (Bengaluru city),yes
+190,ರಾಜರಾಜೇಶ್ವರಿನಗರ,Rajarajeshwarinagar,25.0,Munirathna,BJP,South (Bengaluru city),yes
+191,ದಾಸರಹಳ್ಳಿ,Dasarahalli,25.0,S. Muniraju,BJP,South (Bengaluru city),yes
+192,ಮಹಾಲಕ್ಷ್ಮಿ ಲೇಔಟ್,Mahalakshmi Layout,25.0,K. Gopalaiah,BJP,South (Bengaluru city),yes
+193,ಮಲ್ಲೇಶ್ವರಂ,Malleshwaram,25.0,Dr Ashwath Narayan C N,BJP,South (Bengaluru city),yes
+194,ರಾಜಾಜಿನಗರ,Rajajinagar,25.0,S Suresh Kumar,BJP,South (Bengaluru city),yes
+195,ಬಸವನಗುಡಿ,Basavanagudi,25.0,Ravi Subramanya L.A.,BJP,South (Bengaluru city),yes
+196,ಪದ್ಮನಾಭ ನಗರ,Padmanabanagar,50.0,R. Ashoka,BJP,South (Bengaluru city),yes
+197,ಯಲಹಂಕ,Yelahanka,25.0,S R Vishwanath,BJP,South,yes
+198,ಜಯನಗರ,Jayanagar,25.0,C K Ramamurthy,BJP,South (Bengaluru city),yes
+199,ಬೆಂಗಳೂರು ದಕ್ಷಿಣ,Bangalore South,25.0,M Krishnappa,BJP,South,yes
+200,ಬೊಮ್ಮನಹಳ್ಳಿ,Bommanahalli,25.0,Sathish Reddy .M,BJP,South (Bengaluru city),yes
+201,ಯಶವಂತಪುರ,Yeshwanthapura,50.0,S.T. Somashekar,BJP,South,yes
+202,ಸಿ.ವಿ.ರಾಮನ್ ನಗರ,C.V. Ramannnagar (SC),25.0,S. Raghu,BJP,South (Bengaluru city),yes
+203,ಶಿವಾಜಿನಗರ,Shivajinagar,50.0,Rizwan Arshad,Congress,South,yes
+,,Baindur,,Gururaj Shetty Gantihole,BJP,Central,no
+,,Bantwal,,Rajesh Naik U,BJP,Central,no
+,,Basavakalyan,,Sharanu Salagar,BJP,North-East,no
+,,Belgaum Dakshin,,Abhay Patil,BJP,North,no
+,,Belthangady,,Harish Poonja,BJP,Central,no
+,,Chincholi (SC),,Avinash Umesh Jadhav,BJP,North-East,no
+,,Devadurga (ST),,Karemma,JD(S),North-East,no
+,,Holalkere (SC),,M.Chandrappa,BJP,Central,no
+,,Hubli-Dharwad-Central,,Mahesh Tenginakai,BJP,North,no
+,,Kapu,,Gurme Suresh Shetty,BJP,Central,no
+,,Karkala,,V Sunill Kumar,BJP,Central,no
+,,Kundapur,,A Kiran Kumar Kodgi,BJP,Central,no
+,,Mangalore,,U.T. Khader Fareed,Congress,Central,no
+,,Mangalore City North,,Dr Y Bharath Shetty,BJP,Central,no
+,,Moodabidri,,Umanatha Kotian,BJP,Central,no
+,,Nargund,,C. C. Patil,BJP,North,no
+,,Sakaleshpur (SC),,S Manjunatha,BJP,South,no
+,,Shirahatti (SC),,Dr.Chandru Lamani,BJP,North,no
+,,Tirthahalli,,Araga Jnanendra,BJP,Central,no
+,,Udupi,,Yashpal,BJP,Central,no
+,,Varuna,,Siddaramaiah,Congress,South,no
