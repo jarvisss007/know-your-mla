@@ -102,3 +102,7 @@ Use posts only: say "former KPSC chairman", never a name. Say "first in our trac
 10. **The KCTU conviction story** (Deccan Herald, 31 Mar 2026, a 1982-2014 check period). The research notes do not confirm the article was opened. Hold.
 11. **The posting-for-money claims** ("transfer syndicate", PSI case claims): political allegations, no finding.
 12. **Total value of assets claimed (Rs 242 crore across 46 officials)**: it mixes total-asset and DA figures and includes single-outlet numbers.
+
+## 6. Added 24 Nov 2026: the Lokayukta's own figures (use alongside "0 guilty")
+
+On 24 Nov 2026 (PTI, via ThePrint) the Lokayukta said that from 10 Sep 2022 to 15 Nov 2026 it registered 1,298 Prevention of Corruption Act cases (322 search, 976 trap), filed charge sheets in 952, and 697 had concluded with 153 convictions; 2,159 cases came over from the abolished ACB. The release does not say whether the 153 convictions are in its own cases or in ACB cases. Any script or card that says "1,248 cases, none proven guilty" must also say: "The Lokayukta reports 153 convictions over the same years; it does not say in which cases." Source: https://theprint.in/india/karnataka-lokayukta-says-952-charge-sheets-filed-153-convictions-in-four-years/3107631/ . Now on the site (#officials).
