@@ -1,0 +1,301 @@
+department,sl_no,constituency,amount_rs_crore
+01 PWD (Lokopayogi),1,Yelahanka,30.00
+01 PWD (Lokopayogi),2,Chitradurga,15.00
+01 PWD (Lokopayogi),3,Hiriyur,23.45
+01 PWD (Lokopayogi),4,Hosadurga,10.00
+01 PWD (Lokopayogi),5,Holalkere,15.00
+01 PWD (Lokopayogi),6,Davanagere North,3.00
+01 PWD (Lokopayogi),7,Mayakonda,17.10
+01 PWD (Lokopayogi),8,Channagiri,26.00
+01 PWD (Lokopayogi),9,Shimoga Rural,10.00
+01 PWD (Lokopayogi),10,Sorab,13.00
+01 PWD (Lokopayogi),11,Sagar,15.00
+01 PWD (Lokopayogi),12,Sira,17.00
+01 PWD (Lokopayogi),13,Mulbagal,25.00
+01 PWD (Lokopayogi),14,Nanjangud,25.00
+01 PWD (Lokopayogi),15,Krishnaraja,50.00
+01 PWD (Lokopayogi),16,Gundlupet,29.00
+01 PWD (Lokopayogi),17,Virajpet,20.00
+01 PWD (Lokopayogi),18,Hassan,32.00
+01 PWD (Lokopayogi),19,Mudigere,30.00
+01 PWD (Lokopayogi),20,Chikmagalur,15.00
+01 PWD (Lokopayogi),21,Tarikere,30.00
+01 PWD (Lokopayogi),22,Kadur,35.00
+01 PWD (Lokopayogi),23,Moodabidri,46.00
+01 PWD (Lokopayogi),24,Bantval,20.00
+01 PWD (Lokopayogi),25,Puttur,25.00
+01 PWD (Lokopayogi),26,Byndoor,12.90
+01 PWD (Lokopayogi),27,Kundapura,47.00
+01 PWD (Lokopayogi),28,Udupi,16.00
+01 PWD (Lokopayogi),29,Kaup,10.00
+01 PWD (Lokopayogi),30,Kagwad,25.85
+01 PWD (Lokopayogi),31,Kudachi,20.00
+01 PWD (Lokopayogi),32,Raybag,34.00
+01 PWD (Lokopayogi),33,Arabhavi,32.00
+01 PWD (Lokopayogi),34,Belgaum Uttar,47.00
+01 PWD (Lokopayogi),35,Kittur,45.00
+01 PWD (Lokopayogi),36,Saundatti Yellamma,50.00
+01 PWD (Lokopayogi),37,Ramdurg,43.00
+01 PWD (Lokopayogi),38,Hungund,30.00
+01 PWD (Lokopayogi),39,Devar Hippargi,25.00
+01 PWD (Lokopayogi),40,Sindgi,50.00
+01 PWD (Lokopayogi),41,Haveri,50.00
+01 PWD (Lokopayogi),42,Byadgi,33.00
+01 PWD (Lokopayogi),43,Ranibennur,35.00
+01 PWD (Lokopayogi),44,Dharwad,42.00
+01 PWD (Lokopayogi),45,Hubli-Dharwad West,46.00
+01 PWD (Lokopayogi),46,Shirahatti,28.60
+01 PWD (Lokopayogi),47,Ron,8.50
+01 PWD (Lokopayogi),48,Karwar,22.00
+01 PWD (Lokopayogi),49,Kumta,9.28
+01 PWD (Lokopayogi),50,Bhatkal,7.00
+01 PWD (Lokopayogi),51,Sirsi,10.00
+01 PWD (Lokopayogi),52,Sedam,24.00
+01 PWD (Lokopayogi),53,Gulbarga Rural,30.00
+01 PWD (Lokopayogi),54,Gulbarga Dakshin,15.00
+01 PWD (Lokopayogi),55,Aland,2.75
+01 PWD (Lokopayogi),56,Basavakalyan,50.00
+01 PWD (Lokopayogi),57,Siruguppa,22.00
+01 PWD (Lokopayogi),58,Bellary City,50.00
+01 PWD (Lokopayogi),59,Kudligi,20.00
+01 PWD (Lokopayogi),60,Harapanahalli,33.00
+01 PWD (Lokopayogi),61,Raichur,47.00
+01 PWD (Lokopayogi),62,Gangawati,18.00
+01 PWD (Lokopayogi),63,Yadgir,25.00
+02 RDPR,1,Yelahanka,20.00
+02 RDPR,2,Chitradurga,10.00
+02 RDPR,3,Hiriyur,26.55
+02 RDPR,4,Hosadurga,10.00
+02 RDPR,5,Holalkere,5.00
+02 RDPR,6,Davanagere North,40.00
+02 RDPR,7,Mayakonda,24.70
+02 RDPR,8,Channagiri,10.43
+02 RDPR,9,Shimoga Rural,30.00
+02 RDPR,10,Sorab,37.00
+02 RDPR,11,Sagar,35.00
+02 RDPR,12,Sira,28.00
+02 RDPR,13,Mulbagal,25.00
+02 RDPR,14,Nanjangud,20.00
+02 RDPR,15,Gundlupet,2.65
+02 RDPR,16,Virajpet,25.00
+02 RDPR,17,Hassan,13.00
+02 RDPR,18,Mudigere,16.50
+02 RDPR,19,Chikmagalur,30.00
+02 RDPR,20,Tarikere,20.00
+02 RDPR,21,Kadur,10.00
+02 RDPR,22,Bantval,20.00
+02 RDPR,23,Puttur,10.00
+02 RDPR,24,Byndoor,20.00
+02 RDPR,25,Udupi,19.00
+02 RDPR,26,Kaup,25.00
+02 RDPR,27,Athani,33.50
+02 RDPR,28,Kagwad,24.15
+02 RDPR,29,Kudachi,15.00
+02 RDPR,30,Raybag,10.00
+02 RDPR,31,Arabhavi,18.00
+02 RDPR,32,Kittur,5.00
+02 RDPR,33,Ramdurg,7.00
+02 RDPR,34,Hungund,10.00
+02 RDPR,35,Devar Hippargi,20.00
+02 RDPR,36,Byadgi,10.00
+02 RDPR,37,Ranibennur,15.00
+02 RDPR,38,Dharwad,3.00
+02 RDPR,39,Shirahatti,20.40
+02 RDPR,40,Ron,40.50
+02 RDPR,41,Karwar,21.00
+02 RDPR,42,Kumta,37.20
+02 RDPR,43,Bhatkal,41.00
+02 RDPR,44,Sirsi,35.00
+02 RDPR,45,Sedam,26.00
+02 RDPR,46,Gulbarga Rural,10.00
+02 RDPR,47,Gulbarga Dakshin,25.00
+02 RDPR,48,Aland,23.50
+02 RDPR,49,Kudligi,15.00
+02 RDPR,50,Harapanahalli,8.00
+02 RDPR,51,Gangawati,14.00
+02 RDPR,52,Yadgir,25.00
+03 Minor Irrigation,1,Chitradurga,25.00
+03 Minor Irrigation,2,Hosadurga,30.00
+03 Minor Irrigation,3,Holalkere,25.00
+03 Minor Irrigation,4,Davanagere North,2.00
+03 Minor Irrigation,5,Mayakonda,2.00
+03 Minor Irrigation,6,Shimoga Rural,10.00
+03 Minor Irrigation,7,Sira,5.00
+03 Minor Irrigation,8,Nanjangud,5.00
+03 Minor Irrigation,9,Virajpet,5.00
+03 Minor Irrigation,10,Mudigere,3.50
+03 Minor Irrigation,11,Chikmagalur,5.00
+03 Minor Irrigation,12,Kadur,5.00
+03 Minor Irrigation,13,Moodabidri,4.00
+03 Minor Irrigation,14,Bantval,10.00
+03 Minor Irrigation,15,Puttur,15.00
+03 Minor Irrigation,16,Byndoor,17.10
+03 Minor Irrigation,17,Kundapura,3.00
+03 Minor Irrigation,18,Udupi,15.00
+03 Minor Irrigation,19,Kaup,15.00
+03 Minor Irrigation,20,Raybag,6.00
+03 Minor Irrigation,21,Belgaum Uttar,3.00
+03 Minor Irrigation,22,Devar Hippargi,5.00
+03 Minor Irrigation,23,Dharwad,5.00
+03 Minor Irrigation,24,Hubli-Dharwad West,4.00
+03 Minor Irrigation,25,Shirahatti,1.00
+03 Minor Irrigation,26,Ron,1.00
+03 Minor Irrigation,27,Karwar,7.00
+03 Minor Irrigation,28,Kumta,3.52
+03 Minor Irrigation,29,Bhatkal,2.00
+03 Minor Irrigation,30,Gulbarga Rural,10.00
+03 Minor Irrigation,31,Gulbarga Dakshin,10.00
+03 Minor Irrigation,32,Siruguppa,28.00
+03 Minor Irrigation,33,Kudligi,15.00
+03 Minor Irrigation,34,Harapanahalli,9.00
+03 Minor Irrigation,35,Gangawati,18.00
+04 Muzrai,1,Yelahanka,2.00
+04 Muzrai,2,Chitradurga,2.00
+04 Muzrai,3,Hiriyur,2.00
+04 Muzrai,4,Hosadurga,2.00
+04 Muzrai,5,Holalkere,2.00
+04 Muzrai,6,Davanagere North,2.00
+04 Muzrai,7,Mayakonda,2.00
+04 Muzrai,8,Channagiri,2.00
+04 Muzrai,9,Shimoga Rural,2.00
+04 Muzrai,10,Sorab,2.00
+04 Muzrai,11,Sagar,2.00
+04 Muzrai,12,Sira,2.00
+04 Muzrai,13,Mulbagal,2.00
+04 Muzrai,14,Nanjangud,2.00
+04 Muzrai,15,Krishnaraja,2.00
+04 Muzrai,16,Gundlupet,2.00
+04 Muzrai,17,Virajpet,2.00
+04 Muzrai,18,Hassan,2.00
+04 Muzrai,19,Mudigere,2.00
+04 Muzrai,20,Chikmagalur,2.00
+04 Muzrai,21,Tarikere,2.00
+04 Muzrai,22,Kadur,2.00
+04 Muzrai,23,Moodabidri,2.00
+04 Muzrai,24,Bantval,2.00
+04 Muzrai,25,Puttur,2.00
+04 Muzrai,26,Byndoor,2.00
+04 Muzrai,27,Kundapura,2.00
+04 Muzrai,28,Udupi,2.00
+04 Muzrai,29,Kaup,2.00
+04 Muzrai,30,Athani,2.00
+04 Muzrai,31,Kagwad,2.00
+04 Muzrai,32,Kudachi,2.00
+04 Muzrai,33,Raybag,2.00
+04 Muzrai,34,Arabhavi,2.00
+04 Muzrai,35,Belgaum Uttar,2.00
+04 Muzrai,36,Kittur,2.00
+04 Muzrai,37,Saundatti Yellamma,2.00
+04 Muzrai,38,Ramdurg,2.00
+04 Muzrai,39,Hungund,2.00
+04 Muzrai,40,Devar Hippargi,2.00
+04 Muzrai,41,Sindgi,2.00
+04 Muzrai,42,Haveri,2.00
+04 Muzrai,43,Byadgi,2.00
+04 Muzrai,44,Ranibennur,2.00
+04 Muzrai,45,Dharwad,2.00
+04 Muzrai,46,Hubli-Dharwad West,2.00
+04 Muzrai,47,Shirahatti,2.00
+04 Muzrai,48,Ron,2.00
+04 Muzrai,49,Karwar,2.00
+04 Muzrai,50,Kumta,2.00
+04 Muzrai,51,Bhatkal,2.00
+04 Muzrai,52,Sirsi,2.00
+04 Muzrai,53,Sedam,2.00
+04 Muzrai,54,Gulbarga Rural,2.00
+04 Muzrai,55,Gulbarga Dakshin,2.00
+04 Muzrai,56,Aland,2.00
+04 Muzrai,57,Basavakalyan,2.00
+04 Muzrai,58,Siruguppa,2.00
+04 Muzrai,59,Bellary City,2.00
+04 Muzrai,60,Kudligi,2.00
+04 Muzrai,61,Harapanahalli,2.00
+04 Muzrai,62,Raichur,2.00
+04 Muzrai,63,Gangawati,2.00
+04 Muzrai,64,Yadgir,2.00
+05 Urban Development,1,Davanagere North,5.00
+05 Urban Development,2,Hassan,5.00
+05 Urban Development,3,Hungund,7.50
+05 Urban Development,4,Sirsi,5.00
+06 Water Resources,1,Athani,16.50
+06 Water Resources,2,Kudachi,15.00
+06 Water Resources,3,Aland,10.00
+07 Social Welfare,1,Gundlupet,1.60
+08 Backward Classes Welfare,1,Gundlupet,10.43
+08 Backward Classes Welfare,2,Hungund,2.50
+08 Backward Classes Welfare,3,Byadgi,7.00
+08 Backward Classes Welfare,4,Aland,2.75
+08 Backward Classes Welfare,5,Raichur,3.00
+09 Primary & Secondary Education,1,Mayakonda,6.2
+09 Primary & Secondary Education,2,Channagiri,11.32
+09 Primary & Secondary Education,3,Gundlupet,0.44
+10 Housing,1,Holalkere,5.00
+11 Women & Child Development,1,Channagiri,2.25
+"12 Planning, Programme Monitoring & Statistics",1,Aland,11.00
+
+PER-CONSTITUENCY TOTALS
+constituency,total_rs_crore
+Yelahanka,52.00
+Chitradurga,52.00
+Hiriyur,52.00
+Hosadurga,52.00
+Holalkere,52.00
+Davanagere North,52.00
+Mayakonda,52.00
+Channagiri,52.00
+Shimoga Rural,52.00
+Sorab,52.00
+Sagar,52.00
+Sira,52.00
+Mulbagal,52.00
+Nanjangud,52.00
+Krishnaraja,52.00
+Gundlupet,46.12
+Virajpet,52.00
+Hassan,52.00
+Mudigere,52.00
+Chikmagalur,52.00
+Tarikere,52.00
+Kadur,52.00
+Moodabidri,52.00
+Bantval,52.00
+Puttur,52.00
+Byndoor,52.00
+Kundapura,52.00
+Udupi,52.00
+Kaup,52.00
+Kagwad,52.00
+Kudachi,52.00
+Raybag,52.00
+Arabhavi,52.00
+Belgaum Uttar,52.00
+Kittur,52.00
+Saundatti Yellamma,52.00
+Ramdurg,52.00
+Hungund,52.00
+Devar Hippargi,52.00
+Sindgi,52.00
+Haveri,52.00
+Byadgi,52.00
+Ranibennur,52.00
+Dharwad,52.00
+Hubli-Dharwad West,52.00
+Shirahatti,52.00
+Ron,52.00
+Karwar,52.00
+Kumta,52.00
+Bhatkal,52.00
+Sirsi,52.00
+Sedam,52.00
+Gulbarga Rural,52.00
+Gulbarga Dakshin,52.00
+Aland,52.00
+Basavakalyan,52.00
+Siruguppa,52.00
+Bellary City,52.00
+Kudligi,52.00
+Harapanahalli,52.00
+Raichur,52.00
+Gangawati,52.00
+Yadgir,52.00
+Athani,52.00
