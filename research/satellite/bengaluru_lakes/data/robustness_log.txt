@@ -1,0 +1,72 @@
+13 lakes
+57 dates
+2019-01-04 ok
+2019-01-14 ok
+2019-01-19 ok
+2019-01-09 ok
+2019-01-24 ok
+2019-01-29 ok
+2019-02-13 ok
+2019-02-03 ok
+2019-02-18 ok
+2019-02-08 ok
+2019-03-05 ok
+2019-02-23 ok
+2019-02-28 ok
+2019-03-15 ok
+2019-03-25 ok
+2019-03-20 ok
+2019-03-30 ok
+2025-01-02 ok
+2019-03-10 ok
+2025-01-07 ok
+2025-01-12 ok
+2025-01-17 ok
+2025-02-01 ok
+2025-02-06 ok
+2025-02-11 ok
+2025-02-16 ok
+2025-01-27 ok
+2025-02-21 ok
+2025-03-03 ok
+2025-02-26 ok
+2025-03-08 ok
+2025-03-13 ok
+2025-03-15 ok
+2025-03-18 ok
+2025-03-23 ok
+2025-03-28 ok
+2026-01-02 ok
+2026-01-07 ok
+2026-01-09 ok
+2026-01-12 ok
+2026-01-17 ok
+2026-01-22 ok
+2026-01-27 ok
+2026-02-06 ok
+2026-02-01 ok
+2026-02-11 ok
+2026-02-16 ok
+2026-02-21 ok
+2026-02-26 ok
+2026-03-03 ok
+2026-03-08 ok
+2026-03-10 ok
+2026-03-13 ok
+2026-03-18 ok
+2026-03-20 ok
+2026-03-23 ok
+2026-03-28 ok
+Hesaraghatta Lake holds: every clean 2026 date above every clean 2019 date (median change +214.3 ha) | does not hold: swings with the date (median change +31.9 ha vs headline -33.8 ha)
+unnamed way/28069768 holds: every clean 2026 date above every clean 2019 date (median change +62.2 ha) | does not hold: swings with the date (median change +3.9 ha vs headline -0.9 ha)
+Nagadasanahalli Lake holds: every clean 2026 date above every clean 2019 date (median change +55.8 ha) | does not hold: swings with the date (median change -8.3 ha vs headline -18.4 ha)
+Varthur Lake holds: every clean 2026 date above every clean 2019 date (median change +49.1 ha) | holds: every clean 2026 date below every clean 2019 date (median change -57.2 ha)
+Kakolu Lake holds: every clean 2026 date above every clean 2019 date (median change +39.4 ha) | does not hold: swings with the date (median change -1.6 ha vs headline -18.9 ha)
+Bellandur Lake mostly holds: medians differ in the same direction (-40.0 ha) but single dates overlap | mostly holds: medians differ in the same direction (-94.1 ha) but single dates overlap
+Ramapura Kere holds: every clean 2026 date above every clean 2019 date (median change +36.7 ha) | holds: every clean 2026 date below every clean 2019 date (median change -46.0 ha)
+Doddanekundi Lake holds: every clean 2026 date above every clean 2019 date (median change +30.5 ha) | mostly holds: medians differ in the same direction (-28.0 ha) but single dates overlap
+unnamed relation/8415449 mostly holds: medians differ in the same direction (-29.3 ha) but single dates overlap | mostly holds: medians differ in the same direction (+64.2 ha) but single dates overlap
+Bagaluru Kere holds: every clean 2026 date above every clean 2019 date (median change +32.7 ha) | mostly holds: medians differ in the same direction (-5.7 ha) but single dates overlap
+Muthanalluru Lake holds: every clean 2026 date below every clean 2019 date (median change -48.6 ha) | holds: every clean 2026 date above every clean 2019 date (median change +50.7 ha)
+Kalkere Lake holds: every clean 2026 date below every clean 2019 date (median change -31.4 ha) | mostly holds: medians differ in the same direction (+37.9 ha) but single dates overlap
+Nagawara Lake mostly holds: medians differ in the same direction (-18.7 ha) but single dates overlap | mostly holds: medians differ in the same direction (-0.9 ha) but single dates overlap

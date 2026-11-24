@@ -1,0 +1,28 @@
+grid 5552 6400
+5903 elements; 1784 lake-type polygons in area; excluded {'wastewater': 143, 'basin': 79, 'drain': 552, 'stream': 11, 'river': 10, 'canal': 1} no geom 5 outside 3318
+1776 water bodies; 450 >= 2.0 ha
+loading 2019 S2A_MSIL2A_20190213T050921_R019_T43PGQ_20201007T162011 offset 0
+   B03
+   B04
+   B08
+   B11
+loading 2026 S2B_MSIL2A_20260211T050839_R019_T43PGQ_20260211T085923 offset -1000
+   B03
+   B04
+   B08
+   B11
+png bytes 1377018
+{
+ "lakes": 449,
+ "outline_ha": 6657.5,
+ "water_ha_2019": 1485.6,
+ "green_on_lake_ha_2019": 2297.5,
+ "valid_pct_2019": 98.55,
+ "water_ha_2026": 2607.8,
+ "green_on_lake_ha_2026": 2553.0,
+ "valid_pct_2026": 99.98,
+ "water_gained_ha": 1536.4,
+ "water_lost_ha": 414.2,
+ "green_gained_ha": 1321.6,
+ "green_lost_ha": 1066.1
+}

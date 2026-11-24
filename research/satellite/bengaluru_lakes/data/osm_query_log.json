@@ -1,0 +1,56 @@
+{
+ "osm_water_all.json": {
+  "earlier_attempt": "one poly-filtered query (union buffered 300 m, simplified, 198 vertices): HTTP 502 from all three endpoints, round 1, 24 Nov 2026",
+  "chunks": [
+   {
+    "bbox_s_w_n_e": "12.65308,77.32449,12.94554,77.58257",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "elements": 338,
+    "queried_utc": "2026-11-24T23:23:09+00:00",
+    "earlier_failures": [],
+    "remark": null
+   },
+   {
+    "bbox_s_w_n_e": "12.94554,77.32449,13.23799,77.58257",
+    "endpoint": "https://overpass.kumi.systems/api/interpreter",
+    "elements": 861,
+    "queried_utc": "2026-11-24T23:24:34+00:00",
+    "earlier_failures": [
+     "https://overpass-api.de/api/interpreter HTTP 502 (attempt 1)"
+    ],
+    "remark": null
+   },
+   {
+    "bbox_s_w_n_e": "12.65308,77.58257,12.94554,77.84064",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "elements": 773,
+    "queried_utc": "2026-11-24T23:25:12+00:00",
+    "earlier_failures": [],
+    "remark": null
+   },
+   {
+    "bbox_s_w_n_e": "12.94554,77.58257,13.23799,77.84064",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "elements": 3955,
+    "queried_utc": "2026-11-24T23:25:54+00:00",
+    "earlier_failures": [],
+    "remark": null
+   }
+  ],
+  "query_kinds": [
+   "way[\"natural\"=\"water\"]",
+   "relation[\"natural\"=\"water\"]",
+   "way[\"water\"~\"^(lake|reservoir|pond)$\"]",
+   "relation[\"water\"~\"^(lake|reservoir|pond)$\"]",
+   "way[\"landuse\"=\"reservoir\"]",
+   "relation[\"landuse\"=\"reservoir\"]"
+  ],
+  "elements_merged": 5903,
+  "failed_chunks": [],
+  "queried_utc": "2026-11-24T23:25:54+00:00",
+  "endpoint": [
+   "https://overpass-api.de/api/interpreter",
+   "https://overpass.kumi.systems/api/interpreter"
+  ]
+ }
+}

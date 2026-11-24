@@ -1,0 +1,21 @@
+{
+  "_status": "DRAFT - parameters for the Bengaluru city lakes run (lake-only adaptation of ../byatarayanapura/analyze.py, same thresholds, mask and offset rules)",
+  "state": "KARNATAKA",
+  "area_name": "Bengaluru Urban district (28 Assembly constituencies, AC 150-177)",
+  "boundary_source": "../data/boundary/datameet_ac.geojson",
+  "ac_numbers": [150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177],
+  "include_unnumbered_bangalore_polygon": true,
+  "dst_crs": "EPSG:32643",
+  "res_m": 10,
+  "scenes": {
+    "2019": ["S2A_MSIL2A_20190213T050921_R019_T43PGQ_20201007T162011"],
+    "2026": ["S2B_MSIL2A_20260211T050839_R019_T43PGQ_20260211T085923"]
+  },
+  "search_windows": {"2019": "2019-01-01/2019-03-31", "2025": "2025-01-01/2025-03-31", "2026": "2026-01-01/2026-03-31"},
+  "robustness_orbit": 19,
+  "robustness_n_lakes": 10,
+  "robustness_min_lake_valid_pct": 95,
+  "min_lake_ha": 2.0,
+  "cross_boundary_min_share_pct": 5,
+  "excluded_water_tags": ["river", "canal", "stream", "ditch", "drain", "wastewater", "swimming_pool", "fountain", "moat", "basin", "reflecting_pool", "fish_pass", "lock"]
+}
