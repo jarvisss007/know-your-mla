@@ -155,7 +155,7 @@ Also 23 Nov: the scheduled 7c post (works by seat, 24 Nov 8:30 PM IST) had the c
 - 24 Nov 11:07 AM PST with card convictions-en and a link reply (#officials and rti.html#letter-l8): https://x.com/anupam00720/status/2125305265386111118 . First scheduled for 25 Nov, posted now instead on the owner's "post something useful". The Kannada version was dropped (English only on X); convictions-kn.png stays for WhatsApp.
 - 7c (works by seat) link reply added 24 Nov.
 
-## 9. 24 Nov 2026: context reply under the 23 Nov Evidence post (8a). DRAFT, NOT POSTED, waiting for the owner
+## 9. 24 Nov 2026: context reply under the 23 Nov Evidence post (8a). POSTED 24 Nov on the owner's "Post it": https://x.com/anupam00720/status/2125321319772516701
 Reply under https://x.com/anupam00720/status/2125004601204375853 (English only, per the 24 Nov rule; no reply under the Kannada post 8b).
 
 > Context on the "0": the same 20 Aug reply counts 148 convictions since 2023 in older cases, outside the 1,248. On 24 Nov the Lokayukta said 153 convictions in four years, without saying in which cases. We have asked by RTI: https://jarvisss007.github.io/know-your-mla/rti.html#letter-l8
