@@ -25,3 +25,7 @@ Heading: "The Chief Minister's development grants for this seat"
 - Party labels: Yeshwanthapura and Yellapur MLAs were expelled by the BJP on 27 May 2025; data/mlas.csv still says BJP. If the card shows a party, note "expelled from the BJP, May 2025" for those two.
 - Do not add this to the PWD works box (the two may overlap; CMIDP money for roads can also appear in the PWD list).
 - Not for X in Kannada (English only on X since 24 Nov).
+
+## Addendum 25 Nov 2026 (for the live #cmgrants section too)
+- Add one line: "The split is being challenged in the High Court by the BJP MLA for Jamkhandi; in October 2026 the court fined the State Rs 2,000 for repeatedly failing to respond." Sources in research/follow_the_money/CM_GRANTS_BY_SEAT_DRAFT.md ("Added 25 Nov").
+- Shirahatti: not in the CM's list, but the Rural Development department's release list for the same programme shows Rs 5 crore approved for it. On its report card say "Not in the CM's list for 2025-26 (the Rural Development list shows Rs 5 crore approved)", and on the live page change nothing else: the "21 seats not in the list" sentence stays true of that list.
