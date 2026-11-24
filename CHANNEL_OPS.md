@@ -33,6 +33,7 @@ Two Claude sessions work on this project, never on the same files:
 The account has 7 followers. 35 posts from 12 to 18 Nov drew 0 likes, 0 reposts and no replies from anyone else; most got 1 to 3 views (`ops/x_metrics.csv`). The content is not the bottleneck: almost nobody sees it. What did best, on tiny numbers: the CM's own 2013 affidavit debts (10 views), the Know Your MLA launch (9), the post addressed to news agencies (6), two MLAs convicted (5). Abstract budget and audit figures got 1 to 2. The 13 posts sent in 4 minutes on 18 Nov got 1 view each.
 
 Rules from now on:
+- **English only on X** (owner, 24 Nov 2026): no more Kannada posts on X. Kannada stays on the site, the cards for WhatsApp, and YouTube.
 - **No bursts.** At most 2 posts a day, at least 4 hours apart; a thread counts as one. Never empty a queue at once again; use X's free "Schedule post".
 - **A picture with every post.** Attach the matching card from `cards/money/` or `cards/farmers/` (made by `tools/make_money_cards.py`, `tools/make_farmer_cards.py`). The card carries the number, the source and the site address, so it still works if the post is screenshotted.
 - **Link in the first reply, not the post.** X shows posts with outside links to fewer people. Post the text and card; reply to it with the link.

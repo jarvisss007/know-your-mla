@@ -150,3 +150,7 @@ Checks:
 - Section 7 above (the 1,248-cases-only drafts) is superseded by 8a/8b. Do not post both.
 
 Also 23 Nov: the scheduled 7c post (works by seat, 24 Nov 8:30 PM IST) had the card seats-en.png with "Varuna, the CM's seat". The card was corrected (Siddaramaiah, CM until May 2026) and replaced in the scheduled post on X; the text was unchanged. 7b (Kannada bills) went out on 23 Nov 15:00 UTC (https://x.com/anupam00720/status/2124880652583448984); link reply added 23 Nov 23:16 UTC (.../2125005818362052796). 7c (works by seat, 24 Nov 15:00 UTC) still needs its link reply after it goes live: https://jarvisss007.github.io/know-your-mla/reports/follow_the_money.html#seats
+
+## 8. 24 Nov 2026: "153 or 0?" POSTED (English only, owner's rule from today)
+- 24 Nov 11:07 AM PST with card convictions-en and a link reply (#officials and rti.html#letter-l8): https://x.com/anupam00720/status/2125305265386111118 . First scheduled for 25 Nov, posted now instead on the owner's "post something useful". The Kannada version was dropped (English only on X); convictions-kn.png stays for WhatsApp.
+- 7c (works by seat) link reply added 24 Nov.
