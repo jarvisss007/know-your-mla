@@ -227,18 +227,26 @@ def page(d):
     return HEAD.format(title=E(title), desc=E(desc), site=SITE, canon=url, css=CSS) + body + '</div><script data-goatcounter="https://gandaberunda.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>\n</body></html>\n'
 
 
+def _codes(s):
+    """Search Console / GoatCounter slot (tools/site_codes.py; empty until a code is set)."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("site_codes", ROOT / "tools" / "site_codes.py")
+    sc = importlib.util.module_from_spec(spec); spec.loader.exec_module(sc)
+    return s.replace("</head>", sc.head_block() + "</head>", 1)
+
+
 def main():
     OUT.mkdir(exist_ok=True)
     slugs = {}
     for d in D:
         s = slug(d["c"]); assert s not in slugs, (s, d["c"]); slugs[s] = d
-        (OUT / f"{s}.html").write_text(page(d), encoding="utf-8", newline="\n")
+        (OUT / f"{s}.html").write_text(_codes(page(d)), encoding="utf-8", newline="\n")
     rows = "".join(f'<li><a href="{slug(d["c"])}.html">{E(d["c"])}</a> <small>· {E(d["n"])} · {E(d["p"])}</small></li>'
                    for d in sorted(D, key=lambda d: d["c"]))
     idx = HEAD.format(title="All 224 MLAs: report cards · Gandaberunda", desc="One page per Karnataka MLA: declared assets, debts, criminal cases, growth since 2018, and district records.",
                       site=SITE, canon=SITE + "mla/", css=CSS)
     idx += f'<h1>Report cards: all 224 MLAs</h1><p class="fine">One page per constituency, from sworn affidavits and official district records. <span class="kn">ಎಲ್ಲ 224 ಶಾಸಕರ ವರದಿ ಕಾರ್ಡ್‌ಗಳು</span></p><ul class="list">{rows}</ul></div><script data-goatcounter="https://gandaberunda.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>\n</body></html>\n'
-    (OUT / "index.html").write_text(idx, encoding="utf-8", newline="\n")
+    (OUT / "index.html").write_text(_codes(idx), encoding="utf-8", newline="\n")
     # sitemap helps search engines find every page
     urls = [SITE] + [SITE + "mla/" + s + ".html" for s in slugs] + [SITE + "farmers.html", SITE + "members.html"] + [SITE + "members/" + q.name for q in sorted((ROOT / "members").glob("*.html"))]
     (ROOT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

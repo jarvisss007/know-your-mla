@@ -13,6 +13,14 @@ from urllib.parse import quote
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "mlc_mp.json"
 OUT = ROOT / "members.html"
+
+
+def _codes(s):
+    """Search Console / GoatCounter slot (tools/site_codes.py; empty until a code is set)."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("site_codes", ROOT / "tools" / "site_codes.py")
+    sc = importlib.util.module_from_spec(spec); spec.loader.exec_module(sc)
+    return s.replace("</head>", sc.head_block() + "</head>", 1)
 SITE = "https://jarvisss007.github.io/know-your-mla/"
 PARTY = {"INC": "Congress", "IND": "Independent"}
 HOUSES = [("Lok Sabha", "ಲೋಕಸಭೆ", "Members of Parliament elected from Karnataka in 2024."),
@@ -183,7 +191,7 @@ def build_member_pages(ms):
     assert len(slugs) == len(set(slugs)), "duplicate member slugs"
     for m in ms:
         if m.get("latest"):
-            io.open(out / f"{mslug(m)}.html", "w", encoding="utf-8", newline="\n").write(member_page(m, style, lt))
+            io.open(out / f"{mslug(m)}.html", "w", encoding="utf-8", newline="\n").write(_codes(member_page(m, style, lt)))
     print("member pages:", len(slugs))
 
 
@@ -201,7 +209,7 @@ def build():
     desc = "What Karnataka's MLCs and MPs declared in their own sworn election affidavits: assets, debts and criminal cases, with the source for each."
     page = PAGE.replace("{{DESC}}", E(desc)).replace("{{N}}", str(len(ms))).replace("{{F}}", str(found)).replace(
         "{{OPTS}}", "".join(f'<option>{E(p)}</option>' for p in parties)).replace("{{SECS}}", "\n".join(secs))
-    io.open(OUT, "w", encoding="utf-8", newline="\n").write(page)
+    io.open(OUT, "w", encoding="utf-8", newline="\n").write(_codes(page))
     build_member_pages(ms)
     print("wrote", OUT.name, len(ms), "members,", found, "with affidavits")
 
