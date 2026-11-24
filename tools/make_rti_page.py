@@ -153,6 +153,28 @@ For this corporation, as on 31 March 2025 and as on the date of reply:
 3. The list of bills paid in this division from 1 April 2025 to the date of this application, with the date each was received and the date each was paid.
 4. Copies of any order in the same period approving payment of a bill out of its order of receipt, with the reason recorded.
 """},
+    {"id": "l8", "title": "8. The Lokayukta's 153 convictions: in which cases?",
+     "to": "Public Information Officer, Karnataka Lokayukta\nM.S. Building, Dr. B.R. Ambedkar Veedhi, Bengaluru 560001",
+     "why": "On 24 November 2026 the Lokayukta said it had concluded 697 cases with 153 convictions in four years. In August 2026 the government told the Legislative Council that none of the 1,248 cases registered since September 2022 had yet ended in a conviction. The release does not say which cases the 153 convictions are in. This letter asks.",
+     "annex": None,
+     "body": """Information sought
+
+1. For the period 10 September 2022 to 15 November 2026, the number of cases under the Prevention of Corruption Act, 1988 that ended in conviction, in acquittal, in discharge, and in any other way, separately for: (a) cases registered by the Karnataka Lokayukta police on or after 10 September 2022; (b) cases transferred from the Anti-Corruption Bureau; (c) cases registered by the Lokayukta police before 2016.
+2. For each of the 153 convictions mentioned in the Lokayukta's press release of November 2026: the crime number, the year the case was registered, the designation of the accused, the court and the date of judgment.
+3. The number of cases in which the Lokayukta has filed an appeal against acquittal in the same period, and the number of those appeals decided.
+4. The Lokayukta's annual reports for 2022-23, 2023-24 and 2024-25 as submitted to the Governor under Section 12 of the Karnataka Lokayukta Act, 1984, and the dates on which they were laid before the Legislature.
+"""},
+    {"id": "l9", "title": "9. Pending road and building bills, with their dates, for your zone",
+     "to": "Public Information Officer, Office of the Chief Engineer, Communication and Buildings, Public Works Department, [Central zone, Shivamogga / South zone, Bengaluru / North-East zone, Kalaburagi]\n[address]",
+     "why": "For the end of July 2026 the department gave the Assembly a dated, bill-by-bill list for its North zone: 31% of the ₹1,808 crore owed there had waited more than a year, and the oldest bill was from March 2018. The other zones gave amounts without dates, so nobody can yet say how long bills wait there.",
+     "annex": None,
+     "body": """Information sought
+
+1. The list of contractors' bills pending payment in all divisions of this zone as on the date of this application, with, for each bill: the division, the account head, the work name or number, the bill register (DBR) number, the date the bill was received, and the amount.
+2. The same list as at 31 July 2026, as compiled for the reply to Legislative Assembly unstarred question 1485 (answered 24 August 2026), if it exists with dates.
+3. The total amount released for payment of pending bills in this zone in each financial year from 2023-24 to date, by account head.
+4. Any circular or order fixing the order in which pending bills are paid in this zone.
+"""},
 ]
 
 # ---- Kannada (needs a native reader's review, like the rest of the site's Kannada) ----
@@ -268,6 +290,26 @@ KN = {
 2. ಬಾಕಿ ಬಿಲ್ಲುಗಳನ್ನು ಯಾವ ಕ್ರಮದಲ್ಲಿ ಪಾವತಿಸಬೇಕು ಎಂದು ಈ ವಿಭಾಗ ನಿರ್ಧರಿಸುವ ನಿಯಮ, ಸುತ್ತೋಲೆ ಅಥವಾ ಆದೇಶ (ಉದಾಹರಣೆಗೆ, ಸ್ವೀಕರಿಸಿದ ದಿನಾಂಕದ ಜ್ಯೇಷ್ಠತೆ), ಅದರ ದಿನಾಂಕ ಮತ್ತು ಹೊರಡಿಸಿದ ಪ್ರಾಧಿಕಾರ.
 3. 1 ಏಪ್ರಿಲ್ 2025ರಿಂದ ಈ ಅರ್ಜಿಯ ದಿನಾಂಕದವರೆಗೆ ಈ ವಿಭಾಗದಲ್ಲಿ ಪಾವತಿಯಾದ ಬಿಲ್ಲುಗಳ ಪಟ್ಟಿ, ಪ್ರತಿ ಬಿಲ್ಲು ಸ್ವೀಕರಿಸಿದ ದಿನಾಂಕ ಮತ್ತು ಪಾವತಿಯಾದ ದಿನಾಂಕದೊಂದಿಗೆ.
 4. ಇದೇ ಅವಧಿಯಲ್ಲಿ, ಸ್ವೀಕೃತಿ ಕ್ರಮ ಮೀರಿ ಯಾವುದೇ ಬಿಲ್ಲಿನ ಪಾವತಿಗೆ ಅನುಮೋದನೆ ನೀಡಿದ ಆದೇಶಗಳ ಪ್ರತಿಗಳು, ದಾಖಲಿಸಿದ ಕಾರಣದೊಂದಿಗೆ.
+"""},
+    "l8": {"title": "8. ಲೋಕಾಯುಕ್ತದ 153 ಶಿಕ್ಷೆಗಳು: ಯಾವ ಪ್ರಕರಣಗಳಲ್ಲಿ?",
+           "to": "ಸಾರ್ವಜನಿಕ ಮಾಹಿತಿ ಅಧಿಕಾರಿ, ಕರ್ನಾಟಕ ಲೋಕಾಯುಕ್ತ\nಎಂ.ಎಸ್. ಕಟ್ಟಡ, ಡಾ. ಬಿ.ಆರ್. ಅಂಬೇಡ್ಕರ್ ವೀಧಿ, ಬೆಂಗಳೂರು 560001",
+           "why": "ನಾಲ್ಕು ವರ್ಷಗಳಲ್ಲಿ 697 ಪ್ರಕರಣಗಳು ಮುಕ್ತಾಯಗೊಂಡಿದ್ದು 153ರಲ್ಲಿ ಶಿಕ್ಷೆಯಾಗಿದೆ ಎಂದು ಲೋಕಾಯುಕ್ತ 24 ನವೆಂಬರ್ 2026ರಂದು ತಿಳಿಸಿದೆ. ಸೆಪ್ಟೆಂಬರ್ 2022ರಿಂದ ದಾಖಲಾದ 1,248 ಪ್ರಕರಣಗಳಲ್ಲಿ ಯಾವುದೂ ಇನ್ನೂ ಶಿಕ್ಷೆಯಲ್ಲಿ ಮುಗಿದಿಲ್ಲ ಎಂದು ಆಗಸ್ಟ್ 2026ರಲ್ಲಿ ಸರ್ಕಾರ ವಿಧಾನ ಪರಿಷತ್ತಿಗೆ ತಿಳಿಸಿತ್ತು. ಆ 153 ಶಿಕ್ಷೆಗಳು ಯಾವ ಪ್ರಕರಣಗಳಲ್ಲಿ ಎಂದು ಪ್ರಕಟಣೆ ಹೇಳುವುದಿಲ್ಲ. ಈ ಪತ್ರ ಅದನ್ನು ಕೇಳುತ್ತದೆ.",
+           "body": """ಕೋರಿರುವ ಮಾಹಿತಿ
+
+1. 10 ಸೆಪ್ಟೆಂಬರ್ 2022ರಿಂದ 15 ನವೆಂಬರ್ 2026ರ ಅವಧಿಯಲ್ಲಿ, ಭ್ರಷ್ಟಾಚಾರ ತಡೆ ಕಾಯ್ದೆ 1988ರ ಅಡಿಯ ಪ್ರಕರಣಗಳಲ್ಲಿ ಶಿಕ್ಷೆ, ಖುಲಾಸೆ, ಬಿಡುಗಡೆ ಮತ್ತು ಇತರ ರೀತಿಯಲ್ಲಿ ಮುಕ್ತಾಯಗೊಂಡ ಪ್ರಕರಣಗಳ ಸಂಖ್ಯೆ, ಪ್ರತ್ಯೇಕವಾಗಿ: (ಎ) 10 ಸೆಪ್ಟೆಂಬರ್ 2022 ಅಥವಾ ನಂತರ ಕರ್ನಾಟಕ ಲೋಕಾಯುಕ್ತ ಪೊಲೀಸರು ದಾಖಲಿಸಿದ ಪ್ರಕರಣಗಳು; (ಬಿ) ಭ್ರಷ್ಟಾಚಾರ ನಿಗ್ರಹ ದಳದಿಂದ ವರ್ಗಾವಣೆಯಾದ ಪ್ರಕರಣಗಳು; (ಸಿ) 2016ಕ್ಕೆ ಮೊದಲು ಲೋಕಾಯುಕ್ತ ಪೊಲೀಸರು ದಾಖಲಿಸಿದ ಪ್ರಕರಣಗಳು.
+2. ನವೆಂಬರ್ 2026ರ ಲೋಕಾಯುಕ್ತ ಪತ್ರಿಕಾ ಪ್ರಕಟಣೆಯಲ್ಲಿ ಹೇಳಿರುವ 153 ಶಿಕ್ಷೆಗಳಲ್ಲಿ ಪ್ರತಿಯೊಂದಕ್ಕೂ: ಅಪರಾಧ ಸಂಖ್ಯೆ, ಪ್ರಕರಣ ದಾಖಲಾದ ವರ್ಷ, ಆರೋಪಿಯ ಹುದ್ದೆ, ನ್ಯಾಯಾಲಯ ಮತ್ತು ತೀರ್ಪಿನ ದಿನಾಂಕ.
+3. ಇದೇ ಅವಧಿಯಲ್ಲಿ ಖುಲಾಸೆಯ ವಿರುದ್ಧ ಲೋಕಾಯುಕ್ತ ಸಲ್ಲಿಸಿದ ಮೇಲ್ಮನವಿಗಳ ಸಂಖ್ಯೆ ಮತ್ತು ಅವುಗಳಲ್ಲಿ ತೀರ್ಮಾನವಾದವುಗಳ ಸಂಖ್ಯೆ.
+4. ಕರ್ನಾಟಕ ಲೋಕಾಯುಕ್ತ ಕಾಯ್ದೆ 1984ರ ಕಲಂ 12ರ ಅಡಿಯಲ್ಲಿ ರಾಜ್ಯಪಾಲರಿಗೆ ಸಲ್ಲಿಸಿದ 2022-23, 2023-24 ಮತ್ತು 2024-25ರ ವಾರ್ಷಿಕ ವರದಿಗಳು, ಮತ್ತು ಅವುಗಳನ್ನು ವಿಧಾನಮಂಡಲದ ಮುಂದೆ ಮಂಡಿಸಿದ ದಿನಾಂಕಗಳು.
+"""},
+    "l9": {"title": "9. ನಿಮ್ಮ ವಲಯದ ಬಾಕಿ ರಸ್ತೆ ಮತ್ತು ಕಟ್ಟಡ ಬಿಲ್ಲುಗಳು, ದಿನಾಂಕಗಳೊಂದಿಗೆ",
+           "to": "ಸಾರ್ವಜನಿಕ ಮಾಹಿತಿ ಅಧಿಕಾರಿ, ಮುಖ್ಯ ಅಭಿಯಂತರರ ಕಚೇರಿ, ಸಂಪರ್ಕ ಮತ್ತು ಕಟ್ಟಡಗಳು, ಲೋಕೋಪಯೋಗಿ ಇಲಾಖೆ, [ಕೇಂದ್ರ ವಲಯ, ಶಿವಮೊಗ್ಗ / ದಕ್ಷಿಣ ವಲಯ, ಬೆಂಗಳೂರು / ಈಶಾನ್ಯ ವಲಯ, ಕಲಬುರಗಿ]\n[ವಿಳಾಸ]",
+           "why": "ಜುಲೈ 2026ರ ಅಂತ್ಯಕ್ಕೆ ಇಲಾಖೆ ತನ್ನ ಉತ್ತರ ವಲಯದ ಪ್ರತಿ ಬಿಲ್ಲಿನ ದಿನಾಂಕದೊಂದಿಗೆ ಪಟ್ಟಿಯನ್ನು ವಿಧಾನಸಭೆಗೆ ನೀಡಿತು: ಅಲ್ಲಿ ಬಾಕಿ ಇರುವ ₹1,808 ಕೋಟಿಯಲ್ಲಿ 31% ಒಂದು ವರ್ಷಕ್ಕೂ ಹೆಚ್ಚು ಕಾಲ ಕಾಯುತ್ತಿತ್ತು; ಅತ್ಯಂತ ಹಳೆಯ ಬಿಲ್ಲು ಮಾರ್ಚ್ 2018ರದ್ದು. ಇತರ ವಲಯಗಳು ದಿನಾಂಕವಿಲ್ಲದೆ ಮೊತ್ತಗಳನ್ನು ಮಾತ್ರ ನೀಡಿದವು; ಹಾಗಾಗಿ ಅಲ್ಲಿ ಬಿಲ್ಲುಗಳು ಎಷ್ಟು ದಿನ ಕಾಯುತ್ತವೆ ಎಂದು ಇನ್ನೂ ಹೇಳಲಾಗದು.",
+           "body": """ಕೋರಿರುವ ಮಾಹಿತಿ
+
+1. ಈ ಅರ್ಜಿಯ ದಿನಾಂಕಕ್ಕೆ ಈ ವಲಯದ ಎಲ್ಲ ವಿಭಾಗಗಳಲ್ಲಿ ಪಾವತಿಗೆ ಬಾಕಿ ಇರುವ ಗುತ್ತಿಗೆದಾರರ ಬಿಲ್ಲುಗಳ ಪಟ್ಟಿ; ಪ್ರತಿ ಬಿಲ್ಲಿಗೆ: ವಿಭಾಗ, ಲೆಕ್ಕ ಶೀರ್ಷಿಕೆ, ಕಾಮಗಾರಿಯ ಹೆಸರು ಅಥವಾ ಸಂಖ್ಯೆ, ಬಿಲ್ಲು ದಾಖಲಾತಿ (ಡಿಬಿಆರ್) ಸಂಖ್ಯೆ, ಬಿಲ್ಲು ಸ್ವೀಕರಿಸಿದ ದಿನಾಂಕ ಮತ್ತು ಮೊತ್ತ.
+2. ವಿಧಾನಸಭೆಯ ಚುಕ್ಕೆ ಗುರುತಿಲ್ಲದ ಪ್ರಶ್ನೆ 1485ಕ್ಕೆ (ಉತ್ತರ 24 ಆಗಸ್ಟ್ 2026) ಸಿದ್ಧಪಡಿಸಿದ, 31 ಜುಲೈ 2026ರ ಅದೇ ಪಟ್ಟಿ, ದಿನಾಂಕಗಳೊಂದಿಗೆ ಇದ್ದರೆ.
+3. 2023-24ರಿಂದ ಇಲ್ಲಿಯವರೆಗೆ ಪ್ರತಿ ಆರ್ಥಿಕ ವರ್ಷದಲ್ಲಿ ಈ ವಲಯದಲ್ಲಿ ಬಾಕಿ ಬಿಲ್ಲುಗಳ ಪಾವತಿಗೆ ಬಿಡುಗಡೆಯಾದ ಒಟ್ಟು ಮೊತ್ತ, ಲೆಕ್ಕ ಶೀರ್ಷಿಕೆವಾರು.
+4. ಈ ವಲಯದಲ್ಲಿ ಬಾಕಿ ಬಿಲ್ಲುಗಳನ್ನು ಪಾವತಿಸುವ ಕ್ರಮವನ್ನು ನಿಗದಿಪಡಿಸುವ ಯಾವುದೇ ಸುತ್ತೋಲೆ ಅಥವಾ ಆದೇಶ.
 """},
 }
 for _l in LETTERS:
