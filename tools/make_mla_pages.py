@@ -217,13 +217,18 @@ def page(d):
              + f", ಘೋಷಿತ ಕ್ರಿಮಿನಲ್ ಪ್ರಕರಣಗಳು {d['k'] if d['k'] is not None else '?'}. ಕೆಲಸ ತೋರಿಸಿ, ಆಮೇಲೆ ಮತ. {url}")
     wa = (f"{n} ({c}) report card: declared assets {money(d['a']) or 'not in archive'}"
           + (f", {'+' if g >= 0 else ''}{g}% since 2018" if g is not None else "") + f", {d['k'] if d['k'] is not None else '?'} declared criminal cases. Show me the work, then my vote. {url}")
-    title = (f"{n} ({n_kn}), {c} ({c_kn}) MLA: declared assets and cases · Gandaberunda" if n_kn and c_kn
-             else f"{n}, {c} MLA: declared assets and cases · Gandaberunda")
+    role = {"died": "MLA (died 10 May 2026)", "disq": "MLA (disqualified)"}.get(d.get("st"), "MLA")
+    title = (f"{n} ({n_kn}), {c} ({c_kn}) {role}: declared assets and cases · Gandaberunda" if n_kn and c_kn
+             else f"{n}, {c} {role}: declared assets and cases · Gandaberunda")
     desc = (f"{n} ({p}), MLA for {c}, {dist} district. Declared assets {money(d['a']) or 'not in archive'}"
             + (f", {'+' if g >= 0 else ''}{g}% since 2018" if g is not None else "") + f"; {d['k'] if d['k'] is not None else 'no'} declared criminal cases. From sworn affidavits.")
+    st_html = (f'<div class="box" style="border-left:4px solid var(--yellow)"><p style="margin:0">{E(d["note"])} '
+               f'<a href="{E(d["src"])}" target="_blank" rel="noopener">Assembly member list</a></p>'
+               f'<p class="kn" lang="kn" style="margin:0">{E(d["note_kn"])}</p></div>') if d.get("st") else ""
     body = f"""<div><h1>{E(n)}</h1>{f'<p class="kn" lang="kn" style="font-size:22px;font-weight:600;margin:4px 0 0">{E(n_kn)} · {E(c_kn)}</p>' if n_kn else ''}
 <div class="sub"><span>MLA for <b>{E(c)}</b></span><span class="party {E(pcls)}">{E(p)}</span><span>{E(dist)} district{by}</span>
 <span class="kn">{E(PARTY_KN.get(p, p))} · {E(dist)} ಜಿಲ್ಲೆ</span></div></div>
+{st_html}
 <div class="tiles">{''.join(tiles)}</div>
 <div class="box"><h2>What the record shows in {E(dist)} district <span class="kn" style="font-size:15px;color:var(--muted);font-weight:400">ಜಿಲ್ಲೆಯ ದಾಖಲೆ</span></h2>
 {'<ul>' + ''.join(ctx) + '</ul>' if ctx else '<p class="fine">No district figure has passed our checks yet.</p>'}
