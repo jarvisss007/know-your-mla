@@ -30,4 +30,6 @@ chart = green_chart(rob, ["2019-02-13", "2026-02-11"], "Share of Mahadevapura wi
 page = ((HERE / "page_template.html").read_text(encoding="utf-8").replace("<!--LAKE_ROWS-->", "\n".join(rows))
         .replace("<!--CHART-->", chart).replace("/*CHART_CSS*/", CHART_CSS))
 (HERE / "DRAFT_mahadevapura_scorecard.html").write_text(page, encoding="utf-8", newline="\n")
+from webp_images import webpify
+webpify(HERE / "DRAFT_mahadevapura_scorecard.html")
 print("ok", len(rows), "lake rows")

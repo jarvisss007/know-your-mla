@@ -224,4 +224,6 @@ ul.limits {{ margin: 0; padding-left: 1.2em; display: grid; gap: 6px; max-width:
 """
 out = D / f"DRAFT_{slug}_scorecard.html"
 out.write_text(page, encoding="utf-8", newline="\n")
+from webp_images import webpify
+webpify(out)
 print("ok", out.name, len(wrows), "water rows", len(crow), "clusters", "chart" if chart else "no chart")

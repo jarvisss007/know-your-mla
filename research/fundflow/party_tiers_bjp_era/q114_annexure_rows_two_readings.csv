@@ -1,0 +1,234 @@
+department,serial,seat,rs_crore,reading_1,reading_2,agree
+PWD,1,Yelahanka,30.00,30.00,30.00,yes
+PWD,2,Chitradurga,15.00,15.00,15.00,yes
+PWD,3,Hiriyur,23.45,23.45,23.45,yes
+PWD,4,Hosadurga,10.00,10.00,10.00,yes
+PWD,5,Holalkere,15.00,15.00,15.00,yes
+PWD,6,Davanagere North,3.00,3.00,3.00,yes
+PWD,7,Mayakonda,17.10,17.10,17.10,yes
+PWD,8,Channagiri,26.00,26.00,26.00,yes
+PWD,9,Shimoga Rural,10.00,10.00,10.00,yes
+PWD,10,Sorab,13.00,13.00,13.00,yes
+PWD,11,Sagar,15.00,15.00,15.00,yes
+PWD,12,Sira,17.00,17.00,17.00,yes
+PWD,13,Mulbagal,25.00,25.00,25.00,yes
+PWD,14,Nanjangud,25.00,25.00,25.00,yes
+PWD,15,Krishnaraja,50.00,50.00,50.00,yes
+PWD,16,Gundlupet,29.00,29.00,29.00,yes
+PWD,17,Virajpet,20.00,20.00,20.00,yes
+PWD,18,Hassan,32.00,32.00,32.00,yes
+PWD,19,Mudigere,30.00,30.00,30.00,yes
+PWD,20,Chikmagalur,15.00,15.00,15.00,yes
+PWD,21,Tarikere,30.00,30.00,30.00,yes
+PWD,22,Kadur,35.00,35.00,35.00,yes
+PWD,23,Moodabidri,46.00,46.00,46.00,yes
+PWD,24,Bantwal,20.00,20.00,20.00,yes
+PWD,25,Puttur,25.00,25.00,25.00,yes
+PWD,26,Byndoor,12.90,12.90,12.90,yes
+PWD,27,Kundapura,47.00,47.00,47.00,yes
+PWD,28,Udupi,16.00,16.00,16.00,yes
+PWD,29,Kaup,10.00,10.00,10.00,yes
+PWD,30,Kagwad,25.85,25.85,25.85,yes
+PWD,31,Kudachi,20.00,20.00,20.00,yes
+PWD,32,Raibag,34.00,34.00,34.00,yes
+PWD,33,Arabhavi,32.00,32.00,32.00,yes
+PWD,34,Belgaum Uttar,47.00,47.00,47.00,yes
+PWD,35,Kittur,45.00,45.00,45.00,yes
+PWD,36,Savadatti Yellamma,50.00,50.00,50.00,yes
+PWD,37,Ramdurg,43.00,43.00,43.00,yes
+PWD,38,Hungund,30.00,30.00,30.00,yes
+PWD,39,Devara Hippargi,25.00,25.00,25.00,yes
+PWD,40,Sindgi,50.00,50.00,50.00,yes
+PWD,41,Haveri,50.00,50.00,50.00,yes
+PWD,42,Byadgi,33.00,33.00,33.00,yes
+PWD,43,Ranebennur,35.00,35.00,35.00,yes
+PWD,44,Dharwad,42.00,42.00,42.00,yes
+PWD,45,Hubli-Dharwad-West,46.00,46.00,46.00,yes
+PWD,46,Shirahatti,28.60,28.60,28.60,yes
+PWD,47,Ron,8.50,8.50,8.50,yes
+PWD,48,Karwar,22.00,22.00,22.00,yes
+PWD,49,Kumta,9.28,9.28,9.28,yes
+PWD,50,Bhatkal,7.00,7.00,7.00,yes
+PWD,51,Sirsi,10.00,10.00,10.00,yes
+PWD,52,Sedam,24.00,24.00,24.00,yes
+PWD,53,Gulbarga Rural,30.00,30.00,30.00,yes
+PWD,54,Gulbarga Dakshin,15.00,15.00,15.00,yes
+PWD,55,Aland,2.75,2.75,2.75,yes
+PWD,56,Basavakalyan,50.00,50.00,50.00,yes
+PWD,57,Siruguppa,22.00,22.00,22.00,yes
+PWD,58,Bellary City,50.00,50.00,50.00,yes
+PWD,59,Kudligi,20.00,20.00,20.00,yes
+PWD,60,Harapanahalli,33.00,33.00,33.00,yes
+PWD,61,Raichur,47.00,47.00,47.00,yes
+PWD,62,Gangavati,18.00,18.00,18.00,yes
+PWD,63,Yadgir,25.00,25.00,25.00,yes
+RDPR,1,Yelahanka,20.00,20.00,20.00,yes
+RDPR,2,Chitradurga,10.00,10.00,10.00,yes
+RDPR,3,Hiriyur,26.55,26.55,26.55,yes
+RDPR,4,Hosadurga,10.00,10.00,10.00,yes
+RDPR,5,Holalkere,5.00,5.00,5.00,yes
+RDPR,6,Davanagere North,40.00,40.00,40.00,yes
+RDPR,7,Mayakonda,24.70,24.70,24.70,yes
+RDPR,8,Channagiri,10.43,10.43,10.43,yes
+RDPR,9,Shimoga Rural,30.00,30.00,30.00,yes
+RDPR,10,Sorab,37.00,37.00,37.00,yes
+RDPR,11,Sagar,35.00,35.00,35.00,yes
+RDPR,12,Sira,28.00,28.00,28.00,yes
+RDPR,13,Mulbagal,25.00,25.00,25.00,yes
+RDPR,14,Nanjangud,20.00,20.00,20.00,yes
+RDPR,15,Gundlupet,2.65,2.65,2.65,yes
+RDPR,16,Virajpet,25.00,25.00,25.00,yes
+RDPR,17,Hassan,13.00,13.00,13.00,yes
+RDPR,18,Mudigere,16.50,16.50,16.50,yes
+RDPR,19,Chikmagalur,30.00,30.00,30.00,yes
+RDPR,20,Tarikere,20.00,20.00,20.00,yes
+RDPR,21,Kadur,10.00,10.00,10.00,yes
+RDPR,22,Bantwal,20.00,20.00,20.00,yes
+RDPR,23,Puttur,10.00,10.00,10.00,yes
+RDPR,24,Byndoor,20.00,20.00,20.00,yes
+RDPR,25,Udupi,19.00,19.00,19.00,yes
+RDPR,26,Kaup,25.00,25.00,25.00,yes
+RDPR,27,Athani,33.50,33.50,33.50,yes
+RDPR,28,Kagwad,24.15,24.15,24.15,yes
+RDPR,29,Kudachi,15.00,15.00,15.00,yes
+RDPR,30,Raibag,10.00,10.00,10.00,yes
+RDPR,31,Arabhavi,18.00,18.00,18.00,yes
+RDPR,32,Kittur,5.00,5.00,5.00,yes
+RDPR,33,Ramdurg,7.00,7.00,7.00,yes
+RDPR,34,Hungund,10.00,10.00,10.00,yes
+RDPR,35,Devara Hippargi,20.00,20.00,20.00,yes
+RDPR,36,Byadgi,10.00,10.00,10.00,yes
+RDPR,37,Ranebennur,15.00,15.00,15.00,yes
+RDPR,38,Dharwad,3.00,3.00,3.00,yes
+RDPR,39,Shirahatti,20.40,20.40,20.40,yes
+RDPR,40,Ron,40.50,40.50,40.50,yes
+RDPR,41,Karwar,21.00,21.00,21.00,yes
+RDPR,42,Kumta,37.20,37.20,37.20,yes
+RDPR,43,Bhatkal,41.00,41.00,41.00,yes
+RDPR,44,Sirsi,35.00,35.00,35.00,yes
+RDPR,45,Sedam,26.00,26.00,26.00,yes
+RDPR,46,Gulbarga Rural,10.00,10.00,10.00,yes
+RDPR,47,Gulbarga Dakshin,25.00,25.00,25.00,yes
+RDPR,48,Aland,23.50,23.50,23.50,yes
+RDPR,49,Kudligi,15.00,15.00,15.00,yes
+RDPR,50,Harapanahalli,8.00,8.00,8.00,yes
+RDPR,51,Gangavati,14.00,14.00,14.00,yes
+RDPR,52,Yadgir,25.00,25.00,25.00,yes
+MinorIrrigation,1,Chitradurga,25.00,25.00,25.00,yes
+MinorIrrigation,2,Hosadurga,30.00,30.00,30.00,yes
+MinorIrrigation,3,Holalkere,25.00,25.00,25.00,yes
+MinorIrrigation,4,Davanagere North,2.00,2.00,2.00,yes
+MinorIrrigation,5,Mayakonda,2.00,2.00,2.00,yes
+MinorIrrigation,6,Shimoga Rural,10.00,10.00,10.00,yes
+MinorIrrigation,7,Sira,5.00,5.00,5.00,yes
+MinorIrrigation,8,Nanjangud,5.00,5.00,5.00,yes
+MinorIrrigation,9,Virajpet,5.00,5.00,5.00,yes
+MinorIrrigation,10,Mudigere,3.50,3.50,3.50,yes
+MinorIrrigation,11,Chikmagalur,5.00,5.00,5.00,yes
+MinorIrrigation,12,Kadur,5.00,5.00,5.00,yes
+MinorIrrigation,13,Moodabidri,4.00,4.00,4.00,yes
+MinorIrrigation,14,Bantwal,10.00,10.00,10.00,yes
+MinorIrrigation,15,Puttur,15.00,15.00,15.00,yes
+MinorIrrigation,16,Byndoor,17.10,17.10,17.10,yes
+MinorIrrigation,17,Kundapura,3.00,3.00,3.00,yes
+MinorIrrigation,18,Udupi,15.00,15.00,15.00,yes
+MinorIrrigation,19,Kaup,15.00,15.00,15.00,yes
+MinorIrrigation,20,Raibag,6.00,6.00,6.00,yes
+MinorIrrigation,21,Belgaum Uttar,3.00,3.00,3.00,yes
+MinorIrrigation,22,Devara Hippargi,5.00,5.00,5.00,yes
+MinorIrrigation,23,Dharwad,5.00,5.00,5.00,yes
+MinorIrrigation,24,Hubli-Dharwad-West,4.00,4.00,4.00,yes
+MinorIrrigation,25,Shirahatti,1.00,1.00,1.00,yes
+MinorIrrigation,26,Ron,1.00,1.00,1.00,yes
+MinorIrrigation,27,Karwar,7.00,7.00,7.00,yes
+MinorIrrigation,28,Kumta,3.52,3.52,3.52,yes
+MinorIrrigation,29,Bhatkal,2.00,2.00,2.00,yes
+MinorIrrigation,30,Gulbarga Rural,10.00,10.00,10.00,yes
+MinorIrrigation,31,Gulbarga Dakshin,10.00,10.00,10.00,yes
+MinorIrrigation,32,Siruguppa,28.00,28.00,28.00,yes
+MinorIrrigation,33,Kudligi,15.00,15.00,15.00,yes
+MinorIrrigation,34,Harapanahalli,9.00,9.00,9.00,yes
+MinorIrrigation,35,Gangavati,18.00,18.00,18.00,yes
+Muzrai,1,Yelahanka,2.00,2.00,2.00,yes
+Muzrai,2,Chitradurga,2.00,2.00,2.00,yes
+Muzrai,3,Hiriyur,2.00,2.00,2.00,yes
+Muzrai,4,Hosadurga,2.00,2.00,2.00,yes
+Muzrai,5,Holalkere,2.00,2.00,2.00,yes
+Muzrai,6,Davanagere North,2.00,2.00,2.00,yes
+Muzrai,7,Mayakonda,2.00,2.00,2.00,yes
+Muzrai,8,Channagiri,2.00,2.00,2.00,yes
+Muzrai,9,Shimoga Rural,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,10,Sorab,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,11,Sagar,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,12,Sira,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,13,Mulbagal,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,14,Nanjangud,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,15,Krishnaraja,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,16,Gundlupet,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,17,Virajpet,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,18,Hassan,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,19,Mudigere,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,20,Chikmagalur,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,21,Tarikere,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,22,Kadur,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,23,Moodabidri,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,24,Bantwal,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,25,Puttur,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,26,Byndoor,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,27,Kundapura,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,28,Udupi,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,29,Kaup,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,30,Athani,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,31,Kagwad,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,32,Kudachi,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,33,Raibag,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,34,Arabhavi,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,35,Belgaum Uttar,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,36,Kittur,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,37,Savadatti Yellamma,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,38,Ramdurg,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,39,Hungund,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,40,Devara Hippargi,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,41,Sindgi,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,42,Haveri,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,43,Byadgi,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,44,Ranebennur,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,45,Dharwad,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,46,Hubli-Dharwad-West,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,47,Shirahatti,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,48,Ron,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,49,Karwar,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,50,Kumta,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,51,Bhatkal,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,52,Sirsi,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,53,Sedam,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,54,Gulbarga Rural,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,55,Gulbarga Dakshin,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,56,Aland,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,57,Basavakalyan,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,58,Siruguppa,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,59,Bellary City,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,60,Kudligi,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,61,Harapanahalli,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,62,Raichur,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,63,Gangavati,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+Muzrai,64,Yadgir,2.00,2.00,not re-imaged; printed total 128.00 = 64 x 2.00 and every cell read 2.00,yes (by total)
+UrbanDev,1,Davanagere North,5.00,5.00,5.00,yes
+UrbanDev,2,Hassan,5.00,5.00,5.00,yes
+UrbanDev,3,Hungund,7.50,7.50,7.50,yes
+UrbanDev,4,Sirsi,5.00,5.00,5.00,yes
+WaterResources,1,Athani,16.50,16.50,16.50,yes
+WaterResources,2,Kudachi,15.00,15.00,15.00,yes
+WaterResources,3,Aland,10.00,10.00,10.00,yes
+SocialWelfare,1,Gundlupet,1.60,1.60,1.60,yes
+BCWelfare,1,Gundlupet,10.43,10.43,10.43,yes
+BCWelfare,2,Hungund,2.50,2.50,2.50,yes
+BCWelfare,3,Byadgi,7.00,7.00,7.00,yes
+BCWelfare,4,Aland,2.75,2.75,2.75,yes
+BCWelfare,5,Raichur,3.00,3.00,3.00,yes
+Education,1,Mayakonda,6.20,6.20,6.20,yes
+Education,2,Channagiri,11.32,11.32,11.32,yes
+Education,3,Gundlupet,0.44,0.44,0.44,yes
+Housing,1,Holalkere,5.00,5.00,5.00,yes
+WCD,1,Channagiri,2.25,2.25,2.25,yes
+Planning,1,Aland,11.00,11.00,11.00,yes
