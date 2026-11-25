@@ -167,6 +167,8 @@ def form(kind, district, ac, text):
 
 CMG = json.loads((ROOT / "research/follow_the_money/cm_grants_by_seat.json").read_text(encoding="utf-8"))  # [cmidp_2025_26 or None, special_grant]
 PP = {r["seat"]: r for r in csv.DictReader(open(ROOT / "research/follow_the_money/pragathi_patha_allocation_by_seat.csv", encoding="utf-8-sig"))}
+# Seats whose December 2025 CMIDP entry (USQ 1727) differs from the August 2025 list (USQ 1793) now in CMG: None = left out in December.
+DEC_LIST = {"Basavana Bagevadi": 40.0, "Jevargi": 37.5, "Yellapur": 50.5, "Baindur": None, "Bantwal": None, "Basavakalyan": None, "Belgaum Dakshin": None, "Belthangady": None, "Chincholi (SC)": None, "Devadurga (ST)": None, "Holalkere (SC)": None, "Hubli-Dharwad-Central": None, "Kapu": None, "Karkala": None, "Kundapur": None, "Mangalore City North": None, "Moodabidri": None, "Nargund": None, "Sakaleshpur (SC)": None, "Shirahatti (SC)": None, "Tirthahalli": None, "Udupi": None, "Varuna": None}
 EXPELLED = {"Yeshwanthapura": "S.T. Somashekar", "Yellapur": "Shivaram Hebbar"}  # BJP expulsion, 27 May 2025
 EXPELLED_SRC = "https://www.thenewsminute.com/karnataka/bjp-expels-rebel-mlas-st-somashekhar-and-shivaram-hebbar-for-six-years"
 
@@ -176,15 +178,21 @@ def cm_box(c, dist):
     cm, sg = CMG.get(c, [None, 0])
     en, kn = [], []
     if cm is not None:
-        en.append(f"CM's infrastructure programme, 2025-26: ₹{cm:g} crore sanctioned.")
-        kn.append(f"ಮುಖ್ಯಮಂತ್ರಿಗಳ ಮೂಲಸೌಕರ್ಯ ಯೋಜನೆ, 2025-26: ₹{cm:g} ಕೋಟಿ ಮಂಜೂರು.")
-    elif c == "Shirahatti (SC)" or c == "Shirahatti":
-        # Absent from the CM's list (USQ 1727) but in the RDPR release list for the same programme (GO RDPR/732/RRC/2025, in USQ 2844 p. 148)
-        en.append("Not in the CM's infrastructure programme list for 2025-26 (the Rural Development department's list for the same programme shows ₹5 crore approved).")
-        kn.append("2025-26ರ ಮುಖ್ಯಮಂತ್ರಿಗಳ ಮೂಲಸೌಕರ್ಯ ಯೋಜನೆಯ ಪಟ್ಟಿಯಲ್ಲಿ ಈ ಕ್ಷೇತ್ರ ಇಲ್ಲ (ಅದೇ ಯೋಜನೆಯ ಗ್ರಾಮೀಣಾಭಿವೃದ್ಧಿ ಇಲಾಖೆಯ ಪಟ್ಟಿಯಲ್ಲಿ ₹5 ಕೋಟಿ ಮಂಜೂರು ಎಂದಿದೆ).")
+        # Amounts are from the fuller August 2025 list (USQ 1793). The December 2025 list (USQ 1727) left out 20 of these
+        # seats and gave three different amounts; say so on those cards.
+        dec = DEC_LIST.get(c, "same")
+        note_en = note_kn = ""
+        if dec is None:
+            note_en = " The December 2025 list of the same programme left this seat out, without saying why."
+            note_kn = " ಡಿಸೆಂಬರ್ 2025ರ ಪಟ್ಟಿ ಈ ಕ್ಷೇತ್ರವನ್ನು ಕಾರಣ ಹೇಳದೆ ಬಿಟ್ಟಿತ್ತು."
+        elif dec != "same":
+            note_en = f" The December 2025 list gives ₹{dec:g} crore."
+            note_kn = f" ಡಿಸೆಂಬರ್ 2025ರ ಪಟ್ಟಿಯಲ್ಲಿ ₹{dec:g} ಕೋಟಿ."
+        en.append(f"CM's infrastructure programme, 2025-26: ₹{cm:g} crore sanctioned.{note_en}")
+        kn.append(f"ಮುಖ್ಯಮಂತ್ರಿಗಳ ಮೂಲಸೌಕರ್ಯ ಯೋಜನೆ, 2025-26: ₹{cm:g} ಕೋಟಿ ಮಂಜೂರು.{note_kn}")
     else:
-        en.append("Not in the CM's infrastructure programme list for 2025-26.")
-        kn.append("2025-26ರ ಮುಖ್ಯಮಂತ್ರಿಗಳ ಮೂಲಸೌಕರ್ಯ ಯೋಜನೆಯ ಪಟ್ಟಿಯಲ್ಲಿ ಈ ಕ್ಷೇತ್ರ ಇಲ್ಲ.")
+        en.append("Not in the CM's infrastructure programme lists for 2025-26 (August or December 2025).")
+        kn.append("2025-26ರ ಮುಖ್ಯಮಂತ್ರಿಗಳ ಮೂಲಸೌಕರ್ಯ ಯೋಜನೆಯ ಪಟ್ಟಿಗಳಲ್ಲಿ (ಆಗಸ್ಟ್ ಅಥವಾ ಡಿಸೆಂಬರ್ 2025) ಈ ಕ್ಷೇತ್ರ ಇಲ್ಲ.")
     if sg:
         en.append(f"CM's special grant, two years to March 2025: ₹{sg:g} crore of works sanctioned.")
         kn.append(f"ಮುಖ್ಯಮಂತ್ರಿಗಳ ವಿಶೇಷ ಅನುದಾನ, ಮಾರ್ಚ್ 2025ಕ್ಕೆ ಮುಂಚಿನ ಎರಡು ವರ್ಷ: ₹{sg:g} ಕೋಟಿ ಕಾಮಗಾರಿ ಮಂಜೂರು.")
@@ -217,7 +225,7 @@ def cm_box(c, dist):
             '(<a href="https://www.barandbench.com/amp/story/news/litigation/karnataka-high-court-imposes-2k-costs-on-state-for-for-repeated-failure-to-respond-to-bjp-mlas-plea" target="_blank" rel="noopener">Bar &amp; Bench</a>). '
             '<span class="kn" lang="kn">ಈಗಿನ ಹಂಚಿಕೆಯನ್ನು ಜಮಖಂಡಿಯ ಬಿಜೆಪಿ ಶಾಸಕರು ಕರ್ನಾಟಕ ಹೈಕೋರ್ಟ್‌ನಲ್ಲಿ ಪ್ರಶ್ನಿಸಿದ್ದಾರೆ (ರಿಟ್ ಅರ್ಜಿ 32024/2025); ಪದೇ ಪದೇ ಉತ್ತರ ನೀಡದ್ದಕ್ಕೆ ಅಕ್ಟೋಬರ್ 2026ರಲ್ಲಿ ನ್ಯಾಯಾಲಯ ರಾಜ್ಯಕ್ಕೆ ₹2,000 ದಂಡ ವಿಧಿಸಿದೆ.</span></p>'
             '<p class="fine">Sanctions and allocations, not money spent or roads built, and nothing here shows personal gain. Sources: the Chief Minister&#39;s answers to Assembly questions '
-            '<a href="https://kla.kar.nic.in/assembly/answers/16assembly/pdf/16122025/1727.pdf" target="_blank" rel="noopener">1727</a> (16 Dec 2025) and 1119 (11 Mar 2025), and the answer to question '
+            '<a href="https://kla.kar.nic.in/assembly/answers/16assembly/pdf/19082025/1793.pdf" target="_blank" rel="noopener">1793</a> (19 Aug 2025), <a href="https://kla.kar.nic.in/assembly/answers/16assembly/pdf/16122025/1727.pdf" target="_blank" rel="noopener">1727</a> (16 Dec 2025) and 1119 (11 Mar 2025), and the answer to question '
             '<a href="https://kla.kar.nic.in/assembly/answers/16assembly/pdf/10122025/654.pdf" target="_blank" rel="noopener">654</a> (10 Dec 2025). '
             'How we read them: <a href="../reports/follow_the_money.html#cmgrants">Follow the rupee</a>. '
             '<span class="kn" lang="kn">ಮಂಜೂರಾತಿ ಮತ್ತು ಹಂಚಿಕೆಗಳು, ಖರ್ಚಾದ ಹಣ ಅಥವಾ ನಿರ್ಮಿಸಿದ ರಸ್ತೆಗಳಲ್ಲ.</span></p></div>')
