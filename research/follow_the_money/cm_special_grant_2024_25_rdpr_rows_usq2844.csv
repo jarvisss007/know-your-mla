@@ -1,0 +1,13 @@
+row,district,seat,party_at_sanction,fd_uo_date,works,rs_cr,agency,note,source,read
+1,Ballari,Sandur,Congress (by-election 13 Nov 2024),16.05.2024,3,9.000,PRED,"11.00 cr allocated; 2.00 cr re-allocated to PWD by order 17.06.2025",USQ 2844 p39,single
+2,Ballari,Sandur,,17.06.2025,0,0.000,(2.000 moved),re-allocation of balance to PWD,USQ 2844 p39,single
+3,Chamarajanagar,Hanur,JD(S),27.06.2024,74,25.000,KRIDL,,USQ 2844 p39,single
+4,Haveri,Shiggaon-Savanur,BJP (vacant from Jun 2024; by-election 13 Nov 2024),05.10.2024,244,30.000,KRIDL,"sanction 10 days before ECI announced the by-election (15 Oct 2024) and 39 days before polling",USQ 2844 p39,single
+5,Kodagu,Virajpet,Congress,19.11.2024,34,10.000,KRIDL,,USQ 2844 p39,single
+6,Ramanagara,Channapatna,JD(S) (vacant from Jun 2024; by-election 13 Nov 2024),14.08.2024,32,18.501,PRED,,USQ 2844 p39,single
+7,Ramanagara,Channapatna,,14.08.2024,1,0.500,KRIDL,,USQ 2844 p39,single
+8,Ramanagara,Channapatna,,14.08.2024 / 10.09.2024,0,0.000,(10.999 moved),"of 30.00 cr allocated 14.08.2024: 5.00 cr re-allocated to Housing and 5.99 cr to PWD on 10.09.2024",USQ 2844 p39,single
+9,Ramanagara,Channapatna,,19.08.2024,36,19.050,PRED,,USQ 2844 p39,single
+10,Ramanagara,Channapatna,,19.08.2024,1,0.950,KRIDL,,USQ 2844 p39,single
+11,Ramanagara,Channapatna,,30.09.2024,1,0.800,KRIDL,,USQ 2844 p39,single
+TOTAL,,,,,426,113.801,,"printed grand total 426 works / 113.8010 cr; 3 by-election seats = 78.80 cr (69%)",USQ 2844 p39,single

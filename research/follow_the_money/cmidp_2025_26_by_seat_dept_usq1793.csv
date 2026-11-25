@@ -1,0 +1,954 @@
+page,sl,seat_as_read,seat,party,department,category,rs_crore
+13,1,Athani,Athani,Congress,PWD,roads/bridges (PWD),16.7
+13,1,Athani,Athani,Congress,RDPR,"roads/bridges (rural, RDPR)",33.3
+13,2,Kagwad,Kagwad,Congress,PWD,roads/bridges (PWD),37.5
+13,2,Kagwad,Kagwad,Congress,RDPR,"roads/bridges (rural, RDPR)",12.5
+13,3,Kudachi,Kudachi (SC),Congress,PWD,roads/bridges (PWD),25.8
+13,3,Kudachi,Kudachi (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",15.4
+13,3,Kudachi,Kudachi (SC),Congress,Muzrai,temples/religious (Muzrai),1.5
+13,3,Kudachi,Kudachi (SC),Congress,Education,school/college buildings (Education),7.3
+13,4,Yemkanmardi,Yemkanamardi (ST),Congress,RDPR,"roads/bridges (rural, RDPR)",50.0
+13,5,Belgaum Uttar,Belgaum Uttar,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+13,6,Kittur,Kittur,Congress,PWD,roads/bridges (PWD),10.0
+13,6,Kittur,Kittur,Congress,RDPR,"roads/bridges (rural, RDPR)",20.0
+13,6,Kittur,Kittur,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",7.5
+13,6,Kittur,Kittur,Congress,Muzrai,temples/religious (Muzrai),7.0
+13,6,Kittur,Kittur,Congress,Transport,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.0
+13,6,Kittur,Kittur,Congress,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.5
+13,6,Kittur,Kittur,Congress,Education,school/college buildings (Education),2.0
+13,6,Kittur,Kittur,Congress,Coop,"other (housing, youth/sports, transport, revenue, planning, etc.)",2.0
+13,7,Bailhongal,Bailahongal,Congress,PWD,roads/bridges (PWD),25.0
+13,7,Bailhongal,Bailahongal,Congress,RDPR,"roads/bridges (rural, RDPR)",18.9
+13,7,Bailhongal,Bailahongal,Congress,Muzrai,temples/religious (Muzrai),4.85
+13,7,Bailhongal,Bailahongal,Congress,Transport,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.25
+13,8,Saundatti Yellamma,Saundatti Yellamma,Congress,PWD,roads/bridges (PWD),36.85
+13,8,Saundatti Yellamma,Saundatti Yellamma,Congress,RDPR,"roads/bridges (rural, RDPR)",12.15
+13,8,Saundatti Yellamma,Saundatti Yellamma,Congress,Energy,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.0
+13,9,Belgaum Rural,Belgaum Rural,Congress,PWD,roads/bridges (PWD),17.5
+13,9,Belgaum Rural,Belgaum Rural,Congress,RDPR,"roads/bridges (rural, RDPR)",20.0
+13,9,Belgaum Rural,Belgaum Rural,Congress,Muzrai,temples/religious (Muzrai),10.0
+13,9,Belgaum Rural,Belgaum Rural,Congress,BCW,community/caste halls & hostels (BCW),2.5
+13,10,Ramdurg,Ramdurg,Congress,PWD,roads/bridges (PWD),37.5
+13,10,Ramdurg,Ramdurg,Congress,RDPR,"roads/bridges (rural, RDPR)",11.25
+13,10,Ramdurg,Ramdurg,Congress,BCW,community/caste halls & hostels (BCW),1.25
+13,11,Chikkodi-Sadalga,Chikkodi-Sadalga,Congress,PWD,roads/bridges (PWD),14.0
+13,11,Chikkodi-Sadalga,Chikkodi-Sadalga,Congress,RDPR,"roads/bridges (rural, RDPR)",16.0
+13,11,Chikkodi-Sadalga,Chikkodi-Sadalga,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",12.0
+13,11,Chikkodi-Sadalga,Chikkodi-Sadalga,Congress,MI,"irrigation/water (MI, WRD)",2.0
+13,11,Chikkodi-Sadalga,Chikkodi-Sadalga,Congress,Muzrai,temples/religious (Muzrai),6.0
+13,12,Raybag,Raybag (SC),BJP,PWD,roads/bridges (PWD),15.0
+13,12,Raybag,Raybag (SC),BJP,RDPR,"roads/bridges (rural, RDPR)",10.0
+13,13,Hukkeri,Hukkeri,BJP,PWD,roads/bridges (PWD),12.5
+13,13,Hukkeri,Hukkeri,BJP,RDPR,"roads/bridges (rural, RDPR)",6.25
+13,13,Hukkeri,Hukkeri,BJP,Muzrai,temples/religious (Muzrai),6.25
+13,14,Gokak,Gokak,BJP,RDPR,"roads/bridges (rural, RDPR)",18.75
+13,14,Gokak,Gokak,BJP,BCW,community/caste halls & hostels (BCW),1.29
+13,14,Gokak,Gokak,BJP,MWD,community/religious - minorities (MWD),0.4
+13,14,Gokak,Gokak,BJP,Transport,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.78
+13,14,Gokak,Gokak,BJP,Education,school/college buildings (Education),3.58
+13,14,Gokak,Gokak,BJP,SWD,community halls/SC welfare (SWD),0.2
+13,15,Arabhavi,Arabhavi,BJP,PWD,roads/bridges (PWD),2.7
+13,15,Arabhavi,Arabhavi,BJP,RDPR,"roads/bridges (rural, RDPR)",16.05
+13,15,Arabhavi,Arabhavi,BJP,Muzrai,temples/religious (Muzrai),1.6
+13,15,Arabhavi,Arabhavi,BJP,BCW,community/caste halls & hostels (BCW),3.35
+13,15,Arabhavi,Arabhavi,BJP,MWD,community/religious - minorities (MWD),0.4
+13,15,Arabhavi,Arabhavi,BJP,Education,school/college buildings (Education),0.25
+13,15,Arabhavi,Arabhavi,BJP,SWD,community halls/SC welfare (SWD),0.65
+13,16,Nippani,Nippani,BJP,RDPR,"roads/bridges (rural, RDPR)",18.75
+13,16,Nippani,Nippani,BJP,Muzrai,temples/religious (Muzrai),3.25
+13,16,Nippani,Nippani,BJP,Education,school/college buildings (Education),1.0
+13,16,Nippani,Nippani,BJP,SWD,community halls/SC welfare (SWD),2.0
+13,17,Khanapur,Khanapur,BJP,PWD,roads/bridges (PWD),4.0
+13,17,Khanapur,Khanapur,BJP,RDPR,"roads/bridges (rural, RDPR)",14.3
+13,17,Khanapur,Khanapur,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",0.45
+13,17,Khanapur,Khanapur,BJP,Muzrai,temples/religious (Muzrai),3.65
+13,17,Khanapur,Khanapur,BJP,BCW,community/caste halls & hostels (BCW),0.2
+13,17,Khanapur,Khanapur,BJP,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.5
+13,17,Khanapur,Khanapur,BJP,Education,school/college buildings (Education),1.3
+13,17,Khanapur,Khanapur,BJP,Revenue,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.2
+13,17,Khanapur,Khanapur,BJP,KannadaCulture,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.05
+13,17,Khanapur,Khanapur,BJP,WCD,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.35
+13,18,Belgaum Dakshin,Belgaum Dakshin,BJP,RDPR,"roads/bridges (rural, RDPR)",18.75
+13,18,Belgaum Dakshin,Belgaum Dakshin,BJP,Muzrai,temples/religious (Muzrai),5.4
+13,18,Belgaum Dakshin,Belgaum Dakshin,BJP,Education,school/college buildings (Education),0.55
+13,18,Belgaum Dakshin,Belgaum Dakshin,BJP,WCD,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.3
+13,19,Yadgir,Yadgir,Congress,PWD,roads/bridges (PWD),25.85
+13,19,Yadgir,Yadgir,Congress,RDPR,"roads/bridges (rural, RDPR)",24.15
+13,20,Shahapur,Shahapur,Congress,PWD,roads/bridges (PWD),28.4
+13,20,Shahapur,Shahapur,Congress,RDPR,"roads/bridges (rural, RDPR)",9.1
+13,20,Shahapur,Shahapur,Congress,Muzrai,temples/religious (Muzrai),4.15
+13,20,Shahapur,Shahapur,Congress,BCW,community/caste halls & hostels (BCW),4.8
+13,20,Shahapur,Shahapur,Congress,MWD,community/religious - minorities (MWD),2.0
+13,20,Shahapur,Shahapur,Congress,SWD,community halls/SC welfare (SWD),1.05
+13,20,Shahapur,Shahapur,Congress,WCD,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.5
+13,21,Shorapur,Shorapur (ST),Congress,PWD,roads/bridges (PWD),34.5
+13,21,Shorapur,Shorapur (ST),Congress,RDPR,"roads/bridges (rural, RDPR)",11.0
+13,21,Shorapur,Shorapur (ST),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",3.0
+13,21,Shorapur,Shorapur (ST),Congress,Muzrai,temples/religious (Muzrai),1.5
+13,22,Gurmitkal,Gurmitkal,JD(S),RDPR,"roads/bridges (rural, RDPR)",17.35
+13,22,Gurmitkal,Gurmitkal,JD(S),UDD,"urban local works (UDD; roads/drains/civic, mixed)",1.8
+13,22,Gurmitkal,Gurmitkal,JD(S),Muzrai,temples/religious (Muzrai),2.85
+13,22,Gurmitkal,Gurmitkal,JD(S),BCW,community/caste halls & hostels (BCW),1.8
+13,22,Gurmitkal,Gurmitkal,JD(S),Education,school/college buildings (Education),0.3
+13,22,Gurmitkal,Gurmitkal,JD(S),SWD,community halls/SC welfare (SWD),0.4
+13,22,Gurmitkal,Gurmitkal,JD(S),ST,community halls/ST welfare (ST),0.3
+13,22,Gurmitkal,Gurmitkal,JD(S),Health,hospitals/health,0.2
+13,23,Basavana Bagevadi,Basavana Bagevadi,Congress,PWD,roads/bridges (PWD),23.05
+13,23,Basavana Bagevadi,Basavana Bagevadi,Congress,RDPR,"roads/bridges (rural, RDPR)",21.55
+13,23,Basavana Bagevadi,Basavana Bagevadi,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",1.2
+13,23,Basavana Bagevadi,Basavana Bagevadi,Congress,Muzrai,temples/religious (Muzrai),1.7
+13,23,Basavana Bagevadi,Basavana Bagevadi,Congress,BCW,community/caste halls & hostels (BCW),0.55
+13,23,Basavana Bagevadi,Basavana Bagevadi,Congress,MWD,community/religious - minorities (MWD),0.25
+13,23,Basavana Bagevadi,Basavana Bagevadi,Congress,Education,school/college buildings (Education),1.19
+13,23,Basavana Bagevadi,Basavana Bagevadi,Congress,SWD,community halls/SC welfare (SWD),0.51
+13,24,Nagthan,Nagthan (SC),Congress,PWD,roads/bridges (PWD),32.0
+13,24,Nagthan,Nagthan (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",18.0
+13,25,Indi,Indi,Congress,PWD,roads/bridges (PWD),20.0
+13,25,Indi,Indi,Congress,RDPR,"roads/bridges (rural, RDPR)",10.0
+13,25,Indi,Indi,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",10.5
+13,25,Indi,Indi,Congress,Muzrai,temples/religious (Muzrai),1.0
+13,25,Indi,Indi,Congress,BCW,community/caste halls & hostels (BCW),2.25
+13,25,Indi,Indi,Congress,MWD,community/religious - minorities (MWD),0.25
+13,25,Indi,Indi,Congress,Transport,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.75
+13,25,Indi,Indi,Congress,Education,school/college buildings (Education),0.5
+13,25,Indi,Indi,Congress,SWD,community halls/SC welfare (SWD),0.25
+13,25,Indi,Indi,Congress,HD,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.25
+13,25,Indi,Indi,Congress,Planning,"other (housing, youth/sports, transport, revenue, planning, etc.)",3.0
+13,25,Indi,Indi,Congress,Health,hospitals/health,0.5
+13,25,Indi,Indi,Congress,Forest,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.5
+13,25,Indi,Indi,Congress,Law,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.25
+13,26,Sindgi,Sindgi,Congress,RDPR,"roads/bridges (rural, RDPR)",12.5
+13,26,Sindgi,Sindgi,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+13,26,Sindgi,Sindgi,Congress,BCW,community/caste halls & hostels (BCW),8.4
+13,26,Sindgi,Sindgi,Congress,MWD,community/religious - minorities (MWD),2.3
+13,26,Sindgi,Sindgi,Congress,SWD,community halls/SC welfare (SWD),1.3
+13,26,Sindgi,Sindgi,Congress,ST,community halls/ST welfare (ST),0.5
+13,27,Muddebihal,Muddebihal,Congress,PWD,roads/bridges (PWD),17.5
+13,27,Muddebihal,Muddebihal,Congress,RDPR,"roads/bridges (rural, RDPR)",23.0
+13,27,Muddebihal,Muddebihal,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",3.8
+13,27,Muddebihal,Muddebihal,Congress,BCW,community/caste halls & hostels (BCW),4.15
+13,27,Muddebihal,Muddebihal,Congress,MWD,community/religious - minorities (MWD),0.25
+13,27,Muddebihal,Muddebihal,Congress,Education,school/college buildings (Education),1.0
+13,27,Muddebihal,Muddebihal,Congress,SWD,community halls/SC welfare (SWD),0.3
+13,28,Babaleshwar,Babaleshwar,Congress,PWD,roads/bridges (PWD),17.5
+13,28,Babaleshwar,Babaleshwar,Congress,RDPR,"roads/bridges (rural, RDPR)",20.0
+13,28,Babaleshwar,Babaleshwar,Congress,Muzrai,temples/religious (Muzrai),4.75
+13,28,Babaleshwar,Babaleshwar,Congress,BCW,community/caste halls & hostels (BCW),4.0
+13,28,Babaleshwar,Babaleshwar,Congress,Education,school/college buildings (Education),2.0
+13,28,Babaleshwar,Babaleshwar,Congress,Tourism,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.75
+13,29,Bijapur City,Bijapur City,BJP,RDPR,"roads/bridges (rural, RDPR)",0.5
+13,29,Bijapur City,Bijapur City,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",19.33
+13,29,Bijapur City,Bijapur City,BJP,BCW,community/caste halls & hostels (BCW),3.95
+13,29,Bijapur City,Bijapur City,BJP,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.88
+13,29,Bijapur City,Bijapur City,BJP,SWD,community halls/SC welfare (SWD),0.34
+13,30,Devar Hippargi,Devara Hippargi,JD(S),PWD,roads/bridges (PWD),6.0
+13,30,Devar Hippargi,Devara Hippargi,JD(S),RDPR,"roads/bridges (rural, RDPR)",12.75
+13,30,Devar Hippargi,Devara Hippargi,JD(S),BCW,community/caste halls & hostels (BCW),4.91
+13,30,Devar Hippargi,Devara Hippargi,JD(S),MWD,community/religious - minorities (MWD),0.69
+13,30,Devar Hippargi,Devara Hippargi,JD(S),Education,school/college buildings (Education),0.05
+13,30,Devar Hippargi,Devara Hippargi,JD(S),SWD,community halls/SC welfare (SWD),0.6
+13,31,Navalgund,Navalgund,Congress,PWD,roads/bridges (PWD),9.0
+13,31,Navalgund,Navalgund,Congress,RDPR,"roads/bridges (rural, RDPR)",24.5
+13,31,Navalgund,Navalgund,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",4.0
+13,31,Navalgund,Navalgund,Congress,Muzrai,temples/religious (Muzrai),5.0
+13,31,Navalgund,Navalgund,Congress,BCW,community/caste halls & hostels (BCW),2.45
+13,31,Navalgund,Navalgund,Congress,MWD,community/religious - minorities (MWD),3.5
+13,31,Navalgund,Navalgund,Congress,Transport,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.3
+13,31,Navalgund,Navalgund,Congress,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.45
+13,31,Navalgund,Navalgund,Congress,Education,school/college buildings (Education),0.5
+13,31,Navalgund,Navalgund,Congress,ST,community halls/ST welfare (ST),0.3
+13,32,Dharwad,Dharwad,Congress,PWD,roads/bridges (PWD),25.0
+13,32,Dharwad,Dharwad,Congress,RDPR,"roads/bridges (rural, RDPR)",8.5
+13,32,Dharwad,Dharwad,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",4.0
+13,32,Dharwad,Dharwad,Congress,MI,"irrigation/water (MI, WRD)",4.0
+13,32,Dharwad,Dharwad,Congress,Muzrai,temples/religious (Muzrai),5.7
+13,32,Dharwad,Dharwad,Congress,Transport,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.3
+13,32,Dharwad,Dharwad,Congress,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.5
+13,33,Hubli-Dharwad-East,Hubli-Dharwad-East (SC),Congress,PWD,roads/bridges (PWD),22.5
+13,33,Hubli-Dharwad-East,Hubli-Dharwad-East (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",27.5
+13,34,Kalghatgi,Kalaghatgi,Congress,PWD,roads/bridges (PWD),25.0
+13,34,Kalghatgi,Kalaghatgi,Congress,RDPR,"roads/bridges (rural, RDPR)",12.75
+13,34,Kalghatgi,Kalaghatgi,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",0.5
+13,34,Kalghatgi,Kalaghatgi,Congress,BCW,community/caste halls & hostels (BCW),0.85
+13,34,Kalghatgi,Kalaghatgi,Congress,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.45
+13,34,Kalghatgi,Kalaghatgi,Congress,Education,school/college buildings (Education),10.45
+14,35,Hubli-Dharwad West,Hubli-Dharwad-West,BJP,PWD,roads/bridges (PWD),11.55
+14,35,Hubli-Dharwad West,Hubli-Dharwad-West,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",7.2
+14,35,Hubli-Dharwad West,Hubli-Dharwad-West,BJP,Muzrai,temples/religious (Muzrai),2.85
+14,35,Hubli-Dharwad West,Hubli-Dharwad-West,BJP,BCW,community/caste halls & hostels (BCW),3.4
+14,36,Kundgol,Kundgol,BJP,PWD,roads/bridges (PWD),12.0
+14,36,Kundgol,Kundgol,BJP,RDPR,"roads/bridges (rural, RDPR)",12.58
+14,36,Kundgol,Kundgol,BJP,BCW,community/caste halls & hostels (BCW),0.22
+14,36,Kundgol,Kundgol,BJP,MWD,community/religious - minorities (MWD),0.05
+14,36,Kundgol,Kundgol,BJP,Education,school/college buildings (Education),0.1
+14,36,Kundgol,Kundgol,BJP,Coop,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.05
+14,37,Hubli-Dharwad Central,Hubli-Dharwad-Central,BJP,PWD,roads/bridges (PWD),18.75
+14,37,Hubli-Dharwad Central,Hubli-Dharwad-Central,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",5.25
+14,37,Hubli-Dharwad Central,Hubli-Dharwad-Central,BJP,Muzrai,temples/religious (Muzrai),1.0
+14,38,Jagalur,Jagalur (ST),Congress,PWD,roads/bridges (PWD),23.25
+14,38,Jagalur,Jagalur (ST),Congress,RDPR,"roads/bridges (rural, RDPR)",13.25
+14,38,Jagalur,Jagalur (ST),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",2.25
+14,38,Jagalur,Jagalur (ST),Congress,Muzrai,temples/religious (Muzrai),0.25
+14,38,Jagalur,Jagalur (ST),Congress,Education,school/college buildings (Education),6.0
+14,38,Jagalur,Jagalur (ST),Congress,SWD,community halls/SC welfare (SWD),5.0
+14,39,Channagiri,Channagiri,Congress,PWD,roads/bridges (PWD),7.5
+14,39,Channagiri,Channagiri,Congress,RDPR,"roads/bridges (rural, RDPR)",30.0
+14,39,Channagiri,Channagiri,Congress,Muzrai,temples/religious (Muzrai),5.0
+14,39,Channagiri,Channagiri,Congress,BCW,community/caste halls & hostels (BCW),1.5
+14,39,Channagiri,Channagiri,Congress,Education,school/college buildings (Education),6.0
+14,40,Honnali,Honnali,Congress,PWD,roads/bridges (PWD),20.0
+14,40,Honnali,Honnali,Congress,RDPR,"roads/bridges (rural, RDPR)",13.3
+14,40,Honnali,Honnali,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",7.5
+14,40,Honnali,Honnali,Congress,MI,"irrigation/water (MI, WRD)",5.0
+14,40,Honnali,Honnali,Congress,Muzrai,temples/religious (Muzrai),2.0
+14,40,Honnali,Honnali,Congress,BCW,community/caste halls & hostels (BCW),2.2
+14,41,Mayakonda,Mayakonda (SC),Congress,PWD,roads/bridges (PWD),10.0
+14,41,Mayakonda,Mayakonda (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",27.5
+14,41,Mayakonda,Mayakonda (SC),Congress,Muzrai,temples/religious (Muzrai),2.0
+14,41,Mayakonda,Mayakonda (SC),Congress,BCW,community/caste halls & hostels (BCW),5.0
+14,41,Mayakonda,Mayakonda (SC),Congress,Transport,"other (housing, youth/sports, transport, revenue, planning, etc.)",3.0
+14,41,Mayakonda,Mayakonda (SC),Congress,Education,school/college buildings (Education),2.5
+14,42,Davanagere North,Davanagere North,Congress,PWD,roads/bridges (PWD),9.0
+14,42,Davanagere North,Davanagere North,Congress,RDPR,"roads/bridges (rural, RDPR)",24.5
+14,42,Davanagere North,Davanagere North,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",11.5
+14,42,Davanagere North,Davanagere North,Congress,MWD,community/religious - minorities (MWD),2.0
+14,42,Davanagere North,Davanagere North,Congress,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",3.0
+14,43,Davanagere South,Davanagere South,Congress,PWD,roads/bridges (PWD),25.0
+14,43,Davanagere South,Davanagere South,Congress,RDPR,"roads/bridges (rural, RDPR)",10.7
+14,43,Davanagere South,Davanagere South,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",4.55
+14,43,Davanagere South,Davanagere South,Congress,Muzrai,temples/religious (Muzrai),0.35
+14,43,Davanagere South,Davanagere South,Congress,BCW,community/caste halls & hostels (BCW),3.7
+14,43,Davanagere South,Davanagere South,Congress,MWD,community/religious - minorities (MWD),1.7
+14,43,Davanagere South,Davanagere South,Congress,Education,school/college buildings (Education),2.0
+14,43,Davanagere South,Davanagere South,Congress,SWD,community halls/SC welfare (SWD),1.75
+14,43,Davanagere South,Davanagere South,Congress,HD,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.25
+14,44,Harihar,Harihar,BJP,PWD,roads/bridges (PWD),12.0
+14,44,Harihar,Harihar,BJP,RDPR,"roads/bridges (rural, RDPR)",6.82
+14,44,Harihar,Harihar,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",6.18
+14,45,Mudhol,Mudhol (SC),Congress,PWD,roads/bridges (PWD),25.0
+14,45,Mudhol,Mudhol (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",11.9
+14,45,Mudhol,Mudhol (SC),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",5.5
+14,45,Mudhol,Mudhol (SC),Congress,BCW,community/caste halls & hostels (BCW),5.85
+14,45,Mudhol,Mudhol (SC),Congress,SWD,community halls/SC welfare (SWD),1.75
+14,46,Bilgi,Bilgi,Congress,PWD,roads/bridges (PWD),25.0
+14,46,Bilgi,Bilgi,Congress,RDPR,"roads/bridges (rural, RDPR)",13.34
+14,46,Bilgi,Bilgi,Congress,Muzrai,temples/religious (Muzrai),1.0
+14,46,Bilgi,Bilgi,Congress,BCW,community/caste halls & hostels (BCW),4.1
+14,46,Bilgi,Bilgi,Congress,MWD,community/religious - minorities (MWD),0.8
+14,46,Bilgi,Bilgi,Congress,Transport,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.0
+14,46,Bilgi,Bilgi,Congress,Education,school/college buildings (Education),0.45
+14,46,Bilgi,Bilgi,Congress,SWD,community halls/SC welfare (SWD),3.74
+14,46,Bilgi,Bilgi,Congress,HD,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.32
+14,46,Bilgi,Bilgi,Congress,KannadaCulture,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.25
+14,47,Badami,Badami,Congress,PWD,roads/bridges (PWD),22.45
+14,47,Badami,Badami,Congress,RDPR,"roads/bridges (rural, RDPR)",12.5
+14,47,Badami,Badami,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",12.5
+14,47,Badami,Badami,Congress,BCW,community/caste halls & hostels (BCW),2.55
+14,48,Bagalkot,Bagalkot,Congress,PWD,roads/bridges (PWD),27.0
+14,48,Bagalkot,Bagalkot,Congress,RDPR,"roads/bridges (rural, RDPR)",6.35
+14,48,Bagalkot,Bagalkot,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",4.15
+14,48,Bagalkot,Bagalkot,Congress,BCW,community/caste halls & hostels (BCW),12.5
+14,49,Hungund,Hungund,Congress,PWD,roads/bridges (PWD),25.0
+14,49,Hungund,Hungund,Congress,RDPR,"roads/bridges (rural, RDPR)",10.0
+14,49,Hungund,Hungund,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",8.5
+14,49,Hungund,Hungund,Congress,Muzrai,temples/religious (Muzrai),2.6
+14,49,Hungund,Hungund,Congress,Education,school/college buildings (Education),3.9
+14,50,Jamkhandi,Jamkhandi,BJP,PWD,roads/bridges (PWD),5.65
+14,50,Jamkhandi,Jamkhandi,BJP,RDPR,"roads/bridges (rural, RDPR)",11.04
+14,50,Jamkhandi,Jamkhandi,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",5.0
+14,50,Jamkhandi,Jamkhandi,BJP,WRD,"irrigation/water (MI, WRD)",1.0
+14,50,Jamkhandi,Jamkhandi,BJP,BCW,community/caste halls & hostels (BCW),2.01
+14,50,Jamkhandi,Jamkhandi,BJP,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.3
+14,51,Terdal,Terdal,BJP,PWD,roads/bridges (PWD),10.6
+14,51,Terdal,Terdal,BJP,RDPR,"roads/bridges (rural, RDPR)",5.98
+14,51,Terdal,Terdal,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",2.76
+14,51,Terdal,Terdal,BJP,WRD,"irrigation/water (MI, WRD)",0.3
+14,51,Terdal,Terdal,BJP,Muzrai,temples/religious (Muzrai),5.26
+14,51,Terdal,Terdal,BJP,MWD,community/religious - minorities (MWD),0.1
+14,52,Haveri,Haveri (SC),Congress,PWD,roads/bridges (PWD),30.95
+14,52,Haveri,Haveri (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",8.85
+14,52,Haveri,Haveri (SC),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",1.8
+14,52,Haveri,Haveri (SC),Congress,Muzrai,temples/religious (Muzrai),5.8
+14,52,Haveri,Haveri (SC),Congress,Education,school/college buildings (Education),2.3
+14,52,Haveri,Haveri (SC),Congress,SWD,community halls/SC welfare (SWD),0.3
+14,53,Byadgi,Byadgi,Congress,PWD,roads/bridges (PWD),25.75
+14,53,Byadgi,Byadgi,Congress,RDPR,"roads/bridges (rural, RDPR)",11.75
+14,53,Byadgi,Byadgi,Congress,BCW,community/caste halls & hostels (BCW),6.25
+14,53,Byadgi,Byadgi,Congress,Revenue,"other (housing, youth/sports, transport, revenue, planning, etc.)",6.25
+14,54,Hirekerur,Hirekerur,Congress,PWD,roads/bridges (PWD),25.0
+14,54,Hirekerur,Hirekerur,Congress,RDPR,"roads/bridges (rural, RDPR)",12.5
+14,54,Hirekerur,Hirekerur,Congress,Muzrai,temples/religious (Muzrai),10.0
+14,54,Hirekerur,Hirekerur,Congress,MWD,community/religious - minorities (MWD),1.75
+14,54,Hirekerur,Hirekerur,Congress,Coop,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.75
+14,55,Ranebennur,Ranebennur,Congress,PWD,roads/bridges (PWD),19.8
+14,55,Ranebennur,Ranebennur,Congress,RDPR,"roads/bridges (rural, RDPR)",19.2
+14,56,Hangal,Hangal,Congress,PWD,roads/bridges (PWD),7.6
+14,56,Hangal,Hangal,Congress,RDPR,"roads/bridges (rural, RDPR)",29.9
+14,56,Hangal,Hangal,Congress,MI,"irrigation/water (MI, WRD)",6.0
+14,56,Hangal,Hangal,Congress,Muzrai,temples/religious (Muzrai),4.5
+14,56,Hangal,Hangal,Congress,MWD,community/religious - minorities (MWD),1.0
+14,56,Hangal,Hangal,Congress,Education,school/college buildings (Education),0.1
+14,56,Hangal,Hangal,Congress,Coop,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.65
+14,56,Hangal,Hangal,Congress,Revenue,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.25
+14,57,Shiggaon,Shiggaon,Congress,RDPR,"roads/bridges (rural, RDPR)",37.5
+14,57,Shiggaon,Shiggaon,Congress,Muzrai,temples/religious (Muzrai),10.5
+14,57,Shiggaon,Shiggaon,Congress,BCW,community/caste halls & hostels (BCW),2.0
+14,58,Bellary (Rural),Bellary (ST),Congress,PWD,roads/bridges (PWD),50.0
+14,59,Siruguppa,Siraguppa (ST),Congress,PWD,roads/bridges (PWD),25.0
+14,59,Siruguppa,Siraguppa (ST),Congress,RDPR,"roads/bridges (rural, RDPR)",12.5
+14,59,Siruguppa,Siraguppa (ST),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",3.0
+14,59,Siruguppa,Siraguppa (ST),Congress,MI,"irrigation/water (MI, WRD)",5.0
+14,59,Siruguppa,Siraguppa (ST),Congress,Muzrai,temples/religious (Muzrai),1.35
+14,59,Siruguppa,Siraguppa (ST),Congress,BCW,community/caste halls & hostels (BCW),2.15
+14,59,Siruguppa,Siraguppa (ST),Congress,Skill,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.0
+14,60,Sandur,Sandur (ST),Congress,PWD,roads/bridges (PWD),32.35
+14,60,Sandur,Sandur (ST),Congress,RDPR,"roads/bridges (rural, RDPR)",17.65
+14,61,Kampli,Kampli (ST),Congress,PWD,roads/bridges (PWD),37.5
+14,61,Kampli,Kampli (ST),Congress,RDPR,"roads/bridges (rural, RDPR)",3.6
+14,61,Kampli,Kampli (ST),Congress,BCW,community/caste halls & hostels (BCW),6.1
+14,61,Kampli,Kampli (ST),Congress,SWD,community halls/SC welfare (SWD),2.6
+14,61,Kampli,Kampli (ST),Congress,ST,community halls/ST welfare (ST),0.2
+14,62,Bellary City,Bellary City,Congress,PWD,roads/bridges (PWD),40.0
+14,62,Bellary City,Bellary City,Congress,RDPR,"roads/bridges (rural, RDPR)",10.0
+14,63,Afzalpur,Afzalpur,Congress,PWD,roads/bridges (PWD),38.75
+14,63,Afzalpur,Afzalpur,Congress,MI,"irrigation/water (MI, WRD)",9.0
+14,63,Afzalpur,Afzalpur,Congress,BCW,community/caste halls & hostels (BCW),2.25
+14,64,Gulbarga Uttar,Gulbarga Uttar,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+14,65,Sedam,Sedam,Congress,PWD,roads/bridges (PWD),31.9
+14,65,Sedam,Sedam,Congress,RDPR,"roads/bridges (rural, RDPR)",5.6
+14,65,Sedam,Sedam,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",0.4
+14,65,Sedam,Sedam,Congress,Muzrai,temples/religious (Muzrai),5.4
+14,65,Sedam,Sedam,Congress,BCW,community/caste halls & hostels (BCW),0.3
+14,65,Sedam,Sedam,Congress,MWD,community/religious - minorities (MWD),6.4
+14,66,Gulbarga Dakshin,Gulbarga Dakshin,Congress,PWD,roads/bridges (PWD),15.5
+14,66,Gulbarga Dakshin,Gulbarga Dakshin,Congress,RDPR,"roads/bridges (rural, RDPR)",33.3
+14,66,Gulbarga Dakshin,Gulbarga Dakshin,Congress,MI,"irrigation/water (MI, WRD)",1.2
+14,67,Aland,Aland,Congress,PWD,roads/bridges (PWD),41.34
+14,67,Aland,Aland,Congress,RDPR,"roads/bridges (rural, RDPR)",8.66
+14,68,Jevargi,Jevargi,Congress,PWD,roads/bridges (PWD),25.0
+14,68,Jevargi,Jevargi,Congress,RDPR,"roads/bridges (rural, RDPR)",12.5
+14,68,Jevargi,Jevargi,Congress,Muzrai,temples/religious (Muzrai),8.5
+14,68,Jevargi,Jevargi,Congress,Education,school/college buildings (Education),4.0
+14,69,Chittapur,Chittapur (SC),Congress,PWD,roads/bridges (PWD),37.5
+14,69,Chittapur,Chittapur (SC),Congress,Muzrai,temples/religious (Muzrai),8.5
+14,69,Chittapur,Chittapur (SC),Congress,BCW,community/caste halls & hostels (BCW),0.75
+14,69,Chittapur,Chittapur (SC),Congress,SWD,community halls/SC welfare (SWD),3.25
+14,70,Gulbarga Rural,Gulbarga Rural (SC),BJP,RDPR,"roads/bridges (rural, RDPR)",18.75
+14,70,Gulbarga Rural,Gulbarga Rural (SC),BJP,Muzrai,temples/religious (Muzrai),6.25
+14,71,Chincholi,Chincholi (SC),BJP,PWD,roads/bridges (PWD),2.5
+14,71,Chincholi,Chincholi (SC),BJP,RDPR,"roads/bridges (rural, RDPR)",19.25
+14,71,Chincholi,Chincholi (SC),BJP,Muzrai,temples/religious (Muzrai),3.25
+14,72,Bidar,Bidar,Congress,PWD,roads/bridges (PWD),27.6
+14,72,Bidar,Bidar,Congress,RDPR,"roads/bridges (rural, RDPR)",12.5
+14,72,Bidar,Bidar,Congress,MWD,community/religious - minorities (MWD),9.9
+14,73,Bhalki,Bhalki,Congress,PWD,roads/bridges (PWD),25.0
+14,73,Bhalki,Bhalki,Congress,RDPR,"roads/bridges (rural, RDPR)",12.5
+14,73,Bhalki,Bhalki,Congress,BCW,community/caste halls & hostels (BCW),12.5
+14,74,Bidar South,Bidar South,BJP,PWD,roads/bridges (PWD),7.0
+14,74,Bidar South,Bidar South,BJP,RDPR,"roads/bridges (rural, RDPR)",12.91
+14,74,Bidar South,Bidar South,BJP,Muzrai,temples/religious (Muzrai),0.2
+14,74,Bidar South,Bidar South,BJP,BCW,community/caste halls & hostels (BCW),3.14
+14,74,Bidar South,Bidar South,BJP,MWD,community/religious - minorities (MWD),0.25
+14,74,Bidar South,Bidar South,BJP,SWD,community halls/SC welfare (SWD),0.55
+14,74,Bidar South,Bidar South,BJP,ST,community halls/ST welfare (ST),0.95
+15,75,Aurad,Aurad (SC),BJP,PWD,roads/bridges (PWD),11.85
+15,75,Aurad,Aurad (SC),BJP,RDPR,"roads/bridges (rural, RDPR)",6.9
+15,75,Aurad,Aurad (SC),BJP,BCW,community/caste halls & hostels (BCW),6.25
+15,76,Humnabad,Humnabad,BJP,PWD,roads/bridges (PWD),15.0
+15,76,Humnabad,Humnabad,BJP,RDPR,"roads/bridges (rural, RDPR)",3.75
+15,76,Humnabad,Humnabad,BJP,Muzrai,temples/religious (Muzrai),0.1
+15,76,Humnabad,Humnabad,BJP,BCW,community/caste halls & hostels (BCW),2.58
+15,76,Humnabad,Humnabad,BJP,MWD,community/religious - minorities (MWD),0.45
+15,76,Humnabad,Humnabad,BJP,Education,school/college buildings (Education),0.1
+15,76,Humnabad,Humnabad,BJP,SWD,community halls/SC welfare (SWD),0.55
+15,76,Humnabad,Humnabad,BJP,ST,community halls/ST welfare (ST),2.47
+15,77,Basavakalyan,Basavakalyan,BJP,PWD,roads/bridges (PWD),18.75
+15,77,Basavakalyan,Basavakalyan,BJP,RDPR,"roads/bridges (rural, RDPR)",6.25
+15,78,Manvi,Manvi (ST),Congress,PWD,roads/bridges (PWD),24.0
+15,78,Manvi,Manvi (ST),Congress,RDPR,"roads/bridges (rural, RDPR)",9.15
+15,78,Manvi,Manvi (ST),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",4.35
+15,78,Manvi,Manvi (ST),Congress,Muzrai,temples/religious (Muzrai),3.1
+15,78,Manvi,Manvi (ST),Congress,BCW,community/caste halls & hostels (BCW),5.35
+15,78,Manvi,Manvi (ST),Congress,MWD,community/religious - minorities (MWD),2.8
+15,78,Manvi,Manvi (ST),Congress,ST,community halls/ST welfare (ST),1.25
+15,79,Raichur Rural,Raichur Rural (ST),Congress,PWD,roads/bridges (PWD),30.5
+15,79,Raichur Rural,Raichur Rural (ST),Congress,RDPR,"roads/bridges (rural, RDPR)",7.0
+15,79,Raichur Rural,Raichur Rural (ST),Congress,Muzrai,temples/religious (Muzrai),9.0
+15,79,Raichur Rural,Raichur Rural (ST),Congress,BCW,community/caste halls & hostels (BCW),1.0
+15,79,Raichur Rural,Raichur Rural (ST),Congress,MWD,community/religious - minorities (MWD),1.0
+15,79,Raichur Rural,Raichur Rural (ST),Congress,SWD,community halls/SC welfare (SWD),0.5
+15,79,Raichur Rural,Raichur Rural (ST),Congress,ST,community halls/ST welfare (ST),1.0
+15,80,Maski,Maski (ST),Congress,PWD,roads/bridges (PWD),36.5
+15,80,Maski,Maski (ST),Congress,RDPR,"roads/bridges (rural, RDPR)",1.0
+15,80,Maski,Maski (ST),Congress,Muzrai,temples/religious (Muzrai),4.0
+15,80,Maski,Maski (ST),Congress,BCW,community/caste halls & hostels (BCW),4.5
+15,80,Maski,Maski (ST),Congress,ST,community halls/ST welfare (ST),0.5
+15,80,Maski,Maski (ST),Congress,KannadaCulture,"other (housing, youth/sports, transport, revenue, planning, etc.)",3.5
+15,81,Sindhanur,Sindhanur,Congress,PWD,roads/bridges (PWD),24.08
+15,81,Sindhanur,Sindhanur,Congress,RDPR,"roads/bridges (rural, RDPR)",13.42
+15,81,Sindhanur,Sindhanur,Congress,BCW,community/caste halls & hostels (BCW),11.5
+15,81,Sindhanur,Sindhanur,Congress,Education,school/college buildings (Education),1.0
+15,82,Lingsugur,Lingsugur (SC),BJP,PWD,roads/bridges (PWD),12.5
+15,82,Lingsugur,Lingsugur (SC),BJP,RDPR,"roads/bridges (rural, RDPR)",9.6
+15,82,Lingsugur,Lingsugur (SC),BJP,KannadaCulture,"other (housing, youth/sports, transport, revenue, planning, etc.)",2.9
+15,83,Raichur,Raichur,BJP,PWD,roads/bridges (PWD),18.75
+15,83,Raichur,Raichur,BJP,Muzrai,temples/religious (Muzrai),1.0
+15,83,Raichur,Raichur,BJP,BCW,community/caste halls & hostels (BCW),5.25
+15,84,Devadurga,Devadurga (ST),JD(S),PWD,roads/bridges (PWD),5.5
+15,84,Devadurga,Devadurga (ST),JD(S),RDPR,"roads/bridges (rural, RDPR)",15.25
+15,84,Devadurga,Devadurga (ST),JD(S),Muzrai,temples/religious (Muzrai),0.6
+15,84,Devadurga,Devadurga (ST),JD(S),Education,school/college buildings (Education),3.15
+15,84,Devadurga,Devadurga (ST),JD(S),Information,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.5
+15,85,Sirsi,Sirsi,Congress,PWD,roads/bridges (PWD),2.95
+15,85,Sirsi,Sirsi,Congress,RDPR,"roads/bridges (rural, RDPR)",26.2
+15,85,Sirsi,Sirsi,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",12.35
+15,85,Sirsi,Sirsi,Congress,BCW,community/caste halls & hostels (BCW),8.5
+15,86,Karwar,Karwar,Congress,RDPR,"roads/bridges (rural, RDPR)",40.0
+15,86,Karwar,Karwar,Congress,Muzrai,temples/religious (Muzrai),10.0
+15,87,Haliyal,Haliyal,Congress,PWD,roads/bridges (PWD),10.5
+15,87,Haliyal,Haliyal,Congress,RDPR,"roads/bridges (rural, RDPR)",7.0
+15,87,Haliyal,Haliyal,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",20.0
+15,87,Haliyal,Haliyal,Congress,Muzrai,temples/religious (Muzrai),4.0
+15,87,Haliyal,Haliyal,Congress,MWD,community/religious - minorities (MWD),2.5
+15,87,Haliyal,Haliyal,Congress,Education,school/college buildings (Education),6.0
+15,88,Bhatkal,Bhatkal,Congress,PWD,roads/bridges (PWD),12.5
+15,88,Bhatkal,Bhatkal,Congress,RDPR,"roads/bridges (rural, RDPR)",20.9
+15,88,Bhatkal,Bhatkal,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",4.1
+15,88,Bhatkal,Bhatkal,Congress,Muzrai,temples/religious (Muzrai),7.15
+15,88,Bhatkal,Bhatkal,Congress,BCW,community/caste halls & hostels (BCW),4.35
+15,88,Bhatkal,Bhatkal,Congress,MWD,community/religious - minorities (MWD),1.0
+15,89,Yellapur,Yellapur,BJP (expelled 27 May 2025),PWD,roads/bridges (PWD),8.0
+15,89,Yellapur,Yellapur,BJP (expelled 27 May 2025),RDPR,"roads/bridges (rural, RDPR)",30.0
+15,89,Yellapur,Yellapur,BJP (expelled 27 May 2025),Muzrai,temples/religious (Muzrai),3.03
+15,89,Yellapur,Yellapur,BJP (expelled 27 May 2025),Education,school/college buildings (Education),8.92
+15,89,Yellapur,Yellapur,BJP (expelled 27 May 2025),SWD,community halls/SC welfare (SWD),0.05
+15,90,Kumta,Kumta,BJP,PWD,roads/bridges (PWD),8.29
+15,90,Kumta,Kumta,BJP,RDPR,"roads/bridges (rural, RDPR)",16.71
+15,91,Gadag,Gadag,Congress,PWD,roads/bridges (PWD),0.47
+15,91,Gadag,Gadag,Congress,RDPR,"roads/bridges (rural, RDPR)",11.3
+15,91,Gadag,Gadag,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",31.0
+15,91,Gadag,Gadag,Congress,Muzrai,temples/religious (Muzrai),1.3
+15,91,Gadag,Gadag,Congress,BCW,community/caste halls & hostels (BCW),0.78
+15,91,Gadag,Gadag,Congress,MWD,community/religious - minorities (MWD),0.74
+15,91,Gadag,Gadag,Congress,Education,school/college buildings (Education),4.0
+15,91,Gadag,Gadag,Congress,KannadaCulture,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.15
+15,91,Gadag,Gadag,Congress,Agri,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.26
+15,92,Ron,Ron,Congress,PWD,roads/bridges (PWD),17.15
+15,92,Ron,Ron,Congress,RDPR,"roads/bridges (rural, RDPR)",12.95
+15,92,Ron,Ron,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",9.43
+15,92,Ron,Ron,Congress,Muzrai,temples/religious (Muzrai),2.12
+15,92,Ron,Ron,Congress,BCW,community/caste halls & hostels (BCW),4.94
+15,92,Ron,Ron,Congress,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.0
+15,92,Ron,Ron,Congress,Education,school/college buildings (Education),1.25
+15,92,Ron,Ron,Congress,ST,community halls/ST welfare (ST),0.98
+15,92,Ron,Ron,Congress,Energy,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.18
+15,93,Nargund,Nargund,BJP,PWD,roads/bridges (PWD),6.95
+15,93,Nargund,Nargund,BJP,RDPR,"roads/bridges (rural, RDPR)",9.7
+15,93,Nargund,Nargund,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",2.1
+15,93,Nargund,Nargund,BJP,Muzrai,temples/religious (Muzrai),2.2
+15,93,Nargund,Nargund,BJP,BCW,community/caste halls & hostels (BCW),2.2
+15,93,Nargund,Nargund,BJP,Education,school/college buildings (Education),1.85
+15,94,Shirahatti,Shirahatti (SC),BJP,PWD,roads/bridges (PWD),13.5
+15,94,Shirahatti,Shirahatti (SC),BJP,RDPR,"roads/bridges (rural, RDPR)",7.2
+15,94,Shirahatti,Shirahatti (SC),BJP,MI,"irrigation/water (MI, WRD)",2.0
+15,94,Shirahatti,Shirahatti (SC),BJP,Muzrai,temples/religious (Muzrai),2.3
+15,95,Mudigere,Mudigere (SC),Congress,PWD,roads/bridges (PWD),25.0
+15,95,Mudigere,Mudigere (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",25.0
+15,96,Chikmagalur,Chickamagalur,Congress,PWD,roads/bridges (PWD),17.0
+15,96,Chikmagalur,Chickamagalur,Congress,RDPR,"roads/bridges (rural, RDPR)",10.0
+15,96,Chikmagalur,Chickamagalur,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",10.5
+15,96,Chikmagalur,Chickamagalur,Congress,Muzrai,temples/religious (Muzrai),4.0
+15,96,Chikmagalur,Chickamagalur,Congress,BCW,community/caste halls & hostels (BCW),7.5
+15,96,Chikmagalur,Chickamagalur,Congress,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.0
+15,97,Kadur,Kadur,Congress,PWD,roads/bridges (PWD),32.0
+15,97,Kadur,Kadur,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",5.5
+15,97,Kadur,Kadur,Congress,Muzrai,temples/religious (Muzrai),12.5
+15,98,Sringeri,Sringeri,Congress,PWD,roads/bridges (PWD),26.05
+15,98,Sringeri,Sringeri,Congress,RDPR,"roads/bridges (rural, RDPR)",15.75
+15,98,Sringeri,Sringeri,Congress,Muzrai,temples/religious (Muzrai),3.5
+15,98,Sringeri,Sringeri,Congress,BCW,community/caste halls & hostels (BCW),2.35
+15,98,Sringeri,Sringeri,Congress,MWD,community/religious - minorities (MWD),0.45
+15,98,Sringeri,Sringeri,Congress,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.1
+15,98,Sringeri,Sringeri,Congress,Education,school/college buildings (Education),1.1
+15,98,Sringeri,Sringeri,Congress,SWD,community halls/SC welfare (SWD),0.1
+15,98,Sringeri,Sringeri,Congress,Coop,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.6
+15,99,Tarikere,Tarikere,Congress,PWD,roads/bridges (PWD),24.3
+15,99,Tarikere,Tarikere,Congress,RDPR,"roads/bridges (rural, RDPR)",8.5
+15,99,Tarikere,Tarikere,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",4.7
+15,99,Tarikere,Tarikere,Congress,MI,"irrigation/water (MI, WRD)",5.5
+15,99,Tarikere,Tarikere,Congress,Muzrai,temples/religious (Muzrai),1.0
+15,99,Tarikere,Tarikere,Congress,BCW,community/caste halls & hostels (BCW),1.0
+15,99,Tarikere,Tarikere,Congress,Education,school/college buildings (Education),0.5
+15,99,Tarikere,Tarikere,Congress,SWD,community halls/SC welfare (SWD),4.3
+15,99,Tarikere,Tarikere,Congress,Coop,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.2
+15,100,Gauribidanur,Gauribidanur,Independent,PWD,roads/bridges (PWD),16.5
+15,100,Gauribidanur,Gauribidanur,Independent,RDPR,"roads/bridges (rural, RDPR)",15.0
+15,100,Gauribidanur,Gauribidanur,Independent,UDD,"urban local works (UDD; roads/drains/civic, mixed)",6.0
+15,100,Gauribidanur,Gauribidanur,Independent,Planning,"other (housing, youth/sports, transport, revenue, planning, etc.)",12.5
+15,101,Chikkaballapur,Chikkaballapur,Congress,RDPR,"roads/bridges (rural, RDPR)",28.0
+15,101,Chikkaballapur,Chikkaballapur,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",21.0
+15,101,Chikkaballapur,Chikkaballapur,Congress,Muzrai,temples/religious (Muzrai),1.0
+15,102,Bagepalli,Bagepalli,Congress,PWD,roads/bridges (PWD),23.5
+15,102,Bagepalli,Bagepalli,Congress,RDPR,"roads/bridges (rural, RDPR)",14.0
+15,102,Bagepalli,Bagepalli,Congress,Planning,"other (housing, youth/sports, transport, revenue, planning, etc.)",12.5
+15,103,Chintamani,Chintamani,Congress,RDPR,"roads/bridges (rural, RDPR)",22.0
+15,103,Chintamani,Chintamani,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",17.8
+15,103,Chintamani,Chintamani,Congress,Muzrai,temples/religious (Muzrai),3.65
+15,103,Chintamani,Chintamani,Congress,SWD,community halls/SC welfare (SWD),5.4
+15,103,Chintamani,Chintamani,Congress,ST,community halls/ST welfare (ST),1.15
+15,104,Sidlaghatta,Sidlaghatta,JD(S),PWD,roads/bridges (PWD),15.0
+15,104,Sidlaghatta,Sidlaghatta,JD(S),RDPR,"roads/bridges (rural, RDPR)",8.6
+15,104,Sidlaghatta,Sidlaghatta,JD(S),Education,school/college buildings (Education),0.4
+15,104,Sidlaghatta,Sidlaghatta,JD(S),ST,community halls/ST welfare (ST),1.0
+15,105,Chamaraja,Chamaraja,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+15,106,T. Narasipur,T. Narasipur (SC),Congress,PWD,roads/bridges (PWD),37.5
+15,106,T. Narasipur,T. Narasipur (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",6.85
+15,106,T. Narasipur,T. Narasipur (SC),Congress,Muzrai,temples/religious (Muzrai),2.8
+15,106,T. Narasipur,T. Narasipur (SC),Congress,BCW,community/caste halls & hostels (BCW),2.85
+15,107,Narasimharaja,Narasimharaja,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+15,108,Nanjangud,Nanjangud (SC),Congress,PWD,roads/bridges (PWD),20.0
+15,108,Nanjangud,Nanjangud (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",7.5
+15,108,Nanjangud,Nanjangud (SC),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",10.0
+15,108,Nanjangud,Nanjangud (SC),Congress,Muzrai,temples/religious (Muzrai),1.5
+15,108,Nanjangud,Nanjangud (SC),Congress,BCW,community/caste halls & hostels (BCW),8.0
+15,108,Nanjangud,Nanjangud (SC),Congress,SWD,community halls/SC welfare (SWD),3.0
+15,109,Krishnarajanagara,Krishnarajanagara,Congress,RDPR,"roads/bridges (rural, RDPR)",5.0
+15,109,Krishnarajanagara,Krishnarajanagara,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",32.5
+15,109,Krishnarajanagara,Krishnarajanagara,Congress,Muzrai,temples/religious (Muzrai),5.5
+15,109,Krishnarajanagara,Krishnarajanagara,Congress,BCW,community/caste halls & hostels (BCW),3.5
+15,109,Krishnarajanagara,Krishnarajanagara,Congress,Transport,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.0
+15,109,Krishnarajanagara,Krishnarajanagara,Congress,Education,school/college buildings (Education),1.0
+15,109,Krishnarajanagara,Krishnarajanagara,Congress,SWD,community halls/SC welfare (SWD),1.5
+15,110,Heggadadevankote,Heggadadevankote (ST),Congress,PWD,roads/bridges (PWD),21.0
+15,110,Heggadadevankote,Heggadadevankote (ST),Congress,RDPR,"roads/bridges (rural, RDPR)",16.5
+15,110,Heggadadevankote,Heggadadevankote (ST),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",5.5
+15,110,Heggadadevankote,Heggadadevankote (ST),Congress,Muzrai,temples/religious (Muzrai),3.0
+15,110,Heggadadevankote,Heggadadevankote (ST),Congress,BCW,community/caste halls & hostels (BCW),3.0
+15,110,Heggadadevankote,Heggadadevankote (ST),Congress,MWD,community/religious - minorities (MWD),1.0
+15,111,Periyapatna,Piriyapatna,Congress,PWD,roads/bridges (PWD),15.0
+15,111,Periyapatna,Piriyapatna,Congress,RDPR,"roads/bridges (rural, RDPR)",25.0
+15,111,Periyapatna,Piriyapatna,Congress,Muzrai,temples/religious (Muzrai),2.0
+15,111,Periyapatna,Piriyapatna,Congress,BCW,community/caste halls & hostels (BCW),8.0
+15,112,Krishnaraja,Krishnaraja,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+15,113,Hunsur,Hunsur,JD(S),PWD,roads/bridges (PWD),12.0
+15,113,Hunsur,Hunsur,JD(S),RDPR,"roads/bridges (rural, RDPR)",6.75
+15,113,Hunsur,Hunsur,JD(S),Muzrai,temples/religious (Muzrai),0.45
+15,113,Hunsur,Hunsur,JD(S),BCW,community/caste halls & hostels (BCW),4.4
+15,113,Hunsur,Hunsur,JD(S),Education,school/college buildings (Education),0.4
+15,113,Hunsur,Hunsur,JD(S),SWD,community halls/SC welfare (SWD),0.5
+15,113,Hunsur,Hunsur,JD(S),ST,community halls/ST welfare (ST),0.4
+15,113,Hunsur,Hunsur,JD(S),Revenue,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.1
+15,114,Chamundeshwari,Chamundeshwari,JD(S),PWD,roads/bridges (PWD),5.0
+15,114,Chamundeshwari,Chamundeshwari,JD(S),RDPR,"roads/bridges (rural, RDPR)",12.75
+15,114,Chamundeshwari,Chamundeshwari,JD(S),UDD,"urban local works (UDD; roads/drains/civic, mixed)",1.0
+15,114,Chamundeshwari,Chamundeshwari,JD(S),Muzrai,temples/religious (Muzrai),2.51
+15,114,Chamundeshwari,Chamundeshwari,JD(S),BCW,community/caste halls & hostels (BCW),2.09
+15,114,Chamundeshwari,Chamundeshwari,JD(S),SWD,community halls/SC welfare (SWD),0.65
+15,114,Chamundeshwari,Chamundeshwari,JD(S),ST,community halls/ST welfare (ST),1.0
+15,115,Varuna,Varuna,Congress,RDPR,"roads/bridges (rural, RDPR)",37.5
+15,115,Varuna,Varuna,Congress,Muzrai,temples/religious (Muzrai),7.5
+15,115,Varuna,Varuna,Congress,BCW,community/caste halls & hostels (BCW),5.0
+15,116,Bhadravati,Bhadravathi,Congress,PWD,roads/bridges (PWD),15.0
+15,116,Bhadravati,Bhadravathi,Congress,RDPR,"roads/bridges (rural, RDPR)",7.73
+15,116,Bhadravati,Bhadravathi,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",27.27
+15,117,Sorab,Sorab,Congress,PWD,roads/bridges (PWD),19.15
+15,117,Sorab,Sorab,Congress,RDPR,"roads/bridges (rural, RDPR)",30.55
+15,117,Sorab,Sorab,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",0.3
+15,118,Sagar,Sagar,Congress,PWD,roads/bridges (PWD),12.0
+15,118,Sagar,Sagar,Congress,RDPR,"roads/bridges (rural, RDPR)",29.25
+15,118,Sagar,Sagar,Congress,Muzrai,temples/religious (Muzrai),3.5
+15,118,Sagar,Sagar,Congress,BCW,community/caste halls & hostels (BCW),5.25
+16,119,Shimoga,Shimoga,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",23.25
+16,119,Shimoga,Shimoga,BJP,BCW,community/caste halls & hostels (BCW),0.35
+16,119,Shimoga,Shimoga,BJP,Education,school/college buildings (Education),0.3
+16,119,Shimoga,Shimoga,BJP,HD,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.05
+16,119,Shimoga,Shimoga,BJP,KannadaCulture,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.25
+16,119,Shimoga,Shimoga,BJP,WCD,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.8
+16,120,Shikaripura,Shikaripura,BJP,RDPR,"roads/bridges (rural, RDPR)",18.75
+16,120,Shikaripura,Shikaripura,BJP,Muzrai,temples/religious (Muzrai),5.77
+16,120,Shikaripura,Shikaripura,BJP,ST,community halls/ST welfare (ST),0.48
+16,121,Shimoga Rural,Shimoga Rural (SC),JD(S),PWD,roads/bridges (PWD),10.1
+16,121,Shimoga Rural,Shimoga Rural (SC),JD(S),RDPR,"roads/bridges (rural, RDPR)",14.11
+16,121,Shimoga Rural,Shimoga Rural (SC),JD(S),Muzrai,temples/religious (Muzrai),0.4
+16,121,Shimoga Rural,Shimoga Rural (SC),JD(S),BCW,community/caste halls & hostels (BCW),0.39
+16,122,Tirthahalli,Tirthahalli,BJP,PWD,roads/bridges (PWD),1.0
+16,122,Tirthahalli,Tirthahalli,BJP,RDPR,"roads/bridges (rural, RDPR)",24.0
+16,123,Kollegal,Kollegal (SC),Congress,PWD,roads/bridges (PWD),22.0
+16,123,Kollegal,Kollegal (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",24.7
+16,123,Kollegal,Kollegal (SC),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",1.5
+16,123,Kollegal,Kollegal (SC),Congress,BCW,community/caste halls & hostels (BCW),0.3
+16,123,Kollegal,Kollegal (SC),Congress,Education,school/college buildings (Education),1.5
+16,124,Gundlupet,Gundlupet,Congress,PWD,roads/bridges (PWD),12.5
+16,124,Gundlupet,Gundlupet,Congress,RDPR,"roads/bridges (rural, RDPR)",20.0
+16,124,Gundlupet,Gundlupet,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",5.0
+16,124,Gundlupet,Gundlupet,Congress,Muzrai,temples/religious (Muzrai),4.5
+16,124,Gundlupet,Gundlupet,Congress,BCW,community/caste halls & hostels (BCW),8.0
+16,125,Hanur,Hanur,JD(S),PWD,roads/bridges (PWD),6.6
+16,125,Hanur,Hanur,JD(S),RDPR,"roads/bridges (rural, RDPR)",18.4
+16,126,Chamarajanagar,Chamarajanagar,Congress,PWD,roads/bridges (PWD),5.5
+16,126,Chamarajanagar,Chamarajanagar,Congress,RDPR,"roads/bridges (rural, RDPR)",32.0
+16,126,Chamarajanagar,Chamarajanagar,Congress,Muzrai,temples/religious (Muzrai),5.5
+16,126,Chamarajanagar,Chamarajanagar,Congress,BCW,community/caste halls & hostels (BCW),6.09
+16,126,Chamarajanagar,Chamarajanagar,Congress,Coop,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.91
+16,127,Molakalmuru,Molakalmuru (ST),Congress,PWD,roads/bridges (PWD),25.0
+16,127,Molakalmuru,Molakalmuru (ST),Congress,RDPR,"roads/bridges (rural, RDPR)",14.84
+16,127,Molakalmuru,Molakalmuru (ST),Congress,MI,"irrigation/water (MI, WRD)",4.0
+16,127,Molakalmuru,Molakalmuru (ST),Congress,Muzrai,temples/religious (Muzrai),0.89
+16,127,Molakalmuru,Molakalmuru (ST),Congress,Education,school/college buildings (Education),5.27
+16,128,Challakere,Challakere (ST),Congress,PWD,roads/bridges (PWD),27.0
+16,128,Challakere,Challakere (ST),Congress,RDPR,"roads/bridges (rural, RDPR)",5.5
+16,128,Challakere,Challakere (ST),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",5.0
+16,128,Challakere,Challakere (ST),Congress,Muzrai,temples/religious (Muzrai),12.0
+16,128,Challakere,Challakere (ST),Congress,BCW,community/caste halls & hostels (BCW),0.5
+16,129,Chitradurga,Chitradurga,Congress,PWD,roads/bridges (PWD),37.5
+16,129,Chitradurga,Chitradurga,Congress,RDPR,"roads/bridges (rural, RDPR)",9.1
+16,129,Chitradurga,Chitradurga,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",3.4
+16,130,Hiriyur,Hiriyur,Congress,PWD,roads/bridges (PWD),25.0
+16,130,Hiriyur,Hiriyur,Congress,RDPR,"roads/bridges (rural, RDPR)",12.5
+16,130,Hiriyur,Hiriyur,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",1.0
+16,130,Hiriyur,Hiriyur,Congress,BCW,community/caste halls & hostels (BCW),9.0
+16,130,Hiriyur,Hiriyur,Congress,SWD,community halls/SC welfare (SWD),2.0
+16,130,Hiriyur,Hiriyur,Congress,ST,community halls/ST welfare (ST),0.5
+16,131,Hosadurga,Hosadurga,Congress,PWD,roads/bridges (PWD),12.5
+16,131,Hosadurga,Hosadurga,Congress,RDPR,"roads/bridges (rural, RDPR)",23.15
+16,131,Hosadurga,Hosadurga,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",1.85
+16,131,Hosadurga,Hosadurga,Congress,Muzrai,temples/religious (Muzrai),4.4
+16,131,Hosadurga,Hosadurga,Congress,BCW,community/caste halls & hostels (BCW),5.45
+16,131,Hosadurga,Hosadurga,Congress,MWD,community/religious - minorities (MWD),0.65
+16,131,Hosadurga,Hosadurga,Congress,SWD,community halls/SC welfare (SWD),2.0
+16,132,Holalkere,Holalkere (SC),BJP,PWD,roads/bridges (PWD),15.05
+16,132,Holalkere,Holalkere (SC),BJP,RDPR,"roads/bridges (rural, RDPR)",5.05
+16,132,Holalkere,Holalkere (SC),BJP,MI,"irrigation/water (MI, WRD)",3.8
+16,132,Holalkere,Holalkere (SC),BJP,BCW,community/caste halls & hostels (BCW),1.1
+16,133,Vijayanagara,Vijayanagara,Congress,PWD,roads/bridges (PWD),23.0
+16,133,Vijayanagara,Vijayanagara,Congress,RDPR,"roads/bridges (rural, RDPR)",14.5
+16,133,Vijayanagara,Vijayanagara,Congress,MI,"irrigation/water (MI, WRD)",1.5
+16,133,Vijayanagara,Vijayanagara,Congress,Muzrai,temples/religious (Muzrai),4.0
+16,133,Vijayanagara,Vijayanagara,Congress,BCW,community/caste halls & hostels (BCW),7.0
+16,134,Kudligi,Kudligi (ST),Congress,PWD,roads/bridges (PWD),17.85
+16,134,Kudligi,Kudligi (ST),Congress,RDPR,"roads/bridges (rural, RDPR)",30.35
+16,134,Kudligi,Kudligi (ST),Congress,Muzrai,temples/religious (Muzrai),1.8
+16,135,Harapanahalli,Harapanahalli,Independent,PWD,roads/bridges (PWD),37.5
+16,135,Harapanahalli,Harapanahalli,Independent,RDPR,"roads/bridges (rural, RDPR)",5.0
+16,135,Harapanahalli,Harapanahalli,Independent,MI,"irrigation/water (MI, WRD)",3.0
+16,135,Harapanahalli,Harapanahalli,Independent,Muzrai,temples/religious (Muzrai),4.5
+16,136,Huvina Hadagali,Hadagali (SC),BJP,PWD,roads/bridges (PWD),14.5
+16,136,Huvina Hadagali,Hadagali (SC),BJP,RDPR,"roads/bridges (rural, RDPR)",4.25
+16,136,Huvina Hadagali,Hadagali (SC),BJP,Muzrai,temples/religious (Muzrai),3.75
+16,136,Huvina Hadagali,Hadagali (SC),BJP,BCW,community/caste halls & hostels (BCW),2.5
+16,137,Hagaribommanahalli,Hagaribommanahalli (SC),JD(S),PWD,roads/bridges (PWD),6.65
+16,137,Hagaribommanahalli,Hagaribommanahalli (SC),JD(S),UDD,"urban local works (UDD; roads/drains/civic, mixed)",12.1
+16,137,Hagaribommanahalli,Hagaribommanahalli (SC),JD(S),Muzrai,temples/religious (Muzrai),2.85
+16,137,Hagaribommanahalli,Hagaribommanahalli (SC),JD(S),BCW,community/caste halls & hostels (BCW),3.4
+16,138,Kanakagiri,Kanakagiri (SC),Congress,PWD,roads/bridges (PWD),29.5
+16,138,Kanakagiri,Kanakagiri (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",12.75
+16,138,Kanakagiri,Kanakagiri (SC),Congress,Muzrai,temples/religious (Muzrai),5.0
+16,138,Kanakagiri,Kanakagiri (SC),Congress,MWD,community/religious - minorities (MWD),2.75
+16,139,Koppal,Koppal,Congress,PWD,roads/bridges (PWD),37.5
+16,139,Koppal,Koppal,Congress,RDPR,"roads/bridges (rural, RDPR)",12.5
+16,140,Yelburga,Yelburga,Congress,PWD,roads/bridges (PWD),15.0
+16,140,Yelburga,Yelburga,Congress,RDPR,"roads/bridges (rural, RDPR)",24.6
+16,140,Yelburga,Yelburga,Congress,Muzrai,temples/religious (Muzrai),0.6
+16,140,Yelburga,Yelburga,Congress,BCW,community/caste halls & hostels (BCW),2.0
+16,140,Yelburga,Yelburga,Congress,MWD,community/religious - minorities (MWD),0.7
+16,140,Yelburga,Yelburga,Congress,SWD,community halls/SC welfare (SWD),5.5
+16,140,Yelburga,Yelburga,Congress,KannadaCulture,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.6
+16,141,Kushtagi,Kushtagi,BJP,PWD,roads/bridges (PWD),13.45
+16,141,Kushtagi,Kushtagi,BJP,RDPR,"roads/bridges (rural, RDPR)",5.35
+16,141,Kushtagi,Kushtagi,BJP,Muzrai,temples/religious (Muzrai),2.05
+16,141,Kushtagi,Kushtagi,BJP,BCW,community/caste halls & hostels (BCW),4.15
+16,142,Gangawati,Gangavathi,KRPP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",20.0
+16,142,Gangawati,Gangavathi,KRPP,Tourism,"other (housing, youth/sports, transport, revenue, planning, etc.)",5.0
+16,143,Kolar Gold Field,Kolar Gold Field (SC),Congress,PWD,roads/bridges (PWD),20.0
+16,143,Kolar Gold Field,Kolar Gold Field (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",7.5
+16,143,Kolar Gold Field,Kolar Gold Field (SC),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",10.0
+16,143,Kolar Gold Field,Kolar Gold Field (SC),Congress,Muzrai,temples/religious (Muzrai),1.0
+16,143,Kolar Gold Field,Kolar Gold Field (SC),Congress,SWD,community halls/SC welfare (SWD),7.0
+16,143,Kolar Gold Field,Kolar Gold Field (SC),Congress,Health,hospitals/health,3.0
+16,143,Kolar Gold Field,Kolar Gold Field (SC),Congress,WCD,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.5
+16,144,Bangarapet,Bangarapet (SC),Congress,PWD,roads/bridges (PWD),25.0
+16,144,Bangarapet,Bangarapet (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",25.0
+16,145,Malur,Malur,Congress,PWD,roads/bridges (PWD),31.5
+16,145,Malur,Malur,Congress,RDPR,"roads/bridges (rural, RDPR)",17.45
+16,145,Malur,Malur,Congress,Muzrai,temples/religious (Muzrai),0.8
+16,145,Malur,Malur,Congress,SWD,community halls/SC welfare (SWD),0.25
+16,146,Kolar,Kolar,Congress,PWD,roads/bridges (PWD),2.5
+16,146,Kolar,Kolar,Congress,RDPR,"roads/bridges (rural, RDPR)",25.4
+16,146,Kolar,Kolar,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",12.5
+16,146,Kolar,Kolar,Congress,Muzrai,temples/religious (Muzrai),7.2
+16,146,Kolar,Kolar,Congress,Education,school/college buildings (Education),2.4
+16,147,Srinivaspur,Srinivasapur,JD(S),RDPR,"roads/bridges (rural, RDPR)",24.0
+16,147,Srinivaspur,Srinivasapur,JD(S),Muzrai,temples/religious (Muzrai),1.0
+16,148,Mulbagal,Mulbagal (SC),JD(S),PWD,roads/bridges (PWD),8.7
+16,148,Mulbagal,Mulbagal (SC),JD(S),RDPR,"roads/bridges (rural, RDPR)",12.05
+16,148,Mulbagal,Mulbagal (SC),JD(S),UDD,"urban local works (UDD; roads/drains/civic, mixed)",1.75
+16,148,Mulbagal,Mulbagal (SC),JD(S),Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.0
+16,148,Mulbagal,Mulbagal (SC),JD(S),SWD,community halls/SC welfare (SWD),1.5
+16,149,Anekal,Anekal (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",50.0
+16,150,Hoskote,Hosakote,Congress,PWD,roads/bridges (PWD),17.0
+16,150,Hoskote,Hosakote,Congress,RDPR,"roads/bridges (rural, RDPR)",18.0
+16,150,Hoskote,Hosakote,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",12.0
+16,150,Hoskote,Hosakote,Congress,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",3.0
+16,151,Devanahalli,Devanahalli (SC),Congress,PWD,roads/bridges (PWD),20.0
+16,151,Devanahalli,Devanahalli (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",25.0
+16,151,Devanahalli,Devanahalli (SC),Congress,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",5.0
+16,152,Nelamangala,Nelamangala (SC),Congress,PWD,roads/bridges (PWD),3.15
+16,152,Nelamangala,Nelamangala (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",26.85
+16,152,Nelamangala,Nelamangala (SC),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",7.6
+16,152,Nelamangala,Nelamangala (SC),Congress,Muzrai,temples/religious (Muzrai),3.05
+16,152,Nelamangala,Nelamangala (SC),Congress,BCW,community/caste halls & hostels (BCW),5.75
+16,152,Nelamangala,Nelamangala (SC),Congress,Transport,"other (housing, youth/sports, transport, revenue, planning, etc.)",2.5
+16,152,Nelamangala,Nelamangala (SC),Congress,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.1
+16,153,Doddaballapur,Doddaballapur,BJP,PWD,roads/bridges (PWD),7.27
+16,153,Doddaballapur,Doddaballapur,BJP,RDPR,"roads/bridges (rural, RDPR)",10.83
+16,153,Doddaballapur,Doddaballapur,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",2.15
+16,153,Doddaballapur,Doddaballapur,BJP,Muzrai,temples/religious (Muzrai),0.15
+16,153,Doddaballapur,Doddaballapur,BJP,BCW,community/caste halls & hostels (BCW),0.1
+16,153,Doddaballapur,Doddaballapur,BJP,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.5
+16,153,Doddaballapur,Doddaballapur,BJP,Education,school/college buildings (Education),1.75
+16,153,Doddaballapur,Doddaballapur,BJP,ST,community halls/ST welfare (ST),0.25
+16,153,Doddaballapur,Doddaballapur,BJP,CI,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.0
+16,154,Nagamangala,Nagamangala,Congress,PWD,roads/bridges (PWD),21.0
+16,154,Nagamangala,Nagamangala,Congress,RDPR,"roads/bridges (rural, RDPR)",16.5
+16,154,Nagamangala,Nagamangala,Congress,Muzrai,temples/religious (Muzrai),5.65
+16,154,Nagamangala,Nagamangala,Congress,BCW,community/caste halls & hostels (BCW),5.35
+16,154,Nagamangala,Nagamangala,Congress,SWD,community halls/SC welfare (SWD),1.5
+16,155,Maddur,Maddur,Congress,PWD,roads/bridges (PWD),50.0
+16,156,Mandya,Mandya,Congress,PWD,roads/bridges (PWD),25.0
+16,156,Mandya,Mandya,Congress,RDPR,"roads/bridges (rural, RDPR)",2.5
+16,156,Mandya,Mandya,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",10.0
+16,156,Mandya,Mandya,Congress,Muzrai,temples/religious (Muzrai),2.0
+16,156,Mandya,Mandya,Congress,BCW,community/caste halls & hostels (BCW),4.0
+16,156,Mandya,Mandya,Congress,Transport,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.5
+16,156,Mandya,Mandya,Congress,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",2.0
+16,156,Mandya,Mandya,Congress,Education,school/college buildings (Education),2.0
+16,156,Mandya,Mandya,Congress,SWD,community halls/SC welfare (SWD),1.0
+16,156,Mandya,Mandya,Congress,Tourism,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.0
+16,157,Srirangapatna,Shrirangapattana,Congress,PWD,roads/bridges (PWD),32.64
+16,157,Srirangapatna,Shrirangapattana,Congress,RDPR,"roads/bridges (rural, RDPR)",9.26
+16,157,Srirangapatna,Shrirangapattana,Congress,Muzrai,temples/religious (Muzrai),4.65
+16,157,Srirangapatna,Shrirangapattana,Congress,BCW,community/caste halls & hostels (BCW),1.1
+16,157,Srirangapatna,Shrirangapattana,Congress,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.2
+16,157,Srirangapatna,Shrirangapattana,Congress,Education,school/college buildings (Education),1.15
+16,157,Srirangapatna,Shrirangapattana,Congress,KannadaCulture,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.0
+16,158,Malavalli,Malavalli (SC),Congress,PWD,roads/bridges (PWD),10.0
+16,158,Malavalli,Malavalli (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",20.0
+16,158,Malavalli,Malavalli (SC),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",10.0
+16,158,Malavalli,Malavalli (SC),Congress,Muzrai,temples/religious (Muzrai),8.0
+16,158,Malavalli,Malavalli (SC),Congress,Education,school/college buildings (Education),1.0
+16,158,Malavalli,Malavalli (SC),Congress,Health,hospitals/health,1.0
+16,159,Melukote,Melukote,SKP,PWD,roads/bridges (PWD),47.5
+16,159,Melukote,Melukote,SKP,Muzrai,temples/religious (Muzrai),2.5
+16,160,Krishnarajpet,Krishnarajpet,JD(S),PWD,roads/bridges (PWD),14.5
+16,160,Krishnarajpet,Krishnarajpet,JD(S),RDPR,"roads/bridges (rural, RDPR)",9.9
+16,160,Krishnarajpet,Krishnarajpet,JD(S),UDD,"urban local works (UDD; roads/drains/civic, mixed)",0.05
+16,160,Krishnarajpet,Krishnarajpet,JD(S),Muzrai,temples/religious (Muzrai),0.2
+16,160,Krishnarajpet,Krishnarajpet,JD(S),BCW,community/caste halls & hostels (BCW),0.35
+16,161,Magadi,Magadi,Congress,PWD,roads/bridges (PWD),9.2
+16,161,Magadi,Magadi,Congress,RDPR,"roads/bridges (rural, RDPR)",15.0
+16,161,Magadi,Magadi,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",13.3
+16,161,Magadi,Magadi,Congress,Muzrai,temples/religious (Muzrai),2.55
+16,161,Magadi,Magadi,Congress,BCW,community/caste halls & hostels (BCW),5.35
+16,161,Magadi,Magadi,Congress,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",4.3
+16,161,Magadi,Magadi,Congress,Education,school/college buildings (Education),0.3
+17,162,Ramanagaram,Ramanagaram,Congress,RDPR,"roads/bridges (rural, RDPR)",33.5
+17,162,Ramanagaram,Ramanagaram,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",16.5
+17,163,Channapatna,Channapatna,Congress,RDPR,"roads/bridges (rural, RDPR)",48.3
+17,163,Channapatna,Channapatna,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",1.7
+17,164,Kanakapura,Kanakapura,Congress,PWD,roads/bridges (PWD),37.5
+17,164,Kanakapura,Kanakapura,Congress,RDPR,"roads/bridges (rural, RDPR)",12.0
+17,164,Kanakapura,Kanakapura,Congress,BCW,community/caste halls & hostels (BCW),0.5
+17,165,Gubbi,Gubbi,Congress,PWD,roads/bridges (PWD),25.0
+17,165,Gubbi,Gubbi,Congress,RDPR,"roads/bridges (rural, RDPR)",16.34
+17,165,Gubbi,Gubbi,Congress,Muzrai,temples/religious (Muzrai),2.11
+17,165,Gubbi,Gubbi,Congress,BCW,community/caste halls & hostels (BCW),6.55
+17,166,Kunigal,Kunigal,Congress,PWD,roads/bridges (PWD),24.0
+17,166,Kunigal,Kunigal,Congress,RDPR,"roads/bridges (rural, RDPR)",20.0
+17,166,Kunigal,Kunigal,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",6.0
+17,167,Madhugiri,Madhugiri,Congress,PWD,roads/bridges (PWD),34.0
+17,167,Madhugiri,Madhugiri,Congress,RDPR,"roads/bridges (rural, RDPR)",6.22
+17,167,Madhugiri,Madhugiri,Congress,Education,school/college buildings (Education),7.34
+17,167,Madhugiri,Madhugiri,Congress,Health,hospitals/health,0.54
+17,167,Madhugiri,Madhugiri,Congress,WCD,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.9
+17,168,Koratagere,Koratagere (SC),Congress,PWD,roads/bridges (PWD),24.0
+17,168,Koratagere,Koratagere (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",19.95
+17,168,Koratagere,Koratagere (SC),Congress,Education,school/college buildings (Education),5.0
+17,168,Koratagere,Koratagere (SC),Congress,WCD,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.05
+17,169,Tiptur,Tiptur,Congress,PWD,roads/bridges (PWD),28.2
+17,169,Tiptur,Tiptur,Congress,RDPR,"roads/bridges (rural, RDPR)",17.5
+17,169,Tiptur,Tiptur,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",3.0
+17,169,Tiptur,Tiptur,Congress,Muzrai,temples/religious (Muzrai),0.36
+17,169,Tiptur,Tiptur,Congress,BCW,community/caste halls & hostels (BCW),0.79
+17,169,Tiptur,Tiptur,Congress,Education,school/college buildings (Education),0.13
+17,169,Tiptur,Tiptur,Congress,Agri,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.02
+17,170,Pavagada,Pavagada (SC),Congress,PWD,roads/bridges (PWD),15.5
+17,170,Pavagada,Pavagada (SC),Congress,RDPR,"roads/bridges (rural, RDPR)",16.2
+17,170,Pavagada,Pavagada (SC),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",15.7
+17,170,Pavagada,Pavagada (SC),Congress,Muzrai,temples/religious (Muzrai),1.1
+17,170,Pavagada,Pavagada (SC),Congress,BCW,community/caste halls & hostels (BCW),1.25
+17,170,Pavagada,Pavagada (SC),Congress,Law,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.25
+17,171,Sira,Sira,Congress,PWD,roads/bridges (PWD),25.0
+17,171,Sira,Sira,Congress,RDPR,"roads/bridges (rural, RDPR)",9.79
+17,171,Sira,Sira,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",5.0
+17,171,Sira,Sira,Congress,Muzrai,temples/religious (Muzrai),8.56
+17,171,Sira,Sira,Congress,Education,school/college buildings (Education),1.08
+17,171,Sira,Sira,Congress,Coop,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.2
+17,171,Sira,Sira,Congress,Health,hospitals/health,0.37
+17,172,Tumkur City,Tumkur City,BJP,PWD,roads/bridges (PWD),20.75
+17,172,Tumkur City,Tumkur City,BJP,Muzrai,temples/religious (Muzrai),4.25
+17,173,Tumkur Rural,Tumkur Rural,BJP,PWD,roads/bridges (PWD),14.15
+17,173,Tumkur Rural,Tumkur Rural,BJP,RDPR,"roads/bridges (rural, RDPR)",7.35
+17,173,Tumkur Rural,Tumkur Rural,BJP,Muzrai,temples/religious (Muzrai),1.6
+17,173,Tumkur Rural,Tumkur Rural,BJP,BCW,community/caste halls & hostels (BCW),1.2
+17,173,Tumkur Rural,Tumkur Rural,BJP,Education,school/college buildings (Education),0.5
+17,173,Tumkur Rural,Tumkur Rural,BJP,ST,community halls/ST welfare (ST),0.2
+17,174,Chiknayakanhalli,Chikknayakanhalli,JD(S),PWD,roads/bridges (PWD),12.3
+17,174,Chiknayakanhalli,Chikknayakanhalli,JD(S),RDPR,"roads/bridges (rural, RDPR)",6.45
+17,174,Chiknayakanhalli,Chikknayakanhalli,JD(S),Muzrai,temples/religious (Muzrai),0.15
+17,174,Chiknayakanhalli,Chikknayakanhalli,JD(S),BCW,community/caste halls & hostels (BCW),4.5
+17,174,Chiknayakanhalli,Chikknayakanhalli,JD(S),MWD,community/religious - minorities (MWD),1.0
+17,174,Chiknayakanhalli,Chikknayakanhalli,JD(S),SWD,community halls/SC welfare (SWD),0.6
+17,175,Turuvekere,Turuvekere,JD(S),RDPR,"roads/bridges (rural, RDPR)",25.0
+17,176,Arsikere,Arsikere,Congress,PWD,roads/bridges (PWD),23.0
+17,176,Arsikere,Arsikere,Congress,RDPR,"roads/bridges (rural, RDPR)",18.0
+17,176,Arsikere,Arsikere,Congress,Muzrai,temples/religious (Muzrai),5.0
+17,176,Arsikere,Arsikere,Congress,BCW,community/caste halls & hostels (BCW),3.0
+17,176,Arsikere,Arsikere,Congress,KannadaCulture,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.75
+17,176,Arsikere,Arsikere,Congress,Information,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.25
+17,177,Belur,Belur,BJP,PWD,roads/bridges (PWD),12.5
+17,177,Belur,Belur,BJP,RDPR,"roads/bridges (rural, RDPR)",12.5
+17,178,Shravanabelagola,Shravanabelagola,JD(S),RDPR,"roads/bridges (rural, RDPR)",19.45
+17,178,Shravanabelagola,Shravanabelagola,JD(S),Muzrai,temples/religious (Muzrai),2.46
+17,178,Shravanabelagola,Shravanabelagola,JD(S),BCW,community/caste halls & hostels (BCW),2.0
+17,178,Shravanabelagola,Shravanabelagola,JD(S),Transport,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.78
+17,178,Shravanabelagola,Shravanabelagola,JD(S),Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.31
+17,179,Hassan,Hassan,JD(S),PWD,roads/bridges (PWD),2.6
+17,179,Hassan,Hassan,JD(S),RDPR,"roads/bridges (rural, RDPR)",11.71
+17,179,Hassan,Hassan,JD(S),UDD,"urban local works (UDD; roads/drains/civic, mixed)",5.53
+17,179,Hassan,Hassan,JD(S),Muzrai,temples/religious (Muzrai),1.91
+17,179,Hassan,Hassan,JD(S),BCW,community/caste halls & hostels (BCW),2.55
+17,179,Hassan,Hassan,JD(S),MWD,community/religious - minorities (MWD),0.2
+17,179,Hassan,Hassan,JD(S),Transport,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.1
+17,179,Hassan,Hassan,JD(S),Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.05
+17,179,Hassan,Hassan,JD(S),SWD,community halls/SC welfare (SWD),0.25
+17,179,Hassan,Hassan,JD(S),Coop,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.1
+17,180,Arkalgud,Arakalgud,JD(S),PWD,roads/bridges (PWD),4.0
+17,180,Arkalgud,Arakalgud,JD(S),RDPR,"roads/bridges (rural, RDPR)",16.0
+17,180,Arkalgud,Arakalgud,JD(S),Muzrai,temples/religious (Muzrai),2.0
+17,180,Arkalgud,Arakalgud,JD(S),BCW,community/caste halls & hostels (BCW),1.0
+17,180,Arkalgud,Arakalgud,JD(S),Transport,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.0
+17,180,Arkalgud,Arakalgud,JD(S),SWD,community halls/SC welfare (SWD),1.0
+17,181,Holenarasipur,Holenarasipur,JD(S),PWD,roads/bridges (PWD),6.75
+17,181,Holenarasipur,Holenarasipur,JD(S),RDPR,"roads/bridges (rural, RDPR)",9.0
+17,181,Holenarasipur,Holenarasipur,JD(S),UDD,"urban local works (UDD; roads/drains/civic, mixed)",3.0
+17,181,Holenarasipur,Holenarasipur,JD(S),Muzrai,temples/religious (Muzrai),3.6
+17,181,Holenarasipur,Holenarasipur,JD(S),BCW,community/caste halls & hostels (BCW),1.4
+17,181,Holenarasipur,Holenarasipur,JD(S),Education,school/college buildings (Education),1.25
+17,182,Sakleshpur,Sakaleshpur (SC),BJP,PWD,roads/bridges (PWD),11.8
+17,182,Sakleshpur,Sakaleshpur (SC),BJP,RDPR,"roads/bridges (rural, RDPR)",6.82
+17,182,Sakleshpur,Sakaleshpur (SC),BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",2.25
+17,182,Sakleshpur,Sakaleshpur (SC),BJP,Muzrai,temples/religious (Muzrai),3.86
+17,182,Sakleshpur,Sakaleshpur (SC),BJP,Tourism,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.1
+17,182,Sakleshpur,Sakaleshpur (SC),BJP,Coop,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.17
+17,183,Virajpet,Virajpet,Congress,PWD,roads/bridges (PWD),30.0
+17,183,Virajpet,Virajpet,Congress,RDPR,"roads/bridges (rural, RDPR)",15.5
+17,183,Virajpet,Virajpet,Congress,BCW,community/caste halls & hostels (BCW),4.5
+17,184,Madikeri,Madikeri,Congress,PWD,roads/bridges (PWD),15.0
+17,184,Madikeri,Madikeri,Congress,RDPR,"roads/bridges (rural, RDPR)",13.7
+17,184,Madikeri,Madikeri,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",10.4
+17,184,Madikeri,Madikeri,Congress,Muzrai,temples/religious (Muzrai),2.5
+17,184,Madikeri,Madikeri,Congress,BCW,community/caste halls & hostels (BCW),5.45
+17,184,Madikeri,Madikeri,Congress,MWD,community/religious - minorities (MWD),0.35
+17,184,Madikeri,Madikeri,Congress,Education,school/college buildings (Education),2.55
+17,184,Madikeri,Madikeri,Congress,SWD,community halls/SC welfare (SWD),0.05
+17,185,Puttur,Puttur,Congress,RDPR,"roads/bridges (rural, RDPR)",30.0
+17,185,Puttur,Puttur,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",15.0
+17,185,Puttur,Puttur,Congress,Muzrai,temples/religious (Muzrai),5.0
+17,186,Sullia,Sullia (SC),BJP,PWD,roads/bridges (PWD),0.5
+17,186,Sullia,Sullia (SC),BJP,RDPR,"roads/bridges (rural, RDPR)",20.95
+17,186,Sullia,Sullia (SC),BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",2.2
+17,186,Sullia,Sullia (SC),BJP,Muzrai,temples/religious (Muzrai),0.85
+17,186,Sullia,Sullia (SC),BJP,Education,school/college buildings (Education),0.5
+17,187,Mangalore City South,Mangalore City South,BJP,PWD,roads/bridges (PWD),18.75
+17,187,Mangalore City South,Mangalore City South,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",1.88
+17,187,Mangalore City South,Mangalore City South,BJP,Muzrai,temples/religious (Muzrai),0.9
+17,187,Mangalore City South,Mangalore City South,BJP,BCW,community/caste halls & hostels (BCW),2.05
+17,187,Mangalore City South,Mangalore City South,BJP,MWD,community/religious - minorities (MWD),0.12
+17,187,Mangalore City South,Mangalore City South,BJP,Education,school/college buildings (Education),0.9
+17,187,Mangalore City South,Mangalore City South,BJP,Tourism,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.25
+17,187,Mangalore City South,Mangalore City South,BJP,Health,hospitals/health,0.15
+17,188,Bantval,Bantwal,BJP,PWD,roads/bridges (PWD),1.0
+17,188,Bantval,Bantwal,BJP,RDPR,"roads/bridges (rural, RDPR)",22.3
+17,188,Bantval,Bantwal,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",0.57
+17,188,Bantval,Bantwal,BJP,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",1.13
+17,189,Moodabidri,Moodabidri,BJP,PWD,roads/bridges (PWD),9.0
+17,189,Moodabidri,Moodabidri,BJP,RDPR,"roads/bridges (rural, RDPR)",9.31
+17,189,Moodabidri,Moodabidri,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",4.69
+17,189,Moodabidri,Moodabidri,BJP,Muzrai,temples/religious (Muzrai),0.5
+17,189,Moodabidri,Moodabidri,BJP,BCW,community/caste halls & hostels (BCW),1.5
+17,190,Mangalore City North,Mangalore City North,BJP,RDPR,"roads/bridges (rural, RDPR)",2.81
+17,190,Mangalore City North,Mangalore City North,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",18.81
+17,190,Mangalore City North,Mangalore City North,BJP,Muzrai,temples/religious (Muzrai),2.06
+17,190,Mangalore City North,Mangalore City North,BJP,BCW,community/caste halls & hostels (BCW),1.04
+17,190,Mangalore City North,Mangalore City North,BJP,Education,school/college buildings (Education),0.14
+17,190,Mangalore City North,Mangalore City North,BJP,WCD,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.14
+17,191,Belthangady,Belthangady,BJP,RDPR,"roads/bridges (rural, RDPR)",19.75
+17,191,Belthangady,Belthangady,BJP,Muzrai,temples/religious (Muzrai),1.75
+17,191,Belthangady,Belthangady,BJP,BCW,community/caste halls & hostels (BCW),3.0
+17,191,Belthangady,Belthangady,BJP,Education,school/college buildings (Education),0.5
+17,192,Kaup,Kapu,BJP,PWD,roads/bridges (PWD),3.0
+17,192,Kaup,Kapu,BJP,RDPR,"roads/bridges (rural, RDPR)",16.15
+17,192,Kaup,Kapu,BJP,Muzrai,temples/religious (Muzrai),2.77
+17,192,Kaup,Kapu,BJP,BCW,community/caste halls & hostels (BCW),2.15
+17,192,Kaup,Kapu,BJP,Youth,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.4
+17,192,Kaup,Kapu,BJP,Education,school/college buildings (Education),0.28
+17,192,Kaup,Kapu,BJP,SWD,community halls/SC welfare (SWD),0.15
+17,192,Kaup,Kapu,BJP,ST,community halls/ST welfare (ST),0.1
+17,193,Byndoor,Baindur,BJP,PWD,roads/bridges (PWD),3.0
+17,193,Byndoor,Baindur,BJP,RDPR,"roads/bridges (rural, RDPR)",19.85
+17,193,Byndoor,Baindur,BJP,Muzrai,temples/religious (Muzrai),1.4
+17,193,Byndoor,Baindur,BJP,BCW,community/caste halls & hostels (BCW),0.65
+17,193,Byndoor,Baindur,BJP,ST,community halls/ST welfare (ST),0.1
+17,194,Udupi,Udupi,BJP,RDPR,"roads/bridges (rural, RDPR)",18.9
+17,194,Udupi,Udupi,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",0.25
+17,194,Udupi,Udupi,BJP,Muzrai,temples/religious (Muzrai),3.1
+17,194,Udupi,Udupi,BJP,BCW,community/caste halls & hostels (BCW),2.3
+17,194,Udupi,Udupi,BJP,Education,school/college buildings (Education),0.05
+17,194,Udupi,Udupi,BJP,SWD,community halls/SC welfare (SWD),0.15
+17,194,Udupi,Udupi,BJP,Fisheries,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.25
+17,195,Karkal,Karkala,BJP,RDPR,"roads/bridges (rural, RDPR)",16.3
+17,195,Karkal,Karkala,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",3.0
+17,195,Karkal,Karkala,BJP,BCW,community/caste halls & hostels (BCW),3.15
+17,195,Karkal,Karkala,BJP,Education,school/college buildings (Education),1.35
+17,195,Karkal,Karkala,BJP,SWD,community halls/SC welfare (SWD),0.5
+17,195,Karkal,Karkala,BJP,ST,community halls/ST welfare (ST),0.1
+17,195,Karkal,Karkala,BJP,Tourism,"other (housing, youth/sports, transport, revenue, planning, etc.)",0.6
+17,196,Kundapura,Kundapur,BJP,RDPR,"roads/bridges (rural, RDPR)",24.35
+17,196,Kundapura,Kundapur,BJP,BCW,community/caste halls & hostels (BCW),0.65
+17,197,Shanthinagar,Shantinagar,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+17,198,Gandhinagar,Gandhinagar,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+17,199,Chamarajpet,Chamrajapet,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+17,200,Govindarajanagar,Govindarajanagar,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+17,201,Vijayanagar,Vijayanagar,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+17,202,Byatarayanapura,Byatarayanapura,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+17,203,Sarvagnanagar,Sarvagnanagar,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+18,204,Pulakeshinagar,Pulakeshinagar (SC),Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+18,205,Hebbal,Hebbal,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+18,206,BTM Layout,B.T.M Layout,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+18,207,Chickpet,Chickpet,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+18,208,Mahadevapura,Mahadevapura (SC),BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+18,209,K.R. Pura,K.R. Pura,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+18,210,Rajarajeshwarinagar,Rajarajeshwarinagar,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+18,211,Dasarahalli,Dasarahalli,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+18,212,Mahalakshmi Layout,Mahalakshmi Layout,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+18,213,Malleshwaram,Malleshwaram,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+18,214,Rajajinagar,Rajajinagar,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+18,215,Basavanagudi,Basavanagudi,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+18,216,Padmanabhanagar,Padmanabanagar,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+18,217,Yelahanka,Yelahanka,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+18,218,Jayanagar,Jayanagar,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+18,219,Bangalore South,Bangalore South,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+18,220,Bommanahalli,Bommanahalli,BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+18,221,Yeshwanthapura,Yeshwanthapura,BJP (expelled 27 May 2025),UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0
+18,222,C.V. Raman Nagar,C.V. Ramannnagar (SC),BJP,UDD,"urban local works (UDD; roads/drains/civic, mixed)",25.0
+18,223,Shivajinagar,Shivajinagar,Congress,UDD,"urban local works (UDD; roads/drains/civic, mixed)",50.0

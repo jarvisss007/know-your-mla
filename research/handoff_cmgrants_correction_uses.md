@@ -1,0 +1,17 @@
+# Handoff to the site session: correction + "what the money bought" + "did it win votes" (25 Nov 2026)
+
+From the Follow the rupee / officials session. Notes: research/follow_the_money/CM_GRANTS_USES_DRAFT.md and GRANTS_AND_VOTES_DRAFT.md. The owner approves public text.
+
+## 1. CORRECTION to the live #cmgrants section (priority)
+The live text says, from USQ 1727 (Dec 2025): "Twenty-one seats are not in the list at all: 18 BJP seats, one JD(S) seat, the Speaker's seat and the Chief Minister's own seat, Varuna. The answer does not say why."
+A fuller list of the same programme, answered on 19 Aug 2025 (USQ 1793, https://kla.kar.nic.in/assembly/answers/16assembly/pdf/19082025/1793.pdf), includes all of those seats except Mangalore (the Speaker's): the 19 BJP and JD(S) seats at Rs 25 crore and Varuna at Rs 50 crore. Suggested replacement sentence (EN): "A fuller list of the same programme, given to the Assembly in August 2025, covers 223 seats: Congress seats Rs 50 crore (135 of 136), BJP seats Rs 25 crore (62 of 63; the exception is the Leader of the Opposition's Padmanabhanagar), JD(S) seats Rs 25 crore (all 18). The December list left out 21 of them without saying why." KN: "ಇದೇ ಯೋಜನೆಯ ಸಂಪೂರ್ಣ ಪಟ್ಟಿಯನ್ನು ಆಗಸ್ಟ್ 2025ರಲ್ಲಿ ವಿಧಾನಸಭೆಗೆ ನೀಡಲಾಗಿತ್ತು; ಅದರಲ್ಲಿ 223 ಕ್ಷೇತ್ರಗಳಿವೆ: ಕಾಂಗ್ರೆಸ್ ಕ್ಷೇತ್ರಗಳಿಗೆ ₹50 ಕೋಟಿ (136ರಲ್ಲಿ 135), ಬಿಜೆಪಿ ಕ್ಷೇತ್ರಗಳಿಗೆ ₹25 ಕೋಟಿ (63ರಲ್ಲಿ 62; ಅಪವಾದ ವಿರೋಧ ಪಕ್ಷದ ನಾಯಕರ ಪದ್ಮನಾಭನಗರ), ಜೆಡಿ(ಎಸ್) ಕ್ಷೇತ್ರಗಳಿಗೆ ₹25 ಕೋಟಿ (ಎಲ್ಲ 18). ಡಿಸೆಂಬರ್ ಪಟ್ಟಿ ಅವುಗಳಲ್ಲಿ 21 ಕ್ಷೇತ್ರಗಳನ್ನು ಕಾರಣ ಹೇಳದೆ ಬಿಟ್ಟಿತ್ತು." Please add a corrections-log entry. The report-card data file research/follow_the_money/cm_grants_by_seat.json is updated to the August list (only Mangalore null); the Shirahatti special note in the earlier addendum is no longer needed (it is Rs 25 crore in August).
+
+## 2. What the money bought (new paragraph for #cmgrants)
+EN: **What the money buys.** By the departments it was given to, most of the money goes to roads: 82% of the BJP's 2022 grant, 58% of the Congress government's 2023-24 special grant and 66% of the 2025-26 programme, with another fifth to town works under the Congress lists. Temples and community or caste halls take 5% under the BJP list and 10-17% under the Congress lists; health gets about 0.1%. About half of the rural-roads share is carried out by KRIDL, a state company usually given work without open tender. In 2024-25, 69% of the Chief Minister's special sanctions went to the three seats facing by-elections, all ordered in the weeks before the vote: Shiggaon's ₹30 crore (244 works through KRIDL) on 5 October 2024, ten days before the poll was announced.
+Source: Assembly questions 1793 (19 Aug 2025), 2844 (18 Mar 2026) and 114 (15 Feb 2022).
+
+## 3. Did it win votes (new paragraph)
+EN: **Did it win votes? Not in 2023.** Of the 121 seats the BJP held in February 2022, the 63 that got ₹52 crore re-elected a BJP member in 2023 only 27% of the time; the 58 that did not, 59% of the time, though both groups had the same 2018 margins. The government chose which seats to fund, so this does not show the money hurt; it shows it did not buy them back. In the 2024 by-elections the three heavily funded seats all went to Congress.
+Source: Election Commission results 2018 and 2023 (as tabulated); our analysis in research/follow_the_money/GRANTS_AND_VOTES_DRAFT.md.
+
+(KN translations to be done by the site session's usual route or asked for; the numbers above are final.)
